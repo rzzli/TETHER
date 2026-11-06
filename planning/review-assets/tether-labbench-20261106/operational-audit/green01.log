@@ -1,0 +1,9 @@
+test_chain_checks_content_and_allows_only_incomplete_tail (test_audit.IndependentAuditTests.test_chain_checks_content_and_allows_only_incomplete_tail) ... ok
+test_double_dispatch_and_measured_excess_or_nonzero_cost_rejected (test_audit.IndependentAuditTests.test_double_dispatch_and_measured_excess_or_nonzero_cost_rejected) ... ok
+test_model_measured_and_unresolved_reservations_are_distinct (test_audit.IndependentAuditTests.test_model_measured_and_unresolved_reservations_are_distinct) ... ok
+test_request_known_bytes_and_failed_upper_bound_do_not_collapse (test_audit.IndependentAuditTests.test_request_known_bytes_and_failed_upper_bound_do_not_collapse) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.030s
+
+OK

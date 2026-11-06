@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-labbench-20261106\operational-audit\audit.py", line 286, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-labbench-20261106\operational-audit\audit.py", line 281, in main
+    result=audit_collection(args.freeze,args.freeze_sha256,expected_manifest_sha=args.collection_manifest_sha256)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-labbench-20261106\operational-audit\audit.py", line 235, in audit_collection
+    need(configuration['policy']==recipe['policy'] and configuration['stage_seconds']==recipe['stage_seconds'],'Frozen collection limits differ')
+                                  ~~~~~~^^^^^^^^^^
+KeyError: 'policy'

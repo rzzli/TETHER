@@ -86,3 +86,15 @@ with unchanged source pins. Final v2 query-only capacity passes199/199 with eith
 zero or eight fictional1,000-byte ASCII passages; max10,333 prompt bytes under
 14,000. Real Unicode expansion can still fail explicitly. Next freeze and execute
 the fixed cohort, then source-inclusive scoring and independent reconstruction.
+
+The peer-comparison supplement now explicitly distinguishes a fixed-candidate
+filter from a better producer: admitted-correct yield cannot exceed raw-correct
+yield for the same candidates. It credits Inspect's existing execution limits,
+tool-proposal contracts and failure logs, states the native metric denominator
+differences, acknowledges existing SciFact TF–IDF/linear models and LitQA2 search,
+and records ScholarQABench's dated references. Post hoc constant-NEI arithmetic
+(112/300) contextualizes SciFact's27/300 without inventing an executed competitor.
+PaperQA2/LitQA2 and OpenScholar/ScholarQABench co-development and unequal source/
+model/budget conditions prevent treating published score differences as harness
+effects. The possible design outcome is TETHER policy/replay inside an existing
+runner if BG05 demonstrates equivalent guarantees with less orchestration.

@@ -4,6 +4,13 @@ Reviewed 6 November 2026 UTC. This supplements the [earlier peer comparison](<TE
 
 TETHER's independent full-policy comparison found equal conformance on 109 exposed constructions, with greater measured fresh-process cost for TETHER. Its native SciFact experiment produced and admitted all 300 public-development answers; 27 met the declared strict correctness criterion. Raw and checked official scores were identical. Retrieval recovered 159/209 annotated claim–document pairs, while only one evidence-bearing claim was strict-correct. This suggests a serious answer-selection/interpretation bottleneck, although retrieval misses and the strict evidence-set criterion also contribute. It does not prove that a better retriever would be useless. ([Equal-policy results](<../planning/TETHER Equal Policy Comparison Results 2026-11-05.md>), [SciFact results](<../planning/TETHER SciFact Native Evaluation Results 2026-11-05.md>))
 
+For scale, always predicting insufficient evidence would match the 112 NEI cases
+out of 300 (37.33%) under the strict case criterion, with zero evidence-retrieval
+credit. This is a post hoc analytical control, **not an executed arm** or a useful
+scientific verifier. The current 9% result is therefore weak even against this
+trivial accuracy reference; the official evidence metrics must remain visible
+alongside case accuracy. ([Retained SciFact analysis](<../planning/TETHER SciFact Native Evaluation Results 2026-11-05.md>))
+
 ## Benchmarks that answer different questions
 
 | Benchmark or comparison | What it can demonstrate | Required outcome and main limitation | Priority |
@@ -17,15 +24,65 @@ TETHER's independent full-policy comparison found equal conformance on 109 expos
 
 The original LAB-Bench release supports a public evaluation without importing newer LABBench2 tasks. The published 2024 model experiments were tool-free; a question-driven retrieval system is a tool-assisted public-task evaluation, not an exact reproduction of those model conditions. Its uncertainty option must be separated from timeout, malformed response and missing output. ([Original task paper](https://arxiv.org/html/2407.10362v1), [official dataset](https://huggingface.co/datasets/futurehouse/lab-bench))
 
+Peer headline scores are context rather than matched controls. PaperQA2's authors
+state that LitQA2 guided system design; OpenScholar introduces ScholarQABench
+alongside its system. This does not invalidate either benchmark, but public task
+exposure and co-development limit claims of independent generalization. Different
+base models, source universes, tools and inference budgets also prevent assigning
+a cross-paper score difference to TETHER's harness. A controlled method ablation
+is more informative than subtracting published leaderboard numbers.
+([PaperQA2](https://arxiv.org/abs/2409.13740), [OpenScholar](https://www.nature.com/articles/s41586-025-10072-4))
+
 ALCE's released data and evaluation code provide a concrete citation test. ScholarQABench broadens the question from finding one answer to covering a literature question. The latter's repository exposes data, rubrics and evaluation scripts; code licensing does not automatically settle all incorporated-source and model rights. A local judge replacing its configured judge is a separate evaluation condition. ([ALCE](https://github.com/princeton-nlp/ALCE), [ScholarQABench](https://github.com/AkariAsai/ScholarQABench), [R2E release](https://github.com/BenevolentAI/r2e-evaluation-data))
 
+ScholarQABench's reference work dates to July–September 2024. Its repository
+warns that newer retrieved information changes comparability; the published v1
+method recommends its OSDS or a publication cutoff no later than October 2024.
+Freeze the benchmark/subset and evidence date together. A current-literature
+variant is reasonable, but is a different condition against dated references.
+([Dataset chronology and terms](https://github.com/AkariAsai/ScholarQABench), [published limitations](https://www.nature.com/articles/s41586-025-10072-4))
+
 DbQA remains useful, but it requires product-by-product source qualification. Exact MSigDB 2023.2 files have a public distribution route, so a blanket claim that DbQA is account-blocked would be wrong. Full-family coverage, historical equivalence and all source terms remain unverified. LitQA2 is preferred for its fit to literature evidence and a uniform public retrieval route, rather than a claim that every DbQA source is inaccessible. ([Official MSigDB archive](https://data.broadinstitute.org/gsea-msigdb/msigdb/release/2023.2.Hs/))
+
+The general-runner comparison must reconcile denominators explicitly. Inspect
+distinguishes a verdict, an execution error and an unscored result; its ordinary
+accuracy excludes missing verdicts. Incorrect or malformed model answers can
+still receive an incorrect verdict. TETHER's scheduled-case yield answers a
+different question. Report both verdict-conditioned accuracy and useful answers
+per scheduled task, with failures and unscored counts alongside them. Implement
+the same convention in both runners before comparing numbers; this is not an
+intrinsic inability of Inspect to support the desired policy. ([Inspect scoring policy](https://inspect.aisi.org.uk/scoring-policy.html))
+
+Inspect already offers bounded execution, retained interrupted-run logs and
+explicit retry artifacts, plus an agent-bridge execution contract that checks
+tool proposals and arguments. Generic limits, traces and orchestration therefore
+do not distinguish TETHER. The narrower contribution to test is its combination
+of source-role policy, temporal ancestry and source-inclusive replay. Pin the
+Inspect version and implement those obligations explicitly; neither a bare
+Inspect run nor TETHER's smaller native-task adapter establishes full BG02 policy
+equivalence. ([Tool execution contract](https://inspect.aisi.org.uk/agent-bridge.html#execution-contract), [limits](https://inspect.aisi.org.uk/setting-limits.html), [run logs](https://inspect.aisi.org.uk/eval-logs.html), [native adapter scope](../experiments/labbench/tether_adapter.py))
+
+For LitQA2, explicitly report `accuracy = correct / scheduled`,
+`precision = correct / substantive answers`, and
+`coverage = substantive answers / scheduled`, retaining operational failures.
+Precision is undefined when there are no substantive answers. The strict JSON
+adapter's malformed-response convention differs from the original evaluator's
+treatment of arbitrary returned strings, so publish that difference and the
+parse-failure count rather than presenting all quantities as unchanged upstream
+metrics. ([Native scoring contract](../experiments/labbench/evaluate.py), [frozen protocol](<../planning/TETHER LitQA2 Evaluation Protocol 2026-11-06.md>))
 
 ## Peer methods worth testing
 
 **PaperQA2: query-conditioned evidence processing and citation traversal.** Its method combines dense chunk retrieval with relevance scoring/contextual summarization and traversal from retrieved papers. These are stronger scientific retrieval operations than TETHER's maintained literal-overlap selector. Importantly, the paper reports that weaker summarization models can hurt performance. This is a reason to compare raw passages against summaries, not assume that adding another model stage improves the answer. ([PaperQA2 methods and ablations](https://arxiv.org/html/2409.13740v1), [current selector](../src/asof/retrieval.py))
 
 For TETHER, keep original spans alongside every generated summary and test raw passages, reranked passages and summaries at the same context and total compute budgets. Measure missed decisive information, altered qualifications and downstream answer accuracy. Citation traversal should begin from question-retrieved evidence, never evaluator-only source hints. Do not import popularity scores as scientific support weights.
+
+This is an incremental proposal: the SciFact experiment already implements
+TF–IDF retrieval and trained linear label/rationale classifiers, while the new
+LitQA2 adapter provides question-driven Europe PMC search and lexical passage
+selection. The missing additions are learned relevance reranking, controlled
+evidence summarization and bounded citation traversal; “add retrieval” would
+misdescribe the current project. ([SciFact baseline](../experiments/scifact/baseline.py), [LitQA2 retrieval](../experiments/labbench/retrieval.py))
 
 **OpenScholar: retrieval refinement and answer repair.** OpenScholar uses retrieval/reranking, feedback-driven additional retrieval and a citation-verification step. Its February 2026 paper and released implementation are relevant scientific-synthesis peers. The full workflow is not equivalent to simply adding a reviewer role. ([Published method](https://www.nature.com/articles/s41586-025-10072-4), [implementation](https://github.com/AkariAsai/OpenScholar))
 
@@ -41,12 +98,27 @@ The transferable experiment is conditional retrieval and abstention against fixe
 
 ## What would strengthen the paper most
 
-1. **Useful-answer benefit at matched cost.** Compare the same producer and candidate evidence before and after each check. Report correct-and-admitted/all scheduled, correct answers rejected, semantic errors admitted, failure rates and cost. The current SciFact admission rate of 100% is not an accuracy result.
+1. **Separate filtering from producing better answers.** With identical frozen candidates, correct-and-admitted/all scheduled cannot exceed raw-correct/all scheduled: a filter cannot create correct answers. It can improve selective precision or reduce admitted errors, at a cost in coverage. Report correct answers rejected, semantic errors admitted, failure rates and cost. A separate retrieval/repair experiment is needed to test an increase in useful answers. The current SciFact admission rate of 100% is not an accuracy result.
 2. **An error decomposition.** Separate missing source, missed passage, wrong interpretation, wrong MCQ choice and operational failure. Gold source recall is a diagnostic after sealing outputs; it must never guide retrieval during evaluation.
 3. **A semantic intervention with a falsifiable benefit.** One repair or full-context semantic baseline should increase useful answers without hiding refusal, extra inference or harm. Keep the weak existing baseline fixed.
 4. **A source-change stress test.** Use plausible outdated annotations, irrelevant but valid citations and contradictory source statements. Distinguish deliberately constructed controls from naturally observed errors and never infer natural error prevalence from the controls.
 5. **A simpler-runner comparison.** The standalone architecture needs empirical justification against policy-complete Inspect, counting extension code and all dependencies. Faster hashes alone cannot establish equal scientific safeguards.
 
+There is a consequential design alternative: retain TETHER's evidence-policy and
+verification components as an extension to a maintained evaluation runner. If
+equivalent-policy Inspect preserves the same failure records and source guarantees
+with less custom orchestration, that would argue for reducing TETHER's standalone
+runner surface. This is a decision criterion for BG05, not a result already
+established by reading documentation or by the simpler-validator experiment.
+
 No reviewed benchmark jointly validates therapeutic success, model-weight chronology, all source policies and scientific synthesis. The strongest defensible paper combines scoped engineering guarantees with measured scientific utility, and retains negative findings when a control adds cost without improving answers. Virtual Biotech's overlapping provenance and orchestration capabilities further weaken any novelty claim based only on agent roles or trace collection; its pinned baseline and current implementation must remain separate comparison targets. ([Earlier source-qualified comparison](<TETHER benchmark priorities and methods.md>))
 
 The active order remains LitQA2, equivalent-policy Inspect and the final goal audit. PaperQA2/OpenScholar-style semantic improvements and broader synthesis benchmarks are follow-on experiments, not silently added requirements for those stages. No peer performance number is transferred to TETHER, and this comparison does not replace the frozen SciFact result.
+
+The subsequent LitQA2 preparation reinforces this distinction: 94 fictional
+software tests pass and actual transport/replay works, yet the model chose unsure
+on an answerable fictional control in both semantic attempts. These are repeated
+observations of one item under evolving implementation, not independent samples
+of benchmark accuracy. The frozen all-199 measurement proceeds under an explicit
+prospective amendment that retains the failed control. Benchmark results remain
+unknown at this review checkpoint. ([Protocol and amendment](<../planning/TETHER LitQA2 Evaluation Protocol 2026-11-06.md>), [independent qualification review](../planning/review-assets/tether-labbench-20261106/data/FINAL-DATA-QUALIFICATION-JUDGMENT.md))

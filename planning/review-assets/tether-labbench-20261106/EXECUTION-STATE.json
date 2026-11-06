@@ -1,0 +1,12 @@
+{
+  "exec_session_id": 63762,
+  "control_output": "data/cache/labbench-collection-control-20261106T011303Z-attempt01",
+  "git_commit": "a9e28c5e54627919b95e76420e7aba0498b66bde",
+  "observed_at_utc": "2026-11-06T01:14:10.3817262Z",
+  "recovery": "Poll exec63762; never duplicate dispatch or overwrite attempt01",
+  "schema_version": 1,
+  "freeze_sha256": "8172610c5637d7a952f80be8a2fe89d01a0c421d638ae254e30c76541886d6f7",
+  "scope": "Question-only licensed public source collection; 199 fixed tasks; no answers or model generation",
+  "collection_output": "data/benchmark/labbench/collection-20261106T011303Z-attempt01",
+  "status": "collection_running"
+}

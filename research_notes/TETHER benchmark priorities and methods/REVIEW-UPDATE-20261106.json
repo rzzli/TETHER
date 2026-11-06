@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "date_utc": "2026-11-06T01:22:07.821628+00:00",
+  "report": "reports\\TETHER benchmark comparison update 2026-11-06.md",
+  "report_sha256": "4da554663cfbb0ac6d4929a91a0ed83aa14c438b2241984d06dad42e31133244",
+  "local_links": 13,
+  "missing_links": [],
+  "frozen_native_sources_unchanged": true,
+  "scope": "Documentation/code-reference validation; source citations reviewed separately; no new native benchmark score",
+  "independent_review_corrections": [
+    "Fixed-candidate admission cannot increase correct yield",
+    "Posthoc NEI arithmetic labelled not executed",
+    "Native MCQ denominator convention",
+    "Inspect existing execution safeguards and equivalent-policy boundary",
+    "Dated ScholarQABench references"
+  ],
+  "active_source_collection": "running; no benchmark generation or scoring yet"
+}
