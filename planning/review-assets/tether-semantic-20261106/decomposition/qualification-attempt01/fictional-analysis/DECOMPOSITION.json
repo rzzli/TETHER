@@ -1,0 +1,430 @@
+{
+  "analysis_manifest_sha256": "2f259ca1e757812213e19421cf07363bc8f167e9ebd8066961684f6801163510",
+  "baseline_identity": null,
+  "cases": [
+    {
+      "all_gold_documents_selected_with_correct_labels": true,
+      "check_status": "accepted",
+      "checked_strict_correct": true,
+      "extra_selected_document_details": [],
+      "first_failure": "strict_correct",
+      "flags": {
+        "complete_full_but_not_capped": false,
+        "correct_label_incomplete_rationale": false,
+        "incomplete_even_full": false,
+        "label_mismatch": false,
+        "not_admitted": false,
+        "operational_failure": false,
+        "rationale_extra_outside_gold_union": false,
+        "rationale_incomplete": false,
+        "retrieval_miss": false,
+        "retrieved_gold_not_selected": false,
+        "selection_extra": false,
+        "selection_omission": false
+      },
+      "gold_document_details": [
+        {
+          "capped_sentences": [
+            0,
+            1
+          ],
+          "complete_any_capped": true,
+          "complete_any_full": true,
+          "complete_rationale_indices_capped": [
+            0
+          ],
+          "complete_rationale_indices_full": [
+            0
+          ],
+          "doc_id": "10",
+          "extra_sentences_capped": [],
+          "extra_sentences_full": [],
+          "gold_label": "SUPPORT",
+          "gold_rationale_sets": [
+            [
+              0,
+              1
+            ]
+          ],
+          "label_correct": true,
+          "missing_sentences_by_rationale_capped": [
+            []
+          ],
+          "missing_sentences_by_rationale_full": [
+            []
+          ],
+          "native_cap": 3,
+          "predicted_label": "SUPPORT",
+          "predicted_sentences": [
+            0,
+            1
+          ],
+          "retrieved": true,
+          "selected": true
+        }
+      ],
+      "gold_documents": [
+        "10"
+      ],
+      "gold_has_evidence": true,
+      "gold_stratum": "SUPPORT",
+      "id": 1,
+      "labels_correct_on_all_selected_gold_documents": true,
+      "native_empty_prediction": false,
+      "nei_outcome": null,
+      "prediction_produced": true,
+      "producer_status": "produced",
+      "raw_strict_correct": true,
+      "retrieval": {
+        "available": true,
+        "complete_gold_retrieved": true,
+        "documents": [
+          "10"
+        ],
+        "false_negative_documents": [],
+        "non_gold_documents": [],
+        "recall": 1.0,
+        "true_positive_documents": [
+          "10"
+        ]
+      },
+      "selection": {
+        "documents": [
+          "10"
+        ],
+        "exact_document_set": true,
+        "false_negative_documents": [],
+        "false_positive_documents": [],
+        "retrieved_gold_not_selected": [],
+        "true_positive_documents": [
+          "10"
+        ]
+      }
+    },
+    {
+      "all_gold_documents_selected_with_correct_labels": null,
+      "check_status": "accepted",
+      "checked_strict_correct": true,
+      "extra_selected_document_details": [],
+      "first_failure": "strict_correct",
+      "flags": {
+        "complete_full_but_not_capped": false,
+        "correct_label_incomplete_rationale": false,
+        "incomplete_even_full": false,
+        "label_mismatch": false,
+        "not_admitted": false,
+        "operational_failure": false,
+        "rationale_extra_outside_gold_union": false,
+        "rationale_incomplete": false,
+        "retrieval_miss": false,
+        "retrieved_gold_not_selected": false,
+        "selection_extra": false,
+        "selection_omission": false
+      },
+      "gold_document_details": [],
+      "gold_documents": [],
+      "gold_has_evidence": false,
+      "gold_stratum": "NEI",
+      "id": 2,
+      "labels_correct_on_all_selected_gold_documents": null,
+      "native_empty_prediction": true,
+      "nei_outcome": "produced_empty_correct",
+      "prediction_produced": true,
+      "producer_status": "produced",
+      "raw_strict_correct": true,
+      "retrieval": {
+        "available": true,
+        "complete_gold_retrieved": null,
+        "documents": [
+          "10"
+        ],
+        "false_negative_documents": [],
+        "non_gold_documents": [
+          "10"
+        ],
+        "recall": null,
+        "true_positive_documents": []
+      },
+      "selection": {
+        "documents": [],
+        "exact_document_set": true,
+        "false_negative_documents": [],
+        "false_positive_documents": [],
+        "retrieved_gold_not_selected": [],
+        "true_positive_documents": []
+      }
+    }
+  ],
+  "first_failure_order": [
+    "operational_failure",
+    "retrieval_miss",
+    "selection_omission",
+    "selection_extra",
+    "label_mismatch",
+    "rationale_incomplete",
+    "strict_correct"
+  ],
+  "inapplicable_semantics": "NEI retrieval recall/completeness and absent operational predictions use null; missing gold documents have unobserved labels/rationales.",
+  "kind": "scifact_descriptive_error_decomposition",
+  "mode": "fictional_qualification",
+  "partition_semantics": "First observed failed requirement in a fixed descriptive order; errors overlap and this is not causal.",
+  "rationale_extra_semantics": "Extra means outside the union of annotated rationale sentences; extras alone do not fail native strict correctness.",
+  "retrieval_non_gold_semantics": "Retrieved documents without gold evidence annotations; benchmark-relative retrieval false positives, not biological negatives.",
+  "schedule": [
+    1,
+    2
+  ],
+  "schema_version": 1,
+  "scope": "Descriptive post hoc analysis of frozen public-development predictions. The ordered partition is a reporting convention, not a causal attribution, ablation, retuning, new model run, or biological/clinical conclusion. False positives and negatives are relative to benchmark annotations; unannotated documents are not established biological negatives. This analysis does not replace the retained official metrics.",
+  "strict_criterion": "Unchanged experiments.scifact.evaluate.strict_correct; operational placeholders excluded",
+  "summary": {
+    "checked_strict_correct": 2,
+    "complete_gold_retrieved_claims": 1,
+    "document_counts": {
+      "extra_sentences_on_selected_gold_capped": 0,
+      "extra_sentences_on_selected_gold_full": 0,
+      "gold": 1,
+      "retrieved_gold": 1,
+      "retrieved_gold_not_selected": 0,
+      "retrieved_non_gold": 1,
+      "selected": 1,
+      "selected_gold": 1,
+      "selected_gold_correct_label_incomplete_rationale": 0,
+      "selected_gold_label_correct": 1,
+      "selected_gold_label_wrong": 0,
+      "selected_gold_rationale_complete_capped": 1,
+      "selected_gold_rationale_complete_full_but_not_capped": 0,
+      "selected_gold_rationale_incomplete_capped": 0,
+      "selected_gold_rationale_incomplete_even_full": 0,
+      "selection_false_negative": 0,
+      "selection_false_positive": 0,
+      "unretrieved_gold": 0
+    },
+    "evidence_bearing_claims": 1,
+    "first_failure_partition": {
+      "label_mismatch": 0,
+      "operational_failure": 0,
+      "rationale_incomplete": 0,
+      "retrieval_miss": 0,
+      "selection_extra": 0,
+      "selection_omission": 0,
+      "strict_correct": 2
+    },
+    "native_empty_predictions": 1,
+    "nei_outcomes": {
+      "produced_empty_correct": 1
+    },
+    "overlapping_flag_counts": {
+      "complete_full_but_not_capped": 0,
+      "correct_label_incomplete_rationale": 0,
+      "incomplete_even_full": 0,
+      "label_mismatch": 0,
+      "not_admitted": 0,
+      "operational_failure": 0,
+      "rationale_extra_outside_gold_union": 0,
+      "rationale_incomplete": 0,
+      "retrieval_miss": 0,
+      "retrieved_gold_not_selected": 0,
+      "selection_extra": 0,
+      "selection_omission": 0
+    },
+    "produced_claims": 2,
+    "raw_strict_correct": 2,
+    "retrieval_observed_claims": 2,
+    "scheduled_claims": 2,
+    "strata": {
+      "CONTRADICT": {
+        "checked_strict_correct": 0,
+        "complete_gold_retrieved_claims": 0,
+        "document_counts": {
+          "extra_sentences_on_selected_gold_capped": 0,
+          "extra_sentences_on_selected_gold_full": 0,
+          "gold": 0,
+          "retrieved_gold": 0,
+          "retrieved_gold_not_selected": 0,
+          "retrieved_non_gold": 0,
+          "selected": 0,
+          "selected_gold": 0,
+          "selected_gold_correct_label_incomplete_rationale": 0,
+          "selected_gold_label_correct": 0,
+          "selected_gold_label_wrong": 0,
+          "selected_gold_rationale_complete_capped": 0,
+          "selected_gold_rationale_complete_full_but_not_capped": 0,
+          "selected_gold_rationale_incomplete_capped": 0,
+          "selected_gold_rationale_incomplete_even_full": 0,
+          "selection_false_negative": 0,
+          "selection_false_positive": 0,
+          "unretrieved_gold": 0
+        },
+        "evidence_bearing_claims": 0,
+        "first_failure_partition": {
+          "label_mismatch": 0,
+          "operational_failure": 0,
+          "rationale_incomplete": 0,
+          "retrieval_miss": 0,
+          "selection_extra": 0,
+          "selection_omission": 0,
+          "strict_correct": 0
+        },
+        "native_empty_predictions": 0,
+        "nei_outcomes": {},
+        "overlapping_flag_counts": {},
+        "produced_claims": 0,
+        "raw_strict_correct": 0,
+        "retrieval_observed_claims": 0,
+        "scheduled_claims": 0
+      },
+      "MIXED": {
+        "checked_strict_correct": 0,
+        "complete_gold_retrieved_claims": 0,
+        "document_counts": {
+          "extra_sentences_on_selected_gold_capped": 0,
+          "extra_sentences_on_selected_gold_full": 0,
+          "gold": 0,
+          "retrieved_gold": 0,
+          "retrieved_gold_not_selected": 0,
+          "retrieved_non_gold": 0,
+          "selected": 0,
+          "selected_gold": 0,
+          "selected_gold_correct_label_incomplete_rationale": 0,
+          "selected_gold_label_correct": 0,
+          "selected_gold_label_wrong": 0,
+          "selected_gold_rationale_complete_capped": 0,
+          "selected_gold_rationale_complete_full_but_not_capped": 0,
+          "selected_gold_rationale_incomplete_capped": 0,
+          "selected_gold_rationale_incomplete_even_full": 0,
+          "selection_false_negative": 0,
+          "selection_false_positive": 0,
+          "unretrieved_gold": 0
+        },
+        "evidence_bearing_claims": 0,
+        "first_failure_partition": {
+          "label_mismatch": 0,
+          "operational_failure": 0,
+          "rationale_incomplete": 0,
+          "retrieval_miss": 0,
+          "selection_extra": 0,
+          "selection_omission": 0,
+          "strict_correct": 0
+        },
+        "native_empty_predictions": 0,
+        "nei_outcomes": {},
+        "overlapping_flag_counts": {},
+        "produced_claims": 0,
+        "raw_strict_correct": 0,
+        "retrieval_observed_claims": 0,
+        "scheduled_claims": 0
+      },
+      "NEI": {
+        "checked_strict_correct": 1,
+        "complete_gold_retrieved_claims": 0,
+        "document_counts": {
+          "extra_sentences_on_selected_gold_capped": 0,
+          "extra_sentences_on_selected_gold_full": 0,
+          "gold": 0,
+          "retrieved_gold": 0,
+          "retrieved_gold_not_selected": 0,
+          "retrieved_non_gold": 1,
+          "selected": 0,
+          "selected_gold": 0,
+          "selected_gold_correct_label_incomplete_rationale": 0,
+          "selected_gold_label_correct": 0,
+          "selected_gold_label_wrong": 0,
+          "selected_gold_rationale_complete_capped": 0,
+          "selected_gold_rationale_complete_full_but_not_capped": 0,
+          "selected_gold_rationale_incomplete_capped": 0,
+          "selected_gold_rationale_incomplete_even_full": 0,
+          "selection_false_negative": 0,
+          "selection_false_positive": 0,
+          "unretrieved_gold": 0
+        },
+        "evidence_bearing_claims": 0,
+        "first_failure_partition": {
+          "label_mismatch": 0,
+          "operational_failure": 0,
+          "rationale_incomplete": 0,
+          "retrieval_miss": 0,
+          "selection_extra": 0,
+          "selection_omission": 0,
+          "strict_correct": 1
+        },
+        "native_empty_predictions": 1,
+        "nei_outcomes": {
+          "produced_empty_correct": 1
+        },
+        "overlapping_flag_counts": {
+          "complete_full_but_not_capped": 0,
+          "correct_label_incomplete_rationale": 0,
+          "incomplete_even_full": 0,
+          "label_mismatch": 0,
+          "not_admitted": 0,
+          "operational_failure": 0,
+          "rationale_extra_outside_gold_union": 0,
+          "rationale_incomplete": 0,
+          "retrieval_miss": 0,
+          "retrieved_gold_not_selected": 0,
+          "selection_extra": 0,
+          "selection_omission": 0
+        },
+        "produced_claims": 1,
+        "raw_strict_correct": 1,
+        "retrieval_observed_claims": 1,
+        "scheduled_claims": 1
+      },
+      "SUPPORT": {
+        "checked_strict_correct": 1,
+        "complete_gold_retrieved_claims": 1,
+        "document_counts": {
+          "extra_sentences_on_selected_gold_capped": 0,
+          "extra_sentences_on_selected_gold_full": 0,
+          "gold": 1,
+          "retrieved_gold": 1,
+          "retrieved_gold_not_selected": 0,
+          "retrieved_non_gold": 0,
+          "selected": 1,
+          "selected_gold": 1,
+          "selected_gold_correct_label_incomplete_rationale": 0,
+          "selected_gold_label_correct": 1,
+          "selected_gold_label_wrong": 0,
+          "selected_gold_rationale_complete_capped": 1,
+          "selected_gold_rationale_complete_full_but_not_capped": 0,
+          "selected_gold_rationale_incomplete_capped": 0,
+          "selected_gold_rationale_incomplete_even_full": 0,
+          "selection_false_negative": 0,
+          "selection_false_positive": 0,
+          "unretrieved_gold": 0
+        },
+        "evidence_bearing_claims": 1,
+        "first_failure_partition": {
+          "label_mismatch": 0,
+          "operational_failure": 0,
+          "rationale_incomplete": 0,
+          "retrieval_miss": 0,
+          "selection_extra": 0,
+          "selection_omission": 0,
+          "strict_correct": 1
+        },
+        "native_empty_predictions": 0,
+        "nei_outcomes": {},
+        "overlapping_flag_counts": {
+          "complete_full_but_not_capped": 0,
+          "correct_label_incomplete_rationale": 0,
+          "incomplete_even_full": 0,
+          "label_mismatch": 0,
+          "not_admitted": 0,
+          "operational_failure": 0,
+          "rationale_extra_outside_gold_union": 0,
+          "rationale_incomplete": 0,
+          "retrieval_miss": 0,
+          "retrieved_gold_not_selected": 0,
+          "selection_extra": 0,
+          "selection_omission": 0
+        },
+        "produced_claims": 1,
+        "raw_strict_correct": 1,
+        "retrieval_observed_claims": 1,
+        "scheduled_claims": 1
+      }
+    }
+  }
+}

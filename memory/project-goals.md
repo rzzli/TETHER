@@ -8,6 +8,17 @@ updated: 2026-11-06
 
 # TETHER project goals
 
+New owner authorization on6November activates SC01–SC09 in
+[[TETHER Semantic Capability Execution Plan 2026-11-06]] and
+[[research-log-2026-11-06-semantic-execution]]. First decompose the sealed SciFact
+errors, then qualify/execute the full-context solver and evidence-use conditions,
+then LitQA2 retrieval/reranking/repair and ALCE/selectedScholarQA/R2E. Final audit
+requires all stages; a successful diagnostic alone does not complete this goal.
+SC01 is complete with all 300 cases independently reconstructed and old sources
+preserved; SC02 acquisition/runtime/solver qualification is active. See
+[[TETHER SciFact Error Decomposition Results 2026-11-06]]. Previous completed-goal
+status below is historical and does not supersede this new authorization.
+
 Current November 6 UTC execution: BG01–BG06 are complete in their declared scopes.
 SciFact27/300 strict-correct and LitQA2 12/199 correct remain weak public-task
 baselines; all candidates admitted and raw/checked metrics identical. Inspect

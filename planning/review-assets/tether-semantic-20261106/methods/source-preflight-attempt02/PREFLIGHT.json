@@ -1,0 +1,265 @@
+{
+  "acquisition": {
+    "bytes": 7799,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-scifact-20261105\\ACQUISITION-20261105.json",
+    "sha256": "f5522fb41557d7d014de68abf0d684069a170ad204da816e8078c71f4e226fd3"
+  },
+  "all_300_development_ids_original_order_verified": true,
+  "anchors": {
+    "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact\\native-20261105T234805Z-attempt01\\RECEIPT.json": {
+      "bytes": 246855,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact\\native-20261105T234805Z-attempt01\\RECEIPT.json",
+      "sha256": "3a997165aac2f0a85a93890f5e10a66d8117563e380e98f892dd3cb8a93f8968"
+    },
+    "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact\\preparation-20261105-attempt03\\manifest.json": {
+      "bytes": 9902,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact\\preparation-20261105-attempt03\\manifest.json",
+      "sha256": "cb32f1384c49b66b912a62120abd7137a8a19b303f3ad052f035f21779c131f8"
+    },
+    "D:\\Projects\\drug_target_agents\\data\\raw\\scifact_public\\20261105-attempt01\\scifact-data.tar.gz": {
+      "bytes": 3115079,
+      "path": "D:\\Projects\\drug_target_agents\\data\\raw\\scifact_public\\20261105-attempt01\\scifact-data.tar.gz",
+      "sha256": "11c621288d41ac144d29b13b0f8503b3820b7d6e8b1f6ff24dff335c196d76be"
+    },
+    "D:\\Projects\\drug_target_agents\\data\\raw\\scifact_public\\20261105-attempt01\\scifact-data.tar.gz.receipt.json": {
+      "bytes": 823,
+      "path": "D:\\Projects\\drug_target_agents\\data\\raw\\scifact_public\\20261105-attempt01\\scifact-data.tar.gz.receipt.json",
+      "sha256": "b2aa9586681fbc22b1dbcd563daa6f49582f71f09331a80df78a5d4553fe4ba2"
+    },
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-scifact-20261105\\actual-attempt01\\ROOT-ACCEPTANCE.json": {
+      "bytes": 31813,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-scifact-20261105\\actual-attempt01\\ROOT-ACCEPTANCE.json",
+      "sha256": "3426f85542f3a2b3355542e9292168db2f5f2ce39c713836a3c0e7cc1202d462"
+    }
+  },
+  "baseline_exact_fileset": true,
+  "baseline_output_bytes_excluding_receipt": 36323172,
+  "baseline_outputs_verified": 1601,
+  "baseline_receipt_bytes": 246855,
+  "baseline_rechecked_unchanged": true,
+  "baseline_retained_bytes_including_receipt": 36570027,
+  "completed_at_utc": "2026-11-06T17:39:23.523975+00:00",
+  "independent_projections": {
+    "corpus": {
+      "bytes": 8114977,
+      "rows": 5183,
+      "sha256": "e9127a5d615558c44343f719ac229683ee874aa427c6c60ba515cd92bbc29c9a"
+    },
+    "queries_dev": {
+      "bytes": 33777,
+      "rows": 300,
+      "sha256": "e32b792382a968dcdbb3135bd8012fadf744d7aa25c87fa64ab41102bc00b503"
+    },
+    "references_dev": {
+      "bytes": 61430,
+      "rows": 300,
+      "sha256": "9af5e98502ddeebf25916579f6c96d689572a516ea3c5793711816f5ce933f5e"
+    }
+  },
+  "inventory_record": {
+    "bytes": 649619,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\source-preflight-attempt02\\VERIFIED-BASELINE-INVENTORY.json",
+    "sha256": "0695935f9bbb3dbabe09715aba1bf5d6ad766ea6b439bb3c15c74f4f8db4be1c"
+  },
+  "kind": "independent_original_scifact_source_authority_preflight",
+  "prepared_products_verified": {
+    "corpus": {
+      "bytes": 8114977,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact\\preparation-20261105-attempt03\\views\\corpus.jsonl",
+      "sha256": "e9127a5d615558c44343f719ac229683ee874aa427c6c60ba515cd92bbc29c9a"
+    },
+    "fit_pairs": {
+      "bytes": 59973,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact\\preparation-20261105-attempt03\\restricted\\fit_pairs.jsonl",
+      "sha256": "9a018184eabab9ca5d1e93e22c683227c8163cc1d671def985f55114dac2d7b9"
+    },
+    "queries_calibration": {
+      "bytes": 7579,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact\\preparation-20261105-attempt03\\views\\queries_calibration.jsonl",
+      "sha256": "2ca8f334046a6397a87b25b2b33710ad2414726b573519135f2bbc6ec9c0d31b"
+    },
+    "queries_dev": {
+      "bytes": 33777,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact\\preparation-20261105-attempt03\\views\\queries_dev.jsonl",
+      "sha256": "e32b792382a968dcdbb3135bd8012fadf744d7aa25c87fa64ab41102bc00b503"
+    },
+    "queries_fit": {
+      "bytes": 42221,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact\\preparation-20261105-attempt03\\views\\queries_fit.jsonl",
+      "sha256": "f73fe390d7293630b8a2c33fec3cfe361f4ab66845d4ef582bf986e560d59a94"
+    },
+    "queries_tune": {
+      "bytes": 9874,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact\\preparation-20261105-attempt03\\views\\queries_tune.jsonl",
+      "sha256": "393851ddf526a542a014a4f65b0eaafc2eed7d31f88c2b12f98fd76723129947"
+    },
+    "references_calibration": {
+      "bytes": 14059,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact\\preparation-20261105-attempt03\\restricted\\references_calibration.jsonl",
+      "sha256": "14f8978bd125830e8c1769cbdd4549737c6f23da097c55e8d50ab3139cf0f9d1"
+    },
+    "references_dev": {
+      "bytes": 61430,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact\\preparation-20261105-attempt03\\restricted\\references_dev.jsonl",
+      "sha256": "9af5e98502ddeebf25916579f6c96d689572a516ea3c5793711816f5ce933f5e"
+    },
+    "references_fit": {
+      "bytes": 76853,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact\\preparation-20261105-attempt03\\restricted\\references_fit.jsonl",
+      "sha256": "b2022ca92c3e8e0a4534375b672052948b5c94fe554784ad6da2a53f132bbb51"
+    },
+    "references_tune": {
+      "bytes": 18196,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact\\preparation-20261105-attempt03\\restricted\\references_tune.jsonl",
+      "sha256": "e7a58e6b3eae4fc2c8a07f8c9043c6ddc1b138d175aacad378970b0fd9da3495"
+    },
+    "source_bindings": {
+      "bytes": 3373956,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact\\preparation-20261105-attempt03\\restricted\\source_bindings.json",
+      "sha256": "57ab3ad45cd98c050a5d3b123a5fb62e02652881dff6c49db50a10d0f1ee4b4a"
+    },
+    "split": {
+      "bytes": 187279,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact\\preparation-20261105-attempt03\\restricted\\split.json",
+      "sha256": "89c9bc916680411642f8b2bef66d5adb0ea1446655266b72d2062567b6bb05c8"
+    }
+  },
+  "scope": "Read-only archive, source projection and inventory verification. No new diagnostic error computation, model execution, scoring, fitting, tuning, downloads or original-file writes.",
+  "script": {
+    "bytes": 12149,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\source_preflight.py",
+    "sha256": "ea18b4771936b0cf8c981daf208c122c588f47ab0d31e03a14122f00df1f5762"
+  },
+  "source_binding_rows": {
+    "claims": {
+      "dev": 300,
+      "test": 300,
+      "train": 809
+    },
+    "corpus": 5183
+  },
+  "source_bindings_byte_identical": true,
+  "source_inventory": [
+    {
+      "bytes": 220,
+      "kind": "file",
+      "name": "._data"
+    },
+    {
+      "bytes": 0,
+      "kind": "directory",
+      "name": "data"
+    },
+    {
+      "bytes": 65007,
+      "kind": "file",
+      "name": "data/claims_dev.jsonl"
+    },
+    {
+      "bytes": 0,
+      "kind": "directory",
+      "name": "data/cross_validation"
+    },
+    {
+      "bytes": 175616,
+      "kind": "file",
+      "name": "data/claims_train.jsonl"
+    },
+    {
+      "bytes": 33769,
+      "kind": "file",
+      "name": "data/claims_test.jsonl"
+    },
+    {
+      "bytes": 8307875,
+      "kind": "file",
+      "name": "data/corpus.jsonl"
+    },
+    {
+      "bytes": 220,
+      "kind": "file",
+      "name": "data/cross_validation/._fold_4"
+    },
+    {
+      "bytes": 0,
+      "kind": "directory",
+      "name": "data/cross_validation/fold_4"
+    },
+    {
+      "bytes": 0,
+      "kind": "directory",
+      "name": "data/cross_validation/fold_3"
+    },
+    {
+      "bytes": 0,
+      "kind": "directory",
+      "name": "data/cross_validation/fold_2"
+    },
+    {
+      "bytes": 0,
+      "kind": "directory",
+      "name": "data/cross_validation/fold_5"
+    },
+    {
+      "bytes": 220,
+      "kind": "file",
+      "name": "data/cross_validation/._fold_1"
+    },
+    {
+      "bytes": 0,
+      "kind": "directory",
+      "name": "data/cross_validation/fold_1"
+    },
+    {
+      "bytes": 47736,
+      "kind": "file",
+      "name": "data/cross_validation/fold_1/claims_dev_1.jsonl"
+    },
+    {
+      "bytes": 192887,
+      "kind": "file",
+      "name": "data/cross_validation/fold_1/claims_train_1.jsonl"
+    },
+    {
+      "bytes": 193241,
+      "kind": "file",
+      "name": "data/cross_validation/fold_5/claims_train_5.jsonl"
+    },
+    {
+      "bytes": 47382,
+      "kind": "file",
+      "name": "data/cross_validation/fold_5/claims_dev_5.jsonl"
+    },
+    {
+      "bytes": 48999,
+      "kind": "file",
+      "name": "data/cross_validation/fold_2/claims_dev_2.jsonl"
+    },
+    {
+      "bytes": 191624,
+      "kind": "file",
+      "name": "data/cross_validation/fold_2/claims_train_2.jsonl"
+    },
+    {
+      "bytes": 192029,
+      "kind": "file",
+      "name": "data/cross_validation/fold_3/claims_train_3.jsonl"
+    },
+    {
+      "bytes": 48594,
+      "kind": "file",
+      "name": "data/cross_validation/fold_3/claims_dev_3.jsonl"
+    },
+    {
+      "bytes": 47912,
+      "kind": "file",
+      "name": "data/cross_validation/fold_4/claims_dev_4.jsonl"
+    },
+    {
+      "bytes": 192711,
+      "kind": "file",
+      "name": "data/cross_validation/fold_4/claims_train_4.jsonl"
+    }
+  ],
+  "status": "PASS"
+}

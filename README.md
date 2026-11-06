@@ -34,6 +34,8 @@ same-version candidate artifacts retain their distinct code and wheel hashes.
 
 ## Current status and next step
 
+The owner has activated the [semantic capability execution plan](<planning/TETHER Semantic Capability Execution Plan 2026-11-06.md>): SciFact error decomposition and a stronger full-context solver, followed by controlled LitQA2 retrieval/repair and native citation/synthesis/ranking evaluations. SC01–SC09 in [TODO](TODO.md) track this new goal. The completed benchmark results below remain unchanged historical controls.
+
 The [updated peer comparison](<reports/TETHER benchmark priorities and methods.md>)
 prioritizes native SciFact, one original LAB-Bench task and equal-policy Inspect.
 It distinguishes existing controls from missing semantic answering, selective

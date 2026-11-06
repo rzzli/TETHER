@@ -1,0 +1,184 @@
+{
+  "independent": {
+    "cases": [
+      {
+        "accepted": true,
+        "checked_strict_correct": true,
+        "documents": [
+          {
+            "cap_displacement": false,
+            "complete_capped": true,
+            "complete_full": true,
+            "doc_id": "10",
+            "label_correct": true,
+            "missing_by_alternative_capped": [
+              []
+            ],
+            "missing_by_alternative_full": [
+              []
+            ],
+            "native_cap": 3,
+            "outside_union_capped": [],
+            "outside_union_full": []
+          }
+        ],
+        "first_failure": "correct_evidence",
+        "flags": {
+          "rationale_cap_displacement_common": false,
+          "rationale_capped_incomplete_common": false,
+          "rationale_full_incomplete_common": false,
+          "rationale_outside_union_capped_common": false,
+          "rationale_outside_union_full_common": false,
+          "retrieval_missing": false,
+          "retrieved_selection_omission": false,
+          "selected_extra": false,
+          "selected_missing": false,
+          "wrong_label_common": false
+        },
+        "gold_doc_ids": [
+          "10"
+        ],
+        "id": 1,
+        "produced": true,
+        "raw_strict_correct": true,
+        "reference_stratum": "SUPPORT",
+        "retrieval_missing_ids": [],
+        "retrieved_selection_omission_ids": [],
+        "selected_doc_ids": [
+          "10"
+        ],
+        "selected_extra_ids": [],
+        "selected_missing_ids": []
+      },
+      {
+        "accepted": true,
+        "checked_strict_correct": true,
+        "documents": [],
+        "first_failure": "correct_nei",
+        "flags": {
+          "rationale_cap_displacement_common": false,
+          "rationale_capped_incomplete_common": false,
+          "rationale_full_incomplete_common": false,
+          "rationale_outside_union_capped_common": false,
+          "rationale_outside_union_full_common": false,
+          "retrieval_missing": false,
+          "retrieved_selection_omission": false,
+          "selected_extra": false,
+          "selected_missing": false,
+          "wrong_label_common": false
+        },
+        "gold_doc_ids": [],
+        "id": 2,
+        "produced": true,
+        "raw_strict_correct": true,
+        "reference_stratum": "NEI",
+        "retrieval_missing_ids": null,
+        "retrieved_selection_omission_ids": null,
+        "selected_doc_ids": [],
+        "selected_extra_ids": [],
+        "selected_missing_ids": []
+      }
+    ],
+    "checked_native": {
+      "abstract": {
+        "gold": 1,
+        "label_correct": 1,
+        "predicted": 1,
+        "rationalized_correct": 1
+      },
+      "metrics": {
+        "abstract_label_only_f1": 1.0,
+        "abstract_label_only_precision": 1.0,
+        "abstract_label_only_recall": 1.0,
+        "abstract_rationalized_f1": 1.0,
+        "abstract_rationalized_precision": 1.0,
+        "abstract_rationalized_recall": 1.0,
+        "sentence_label_f1": 1.0,
+        "sentence_label_precision": 1.0,
+        "sentence_label_recall": 1.0,
+        "sentence_selection_f1": 1.0,
+        "sentence_selection_precision": 1.0,
+        "sentence_selection_recall": 1.0
+      },
+      "sentence": {
+        "gold": 2,
+        "label_correct": 2,
+        "predicted": 2,
+        "selection_correct": 2
+      }
+    },
+    "counts": {
+      "accepted": 2,
+      "checked_strict_correct": 2,
+      "gold_document_pairs": 1,
+      "gold_document_pairs_retrieved": 1,
+      "nonempty_gold_claims": 1,
+      "nonempty_gold_complete_retrieval_claims": 1,
+      "produced": 2,
+      "raw_strict_correct": 2,
+      "scheduled": 2
+    },
+    "first_failure_counts": {
+      "correct_evidence": 1,
+      "correct_nei": 1
+    },
+    "overlapping_claim_flags": {
+      "rationale_cap_displacement_common": 0,
+      "rationale_capped_incomplete_common": 0,
+      "rationale_full_incomplete_common": 0,
+      "rationale_outside_union_capped_common": 0,
+      "rationale_outside_union_full_common": 0,
+      "retrieval_missing": 0,
+      "retrieved_selection_omission": 0,
+      "selected_extra": 0,
+      "selected_missing": 0,
+      "wrong_label_common": 0
+    },
+    "raw_native": {
+      "abstract": {
+        "gold": 1,
+        "label_correct": 1,
+        "predicted": 1,
+        "rationalized_correct": 1
+      },
+      "metrics": {
+        "abstract_label_only_f1": 1.0,
+        "abstract_label_only_precision": 1.0,
+        "abstract_label_only_recall": 1.0,
+        "abstract_rationalized_f1": 1.0,
+        "abstract_rationalized_precision": 1.0,
+        "abstract_rationalized_recall": 1.0,
+        "sentence_label_f1": 1.0,
+        "sentence_label_precision": 1.0,
+        "sentence_label_recall": 1.0,
+        "sentence_selection_f1": 1.0,
+        "sentence_selection_precision": 1.0,
+        "sentence_selection_recall": 1.0
+      },
+      "sentence": {
+        "gold": 2,
+        "label_correct": 2,
+        "predicted": 2,
+        "selection_correct": 2
+      }
+    }
+  },
+  "independent_checker": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\independent_native_check.py",
+    "sha256": "68703fe9713580223e0ed918758ab7f87e9bd00205375aa3a753b9ef1bfd83d8",
+    "size_bytes": 16219
+  },
+  "invented_transport_cases": 2,
+  "primary": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\decomposition\\qualification-attempt01\\fictional-analysis\\DECOMPOSITION.json",
+    "sha256": "ed682b5d27ed7de8b9f7fd2e425da9d12cb515dd57e516e0021ea55793ffbd2a",
+    "size_bytes": 14905
+  },
+  "reviewer": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\review_fictional_schema.py",
+    "sha256": "55c04fe29853b6e797889405e5065b4886b6770e2409ceddc935e0513f284647",
+    "size_bytes": 2778
+  },
+  "scope": "Schema/data join only; no real development analysis and no primary analyzer import.",
+  "status": "PASS"
+}

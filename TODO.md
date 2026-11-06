@@ -1,7 +1,8 @@
 # TETHER project execution checklist
 
 Updated 6 November 2026 UTC. Current execution authority:
-[Benchmark execution plan](<planning/TETHER Benchmark Execution Plan 2026-11-02.md>).
+[Semantic capability execution plan](<planning/TETHER Semantic Capability Execution Plan 2026-11-06.md>).
+The completed [benchmark execution plan](<planning/TETHER Benchmark Execution Plan 2026-11-02.md>) remains historical evidence.
 Earlier review and corrective roadmap:
 [Full critical review](<planning/TETHER Full Project Critical Review 2026-11-02.md>) and
 [corrective execution plan](<planning/TETHER Corrective Execution Plan 2026-11-02.md>).
@@ -18,7 +19,23 @@ The old categorical genetics adapter and retrospective old-pair audit are option
 appendix work; their provenance/isolation requirements are reused where applicable.
 Neither task should delay the paper's objective multicase evaluation.
 
-## Authorized benchmark execution — active goal
+## Authorized semantic capability execution — active goal
+
+The owner now authorizes executing the recommended scientific-capability sequence autonomously. Complete and validate each stage before the next execution, retain failed attempts and all-case denominators, and preserve the old frozen benchmarks. Read-only later-stage feasibility can run in parallel. Weak results complete a measurement but do not establish improvement.
+
+- [x] SC01 Decompose the sealed SciFact baseline's retrieval, document-selection, label and rationale errors. All 300 cases independently reconstruct; 23 analyzer tests and 14 native boundary controls pass; all 1,601 original output hashes are preserved. See [results](<planning/TETHER SciFact Error Decomposition Results 2026-11-06.md>) and [root acceptance](planning/review-assets/tether-semantic-20261106/decomposition/ROOT-ACCEPTANCE.json).
+- [ ] SC02 Qualify/acquire the full-context joint solver and isolated runtime; verify rights/training exposure and actual inference/resource controls.
+- [ ] SC03 Freeze and execute the stronger SciFact comparison with fixed-retrieval and evidence-use diagnostic conditions; retain native metrics, source replay and independent results.
+- [ ] SC04 Freeze and execute controlled LitQA2 query-expansion/reranking and separately labelled supplied-source diagnostics across the original199 questions.
+- [ ] SC05 Execute bounded retrieval refinement/answer repair and selective-answering comparisons under matched caps, counting repaired and damaged answers.
+- [ ] SC06 Implement, qualify and execute the ALCE citation-support evaluation with native task/metric conditions and complete declared family coverage.
+- [ ] SC07 Implement, qualify and execute an annotation-supported ScholarQABench synthesis evaluation with explicit subset, judge and chronology.
+- [ ] SC08 Implement, qualify and execute R2E ranking with a frozen candidate universe, source corpus and native metrics.
+- [ ] SC09 Audit all new stages; update reports, documentation, memory and reproduction guidance, and retain the final validated local checkpoint.
+
+Current new-goal checkpoint: SC01 is complete; SC02 acquisition/runtime and solver qualification are active. Of 300 baseline claims, 41 miss annotated sources in retrieval and 242 select extra documents (overlapping counts); these are descriptive, annotation-relative errors. The earlier BG01–BG06 completion below does not complete this new goal.
+
+## Authorized benchmark execution — completed historical goal
 
 The owner now authorizes sequential implementation and evaluation of the recommendations below. This supersedes the earlier recommendation-only wording for these stages; it does not reopen historical failed model cells or change their results. Retain regular timestamped commits and a checkpoint after each validated major stage.
 

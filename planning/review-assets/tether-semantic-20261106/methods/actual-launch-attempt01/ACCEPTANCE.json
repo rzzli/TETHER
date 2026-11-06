@@ -1,0 +1,39 @@
+{
+  "all_frozen_pins_rechecked": 28,
+  "commands": {
+    "compare": {
+      "elapsed_seconds": 0.11104509999859147,
+      "returncode": 0
+    },
+    "reconstruct": {
+      "elapsed_seconds": 0.15292870000121184,
+      "returncode": 0
+    }
+  },
+  "comparison": {
+    "bytes": 4535,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\actual-comparison-attempt01\\COMPARISON.json",
+    "sha256": "368469996ade5a95b5e11fc8a7f5937df61c87c9676fe05e33f0c3e106947de4"
+  },
+  "completed_at_utc": "2026-11-06T17:41:26.185366+00:00",
+  "manifest": {
+    "bytes": 8145,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\decomposition\\actual-freeze-attempt01\\INPUT-MANIFEST.json",
+    "sha256": "f465f1579dd6f71d82d261c0a1230acfc258935c557025f0f0197fe670659203"
+  },
+  "original_authorities_and_prepared_products_rechecked": true,
+  "original_stage_exact_fileset_unchanged": true,
+  "original_stage_outputs_rechecked": 1601,
+  "reader_and_comparator_unchanged": true,
+  "reconstruction": {
+    "bytes": 411916,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\actual-reconstruction-attempt01\\INDEPENDENT-RECONSTRUCTION.json",
+    "sha256": "bd1835435dc1370e0eb26863e5c4d90d33c8e924d3d165c35914a5db4e53750f"
+  },
+  "script": {
+    "bytes": 5337,
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\run_actual_review.py",
+    "sha256": "4c3579a4e7cce737ed81d4f89714ffed17e934425946c2e49d58866fc4ac46bd"
+  },
+  "status": "PASS"
+}

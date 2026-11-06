@@ -1,5 +1,7 @@
 # TETHER research memory index
 
+- [[research-log-2026-11-06-semantic-execution]] - Current new goal SC01–SC09 active: decompose SciFact, qualify/full-context solver and evidence-use comparison, LitQA2 retrieval/repair, ALCE/selectedScholarQA/R2E, final audit. BG01–BG06 remains historical completion. SC01 active; SC02 read-only feasibility flags official SciFact-checkpoint exposure and qualifies fever_sci route. No acquisition/inference yet.
+
 - [[research-log-2026-11-06-benchmark-goal-complete]] - Current BG01–BG06 complete in bounded scopes: defects/replay corrected; independent policy comparison, weak native SciFact/LitQA2 and partial Inspect portability measured; requirements/science/preservation audits pass. No active goal task remains. Broader science, full migration and owner-deferred publication remain separate; no reruns or monitor restart.
 
 - [[research-log-2026-11-06-inspect-results]] - Current BG01–BG05 complete:981/981 finite conformance cells and19 intended runtime dispositions independently reconstruct; Inspect/TETHER batch ratio1.5465, substantial reused code/12 runtime limits. Root60 checks/34 links pass; BG06 final audit next. No scientific/simplicity claim or rerun.

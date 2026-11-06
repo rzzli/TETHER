@@ -1,0 +1,123 @@
+{
+  "claims_checked": 300,
+  "document_counts_checked": {
+    "extra_sentences_on_selected_gold_capped": 192,
+    "extra_sentences_on_selected_gold_full": 305,
+    "gold": 209,
+    "retrieved_gold": 159,
+    "retrieved_gold_not_selected": 47,
+    "selected": 872,
+    "selected_gold": 112,
+    "selected_gold_correct_label_incomplete_rationale": 26,
+    "selected_gold_label_correct": 73,
+    "selected_gold_label_wrong": 39,
+    "selected_gold_rationale_complete_capped": 77,
+    "selected_gold_rationale_complete_full_but_not_capped": 11,
+    "selected_gold_rationale_incomplete_capped": 35,
+    "selected_gold_rationale_incomplete_even_full": 24,
+    "selection_false_negative": 97,
+    "selection_false_positive": 760,
+    "unretrieved_gold": 50
+  },
+  "first_failure_partition": {
+    "label_mismatch": 3,
+    "operational_failure": 0,
+    "rationale_incomplete": 1,
+    "retrieval_miss": 41,
+    "selection_extra": 183,
+    "selection_omission": 45,
+    "strict_correct": 27
+  },
+  "independent_native_counts": {
+    "checked_native": {
+      "abstract": {
+        "gold": 209,
+        "label_correct": 73,
+        "predicted": 872,
+        "rationalized_correct": 47
+      },
+      "metrics": {
+        "abstract_label_only_f1": 0.13506012950971322,
+        "abstract_label_only_precision": 0.08371559633027523,
+        "abstract_label_only_recall": 0.3492822966507177,
+        "abstract_rationalized_f1": 0.08695652173913043,
+        "abstract_rationalized_precision": 0.05389908256880734,
+        "abstract_rationalized_recall": 0.22488038277511962,
+        "sentence_label_f1": 0.04807692307692308,
+        "sentence_label_precision": 0.026813880126182965,
+        "sentence_label_recall": 0.23224043715846995,
+        "sentence_selection_f1": 0.07861990950226244,
+        "sentence_selection_precision": 0.043848580441640375,
+        "sentence_selection_recall": 0.3797814207650273
+      },
+      "sentence": {
+        "gold": 366,
+        "label_correct": 85,
+        "predicted": 3170,
+        "selection_correct": 139
+      }
+    },
+    "raw_native": {
+      "abstract": {
+        "gold": 209,
+        "label_correct": 73,
+        "predicted": 872,
+        "rationalized_correct": 47
+      },
+      "metrics": {
+        "abstract_label_only_f1": 0.13506012950971322,
+        "abstract_label_only_precision": 0.08371559633027523,
+        "abstract_label_only_recall": 0.3492822966507177,
+        "abstract_rationalized_f1": 0.08695652173913043,
+        "abstract_rationalized_precision": 0.05389908256880734,
+        "abstract_rationalized_recall": 0.22488038277511962,
+        "sentence_label_f1": 0.04807692307692308,
+        "sentence_label_precision": 0.026813880126182965,
+        "sentence_label_recall": 0.23224043715846995,
+        "sentence_selection_f1": 0.07861990950226244,
+        "sentence_selection_precision": 0.043848580441640375,
+        "sentence_selection_recall": 0.3797814207650273
+      },
+      "sentence": {
+        "gold": 366,
+        "label_correct": 85,
+        "predicted": 3170,
+        "selection_correct": 139
+      }
+    }
+  },
+  "inputs": {
+    "comparator": {
+      "bytes": 8796,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\compare_primary.py",
+      "sha256": "f4196156da4cb9a4c7703924d5b308b27928794102ad730fac89146a850c663e"
+    },
+    "independent": {
+      "bytes": 411916,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\actual-reconstruction-attempt01\\INDEPENDENT-RECONSTRUCTION.json",
+      "sha256": "bd1835435dc1370e0eb26863e5c4d90d33c8e924d3d165c35914a5db4e53750f"
+    },
+    "primary": {
+      "bytes": 990428,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_diagnostics\\20261106-attempt01\\DECOMPOSITION.json",
+      "sha256": "f22ad12b46f6ccb182bd09d0cf6a4b08d3db9de8b22535b117040b67f7084a83"
+    }
+  },
+  "overlapping_flag_counts": {
+    "complete_full_but_not_capped": 11,
+    "correct_label_incomplete_rationale": 24,
+    "incomplete_even_full": 22,
+    "label_mismatch": 38,
+    "not_admitted": 0,
+    "operational_failure": 0,
+    "rationale_extra_outside_gold_union": 101,
+    "rationale_incomplete": 33,
+    "retrieval_miss": 41,
+    "retrieved_gold_not_selected": 47,
+    "selection_extra": 242,
+    "selection_omission": 86
+  },
+  "scope": "Independent descriptive reconstruction; no analyzer import, new model, tuning or causal repair claim.",
+  "selected_gold_documents_checked": 112,
+  "status": "PASS"
+}
