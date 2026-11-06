@@ -1,7 +1,23 @@
-# SC03 checkpoint — input preparation and resident-worker qualification
+# SC03 checkpoint — production executing
 
-**SC03 remains incomplete. No development predictions or new benchmark scores
-have been generated.** SC01 and SC02 are complete; SC04–SC09 remain pending.
+**SC03 remains incomplete. The full five-condition production run is active.**
+The primary condition has completed300 claims/1,500 pairs without missing or
+overlength inputs; the remaining conditions execute sequentially. Scoring and
+independent reconstruction follow all production outputs. SC01 and SC02 are
+complete; SC04–SC09 remain pending.
+
+Production frame: `production-freeze-attempt01/EXPERIMENT.json`, SHA-256
+`3c96f903256acf7fc7003cfa5c3abb7e24541741a7f1851e5b2dd48cd394458c`.
+The live process handle at this checkpoint is exec session94090. Observe that
+handle or its authoritative terminal outcome; never restart on a polling timeout.
+
+Additional qualification:62 tests pass, including source/request checking,
+released probability decoding, source-inclusive output/journal reconstruction,
+native score parity and paired-bootstrap boundaries. The external checkpoint
+context passes actual receipt/payload/runtime/preparation checks for300 queries
+and5,183 documents. The production auditor also reconstructs the real-model
+fictional rehearsal. Legacy non-generative resource fields remain a labelled
+compatibility view; measured transformer input tokens are retained separately.
 
 ## Completed and verified
 
@@ -28,17 +44,11 @@ benchmark runtime or scientific validity. Provider spending remains$0.
 
 ## Next required work
 
-1. Implement/test the external-checkpoint provenance context and paired native
-   candidate checks. The original context requires a locally fitted sparse model;
-   MultiVerS must not be passed off as that model. Preserve observed transformer
-   input-token measurements separately from any legacy non-generative accounting
-   representation. Retain all request/source/configuration/producer obligations.
-2. Qualify source-inclusive production-output reconstruction, native scoring,
-   interventions and component-bootstrap analysis on invented cases; freeze the
-   complete production input/code/environment/evaluator frame before inference.
-3. Execute all five conditions sequentially with bounded workers; keep failures
+1. Finish all five conditions sequentially with bounded workers; keep failures
    and all scheduled denominators. No uncertain call gets an automatic retry.
-4. Independently reconstruct primary raw/checked native metrics and diagnostic
+2. Execute source-inclusive paired checking and native scoring using the frozen
+   external-model context, then compute the declared bootstrap and diagnostics.
+3. Independently reconstruct primary raw/checked native metrics and diagnostic
    source-use effects, then retain resources/results and close SC03 only after
    the full completion gate passes.
 
@@ -47,7 +57,6 @@ legacy manifest kind contains the word `qualification`. A separate `purpose`
 and `benchmark_inference` field identify fictional versus actual execution.
 This naming compatibility never relabels a fictional run as benchmark evidence.
 
-No active inference process remains from this checkpoint. The completed rehearsal
-must not be restarted. Production is not yet frozen or authorized by a successful
-scientific-output acceptance gate; the owner's overall execution authorization
-remains in force and no new permission is required for routine remaining work.
+The completed fictional rehearsal must not be restarted. Production now follows
+the frozen frame and checked worker; scientific results still require the final
+acceptance gate. The owner's overall execution authorization remains in force.

@@ -8,6 +8,15 @@ updated: 2026-11-06
 
 # Semantic capability goal activated
 
+SC03 production checkpoint:62 tests pass and the external-model context checks
+actual pinned assets,300 queries and5,183 original documents. Five conditions
+are frozen at3c96f903256acf7fc7003cfa5c3abb7e24541741a7f1851e5b2dd48cd394458c.
+Execution session94090 is live; primary300 claims/1,500 pairs completed, remaining
+conditions run sequentially. No new performance conclusion yet. Observe the
+existing process, do not restart it. Scoring, bootstrap and independent
+source/native/intervention reconstruction follow. Original producer/model code
+and complete analysis sources must stay unchanged while this frame executes.
+
 SC03 implementation checkpoint: all five300-claim/1,500-pair conditions are
 prepared from receipt-verified original projections and fixed baseline retrieval.
 Separate stdlib replay passes115,998 assertions; rationale/removal masks apply
