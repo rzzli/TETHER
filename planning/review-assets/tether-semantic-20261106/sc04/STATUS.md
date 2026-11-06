@@ -98,3 +98,34 @@ or full independent scientific audit. Next assemble the sealed-run scorer and
 source/contrast/resource reporting, then score only finalized primary+diagnostic
 runs. Primary session48230 was confirmed live at the latest poll:126/398 collection
 slots complete,592HTTP200 responses and7retained failed transfers. No restart.
+
+## Independent analysis integration qualified on fictional runs
+
+The independent analyzer now reconstructs both externally anchored fictional
+controller runs, including all16 native calls (2expansions,4rankings,10answers),
+source rights/allocation, original XML passages, complete input-parent proofs,
+exact cross-stage products and physical versus logical resource accounting.
+Five reproduced reader defects were fixed before analysis; see
+[reader corrections](ANALYSIS-READER-CORRECTIONS.md). These defects were demonstrated
+in deliberately altered fixtures, not observed production data.
+
+The current combined gate passes127 tests with zero failures/errors/skips in
+[analysis-controls-attempt09](analysis-controls-attempt09/QUALIFICATION.json).
+Independent scoring agrees with the retained native scorer on invented full-
+schedule cases, preserving failures, unsure answers, rejected correct answers
+and undefined precision. The evaluator inputs independently reconstruct199
+original questions,205 question-paper pairs,190 distinct DOIs and186 publication
+components. No production answers have been scored.
+
+A supervised final analysis CLI and its end-to-end qualification are still being
+implemented. Production primary session48230 remains live: at2026-11-06T21:51:36Z,
+191/398 collection manifests were complete and all125 frozen source pins matched.
+No restart or frozen-source modification occurred. Diagnostic production remains
+conditional on primary finalization. SC04 and SC05-SC09 are incomplete.
+
+The integration audit also identified a producer limitation: answer admission
+constructs the prompt before the model-cell capacity handler, so an over-capacity
+answer prompt stops the phase rather than becoming a per-case capacity record.
+Isolated native-cell capacity tests do not qualify that end-to-end behavior. The
+live frozen code is unchanged; any encountered terminal failure must be retained
+and addressed with an explicitly versioned correction, never automatic replay.

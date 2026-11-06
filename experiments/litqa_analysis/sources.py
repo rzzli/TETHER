@@ -8,7 +8,7 @@ import re
 from urllib.parse import unquote,urlsplit
 import xml.etree.ElementTree as ET
 
-from .native_records import need,read,digest
+from .native_records import need,read,digest,safe_path
 
 
 def doi(value):
@@ -24,9 +24,9 @@ def doi(value):
 
 
 def local_path(root,name):
-    root=Path(root).resolve();relative=Path(name)
+    root=safe_path(root);relative=Path(name)
     need(not relative.is_absolute() and not relative.drive and '..' not in relative.parts,'Unsafe original source path')
-    path=root/relative;need(not path.is_symlink() and path.resolve().is_relative_to(root),'Linked/escaped original source')
+    path=safe_path(root/relative);need(path.is_relative_to(root),'Linked/escaped original source')
     return path
 
 
@@ -53,6 +53,7 @@ def read_article(root,source):
         for i,element in enumerate(elements):
             text=' '.join(' '.join(element.itertext()).split())
             if text:paragraphs[f'{source["source_id"]}:{section}:p{i:04d}']=text
+    need(len({s['evidence_id'] for s in source['spans']})==len(source['spans']),'Duplicate manifest paragraph identity')
     need({s['evidence_id']:s['text'] for s in source['spans']}==paragraphs,'Manifest paragraphs differ from original XML')
     for span in source['spans']:need(digest(span['text'].encode())==span['text_sha256'],'Original paragraph hash')
     return dict(source_id=source['source_id'],paragraphs=paragraphs,original_sha256=original['sha256'],

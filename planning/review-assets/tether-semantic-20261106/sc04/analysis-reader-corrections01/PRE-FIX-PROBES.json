@@ -1,0 +1,22 @@
+[
+  {
+    "probe": "contradictory_reserved_event",
+    "independent_reader": "ACCEPTED"
+  },
+  {
+    "probe": "non_loopback_native_endpoint",
+    "independent_reader": "ACCEPTED"
+  },
+  {
+    "probe": "wrong_tokenizer_special_flags",
+    "independent_reader": "ACCEPTED"
+  },
+  {
+    "probe": "contradictory_echoed_stream",
+    "independent_reader": "ACCEPTED"
+  },
+  {
+    "probe": "duplicate_identical_manifest_span",
+    "independent_reader": "ACCEPTED"
+  }
+]

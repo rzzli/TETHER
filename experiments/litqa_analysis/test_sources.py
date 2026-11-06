@@ -44,6 +44,10 @@ class SourceTests(unittest.TestCase):
         self.source['spans'][0]['text']='Substituted scientific statement'
         with self.assertRaisesRegex(ValueError,'paragraphs'):s.read_article(self.root,self.source)
 
+    def test_duplicate_manifest_paragraph_rejected(self):
+        self.source['spans'].append(dict(self.source['spans'][0]))
+        with self.assertRaisesRegex(ValueError,'Duplicate manifest'):s.read_article(self.root,self.source)
+
     def test_legacy_doi_identifiers_and_unrelated_urls(self):
         self.assertEqual(s.doi('http://dx.doi.org/10.1002/Abc<123>'),'10.1002/abc<123>')
         self.assertIsNone(s.doi('https://publisher.example/article/123'))

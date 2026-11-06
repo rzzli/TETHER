@@ -199,3 +199,23 @@ report remain to assemble. Do not claim these component checks completeSC04.
 Latest confirmed live primary handle48230:126/398collection slots,592HTTP200,
 7failedtransfers. Expansion199accepted; rank/answer not yetstarted. No restart.
 Diagnostic15099 closedexit0 and remainsreadyforproduction after primaryfinalization.
+
+## Independent SC04 analysis integration
+
+Progress checkpoint: all127 combined independent-analysis tests pass in
+planning/review-assets/tether-semantic-20261106/sc04/analysis-controls-attempt09.
+Both externally anchored fictional roots reconstruct all16 model calls, original
+source allocation/rights/paragraphs, complete lineage, cross-stage products and
+physical/logical accounting. Five reader defects reproduced with altered fixtures
+are corrected and documented in ANALYSIS-READER-CORRECTIONS.md; this is not a claim
+that production contained them. Actual fictional native outputs remain unchanged.
+Original199 question/205 paper-pair/190 DOI/186 grouping reconstruction passes;
+no production answers scored. Final supervised analysis CLI still in progress.
+
+Primary session48230 confirmed live; latest counted191/398collection products at
+2026-11-06T21:51:36Z. All125 primary source pins unchanged. Do not restart. Supplied
+production must await complete primary root and its external receiptSHA. Current
+integration audit uncovered answer-admission capacity failure before model-cell
+handler; isolated capacity tests are not end-to-end qualification. Preserve the
+live frozen code and any terminalfailure; version a necessary correction only
+with retained evidence. SC04-SC09 remain incomplete.

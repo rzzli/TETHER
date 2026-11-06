@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "tests": 112,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "source_sha256": {
+    "experiments\\litqa_analysis\\auxiliary_native.py": "d33a650645b919ba66100a42c58f14c5dcbdcf39f045fb91482ea6f8d390b466",
+    "experiments\\litqa_analysis\\collection.py": "32a0773b4862a7acab8edf07d2b5259556d2bd37f617fddc122db0fe7f047f54",
+    "experiments\\litqa_analysis\\envelopes.py": "a4fc6393ae88986c29bdd6159a75365cd5bed847c534624b9af069f229c98234",
+    "experiments\\litqa_analysis\\inputs.py": "c7f932f511f336a387ce0196e56a619641578764493ca5ca61b47c27f8c10615",
+    "experiments\\litqa_analysis\\lineage.py": "c8b13bc2c28ac228aeeb61effea488ce794f5102aaad1ffe93918b4e8d4b5ca3",
+    "experiments\\litqa_analysis\\metrics.py": "d73e0e26794779e1728494b0eaa61f88e5ba538e6171675cea298c68c68843ef",
+    "experiments\\litqa_analysis\\native_records.py": "7694c9ddd359955ee41d0885c6e93cbe9d1f8bb69a168a370527766f2ef079fa",
+    "experiments\\litqa_analysis\\reconstruct_run.py": "6f1ff060985d66fb5166a5b81253ace8c19ccb3bf3ecfaf042e16187e6b072d3",
+    "experiments\\litqa_analysis\\scoring.py": "e07ede07b75ac9f74fe1689fa7724673161a5daf42636e1193b88a3aefdf84da",
+    "experiments\\litqa_analysis\\sources.py": "1f26f591bb23550569f3b4249b5efba082e6b7058ed8c7d4cb93d16a27f4696a",
+    "experiments\\litqa_analysis\\supplied_collection.py": "49222d37107240a1b6efe808f6cabbfee1cbe1192dce702b4831c683627c45b3",
+    "experiments\\litqa_analysis\\test_auxiliary_native.py": "8c26db377fd918dd1bf85b47ecbb37769e65e52f9b5f0a177c84c041fa48c1e9",
+    "experiments\\litqa_analysis\\test_collection.py": "478c965878e3d30e6f3ab7b5fed586ac7005704362877f931b35a5a46d338359",
+    "experiments\\litqa_analysis\\test_envelopes.py": "3d868f53332108b49d433daf37ddfd7c8ef1f0ebbd0684556fce198592cfe7f3",
+    "experiments\\litqa_analysis\\test_inputs.py": "e958e89ffc1cb59c1e0b764a161a19ce526e540fd9bf4b99ad576b8f9f1adac4",
+    "experiments\\litqa_analysis\\test_lineage.py": "5bd8d35c2622a1d05e2f1883a9a11ad4329cbb65c3a314699c4500e66ab51626",
+    "experiments\\litqa_analysis\\test_metrics.py": "a330a39dbe20c8264ac688677bbbe37424af4e7a721cd1609a288c38c23dbcec",
+    "experiments\\litqa_analysis\\test_native_records.py": "57021d65f66455d3170edd3c62a230e2ff6fcc0bd58398beadf1449096b13b2f",
+    "experiments\\litqa_analysis\\test_scoring.py": "b3413be3066c82dbc6fde696542f6d0194650536d557592d300ec35b2d0772aa",
+    "experiments\\litqa_analysis\\test_sources.py": "9203e2eed522fda57983a821c2c6403668c6816d689366d8dfd2e1e7c9deabfa",
+    "experiments\\litqa_analysis\\test_supplied_collection.py": "b04d22a7341bab911a2dbb30cc802583511db6bdcde7f8c7ec0ae4b11824f31d"
+  },
+  "scope": "Independent scoring, grouping, native/source reconstruction and sealed-envelope controls; no production predictions scored."
+}

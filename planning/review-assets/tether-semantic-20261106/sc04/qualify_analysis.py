@@ -20,7 +20,7 @@ def main():
     (args.output/'TEST-RESULTS.txt').write_text(log.getvalue(),encoding='utf-8',newline='\n')
     report=dict(status='PASS' if result.wasSuccessful() else 'FAIL',tests=result.testsRun,failures=len(result.failures),errors=len(result.errors),
         skipped=len(result.skipped),source_sha256={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in source.rglob('*.py')},
-        scope='Invented paired outcomes and grouping only; no production predictions scored.')
+        scope='Independent scoring, grouping, native/source reconstruction and sealed-envelope controls; no production predictions scored.')
     (args.output/'QUALIFICATION.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps({k:v for k,v in report.items() if k!='source_sha256'}))
     if not result.wasSuccessful():print(log.getvalue());raise SystemExit(1)
