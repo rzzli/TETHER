@@ -1,6 +1,8 @@
 # TETHER research memory index
 
-- [[research-log-2026-11-06-labbench-preparation]] - Current BG04: original199 LitQA2 selected before performance; pinned acquisition complete, native adapters/retrieval/local MCQ transport and fictional tests in progress. No benchmark answer generated/scored. BG01–BG03 complete; Inspect/final audit follow. Peer update adds PaperQA2/OpenScholar/Self-RAG and conditional ScholarQABench.
+- [[research-log-2026-11-06-labbench-results]] - Current: BG01–BG04 complete. LitQA2 all199 sealed/replayed;12correct,21substantive,178unsure,ninewrong; alladmitted, no semantic gain. Separate native/source comparisons agree;10/199 annotated-source hits. Retained resource/allocation/finalization limits;97 maintainedtests. Next equal-policy Inspect, then final goal audit. No new human/model retry or owner-fact request.
+
+- [[research-log-2026-11-06-labbench-preparation]] - Current BG04: all199 source cases collected/audited;97 fictional tests pass; all199 actual candidates sealed with199calls and normal cleanup. Source-inclusive scorer exec46694 and independent reconstruction pending; no accuracy result yet. Failed fictional semantic control retained under A01, A02 path fix prospectively frozen. BG01–BG03 complete; Inspect/final audit follow.
 
 - [[research-log-2026-11-06-scifact-results]] - Current: BG01–BG03 complete. SciFact actual300 produced/admitted,27strict-correct; raw/check nativeF1 equal and weak. Source-inclusive independent reconstruction and finalreportreview pass;148 integration/18 reconstruction tests. Next BG04 originalLAB-Bench source/task feasibility,then Inspect/finalaudit. No semantic or clinical gain claimed; old artifacts/owner-deferred facts unchanged.
 

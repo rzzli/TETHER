@@ -1,0 +1,249 @@
+{
+  "captured_at_utc": "2026-11-06T02:41:59.339884+00:00",
+  "cleanup": "normal_verified",
+  "collection": {
+    "byte_scope": "Known response-body bytes and conservative unknown-body allowance exclude protocol/transfer overhead; selected text and retained products are separate quantities",
+    "inventory_product_bytes": 189016148,
+    "inventory_product_files": 3186,
+    "resources": {
+      "controller_cpu_seconds": 55.515625,
+      "http_child_cpu_seconds": null,
+      "peak_memory_bytes": null,
+      "provider_usd": 0.0,
+      "wall_seconds": 2051.905999999999,
+      "wire_bytes_including_headers_and_tls": null
+    },
+    "status": "completed",
+    "timing_scope": "Collector resource field captured before final manifest/journal/seal publication; HTTP-child CPU and peak RAM are uninstrumented",
+    "totals": {
+      "cases_with_sources": 198,
+      "completed_without_sources": 1,
+      "counts": {
+        "completed": 199,
+        "failed": 0,
+        "interrupted": 0,
+        "unexecuted": 0
+      },
+      "known_response_body_bytes": 141355700,
+      "safety_accounted_bytes": 141355700,
+      "scheduled": 199,
+      "selected_text_bytes": 1361055,
+      "unknown_transfer_upper_bytes": 0
+    }
+  },
+  "cost": {
+    "basis": "Zero external-provider charges do not establish zero total cost; fictional controls/development are separate",
+    "collection_provider_usd": 0.0,
+    "electricity_hardware_depreciation_labour_usd": null,
+    "provider_cost_usd": 0
+  },
+  "external_anchors": {
+    "collection_manifest_sha256": "b75558de8fca5382729e42d7bd6adc9efabdb072791b0d75201aaff2280c47de",
+    "collection_seal_sha256": "37555f392f1712a7510a49448e59b84fcc1798862414db8285cb93dcd9b46fbc",
+    "evaluation_seal_sha256": "118711b7e7552750e441380b7abf8f60b68096ae98ef3163cf96754e7423fa6f",
+    "generation_freeze_sha256": "4359d589205caec39085872cc72cd5799323e2285e0993b58405e7e70ccd2fe5",
+    "generation_seal_sha256": "46acaabedd04b0f9a2410f8620f13f19f9927e5e6fc1d0437d8b29bc63cd8447"
+  },
+  "generation": {
+    "end_to_end_wall_seconds": null,
+    "filesystem_timing": {
+      "basis": "Declared UTC start plus filesystem modification time; descriptive chronology, not attested monotonic stopwatch",
+      "interval_seconds": 1761.44348,
+      "parent_reserved_at_utc": "2026-11-06T01:54:42.954135+00:00",
+      "seal_last_write_at_utc": "2026-11-06T02:24:04.397615+00:00"
+    },
+    "finalization_reason": "No retained outer monotonic timer; finalization follows parent_resources capture and is not covered by worker deadline",
+    "finalization_wall_seconds": null,
+    "inventory_bytes": 57770725,
+    "inventory_files": 3598,
+    "inventory_scope": "All generation seal-declared outputs excluding SEALED.json itself; not physical I/O",
+    "marginal_admission_reason": "verify_candidate is not separately timed; source capture, generation and checking share case wall records",
+    "measured_marginal_admission_seconds": null,
+    "parent_pre_seal_resources": {
+      "cpu_seconds": 18.796875,
+      "process_sample": {
+        "cpu_seconds": 19.234375,
+        "process_peak_working_set_bytes": 571318272,
+        "working_set_bytes": 38076416
+      },
+      "wall_seconds": 1162.155999999999
+    },
+    "parent_pre_seal_scope": "Captured before _seal; excludes recover_cases, final publication/inventory/hash/seal work; not total workflow latency",
+    "setup_including_asset_verification_seconds": 12.7970000000023,
+    "setup_scope": "Owned server context entry including declared asset verification and startup; excludes prior source collection verification",
+    "supervised_worker": {
+      "report": {
+        "cleanup_errors": [],
+        "execution_elapsed_seconds": 1161.9530000000013,
+        "limits": {
+          "max_output_bytes": 8388608,
+          "timeout_seconds": 10800
+        },
+        "method": "tether.process_envelope.v1",
+        "observed_counts_are_lower_bounds": false,
+        "observed_stderr_bytes": 0,
+        "observed_stdout_bytes": 0,
+        "pipe_eof": {
+          "stderr": true,
+          "stdout": true
+        },
+        "process_reaped": true,
+        "process_started": true,
+        "retained_stderr_bytes": 0,
+        "retained_stdout_bytes": 0,
+        "schema_version": 1,
+        "termination_reason": "exited",
+        "total_elapsed_seconds": 1161.9530000000013
+      },
+      "returncode": 0
+    },
+    "totals": {
+      "check_statuses": {
+        "accepted": 199
+      },
+      "estimated_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "generation_attempts": 199,
+      "measured_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 443470,
+        "output_tokens": 34279
+      },
+      "producer_statuses": {
+        "produced": 199
+      },
+      "scheduled": 199,
+      "tokenizer_attempts": 199,
+      "unresolved_generation": 0
+    },
+    "worker_cpu_seconds": 364.515625,
+    "worker_wall_seconds": 1161.3589999999967
+  },
+  "generation_status": "completed",
+  "input_proofs": [
+    {
+      "bytes": 4463,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-labbench-20261106\\stage\\generation-freeze-attempt02\\GENERATION-FREEZE.json",
+      "sha256": "4359d589205caec39085872cc72cd5799323e2285e0993b58405e7e70ccd2fe5"
+    },
+    {
+      "bytes": 464916,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labbench\\generation-20261106T011303Z-attempt01\\SEALED.json",
+      "sha256": "46acaabedd04b0f9a2410f8620f13f19f9927e5e6fc1d0437d8b29bc63cd8447"
+    },
+    {
+      "bytes": 11621,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labbench\\generation-20261106T011303Z-attempt01\\manifest.json",
+      "sha256": "c05aaad957ff44a6bb42bbf4eabe5f98e7628abb983875c6e4bc43ff5a3dc9fb"
+    },
+    {
+      "bytes": 211,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labbench\\collection-20261106T011303Z-attempt01\\SEALED.json",
+      "sha256": "37555f392f1712a7510a49448e59b84fcc1798862414db8285cb93dcd9b46fbc"
+    },
+    {
+      "bytes": 831144,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labbench\\collection-20261106T011303Z-attempt01\\manifest.json",
+      "sha256": "b75558de8fca5382729e42d7bd6adc9efabdb072791b0d75201aaff2280c47de"
+    },
+    {
+      "bytes": 335311,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labbench\\generation-20261106T011303Z-attempt01\\worker\\TERMINAL.json",
+      "sha256": "9278f71f74ff34948c4dc5578dc23bddafb535de2f47ba34a2c1865eed37410e"
+    },
+    {
+      "bytes": 450624,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labbench\\generation-20261106T011303Z-attempt01\\worker\\journal.jsonl",
+      "sha256": "833800c2bfa79c9b077c0854e0431513bcb3cea3a3e03b253cbb286f080e905e"
+    },
+    {
+      "bytes": 2729,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labbench\\generation-20261106T011303Z-attempt01\\journal.jsonl",
+      "sha256": "d2c0edf57a254de4106ec65d16977789a9b7c51bf5015ab31da7bd093ba83352"
+    },
+    {
+      "bytes": 8508,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-labbench-20261106\\stage\\RESOURCE-SCOPE-01.json",
+      "sha256": "320dd59dc6b7b583e80b1096473431a0af82067adfbda74f3ae47dba5d7d476c"
+    },
+    {
+      "bytes": 1419,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labbench\\evaluation-20261106T011303Z-attempt01\\SEALED.json",
+      "sha256": "118711b7e7552750e441380b7abf8f60b68096ae98ef3163cf96754e7423fa6f"
+    },
+    {
+      "bytes": 1619,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labbench\\evaluation-20261106T011303Z-attempt01\\resources.json",
+      "sha256": "97a271fbcf8d290c75375934362c3c8344d69b7005299b27273d084e1f45a1d3"
+    },
+    {
+      "bytes": 34223,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labbench\\evaluation-20261106T011303Z-attempt01\\REPORT.json",
+      "sha256": "1448782764a4eed7ac05fe54492525481be121c9cfd59a0bf787197100950f79"
+    },
+    {
+      "bytes": 777,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-labbench-20261106\\stage\\SCORE-CONTROL-01.json",
+      "sha256": "1050b77e9f073159ee4a0bbc4a5b62def5137d9fa76a6516d80e958158447302"
+    }
+  ],
+  "kind": "labbench_resource_scope",
+  "native_correctness_access": true,
+  "native_correctness_scope": "Authorized aggregate report only; no reference-answer file opened",
+  "native_process": {
+    "energy": null,
+    "first_cumulative_cpu_seconds": 3.84375,
+    "gpu_memory_bytes": null,
+    "interval_seconds": 0.5,
+    "last_cumulative_cpu_seconds": 290.390625,
+    "maximum_reported_process_lifetime_peak_working_set_bytes": 16633806848,
+    "maximum_sampled_working_set_bytes": 16614191104,
+    "memory_scope": "Sampled current working set can miss short peaks; sampled OS process-lifetime peak may include startup before sampling; neither includes GPU memory",
+    "observed_cpu_delta_seconds": 286.546875,
+    "sample_errors": 0,
+    "sample_records": 2180,
+    "sample_window": "After owned-server readiness through case loop; excludes cleanup"
+  },
+  "new_model_calls": 0,
+  "new_retrieval_calls": 0,
+  "previous_snapshot": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-labbench-20261106\\stage\\RESOURCE-SCOPE-01.json",
+    "sha256": "320dd59dc6b7b583e80b1096473431a0af82067adfbda74f3ae47dba5d7d476c"
+  },
+  "producer_code_sha256": "e8e889fa6069a9126ef7b6714f3b3c8989f44c39c36e7a06dd7653dda717d1cc",
+  "production_changes": false,
+  "reference_access": false,
+  "schema_version": 1,
+  "scope": "Selected anchored operational/evaluator records; not a new full output rehash or independent metric reconstruction",
+  "scoring": {
+    "control_anchor_scope": "Captured completed outer-control bytes; evaluator seal is externally anchored; control settings/aggregate identity were reconciled",
+    "control_path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-labbench-20261106\\stage\\SCORE-CONTROL-01.json",
+    "control_sha256": "1050b77e9f073159ee4a0bbc4a5b62def5137d9fa76a6516d80e958158447302",
+    "finalization_and_total_generation_timing": "Remain unknown as monotonic measurements; snapshot01's limitations are unchanged",
+    "independent_audit_reconstruction_cost": null,
+    "independent_audit_reconstruction_reason": "Separate independent audit/reconstruction timings are outside this evaluator control; no invented aggregate cost",
+    "internal_cpu_seconds": 817.640625,
+    "internal_elapsed_seconds": 881.7970000000023,
+    "internal_timing_scope": "Evaluator resource fields captured before its final product/journal/seal writes",
+    "memory_basis": "Current evaluator process lifetime peak, not incremental or GPU memory",
+    "model_asset_byte_basis": "Unique original model/runtime/receipt byte sizes; not physical I/O or transfer bytes",
+    "model_asset_unique_bytes_verified": 9112208256,
+    "new_model_calls": 0,
+    "new_retrieval_calls": 0,
+    "outer_controller_cpu_seconds": 817.953125,
+    "outer_elapsed_seconds": 882.1719999999987,
+    "outer_timing_scope": "Wrapper timer surrounds full evaluator return; excludes earlier imports and final controller-record serialization",
+    "process_sample": {
+      "cpu_seconds": 818.140625,
+      "process_peak_working_set_bytes": 579141632,
+      "working_set_bytes": 48377856
+    },
+    "provider_cost_usd": 0,
+    "status": "completed",
+    "verification_scope": "Full source-inclusive generation/model/session replay plus reference reconstruction, native scoring and reporting; not marginal admission-check cost"
+  },
+  "snapshot": 2
+}

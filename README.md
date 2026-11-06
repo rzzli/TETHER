@@ -50,12 +50,18 @@ BG04 now covers the original 199-item LitQA2 family. Its collection, native MCQ,
 generation and scoring components pass 97 fictional tests. All 199 source cases
 are collected and independently audited; 198 have articles and one is empty.
 Actual local transport
-and archived replay pass, but both fictional answer controls returned the wrong
-unsure option. The [prospective protocol amendment](<planning/TETHER LitQA2 Evaluation Protocol 2026-11-06.md>)
+and archived replay pass, but two attempts on the same fictional answer item under
+evolving implementation returned the wrong unsure option. The [prospective protocol amendment](<planning/TETHER LitQA2 Evaluation Protocol 2026-11-06.md>)
 retains those failures and freezes a descriptive weak-baseline measurement; it
 does not claim semantic qualification. A two-line launch-path correction was
-qualified and frozen after collection; benchmark generation remains pending at
-this checkpoint. Equal-policy Inspect and the final audit follow.
+qualified and frozen after collection. BG04 is complete as a weak public-task
+measurement: 12/199 correct (6.03%), 21 substantive answers, 178 unsure and nine
+incorrect substantive answers. All 199 are admitted; raw and checked metrics
+match. Only 10/199 questions have an annotated paper among selected sources.
+Source-inclusive replay, separate native reconstruction and source comparisons
+pass. See the [LitQA2 results](<planning/TETHER LitQA2 Native Evaluation Results 2026-11-06.md>).
+The report retains finalization and measurement limits; this is not scientific
+qualification. Equal-policy Inspect and the final audit follow.
 
 The owner has activated the [sequential benchmark execution plan](<planning/TETHER Benchmark Execution Plan 2026-11-02.md>): correct the three open defects, compare an independent equal-policy validator, add SciFact, add one LAB-Bench task family, and test an Inspect implementation. [TODO](TODO.md) records actual stage completion. Earlier recommendation-only statements retain their review-date scope; no new benchmark result is implied by this authorization.
 

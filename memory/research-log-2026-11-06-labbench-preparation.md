@@ -7,6 +7,17 @@ metadata:
 
 # LitQA2 preparation and peer methods
 
+Current update, 02:25 UTC: all199 actual candidates are sealed under generation
+SHA256 `46acaabedd04b0f9a2410f8620f13f19f9927e5e6fc1d0437d8b29bc63cd8447`.
+Exec94153 closed0,199 calls, normal cleanup and no unresolved calls. All199 passed
+source policy, which is not answer correctness. Source-inclusive scorer exec46694
+is running before native reconstruction; BG04 remains incomplete. No new model
+calls or retries. Independent audit helper's amendment-schema mismatch is retained
+for a separately tested reader correction. A source-only probe shows fixed-cap
+read allocation overhead; parent finalization is unbounded by the worker deadline
+and excluded from the pre-seal parent timer. No frozen production source changed.
+The following notes retain earlier preparation chronology; STATUS.md is current.
+
 BG01–BG03 are complete in their scoped engineering/public-development evaluations.
 SciFact closure commit is `5dae314`; 300 predictions produced/admitted,27 strict-
 correct, identical raw/checked scores. Its weak result remains frozen. See

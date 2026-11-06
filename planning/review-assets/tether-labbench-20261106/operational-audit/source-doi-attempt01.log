@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-labbench-20261106\operational-audit\source_doi.py", line 183, in <module>
+    result=run()
+           ^^^^^
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-labbench-20261106\operational-audit\source_doi.py", line 124, in run
+    A.need(origin['id']==row['id'] and origin['row_1based']==ordinal+1 and origin['raw_line_sha256']==row['raw_line_sha256']
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-labbench-20261106\operational-audit\audit.py", line 23, in need
+    if not value:raise ValueError(message)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Original annotation/provenance/query join differs

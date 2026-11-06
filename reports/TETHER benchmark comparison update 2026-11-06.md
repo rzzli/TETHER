@@ -16,7 +16,7 @@ alongside case accuracy. ([Retained SciFact analysis](<../planning/TETHER SciFac
 | Benchmark or comparison | What it can demonstrate | Required outcome and main limitation | Priority |
 |---|---|---|---|
 | **SciFact** | Scientific claim verification with retrieved abstract evidence | Official label/rationale precision, recall and F1; strict correct-and-admitted/all scheduled. Completed baseline is weak: rationalized F1 0.087 and 9% strict correctness. Public dev is not a private test. | Completed baseline; use a separately frozen future experiment for improvements. |
-| **Original LAB-Bench LitQA2** | Literature retrieval and biological factual answering | Native MCQ accuracy, answer precision and coverage, plus correct-and-admitted yield and source availability. Hide reference answers, key passages and per-question source hints. A supplied-source evaluation changes the task. | Next active stage; all 199 public items preferred. |
+| **Original LAB-Bench LitQA2** | Literature retrieval and biological factual answering | Completed public199 baseline:12correct,21substantive,178unsure; raw/check equal. Only10/199 questions have an annotated paper among selected sources. Reference answers/source hints were excluded from generation. | Completed weak baseline; improve retrieval/answering in a new frozen experiment. |
 | **Inspect with equivalent policies** | Whether the same obligations are easier or cheaper to implement in an established runner | Matched conformance, failure accounting, source binding, cost and added policy code. Inspect is a framework, not a scientific benchmark. | Following LAB-Bench. |
 | **ALCE** | Correctness and citation quality in generated answers | Native correctness and citation precision/recall with a qualified evaluator. Citation existence is insufficient. | After a useful answer generator is qualified. |
 | **ScholarQABench** | Multi-paper scientific synthesis | Released questions, rubrics and citation evaluation are relevant to dossiers. Its automatic judge setup needs separate qualification and cost accounting; no new human panel is necessary to use existing released annotations. | Strong later synthesis benchmark. |
@@ -113,12 +113,35 @@ established by reading documentation or by the simpler-validator experiment.
 
 No reviewed benchmark jointly validates therapeutic success, model-weight chronology, all source policies and scientific synthesis. The strongest defensible paper combines scoped engineering guarantees with measured scientific utility, and retains negative findings when a control adds cost without improving answers. Virtual Biotech's overlapping provenance and orchestration capabilities further weaken any novelty claim based only on agent roles or trace collection; its pinned baseline and current implementation must remain separate comparison targets. ([Earlier source-qualified comparison](<TETHER benchmark priorities and methods.md>))
 
-The active order remains LitQA2, equivalent-policy Inspect and the final goal audit. PaperQA2/OpenScholar-style semantic improvements and broader synthesis benchmarks are follow-on experiments, not silently added requirements for those stages. No peer performance number is transferred to TETHER, and this comparison does not replace the frozen SciFact result.
+LitQA2 is now complete in its declared public-task scope; equivalent-policy Inspect
+and the final goal audit remain. PaperQA2/OpenScholar-style semantic improvements
+and broader synthesis benchmarks are follow-on experiments, not silently added
+requirements. No peer performance number is transferred to TETHER, and this
+comparison does not replace the frozen SciFact result.
 
-The subsequent LitQA2 preparation reinforces this distinction: 94 fictional
-software tests pass and actual transport/replay works, yet the model chose unsure
-on an answerable fictional control in both semantic attempts. These are repeated
-observations of one item under evolving implementation, not independent samples
-of benchmark accuracy. The frozen all-199 measurement proceeds under an explicit
-prospective amendment that retains the failed control. Benchmark results remain
-unknown at this review checkpoint. ([Protocol and amendment](<../planning/TETHER LitQA2 Evaluation Protocol 2026-11-06.md>), [independent qualification review](../planning/review-assets/tether-labbench-20261106/data/FINAL-DATA-QUALIFICATION-JUDGMENT.md))
+The completed LitQA2 run reinforces the distinction. Its97 maintained fictional
+tests and source-inclusive replay pass, while the same answerable fictional item
+failed in two semantic attempts under evolving implementation. A prospective
+amendment retained that failure. All199 actual candidates are admitted;12/199 are
+correct6.03%, with57.14% precision on only21 substantive answers and178 unsure.
+No raw/checked accuracy or coverage difference is observed. Separate native and
+source implementations agree. ([Protocol](<../planning/TETHER LitQA2 Evaluation Protocol 2026-11-06.md>),
+[results and audits](<../planning/TETHER LitQA2 Native Evaluation Results 2026-11-06.md>))
+
+Only10/205 annotated DOI pairs were retrieved and selected, covering10/199
+questions. XML checks filled42 missing metadataDOIs without adding hits. In a
+posthoc join, six of10 source-hit questions were answered correctly versus six
+of189 without a hit. This supports investigating search/access and decisive
+passage coverage, without estimating a causal improvement or establishing
+that other papers cannot answer the question. The nine wrong substantive
+answers also show why a valid cited source is insufficient. A controlled
+retrieval/reranking or separately labelled supplied-source diagnostic is more
+informative than adding generic agents. Source-license and availability limits
+must be measured alongside retrieval quality. ([Retained analysis](<../planning/TETHER LitQA2 Native Evaluation Results 2026-11-06.md>))
+
+The execution also exposed a concrete efficiency issue: fixed512MiB read caps
+allocate large temporary buffers for tiny files. Its frozen controller finalizes
+outside the worker deadline and omits that work from its pre-seal timer. These
+limits are disclosed, not corrected retroactively. Native-score reconstruction
+alone is cheaper than source-inclusive replay, but performs fewer obligations;
+their timings are not an equal-policy comparison. ([Resource and allocation evidence](<../planning/TETHER LitQA2 Native Evaluation Results 2026-11-06.md>))

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-labbench-20261106\operational-audit\audit_final.py", line 342, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-labbench-20261106\operational-audit\audit_final.py", line 334, in main
+    result['generation']=final_generation(args.freeze,args.freeze_sha256,args.collection_manifest_sha256,args.generation_sealed_sha256,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-labbench-20261106\operational-audit\audit_final.py", line 238, in final_generation
+    expected_pins=generation_amendment(frozen,freeze_sha,amended)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-labbench-20261106\operational-audit\audit_final.py", line 231, in generation_amendment
+    need(A.sha(raw)==proof['sha256']==digest and len(raw)==proof['bytes'],'Archived changed source differs')
+                                                           ~~~~~^^^^^^^^^
+KeyError: 'bytes'

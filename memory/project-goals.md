@@ -8,7 +8,7 @@ updated: 2026-11-06
 
 # TETHER project goals
 
-Current November 6 UTC execution: BG01–BG03 are complete in their declared scopes.
+Current November 6 UTC execution: BG01–BG04 are complete in their declared scopes.
 The corrected equal-policy comparison conforms on 109/109 exposed cases for both
 implementations, with median paired import-plus-operation ratio 1.65 against TETHER.
 SciFact completed exactly once: 300 predictions and paired admissions, 27 strict-
@@ -18,14 +18,13 @@ integration tests and 18 reconstruction tests pass. This is a weak public-dev
 baseline, not semantic superiority or biological validation. See
 [[research-log-2026-11-06-scifact-results]] and
 [[TETHER SciFact Native Evaluation Results 2026-11-05]]. Session 76726 is closed;
-never restart it. BG04 now prepares all199 original LitQA2 questions, selected before performance;
-All199 source cases are collected and audited; 97 fictional component/controller
-tests pass after the prospective A02 cache-path correction. Actual native
-transport and archived replay pass, but the fictional answer control fails twice
-with a wrong unsure response. Protocol A01 prospectively freezes a descriptive
-weak-baseline measurement with no more prompt tuning; measurement completion
-does not mean semantic qualification. No benchmark answers generated/scored.
-See [[research-log-2026-11-06-labbench-preparation]].
+never restart it. BG04's199 original LitQA2 candidates independently reconstruct:
+12correct,21substantive,178unsure,ninewrongsubstantive; all199admitted, raw/checked
+metrics equal. Annotated-source hits10/199questions and10/205DOIpairs; native/source
+comparisons pass. All97 maintained fictional tests pass. A01/A02 and failed
+semantic controls remain; measuredcompletion is not scientificqualification.
+Exec94153/46694 are closed; no model retry. Readallocation/finalization and timing
+limits remain explicit. See [[research-log-2026-11-06-labbench-results]].
 Inspect equivalent-policy implementation and the final goal audit follow. Dated sections
 below retain earlier research scope and do not supersede this checkpoint.
 
@@ -37,8 +36,8 @@ in TODO are current. BG01 is complete locally: full2020/facade138 tests,
 current installed qualification and742 aggregate evidence checks pass on Windows.
 The three fixes, bounded replacement correction and reviewed profile migrations
 retain all earlier failures and old release bytes. The independent equal-policy
-comparison and SciFact evaluation are now complete. Next, evaluate one LAB-Bench
-task family and an Inspect implementation.
+comparison, SciFact and original LitQA2 evaluations are now complete. Next,
+implement and evaluate policy-equivalent Inspect, then audit the complete goal.
 Earlier recommendation-only/inactive wording below retains its date-specific
 scope; it does not block the new goal. Historical failures/results, retired expert
 inputs, deferred owner facts and the stopped downloader monitor remain unchanged.

@@ -1,0 +1,10 @@
+The initial final-report helper invocation failed before creating a result:
+
+  validate_final_report.py, line 57, in main
+    assert operational["status"].lower() == "pass"
+KeyError: 'status'
+
+The operational audit has separate generation.status and collection.status,
+not a top-level status. The helper was corrected to require both actual fields
+to equal PASS. No experiment source, result or existing audit was changed. This
+was an actual-format reader correction, not evidence of an experiment failure.

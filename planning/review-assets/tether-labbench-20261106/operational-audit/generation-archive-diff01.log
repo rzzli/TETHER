@@ -1,0 +1,16 @@
+--- acquisition-frozen/run.py
+
++++ generation-frozen/run.py
+
+@@ -237,3 +237,3 @@
+
+     limits=validate_limits(recipe["limits"]);config=model.configuration(recipe["configuration"])
+-    empty_import_cache(expected=recipe["worker_import_cache"],cache_root=ROOT/"data/cache")
++    empty_import_cache(expected=recipe["worker_import_cache"],cache_root=Path(output).parent)
+     journal=RunJournal(Path(output),kind="build");output=journal.output
+@@ -282,3 +282,3 @@
+
+         need(owner.terminal_record["server_stopped"] is True,"Model cleanup is unverified")
+-        empty_import_cache(expected=recipe["worker_import_cache"],cache_root=ROOT/"data/cache")
++        empty_import_cache(expected=recipe["worker_import_cache"],cache_root=Path(output).parent)
+         need(source_pins()==recipe["code_pins"],"Generation code changed during worker")

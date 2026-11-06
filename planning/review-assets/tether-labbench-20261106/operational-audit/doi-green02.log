@@ -1,0 +1,11 @@
+test_aliases_not_guessed_from_publisher_or_pmid (__main__.DOITests.test_aliases_not_guessed_from_publisher_or_pmid) ... ok
+test_explicit_supported_formats (__main__.DOITests.test_explicit_supported_formats) ... ok
+test_missing_metadata_does_not_remove_denominator (__main__.DOITests.test_missing_metadata_does_not_remove_denominator) ... ok
+test_original_line_proof_includes_physical_line_ending (__main__.DOITests.test_original_line_proof_includes_physical_line_ending) ... ok
+test_xml_can_add_identity_but_conflicts_are_explicit (__main__.DOITests.test_xml_can_add_identity_but_conflicts_are_explicit) ... ok
+test_xml_does_not_treat_citation_doi_as_article_identity (__main__.DOITests.test_xml_does_not_treat_citation_doi_as_article_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

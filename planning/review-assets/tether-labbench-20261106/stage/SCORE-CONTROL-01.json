@@ -1,0 +1,22 @@
+{
+  "checked_metrics": {
+    "accuracy": 0.06030150753768844,
+    "coverage": 0.10552763819095477,
+    "precision": 0.5714285714285714
+  },
+  "closed_at_utc": "2026-11-06T02:39:32.775630+00:00",
+  "controller_cpu_seconds": 817.953125,
+  "elapsed_seconds": 882.1719999999987,
+  "generation_sealed_sha256": "46acaabedd04b0f9a2410f8620f13f19f9927e5e6fc1d0437d8b29bc63cd8447",
+  "new_model_calls": 0,
+  "new_retrieval_calls": 0,
+  "raw_metrics": {
+    "accuracy": 0.06030150753768844,
+    "coverage": 0.10552763819095477,
+    "precision": 0.5714285714285714
+  },
+  "scheduled_count": 199,
+  "started_at_utc": "2026-11-06T02:24:50.592268+00:00",
+  "status": "completed",
+  "wrapper_sha256": "d6cd7dc5466e2b28ed0882f042c2913ef5dc0978a4c7ea78d6554ef7a227e098"
+}

@@ -1,0 +1,198 @@
+{
+  "captured_at_utc": "2026-11-06T02:27:54.521552+00:00",
+  "cleanup": "normal_verified",
+  "collection": {
+    "byte_scope": "Known response-body bytes and conservative unknown-body allowance exclude protocol/transfer overhead; selected text and retained products are separate quantities",
+    "inventory_product_bytes": 189016148,
+    "inventory_product_files": 3186,
+    "resources": {
+      "controller_cpu_seconds": 55.515625,
+      "http_child_cpu_seconds": null,
+      "peak_memory_bytes": null,
+      "provider_usd": 0.0,
+      "wall_seconds": 2051.905999999999,
+      "wire_bytes_including_headers_and_tls": null
+    },
+    "status": "completed",
+    "timing_scope": "Collector resource field captured before final manifest/journal/seal publication; HTTP-child CPU and peak RAM are uninstrumented",
+    "totals": {
+      "cases_with_sources": 198,
+      "completed_without_sources": 1,
+      "counts": {
+        "completed": 199,
+        "failed": 0,
+        "interrupted": 0,
+        "unexecuted": 0
+      },
+      "known_response_body_bytes": 141355700,
+      "safety_accounted_bytes": 141355700,
+      "scheduled": 199,
+      "selected_text_bytes": 1361055,
+      "unknown_transfer_upper_bytes": 0
+    }
+  },
+  "cost": {
+    "basis": "Zero external-provider charges do not establish zero total cost; fictional controls/development are separate",
+    "collection_provider_usd": 0.0,
+    "electricity_hardware_depreciation_labour_usd": null,
+    "provider_cost_usd": 0
+  },
+  "external_anchors": {
+    "collection_manifest_sha256": "b75558de8fca5382729e42d7bd6adc9efabdb072791b0d75201aaff2280c47de",
+    "collection_seal_sha256": "37555f392f1712a7510a49448e59b84fcc1798862414db8285cb93dcd9b46fbc",
+    "generation_freeze_sha256": "4359d589205caec39085872cc72cd5799323e2285e0993b58405e7e70ccd2fe5",
+    "generation_seal_sha256": "46acaabedd04b0f9a2410f8620f13f19f9927e5e6fc1d0437d8b29bc63cd8447"
+  },
+  "generation": {
+    "end_to_end_wall_seconds": null,
+    "filesystem_timing": {
+      "basis": "Declared UTC start plus filesystem modification time; descriptive chronology, not attested monotonic stopwatch",
+      "interval_seconds": 1761.44348,
+      "parent_reserved_at_utc": "2026-11-06T01:54:42.954135+00:00",
+      "seal_last_write_at_utc": "2026-11-06T02:24:04.397615+00:00"
+    },
+    "finalization_reason": "No retained outer monotonic timer; finalization follows parent_resources capture and is not covered by worker deadline",
+    "finalization_wall_seconds": null,
+    "inventory_bytes": 57770725,
+    "inventory_files": 3598,
+    "inventory_scope": "All generation seal-declared outputs excluding SEALED.json itself; not physical I/O",
+    "marginal_admission_reason": "verify_candidate is not separately timed; source capture, generation and checking share case wall records",
+    "measured_marginal_admission_seconds": null,
+    "parent_pre_seal_resources": {
+      "cpu_seconds": 18.796875,
+      "process_sample": {
+        "cpu_seconds": 19.234375,
+        "process_peak_working_set_bytes": 571318272,
+        "working_set_bytes": 38076416
+      },
+      "wall_seconds": 1162.155999999999
+    },
+    "parent_pre_seal_scope": "Captured before _seal; excludes recover_cases, final publication/inventory/hash/seal work; not total workflow latency",
+    "setup_including_asset_verification_seconds": 12.7970000000023,
+    "setup_scope": "Owned server context entry including declared asset verification and startup; excludes prior source collection verification",
+    "supervised_worker": {
+      "report": {
+        "cleanup_errors": [],
+        "execution_elapsed_seconds": 1161.9530000000013,
+        "limits": {
+          "max_output_bytes": 8388608,
+          "timeout_seconds": 10800
+        },
+        "method": "tether.process_envelope.v1",
+        "observed_counts_are_lower_bounds": false,
+        "observed_stderr_bytes": 0,
+        "observed_stdout_bytes": 0,
+        "pipe_eof": {
+          "stderr": true,
+          "stdout": true
+        },
+        "process_reaped": true,
+        "process_started": true,
+        "retained_stderr_bytes": 0,
+        "retained_stdout_bytes": 0,
+        "schema_version": 1,
+        "termination_reason": "exited",
+        "total_elapsed_seconds": 1161.9530000000013
+      },
+      "returncode": 0
+    },
+    "totals": {
+      "check_statuses": {
+        "accepted": 199
+      },
+      "estimated_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "generation_attempts": 199,
+      "measured_usage": {
+        "cost_usd": 0.0,
+        "input_tokens": 443470,
+        "output_tokens": 34279
+      },
+      "producer_statuses": {
+        "produced": 199
+      },
+      "scheduled": 199,
+      "tokenizer_attempts": 199,
+      "unresolved_generation": 0
+    },
+    "worker_cpu_seconds": 364.515625,
+    "worker_wall_seconds": 1161.3589999999967
+  },
+  "generation_status": "completed",
+  "input_proofs": [
+    {
+      "bytes": 4463,
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-labbench-20261106\\stage\\generation-freeze-attempt02\\GENERATION-FREEZE.json",
+      "sha256": "4359d589205caec39085872cc72cd5799323e2285e0993b58405e7e70ccd2fe5"
+    },
+    {
+      "bytes": 464916,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labbench\\generation-20261106T011303Z-attempt01\\SEALED.json",
+      "sha256": "46acaabedd04b0f9a2410f8620f13f19f9927e5e6fc1d0437d8b29bc63cd8447"
+    },
+    {
+      "bytes": 11621,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labbench\\generation-20261106T011303Z-attempt01\\manifest.json",
+      "sha256": "c05aaad957ff44a6bb42bbf4eabe5f98e7628abb983875c6e4bc43ff5a3dc9fb"
+    },
+    {
+      "bytes": 211,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labbench\\collection-20261106T011303Z-attempt01\\SEALED.json",
+      "sha256": "37555f392f1712a7510a49448e59b84fcc1798862414db8285cb93dcd9b46fbc"
+    },
+    {
+      "bytes": 831144,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labbench\\collection-20261106T011303Z-attempt01\\manifest.json",
+      "sha256": "b75558de8fca5382729e42d7bd6adc9efabdb072791b0d75201aaff2280c47de"
+    },
+    {
+      "bytes": 335311,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labbench\\generation-20261106T011303Z-attempt01\\worker\\TERMINAL.json",
+      "sha256": "9278f71f74ff34948c4dc5578dc23bddafb535de2f47ba34a2c1865eed37410e"
+    },
+    {
+      "bytes": 450624,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labbench\\generation-20261106T011303Z-attempt01\\worker\\journal.jsonl",
+      "sha256": "833800c2bfa79c9b077c0854e0431513bcb3cea3a3e03b253cbb286f080e905e"
+    },
+    {
+      "bytes": 2729,
+      "path": "D:\\Projects\\drug_target_agents\\data\\benchmark\\labbench\\generation-20261106T011303Z-attempt01\\journal.jsonl",
+      "sha256": "d2c0edf57a254de4106ec65d16977789a9b7c51bf5015ab31da7bd093ba83352"
+    }
+  ],
+  "kind": "labbench_resource_scope",
+  "native_correctness_access": false,
+  "native_process": {
+    "energy": null,
+    "first_cumulative_cpu_seconds": 3.84375,
+    "gpu_memory_bytes": null,
+    "interval_seconds": 0.5,
+    "last_cumulative_cpu_seconds": 290.390625,
+    "maximum_reported_process_lifetime_peak_working_set_bytes": 16633806848,
+    "maximum_sampled_working_set_bytes": 16614191104,
+    "memory_scope": "Sampled current working set can miss short peaks; sampled OS process-lifetime peak may include startup before sampling; neither includes GPU memory",
+    "observed_cpu_delta_seconds": 286.546875,
+    "sample_errors": 0,
+    "sample_records": 2180,
+    "sample_window": "After owned-server readiness through case loop; excludes cleanup"
+  },
+  "new_model_calls": 0,
+  "new_retrieval_calls": 0,
+  "producer_code_sha256": "136df552f68b6cf8496decb95c2c1f08daf55c118ba2942fc5e47cc530960522",
+  "production_changes": false,
+  "reference_access": false,
+  "schema_version": 1,
+  "scope": "Selected anchored operational records only; not a complete output-byte or semantic verification",
+  "scoring": {
+    "control_path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-labbench-20261106\\stage\\SCORE-CONTROL-01.json",
+    "controller_cpu_seconds": null,
+    "observed_control_bytes": 0,
+    "outer_elapsed_seconds": null,
+    "reason": "Control was running or awaiting authorized resource extraction; no scorer/native result opened",
+    "status": "not_read_pending_explicit_aggregate_authorization"
+  }
+}
