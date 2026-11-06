@@ -1,0 +1,22 @@
+{
+  "all_frozen_pins_unchanged": true,
+  "automatic_retry": false,
+  "cases": [
+    {
+      "case_id": "90001",
+      "status": "completed"
+    }
+  ],
+  "child_pid": 19228,
+  "completed_at_utc": "2026-11-06T19:11:03.327274+00:00",
+  "deadline_scope": "Owned child only; final source hashes and terminal-file writes are cooperative parent I/O.",
+  "disposition_semantics": "Completed/start states follow complete retained events; an incomplete next start event is unknown_start, later unstarted cases remain unexecuted.",
+  "error": null,
+  "events_observed": 6,
+  "exit_code": 0,
+  "manifest_sha256": "108eb66455d25781a61e8138ebf1379f451db6e4b349f1aa8c7311d3089314ec",
+  "observed_child_phase_seconds": 28.687000000005355,
+  "partial_event_bytes": 0,
+  "schema_version": 1,
+  "status": "completed"
+}

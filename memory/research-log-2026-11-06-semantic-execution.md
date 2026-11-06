@@ -8,6 +8,19 @@ updated: 2026-11-06
 
 # Semantic capability goal activated
 
+SC03 implementation checkpoint: all five300-claim/1,500-pair conditions are
+prepared from receipt-verified original projections and fixed baseline retrieval.
+Separate stdlib replay passes115,998 assertions; rationale/removal masks apply
+to159 retrieved annotated pairs. No empty abstracts after removal; each added-
+context condition carries1,500 synthetic sentences with explicit origins.
+31 worker/input controls pass after a retained overlength-message regression;
+the real-model worker completes a five-pair fictional rehearsal, with263
+source-inclusive acceptance assertions. No dev prediction/score yet. Next are
+external-model policy context, paired checker/scoring qualification, fullfreeze,
+five actual runs and independent analysis. See the SC03 STATUS.md and
+[[TETHER SciFact Full Context Protocol 2026-11-06]]. Never restart the completed
+fictional rehearsal; there is no live inference handle at this checkpoint.
+
 Current checkpoint: SC01 and SC02 are complete; SC03 is active. The released
 fever_sci model now passes full-architecture source-level parity on eight
 fictional examples and rejects one overlength input. All eight fictional labels

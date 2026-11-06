@@ -1,0 +1,36 @@
+test_bad_prediction_mapping_rejected (test_inputs.InputTests.test_bad_prediction_mapping_rejected) ... ok
+test_constructed_inputs_do_not_mutate_originals (test_inputs.InputTests.test_constructed_inputs_do_not_mutate_originals) ... ok
+test_duplicate_retrieval_rejected (test_inputs.InputTests.test_duplicate_retrieval_rejected) ... ok
+test_empty_is_unavailable_not_placeholder (test_inputs.InputTests.test_empty_is_unavailable_not_placeholder) ... ok
+test_empty_reference_set_rejected (test_inputs.InputTests.test_empty_reference_set_rejected) ... ok
+test_invalid_reference_index_rejected (test_inputs.InputTests.test_invalid_reference_index_rejected) ... ok
+test_mapping_after_deletion (test_inputs.InputTests.test_mapping_after_deletion) ... ok
+test_primary_exact_and_copied (test_inputs.InputTests.test_primary_exact_and_copied) ... ok
+test_query_label_rejected (test_inputs.InputTests.test_query_label_rejected) ... ok
+test_references_cannot_enter_primary_or_context_conditions (test_inputs.InputTests.test_references_cannot_enter_primary_or_context_conditions) ... ok
+test_references_required_for_masks (test_inputs.InputTests.test_references_required_for_masks) ... ok
+test_removal_and_title_preserved (test_inputs.InputTests.test_removal_and_title_preserved) ... ok
+test_synthetic_never_source (test_inputs.InputTests.test_synthetic_never_source) ... ok
+test_tampered_source_rejected (test_inputs.InputTests.test_tampered_source_rejected) ... ok
+test_union_all_rationales_preserves_order (test_inputs.InputTests.test_union_all_rationales_preserves_order) ... ok
+test_worker_request_extra_metadata_rejected (test_inputs.InputTests.test_worker_request_extra_metadata_rejected) ... ok
+test_wrong_rank_rejected (test_inputs.InputTests.test_wrong_rank_rejected) ... ok
+test_wrong_reference_id_rejected (test_inputs.InputTests.test_wrong_reference_id_rejected) ... ok
+test_wrong_schedule_rejected (test_inputs.InputTests.test_wrong_schedule_rejected) ... ok
+test_annotations_rejected_before_solver (test_worker.WorkerTests.test_annotations_rejected_before_solver) ... ok
+test_complete_commits_before_case_terminal (test_worker.WorkerTests.test_complete_commits_before_case_terminal) ... ok
+test_duplicate_worker_destination_never_loads_model (test_worker.WorkerTests.test_duplicate_worker_destination_never_loads_model) ... ok
+test_empty_has_no_dispatch_or_nei (test_worker.WorkerTests.test_empty_has_no_dispatch_or_nei) ... ok
+test_exact_actual_overlength_is_accounted (test_worker.WorkerTests.test_exact_actual_overlength_is_accounted) ... ok
+test_exclusive_writer_rejects_existing (test_worker.WorkerTests.test_exclusive_writer_rejects_existing) ... ok
+test_hash_chain_reconstructs (test_worker.WorkerTests.test_hash_chain_reconstructs) ... ok
+test_inputs_hash_and_size_cap (test_worker.WorkerTests.test_inputs_hash_and_size_cap) ... ok
+test_other_contract_error_stops (test_worker.WorkerTests.test_other_contract_error_stops) ... ok
+test_output_budget (test_worker.WorkerTests.test_output_budget) ... ok
+test_timeout_and_interruption_not_retried (test_worker.WorkerTests.test_timeout_and_interruption_not_retried) ... ok
+test_write_failure_has_no_success_event (test_worker.WorkerTests.test_write_failure_has_no_success_event) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.057s
+
+OK
