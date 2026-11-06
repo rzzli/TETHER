@@ -1,0 +1,177 @@
+{
+  "kind": "sc05_litqa_prospective_interface_review_v1",
+  "created_at_utc": "2026-11-06T23:10:37.813724+00:00",
+  "status": "prospective_design_only",
+  "note": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\sc04\\SC05-LITQA-IMPLEMENTATION-NOTE.md",
+    "bytes": 24776,
+    "sha256": "c8609d551f34d32f57a9f9924cb8376021d28f5b05cf0fe0de8441d9cea26df7"
+  },
+  "reviewed_sources": {
+    "planning/TETHER Semantic Capability Execution Plan 2026-11-06.md": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\TETHER Semantic Capability Execution Plan 2026-11-06.md",
+      "bytes": 11767,
+      "sha256": "085ed3bb65c995db134946ad16773e25196f36933a800b7dfa4772c9da9ebbb7"
+    },
+    "planning/review-assets/tether-semantic-20261106/sc04/SC05-FEASIBILITY-NOTE.md": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\sc04\\SC05-FEASIBILITY-NOTE.md",
+      "bytes": 12442,
+      "sha256": "f8d1e00d8ad7a0e49fe4742a6914503d1ccc7a2f04ab9fc3a8fcb34a11283dc0"
+    },
+    "planning/review-assets/tether-semantic-20261106/sc04/SC05-CALIBRATION-DESIGN-NOTE.md": {
+      "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\sc04\\SC05-CALIBRATION-DESIGN-NOTE.md",
+      "bytes": 12711,
+      "sha256": "a5d7f242341223c9635342a25254b1eb1eaeae2de330219d93c1d6ef2b84aa33"
+    },
+    "experiments/litqa_comparison/acquisition.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\litqa_comparison\\acquisition.py",
+      "bytes": 15543,
+      "sha256": "7c73b3b4cd208b3773a0dcf0aaaa31111e053e85112eacb0487f75439bd85589"
+    },
+    "experiments/litqa_comparison/admission.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\litqa_comparison\\admission.py",
+      "bytes": 7578,
+      "sha256": "1c6b6bb8cc0a8b5e736d7f8ad4e9cdf9674040b907d86bac08f60c552be95367"
+    },
+    "experiments/litqa_comparison/codecs.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\litqa_comparison\\codecs.py",
+      "bytes": 9901,
+      "sha256": "1e2e37c702903b24c267c522dc4c1f004eee0c30afd69b90c5264189f35e6e7b"
+    },
+    "experiments/litqa_comparison/pipeline.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\litqa_comparison\\pipeline.py",
+      "bytes": 12436,
+      "sha256": "077c0c791e7d15605a2dac5bfcfe1ce5c820f15441da7202131f710ea74a9b4c"
+    },
+    "experiments/litqa_comparison/preparation.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\litqa_comparison\\preparation.py",
+      "bytes": 4187,
+      "sha256": "15d9ac4da1dcc7506ada4ea92e1b31040ffa56dd5f6507bca2a25653148fca52"
+    },
+    "experiments/litqa_comparison/run.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\litqa_comparison\\run.py",
+      "bytes": 21738,
+      "sha256": "03365fd5bae022612810e95889a7dfbbc4ecfcf26a6e56012db28ef697a2d204"
+    },
+    "experiments/litqa_comparison/schedule.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\litqa_comparison\\schedule.py",
+      "bytes": 9814,
+      "sha256": "eb8d5ae7a7bcdf24a15d085d4820385c91f8f8eb0b1b4df7f71256b5f958a2fe"
+    },
+    "experiments/litqa_comparison/selection.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\litqa_comparison\\selection.py",
+      "bytes": 4067,
+      "sha256": "fc91e5bc1335de9a9c110b548cd754d7f5407c806f8ceb49fdb79a71b7c014db"
+    },
+    "experiments/litqa_comparison/transport.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\litqa_comparison\\transport.py",
+      "bytes": 9404,
+      "sha256": "c66b9f67641f0dfb1aa6288976f7bca472fc3d56f31639f747812a73e1cf102a"
+    },
+    "experiments/litqa_supplied/admission.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\litqa_supplied\\admission.py",
+      "bytes": 7987,
+      "sha256": "482dc16511c5562b9dcfb8cb807b092de1f5ee39b311796cb04407555141d118"
+    },
+    "experiments/litqa_supplied/pipeline.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\litqa_supplied\\pipeline.py",
+      "bytes": 6426,
+      "sha256": "55663616b61229c331df386420102ea982dba4d0eecaeb1ccc0345cf9f28aa7f"
+    },
+    "experiments/litqa_analysis/aggregate.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\litqa_analysis\\aggregate.py",
+      "bytes": 8127,
+      "sha256": "336f3ee847956caab47f9481ace357c5e79cfabb0289980d17812a082ad755ff"
+    },
+    "experiments/litqa_analysis/collection.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\litqa_analysis\\collection.py",
+      "bytes": 19799,
+      "sha256": "32a0773b4862a7acab8edf07d2b5259556d2bd37f617fddc122db0fe7f047f54"
+    },
+    "experiments/litqa_analysis/inputs.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\litqa_analysis\\inputs.py",
+      "bytes": 5881,
+      "sha256": "c7f932f511f336a387ce0196e56a619641578764493ca5ca61b47c27f8c10615"
+    },
+    "experiments/litqa_analysis/lineage.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\litqa_analysis\\lineage.py",
+      "bytes": 10809,
+      "sha256": "c8b13bc2c28ac228aeeb61effea488ce794f5102aaad1ffe93918b4e8d4b5ca3"
+    },
+    "experiments/litqa_analysis/native_records.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\litqa_analysis\\native_records.py",
+      "bytes": 17933,
+      "sha256": "7694c9ddd359955ee41d0885c6e93cbe9d1f8bb69a168a370527766f2ef079fa"
+    },
+    "experiments/litqa_analysis/reconstruct_run.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\litqa_analysis\\reconstruct_run.py",
+      "bytes": 14363,
+      "sha256": "9c23d9ac830ead132eec4c064e4dbf6e660489a81341251e1391e6814d821c2f"
+    },
+    "experiments/litqa_analysis/run.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\litqa_analysis\\run.py",
+      "bytes": 19535,
+      "sha256": "e42eff8bd9cf579a1814c6dcb1f142fded7fbdd35081e9f9c257bf976067dc2c"
+    },
+    "experiments/litqa_analysis/scoring.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\litqa_analysis\\scoring.py",
+      "bytes": 10361,
+      "sha256": "e07ede07b75ac9f74fe1689fa7724673161a5daf42636e1193b88a3aefdf84da"
+    },
+    "experiments/labbench/runtime.py": {
+      "path": "D:\\Projects\\drug_target_agents\\experiments\\labbench\\runtime.py",
+      "bytes": 10162,
+      "sha256": "3ca200a3113e960fe2d3c13549ef5d0690fbfce1cb4d830633114cdf3f9fea8e"
+    },
+    "src/asof/provenance.py": {
+      "path": "D:\\Projects\\drug_target_agents\\src\\asof\\provenance.py",
+      "bytes": 7638,
+      "sha256": "39ed27151af46677c25db3a8a1be7ab9e456aea05987352717b3c16b01a512c3"
+    },
+    "src/asof/contracts.py": {
+      "path": "D:\\Projects\\drug_target_agents\\src\\asof\\contracts.py",
+      "bytes": 14676,
+      "sha256": "8c79c76efd9e670a0a663228fdc2ae106bb348a57cd5a5b99c5f018d438aa8e0"
+    }
+  },
+  "review_scope": "Targeted source/interface review, not a claim that every repository line was audited.",
+  "production_outcomes_opened": false,
+  "reference_keys_opened": false,
+  "new_model_calls": 0,
+  "new_network_calls": 0,
+  "new_scientific_scores": 0,
+  "frozen_code_modified": false,
+  "sc05_activated": false,
+  "provider_spend_usd": 0,
+  "decisions": [
+    "Reuse original accepted SC04 L/O independent of its score.",
+    "Coordinator acceptance gates reuse; no evaluator-derived worker product.",
+    "Generated candidates/criticism remain typed context outside the scientific InputGraph.",
+    "Exact worker projections, no recursive evaluator/whole-parent grants.",
+    "New critic/repair codecs and independent native adapters; six-source merge preserves original roots/version conflicts.",
+    "Critique-only keeps an admitted substantive original candidate only when critic supported; native prediction remains unchanged.",
+    "Raw-removal is conditional on generated context; H1 attribution is control/scheduling overhead only.",
+    "Reuse proven acquisition/supervision/lineage/scoring primitives; add explicit new task/schedule/merge/selection contracts."
+  ],
+  "peer_review": {
+    "reviewer": "sc04_analysis_audit",
+    "mode": "Independent read-only source/design review",
+    "narrow_findings_resolved": [
+      "Keep predicate now requires substantive original candidate, excluding native unsure.",
+      "Evidence-removal H1 accounting explicitly excludes a false information-ancestry claim."
+    ]
+  },
+  "validation": {
+    "local_markdown_links": 1,
+    "links_exist": true,
+    "whitespace": true,
+    "source_files_pinned": 25,
+    "runtime_tests": "Not applicable: documentation only; future qualification gates specified."
+  },
+  "remaining_gates": [
+    "Completed independently accepted SC04 before reuse.",
+    "Future role-projection, critic/repair, merge, native, capacity/failure and independent replay qualification.",
+    "Final prospective protocol/budget freeze and all199 execution.",
+    "Separate authorized SciFact calibration implementation remains separate."
+  ]
+}

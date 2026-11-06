@@ -342,3 +342,14 @@ incorrect E-must-expanded assumption is preserved and corrected to allow frozen
 lexical fallback. This is not answer/native/full-run acceptance. Rank startup
 was checked through owned process counters without restart; at22:58:10UTC31/398
 ranking slots are complete, owned server4288 ready and parent session48230live.
+
+At23:13:53UTC all398 ranking slots have completed maintained replay; answer phase
+has started in the same live run. Rank worker1069seconds/exit0/reaped; package
+3fb27a9d6598fbef795ae9c577bf6668584b632a041e6b1480eb51d639b9fb55 andstage
+c2598145d2f1784d6fce374a697411fd8035fb71db9fdecdccaa370d2b9d7db7.
+SC05-LITQA-IMPLEMENTATION-NOTE.md now specifies a predictor-only baseline
+projection; coordinator-only acceptance/keys; prior candidate/criticism as typed
+non-evidentiary context; finite critic, six-article merge, all199repair/removal
+and separate semantic withholding/resource layers. Peer corrected native-unsure
+keep and removal H1 information-vs-control distinctions. All26pins verify.
+This is design only; no newSC05code, outcomes, inference or activation.

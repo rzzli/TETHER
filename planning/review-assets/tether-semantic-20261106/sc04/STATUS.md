@@ -1,17 +1,22 @@
 # SC04 checkpoint — analysis qualified, production incomplete
 
-## Current checkpoint: 2026-11-06T22:54:22Z
+## Current checkpoint: 2026-11-06T23:13:53Z
 
 SC01-SC03 are complete; SC04-SC09 remain incomplete. Primary session48230 remains
-live. Expansion199 and collection398 have completed and passed maintained replay;
-ranking has started. Collection worker elapsed6871.719 seconds within its7200-second
-cap and exited0 with cleanup verified. Primary answers and the full supplied-source
-diagnostic are not finalized. Re-poll that session before inferring state; never
+live. Expansion199, collection398 and ranking398 have completed and passed
+maintained replay; answer generation has started. Collection worker elapsed6871.719
+seconds and ranking1069seconds, each within its7200-second cap and exited0 with
+cleanup verified. Primary answers and the full supplied-source diagnostic are
+not finalized. Re-poll that session before inferring state; never
 restart it on an observation timeout. All125 frozen primary source pins remain
 unchanged. The collection package SHA is
 `68f942bfe744fadb5b3623fe829c28df1f78fdcac66faa7f85908578e653f883`;
 the stage receipt SHA is
 `9237a3b70656e20b5954d065a7245fd40070afa953a5030bcc3e515d7f93bf11`.
+The ranking package SHA is
+`3fb27a9d6598fbef795ae9c577bf6668584b632a041e6b1480eb51d639b9fb55`;
+the ranking stage receipt SHA is
+`c2598145d2f1784d6fce374a697411fd8035fb71db9fdecdccaa370d2b9d7db7`.
 
 The final independent analysis CLI is qualified:146 tests pass in
 [analysis-controls-attempt12](analysis-controls-attempt12/QUALIFICATION.json).
@@ -49,6 +54,8 @@ installation attempts remain. Production figures await complete accepted results
 
 Read-only forward checks are retained for later work:
 [SC05 calibration](SC05-CALIBRATION-ELIGIBILITY-AUDIT.md),
+[calibration design](SC05-CALIBRATION-DESIGN-NOTE.md),
+[LitQA repair interfaces](SC05-LITQA-IMPLEMENTATION-NOTE.md),
 [SC06](SC06-FEASIBILITY-NOTE.md), [SC07](SC07-FEASIBILITY-NOTE.md), and
 [SC08](SC08-FEASIBILITY-NOTE.md). The69 calibration claims have supported local
 reservation, with shared-corpus exposure explicitly retained; no calibration was
