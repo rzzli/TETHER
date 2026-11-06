@@ -170,3 +170,16 @@ production. Primary48230 stilllive; latestpoll73/398 collection slots,338HTTP200
 and4failedtransfers,~15.99s/slot. Do not restart or modify its125frozen sourcefiles.
 Analysisaddendum keeps nativezero-precision-with-definedFalse while human ratio
 isnull/undefined; originalanalysisdoc pinnedbyfixture remains unchanged.
+
+## SC04 prospective analysis inputs
+
+Analysis inputmanifest69878be383e1125740fc98d9fa64e75419cc535f4c85c13d2d2e9a6a48a92f57
+atdata/benchmark/litqa_comparison/analysis-inputs-20261106-attempt01 was frozen
+before the primaryanswer directory existed. Shared annotatedDOI components:
+186total (176singletons,7pairs,3triples); independent traversal matchesunion-find.
+Newexperiments/litqa_analysis/metrics.py implements the6frozenfactorialcontrasts,
+paired publication-component bootstrap10kseed20261106, question-resampling
+sensitivity and native/undefinedprecision distinction.11 invented controls pass
+(analysis-controls-attempt02). metrics.py itself is now pinned by analysisinputs;
+preserve it or explicitly version any necessary correction. Production scoring,
+source-inclusive independent reconstruction and results report remain pending.

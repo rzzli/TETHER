@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "tests": 10,
+  "failures": 0,
+  "errors": 0,
+  "source_sha256": {
+    "experiments\\litqa_analysis\\metrics.py": "d73e0e26794779e1728494b0eaa61f88e5ba538e6171675cea298c68c68843ef",
+    "experiments\\litqa_analysis\\test_metrics.py": "98caf09c43e9d7bdddcc532dcbbb7ff601c0dfba199844b18dbfe9e63b26a84b"
+  },
+  "scope": "Invented factorial and bootstrap outcomes only; no real predictions scored"
+}

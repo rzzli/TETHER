@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "tests": 11,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "source_sha256": {
+    "experiments\\litqa_analysis\\metrics.py": "d73e0e26794779e1728494b0eaa61f88e5ba538e6171675cea298c68c68843ef",
+    "experiments\\litqa_analysis\\test_metrics.py": "a330a39dbe20c8264ac688677bbbe37424af4e7a721cd1609a288c38c23dbcec"
+  },
+  "scope": "Invented paired outcomes and grouping only; no production predictions scored."
+}

@@ -73,3 +73,16 @@ handle at this checkpoint. Diagnostic production waits for primary finalization,
 enforced by its freezer/controller. No production diagnostic HTTP call has run.
 The reporting [addendum](ANALYSIS-SPECIFICATION-ADDENDUM.md) preserves native
 zero-attempt precision conventions while showing the statistical ratio as undefined.
+
+## Analysis inputs fixed before primary answers
+
+The evaluator input manifest is frozen at
+`data/benchmark/litqa_comparison/analysis-inputs-20261106-attempt01/MANIFEST.json`,
+SHA256`69878be383e1125740fc98d9fa64e75419cc535f4c85c13d2d2e9a6a48a92f57`.
+Primary answer generation had not started at that freeze. A separate graph
+traversal agrees with union-find grouping:186 publication components cover199
+questions (176 singletons,7 pairs,3 triples). Fixed10,000-replicate paired
+bootstrap code passes11 invented-outcome controls, including unequal cluster
+weighting and undefined precision. No real prediction score has been calculated.
+The production scorer, source-inclusive independent analysis and final report
+remain unfinished; the primary process is still active.
