@@ -13,3 +13,9 @@ Next: integrate these components into the supervised expansion/collection/rankin
 Full199 task inputs have been reconstructed from the original pinned release, with separate question-only and answerer products. Preparation manifest SHA256: `29a18fb45f4f8fe76b52eb833ddf351b4fa9a47c82a2fa9d9a971ff38f814dc4`. See INPUT-PREFLIGHT.json. The initial post-check list/tuple failure and pre-fix source are preserved; attempt02 passes and no inference or HTTP requests were made.
 
 Controller error classification now distinguishes malformed model output (eligible for declared fallback) from model/source/usage integrity failure (must stop). Actually executed qualification code was archived before that refinement; independent historical replay passes624 checks in model-qualification-review04. Current unit gate: component-controls-attempt10,66 tests, zero skips/errors/failures. No process is left active at this checkpoint.
+
+## Integrated primary phases and replay
+
+The primary expansion/collection/ranking/answer operations now run end to end with invented HTTP/native responses. Replay reconstructs every phase edge, exact model request, original tokenization/native body, usage, event ordering, selected raw passages and TETHER admission.79 controls pass in component-controls-attempt12, including a complete four-arm pipeline fixture and rejected usage/owner/extra-event corruption. The maintained replay is not the later independent analysis. Native-response tests use explicitly fictional transport; no new benchmark question or HTTP source request was dispatched.
+
+Next implementation is the owned process supervisor/worker CLI, frozen execution frame and full controller qualification, followed by production and supplied-source work. No worker remains active.

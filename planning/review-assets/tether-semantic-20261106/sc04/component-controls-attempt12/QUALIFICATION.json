@@ -1,0 +1,28 @@
+{
+  "errors": 0,
+  "failures": 0,
+  "scope": "Invented codec, transport, acquisition, lineage and schedule controls; no real model or benchmark.",
+  "skipped": 0,
+  "source_sha256": {
+    "experiments\\litqa_comparison\\__init__.py": "cfcfae32703777cd378508eb7c6422642c3adc3109089707b821795b5e74240a",
+    "experiments\\litqa_comparison\\acquisition.py": "7c73b3b4cd208b3773a0dcf0aaaa31111e053e85112eacb0487f75439bd85589",
+    "experiments\\litqa_comparison\\admission.py": "1c6b6bb8cc0a8b5e736d7f8ad4e9cdf9674040b907d86bac08f60c552be95367",
+    "experiments\\litqa_comparison\\codecs.py": "1e2e37c702903b24c267c522dc4c1f004eee0c30afd69b90c5264189f35e6e7b",
+    "experiments\\litqa_comparison\\pipeline.py": "077c0c791e7d15605a2dac5bfcfe1ce5c820f15441da7202131f710ea74a9b4c",
+    "experiments\\litqa_comparison\\preparation.py": "15d9ac4da1dcc7506ada4ea92e1b31040ffa56dd5f6507bca2a25653148fca52",
+    "experiments\\litqa_comparison\\replay.py": "d015623dd424d171473895f705e391be1e368d7f03111c58dddf05fae1bed87b",
+    "experiments\\litqa_comparison\\schedule.py": "eb8d5ae7a7bcdf24a15d085d4820385c91f8f8eb0b1b4df7f71256b5f958a2fe",
+    "experiments\\litqa_comparison\\selection.py": "fc91e5bc1335de9a9c110b548cd754d7f5407c806f8ceb49fdb79a71b7c014db",
+    "experiments\\litqa_comparison\\tests\\test_acquisition.py": "b782d33a93f5c4d511b942ec03d38f69f9841e7a360167aa2d2b5069e1aed7d3",
+    "experiments\\litqa_comparison\\tests\\test_admission.py": "760bc4d92d7d95c38684f581e06eeb7abcd65a8846b92a6dcedec71f07e447f9",
+    "experiments\\litqa_comparison\\tests\\test_codecs.py": "9589c19f9221c1ea6dc056c8e8967f4cf5f33209824927f765679049a655c005",
+    "experiments\\litqa_comparison\\tests\\test_pipeline.py": "53880450712eb3cd10eb0f9dc7ad3afd007635b589c505d3c2614fa6a381a46c",
+    "experiments\\litqa_comparison\\tests\\test_preparation.py": "3ccc063ed192987b68f46693084cebc40a592fb59cfc41fac71dd90dd5ee37df",
+    "experiments\\litqa_comparison\\tests\\test_replay.py": "44fa76e183603f52365b827e7b73068fc276b221cdfafbf38cc7917f4f74e498",
+    "experiments\\litqa_comparison\\tests\\test_schedule.py": "8640c3fb2aa5d45d201170fc58e29c0357b1d901f63fee289ddc2eb7d4361546",
+    "experiments\\litqa_comparison\\tests\\test_transport.py": "1c6791c4e88f43148f71af2f189cf2889d5db93588071171c0836494c82314c1",
+    "experiments\\litqa_comparison\\transport.py": "c66b9f67641f0dfb1aa6288976f7bca472fc3d56f31639f747812a73e1cf102a"
+  },
+  "status": "PASS",
+  "tests": 79
+}
