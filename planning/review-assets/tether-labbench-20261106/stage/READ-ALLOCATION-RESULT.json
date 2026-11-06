@@ -1,0 +1,26 @@
+{
+  "scope": "Read-only synthetic allocation diagnosis using current run.py as a small ordinary file; no project imports or benchmark content",
+  "results": [
+    {
+      "cap": 536870912,
+      "actual_bytes": 36668,
+      "reads": 5,
+      "elapsed_seconds": 0.45461530000102357,
+      "traced_peak_bytes": 536916611
+    },
+    {
+      "cap": 67108864,
+      "actual_bytes": 36668,
+      "reads": 5,
+      "elapsed_seconds": 0.05692560000170488,
+      "traced_peak_bytes": 67154563
+    },
+    {
+      "cap": 36668,
+      "actual_bytes": 36668,
+      "reads": 5,
+      "elapsed_seconds": 0.0007187000010162592,
+      "traced_peak_bytes": 82367
+    }
+  ]
+}
