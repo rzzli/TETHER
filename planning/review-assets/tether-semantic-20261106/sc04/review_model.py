@@ -37,7 +37,12 @@ def main():
         recipe_path=ROOT/'planning/review-assets/tether-semantic-20261106/sc04/model-qualification-freeze02/RECIPE.json'
         check(sha(recipe_path)==RECIPE_SHA,'Recipe anchor')
         recipe=read(recipe_path)
-        for name,digest in recipe['code_pins'].items():check(sha(ROOT/name)==digest,'Changed source: '+name)
+        source_archive=Path(__file__).parent/'model-qualification-review03/sources'
+        source_locations={}
+        for name,digest in recipe['code_pins'].items():
+            p=source_archive/name if (source_archive/name).is_file() else ROOT/name
+            check(sha(p)==digest,'Changed executed source: '+name)
+            source_locations[name]=str(p)
         root=ROOT/'data/cache/sc04-model-qualification-attempt02';worker=root/'worker'
         done=read(root/'COMPLETE.json');terminal=read(worker/'COMPLETE.json');summary=read(worker/'REPORT.json')
         check(done['status']=='completed' and done['recipe_sha256']==RECIPE_SHA and done['worker_complete_sha256']==sha(worker/'COMPLETE.json'),'Parent completion')
@@ -112,7 +117,7 @@ def main():
             semantic_matches=11,fixtures=13,input_tokens=tokens_in,output_tokens=tokens_out,
             worker_wall_seconds=summary['wall_seconds'],recipe_sha256=RECIPE_SHA,
             original_file_hashes={str(p.relative_to(root)).replace('\\','/'):sha(p) for p in root.rglob('*') if p.is_file()},
-            source_pins=recipe['code_pins'],provider_cost_usd=0)
+            source_pins=recipe['code_pins'],executed_source_locations=source_locations,provider_cost_usd=0)
     except BaseException as error:report.update(error_type=type(error).__name__,error=str(error))
     report.update(checks=checks,reviewer_sha256=sha(__file__))
     (args.output/'REVIEW.json').write_text(json.dumps(report,indent=2,sort_keys=True)+'\n',encoding='utf-8',newline='\n')

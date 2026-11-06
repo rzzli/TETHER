@@ -20,6 +20,14 @@ KIND = 'sc04_structured_local_v1'
 ANSWER_KIND = 'sc04_common_answer_local_v1'
 
 
+class OutputCodecError(ValueError):
+    """Complete authenticated native output fails only the declared task codec.
+
+    Controllers may apply their declared lexical fallback after this error.
+    Model/source/request/usage integrity failures are intentionally not wrapped.
+    """
+
+
 def make_answer_request(query,sources,model_provenance):
     query,sources=model._inputs(query,sources)
     payload=codecs.answer_payload(query,sources)
@@ -92,11 +100,14 @@ def verify_response(request,payload,tokenization,raw,*,alias,server_spec,binding
         codecs.need(key not in response['generation_settings'] or
             canonical(response['generation_settings'][key]) == canonical(payload[key]),'Runtime setting differs: '+key)
     raw_answer = response['content'].encode('utf-8')
-    if request['task']=='answer':
-        from experiments.labbench.native_contract import parse_prediction
-        decoded=parse_prediction(raw_answer,request['query'],[s['source_id'] for s in request['sources']])
-    else:
-        decoded = codecs.parse_expansion(raw_answer) if request['task'] == 'expand' else codecs.parse_ranking(raw_answer,request['pool'])
+    try:
+        if request['task']=='answer':
+            from experiments.labbench.native_contract import parse_prediction
+            decoded=parse_prediction(raw_answer,request['query'],[s['source_id'] for s in request['sources']])
+        else:
+            decoded = codecs.parse_expansion(raw_answer) if request['task'] == 'expand' else codecs.parse_ranking(raw_answer,request['pool'])
+    except ValueError as error:
+        raise OutputCodecError(str(error)) from error
     return freeze(dict(decoded=decoded,usage=usage,exact_prompt_tokens=count,conservative_input_reservation=reserve))
 
 

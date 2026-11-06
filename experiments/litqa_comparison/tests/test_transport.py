@@ -76,7 +76,7 @@ class StructuredTransportTests(unittest.TestCase):
         self.assertEqual(len(self.f.calls),1)
 
     def test_malformed_response_preserves_usage_and_bytes(self):
-        with self.assertRaises(ValueError):self.execute(self.f.native_body(content='{"queries":[["a"]]}'))
+        with self.assertRaises(t.OutputCodecError):self.execute(self.f.native_body(content='{"queries":[["a"]]}'))
         failure=json.loads((self.out/'failure.json').read_bytes())
         self.assertEqual(failure['stage'],'verification')
         self.assertEqual(failure['measured_usage']['input_tokens'],50)
@@ -84,7 +84,8 @@ class StructuredTransportTests(unittest.TestCase):
         self.assertTrue((self.out/'native-response.bin').exists())
 
     def test_token_mismatch_rejected(self):
-        with self.assertRaises(ValueError):self.execute(self.f.native_body(content='{"queries":[["a"],["b"]]}',tokens_evaluated=51))
+        with self.assertRaises(ValueError) as caught:self.execute(self.f.native_body(content='{"queries":[["a"],["b"]]}',tokens_evaluated=51))
+        self.assertNotIsInstance(caught.exception,t.OutputCodecError)
 
     def test_interrupt_retained_and_not_retried(self):
         with patch.object(t.model,'tokenize_once',side_effect=KeyboardInterrupt('fixture')):

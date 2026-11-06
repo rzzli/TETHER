@@ -63,3 +63,5 @@ Frozen recipe SHA-256:
 Local output: `data/cache/sc04-model-qualification-attempt02/`.
 Both qualification execution sessions26731 and94567 are closed with exit0.
 The actual benchmark has not been dispatched.
+
+Later engineering refinement gives codec/capacity errors explicit types, keeping integrity errors fatal. The actually executed codec/transport sources are preserved under model-qualification-review03/sources; review04 independently verifies their hashes and the same native outputs. This is historical replay, not a claim that new code was executed in those13 calls. Current66 component controls cover the refinement; no model calls were repeated.
