@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "successful_attempt": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-analysis-cli-qualification-attempt03\\RECEIPT.json",
+    "bytes": 4200,
+    "sha256": "a3aafe838e864f28485863fc3eff8d118e5eaa8cbe0d18e9237bdc52fbd2463c"
+  },
+  "files_checked_in_nested_inventories": 28,
+  "source_pins_checked": 130,
+  "full_controls": 146,
+  "answer_records": 10,
+  "arms": 5,
+  "correct_per_arm": 1,
+  "questions_per_arm": 2,
+  "worker_seconds": 12.531000000002678,
+  "worker_peak_memory_bytes": 162611200,
+  "total_supervised_seconds": 13.094000000011874,
+  "provider_spend_usd": 0,
+  "failed_attempts": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-analysis-cli-qualification-attempt01",
+      "reason": "Platform helper blocked; fixed native OS-version identity."
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-analysis-cli-timeout-attempt01",
+      "reason": "Supervisor exception diagnostics attribute was not retained; fixed and regression added."
+    }
+  ],
+  "timeout_control": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-analysis-cli-timeout-attempt02\\SUPERVISION.json",
+    "bytes": 484,
+    "sha256": "030f6bfdf61dcd7012d5cfdf6549a0dca57c8fb268591159d6a7c71ce65a0869"
+  },
+  "missing_input_control": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-analysis-cli-missing-attempt01\\worker\\FAILURE.json",
+    "bytes": 158,
+    "sha256": "e6ab50f77fac2740252b9c892a7945025e2e3c0626731aad8240d725a1b600d4"
+  },
+  "scope": "End-to-end offline fictional analysis and failure handling. No new inference, public acquisition, production scoring or scientific validity established."
+}

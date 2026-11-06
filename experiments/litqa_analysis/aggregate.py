@@ -3,7 +3,7 @@ from collections import Counter
 
 from .native_records import canonical, need
 from .scoring import score_arm, paper_metrics, factorial, ordered
-from .metrics import ARMS
+from .metrics import ARMS, contrasts
 
 
 def summarize(primary, supplied, inputs, *, expected_count=199, replicates=10000, seed=20261106):
@@ -28,9 +28,15 @@ def summarize(primary, supplied, inputs, *, expected_count=199, replicates=10000
                 native_status_counts=dict(Counter(r['native_status'] for r in source_cases)),
                 no_selected_passage_cases=sum(r['selected_passages']==0 for r in source_cases),
                 warning='Shared expansion/collection resources are charged to multiple logical arms; do not sum as physical cost.')
+            accounting[arm]['logical_http_usage']={key:sum(r['logical_http_usage'][key] for r in source_cases)
+                                                   for key in source_cases[0]['logical_http_usage']}
+            for field in ('retained_original_bytes','extracted_paragraph_bytes','candidate_pool_bytes'):
+                accounting[arm][field]=sum(r[field] for r in source_cases)
             if arm!='supplied':
                 accounting[arm]['expansion_status_counts']=dict(Counter(r['expansion_status'] for r in source_cases))
                 accounting[arm]['ranking_status_counts']=dict(Counter(r['ranking_status'] for r in source_cases))
+                for field in ('expansion_native_status','ranking_native_status','expansion_failure_reason','ranking_failure_reason'):
+                    accounting[arm][field+'_counts']=dict(Counter(r[field] for r in source_cases if r[field] is not None))
     changed={}
     for branch in ('L','E'):
         before=primary['evidence_ids'][branch+'/O'];after=primary['evidence_ids'][branch+'/R']
@@ -47,11 +53,27 @@ def summarize(primary, supplied, inputs, *, expected_count=199, replicates=10000
                 [r for r in supplied['records']['supplied'] if r['id'] in subset],{k:v for k,v in supplied['evidence_ids']['supplied'].items() if k in subset})
             subsets[label]['provenance_validated']=True
         else:subsets[label]=dict(scheduled_count=0,metrics=None,reason='No eligible source subset; full cohort remains in primary report.')
+    availability={}
+    e={r['id'] for r in cases['E/O'] if r['expansion_native_status']=='completed'}
+    l={r['id'] for r in cases['L/R'] if r['ranking_native_status']=='completed'}
+    r={r['id'] for r in cases['E/R'] if r['ranking_native_status']=='completed'}
+    for label,subset in (('expansion_available',e),('lexical_branch_ranking_available',l),
+                         ('expanded_branch_ranking_available',r),('all_interventions_available',e&l&r)):
+        selected={}
+        if subset:
+            for arm in ARMS:
+                selected[arm]=score_arm([q for q in queries if q['id'] in subset],[ref for ref in refs if ref['id'] in subset],
+                    [record for record in primary['records'][arm] if record['id'] in subset],
+                    {k:v for k,v in primary['evidence_ids'][arm].items() if k in subset})
+                selected[arm]['provenance_validated']=True
+        availability[label]=dict(scheduled_count=len(subset),ids=[i for i in ids if i in subset],arms=selected,
+            raw_accuracy_contrasts=contrasts({a:s['raw_metrics']['accuracy'] for a,s in selected.items()}) if subset else None,
+            scope='Secondary intervention-availability subset; conditioned on execution success, not a replacement for full-cohort contrasts.')
     return dict(kind='sc04_all_scheduled_scientific_summary_v1',scheduled_count=expected_count,arms=metrics,
         source_metrics=source_metrics,paired=factorial({a:metrics[a] for a in ARMS},inputs['groups'],replicates=replicates,seed=seed),
         ranking_selection_changes=changed,logical_arm_accounting=accounting,
         physical_accounting=dict(primary=primary['resources'],supplied=supplied['resources']),
-        supplied_source_subsets=subsets,diagnostic_resolutions=supplied['diagnostic_resolutions'],
+        supplied_source_subsets=subsets,available_intervention_subsets=availability,diagnostic_resolutions=supplied['diagnostic_resolutions'],
         source_cases=cases,model_provider_spend_usd=0,
         limits=['Repeatedly exposed public development set, not an untouched holdout.',
                 'Paper identity matching is not decisive-passage recall or semantic support.',

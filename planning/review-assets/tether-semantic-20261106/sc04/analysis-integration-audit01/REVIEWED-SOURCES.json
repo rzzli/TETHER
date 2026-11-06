@@ -1,0 +1,17 @@
+{
+  "created_at_utc": "2026-11-06T21:55:59.609920+00:00",
+  "files": {
+    "experiments/litqa_analysis/aggregate.py": "336f3ee847956caab47f9481ace357c5e79cfabb0289980d17812a082ad755ff",
+    "experiments/litqa_analysis/collection.py": "32a0773b4862a7acab8edf07d2b5259556d2bd37f617fddc122db0fe7f047f54",
+    "experiments/litqa_analysis/envelopes.py": "52c7d9f9ea0b07aca0d2eeca4276c5dbe2105941b33cde0280af3d446878e14b",
+    "experiments/litqa_analysis/inputs.py": "c7f932f511f336a387ce0196e56a619641578764493ca5ca61b47c27f8c10615",
+    "experiments/litqa_analysis/lineage.py": "c8b13bc2c28ac228aeeb61effea488ce794f5102aaad1ffe93918b4e8d4b5ca3",
+    "experiments/litqa_analysis/reconstruct_run.py": "9c23d9ac830ead132eec4c064e4dbf6e660489a81341251e1391e6814d821c2f",
+    "experiments/litqa_analysis/run.py": "435fe44a39807040ec3e508ed46977714d4b71b21384aef46f4ea3f2d4fe55b4",
+    "experiments/litqa_analysis/scoring.py": "e07ede07b75ac9f74fe1689fa7724673161a5daf42636e1193b88a3aefdf84da",
+    "experiments/litqa_analysis/supplied_collection.py": "49222d37107240a1b6efe808f6cabbfee1cbe1192dce702b4831c683627c45b3",
+    "experiments/litqa_analysis/test_envelopes.py": "49f789703c87d01d327e528cde76279b12e7b042af70fef629918c5139852f8c"
+  },
+  "kind": "independent_analysis_integration_review_source_checkpoint",
+  "scope": "Point-in-time review snapshot; other agents may continue changes. Not a production freeze or acceptance."
+}

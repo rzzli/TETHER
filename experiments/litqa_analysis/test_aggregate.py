@@ -14,6 +14,9 @@ class AggregateTests(unittest.TestCase):
                    reserved_output_tokens=256,provider_cost_usd=0)
         cases=[dict(id=i,retained_dois=['d'+str(n)],pool_dois=['d'+str(n)],selected_dois=['d'+str(n)],
             selected_bytes=50,selected_passages=1,native_status='completed',expansion_status='completed',ranking_status='completed',
+            expansion_native_status='completed',ranking_native_status='completed',expansion_failure_reason=None,ranking_failure_reason=None,
+            retained_original_bytes=100,extracted_paragraph_bytes=70,candidate_pool_bytes=60,
+            logical_http_usage=dict(requests=2,measured_response_bytes=100,safety_accounted_bytes=100,unknown_transfer_upper_bytes=0),
             logical_model_usage=usage,source_coverage=dict(retained_articles=1,unknown_or_unavailable_inputs=[])) for n,i in enumerate(ids)]
         common=dict(status='independently_reconstructed',queries=q,source_lineage_checked=True,native_calls_checked=True,
                     cross_stage_products_checked=True,resources=dict(physical_calls=1))
@@ -59,6 +62,16 @@ class AggregateTests(unittest.TestCase):
         summary=self.summarize()
         self.assertEqual(summary['arms']['E/R']['raw_metrics'],dict(accuracy=2/3,precision=1,coverage=2/3))
         self.assertEqual(summary['paired']['ranking_transitions']['E']['correct_to_incorrect'],1)
+
+    def test_intervention_failures_remain_full_cohort_and_secondary_subsets(self):
+        self.primary['source_cases']['E/O'][0].update(expansion_native_status='codec_failure',expansion_status='fallback',expansion_failure_reason='codec_failure')
+        self.primary['source_cases']['L/R'][1].update(ranking_native_status='not_applicable',ranking_status='not_applicable',ranking_failure_reason='empty pool')
+        got=self.summarize()
+        self.assertEqual(got['scheduled_count'],3)
+        self.assertEqual(got['available_intervention_subsets']['all_interventions_available']['scheduled_count'],1)
+        self.assertEqual(got['logical_arm_accounting']['E/O']['expansion_failure_reason_counts'],{'codec_failure':1})
+        self.assertEqual(got['logical_arm_accounting']['L/O']['logical_http_usage']['requests'],6)
+        self.assertEqual(got['logical_arm_accounting']['L/O']['candidate_pool_bytes'],180)
 
 
 if __name__=='__main__':unittest.main()

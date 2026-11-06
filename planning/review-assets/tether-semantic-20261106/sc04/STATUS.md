@@ -1,4 +1,37 @@
-# SC04 checkpoint — model mechanics qualified, production incomplete
+# SC04 checkpoint — analysis qualified, production incomplete
+
+## Current checkpoint: 2026-11-06T22:00:58Z
+
+SC01-SC03 are complete; SC04-SC09 remain incomplete. Primary session48230 was
+confirmed live and had222/398 completed collection products. Expansion199 is
+complete; primary ranking/answers and the full supplied-source diagnostic are
+not finalized. Re-poll that session before inferring state; never restart it on
+an observation timeout. All125 frozen primary source pins remain unchanged.
+
+The final independent analysis CLI is qualified:146 tests pass in
+[analysis-controls-attempt12](analysis-controls-attempt12/QUALIFICATION.json).
+[End-to-end fictional qualification](analysis-cli-qualification-review02/QUALIFICATION.json)
+reconstructs16 native calls and all10 answers across five arms, compares native
+scores, seals resources/provenance, and retains actual timeout/missing-input
+failures. Its current-source successful receipt is
+`acfd87731d44ba1b632bd8b33c4f85ecf8547e256f5dd9300f3047bc94570816`.
+Platform-version and timeout-diagnostics runner defects were corrected; original
+failed attempts remain. Known fictional false abstentions remain unchanged.
+
+The [integration audit](analysis-integration-audit01/AUDIT-FINDINGS.md) retains
+the conditional producer capacity limitation and corrected analysis gaps.
+Forty selected actual-format collections reconstruct; all219 closed collections
+checked at that earlier probe fit14,000 prompt bytes under any permitted order.
+These are partial-input feasibility checks, not full production verification.
+
+Next: let the existing primary execution finalize; bind its printed root hash,
+freeze/run the full supplied diagnostic, then execute the qualified analyzer with
+both external root hashes and the frozen evaluator manifest. Retain the scientific
+report and root acceptance before closing SC04. No production scores have been
+computed. The [SC05 feasibility note](SC05-FEASIBILITY-NOTE.md) is read-only forward
+preparation; it does not activate SC05 or replace the complete scope.
+
+## Retained earlier checkpoints
 
 SC01–SC03 are complete. SC04 is active; SC04–SC09 remain incomplete. No new benchmark question has been dispatched.
 

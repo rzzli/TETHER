@@ -1,0 +1,28 @@
+{
+  "changed_choice_ascii_json_bytes": 14406,
+  "changed_choice_utf8_bytes": 4804,
+  "created_at_utc": "2026-11-06T21:52:03.491622+00:00",
+  "disposition": {
+    "error_type": "PayloadCapacityError",
+    "message": "Prompt exceeds byte cap; no silent truncation",
+    "status": "reproduced"
+  },
+  "finding": "Answer capacity does not reach the per-cell graceful capacity handler in the frozen primary/supplied admission path.",
+  "frozen_sources": {
+    "experiments/litqa_comparison/admission.py": "1c6b6bb8cc0a8b5e736d7f8ad4e9cdf9674040b907d86bac08f60c552be95367",
+    "experiments/litqa_comparison/codecs.py": "1e2e37c702903b24c267c522dc4c1f004eee0c30afd69b90c5264189f35e6e7b",
+    "experiments/litqa_comparison/pipeline.py": "077c0c791e7d15605a2dac5bfcfe1ce5c820f15441da7202131f710ea74a9b4c",
+    "experiments/litqa_comparison/tests/test_acquisition.py": "b782d33a93f5c4d511b942ec03d38f69f9841e7a360167aa2d2b5069e1aed7d3",
+    "experiments/litqa_comparison/tests/test_admission.py": "760bc4d92d7d95c38684f581e06eeb7abcd65a8846b92a6dcedec71f07e447f9",
+    "experiments/litqa_comparison/transport.py": "c66b9f67641f0dfb1aa6288976f7bca472fc3d56f31639f747812a73e1cf102a",
+    "experiments/litqa_supplied/admission.py": "482dc16511c5562b9dcfb8cb807b092de1f5ee39b311796cb04407555141d118"
+  },
+  "kind": "invented_sc04_admission_capacity_probe",
+  "model_dispatches": 0,
+  "production_cases_read": false,
+  "qualification_only": true,
+  "query_id": "00000000-0000-0000-0000-000000000001",
+  "real_http_requests": 0,
+  "scope": "The existing invented HTTP fixture supplies sources. capture() raises before its context returns; pipeline.execute calls model_call only after capture returns. No provider is invoked.",
+  "source_manifest_sha256": "c97c2eb8f75f630f19e8049ece403188790b662d45e2e3c3213ef85af4a6d3bd"
+}

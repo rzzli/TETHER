@@ -219,3 +219,40 @@ integration audit uncovered answer-admission capacity failure before model-cell
 handler; isolated capacity tests are not end-to-end qualification. Preserve the
 live frozen code and any terminalfailure; version a necessary correction only
 with retained evidence. SC04-SC09 remain incomplete.
+
+## Final independent-analysis CLI qualified; production still active
+
+Final code matches146 passing combined tests inanalysis-controls-attempt11.
+Successful full fictional CLIattempt03 receipt:
+a3aafe838e864f28485863fc3eff8d118e5eaa8cbe0d18e9237bdc52fbd2463c.
+Review: planning/review-assets/tether-semantic-20261106/sc04/analysis-cli-qualification-review01/QUALIFICATION.json.
+It checks all16 nativecalls/10answers across5arms, source rights/allocation/lineage,
+role-specific I/O logs, all cross-stage products, native score agreement, paired
+statistics, intervention subsets and physical/logical costs. Fullworker13.094s
+supervised,peak162611200B. Actual timeout02 is reaped with diagnostics+streams;
+missinginput preserves bothfailurelevels. Failed platformidentity and timeout
+attribute attempts remain; no production/scientific result is implied.
+
+Primary48230 confirmedlive22:00:58UTC:222/398closedcollections,125frozenpinsunchanged.
+40actual-format selectedcollections reconstruct;219closedproducts capacityprobe
+has no lexical/any-rankingoverflow (max10008/10135B). Partialprobes are not final
+fullrunverification. Frozenproducer admissioncapacitylimitation remainsconditional.
+Next use existinglive primary, then fullsupplied production, then analysis CLI,
+scientificreport and rootacceptance. Do not markSC04completebeforethese.
+
+Read-only SC05-FEASIBILITY-NOTE.md records outcome-independentL/O recommendation
+before primaryanswerdirectory existed and separates full199repair from SciFact
+calibration. ActualSC03solver=MultiVerSfever_sci pre-targetfinetuning checkpoint,
+not Qwen or target-finetunedscifactweights.69localcalibrationclaims/49groups are
+conditionallyeligible pendingnonuseaudit; not globallycontaminationfree. Seven
+metadata/producthashesverified; largecheckpointnotrehashclaimed. SC05unstarted.
+
+Current-source analysis checkpoint: trailing blank final line corrected without
+behavioral change, then146controls re-passed inanalysis-controls-attempt12 and
+fictionalCLIattempt04 requalified. Current externalreceipt:
+acfd87731d44ba1b632bd8b33c4f85ecf8547e256f5dd9300f3047bc94570816.
+Review02 binds130currentcodepins and fullcontrols to28nestedinventoryentries,
+all10answers/5arms;13.547ssupervised,peak162369536B. Priorattempt03bytes and all
+failurecontrols preserved. Qualificationhelper now accepts explicit successpath,
+externalSHA and controls. No ongoinganalysisworkers remain. Primary48230 remains
+the single live experiment; fullproduction/supplied/scientificanalysis not done.

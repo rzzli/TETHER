@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "successful_attempt": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-analysis-cli-qualification-attempt04\\RECEIPT.json",
+    "bytes": 4200,
+    "sha256": "acfd87731d44ba1b632bd8b33c4f85ecf8547e256f5dd9300f3047bc94570816"
+  },
+  "files_checked_in_nested_inventories": 28,
+  "controls": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\sc04\\analysis-controls-attempt12\\QUALIFICATION.json",
+    "bytes": 3381,
+    "sha256": "be657fcdeac1c1f8591b84a23120435d07b99ba56b806be41ba4037565fc4142"
+  },
+  "qualification_helper": {
+    "path": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\sc04\\qualify_analysis_cli.py",
+    "bytes": 6454,
+    "sha256": "f73fbdcca22c612d7e09c9ec8821032ece18cd6099f7b3f6777fb87cc414bdae"
+  },
+  "source_pins_checked": 130,
+  "full_controls": 146,
+  "answer_records": 10,
+  "arms": 5,
+  "correct_per_arm": 1,
+  "questions_per_arm": 2,
+  "worker_seconds": 13.0,
+  "worker_peak_memory_bytes": 162369536,
+  "total_supervised_seconds": 13.546999999991385,
+  "provider_spend_usd": 0,
+  "failed_attempts": [
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-analysis-cli-qualification-attempt01",
+      "reason": "Platform helper blocked; fixed native OS-version identity."
+    },
+    {
+      "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-analysis-cli-timeout-attempt01",
+      "reason": "Supervisor exception diagnostics attribute was not retained; fixed and regression added."
+    }
+  ],
+  "timeout_control": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-analysis-cli-timeout-attempt02\\SUPERVISION.json",
+    "bytes": 484,
+    "sha256": "030f6bfdf61dcd7012d5cfdf6549a0dca57c8fb268591159d6a7c71ce65a0869"
+  },
+  "missing_input_control": {
+    "path": "D:\\Projects\\drug_target_agents\\data\\cache\\sc04-analysis-cli-missing-attempt01\\worker\\FAILURE.json",
+    "bytes": 158,
+    "sha256": "e6ab50f77fac2740252b9c892a7945025e2e3c0626731aad8240d725a1b600d4"
+  },
+  "failure_control_scope": "Retained earlier failure controls; no rerun for the trailing-newline-only runner change. Regression suite is current.",
+  "scope": "End-to-end offline fictional analysis and failure handling. No new inference, public acquisition, production scoring or scientific validity established."
+}
