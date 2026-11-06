@@ -1,0 +1,14 @@
+{
+  "controls": 5,
+  "disposition": "Retain frozen producer/auditor; require separately qualified supplemental gate for final SC03 acceptance.",
+  "errors": 0,
+  "failures": 0,
+  "fictional_only": true,
+  "fixture_root": "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\sc03\\extra-event-regression-attempt01\\fictional\\tmp6z1zm86x",
+  "old_auditor_accepts_counterexample": true,
+  "requirement": "No contradictory or unscheduled terminal event may survive final acceptance.",
+  "source_sha256": "5eb0863a68699d07fdf6c9535f28c0bfdcd9bd22e1a55197b4da6b33342be6aa",
+  "status": "PASS",
+  "supplemental_gate_rejects": "Unexpected, contradictory, duplicate, missing or reordered journal event",
+  "supplemental_source_sha256": "4f9df851849127f7438d4a13557a624d318f783b2289da479a312f805c2cbd76"
+}
