@@ -18,8 +18,10 @@ integration tests and 18 reconstruction tests pass. This is a weak public-dev
 baseline, not semantic superiority or biological validation. See
 [[research-log-2026-11-06-scifact-results]] and
 [[TETHER SciFact Native Evaluation Results 2026-11-05]]. Session 76726 is closed;
-never restart it. The next stage is one original LAB-Bench family, then an
-Inspect equivalent-policy implementation and the final goal audit. Dated sections
+never restart it. BG04 now prepares all199 original LitQA2 questions, selected before performance;
+pinned acquisition passes, adapters and fictional qualification are in progress.
+No benchmark answers generated/scored. See [[research-log-2026-11-06-labbench-preparation]].
+Inspect equivalent-policy implementation and the final goal audit follow. Dated sections
 below retain earlier research scope and do not supersede this checkpoint.
 
 ## Current recovery execution

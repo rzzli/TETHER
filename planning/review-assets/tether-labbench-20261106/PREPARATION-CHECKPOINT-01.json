@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "PASS_acquisition_bytes_and_review_links_only",
+  "checked_at_utc": "2026-11-06T00:28:07.268761+00:00",
+  "acquisition_receipt_sha256": "620cf7d9d166d892b8c33da9a3f6a896d0c8d3659bbc10b4b6144fcadcd723bd",
+  "files": 17,
+  "bytes": 719061,
+  "local_links_checked": 28,
+  "document_hashes": {
+    "reports\\TETHER benchmark comparison update 2026-11-06.md": "02819015bfef510a517044b13e8dfa8dd8e5bdf9d5cf7e5059df10f0f1fcf3c9",
+    "planning\\TETHER LitQA2 Evaluation Protocol 2026-11-06.md": "bea82205740a79fdc7e9c0361bd0430d67f316031ee30794f2797b1ae4e66cd2",
+    "planning\\review-assets\\tether-labbench-20261106\\STATUS.md": "e6bdff59bfada7988d35b327c95dfc64b58ef7538b2cd4ac5f899eaf833e7a2a",
+    "planning\\review-assets\\tether-labbench-20261106\\data-feasibility.md": "a4afd231a4ab4d10fd1ffa55119f0db0721d6a42373ada44f74767f3cdbb10ce",
+    "planning\\review-assets\\tether-labbench-20261106\\method-feasibility.md": "be7b5a051b18cc7abbd422b40522793737cf1c621ce0e07cef30c344b5421a00",
+    "planning\\review-assets\\tether-labbench-20261106\\policy-feasibility.md": "2b4a8011f38f241f2e719d4f4cec94e7479a30e13dcf73c6627a7a9d7193086f"
+  },
+  "candidate_generation": false,
+  "benchmark_scoring": false,
+  "runtime_qualification": false,
+  "native_projection_qualification": false,
+  "review_note": "Independent method review corrected a phrase that could imply a scorer defect; retained SciFact scoring has independently reconstructed exactly.",
+  "remaining": "New code tests, native projection, model/source qualification, executable freeze, actual evaluation, independent reconstruction; BG04 incomplete."
+}
