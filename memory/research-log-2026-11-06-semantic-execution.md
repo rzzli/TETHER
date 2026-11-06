@@ -353,3 +353,13 @@ non-evidentiary context; finite critic, six-article merge, all199repair/removal
 and separate semantic withholding/resource layers. Peer corrected native-unsure
 keep and removal H1 information-vs-control distinctions. All26pins verify.
 This is design only; no newSC05code, outcomes, inference or activation.
+
+At23:33:20UTC all796 primary answer-slot records are written; session48230 remains
+live for finalization/replay. Independent closed-phase reconstruction passes199
+expansion/398collection/398ranking slots and559 native calls. Subsequent response-
+bound diagnosis proves six repeated-term expansions and196 invalid permutations:
+194 missing IDs, one repeated ID, one both. All end with EOS below token caps;
+fallback retains lexical query/pool order. Tracked auxiliary report/anchor retain
+the limits; root independently verifies51 distinct proof paths. No answer score
+or final-run acceptance is claimed. The intuitive root README is already pushed
+in84963dc; another read-only review checks all11 local links and CLI alignment.

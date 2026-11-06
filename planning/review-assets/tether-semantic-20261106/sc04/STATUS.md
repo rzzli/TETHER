@@ -1,10 +1,11 @@
 # SC04 checkpoint — analysis qualified, production incomplete
 
-## Current checkpoint: 2026-11-06T23:13:53Z
+## Current checkpoint: 2026-11-06T23:33:20Z
 
 SC01-SC03 are complete; SC04-SC09 remain incomplete. Primary session48230 remains
 live. Expansion199, collection398 and ranking398 have completed and passed
-maintained replay; answer generation has started. Collection worker elapsed6871.719
+maintained replay; all796 answer-slot records are written, with answer finalization
+and replay still pending. Collection worker elapsed6871.719
 seconds and ranking1069seconds, each within its7200-second cap and exited0 with
 cleanup verified. Primary answers and the full supplied-source diagnostic are
 not finalized. Re-poll that session before inferring state; never
@@ -17,6 +18,14 @@ The ranking package SHA is
 `3fb27a9d6598fbef795ae9c577bf6668584b632a041e6b1480eb51d639b9fb55`;
 the ranking stage receipt SHA is
 `c2598145d2f1784d6fce374a697411fd8035fb71db9fdecdccaa370d2b9d7db7`.
+
+The [independent auxiliary-phase audit](SC04-CLOSED-AUXILIARY-RECONSTRUCTION.md)
+reconstructs all199 expansion,398 collection and398 ranking slots, including559
+physical model calls and1,881 HTTP attempts. Six expansions repeated terms;
+196 rankings violated the exact-permutation rule (194 missing IDs, one repeated
+ID, one both). All ended with EOS below the output cap. Fallbacks correctly retain
+lexical query/pool order; they are not successful interventions. The root rechecked
+51 distinct report/source proofs. No answer scores were inspected in this audit.
 
 The final independent analysis CLI is qualified:146 tests pass in
 [analysis-controls-attempt12](analysis-controls-attempt12/QUALIFICATION.json).
