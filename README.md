@@ -1,39 +1,37 @@
 # TETHER
 
-### A traceable path from drug-target question to evidence dossier
+**Drug-target research with a source trail you can inspect.**
 
-**Ask a research question. Review eligible evidence. Trace every accepted claim back to its source.**
-
-TETHER is an **agent execution and evaluation harness for drug-target research**—with evidence controls, specialist workflows, and replayable execution records.
+TETHER is an **agent execution and evaluation harness**. It connects research questions, versioned evidence, and specialist workflows to produce an auditable evidence dossier.
 
 *Target Evidence Tracking Harness for Evaluation and Reproducibility*
 
-[Quick start](#quick-start) · [Results](#current-results) · [Documentation](#explore)
+[Try it](#quick-start) · [Results](#current-results) · [Code & docs](#explore)
 
-## What does it do?
+## From question to evidence
 
-> **Question:** What evidence supports inhibiting **IL6R** in **rheumatoid arthritis** using an **antibody**?
->
-> **Output:** An evidence dossier showing accepted claims, source links, missing inputs, and unresolved questions.
-
-You supply the target, disease, intended action, modality, cutoff date, and versioned evidence. TETHER runs the configured workflow and retains a record you can inspect and verify.
+> What evidence supports inhibiting **IL6R** in **rheumatoid arthritis** using an **antibody**, as of a chosen date?
 
 <a id="how-it-works"></a>
 
 ```mermaid
 flowchart TD
-    Q["Research question + cutoff date"] --> G
-    E["Versioned evidence files"] --> G
-    G{"Evidence eligible?"} -->|Yes| S["Specialist workflows"]
-    G -->|No| X["Exclude and record why"]
-    S --> L["Evidence ledger<br/>Claims linked to sources"]
-    L --> D["Readable dossier<br/>Evidence · gaps · unresolved questions"]
-    L --> V["Verification record<br/>Inputs · calls · failures · outputs"]
+    Q["YOUR INPUTS<br/>Target · disease · action · modality<br/>Cutoff date + versioned evidence"] --> G
+    G["EVIDENCE CHECKS<br/>Dates · permissions · source lineage"] --> S
+    S["SPECIALIST WORKFLOWS<br/>Review eligible evidence"] --> D
+    D["YOUR DOSSIER<br/>Source-linked claims · gaps · unresolved questions"]
+    G -.-> R["AUDIT TRAIL<br/>Exclusions · claims · model calls · failures"]
+    S -.-> R
+    D -.-> R
 ```
 
-Specialist routes cover **genetics, perturbation, expression, modality, literature, clinical evidence, safety, and pathways**. Available evidence and backend configuration determine what each route can do.
+| Component | What it does |
+|---|---|
+| Evidence store | Admits eligible inputs and preserves their provenance. |
+| Specialists | Route genetics, perturbation, expression, modality, literature, clinical, safety, and pathway evidence. Capabilities depend on inputs and backend. |
+| Ledger & verifier | Link accepted claims to records; check execution integrity and consistency. |
 
-**Traceable does not mean scientifically correct.** Verification checks provenance and consistency; missing evidence is not biological absence.
+**Traceability ≠ scientific correctness.** Missing evidence is not biological absence; clinical prediction remains unvalidated.
 
 <a id="installation-and-compatibility"></a>
 <a id="try-it"></a>
@@ -53,13 +51,16 @@ uv run --project packages/tether --no-sync tether verify --run-dir runs/my-first
 
 <a id="tether-cli-run-layout"></a>
 
-Open **`runs/my-first-demo/dossier.md`**. The same folder holds the receipt, execution journal, and underlying evidence records. See the [CLI guide](packages/tether/README.md) for real inputs and stronger verification with a separately saved receipt hash.
+Open **`runs/my-first-demo/dossier.md`** for the report. Receipts, the execution journal, and evidence records sit beside it. [Real inputs & stronger verification →](packages/tether/README.md)
 
 <a id="what-works-today"></a>
 
 ## Current results
 
-Research software; clinical prediction remains unvalidated and real-data probabilities are withheld.
+**Built:** 10 development dossiers and technical source audits. **In progress:** retrieval and scientific-answering evaluations. Real-data clinical probabilities remain withheld.
+
+<details>
+<summary>Evaluation results and their limits</summary>
 
 | Completed evaluation | Result |
 |---|---|
@@ -69,7 +70,9 @@ Research software; clinical prediction remains unvalidated and real-data probabi
 | [Stronger SciFact solver](<planning/TETHER SciFact Full Context Results 2026-11-06.md>) | 127/300 strictly correct; higher F1 but lower rationale recall |
 | [Initial LitQA2 baseline](<planning/TETHER LitQA2 Native Evaluation Results 2026-11-06.md>) | 12/199 correct; 178 unsure |
 
-The SciFact gain comes from changing the solver; harness filtering added no correctness gain. Retrieval improvements are [ongoing work](<planning/TETHER Semantic Capability Execution Plan 2026-11-06.md>).
+The SciFact gain comes from changing the solver; harness filtering added no correctness gain. [Current execution plan →](<planning/TETHER Semantic Capability Execution Plan 2026-11-06.md>)
+
+</details>
 
 ## Explore
 
@@ -80,4 +83,4 @@ The SciFact gain comes from changing the solver; harness filtering added no corr
 | Code and benchmarks | [CLI package](packages/tether/) · [Experiments](experiments/) |
 | Paper and next steps | [Working paper](paper/README.md) · [TODO](TODO.md) |
 
-**Package:** `tether-target-agents`. **Legacy engine:** `src/asof/`, retained for compatibility. **License:** [Apache-2.0](LICENSE); datasets have separate terms. Bulk data and model weights are excluded from Git.
+**License:** [Apache-2.0](LICENSE); datasets have separate terms. Bulk data and model weights are excluded from Git. The compatibility engine remains in `src/asof/`.
