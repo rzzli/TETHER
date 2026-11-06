@@ -1,0 +1,28 @@
+test_components_do_not_depend_on_annotation_order (test_metrics.MetricsTests.test_components_do_not_depend_on_annotation_order) ... ok
+test_declared_factorial_contrasts (test_metrics.MetricsTests.test_declared_factorial_contrasts) ... ok
+test_group_omission_or_duplicate_rejected (test_metrics.MetricsTests.test_group_omission_or_duplicate_rejected) ... ok
+test_mixed_cluster_draw_recomputes_ratio_not_mean_cluster_accuracy (test_metrics.MetricsTests.test_mixed_cluster_draw_recomputes_ratio_not_mean_cluster_accuracy) ... ok
+test_one_group_does_not_claim_zero_uncertainty (test_metrics.MetricsTests.test_one_group_does_not_claim_zero_uncertainty) ... ok
+test_paired_constant_effect_has_exact_interval (test_metrics.MetricsTests.test_paired_constant_effect_has_exact_interval) ... ok
+test_seed_is_reproducible_for_nonconstant_pairing (test_metrics.MetricsTests.test_seed_is_reproducible_for_nonconstant_pairing) ... ok
+test_transitive_publication_groups_preserve_unannotated_cases (test_metrics.MetricsTests.test_transitive_publication_groups_preserve_unannotated_cases) ... ok
+test_unequal_cluster_sizes_use_questions_as_denominator (test_metrics.MetricsTests.test_unequal_cluster_sizes_use_questions_as_denominator) ... ok
+test_unknown_and_nonbinary_outcomes_rejected (test_metrics.MetricsTests.test_unknown_and_nonbinary_outcomes_rejected) ... ok
+test_zero_attempt_precision_preserves_native_and_undefined_ratio (test_metrics.MetricsTests.test_zero_attempt_precision_preserves_native_and_undefined_ratio) ... ok
+test_capacity_reconstructed_without_native_call (test_native_records.NativeRecordTests.test_capacity_reconstructed_without_native_call) ... ok
+test_malformed_native_output_is_retained_not_reinterpreted (test_native_records.NativeRecordTests.test_malformed_native_output_is_retained_not_reinterpreted) ... ok
+test_original_native_request_prompt_usage_reconstructed (test_native_records.NativeRecordTests.test_original_native_request_prompt_usage_reconstructed) ... ok
+test_source_text_substitution_changes_expected_request (test_native_records.NativeRecordTests.test_source_text_substitution_changes_expected_request) ... ok
+test_summary_usage_corruption_rejected (test_native_records.NativeRecordTests.test_summary_usage_corruption_rejected) ... ok
+test_unoffered_citation_or_duplicate_keys_fail_decoding (test_native_records.NativeRecordTests.test_unoffered_citation_or_duplicate_keys_fail_decoding) ... ok
+test_legacy_doi_identifiers_and_unrelated_urls (test_sources.SourceTests.test_legacy_doi_identifiers_and_unrelated_urls) ... ok
+test_metadata_xml_conflict_not_silently_overwritten (test_sources.SourceTests.test_metadata_xml_conflict_not_silently_overwritten) ... ok
+test_missing_metadata_doi_can_be_filled_only_as_explicit_xml_identity (test_sources.SourceTests.test_missing_metadata_doi_can_be_filled_only_as_explicit_xml_identity) ... ok
+test_original_unicode_character_offsets (test_sources.SourceTests.test_original_unicode_character_offsets) ... ok
+test_raw_paragraph_markup_and_doi_match (test_sources.SourceTests.test_raw_paragraph_markup_and_doi_match) ... ok
+test_reported_paragraph_cannot_replace_original (test_sources.SourceTests.test_reported_paragraph_cannot_replace_original) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.522s
+
+OK

@@ -86,3 +86,15 @@ bootstrap code passes11 invented-outcome controls, including unequal cluster
 weighting and undefined precision. No real prediction score has been calculated.
 The production scorer, source-inclusive independent analysis and final report
 remain unfinished; the primary process is still active.
+
+Independent analysis building blocks now pass23 invented controls
+(`analysis-controls-attempt04`). The native reader uses standard-library parsing
+and reconstructs the frozen prompt without importing the inference implementation;
+it also reconstructs all10 retained actual-model fictional answer records without
+new calls (`analysis-native-reader-attempt01`). Separate XML checks verify original
+paragraph characters/offsets and distinguish metadata/XML DOI conflicts from
+missing metadata. These are component gates, not the complete production scorer
+or full independent scientific audit. Next assemble the sealed-run scorer and
+source/contrast/resource reporting, then score only finalized primary+diagnostic
+runs. Primary session48230 was confirmed live at the latest poll:126/398 collection
+slots complete,592HTTP200 responses and7retained failed transfers. No restart.

@@ -5,15 +5,17 @@ import io
 import json
 from pathlib import Path
 import sys
+import tempfile
 import unittest
 
 ROOT=Path(__file__).resolve().parents[4]
-sys.path.insert(0,str(ROOT))
+sys.path[:0]=[str(ROOT),str(ROOT/'src'),str(ROOT/'packages/tether/src')]
 
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,required=True);args=parser.parse_args()
     args.output.mkdir(parents=True,exist_ok=False);source=ROOT/'experiments/litqa_analysis';log=io.StringIO()
+    temp=ROOT/'data/cache/sc04-analysis-tests';temp.mkdir(parents=True,exist_ok=True);tempfile.tempdir=str(temp)
     result=unittest.TextTestRunner(stream=log,verbosity=2).run(unittest.defaultTestLoader.discover(str(source),pattern='test_*.py'))
     (args.output/'TEST-RESULTS.txt').write_text(log.getvalue(),encoding='utf-8',newline='\n')
     report=dict(status='PASS' if result.wasSuccessful() else 'FAIL',tests=result.testsRun,failures=len(result.failures),errors=len(result.errors),

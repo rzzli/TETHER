@@ -183,3 +183,19 @@ sensitivity and native/undefinedprecision distinction.11 invented controls pass
 (analysis-controls-attempt02). metrics.py itself is now pinned by analysisinputs;
 preserve it or explicitly version any necessary correction. Production scoring,
 source-inclusive independent reconstruction and results report remain pending.
+
+## Independent analysis readers in progress
+
+Newexperiments/litqa_analysis/native_records.py reconstructs exact frozen answer
+prompts (literal instructions from pinned source viaAST, no inference imports),
+raw native responses, tokenizer bytes, call statuses and measured/reserved usage.
+All10 retained actual-model fictional answers reconstruct without new inference
+inanalysis-native-reader-attempt01. sources.py independently checks original XML
+paragraphs, character offsets and reconciles DOI identities with explicit conflict
+or missingness; it does not establish semantic relevance.23 invented statistical,
+native and XML controls pass inanalysis-controls-attempt04. Production aggregation,
+complete independent source/retrieval reconstruction, contrasts/resources and final
+report remain to assemble. Do not claim these component checks completeSC04.
+Latest confirmed live primary handle48230:126/398collection slots,592HTTP200,
+7failedtransfers. Expansion199accepted; rank/answer not yetstarted. No restart.
+Diagnostic15099 closedexit0 and remainsreadyforproduction after primaryfinalization.
