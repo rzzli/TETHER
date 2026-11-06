@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "checked_at_utc": "2026-11-06T00:39:49.689218+00:00",
+  "python": "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Scripts\\python.exe",
+  "python_version": "3.11.15 (main, Mar 24 2026, 22:57:51) [MSC v.1944 64 bit (AMD64)]",
+  "baseline_B_only_marker": "evil",
+  "fresh_prefix_B_marker": "good",
+  "fresh_prefix_remained_empty": true,
+  "helper_sha256": "cbebfeab541d1e16aa4751b30c9021353258d46a11cb4a8912459d595dd5d80b",
+  "scope": "Ordinary source-backed imports on this interpreter; no claim about explicitly executed sourceless bytecode, stdlib/OS attestation or hostile same-user code.",
+  "remaining": "Actual BG04 launch must use and retain this environment/flag policy."
+}

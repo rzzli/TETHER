@@ -1,0 +1,181 @@
+test_context_is_deeply_copied_and_frozen (test_policy.PolicyTests.test_context_is_deeply_copied_and_frozen) ... ERROR
+test_decision_has_durable_generic_hash_chained_record (test_policy.PolicyTests.test_decision_has_durable_generic_hash_chained_record) ... ERROR
+test_empty_source_substantive_rejected_unsure_admitted (test_policy.PolicyTests.test_empty_source_substantive_rejected_unsure_admitted) ... ERROR
+test_evaluator_only_parent_blocks_capture (test_policy.PolicyTests.test_evaluator_only_parent_blocks_capture) ... ERROR
+test_future_receipt_blocks_all_input_admission (test_policy.PolicyTests.test_future_receipt_blocks_all_input_admission) ... ERROR
+test_original_byte_change_blocks_capture (test_policy.PolicyTests.test_original_byte_change_blocks_capture) ... ERROR
+test_real_core_lineage_and_source_binding (test_policy.PolicyTests.test_real_core_lineage_and_source_binding) ... ERROR
+test_substituted_request_and_duplicate_citation_rejected (test_policy.PolicyTests.test_substituted_request_and_duplicate_citation_rejected) ... ERROR
+
+======================================================================
+ERROR: test_context_is_deeply_copied_and_frozen (test_policy.PolicyTests.test_context_is_deeply_copied_and_frozen)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_policy.py", line 64, in test_context_is_deeply_copied_and_frozen
+    context=self.context()
+            ^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_policy.py", line 44, in context
+    return capture_context(QUERY,self.root,self.sha,kw.pop("cutoff",self.cutoff),MODEL,**kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\tether_adapter.py", line 83, in capture_context
+    with stable_files((manifest_path,), deadline):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 301, in helper
+    return _GeneratorContextManager(func, args, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 105, in __init__
+    self.gen = func(*args, **kwds)
+               ^^^^^^^^^^^^^^^^^^^
+TypeError: stable_files() takes 1 positional argument but 2 were given
+
+======================================================================
+ERROR: test_decision_has_durable_generic_hash_chained_record (test_policy.PolicyTests.test_decision_has_durable_generic_hash_chained_record)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_policy.py", line 90, in test_decision_has_durable_generic_hash_chained_record
+    context=self.context()
+            ^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_policy.py", line 44, in context
+    return capture_context(QUERY,self.root,self.sha,kw.pop("cutoff",self.cutoff),MODEL,**kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\tether_adapter.py", line 83, in capture_context
+    with stable_files((manifest_path,), deadline):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 301, in helper
+    return _GeneratorContextManager(func, args, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 105, in __init__
+    self.gen = func(*args, **kwds)
+               ^^^^^^^^^^^^^^^^^^^
+TypeError: stable_files() takes 1 positional argument but 2 were given
+
+======================================================================
+ERROR: test_empty_source_substantive_rejected_unsure_admitted (test_policy.PolicyTests.test_empty_source_substantive_rejected_unsure_admitted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_policy.py", line 59, in test_empty_source_substantive_rejected_unsure_admitted
+    context=self.context()
+            ^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_policy.py", line 44, in context
+    return capture_context(QUERY,self.root,self.sha,kw.pop("cutoff",self.cutoff),MODEL,**kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\tether_adapter.py", line 83, in capture_context
+    with stable_files((manifest_path,), deadline):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 301, in helper
+    return _GeneratorContextManager(func, args, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 105, in __init__
+    self.gen = func(*args, **kwds)
+               ^^^^^^^^^^^^^^^^^^^
+TypeError: stable_files() takes 1 positional argument but 2 were given
+
+======================================================================
+ERROR: test_evaluator_only_parent_blocks_capture (test_policy.PolicyTests.test_evaluator_only_parent_blocks_capture)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_policy.py", line 84, in test_evaluator_only_parent_blocks_capture
+    with self.assertRaises(ContractError): self.context(catalog=catalog)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_policy.py", line 44, in context
+    return capture_context(QUERY,self.root,self.sha,kw.pop("cutoff",self.cutoff),MODEL,**kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\tether_adapter.py", line 83, in capture_context
+    with stable_files((manifest_path,), deadline):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 301, in helper
+    return _GeneratorContextManager(func, args, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 105, in __init__
+    self.gen = func(*args, **kwds)
+               ^^^^^^^^^^^^^^^^^^^
+TypeError: stable_files() takes 1 positional argument but 2 were given
+
+======================================================================
+ERROR: test_future_receipt_blocks_all_input_admission (test_policy.PolicyTests.test_future_receipt_blocks_all_input_admission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_policy.py", line 87, in test_future_receipt_blocks_all_input_admission
+    with self.assertRaises(ContractError): self.context(cutoff=datetime(2020,1,1,tzinfo=timezone.utc))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_policy.py", line 44, in context
+    return capture_context(QUERY,self.root,self.sha,kw.pop("cutoff",self.cutoff),MODEL,**kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\tether_adapter.py", line 83, in capture_context
+    with stable_files((manifest_path,), deadline):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 301, in helper
+    return _GeneratorContextManager(func, args, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 105, in __init__
+    self.gen = func(*args, **kwds)
+               ^^^^^^^^^^^^^^^^^^^
+TypeError: stable_files() takes 1 positional argument but 2 were given
+
+======================================================================
+ERROR: test_original_byte_change_blocks_capture (test_policy.PolicyTests.test_original_byte_change_blocks_capture)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_policy.py", line 79, in test_original_byte_change_blocks_capture
+    with self.assertRaises(ContractError): self.context()
+                                           ^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_policy.py", line 44, in context
+    return capture_context(QUERY,self.root,self.sha,kw.pop("cutoff",self.cutoff),MODEL,**kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\tether_adapter.py", line 83, in capture_context
+    with stable_files((manifest_path,), deadline):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 301, in helper
+    return _GeneratorContextManager(func, args, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 105, in __init__
+    self.gen = func(*args, **kwds)
+               ^^^^^^^^^^^^^^^^^^^
+TypeError: stable_files() takes 1 positional argument but 2 were given
+
+======================================================================
+ERROR: test_real_core_lineage_and_source_binding (test_policy.PolicyTests.test_real_core_lineage_and_source_binding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_policy.py", line 47, in test_real_core_lineage_and_source_binding
+    context=self.context()
+            ^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_policy.py", line 44, in context
+    return capture_context(QUERY,self.root,self.sha,kw.pop("cutoff",self.cutoff),MODEL,**kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\tether_adapter.py", line 83, in capture_context
+    with stable_files((manifest_path,), deadline):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 301, in helper
+    return _GeneratorContextManager(func, args, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 105, in __init__
+    self.gen = func(*args, **kwds)
+               ^^^^^^^^^^^^^^^^^^^
+TypeError: stable_files() takes 1 positional argument but 2 were given
+
+======================================================================
+ERROR: test_substituted_request_and_duplicate_citation_rejected (test_policy.PolicyTests.test_substituted_request_and_duplicate_citation_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_policy.py", line 70, in test_substituted_request_and_duplicate_citation_rejected
+    context=self.context()
+            ^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_policy.py", line 44, in context
+    return capture_context(QUERY,self.root,self.sha,kw.pop("cutoff",self.cutoff),MODEL,**kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\tether_adapter.py", line 83, in capture_context
+    with stable_files((manifest_path,), deadline):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 301, in helper
+    return _GeneratorContextManager(func, args, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 105, in __init__
+    self.gen = func(*args, **kwds)
+               ^^^^^^^^^^^^^^^^^^^
+TypeError: stable_files() takes 1 positional argument but 2 were given
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.278s
+
+FAILED (errors=8)

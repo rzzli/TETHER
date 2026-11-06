@@ -43,3 +43,16 @@ The current execution order remains BG04 LitQA2, BG05 equivalent-policy Inspect,
 BG06 final audit. New peer interventions are follow-on proposals, not silent
 requirements or claimed implemented improvements. No paid calls, external human
 reviews or deferred author facts are requested.
+
+Qualification update: 59 combined fictional component tests pass with held source
+hashes; four separate helper controls include actual tiny-process containment.
+All 85 maintained sources match installed counterparts. JSONL/Parquet shared
+fields reconcile; actual projection attempt02 passes all 199, preserving two
+duplicate distractor rows after failing-first preparer/codec corrections. The
+failed first projection remains. Exact question-only retrieval succeeds on a
+nonbenchmark probe (three licensed full texts); all actual query views pass
+capacity with eight fictional passages. No benchmark retrieval/generation has
+occurred. Next is one bounded fictional model smoke, followed by final controller
+qualification and actual execution. Fresh empty import-cache prefixes avoid
+pre-existing adjacent bytecode; behavior was independently exercised with a
+harmless wrong-marker fixture. Current checkpoint is the stage STATUS.md.

@@ -1,0 +1,23 @@
+{
+  "additional_parquet_field_counts": {
+    "source": 199,
+    "subtask": 199
+  },
+  "additional_source_all_null": true,
+  "checked_at": "2026-11-06T00:33:01.728500+00:00",
+  "ids_equal": true,
+  "jsonl_rows": 199,
+  "jsonl_sha256": "e0c988a473cd54668fd743970ea0f226861f17fb0dff4894db35d17b43993fac",
+  "order_equal": true,
+  "parquet_rows": 199,
+  "parquet_sha256": "3e578fdaaa4728a77e884954dbf85ae0e3899791631a3be0838313b3e2334114",
+  "pass": true,
+  "pyarrow_version": "21.0.0",
+  "schema_version": 1,
+  "shared_field_differences": {},
+  "subtask_values": [
+    "litqa-v2-public"
+  ],
+  "unique_jsonl_ids": 199,
+  "unique_parquet_ids": 199
+}

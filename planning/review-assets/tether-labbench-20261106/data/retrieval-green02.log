@@ -1,0 +1,15 @@
+test_chunk_utf8_bounds_and_explicit_exclusions (test_retrieval.RetrievalTests.test_chunk_utf8_bounds_and_explicit_exclusions) ... ok
+test_full_retrieval_verification_passage_binding_and_capture (test_retrieval.RetrievalTests.test_full_retrieval_verification_passage_binding_and_capture) ... ok
+test_future_unknown_rights_and_duplicate_hits (test_retrieval.RetrievalTests.test_future_unknown_rights_and_duplicate_hits) ... ok
+test_interruption_leaves_terminal_failure_and_no_auto_retry (test_retrieval.RetrievalTests.test_interruption_leaves_terminal_failure_and_no_auto_retry) ... ok
+test_malformed_http_timeout_and_partial_coverage_remain_explicit (test_retrieval.RetrievalTests.test_malformed_http_timeout_and_partial_coverage_remain_explicit) ... ok
+test_owned_process_deadline_bounds_unresponsive_child (test_retrieval.RetrievalTests.test_owned_process_deadline_bounds_unresponsive_child) ... ok
+test_question_only_fixed_queries_and_native_routes (test_retrieval.RetrievalTests.test_question_only_fixed_queries_and_native_routes) ... ok
+test_resealed_accounting_source_omission_and_journal_contradictions_rejected (test_retrieval.RetrievalTests.test_resealed_accounting_source_omission_and_journal_contradictions_rejected) ... ok
+test_unknown_failed_transfer_reserves_bytes_and_write_failure_is_terminal (test_retrieval.RetrievalTests.test_unknown_failed_transfer_reserves_bytes_and_write_failure_is_terminal) ... ok
+test_wrong_article_identity_and_license_do_not_enter_sources (test_retrieval.RetrievalTests.test_wrong_article_identity_and_license_do_not_enter_sources) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.004s
+
+OK

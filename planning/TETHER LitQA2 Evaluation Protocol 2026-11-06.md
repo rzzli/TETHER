@@ -20,6 +20,8 @@ The public set is development/exposed material. A dataset split named `train` do
 
 The original Parquet and repository JSONL must be reconciled for IDs and native content before projection. Any unexplained difference is a preparation blocker, not permission to choose whichever version performs better. No automatic substitution with LABBench2.
 
+Preparation finding: exact JSONL/Parquet shared-field reconciliation passed for all 199 records. Two native rows repeat distractor text. Preserve those original option positions and record the duplication in supervisor diagnostics; do not reject or deduplicate valid native choices. The first projection failure is retained and the preparer/native codec are corrected and qualified. No candidate performance informed this change.
+
 ## Reference isolation and native contract
 
 Trusted preparation projects only `id`, `question` and labelled `choices` into the answering view. Shuffle all substantive options and the visible insufficient-information option using a fixed deterministic preparation rule. Correct-answer identity, original `ideal`/`distractors` field names, original-order mapping, key passages, per-question source URLs and other reference hints stay evaluator-only. Do not expose a seed/permutation map in the prompt that reconstructs the original answer position.
@@ -39,6 +41,8 @@ Use the Europe PMC official metadata and full-text routes. A successful nonbench
 Use bounded HTTP timeouts and response sizes; no redirects to unapproved origins, no account login and no paid access. Validate XML safely and retain extraction/version/locator metadata. Select passages deterministically from parsed full text using only the question. Preserve truncation and missing-section coverage. Never label no result or inaccessible full text as absence of scientific evidence.
 
 Every passage links to its exact source body and extraction method. A search response, parsed article and selected passage are separate lineage products. Contemporary download availability is not historical publication availability. Record publication dates separately and reject explicitly future-dated articles relative to the acquisition cutoff.
+
+Freeze the search publication-date bound before retrieval. Capture the exact UTC contemporary input-availability cutoff after all source acquisitions are sealed and before inference; a pre-acquisition protocol timestamp cannot serve as their availability cutoff. Later computation on these eligible sources remains allowed.
 
 ## Fixed local answer producer
 
@@ -71,6 +75,8 @@ Report:
 - Runtime, CPU, peak memory where measured, logical bytes, model/tokenizer requests, measured/estimated token usage, failures and zero provider spend. Separate shared retrieval/generation/startup from marginal checking and reconstruction.
 
 The native task unit is the question. Annotated shared-paper/version and duplicate-question components describe dependence after source reconciliation. Do not turn repeated calls, choices or source passages into independent questions. No nominal power guarantee follows from 199 questions. Chance and always-unsure controls must be labelled as executed controls or analytical expectations, rather than implying nonexistent model runs.
+
+The strict JSON adapter maps malformed output to operational unanswerable, excluded from attempted precision/coverage but retained in scheduled accuracy. The original evaluator can instead count an arbitrary returned non-refusal string as attempted; retain parse-failure and returned-output counts so this difference is visible. Native key mismatch includes refusal, so also report incorrect substantive answers admitted separately from accepted unsure. Follow pinned original LAB-Bench semantics for a literal `null` option; do not import a different PaperQA2 scoring convention.
 
 Do not score semantic entailment by exact citation matching, answer correctness or a model's confidence. Without a separately qualified semantic scorer, semantic source support remains unevaluated. Keep any expected gold-source list out of retrieval and generation.
 

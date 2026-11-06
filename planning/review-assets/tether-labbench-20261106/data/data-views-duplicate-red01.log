@@ -1,0 +1,25 @@
+test_consumed_bytes_are_the_verified_capture (test_data_views.ProjectionTests.test_consumed_bytes_are_the_verified_capture) ... ok
+test_failure_is_retained_without_restarting (test_data_views.ProjectionTests.test_failure_is_retained_without_restarting) ... ok
+test_native_duplicate_distractors_keep_all_indexed_options (test_data_views.ProjectionTests.test_native_duplicate_distractors_keep_all_indexed_options) ... ERROR
+test_native_shuffle_reference_and_hidden_fields (test_data_views.ProjectionTests.test_native_shuffle_reference_and_hidden_fields) ... ok
+test_resealed_revision_contradiction_is_rejected (test_data_views.ProjectionTests.test_resealed_revision_contradiction_is_rejected) ... ok
+test_schema_duplicates_and_count_fail_closed (test_data_views.ProjectionTests.test_schema_duplicates_and_count_fail_closed) ... ok
+test_sealed_preparation_rechecks_parents_and_purposes (test_data_views.ProjectionTests.test_sealed_preparation_rechecks_parents_and_purposes) ... ok
+
+======================================================================
+ERROR: test_native_duplicate_distractors_keep_all_indexed_options (test_data_views.ProjectionTests.test_native_duplicate_distractors_keep_all_indexed_options)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_data_views.py", line 61, in test_native_duplicate_distractors_keep_all_indexed_options
+    result=views.project_rows(b"\n".join(canonical(row) for row in rows),expected_count=2)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\data_views.py", line 113, in project_rows
+    need(len(set(values)) == len(values), "Ambiguous duplicate choices")
+  File "D:\Projects\drug_target_agents\experiments\labbench\data_views.py", line 33, in need
+    raise ContractError(message)
+asof.serde.ContractError: Ambiguous duplicate choices
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.170s
+
+FAILED (errors=1)

@@ -1,0 +1,13 @@
+test_context_is_deeply_copied_and_frozen (test_policy.PolicyTests.test_context_is_deeply_copied_and_frozen) ... ok
+test_decision_has_durable_generic_hash_chained_record (test_policy.PolicyTests.test_decision_has_durable_generic_hash_chained_record) ... ok
+test_empty_source_substantive_rejected_unsure_admitted (test_policy.PolicyTests.test_empty_source_substantive_rejected_unsure_admitted) ... ok
+test_evaluator_only_parent_blocks_capture (test_policy.PolicyTests.test_evaluator_only_parent_blocks_capture) ... ok
+test_future_receipt_blocks_all_input_admission (test_policy.PolicyTests.test_future_receipt_blocks_all_input_admission) ... ok
+test_original_byte_change_blocks_capture (test_policy.PolicyTests.test_original_byte_change_blocks_capture) ... ok
+test_real_core_lineage_and_source_binding (test_policy.PolicyTests.test_real_core_lineage_and_source_binding) ... ok
+test_substituted_request_and_duplicate_citation_rejected (test_policy.PolicyTests.test_substituted_request_and_duplicate_citation_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.242s
+
+OK

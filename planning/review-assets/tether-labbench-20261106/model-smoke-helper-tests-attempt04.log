@@ -1,0 +1,9 @@
+test_external_code_pin_failure_never_reserves_or_dispatches (__main__.SmokeTests.test_external_code_pin_failure_never_reserves_or_dispatches) ... ok
+test_fixture_is_native_and_source_has_verified_text_hash (__main__.SmokeTests.test_fixture_is_native_and_source_has_verified_text_hash) ... ok
+test_parent_deadline_closes_job_and_terminates_nonmodel_descendant (__main__.SmokeTests.test_parent_deadline_closes_job_and_terminates_nonmodel_descendant) ... ok
+test_worker_failure_is_retained_without_retry (__main__.SmokeTests.test_worker_failure_is_retained_without_retry) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.049s
+
+OK

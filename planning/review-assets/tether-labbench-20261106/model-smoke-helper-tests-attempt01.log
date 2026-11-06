@@ -1,0 +1,39 @@
+test_external_code_pin_failure_never_reserves_or_dispatches (__main__.SmokeTests.test_external_code_pin_failure_never_reserves_or_dispatches) ... ok
+test_fixture_is_native_and_source_has_verified_text_hash (__main__.SmokeTests.test_fixture_is_native_and_source_has_verified_text_hash) ... ok
+test_parent_deadline_closes_job_and_terminates_nonmodel_descendant (__main__.SmokeTests.test_parent_deadline_closes_job_and_terminates_nonmodel_descendant) ... ok
+test_worker_failure_is_retained_without_retry (__main__.SmokeTests.test_worker_failure_is_retained_without_retry) ... ERROR
+
+======================================================================
+ERROR: test_worker_failure_is_retained_without_retry (__main__.SmokeTests.test_worker_failure_is_retained_without_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\metadata\__init__.py", line 563, in from_name
+    return next(cls.discover(name=name))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-labbench-20261106\test_model_smoke.py", line 38, in test_worker_failure_is_retained_without_retry
+    smoke.execute(output,smoke.code_pins())
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-labbench-20261106\model_smoke.py", line 279, in execute
+    versions = {name:metadata.version(name) for name in ("asof","tether")}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\planning\review-assets\tether-labbench-20261106\model_smoke.py", line 279, in <dictcomp>
+    versions = {name:metadata.version(name) for name in ("asof","tether")}
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\metadata\__init__.py", line 1009, in version
+    return distribution(distribution_name).version
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\metadata\__init__.py", line 982, in distribution
+    return Distribution.from_name(distribution_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\importlib\metadata\__init__.py", line 565, in from_name
+    raise PackageNotFoundError(name)
+importlib.metadata.PackageNotFoundError: No package metadata was found for asof
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.031s
+
+FAILED (errors=1)

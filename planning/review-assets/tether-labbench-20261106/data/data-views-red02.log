@@ -1,0 +1,21 @@
+test_consumed_bytes_are_the_verified_capture (test_data_views.ProjectionTests.test_consumed_bytes_are_the_verified_capture) ... FAIL
+test_failure_is_retained_without_restarting (test_data_views.ProjectionTests.test_failure_is_retained_without_restarting) ... ok
+test_native_shuffle_reference_and_hidden_fields (test_data_views.ProjectionTests.test_native_shuffle_reference_and_hidden_fields) ... ok
+test_schema_duplicates_and_count_fail_closed (test_data_views.ProjectionTests.test_schema_duplicates_and_count_fail_closed) ... ok
+test_sealed_preparation_rechecks_parents_and_purposes (test_data_views.ProjectionTests.test_sealed_preparation_rechecks_parents_and_purposes) ... ok
+
+======================================================================
+FAIL: test_consumed_bytes_are_the_verified_capture (test_data_views.ProjectionTests.test_consumed_bytes_are_the_verified_capture)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_data_views.py", line 83, in test_consumed_bytes_are_the_verified_capture
+    self.assertEqual(queries[0]["question"],fictional_rows()[0]["question"])
+AssertionError: 'SUBSTITUTED AFTER VERIFICATION' != 'Fictional query 0: which flower glows?'
+- SUBSTITUTED AFTER VERIFICATION
++ Fictional query 0: which flower glows?
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.159s
+
+FAILED (failures=1)

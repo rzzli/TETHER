@@ -1,0 +1,21 @@
+test_policy (unittest.loader._FailedTest.test_policy) ... ERROR
+
+======================================================================
+ERROR: test_policy (unittest.loader._FailedTest.test_policy)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_policy
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\unittest\loader.py", line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\unittest\loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_policy.py", line 12, in <module>
+    from experiments.labbench.tether_adapter import capture_context, verify_candidate, DEFAULT_CATALOG
+ModuleNotFoundError: No module named 'experiments.labbench.tether_adapter'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
