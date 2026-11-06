@@ -1,0 +1,11 @@
+test_controls_are_analytical_and_precision_is_ratio_of_expectations (test_score_run.AnalyticalControlTests.test_controls_are_analytical_and_precision_is_ratio_of_expectations) ... ok
+test_aliases_collapse_but_missing_doi_is_still_a_miss (test_score_run.SourceIdentityTests.test_aliases_collapse_but_missing_doi_is_still_a_miss) ... ok
+test_conflicting_aliases_never_merge_distinct_dois_into_one_resolved_paper (test_score_run.SourceIdentityTests.test_conflicting_aliases_never_merge_distinct_dois_into_one_resolved_paper) ... ok
+test_identical_unresolved_source_pointer_groups_without_inventing_paper (test_score_run.SourceIdentityTests.test_identical_unresolved_source_pointer_groups_without_inventing_paper) ... ok
+test_no_annotation_is_unknown_not_perfect_recall (test_score_run.SourceIdentityTests.test_no_annotation_is_unknown_not_perfect_recall) ... ok
+test_normalized_aliases_and_unknown_urls (test_score_run.SourceIdentityTests.test_normalized_aliases_and_unknown_urls) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

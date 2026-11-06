@@ -1,0 +1,24 @@
+test_score_run (unittest.loader._FailedTest.test_score_run) ... ERROR
+
+======================================================================
+ERROR: test_score_run (unittest.loader._FailedTest.test_score_run)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_score_run
+Traceback (most recent call last):
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\unittest\loader.py", line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zzric\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\unittest\loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_score_run.py", line 4, in <module>
+    from experiments.labbench.score_run import analytical_controls, normalize_identifier, source_diagnostics
+  File "D:\Projects\drug_target_agents\experiments\labbench\score_run.py", line 205
+    'checked_controls':'Not computed; no simulated provenance admissions or model outputs'}})
+                                                                                           ^
+SyntaxError: closing parenthesis '}' does not match opening parenthesis '(' on line 198
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

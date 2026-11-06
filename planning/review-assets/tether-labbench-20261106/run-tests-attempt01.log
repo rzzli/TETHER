@@ -1,0 +1,127 @@
+test_completed_malformed_reply_is_parse_failure_without_retry (test_run.RunTests.test_completed_malformed_reply_is_parse_failure_without_retry) ... ERROR
+test_duplicate_or_unreserved_dispatch_is_rejected (test_run.RunTests.test_duplicate_or_unreserved_dispatch_is_rejected) ... ok
+test_exclusive_case_output_cannot_repeat_dispatch (test_run.RunTests.test_exclusive_case_output_cannot_repeat_dispatch) ... ERROR
+test_input_source_packet_substitution_fails_before_call (test_run.RunTests.test_input_source_packet_substitution_fails_before_call) ... ok
+test_interrupt_after_dispatch_accounts_conservatively_and_stops (test_run.RunTests.test_interrupt_after_dispatch_accounts_conservatively_and_stops) ... ERROR
+test_one_native_candidate_same_bytes_policy_and_accounting (test_run.RunTests.test_one_native_candidate_same_bytes_policy_and_accounting) ... ERROR
+test_parent_recovery_preserves_unresolved_dispatch_and_all_schedule (test_run.RunTests.test_parent_recovery_preserves_unresolved_dispatch_and_all_schedule) ... ERROR
+test_self_consistent_inventory_cannot_hide_changed_disposition (test_run.RunTests.test_self_consistent_inventory_cannot_hide_changed_disposition) ... ERROR
+test_source_failure_never_calls_model (test_run.RunTests.test_source_failure_never_calls_model) ... ok
+
+======================================================================
+ERROR: test_completed_malformed_reply_is_parse_failure_without_retry (test_run.RunTests.test_completed_malformed_reply_is_parse_failure_without_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_run.py", line 85, in test_completed_malformed_reply_is_parse_failure_without_retry
+    record,stop=self.execute_case(self.fixture.native_body(content='{"answer_index":true,"evidence_ids":[]}'))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_run.py", line 44, in execute_case
+    return r.run_case(self.query,self.case if case is None else case,ordinal=0,collection_root=self.collection,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\run.py", line 226, in run_case
+    record=dict(id=query["id"],ordinal=ordinal,disposition=row,accounting=case_accounting(output),
+                                                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\run.py", line 138, in case_accounting
+    reserved=decode(Usage,dispatch[0]["details"]["reserved"]);reserved.validate()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\data\cache\tether-scifact-env-attempt02\environment\Lib\site-packages\asof\serde.py", line 160, in decode
+    raise ContractError(f"{location}: expected object")
+asof.serde.ContractError: input: expected object
+
+======================================================================
+ERROR: test_exclusive_case_output_cannot_repeat_dispatch (test_run.RunTests.test_exclusive_case_output_cannot_repeat_dispatch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_run.py", line 126, in test_exclusive_case_output_cannot_repeat_dispatch
+    self.execute_case()
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_run.py", line 44, in execute_case
+    return r.run_case(self.query,self.case if case is None else case,ordinal=0,collection_root=self.collection,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\run.py", line 226, in run_case
+    record=dict(id=query["id"],ordinal=ordinal,disposition=row,accounting=case_accounting(output),
+                                                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\run.py", line 138, in case_accounting
+    reserved=decode(Usage,dispatch[0]["details"]["reserved"]);reserved.validate()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\data\cache\tether-scifact-env-attempt02\environment\Lib\site-packages\asof\serde.py", line 160, in decode
+    raise ContractError(f"{location}: expected object")
+asof.serde.ContractError: input: expected object
+
+======================================================================
+ERROR: test_interrupt_after_dispatch_accounts_conservatively_and_stops (test_run.RunTests.test_interrupt_after_dispatch_accounts_conservatively_and_stops)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_run.py", line 112, in test_interrupt_after_dispatch_accounts_conservatively_and_stops
+    record,stop=r.run_case(self.query,self.case,ordinal=0,collection_root=self.collection,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\run.py", line 226, in run_case
+    record=dict(id=query["id"],ordinal=ordinal,disposition=row,accounting=case_accounting(output),
+                                                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\run.py", line 138, in case_accounting
+    reserved=decode(Usage,dispatch[0]["details"]["reserved"]);reserved.validate()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\data\cache\tether-scifact-env-attempt02\environment\Lib\site-packages\asof\serde.py", line 160, in decode
+    raise ContractError(f"{location}: expected object")
+asof.serde.ContractError: input: expected object
+
+======================================================================
+ERROR: test_one_native_candidate_same_bytes_policy_and_accounting (test_run.RunTests.test_one_native_candidate_same_bytes_policy_and_accounting)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_run.py", line 66, in test_one_native_candidate_same_bytes_policy_and_accounting
+    record,stop=self.execute_case()
+                ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_run.py", line 44, in execute_case
+    return r.run_case(self.query,self.case if case is None else case,ordinal=0,collection_root=self.collection,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\run.py", line 226, in run_case
+    record=dict(id=query["id"],ordinal=ordinal,disposition=row,accounting=case_accounting(output),
+                                                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\run.py", line 138, in case_accounting
+    reserved=decode(Usage,dispatch[0]["details"]["reserved"]);reserved.validate()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\data\cache\tether-scifact-env-attempt02\environment\Lib\site-packages\asof\serde.py", line 160, in decode
+    raise ContractError(f"{location}: expected object")
+asof.serde.ContractError: input: expected object
+
+======================================================================
+ERROR: test_parent_recovery_preserves_unresolved_dispatch_and_all_schedule (test_run.RunTests.test_parent_recovery_preserves_unresolved_dispatch_and_all_schedule)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_run.py", line 138, in test_parent_recovery_preserves_unresolved_dispatch_and_all_schedule
+    rows=r.recover_cases(self.root,[self.query,self.query2()],failure_reason="forced timeout")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\run.py", line 330, in recover_cases
+    accounting=case_accounting(case_root)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\run.py", line 138, in case_accounting
+    reserved=decode(Usage,dispatch[0]["details"]["reserved"]);reserved.validate()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\data\cache\tether-scifact-env-attempt02\environment\Lib\site-packages\asof\serde.py", line 160, in decode
+    raise ContractError(f"{location}: expected object")
+asof.serde.ContractError: input: expected object
+
+======================================================================
+ERROR: test_self_consistent_inventory_cannot_hide_changed_disposition (test_run.RunTests.test_self_consistent_inventory_cannot_hide_changed_disposition)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_run.py", line 151, in test_self_consistent_inventory_cannot_hide_changed_disposition
+    self.execute_case();self.seal_partial([self.query])
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\tests\test_run.py", line 44, in execute_case
+    return r.run_case(self.query,self.case if case is None else case,ordinal=0,collection_root=self.collection,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\run.py", line 226, in run_case
+    record=dict(id=query["id"],ordinal=ordinal,disposition=row,accounting=case_accounting(output),
+                                                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\experiments\labbench\run.py", line 138, in case_accounting
+    reserved=decode(Usage,dispatch[0]["details"]["reserved"]);reserved.validate()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\drug_target_agents\data\cache\tether-scifact-env-attempt02\environment\Lib\site-packages\asof\serde.py", line 160, in decode
+    raise ContractError(f"{location}: expected object")
+asof.serde.ContractError: input: expected object
+
+----------------------------------------------------------------------
+Ran 9 tests in 6.436s
+
+FAILED (errors=6)

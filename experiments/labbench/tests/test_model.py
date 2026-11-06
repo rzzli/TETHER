@@ -17,7 +17,7 @@ sys.path.insert(0, str(ROOT))
 from asof.agents import Usage
 from asof.serde import ContractError, canonical, encode, fingerprint, parse_json
 from asof.study.process import OwnedServer
-from asof.study.session import StudySession, _identity
+from asof.study.session import StudySession, _identity, verify_study
 from asof.workflow import Budget
 from experiments.labbench import model as m
 
@@ -259,6 +259,8 @@ class ModelTests(unittest.TestCase):
             session.finish()
         self.assertTrue((self.root/"cell"/"receipt.json").is_file())
         self.assertEqual(len(self.calls), 1)
+        verify_study(self.root/"cell",expected_receipt_sha256=digest((self.root/"cell"/"receipt.json").read_bytes()),
+                     verifier=verifier)
 
     def test_generation_interrupt_retains_failure_and_forbids_duplicate(self):
         backend = self.backend()
@@ -342,6 +344,29 @@ class ModelTests(unittest.TestCase):
             altered.update(body_base64=base64.b64encode(body).decode(), body_sha256=digest(body))
             with self.subTest(changes=changes), self.assertRaises(ContractError):
                 verifier.verify_execution(self.request, self.payload, canonical(altered), config, generated.usage)
+
+    def test_actual_format_runtime_echo_uses_float_temperature(self):
+        # Observed b11717 native echo uses0.0 even when the JSON request had0.
+        settings=encode(self.payload)
+        settings["temperature"]=0.0
+        backend,generated=self.generate(self.native_body(generation_settings=settings))
+        verifier=m.MCQVerifier(model_alias="fictional-mcq")
+        verifier.verify_execution(self.request,self.payload,generated.content,
+                                  self.verifier_config(backend),generated.usage)
+        self.assertIs(type(self.payload["temperature"]),float)
+        self.assertEqual(self.request["prompt_version"],"native_mcq_visible_indices_v2")
+        self.assertIn('"answer_index":0,"choice":"(A) Green"',self.payload["prompt"])
+        self.assertIn('"answer_index":1,"choice":"(B) Insufficient information to answer the question"',self.payload["prompt"])
+        self.assertIn('"answer_index":2,"choice":"(C) Red"',self.payload["prompt"])
+
+    def test_canonical_archive_and_reordered_query_rebuild_identical_prompt(self):
+        query=encode(self.request["query"])
+        reordered={key:query[key] for key in reversed(list(query))}
+        rebuilt,payload=m.make_request(reordered,self.request["sources"],self.model,self.request["configuration"])
+        self.assertEqual(canonical(rebuilt),canonical(self.request))
+        self.assertEqual(canonical(payload),canonical(self.payload))
+        archived=parse_json(canonical(self.request))
+        m._binding(archived,parse_json(canonical(self.payload)))
 
     def test_expired_absolute_deadline_stops_without_http(self):
         with self.assertRaises(TimeoutError):

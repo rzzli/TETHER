@@ -1,0 +1,45 @@
+{
+  "status": "FAIL",
+  "scope": "22 fictional model/helper tests only; no benchmark or model inference",
+  "source_pins": {
+    "experiments\\labbench\\model.py": "9f91bc01f17e26c0abeb815ddcbb889298eba667ef959ce3dc716a23fefe9df1",
+    "experiments\\labbench\\tests\\test_model.py": "b21ee3a8dacf37aa9298af1dc1e0807d2e2f4b833e82001bd7e49f23ba857799",
+    "planning\\review-assets\\tether-labbench-20261106\\model_smoke.py": "4c89a847be3182152627d67b14e564d829aa05986aaf1dd59ba665f082a3c70c",
+    "planning\\review-assets\\tether-labbench-20261106\\test_model_smoke.py": "9486841472b49c217fa4fc49c899fd4d93847a04be0685564cd517b94c4e5160",
+    "experiments\\labbench\\native_contract.py": "8023fc028be67a0809d055560c418f3e83241c0304f538e61c90b0a64e3a35b3"
+  },
+  "results": [
+    {
+      "command": [
+        "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "pycache_prefix=D:\\Projects\\drug_target_agents\\data\\cache\\labbench-smoke-v2-qualification-prefix",
+        "-m",
+        "unittest",
+        "experiments.labbench.tests.test_model"
+      ],
+      "returncode": 0,
+      "log_sha256": "b20e74c2e05a56f92a04d1c5fe09b962a4b0839aa2f8ff51f1ea671a501b14dc"
+    },
+    {
+      "command": [
+        "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Scripts\\python.exe",
+        "-B",
+        "-X",
+        "pycache_prefix=D:\\Projects\\drug_target_agents\\data\\cache\\labbench-smoke-v2-qualification-prefix",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-labbench-20261106",
+        "-p",
+        "test_model_smoke.py",
+        "-v"
+      ],
+      "returncode": 1,
+      "log_sha256": "2bc179804ac7c23f98f9b67c5b59ad76865b559f6a1b8f7df4795ea4d9e20dfd"
+    }
+  ],
+  "cache_empty": true
+}

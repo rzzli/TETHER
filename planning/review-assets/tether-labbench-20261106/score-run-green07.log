@@ -1,0 +1,16 @@
+test_controls_are_analytical_and_precision_is_ratio_of_expectations (test_score_run.AnalyticalControlTests.test_controls_are_analytical_and_precision_is_ratio_of_expectations) ... ok
+test_posthoc_metadata_capture_checks_original_bytes_and_selected_document (test_score_run.CollectionIdentityTests.test_posthoc_metadata_capture_checks_original_bytes_and_selected_document) ... ok
+test_actual_component_pair_replay_rejects_resealed_candidate_substitution (test_score_run.EvaluationGateTests.test_actual_component_pair_replay_rejects_resealed_candidate_substitution) ... ok
+test_missing_generation_seal_blocks_reference_access_and_retains_failure (test_score_run.EvaluationGateTests.test_missing_generation_seal_blocks_reference_access_and_retains_failure) ... ok
+test_partial_schedule_stays_partial_with_zero_invented_calls_or_reference_values (test_score_run.EvaluationGateTests.test_partial_schedule_stays_partial_with_zero_invented_calls_or_reference_values) ... ok
+test_recapture_time_only_is_normalized_not_source_eligibility (test_score_run.EvaluationGateTests.test_recapture_time_only_is_normalized_not_source_eligibility) ... ok
+test_aliases_collapse_but_missing_doi_is_still_a_miss (test_score_run.SourceIdentityTests.test_aliases_collapse_but_missing_doi_is_still_a_miss) ... ok
+test_conflicting_aliases_never_merge_distinct_dois_into_one_resolved_paper (test_score_run.SourceIdentityTests.test_conflicting_aliases_never_merge_distinct_dois_into_one_resolved_paper) ... ok
+test_identical_unresolved_source_pointer_groups_without_inventing_paper (test_score_run.SourceIdentityTests.test_identical_unresolved_source_pointer_groups_without_inventing_paper) ... ok
+test_no_annotation_is_unknown_not_perfect_recall (test_score_run.SourceIdentityTests.test_no_annotation_is_unknown_not_perfect_recall) ... ok
+test_normalized_aliases_and_unknown_urls (test_score_run.SourceIdentityTests.test_normalized_aliases_and_unknown_urls) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.878s
+
+OK

@@ -84,11 +84,39 @@ Do not score semantic entailment by exact citation matching, answer correctness 
 
 1. Receipt/hash/schema/license qualification and projection isolation; exact public199 schedule.
 2. Fictional native-contract, scorer, retrieval, model-transport and policy tests, including failures and output collisions.
-3. Fresh local weight/runtime qualification and fictional bounded model smoke; measured capacity; final protocol/configuration/code freeze.
+3. Fresh local weight/runtime qualification, bounded transport/replay/cleanup verification, and a retained fictional semantic control; measured capacity; final protocol/configuration/code freeze. The prospective amendment below explicitly permits measurement of a solver that failed the semantic control.
 4. Actual question-only source acquisition and retained coverage, followed by exactly-once local candidate production into a fresh output.
 5. Paired admission, native scoring and independent reconstruction against original rows and pinned outputs; no hidden denominator losses.
 6. Results and limitations report, source/resource audit, documentation/memory update and timestamped local commit.
 
-BG04 remains incomplete until these gates pass. BG05 Inspect follows; it does not start merely because acquisition succeeds. Further PaperQA2/OpenScholar-style semantic interventions are useful follow-on proposals, not additions to this frozen baseline.
+BG04 remains incomplete until its implementation, execution and reconstruction gates pass. Completion of the measurement does not convert a failed semantic control into a pass. BG05 Inspect follows; it does not start merely because acquisition succeeds. Further PaperQA2/OpenScholar-style semantic interventions are useful follow-on proposals, not additions to this frozen baseline.
+
+## Prospective amendment A01: retain and evaluate the weak solver
+
+Recorded before benchmark source acquisition, candidate generation or scoring.
+The unchanged fictional question has a supplied answer, but the local model chose
+the unsure option in both actual semantic attempts. Attempt02 also failed native
+sampler-type verification. Attempt04 passes the corrected native transport and
+full archived-session replay, then fails the expected-answer comparison. Both
+owned servers stopped normally. Attempt01 failed before inference on a restricted
+Windows API; prepared attempt03 was withdrawn before dispatch after a serialization
+regression was found. Every original failure remains retained.
+
+The operational route is qualified; the fictional semantic control **failed**.
+There is no demonstrated strong scientific answering capability. We will freeze
+this exact weak solver and measure all 199 questions once, with no further prompt
+adjustment, interim answer scoring, case replacement or answer-based exclusion.
+This changes the earlier semantic-smoke prerequisite prospectively; it does not
+reinterpret that failure as success. The purpose is a descriptive baseline that
+can expose low utility despite valid provenance, rather than a selected successful
+solver demonstration. The [independent methods review](review-assets/tether-labbench-20261106/stage/WEAK-SOLVER-METHODS-REVIEW.md)
+records the scope and limitations of this decision.
+
+An all-unsure result would be a valid negative measurement with zero substantive
+coverage, not evidence of task competence or improved scientific reliability.
+Report it in the full scheduled denominator, alongside failed controls, source
+coverage and all execution costs. No positive accuracy threshold is introduced
+after observing benchmark results. Measurement completion and scientific
+qualification remain separate statuses.
 
 Source reviews: [data feasibility](review-assets/tether-labbench-20261106/data-feasibility.md), [policy feasibility](review-assets/tether-labbench-20261106/policy-feasibility.md), [method feasibility](review-assets/tether-labbench-20261106/method-feasibility.md). The first two are being finalized alongside implementation; their current status is recorded in the stage checkpoint.

@@ -1,0 +1,9 @@
+{
+  "status": "withdrawn_before_dispatch",
+  "observed_at_utc": "2026-11-06T01:04:10.576487+00:00",
+  "ready_sha256": "1bae44397e4da79da75e12701c84afd8313ebb1513f6166ed5b90cbfb321b687",
+  "reason": "Fictional paired integration exposed noncanonical nested query order during archived prompt reconstruction; corrected model regression required.",
+  "generation_attempts": 0,
+  "output_directory_created": false,
+  "prior_smoke_failures_preserved": true
+}

@@ -46,7 +46,13 @@ all 300 public-dev predictions were produced and admitted, but only 27 (9%) met
 the strict task criterion; raw and checked scores match. Independent reconstruction
 passes. The result demonstrates traceability and retention, with weak answering
 accuracy and no semantic improvement. See the [SciFact results](<planning/TETHER SciFact Native Evaluation Results 2026-11-05.md>).
-Next are one original LAB-Bench family, equal-policy Inspect and the final audit.
+BG04 now covers the original 199-item LitQA2 family. Its collection, native MCQ,
+generation and scoring components pass 94 fictional tests. Actual local transport
+and archived replay pass, but both fictional answer controls returned the wrong
+unsure option. The [prospective protocol amendment](<planning/TETHER LitQA2 Evaluation Protocol 2026-11-06.md>)
+retains those failures and freezes a descriptive weak-baseline measurement; it
+does not claim semantic qualification. Benchmark acquisition/generation remain
+pending at this checkpoint. Equal-policy Inspect and the final audit follow.
 
 The owner has activated the [sequential benchmark execution plan](<planning/TETHER Benchmark Execution Plan 2026-11-02.md>): correct the three open defects, compare an independent equal-policy validator, add SciFact, add one LAB-Bench task family, and test an Inspect implementation. [TODO](TODO.md) records actual stage completion. Earlier recommendation-only statements retain their review-date scope; no new benchmark result is implied by this authorization.
 

@@ -1,0 +1,15 @@
+test_cli_watchdog_stops_stalled_local_work_and_inspection_keeps_schedule (test_collect.CollectionTests.test_cli_watchdog_stops_stalled_local_work_and_inspection_keeps_schedule) ... ok
+test_concurrent_same_output_cannot_duplicate_dispatch (test_collect.CollectionTests.test_concurrent_same_output_cannot_duplicate_dispatch) ... ok
+test_deadline_after_one_case_prevents_later_dispatch_and_records_every_id (test_collect.CollectionTests.test_deadline_after_one_case_prevents_later_dispatch_and_records_every_id) ... ok
+test_fatal_case_preserves_all_remaining_ids_and_disallows_default_consumption (test_collect.CollectionTests.test_fatal_case_preserves_all_remaining_ids_and_disallows_default_consumption) ... ok
+test_full_fictional_collection_uses_only_task_projection_and_seals_cutoff (test_collect.CollectionTests.test_full_fictional_collection_uses_only_task_projection_and_seals_cutoff) ... ok
+test_isolated_cli_without_network_completes_under_owned_job (test_collect.CollectionTests.test_isolated_cli_without_network_completes_under_owned_job) ... ok
+test_mutated_source_or_query_and_extra_evaluator_fields_fail (test_collect.CollectionTests.test_mutated_source_or_query_and_extra_evaluator_fields_fail) ... ok
+test_no_source_is_completed_missingness_not_biological_absence (test_collect.CollectionTests.test_no_source_is_completed_missingness_not_biological_absence) ... ok
+test_remaining_budget_is_recomputed_after_durable_reservation (test_collect.CollectionTests.test_remaining_budget_is_recomputed_after_durable_reservation) ... ok
+test_write_failure_retains_inspectable_unresolved_schedule (test_collect.CollectionTests.test_write_failure_retains_inspectable_unresolved_schedule) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 5.673s
+
+OK

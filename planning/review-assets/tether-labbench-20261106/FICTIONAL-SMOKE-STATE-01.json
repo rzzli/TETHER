@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "status": "failed_before_inference_cleanup_verified",
+  "exec_session_id": 3410,
+  "started_at_utc": "2026-11-06T00:47:28.432784+00:00",
+  "output": "data/cache/labbench-fictional-model-20261106-attempt01",
+  "code_commit": "ecc9908c2dbd22d335be9bcedc2831f6df69fa8f",
+  "recovery": "Original exec3410 closed. Preserve attempt01. Diagnose listener API permission with a bounded read-only probe before considering a new explicitly recorded smoke attempt; never retry original output.",
+  "closed_at_utc": "2026-11-06T00:52:11.801228+00:00",
+  "exit_code": 1,
+  "query_count": 0,
+  "generation_attempts": 0,
+  "worker_failure": {
+    "automatic_retry": false,
+    "cleanup": "normal_cleanup_verified",
+    "error_class": "OSError",
+    "message": "[Errno 5] Listener table size query failed",
+    "server_terminal": {
+      "elapsed_seconds": 239.01600000000144,
+      "error_class": "OSError",
+      "exit_code": 1,
+      "peak_native_memory_bytes": null,
+      "peak_native_memory_reason": "Not instrumented",
+      "pid": 14676,
+      "secondary_failures": [],
+      "server_stopped": true,
+      "started": true
+    },
+    "stage": "owned_startup",
+    "status": "failed"
+  },
+  "supervision": {
+    "returncode": 1,
+    "supervision": {
+      "cleanup_errors": [],
+      "execution_elapsed_seconds": 239.45299999999952,
+      "limits": {
+        "max_output_bytes": 4194304,
+        "timeout_seconds": 900
+      },
+      "method": "tether.process_envelope.v1",
+      "observed_counts_are_lower_bounds": false,
+      "observed_stderr_bytes": 968,
+      "observed_stdout_bytes": 0,
+      "pipe_eof": {
+        "stderr": true,
+        "stdout": true
+      },
+      "process_reaped": true,
+      "process_started": true,
+      "retained_stderr_bytes": 968,
+      "retained_stdout_bytes": 0,
+      "schema_version": 1,
+      "termination_reason": "exited",
+      "total_elapsed_seconds": 239.45299999999952
+    }
+  }
+}

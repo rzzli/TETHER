@@ -28,7 +28,8 @@ fictional qualification before benchmark retrieval or generation. New modules
 cover projection/retrieval, MCQ contract/scoring/policy and a task-specific local
 Qwen transport. Existing weights/runtime will be freshly qualified; no historical
 T6 launcher/cell is reopened. As of this checkpoint no benchmark answer has been
-generated or scored and no model has been started for BG04.
+generated or scored. The later fictional smoke outcomes below supersede the
+initial no-model-started checkpoint.
 
 [[TETHER benchmark comparison update 2026-11-06]] adds PaperQA2, OpenScholar and
 Self-RAG to the prior peer review. Useful transfers are source-grounded contextual
@@ -56,3 +57,32 @@ occurred. Next is one bounded fictional model smoke, followed by final controlle
 qualification and actual execution. Fresh empty import-cache prefixes avoid
 pre-existing adjacent bytecode; behavior was independently exercised with a
 harmless wrong-marker fixture. Current checkpoint is the stage STATUS.md.
+
+Two fictional model attempts are now retained. Attempt01 failed before inference
+because the sandbox denied the mandatory Windows listener-owner query; cleanup
+verified. A separate permission probe passed. Attempt02 made exactly one fictional
+generation (231 input/21 output tokens, $0), chose unsure despite a supplied answer,
+then failed strict transport verification because the runtime echoed temperature
+as float0.0 while the request used integer0. Cleanup verified. No benchmark input
+was used. A failing-first correction normalizes the outgoing value tofloat0.0
+without relaxing native equality. The version-two prompt adds explicit indices
+for every visible option equally. Eighteen model tests pass; actual qualification
+of that version was pending. Neither earlier failure is retroactively changed.
+
+Later qualification: a full archived-session roundtrip exposed noncanonical nested
+query ordering in the prompt. A failing-first fix sorts those JSON keys; nineteen
+model tests pass. Prepared smoke03 was withdrawn before dispatch. Actual smoke04
+passes native transport and full replay but again selects the wrong unsure option
+(298 input/24 output tokens, $0; normal cleanup). No further prompt tuning or
+fictional model retries. Operational qualification passes; the semantic control
+remains failed. Independent methods/data reviewers support a prospectively
+amended all-199 descriptive weak-baseline measurement, with no claim of semantic
+competence and no positive-score completion threshold. Protocol A01 records it
+before benchmark acquisition/generation/scoring. An all-unsure result is valid
+negative measurement and does not repair the scientific gate.
+
+All collection/generation/scoring components now pass 94 combined fictional tests
+with unchanged source pins. Final v2 query-only capacity passes199/199 with either
+zero or eight fictional1,000-byte ASCII passages; max10,333 prompt bytes under
+14,000. Real Unicode expansion can still fail explicitly. Next freeze and execute
+the fixed cohort, then source-inclusive scoring and independent reconstruction.

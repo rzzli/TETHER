@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "ready_corrected_v2_not_dispatched",
+  "prepared_at_utc": "2026-11-06T01:03:25.766918+00:00",
+  "git_head": "ecc9908c2dbd22d335be9bcedc2831f6df69fa8f",
+  "command": [
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-scifact-env-attempt02\\environment\\Scripts\\python.exe",
+    "-I",
+    "-B",
+    "-X",
+    "pycache_prefix=D:\\Projects\\drug_target_agents\\data\\cache\\labbench-fictional-driver-cache-attempt03",
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-labbench-20261106\\model_smoke.py",
+    "--execute",
+    "--output",
+    "D:\\Projects\\drug_target_agents\\data\\cache\\labbench-fictional-model-20261106-attempt03",
+    "--expected-helper-sha256",
+    "4c89a847be3182152627d67b14e564d829aa05986aaf1dd59ba665f082a3c70c",
+    "--expected-model-sha256",
+    "9f91bc01f17e26c0abeb815ddcbb889298eba667ef959ce3dc716a23fefe9df1",
+    "--expected-contract-sha256",
+    "8023fc028be67a0809d055560c418f3e83241c0304f538e61c90b0a64e3a35b3"
+  ],
+  "environment_overrides": {
+    "TEMP": "D:\\Projects\\drug_target_agents\\data\\cache\\labbench-fictional-temp-attempt03",
+    "TMP": "D:\\Projects\\drug_target_agents\\data\\cache\\labbench-fictional-temp-attempt03"
+  },
+  "source_pins": {
+    "planning/review-assets/tether-labbench-20261106/model_smoke.py": "4c89a847be3182152627d67b14e564d829aa05986aaf1dd59ba665f082a3c70c",
+    "experiments/labbench/model.py": "9f91bc01f17e26c0abeb815ddcbb889298eba667ef959ce3dc716a23fefe9df1",
+    "experiments/labbench/native_contract.py": "8023fc028be67a0809d055560c418f3e83241c0304f538e61c90b0a64e3a35b3"
+  },
+  "component_gate_sha256": "557df6ca0c064af355a03f32c008d91e31eae198f83d133394dcb9effba0883f",
+  "installed_parity_sha256": "32095b567c0a70ac19c1c0610e38fc8b825aa2cbe6723f210587742488060b26",
+  "helper_log_sha256": "060b723602f1da66efe6a6c757e6ea594ce9a824d8a9141787c89f4108bd313c",
+  "scope": "One fictional question using corrected v2; zero benchmark questions; no automatic retries",
+  "execution_boundary": "require_escalated; mandatory ownership API independently passed",
+  "prior_attempt": "attempt02 transport type mismatch and incorrect unsure answer preserved; new request/prompt version; original fixture/expected answer unchanged"
+}

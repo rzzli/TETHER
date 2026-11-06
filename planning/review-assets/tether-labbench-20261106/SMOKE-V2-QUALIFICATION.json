@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "model_tests": 18,
+  "helper_tests": 4,
+  "source_pins": {
+    "experiments\\labbench\\model.py": "9f91bc01f17e26c0abeb815ddcbb889298eba667ef959ce3dc716a23fefe9df1",
+    "experiments\\labbench\\tests\\test_model.py": "b21ee3a8dacf37aa9298af1dc1e0807d2e2f4b833e82001bd7e49f23ba857799",
+    "planning\\review-assets\\tether-labbench-20261106\\model_smoke.py": "4c89a847be3182152627d67b14e564d829aa05986aaf1dd59ba665f082a3c70c",
+    "planning\\review-assets\\tether-labbench-20261106\\test_model_smoke.py": "9486841472b49c217fa4fc49c899fd4d93847a04be0685564cd517b94c4e5160",
+    "experiments\\labbench\\native_contract.py": "8023fc028be67a0809d055560c418f3e83241c0304f538e61c90b0a64e3a35b3"
+  },
+  "model_gate": {
+    "path": "smoke-v2-qualification01/VALIDATION.json",
+    "sha256": "513b985d20d02d4fd9f652fbb423d2aeef50aa221fa6e2f0bba79c15548901e3"
+  },
+  "helper_log_sha256": "060b723602f1da66efe6a6c757e6ea594ce9a824d8a9141787c89f4108bd313c",
+  "prior_harness_failure": "Helper first invoked without required -I; corrected invocation passes; no runtime change or inference."
+}
