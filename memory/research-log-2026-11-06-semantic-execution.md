@@ -99,3 +99,7 @@ subject to non-use/source verification. LitQA2's199 answers cannot both calibrat
 and evaluate a threshold. Public-dev exposure remains explicit. All new source/
 checkpoint/dependency acquisition requires pinned receipts, rights and resource
 bounds in isolated authorized paths. New human scientific review is not required.
+
+## SC03 closure and SC04 activation
+
+All five frozen300-claim/1,500-pair conditions completed with no unavailable, overlength or failed pairs. Independent analysis passes30,220 checks; root acceptance passes9,305;62 componenttests and five supplemental exact-event controls pass. Strict correct rises27→127/300, including26→98 correctNEI and1→29 evidence-bearing; native rationalizedF1 .087→.192 but recall .225→.172. Raw/checked outputs identical. Added syntheticnegation changes1,396/1,500labels; this is not natural conflict resolution. Resources810.88workerwall seconds,734.70CPU seconds,$0 provider. Original analysis pending label is preserved and superseded by joined acceptance. Frozen standalone auditor extra-event gap requires mandatory supplement. SC03 complete; SC04 active; SC04–SC09 unfinished. Results: planning/TETHER SciFact Full Context Results 2026-11-06.md. README simplified at owner request; no frozen outputs changed.

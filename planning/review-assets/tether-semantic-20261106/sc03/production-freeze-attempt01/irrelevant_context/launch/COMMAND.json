@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-multivers-env-20261106-attempt01\\environment\\Scripts\\python.exe",
+    "-I",
+    "-B",
+    "-X",
+    "pycache_prefix=D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\sc03\\production-freeze-attempt01\\irrelevant_context\\fresh-pycache",
+    "D:\\Projects\\drug_target_agents\\experiments\\scifact_comparison\\worker.py",
+    "--recipe",
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\sc03\\production-freeze-attempt01\\irrelevant_context\\RECIPE.json",
+    "--recipe-sha256",
+    "fceea4fc3dd4848143244aba43a2ab18e2ce3b5299eb10ceb922a9a83f9aee55",
+    "--output",
+    "D:\\Projects\\drug_target_agents\\data\\benchmark\\scifact_comparison\\production-20261106-attempt01\\irrelevant_context"
+  ],
+  "automatic_retry": false,
+  "cwd": "D:\\Projects\\drug_target_agents",
+  "started_utc": "2026-11-06T19:33:03.806155+00:00"
+}

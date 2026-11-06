@@ -1,61 +1,46 @@
 # TETHER
 
-### Drug-target evidence you can trace and check
+### A traceable path from drug-target question to evidence dossier
 
-**Turn a drug-target question and a dated evidence snapshot into a source-linked assessment.**
+**Ask a research question. Review eligible evidence. Trace every accepted claim back to its source.**
 
-TETHER is an **agent execution and evaluation harness** for drug-target research. It connects specialist workflows to eligible evidence, records their decisions, and checks the resulting files and claims against their inputs.
+TETHER is an **agent execution and evaluation harness for drug-target research**—with evidence controls, specialist workflows, and replayable execution records.
 
 *Target Evidence Tracking Harness for Evaluation and Reproducibility*
 
-[Try the demo](#try-it) · [How it works](#how-it-works) · [Results](#what-works-today) · [Roadmap](TODO.md)
+[Quick start](#quick-start) · [Results](#current-results) · [Documentation](#explore)
 
-## What do I put in—and get out?
+## What does it do?
 
-For example: **“What evidence supports inhibiting IL6R in rheumatoid arthritis with an antibody?”**
+> **Question:** What evidence supports inhibiting **IL6R** in **rheumatoid arthritis** using an **antibody**?
+>
+> **Output:** An evidence dossier showing accepted claims, source links, missing inputs, and unresolved questions.
 
-| You supply | TETHER produces |
-|---|---|
-| Target, disease, action and modality | A readable evidence dossier |
-| Tissue, when specified, and a cutoff date | Claims linked to their source records |
-| Versioned evidence files | Coverage, missing inputs and unresolved questions |
-| Workflow configuration and budget | A verifiable record of calls, failures and outputs |
+You supply the target, disease, intended action, modality, cutoff date, and versioned evidence. TETHER runs the configured workflow and retains a record you can inspect and verify.
 
-## How it works
+<a id="how-it-works"></a>
 
 ```mermaid
 flowchart TD
-    Q["Your question + cutoff date"]
-    S["Versioned evidence"]
-    G{"Eligible for this question<br/>and date?"}
-    A["Specialist workflows<br/>Select and review evidence"]
-    L["Evidence ledger<br/>Record accepted claims and sources"]
-    D["Dossier + verification record<br/>Evidence · gaps · execution history"]
-    X["Reject or exclude<br/>Record why"]
-
-    Q --> G
-    S --> G
-    G -->|Eligible| A
-    G -->|Ineligible| X
-    A --> L --> D
-
-    classDef input fill:#eef2ff,stroke:#6366f1,color:#1e1b4b
-    classDef process fill:#ecfeff,stroke:#0891b2,color:#164e63
-    classDef output fill:#ecfdf5,stroke:#059669,color:#064e3b
-    classDef excluded fill:#fff7ed,stroke:#ea580c,color:#7c2d12
-    class Q,S input
-    class G,A,L process
-    class D output
-    class X excluded
+    Q["Research question + cutoff date"] --> G
+    E["Versioned evidence files"] --> G
+    G{"Evidence eligible?"} -->|Yes| S["Specialist workflows"]
+    G -->|No| X["Exclude and record why"]
+    S --> L["Evidence ledger<br/>Claims linked to sources"]
+    L --> D["Readable dossier<br/>Evidence · gaps · unresolved questions"]
+    L --> V["Verification record<br/>Inputs · calls · failures · outputs"]
 ```
 
-**Verification establishes traceability and deterministic consistency, not biological truth.** Missing data stays explicit; it is not treated as biological absence.
+Specialist routes cover **genetics, perturbation, expression, modality, literature, clinical evidence, safety, and pathways**. Available evidence and backend configuration determine what each route can do.
+
+**Traceable does not mean scientifically correct.** Verification checks provenance and consistency; missing evidence is not biological absence.
 
 <a id="installation-and-compatibility"></a>
+<a id="try-it"></a>
 
-## Try it
+## Quick start
 
-Requires **Python 3.11+** and **uv**. From the repository root in PowerShell:
+**Python 3.11+ · uv · PowerShell** — run from the repository root:
 
 ```powershell
 uv sync --project packages/tether --python 3.11
@@ -64,46 +49,35 @@ uv run --project packages/tether --no-sync tether demo --output runs/my-first-de
 uv run --project packages/tether --no-sync tether verify --run-dir runs/my-first-demo
 ```
 
-**Offline · fictional evidence · no API key.** Use a fresh output directory each time.
+**Offline demo. Fictional evidence. No API key.** Use a fresh output directory each time.
 
 <a id="tether-cli-run-layout"></a>
 
-Open **`runs/my-first-demo/dossier.md`** to read the result:
+Open **`runs/my-first-demo/dossier.md`**. The same folder holds the receipt, execution journal, and underlying evidence records. See the [CLI guide](packages/tether/README.md) for real inputs and stronger verification with a separately saved receipt hash.
 
-```text
-runs/my-first-demo/
-├── dossier.md           # Human-readable assessment
-├── tether-receipt.json  # Output integrity record
-├── attempt/             # Execution journal
-└── engine/              # Evidence ledger, inputs and detailed results
-```
+<a id="what-works-today"></a>
 
-For real inputs, interrupted runs and verification with a separately saved receipt hash, see the [CLI guide](packages/tether/README.md) and [verification boundaries](docs/TETHER-VERIFICATION-SCOPE.md).
+## Current results
 
-## What works today?
+Research software; clinical prediction remains unvalidated and real-data probabilities are withheld.
 
-**Research software:** the evidence workflow works; scientific answer quality remains limited.
-
-| Evaluation | Observed result |
+| Completed evaluation | Result |
 |---|---|
-| [Drug-target pilot](planning/run-registry.json) | Ten contemporary development dossiers with a retained technical source audit. |
-| [Policy conformance](<planning/TETHER Equal Policy Comparison Results 2026-11-05.md>) | TETHER and an independent validator both pass 109/109 constructed cases. |
-| [SciFact](<planning/TETHER SciFact Native Evaluation Results 2026-11-05.md>) | 27/300 public-development claims meet the strict correctness criterion. |
-| [LitQA2](<planning/TETHER LitQA2 Native Evaluation Results 2026-11-06.md>) | 12/199 correct; 21 substantive answers and 178 unsure. |
+| [Drug-target pilot](planning/run-registry.json) | 10 development dossiers with a technical source audit |
+| [Policy checks](<planning/TETHER Equal Policy Comparison Results 2026-11-05.md>) | TETHER and an independent validator both pass 109/109 constructed cases |
+| [Initial SciFact baseline](<planning/TETHER SciFact Native Evaluation Results 2026-11-05.md>) | 27/300 claims strictly correct |
+| [Stronger SciFact solver](<planning/TETHER SciFact Full Context Results 2026-11-06.md>) | 127/300 strictly correct; higher F1 but lower rationale recall |
+| [Initial LitQA2 baseline](<planning/TETHER LitQA2 Native Evaluation Results 2026-11-06.md>) | 12/199 correct; 178 unsure |
 
-The harness **did not improve answer correctness** in these SciFact and LitQA2 evaluations. Clinical prediction is unvalidated; real-data probabilities remain withheld.
+The SciFact gain comes from changing the solver; harness filtering added no correctness gain. Retrieval improvements are [ongoing work](<planning/TETHER Semantic Capability Execution Plan 2026-11-06.md>).
 
-Ongoing work: stronger claim verification, literature retrieval, citation support, synthesis and ranking. See the [execution plan](<planning/TETHER Semantic Capability Execution Plan 2026-11-06.md>).
+## Explore
 
-## Find your way around
-
-| You want to… | Start here |
+| Looking for… | Go to |
 |---|---|
-| Understand the contracts and workflow | [Framework guide](docs/FRAMEWORK.md) |
-| Prepare real evidence | [Data guide](data/README.md) · [Dataset catalog](data/catalog/sources.json) |
-| Change the runtime | [TETHER CLI](packages/tether/) · [Compatibility engine](src/asof/) |
-| Explore benchmark implementations | [Experiments](experiments/) · [Peer comparison](<reports/TETHER benchmark comparison update 2026-11-06.md>) |
-| Read the working paper | [Paper guide](paper/README.md) |
-| Inspect decisions and unfinished work | [TODO](TODO.md) · [Planning](planning/) |
+| Architecture and verification limits | [Framework](docs/FRAMEWORK.md) · [Verification scope](docs/TETHER-VERIFICATION-SCOPE.md) |
+| Data sources and preparation | [Data guide](data/README.md) · [Catalog](data/catalog/sources.json) |
+| Code and benchmarks | [CLI package](packages/tether/) · [Experiments](experiments/) |
+| Paper and next steps | [Working paper](paper/README.md) · [TODO](TODO.md) |
 
-Package: **`tether-target-agents`**. `asof` is the compatibility engine for archived runs. Bulk data and model weights are excluded from Git. [Apache-2.0](LICENSE) code; source-specific data permissions.
+**Package:** `tether-target-agents`. **Legacy engine:** `src/asof/`, retained for compatibility. **License:** [Apache-2.0](LICENSE); datasets have separate terms. Bulk data and model weights are excluded from Git.

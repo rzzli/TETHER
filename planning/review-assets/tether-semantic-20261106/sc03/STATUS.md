@@ -1,6 +1,10 @@
-# SC03 checkpoint — production executing
+# SC03 — complete; historical execution checkpoint below
 
-**SC03 remains incomplete. The full five-condition production run is active.**
+**Current status: SC03 complete.** All five conditions, independent reconstruction and joined root acceptance pass. See [results](<../../../TETHER SciFact Full Context Results 2026-11-06.md>) and [root acceptance](root-acceptance-attempt01/ROOT-ACCEPTANCE.json). Production session94090 and analysis session98230 terminated successfully; do not restart them. SC04–SC09 remain incomplete.
+
+## Earlier production checkpoint (historical, superseded)
+
+The following text records the earlier live state and is not a current process claim.
 The primary condition has completed300 claims/1,500 pairs without missing or
 overlength inputs; the remaining conditions execute sequentially. Scoring and
 independent reconstruction follow all production outputs. SC01 and SC02 are
@@ -42,7 +46,7 @@ Wall27.402s, model-loading26.209s, process peak working set6,524,968,960B.
 All five pairs completed. These observations qualify integration, not full
 benchmark runtime or scientific validity. Provider spending remains$0.
 
-## Next required work
+## Work required at that earlier checkpoint (now completed)
 
 1. Finish all five conditions sequentially with bounded workers; keep failures
    and all scheduled denominators. No uncertain call gets an automatic retry.

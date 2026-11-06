@@ -1,6 +1,6 @@
 # TETHER research memory index
 
-- [[research-log-2026-11-06-semantic-execution]] - Current SC01/SC02 complete; SC03 active, production comparison not yet executed. MultiVerS fever_sci acquired/installed offline; eight fictional full-model parity cases and overflow rejection pass, 24 component/13 supervisor controls and independent reconstruction pass. 421 root assertions/228 files checked. SC03–SC09 remain incomplete; no clinical claim or monitor restart.
+- [[research-log-2026-11-06-semantic-execution]] - Current SC01–SC03 complete; SC04 active. All five SciFact conditions complete; independent30,220/root9,305 checks pass. Strict127/300 vs27, rationalizedF1 .192 vs.087, lower rationale recall; no filter gain. Required exact-event supplement closes frozen-auditor gap. SC04–SC09 incomplete; no clinical claim or monitor restart.
 
 - [[research-log-2026-11-06-benchmark-goal-complete]] - Current BG01–BG06 complete in bounded scopes: defects/replay corrected; independent policy comparison, weak native SciFact/LitQA2 and partial Inspect portability measured; requirements/science/preservation audits pass. No active goal task remains. Broader science, full migration and owner-deferred publication remain separate; no reruns or monitor restart.
 
