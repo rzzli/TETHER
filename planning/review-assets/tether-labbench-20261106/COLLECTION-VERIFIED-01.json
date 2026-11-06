@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "manifest_sha256": "b75558de8fca5382729e42d7bd6adc9efabdb072791b0d75201aaff2280c47de",
+  "seal_sha256": "37555f392f1712a7510a49448e59b84fcc1798862414db8285cb93dcd9b46fbc",
+  "scheduled": 199,
+  "totals": {
+    "cases_with_sources": 198,
+    "completed_without_sources": 1,
+    "counts": {
+      "completed": 199,
+      "failed": 0,
+      "interrupted": 0,
+      "unexecuted": 0
+    },
+    "known_response_body_bytes": 141355700,
+    "safety_accounted_bytes": 141355700,
+    "scheduled": 199,
+    "selected_text_bytes": 1361055,
+    "unknown_transfer_upper_bytes": 0
+  },
+  "resources": {
+    "controller_cpu_seconds": 55.515625,
+    "http_child_cpu_seconds": null,
+    "peak_memory_bytes": null,
+    "provider_usd": 0.0,
+    "wall_seconds": 2051.905999999999,
+    "wire_bytes_including_headers_and_tls": null
+  },
+  "cutoff": "2026-11-06T01:47:57.427510+00:00",
+  "verification_seconds": 44.625,
+  "input_roles": "Question-only sources; no benchmark answers accessed",
+  "collection_source_code_unchanged": true
+}

@@ -19,7 +19,8 @@ baseline, not semantic superiority or biological validation. See
 [[research-log-2026-11-06-scifact-results]] and
 [[TETHER SciFact Native Evaluation Results 2026-11-05]]. Session 76726 is closed;
 never restart it. BG04 now prepares all199 original LitQA2 questions, selected before performance;
-pinned acquisition and 94 fictional component/controller tests pass. Actual native
+All199 source cases are collected and audited; 97 fictional component/controller
+tests pass after the prospective A02 cache-path correction. Actual native
 transport and archived replay pass, but the fictional answer control fails twice
 with a wrong unsure response. Protocol A01 prospectively freezes a descriptive
 weak-baseline measurement with no more prompt tuning; measurement completion

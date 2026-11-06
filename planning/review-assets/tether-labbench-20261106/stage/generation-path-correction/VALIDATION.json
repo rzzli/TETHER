@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "status": "proposed_copy_tests_pass_held_source_not_modified",
+  "held_source_sha256": "e1a5dcd29460aab5afd829316722b96e92f76a05b42c19ed8fad187787dabba2",
+  "runtime_sha256": "3ca200a3113e960fe2d3c13549ef5d0690fbfce1cb4d830633114cdf3f9fea8e",
+  "red_tests": 3,
+  "red_failures": 1,
+  "proposed_tests": 3,
+  "proposed_failures": 0,
+  "model_calls": 0,
+  "scope": "Exact entry and final cache-check expressions, real runtime and isolated interpreter, fictional output paths",
+  "artifacts": [
+    {
+      "path": "PROPOSAL.md",
+      "sha256": "9bed637e3c69aa71129c16ac5e74bf1f41f841848dc9dad597bbdac83ad23f05",
+      "bytes": 3144
+    },
+    {
+      "path": "proposed-green01.log",
+      "sha256": "8a795d0501ebaf9c3b73974e30b7a5afdbffc9d2cd21cac6fb517c146e4a808a",
+      "bytes": 571
+    },
+    {
+      "path": "proposed.patch",
+      "sha256": "7214c9f8d1aca637537d4c966b23796f8c9451fed84062739db10df897a968dd",
+      "bytes": 1522
+    },
+    {
+      "path": "red01.log",
+      "sha256": "87e3c17cd3be14f884eede2c7775e62438ed6e9690577e7a0e280aab4a6cd8f0",
+      "bytes": 1636
+    },
+    {
+      "path": "run.held.py",
+      "sha256": "e1a5dcd29460aab5afd829316722b96e92f76a05b42c19ed8fad187787dabba2",
+      "bytes": 36664
+    },
+    {
+      "path": "run.proposed.py",
+      "sha256": "dd2fa380a754045986bfb57111d11a9b72719e10b96c19c18875818b8a0e8e78",
+      "bytes": 36668
+    },
+    {
+      "path": "test_worker_cache_path.py",
+      "sha256": "36e4370ffde75d285fb1e81cd882906a7ae88406dad9051f621dcb36abb4b318",
+      "bytes": 5305
+    }
+  ]
+}

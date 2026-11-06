@@ -98,3 +98,21 @@ PaperQA2/LitQA2 and OpenScholar/ScholarQABench co-development and unequal source
 model/budget conditions prevent treating published score differences as harness
 effects. The possible design outcome is TETHER policy/replay inside an existing
 runner if BG05 demonstrates equivalent guarantees with less orchestration.
+
+Source collection exec63762 closed successfully after2,052.406 supervised seconds.
+All199 cases completed:198with articles,1empty;995requests;141,355,700retained body
+bytes;0unknown transfer reservation;1,361,055selected UTF-8 bytes. Both source-
+inclusive and independent audits pass. Manifest SHA b75558de8fca5382729e42d7bd6adc9efabdb072791b0d75201aaff2280c47de;
+seal37555f392f1712a7510a49448e59b84fcc1798862414db8285cb93dcd9b46fbc;
+independent audit d43e6fb9f3c55791511bcec48c269a00a2ed4084bbbf4f15b3122785051652ef.
+Cutoff2026-11-06T01:47:57.427510+00:00. Actual prompt capacity passes199/199,
+max9,980bytes. No benchmark candidates/answer-key scoring yet.
+
+Pre-dispatch A02 fixes a worker import-cache root mismatch: its planned prefix
+inside data/benchmark was rejected by a data/cache-only guard. The two checks now
+authorize their own reserved generation root, preserving exact/empty/isolated
+checks. Applied only after completed collection audits; model/prompt/retrieval/
+task/settings unchanged. Three maintained regression tests bring the combined
+suite to97PASS. New generation freeze4359d589205caec39085872cc72cd5799323e2285e0993b58405e7e70ccd2fe5
+binds old/new code and accepted collection. Generation recipe818e9d6660f1edbf03dca0faff8188636f9e9c40fb354f06ed302a27cf78a52d.
+Next one supervised native generation, then paired scoring and independent audits.

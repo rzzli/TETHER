@@ -1,0 +1,20 @@
+--- a/experiments/labbench/run.py
++++ b/experiments/labbench/run.py
+@@ -235,7 +235,7 @@
+     recipe=checked_json(recipe_path,expected_recipe_sha256,1024**2)
+     need(source_pins()==recipe["code_pins"],"Generation worker code differs from freeze")
+     limits=validate_limits(recipe["limits"]);config=model.configuration(recipe["configuration"])
+-    empty_import_cache(expected=recipe["worker_import_cache"],cache_root=ROOT/"data/cache")
++    empty_import_cache(expected=recipe["worker_import_cache"],cache_root=Path(output).parent)
+     journal=RunJournal(Path(output),kind="build");output=journal.output
+     started,cpu=time.monotonic(),time.process_time();deadline=started+limits["stage_seconds"]-5
+     owner=None;sampler=None;audit=None;handle=None;status="partial";reason=None;stage="containment"
+@@ -280,7 +280,7 @@
+                 status="completed" if stop_reason is None else "partial"
+             stage="model_cleanup"
+         need(owner.terminal_record["server_stopped"] is True,"Model cleanup is unverified")
+-        empty_import_cache(expected=recipe["worker_import_cache"],cache_root=ROOT/"data/cache")
++        empty_import_cache(expected=recipe["worker_import_cache"],cache_root=Path(output).parent)
+         need(source_pins()==recipe["code_pins"],"Generation code changed during worker")
+         if audit:audit.flush();need(audit.denials==0,"Generation attempted forbidden file access")
+         journal.append("worker_terminal",status=status,reason=reason,server_terminal=owner.terminal_record)

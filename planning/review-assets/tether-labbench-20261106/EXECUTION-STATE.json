@@ -3,10 +3,29 @@
   "control_output": "data/cache/labbench-collection-control-20261106T011303Z-attempt01",
   "git_commit": "a9e28c5e54627919b95e76420e7aba0498b66bde",
   "observed_at_utc": "2026-11-06T01:14:10.3817262Z",
-  "recovery": "Poll exec63762; never duplicate dispatch or overwrite attempt01",
+  "recovery": "Collection63762 and verification30384 and qualification30004 are CLOSED. Collection verified; A02 applied and97tests pass. No benchmark generation dispatched yet; follow anchored GENERATION-COMMAND.json once.",
   "schema_version": 1,
   "freeze_sha256": "8172610c5637d7a952f80be8a2fe89d01a0c421d638ae254e30c76541886d6f7",
   "scope": "Question-only licensed public source collection; 199 fixed tasks; no answers or model generation",
   "collection_output": "data/benchmark/labbench/collection-20261106T011303Z-attempt01",
-  "status": "collection_running"
+  "status": "generation_ready_not_dispatched",
+  "last_checked_at_utc": "2026-11-06T01:54:22.650567+00:00",
+  "next_gate": "Exactly one supervised199-case native generation with frozen prompt and audited sources",
+  "pre_dispatch_correction": {
+    "status": "applied after independent collection audit;97combinedtestsPASS; frozen A02",
+    "path": "stage/generation-path-correction",
+    "reason": "Planned data/benchmark worker cache rejected by data/cache-only worker gate",
+    "changes": "Two worker cache-root expressions; parent cache policy and model prompt unchanged",
+    "apply_only_after_collection_closes": true
+  },
+  "benchmark_generation_started": false,
+  "benchmark_scoring_started": false,
+  "closed_at_utc": "2026-11-06T01:48:25.520427+00:00",
+  "exit_code": 0,
+  "manifest_sha256": "b75558de8fca5382729e42d7bd6adc9efabdb072791b0d75201aaff2280c47de",
+  "collection_wall_seconds": 2052.406,
+  "collection_final_audit_sha256": "d43e6fb9f3c55791511bcec48c269a00a2ed4084bbbf4f15b3122785051652ef",
+  "generation_freeze_sha256": "4359d589205caec39085872cc72cd5799323e2285e0993b58405e7e70ccd2fe5",
+  "generation_recipe_sha256": "818e9d6660f1edbf03dca0faff8188636f9e9c40fb354f06ed302a27cf78a52d",
+  "generation_output": "data/benchmark/labbench/generation-20261106T011303Z-attempt01"
 }
