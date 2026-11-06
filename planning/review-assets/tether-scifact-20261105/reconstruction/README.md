@@ -28,11 +28,12 @@ The output directory contains reference-bearing copies for the official CLI unde
 - Both raw and checked native projections and every primary field in `evaluation.json`: counts, status counts, per-case results, all-scheduled rates and official metrics. A failure-as-empty projection cannot become a successful native NEI or useful completion.
 - Original corpus/query/reference projections directly from the pinned release archive. Every retrieved document fingerprint and returned sentence hash is checked against original fields. A semantically incorrect but source-valid label remains policy-valid.
 - Source/exact-text components by an independent graph traversal. Per-case component IDs and descriptive SUPPORT/CONTRADICT/NEI/mixed strata retain scheduled, produced, accepted, strict-correct and strict-correct-and-admitted counts. No inferential confidence intervals are claimed.
+- Retrieval coverage independently of classification: retrieved annotated claim/document pairs divided by all annotated pairs, and complete-gold-set retrieval divided by nonempty-gold claims. Per-case NEI recall and complete-set status remain null. This measures coverage of supplied annotations, not all scientifically relevant literature.
 - Resource panels separate fitting, tuning setup/inference/scoring, development setup/inference/checking/scoring, checker setup/verification and controller accounting.
 
 Resource input/output bytes are logical declared product sizes, **not physical disk I/O**. Checker setup input bytes count the candidate-array product; source/context reconstruction reads additional files. Peak memory values are process-lifetime maxima, not additive per-cell allocations. Unknown measurements remain counted as unknown. Controller durations are retained measurements: independent aggregation cannot remeasure past execution.
 
-`paired-candidates.json`, `rebuilt-evaluation.json` and `source-class-strata.json` preserve the detailed joins. `RECONSTRUCTION.json` records the result; `RECEIPT.json` binds all reconstruction outputs. A failure writes `FAILED.json` and leaves the output directory intact. Input cases, outcomes and denominators are never corrected or excluded to obtain a passing reconstruction.
+`paired-candidates.json`, `rebuilt-evaluation.json`, `source-class-strata.json` and `retrieval-coverage.json` preserve the detailed joins. `RECONSTRUCTION.json` records the result; `RECEIPT.json` binds all reconstruction outputs. A failure writes `FAILED.json` and leaves the output directory intact. Input cases, outcomes and denominators are never corrected or excluded to obtain a passing reconstruction.
 
 ## Qualification
 

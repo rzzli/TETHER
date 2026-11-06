@@ -1,12 +1,22 @@
 ---
 name: research-log-2026-11-02-benchmark-execution
-description: BG01 locally complete; active goal proceeds to independent equal-policy validator and native benchmarks
+description: Active benchmark execution authority; BG01–BG03 complete, LAB-Bench and Inspect remain
 metadata:
   type: project
-updated: 2026-11-05
+updated: 2026-11-06
 ---
 
 # Authorized benchmark execution
+
+November6 UTC current checkpoint: BG03 actual SciFact execution, independent
+source-inclusive reconstruction and final report review pass. All300 candidates
+were produced/admitted;27 strict-correct,26 of them NEI. Raw/check metrics equal;
+abstract-rationalizedF1 .08696, retrieval159/209 annotated pairs. Actualstage
+587.287s includes486.680s repeated runtime checks; no semantic gain. See
+[[research-log-2026-11-06-scifact-results]] and
+[[TETHER SciFact Native Evaluation Results 2026-11-05]]. BG01–BG03 complete;
+next BG04 one originalLAB-Bench family,then BG05 Inspect andBG06 finalaudit.
+The execution below is retained chronology, not current unfinished SciFact work.
 
 2026-11-05T22:52:01.490230+00:00: BG03 public acquisition has begun after BG02 local closure
 commit4dbe7be (status-document LF convention restored in d710a79). Five original

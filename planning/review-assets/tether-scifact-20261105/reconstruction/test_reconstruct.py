@@ -222,5 +222,22 @@ class ReconstructionTests(unittest.TestCase):
         split["group_by_claim"]["2"] = first
         with self.assertRaises(r.AuditError): r.component_strata({"train": train, "dev": dev}, list(dev.values()), rows["case_results"], split)
 
+    def test_retrieval_coverage_keeps_missed_gold_and_nei_denominators_distinct(self):
+        references = [{"id": 1, "evidence": {"17": [{"label": "SUPPORT", "sentences": [0]}],
+                                               "18": [{"label": "SUPPORT", "sentences": [1]}]}},
+                      {"id": 2, "evidence": {}}]
+        result = r.retrieval_coverage(references, {1: [17, 99], 2: [17]})
+        self.assertEqual(result["annotated_claim_document_pairs"], 2)
+        self.assertEqual(result["retrieved_annotated_claim_document_pairs"], 1)
+        self.assertEqual(result["annotated_pair_recall"], .5)
+        self.assertEqual(result["nonempty_gold_claims"], 1)
+        self.assertEqual(result["complete_gold_claim_recall"], 0)
+        self.assertIsNone(result["per_case"][1]["annotated_pair_recall"])
+        self.assertIsNone(result["per_case"][1]["complete_gold_set_retrieved"])
+        empty = r.retrieval_coverage([references[1]], {2: []})
+        self.assertIsNone(empty["annotated_pair_recall"])
+        self.assertIsNone(empty["complete_gold_claim_recall"])
+        with self.assertRaises(r.AuditError): r.retrieval_coverage(references, {1: [17]})
+
 
 if __name__ == "__main__": unittest.main(verbosity=2)

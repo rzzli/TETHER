@@ -1,6 +1,6 @@
 # TETHER project execution checklist
 
-Updated 5 November 2026 UTC. Current execution authority:
+Updated 6 November 2026 UTC. Current execution authority:
 [Benchmark execution plan](<planning/TETHER Benchmark Execution Plan 2026-11-02.md>).
 Earlier review and corrective roadmap:
 [Full critical review](<planning/TETHER Full Project Critical Review 2026-11-02.md>) and
@@ -24,7 +24,7 @@ The owner now authorizes sequential implementation and evaluation of the recomme
 
 - [x] BG01 Fix CE01–CE03 with failing-first regressions, versioned software, applicable full checks and installed qualification. TETHER 0.5.1/AsOf 0.3.12 pass 2,020 full tests, 138 facade tests and 742 aggregate checks; see the [completion record](planning/review-assets/tether-ce-fixes-20261102/COMPLETION.md).
 - [x] BG02 Specify and execute an independent validator comparison enforcing identical policies; retain frozen valid/invalid cases, complete results and an independently reconstructed analysis. Both 1,308-cell runs reconstruct; corrected TETHER and independent conform on 109/109 exposed cases. Original replay failure and adverse timing remain reported in the [completion report](<planning/TETHER Equal Policy Comparison Results 2026-11-05.md>).
-- [ ] BG03 Implement native SciFact adapters and a task-capable evidence/entailment route; execute and validate the declared evaluation with reference isolation and all-case accounting.
+- [x] BG03 Implement native SciFact adapters and a task-capable evidence/entailment route; execute and validate the declared evaluation with reference isolation and all-case accounting. All 300 predictions/paired admissions reconstruct; 27 strict-correct, raw/checked metrics equal, no semantic gain. See the [completed report](<planning/TETHER SciFact Native Evaluation Results 2026-11-05.md>).
 - [ ] BG04 Implement and evaluate one LAB-Bench task family (LitQA2 or DbQA), including source access, answering, native scoring and matched harness comparison.
 - [ ] BG05 Implement and test the same obligations within Inspect; measure policy parity, retained execution evidence, cost and implementation complexity.
 - [ ] BG06 Audit all five stages against the full goal, reconcile documentation/memory and retain a final report. No stage is complete merely because a narrower test passes.
@@ -35,11 +35,16 @@ dev claims. Of 809 original training claims, 278 overlap dev source/claim groups
 and are quarantined. The native scorer, baseline, policy adapter and audited
 worker and controller pass 148 combined fictional tests, including separate
 bounded checking/scoring and failure corrections. The CPU environment is qualified.
-The complete fictional process rehearsal, real fitting/tuning/dev
-execution and independent result reconstruction remain unfinished. No native
-performance score exists. See the [current checkpoint](planning/review-assets/tether-scifact-20261105/STATUS.md).
+The full fictional process rehearsal and actual native run passed. Independent
+reconstruction verifies all 300 paired candidates, nine tuning settings, original
+source bindings and scores. Raw/checked abstract-rationalized F1 is 0.08696;
+strict-correct 27/300 includes 26 NEI cases. Retrieval found 159/209 annotated pairs.
+The 587.287-second run includes 486.680 seconds of repeated runtime verification;
+this is shared workflow overhead, not all marginal checking cost. BG03 is complete
+as a weak public-development result, without semantic, clinical or private-test
+superiority. See the [current checkpoint](planning/review-assets/tether-scifact-20261105/STATUS.md).
 
-Current checkpoint: BG01 and BG02 are complete within their declared Windows/offline engineering scopes. The replay correction is locally qualified as TETHER 0.5.2/AsOf 0.3.13 (full gate 2,100 tests, zero failures/errors/skips; separate installed and preservation checks). Both corrected comparisons finished all 1,308 scheduled cells and independently reconstruct. Original TETHER conforms on 108/109 cases because EP075 falsely admits an invalid replay request; patched TETHER and the independent validator conform on 109/109. TETHER's median import-plus-operation time is 0.429 versus 0.261 seconds; median paired ratio 1.65. Causal review explains the retained EP010 message flag without altering raw outputs. All cases are exposed constructions, not scientific tasks. The [completion report](<planning/TETHER Equal Policy Comparison Results 2026-11-05.md>) and requirement matrix retain evidence and limitations. Next is BG03 actual SciFact, followed by LAB-Bench, Inspect and the final audit. No native benchmark performance is established yet. Historical artifacts, downloader and monitor remain unchanged.
+Current checkpoint: BG01–BG03 are complete within their declared scopes. The corrected equal-policy comparison conforms on 109/109 exposed cases for both implementations, with median import-plus-operation ratio 1.65 against TETHER. SciFact's 300 native public-dev predictions independently reconstruct: 27 strict-correct, raw and checked metrics identical, 159/209 annotated claim–document pairs retrieved. This establishes a weak baseline and source-check implementation, not semantic or clinical superiority. Next is one original LAB-Bench family, then equivalent-policy Inspect and the final audit. Historical artifacts, downloader and monitor remain unchanged.
 
 ## Benchmark and methodology review — 2 November 2026
 

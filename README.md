@@ -41,12 +41,16 @@ prediction and evidence-use evaluation, and notes Virtual Biotech's overlapping
 audit features. BG03 has receipt-verified public inputs, source-disjoint data
 products, a qualified native scorer and a small trainable baseline. Its latest
 combined component/controller checkpoint passes 148 fictional tests, including
-separate bounded checking/scoring and corrected failure handling. The full process
-rehearsal and real-data fitting/evaluation remain unfinished. See the [SciFact checkpoint](planning/review-assets/tether-scifact-20261105/STATUS.md).
+separate bounded checking/scoring and corrected failure handling. BG03 is complete:
+all 300 public-dev predictions were produced and admitted, but only 27 (9%) met
+the strict task criterion; raw and checked scores match. Independent reconstruction
+passes. The result demonstrates traceability and retention, with weak answering
+accuracy and no semantic improvement. See the [SciFact results](<planning/TETHER SciFact Native Evaluation Results 2026-11-05.md>).
+Next are one original LAB-Bench family, equal-policy Inspect and the final audit.
 
 The owner has activated the [sequential benchmark execution plan](<planning/TETHER Benchmark Execution Plan 2026-11-02.md>): correct the three open defects, compare an independent equal-policy validator, add SciFact, add one LAB-Bench task family, and test an Inspect implementation. [TODO](TODO.md) records actual stage completion. Earlier recommendation-only statements retain their review-date scope; no new benchmark result is implied by this authorization.
 
-The [November 5 benchmark and methodology review](<reports/TETHER benchmark fit and advances.md>) motivates the authorized independent full-policy comparison, then SciFact and one LAB-Bench answering task after the required components exist. The [completed BG02 result](<planning/TETHER Equal Policy Comparison Results 2026-11-05.md>) retains the original replay false admission and corrected 109-case results: TETHER and the independent implementation both conform on all cases, with median import-plus-operation time 0.429 versus 0.261 seconds. Both 1,308-cell runs were independently reconstructed and causally reviewed. These are exposed authored controls, not scientific answering results. BG03 SciFact is next; LAB-Bench and Inspect remain unfinished. The first 108-case experiment, failures and old releases remain preserved.
+The [November 5 benchmark and methodology review](<reports/TETHER benchmark fit and advances.md>) motivates the authorized independent full-policy comparison, then SciFact and one LAB-Bench answering task after the required components exist. The [completed BG02 result](<planning/TETHER Equal Policy Comparison Results 2026-11-05.md>) retains the original replay false admission and corrected 109-case results: TETHER and the independent implementation both conform on all cases, with median import-plus-operation time 0.429 versus 0.261 seconds. Both 1,308-cell runs were independently reconstructed and causally reviewed. These are exposed authored controls, not scientific answering results. BG03 SciFact is now complete as the weak public-development result above; LAB-Bench and Inspect remain unfinished. The first 108-case experiment, failures and old releases remain preserved.
 
 The [comparative efficiency audit](<reports/TETHER efficiency and comparative value.md>) identified three P2 defects: report/receipt aliasing, lost usage on the legacy local-model failure path, and incomplete receipt-time consistency for unused granted raw inputs. Their fixes pass the complete BG01 gate; [TODO](TODO.md) records the remaining comparison and benchmark stages. The audit also measures repeated verification/compiler work and motivates a matched policy-equivalent baseline. Sealed paper/results and the existing scientific and owner-deferred limits remain unchanged.
 

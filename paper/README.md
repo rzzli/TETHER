@@ -1,5 +1,13 @@
 # TETHER technical paper working draft
 
+**Benchmark extension, 6 November UTC:** BG02's equal-policy comparison and
+[BG03's native SciFact study](<../planning/TETHER SciFact Native Evaluation Results 2026-11-05.md>)
+are complete separately from the sealed manuscript below. SciFact produced and
+admitted300 answers, with27 strict-correct and identical raw/checked metrics:
+no semantic accuracy improvement. The source-inclusive reconstruction and report
+checks pass. LAB-Bench, Inspect and final comparative integration remain pending;
+these newer results have not been silently inserted into the 2November PDF.
+
 **Current corrected version, 2 November:** read the [revised manuscript](revisions/20261102/manuscript.md),
 [supplement](revisions/20261102/supplement.md), [combined PDF](revisions/20261102/tether-source-reporting-preprint-v2.pdf)
 and [revision notes](revisions/20261102/REVISION-NOTES.md). All five [technical errata](REVIEW-ERRATA-20261102.md)

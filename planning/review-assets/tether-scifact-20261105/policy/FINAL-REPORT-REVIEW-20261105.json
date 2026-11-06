@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "PASS_independent_final_report_review",
+  "checked_at_utc": "2026-11-06T00:11:31.064842+00:00",
+  "report_sha256": "7bd7b9a55d5bdad4b72b37d346f7ed63a6f68f934ec77b03131d371790da2c3b",
+  "root_acceptance_sha256": "3426f85542f3a2b3355542e9292168db2f5f2ce39c713836a3c0e7cc1202d462",
+  "reconstruction_sha256": "35c589e3ea7706844196830305c61944dd6c66336e76f13d5a3da0bc470d3d07",
+  "official_metric_cells": 24,
+  "native_strata": 3,
+  "local_links": 18,
+  "denominators_and_posthoc_nei_context": "consistent; arithmetic reference is not an executed arm",
+  "cost_calculations": {
+    "stage_wall_seconds": 587.2867440999999,
+    "controller_wall_seconds": 500.2032882999956,
+    "runtime_bracket_wall_seconds": 486.6801856999973,
+    "parent_process_seconds": 59.04800000000432,
+    "checking_phase_brackets_seconds": 20.700647699999536,
+    "checking_branch_measured_subtotal": 28.794647700000496,
+    "unallocated_wall_remainder": 28.03545579999991,
+    "prediction_ms_per_case": 14.47982133339489,
+    "direct_check_ms_per_case": 0.9019020000171926
+  },
+  "known_logical_input_bytes": 317269655,
+  "known_primary_output_bytes": 30096069,
+  "measurement_unknowns_preserved": true,
+  "scientific_claim_review": "weak baseline; no semantic gain; clean-producer admission is not invalid-source detection prevalence",
+  "fixes_required": [],
+  "native_run_or_report_edits": false,
+  "validator_scope_note": "The initial validator overrequired both receipt hashes inline; reconstruction receipt is correctly bound by the linked, hash-pinned root acceptance record.",
+  "scope": "report arithmetic, source aggregate joins and claim limits; does not rerun producer or remeasure past resources",
+  "review_script_sha256": "ca6322526388df25c0c058dfab291d06f36587c766954e63852e84380044d9da"
+}

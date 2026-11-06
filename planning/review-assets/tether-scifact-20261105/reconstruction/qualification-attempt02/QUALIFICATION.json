@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "scope": "fictional_helper_qualification_only_no_actual_SciFact_predictions_or_reference_records",
+  "command": [
+    "D:\\Projects\\drug_target_agents\\data\\cache\\tether-052-dev\\Scripts\\python.exe",
+    "-B",
+    "D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-scifact-20261105\\reconstruction\\test_reconstruct.py"
+  ],
+  "returncode": 0,
+  "sources_before": {
+    "reconstruct.py": {
+      "sha256": "b473ffcdb893969f3b710c32b8e407bf418f69857824839d9da43783be3fcf09",
+      "bytes": 57970
+    },
+    "test_reconstruct.py": {
+      "sha256": "04810e88834bca729db1c5edda5dd87522bbd9d66525fb0ef61e4676b72f28d4",
+      "bytes": 15336
+    },
+    "qualify.py": {
+      "sha256": "9ccf3d26f50e787ab30be1c52fe327b192f41c918942b7ab97800341fe26001d",
+      "bytes": 2212
+    }
+  },
+  "sources_after": {
+    "reconstruct.py": {
+      "sha256": "b473ffcdb893969f3b710c32b8e407bf418f69857824839d9da43783be3fcf09",
+      "bytes": 57970
+    },
+    "test_reconstruct.py": {
+      "sha256": "04810e88834bca729db1c5edda5dd87522bbd9d66525fb0ef61e4676b72f28d4",
+      "bytes": 15336
+    },
+    "qualify.py": {
+      "sha256": "9ccf3d26f50e787ab30be1c52fe327b192f41c918942b7ab97800341fe26001d",
+      "bytes": 2212
+    }
+  },
+  "test_log_sha256": "5f8224839f9b4e6a057ba9a73ab15fd30a783175775939a6f89d288f13a141bb",
+  "completed_at_utc": "2026-11-05T23:58:24.492715+00:00"
+}

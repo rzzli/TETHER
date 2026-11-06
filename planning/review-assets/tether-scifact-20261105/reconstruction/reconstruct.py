@@ -437,6 +437,34 @@ def component_strata(claims, references, case_results, declared_split):
             "grouping": "source_or_NFKC_casefold_whitespace_exact_claim_connected_components; no inferential confidence intervals"}
 
 
+def retrieval_coverage(references, retrieved_by_claim):
+    """Annotation-relative retrieval, measured separately from label/rationale quality."""
+    schedule = schedule_ids([row["id"] for row in references])
+    need(set(schedule) == set(retrieved_by_claim), "Retrieval coverage schedule differs")
+    relevant_pairs, found_pairs, annotated_claims, complete_claims, per_case = 0, 0, 0, 0, []
+    for row in references:
+        retrieved = retrieved_by_claim[row["id"]]
+        need(isinstance(retrieved, list) and all(type(doc) is int and doc >= 0 for doc in retrieved) and
+             len(retrieved) == len(set(retrieved)), "Retrieval coverage requires unique native document IDs")
+        gold = {int(doc) for doc in row["evidence"]}
+        found = gold.intersection(retrieved)
+        relevant_pairs += len(gold); found_pairs += len(found)
+        if gold:
+            annotated_claims += 1; complete_claims += int(found == gold)
+        per_case.append({"id": row["id"], "gold_evidence_document_ids": sorted(gold),
+                         "retrieved_document_ids": retrieved, "annotated_claim_document_pairs": len(gold),
+                         "retrieved_annotated_pairs": len(found),
+                         "annotated_pair_recall": len(found) / len(gold) if gold else None,
+                         "complete_gold_set_retrieved": found == gold if gold else None})
+    return {"scheduled_claims": len(schedule), "annotated_claim_document_pairs": relevant_pairs,
+            "retrieved_annotated_claim_document_pairs": found_pairs, "nonempty_gold_claims": annotated_claims,
+            "claims_with_complete_gold_set_retrieved": complete_claims, "nei_claims": len(schedule) - annotated_claims,
+            "annotated_pair_recall": found_pairs / relevant_pairs if relevant_pairs else None,
+            "complete_gold_claim_recall": complete_claims / annotated_claims if annotated_claims else None,
+            "per_case": per_case,
+            "scope": "annotated_gold_document_retrieval_only; excludes_NEI_from_recall_denominators; no_inferential_confidence_interval"}
+
+
 def reconstruct(stage, expected_receipt_sha256, output, *, expected_scheduled=300):
     stage, output = Path(stage).resolve(), Path(output).resolve()
     output.mkdir(parents=True, exist_ok=False)
@@ -734,6 +762,9 @@ def _reconstruct(stage, expected_receipt, output, expected_scheduled):
     same(score_records["score-dev"]["result"], aggregate_result, "bounded final scoring reconstruction")
     strata = component_strata(claims, product("references_dev"), aggregate_result["case_results"],
                               read(product_proofs["split"]["path"], product_proofs["split"]["sha256"]))
+    retrieval = retrieval_coverage(product("references_dev"), {
+        claim_id: [item["doc_id"] for item in jobs["dev"][0][str(claim_id)]["result"]["retrieved"]]
+        for claim_id in schedule})
     for field in ("counts", "rates", "raw_metrics", "checked_metrics"): same(report[field], aggregate_result[field], "report primary " + field)
     primary_panels["fit_setup"] = resource_panel(list(jobs["fit"][0].values()))
     primary_panels["tuning_setup"] = resource_panel([jobs[name][0]["setup"] for name in names[1:-1]])
@@ -752,12 +783,14 @@ def _reconstruct(stage, expected_receipt, output, expected_scheduled):
     (output / "paired-candidates.json").write_bytes(canonical(paired) + b"\n")
     (output / "rebuilt-evaluation.json").write_bytes(canonical(aggregate_result) + b"\n")
     (output / "source-class-strata.json").write_bytes(canonical(strata) + b"\n")
+    (output / "retrieval-coverage.json").write_bytes(canonical(retrieval) + b"\n")
     return {"stage": str(stage), "stage_receipt_sha256": expected_receipt, "scheduled": len(schedule),
             "all_primary_aggregates_match": True, "counts": aggregate_result["counts"], "rates": aggregate_result["rates"],
             "raw_metrics": aggregate_result["raw_metrics"], "checked_metrics": aggregate_result["checked_metrics"],
             "configuration": model["configuration"], "resource_panels": primary_panels,
             "by_native_reference_status": strata["by_native_reference_status"],
             "dev_source_component_count": len(strata["by_source_component"]),
+            "retrieval_coverage": {key: value for key, value in retrieval.items() if key != "per_case"},
             "resource_scope": "measured_cell_time_and_logical_primary_product_bytes_not_physical_disk_IO; process_lifetime_peaks_are_maxima_not_sums",
             "controller_costs": {"operations": len(controller), "wall_seconds_sum": sum(x["wall_seconds"] for x in controller),
                                  "cpu_seconds_sum": sum(x["cpu_seconds"] for x in controller)},

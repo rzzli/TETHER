@@ -3,31 +3,24 @@ name: project-goals
 description: Current TETHER implementation, scientific boundaries and remaining feasibility gates
 metadata:
   type: project
-updated: 2026-11-05
+updated: 2026-11-06
 ---
 
 # TETHER project goals
 
-Current November5 execution: BG01 and BG02 are complete. The replay correction
-0.5.2/0.3.13 passes the full 2,100-test gate, installed checks and preservation
-aggregation. Both corrected comparisons finish 1,308 cells and independently
-reconstruct. Original TETHER conforms on 108/109 exposed cases; patched TETHER and
-independent each conform on 109/109. Median paired cost ratio is 1.65 against
-TETHER. The original failure and causal flags remain retained. See
-[[TETHER Equal Policy Comparison Results 2026-11-05]]. Next is actual SciFact,
-then one LAB-Bench family, Inspect and the final goal audit. Native scientific
-benchmark performance is not established. Older sections retain dated scope.
-
-BG03 preparation and component implementation now pass: 5,183 corpus rows;
-380/82/69 fit/tune/reserved-calibration claims after 278 training claims are
-quarantined for overlap with the full 300-claim public dev set. Twelve projected
-products reconstruct from the original archive. The CPU environment and native
-scorer are qualified; 148 fictional component/controller tests pass, including
-bounded separate checking/scoring and failure corrections. Real fitting/tuning/dev
-scoring have not begun. The complete fictional process rehearsal is running,
-then actual execution and independent reconstruction. See
-[[research-log-2026-11-05-scifact-components]]. The peer comparison does not
-change the sequential execution order or establish semantic performance.
+Current November 6 UTC execution: BG01–BG03 are complete in their declared scopes.
+The corrected equal-policy comparison conforms on 109/109 exposed cases for both
+implementations, with median paired import-plus-operation ratio 1.65 against TETHER.
+SciFact completed exactly once: 300 predictions and paired admissions, 27 strict-
+correct (9%), and identical raw/checked native metrics. Retrieval found 159/209
+annotated claim–document pairs. All results independently reconstruct; 148 fictional
+integration tests and 18 reconstruction tests pass. This is a weak public-dev
+baseline, not semantic superiority or biological validation. See
+[[research-log-2026-11-06-scifact-results]] and
+[[TETHER SciFact Native Evaluation Results 2026-11-05]]. Session 76726 is closed;
+never restart it. The next stage is one original LAB-Bench family, then an
+Inspect equivalent-policy implementation and the final goal audit. Dated sections
+below retain earlier research scope and do not supersede this checkpoint.
 
 ## Current recovery execution
 
@@ -37,8 +30,8 @@ in TODO are current. BG01 is complete locally: full2020/facade138 tests,
 current installed qualification and742 aggregate evidence checks pass on Windows.
 The three fixes, bounded replacement correction and reviewed profile migrations
 retain all earlier failures and old release bytes. The independent equal-policy
-comparison is now complete. Next, evaluate SciFact, one LAB-Bench task family,
-and an Inspect implementation.
+comparison and SciFact evaluation are now complete. Next, evaluate one LAB-Bench
+task family and an Inspect implementation.
 Earlier recommendation-only/inactive wording below retains its date-specific
 scope; it does not block the new goal. Historical failures/results, retired expert
 inputs, deferred owner facts and the stopped downloader monitor remain unchanged.

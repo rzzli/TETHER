@@ -1,11 +1,30 @@
 ---
 name: research-log-2026-11-05-scifact-components
-description: SciFact preparation and fictional component qualification; actual native evaluation remains pending
+description: SciFact preparation and fictional component qualification; historical preparation checkpoint superseded by the completed native evaluation
 metadata:
   type: project
 ---
 
 # SciFact component checkpoint
+
+Completion update — 6 November UTC: BG03 is complete. See
+[[research-log-2026-11-06-scifact-results]]. Session 76726 finished and closed;
+300 predictions independently reconstruct, with 27 strict-correct and no raw versus
+checked accuracy change. The following paragraphs are historical checkpoints;
+their pending/running instructions no longer apply. Do not restart the run.
+
+Historical execution checkpoint: full fictional rehearsal02 passed in693.953 seconds, with
+22 successful subprocess attempts and337 receipt-bound outputs independently
+rehashed by its owner. Repeated source/environment verification consumed651.016
+seconds; this is disclosed overhead, not model computation. Root checked the
+complete receipt again before generating READY (fca069cf...) and dispatched the
+actual stage exactly once: data/benchmark/scifact/native-20261105T234805Z-attempt01,
+exec session76726. Fitting has succeeded. Tuning, dev evaluation and independent
+result reconstruction are unfinished. Poll the existing session; never restart
+on an observation timeout. Native sources remain held.
+
+The paragraphs below retain preparation/qualification checkpoints before this
+actual dispatch. They do not supersede the completion update above.
 
 Latest checkpoint: integration-attempt01 passes **148 tests**, zero failures,
 errors or skips, in60.689 seconds with unchanged source hashes. Separate bounded
