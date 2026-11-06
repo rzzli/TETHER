@@ -119,3 +119,19 @@ Added balanced acquisition with raw response receipts, exact journal verificatio
 ## SC04 integrated phases and maintained replay
 
 Added pipeline.py and replay.py, with four complete primary phases under full-cohort Stage accounting. Complete parent cohorts required before dispatch; native call summaries bind exact query/pool and actual answer request to admitted context. Model-cell replay reconstructs every request/payload, tokenization body, native usage, complete/codec/capacity disposition, exact events, raw source selection and policy decision.79 invented tests pass (component-controls-attempt12), including whole four-arm native/source replay and corrupted usage/owner/event rejection. Both unittest sessions8847/12211 closedexit0. No actualbenchmark inference/HTTP. Next owned-process worker CLI/freeze/controller qualification thenproduction+suppliedsource. SC04–SC09 stillopen.
+
+## SC04 full controller fictional qualification
+
+Controller code92cdfd4 passes89 controls (attempt15) with separate bounded replay
+workers, input-role isolation, exclusive output and no retry. Actual fictional
+trial session49444 closedexit0:2 expansion+4 rank+8 answer calls,3773 input/433
+output tokens,$0 provider. Root8de520bfdef4dbe7b6363aeb962b8c4bb453adc475297aca2fa08d88e7c10cf0.
+Independent reviewer passes4236 technical checks but preserves4/8 incorrect
+abstentions on Vesprine (1/2 distinct questions fails). Reviewer01 incorrectly
+combined perfect semantic accuracy with technical acceptance; its failure/source
+are preserved, reviewer02 separates outcomes without rerunning or changing prompts.
+Known semantic limitations do not establish scientific accuracy; full199 measurement
+remains authorized under the plan's negative-result contract. See sc04/CONTROLLER-QUALIFICATION.md.
+Next production freeze, fullprimary execution, supplied-source diagnostic and
+independent metrics. SC04–SC09 remain incomplete. README-only simplification
+d94b558 is pushed; preserve concise front page.

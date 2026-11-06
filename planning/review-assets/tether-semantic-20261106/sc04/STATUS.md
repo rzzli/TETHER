@@ -19,3 +19,15 @@ Controller error classification now distinguishes malformed model output (eligib
 The primary expansion/collection/ranking/answer operations now run end to end with invented HTTP/native responses. Replay reconstructs every phase edge, exact model request, original tokenization/native body, usage, event ordering, selected raw passages and TETHER admission.79 controls pass in component-controls-attempt12, including a complete four-arm pipeline fixture and rejected usage/owner/extra-event corruption. The maintained replay is not the later independent analysis. Native-response tests use explicitly fictional transport; no new benchmark question or HTTP source request was dispatched.
 
 Next implementation is the owned process supervisor/worker CLI, frozen execution frame and full controller qualification, followed by production and supplied-source work. No worker remains active.
+
+## Controller qualification completed
+
+The supervised controller now passes89 invented controls and completes the actual
+two-question fictional four-arm trial with14 local-model calls. All four phases
+pass maintained replay; independent reconstruction passes4,236 technical checks.
+Four of eight answers incorrectly abstain (one of two distinct questions), so the
+result is a technical pass with retained semantic failures, not scientific
+validation. See [CONTROLLER-QUALIFICATION.md](CONTROLLER-QUALIFICATION.md).
+Session49444 is closed with exit0; source code is retained at92cdfd4.
+Next: freeze and execute full199 primary measurement, then the separate
+supplied-source diagnostic and independent scientific analysis. SC04 is unfinished.

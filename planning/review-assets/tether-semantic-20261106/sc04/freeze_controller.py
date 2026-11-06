@@ -13,13 +13,15 @@ from experiments.litqa_comparison import run,qualification_fixtures,preparation
 MODEL=Path(r'E:\projects_data\drug_target_agents_data\models\qwen25-14b-q4km-20261018T032528Z')
 PREPARATION=ROOT/'data/benchmark/litqa_comparison/preparation-20261106-attempt02/MANIFEST.json'
 PREPARATION_SHA='29a18fb45f4f8fe76b52eb833ddf351b4fa9a47c82a2fa9d9a971ff38f814dc4'
+REVIEW=ROOT/'planning/review-assets/tether-semantic-20261106/sc04/controller-review02/REVIEW.json'
+REVIEW_SHA='a443df7a2e04e0ec8849823c9cd2d0e0929a5755c048c16861eb37e731e56916'
 
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--purpose',choices=('fictional_qualification','production'),required=True)
     parser.add_argument('--output',type=Path,required=True);args=parser.parse_args()
     args.output.mkdir(parents=True,exist_ok=False)
-    parent=None
+    parent=None;qualification=None
     if args.purpose=='fictional_qualification':
         answers=qualification_fixtures.queries();source=[dict(id=q['id'],question=q['question']) for q in answers]
         products={}
@@ -27,6 +29,13 @@ def main():
             run.write(args.output/(name+'.json'),rows);products[name]=run.pipeline.proof(args.output/(name+'.json'))
         seconds=dict(expand=600,collect=300,rank=600,answer=900);replay_seconds=180
     else:
+        qualification=run.pipeline.proof(REVIEW)
+        run.codecs.need(qualification['sha256']==REVIEW_SHA,'Controller qualification anchor')
+        review=run.pipeline.read(qualification)
+        run.codecs.need(review['status']=='TECHNICAL_PASS_WITH_SEMANTIC_FAILURES' and review['calls']==dict(expand=2,rank=4,answer=8),
+                        'Declared technical qualification and semantic limitations differ')
+        qualified_frame=ROOT/'planning/review-assets/tether-semantic-20261106/sc04/controller-freeze01/FRAME.json'
+        run.load_frame(qualified_frame,review['frame_sha256'])
         parent=run.pipeline.proof(PREPARATION)
         run.codecs.need(parent['sha256']==PREPARATION_SHA,'Original199 preparation anchor')
         manifest=run.pipeline.read(parent)
@@ -49,6 +58,8 @@ def main():
         python_version=sys.version,generation_configuration=encode(run.codecs.CONFIG),phase_seconds=seconds,replay_seconds=replay_seconds,
         port=55628,alias='tether-sc04-primary-qwen14b-v1',model_receipt=receipt,model_license=run.pipeline.proof(MODEL/'LICENSE-QWEN'),
         model_spec=encode(spec),model_provenance=provenance,query_products=products,parent_preparation=parent,
+        controller_qualification=qualification,
+        semantic_qualification='Known false abstention: four of eight arm answers, one of two distinct fictional questions. No prompt retuning or scientific accuracy claim.',
         policy=encode(run.acquisition.legacy.DEFAULT_POLICY),environment=run.pipeline.proof(args.output/'ENVIRONMENT.json'),
         protocol=run.pipeline.proof(ROOT/'planning/TETHER LitQA2 Retrieval Comparison Protocol 2026-11-06.md'),
         scope='Full primary factorial execution. No scientific scoring and no supplied-source diagnostic in this controller.')
