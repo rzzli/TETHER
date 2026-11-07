@@ -4,6 +4,7 @@ from concurrent.futures import ThreadPoolExecutor
 import hashlib
 import io
 import json
+import os
 from pathlib import Path
 import tarfile
 import tempfile
@@ -36,6 +37,15 @@ def invented(family, ordinal):
 
 
 class ViewsTests(unittest.TestCase):
+    def test_hardlinked_source_requires_independent_copy(self):
+        source=self.root/'installed-source.py';alias=self.root/'cache-alias.py'
+        source.write_bytes(b'VALUE = 1\n');os.link(source,alias)
+        self.assertGreater(source.stat().st_nlink,1)
+        with self.assertRaisesRegex(ContractError,'Single regular source file'):
+            d._hash(source,time.monotonic()+10)
+        alias.unlink()
+        self.assertEqual(d._hash(source,time.monotonic()+10),proof(source))
+
     def setUp(self):
         workspace = Path(__file__).resolve().parents[1] / 'data/cache'
         workspace.mkdir(parents=True, exist_ok=True)

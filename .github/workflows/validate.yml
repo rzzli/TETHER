@@ -2,6 +2,10 @@ name: Validate TETHER
 on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
+env:
+  # Evidence admission requires single-link installed source files. Do not alias
+  # the package cache through uv's default hardlink installation on Linux.
+  UV_LINK_MODE: copy
 jobs:
   validate:
     strategy:
