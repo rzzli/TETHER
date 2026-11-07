@@ -24,10 +24,16 @@ def write(path, value):
     return proof(path)
 
 
-def fixture(root):
+def fixture(root, *, relative_acquisition=False):
     """Use the maintained producer only to author an independent-reader fixture."""
     archive = write_tar(root/'scifact-data.tar.gz')
     source = acquisition(root, archive)
+    if relative_acquisition:
+        value=parse_json(source.read_bytes())
+        for entry in value['originals']:
+            for key in ('file','receipt_file'):
+                entry[key]=str(Path(entry[key]).relative_to(ROOT))
+        write(source,value)
     prepared = root/'prepared'
     prepare_release(source, prepared)
     manifest = parse_json((prepared/'manifest.json').read_bytes())
@@ -83,6 +89,26 @@ class TransitionTests(unittest.TestCase):
         from experiments.scifact_calibration.inputs import verify_preparation_transition
         with patch.object(Path, 'open', side_effect=AssertionError('opened before purpose')):
             with self.assertRaises(ContractError): verify_preparation_transition(self.path, '0'*64, purpose='predict')
+
+    def test_original_relative_acquisition_locators_use_pinned_repository_root(self):
+        from experiments.scifact_calibration.inputs import verify_preparation_transition
+        with tempfile.TemporaryDirectory(dir=ROOT/'data/cache') as temporary:
+            path,frame,_=fixture(Path(temporary),relative_acquisition=True)
+            result=verify_preparation_transition(path,proof(path)['sha256'])
+            self.assertEqual(result.calibration_ids,tuple(frame['expected_calibration_ids']))
+
+    def test_relative_acquisition_traversal_and_aliases_are_rejected(self):
+        from experiments.scifact_calibration.inputs import verify_preparation_transition
+        with tempfile.TemporaryDirectory(dir=ROOT/'data/cache') as temporary:
+            path,frame,_=fixture(Path(temporary),relative_acquisition=True)
+            source=Path(frame['acquisition']['path']); original=parse_json(source.read_bytes())
+            valid=original['originals'][0]['file']
+            for spelling in ('./'+valid,'data/../'+valid,valid+'/../scifact-data.tar.gz',valid+'.',valid+' '):
+                with self.subTest(spelling=spelling):
+                    value=copy.deepcopy(original);value['originals'][0]['file']=spelling
+                    frame['acquisition']=write(source,value);write(path,frame)
+                    with self.assertRaises(ContractError):
+                        verify_preparation_transition(path,proof(path)['sha256'])
 
     def test_external_anchor_and_archived_source_are_required(self):
         from experiments.scifact_calibration.inputs import verify_preparation_transition

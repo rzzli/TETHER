@@ -52,6 +52,19 @@ def local_path(value):
     return path
 
 
+def original_locator(value, repository_root):
+    """Resolve preserved acquisition paths against their pinned original root."""
+    need(isinstance(value,str) and bool(value),'Original locator required')
+    pieces=value.replace('\\','/').split('/')
+    need(not value.startswith(('\\\\','//')) and
+         all(p not in ('.','..') and not p.endswith((' ','.')) for p in pieces),
+         'Aliased original locator')
+    path=Path(value)
+    if path.is_absolute(): return local_path(value)
+    need(not path.drive and not path.root and all(pieces),'Rooted or empty relative locator')
+    return local_path(repository_root/path)
+
+
 def capture(proof, maximum=MAX_BYTES):
     """Validate and return one captured buffer; consumers never re-open it."""
     need(isinstance(proof, Mapping) and set(proof)=={'path','bytes','sha256'}, 'Exact file proof required')
@@ -266,9 +279,11 @@ def verify_preparation_transition(frame_path, expected_sha256, *, purpose='calib
     acquisition=parse_json(captures['acquisition']); receipt=parse_json(captures['archive_receipt'])
     entries=[r for r in acquisition['originals'] if Path(r['file']).name=='scifact-data.tar.gz']
     need(len(entries)==1,'Exactly one acquisition archive required'); entry=entries[0]
-    need(entry['file']==frame['archive']['path'] and entry['sha256']==frame['archive']['sha256'] and entry['bytes']==frame['archive']['bytes']
-         and entry['receipt_file']==frame['archive_receipt']['path'] and entry['receipt_sha256']==frame['archive_receipt']['sha256'],'Acquisition proof mismatch')
-    need(receipt.get('status')=='downloaded_not_parsed' and receipt['path']==entry['file'] and receipt['sha256']==entry['sha256']
+    archive_path=original_locator(entry['file'],original_root)
+    receipt_path=original_locator(entry['receipt_file'],original_root)
+    need(archive_path==local_path(frame['archive']['path']) and entry['sha256']==frame['archive']['sha256'] and entry['bytes']==frame['archive']['bytes']
+         and receipt_path==local_path(frame['archive_receipt']['path']) and entry['receipt_sha256']==frame['archive_receipt']['sha256'],'Acquisition proof mismatch')
+    need(receipt.get('status')=='downloaded_not_parsed' and original_locator(receipt['path'],original_root)==archive_path and receipt['sha256']==entry['sha256']
          and receipt['bytes']==entry['bytes'] and receipt['url']==entry['source_url'],'Transport receipt mismatch')
     expected_archive=dict(frame['archive'],receipt_path=frame['archive_receipt']['path'],receipt_sha256=frame['archive_receipt']['sha256'],
         url=receipt['url'],downloaded_at=receipt['finished_at_utc'],physical_role='mixed_role_preparation_container',allowed_purposes=['prepare','preparation_audit'])
