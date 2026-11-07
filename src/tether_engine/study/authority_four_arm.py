@@ -149,12 +149,13 @@ def _document(stage, payload):
 
 
 def _remaining(deadline):
-    remaining = deadline - time.monotonic()
+    now = time.monotonic()
     need(
-        math.isfinite(remaining) and 0 < remaining <= 300,
+        type(deadline) in (int, float) and math.isfinite(deadline)
+        and now < deadline <= now + 300,
         "Shared composition deadline exhausted",
     )
-    return remaining
+    return min(300.0, deadline - now)
 
 
 def _single(events, name, **where):

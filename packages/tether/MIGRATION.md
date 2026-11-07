@@ -53,3 +53,16 @@ Use a fresh installation to check this build; changing checkout files does not
 update an installed wheel. Qualification must exercise archive reconstruction and
 receipt handling together against that installation, including rejection of an
 incorrect module pin. Earlier results retain their original source identities.
+
+## Preparation deadline correction, 7 November 2026
+
+Five preparation helpers now compare absolute monotonic endpoints. Subtracting
+the current clock from an endpoint created exactly 300 seconds ahead can round
+slightly above 300 and incorrectly reject that endpoint. The absolute comparison
+accepts the declared limit and rejects the next representable value above it;
+no tolerance or additional execution time is granted.
+
+Helpers that return remaining time cap that duration at 300 only after validating
+the endpoint. They explicitly reject booleans as endpoints. Expired and nonfinite
+values remain invalid. These changes affect source-code proofs and require fresh
+qualification; existing sealed artifacts and recorded timings are not rewritten.

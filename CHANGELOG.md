@@ -11,6 +11,10 @@
 - Rebind the archive dependency declaration to the reviewed receipt-read build.
   Preserve its semantic policy and exact-hash rejection of unsupported code;
   qualify archive and receipt behavior together in a fresh installation.
+- Compare shared preparation deadlines as absolute timestamps, avoiding false
+  rejection of an exact 300-second limit through subtraction roundoff. The cap
+  remains unchanged; expired and nonfinite endpoints stay rejected, and remaining
+  time helpers explicitly reject booleans.
 
 ## Interface 0.6.0 / engine 0.4.0
 

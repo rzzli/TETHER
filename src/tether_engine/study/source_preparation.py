@@ -419,8 +419,9 @@ def prepare_source_request(
     """Reserve once; full original source admission and row replay before eligibility."""
     from .stable_read import deadline_check
 
+    now = time.monotonic()
     need(
-        type(deadline) in (int, float) and 0 < deadline - time.monotonic() <= 300,
+        type(deadline) in (int, float) and now < deadline <= now + 300,
         "Invalid absolute preparation deadline",
     )
     output = Path(output).absolute()

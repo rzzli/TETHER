@@ -173,9 +173,10 @@ class RetrievalRecordedVerifier(RecordedVerifier):
 
 
 def _remaining(end):
-    remaining = end-time.monotonic()
-    need(math.isfinite(remaining) and 0 < remaining <= 300,'Shared integration deadline exceeded')
-    return remaining
+    now = time.monotonic()
+    need(type(end) in (int, float) and math.isfinite(end) and now < end <= now+300,
+         'Shared integration deadline exceeded')
+    return min(300.0, end-now)
 
 
 def _caller(run_id,strategy):

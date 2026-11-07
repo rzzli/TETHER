@@ -78,7 +78,7 @@ def _resource():
 def _bounded_deadline(deadline):
     deadline_check(deadline)
     _need(
-        deadline - time.monotonic() <= 300, "Preparation deadline exceeds 300 seconds"
+        deadline <= time.monotonic() + 300, "Preparation deadline exceeds 300 seconds"
     )
 
 

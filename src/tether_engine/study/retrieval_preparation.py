@@ -501,8 +501,9 @@ def _write(path, name, value):
 def prepare_retrieval(
     authority, authority_sha256, policy, output, *, roots=None, deadline
 ):
+    now = time.monotonic()
     need(
-        type(deadline) in (int, float) and 0 < deadline - time.monotonic() <= 300,
+        type(deadline) in (int, float) and now < deadline <= now + 300,
         "Invalid shared preparation deadline",
     )
     root = Path(output).absolute()
