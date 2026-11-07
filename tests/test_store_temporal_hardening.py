@@ -6,15 +6,15 @@ from dataclasses import replace
 from datetime import date, datetime, timezone
 from pathlib import Path
 
-from asof.agents import ExtractiveBackend
-from asof.artifacts import write_run
-from asof.chrono import EvidenceStore, load_snapshot, observation_exclusion
-from asof.contracts import Case, Category
-from asof.provenance import InputGraph
-from asof.serde import ContractError, decode, read_json
-from asof.workflow import run_workflow
+from tether_engine.agents import ExtractiveBackend
+from tether_engine.artifacts import write_run
+from tether_engine.chrono import EvidenceStore, load_snapshot, observation_exclusion
+from tether_engine.contracts import Case, Category
+from tether_engine.provenance import InputGraph
+from tether_engine.serde import ContractError, decode, read_json
+from tether_engine.workflow import run_workflow
 
-FIXTURE = Path(__file__).resolve().parents[1] / 'src/asof/demo/v2'
+FIXTURE = Path(__file__).resolve().parents[1] / 'src/tether_engine/demo/v2'
 
 
 class SpyBackend(ExtractiveBackend):

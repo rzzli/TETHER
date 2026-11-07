@@ -8,13 +8,13 @@ import unittest
 from unittest.mock import patch
 from types import SimpleNamespace
 
-from asof.agents import ExtractiveBackend
-from asof.artifacts import write_run
-from asof.chrono import load_snapshot
-from asof.contracts import Case
-from asof.journal import read_chain
-from asof.serde import ContractError, decode, fingerprint, read_json, sha256_file, write_json
-from asof.workflow import run_workflow
+from tether_engine.agents import ExtractiveBackend
+from tether_engine.artifacts import write_run
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case
+from tether_engine.journal import read_chain
+from tether_engine.serde import ContractError, decode, fingerprint, read_json, sha256_file, write_json
+from tether_engine.workflow import run_workflow
 from tests import test_v02_ingest as fixtures
 from tools.science.run_comparison import pin
 from tools.science.t6_claim_audit import HYPOTHESIS_FIELDS

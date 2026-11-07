@@ -2,9 +2,9 @@
 from collections import Counter
 from pathlib import Path
 
-from asof.contracts import Category
-from asof.journal import RunJournal, read_chain
-from asof.serde import encode, fingerprint, read_json, safe_child, sha256_file, write_json
+from tether_engine.contracts import Category
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import encode, fingerprint, read_json, safe_child, sha256_file, write_json
 from tools.science.comparison_workflow import verify_case
 from tools.science.run_comparison import check_pin, pin, verify_model
 from tools.science.t6_challenge import task_store, validate_plan, check_reference, PORT
@@ -65,8 +65,8 @@ def verify_execution_transcript(events, execution):
 
 def audit_originals(validated, by_case, plan, output):
     """Audit every distinct selected case/observation against physical originals."""
-    from asof.ingest import _load_case_pack
-    from asof.provenance import InputGraph, catalog_index
+    from tether_engine.ingest import _load_case_pack
+    from tether_engine.provenance import InputGraph, catalog_index
     from tools.framework.run_pilot import SourceAudit
     from tools.science.reference_packets import _mappings, audit_observation
     build = read_json(check_pin(plan['source_build']))
@@ -143,7 +143,7 @@ def evaluate(predictions_proof, output):
         server, model = verify_model(receipt)
         expected_argv = [str(server), '--model', str(model), '--host', '127.0.0.1', '--port', str(PORT),
                          '--ctx-size', '16384', '--parallel', '1', '--n-gpu-layers', '99', '--threads', '8',
-                         '--alias', 'asof-t6-topone', '--no-webui', '--offline']
+                         '--alias', 'tether-t6-topone', '--no-webui', '--offline']
         require(read_json(root/'server-command.json') == {'argv': expected_argv, 'runtime_sha256': sha256_file(server)},
                 'Native server command differs')
         require(config['endpoint'] == f'http://127.0.0.1:{PORT}' and

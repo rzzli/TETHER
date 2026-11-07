@@ -28,7 +28,7 @@ PDF/SVG figures with PNG previews, machine-readable figure data and captions.
 Per-case reporting/thresholds/unknowns, every constructed verdict/stage, paired
 discordance, full schedules and separate resource costs are retained.
 
-The [independent presentation audit](review-assets/preprint-p05-20261031/ANALYSIS-PRESENTATION-AUDIT-v1.json)
+The [independent presentation audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/ANALYSIS-PRESENTATION-AUDIT-v1.json)
 passes **351 checks, no unresolved findings**. It independently recalculates
 quantities from the source-audited ledger and checks every table, caption,
 figure datum and relevant SVG geometry. Author, auditor and root inspected the

@@ -24,9 +24,9 @@ SOURCE_CLOSURE = (
     "experiments/scifact/__init__.py",
     "experiments/scifact/evaluate.py",
     "experiments/scifact/native_contract.py",
-    "src/asof/__init__.py",
-    "src/asof/atomic.py",
-    "src/asof/serde.py",
+    "src/tether_engine/__init__.py",
+    "src/tether_engine/atomic.py",
+    "src/tether_engine/serde.py",
 )
 INPUT_KEYS = {"freeze", "references", "corpus", "dispositions", "candidates", "evaluation"}
 FIRST_FAILURE_ORDER = (

@@ -3,8 +3,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from asof.serde import ContractError, read_json, sha256_file
-from asof.journal import read_chain
+from tether_engine.serde import ContractError, read_json, sha256_file
+from tether_engine.journal import read_chain
 from tools.science.reference_panel import read_bound_json
 from tools.science.outcome_inputs import study_query, schema_from_audit, validate_study_rows, parse_jsonl
 from tools.science.outcome_results import results_query, validate_result_rows

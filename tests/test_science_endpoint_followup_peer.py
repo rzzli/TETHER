@@ -6,8 +6,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError, sha256_file, write_json
-from asof.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, sha256_file, write_json
+from tether_engine.journal import RunJournal, read_chain
 from tools.science.outcome_extract import extract, validate_plan
 from tools.science.outcome_inputs import study_query
 from tools.science.outcome_inputs import validate_study_rows

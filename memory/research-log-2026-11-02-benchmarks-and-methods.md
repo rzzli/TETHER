@@ -8,7 +8,7 @@ updated: 2026-11-02
 
 # Benchmark and methodological review
 
-The user requested a critical comparison with biomedical and general-purpose work to identify usable performance benchmarks and peer methods not yet adopted. Report: [[TETHER benchmarks and methodological advances]], supported by three source notes and REPORT-VALIDATION.json under `research_notes/TETHER benchmarks and methodological advances/`. Baseline `bc9d830`, TETHER0.5.0 over frozen AsOf0.3.11. This extends [[research-log-2026-11-02-comparative-efficiency-audit]] and does not implement its pending CE01–CE04 fixes.
+The user requested a critical comparison with biomedical and general-purpose work to identify usable performance benchmarks and peer methods not yet adopted. Report: [[TETHER benchmarks and methodological advances]], supported by three source notes and REPORT-VALIDATION.json under `research_notes/TETHER benchmarks and methodological advances/`. Baseline `bc9d830`, TETHER0.5.0 over frozen TETHER0.3.11. This extends [[research-log-2026-11-02-comparative-efficiency-audit]] and does not implement its pending CE01–CE04 fixes.
 
 ## Recommended benchmark portfolio
 

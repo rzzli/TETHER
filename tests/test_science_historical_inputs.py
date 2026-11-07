@@ -6,7 +6,7 @@ import json
 import builtins
 from unittest.mock import patch
 
-from asof.serde import ContractError, sha256_file
+from tether_engine.serde import ContractError, sha256_file
 from tools.science.historical_inputs import ORIGIN, PROJECTIONS, availability, integrity_map, project, save_new, verify_manifest
 
 

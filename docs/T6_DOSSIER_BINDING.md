@@ -1,9 +1,22 @@
 # TETHER — Binding claim audits to native v2 dossiers
 
-TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.5.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.
+The current interface is `tether-target-agents` **0.6.0**, with the `tether` CLI
+and public namespace over `tether-target-engine` **0.4.0** (`tether_engine`). See
+[installation](../README.md#quick-start) and the [namespace migration
+boundary](../packages/tether/MIGRATION.md). Public aliases share the new engine's
+module and class identities; they do not certify earlier execution fingerprints.
+
+The component history below retains earlier versioned observations and test
+counts. Those qualifications belong to their original code and dates, preserved
+in the [historical checkpoint](ARCHIVE.md). Names and example paths here use the
+current namespace for readability; exact original identifiers and reproduction
+commands are in that checkpoint. The naming migration is not a scientific rerun
+or a transfer of historical qualification to the new release. The semantic
+experiment remains **paused**; this guide does not reactivate it or retired
+study and expert-review branches.
 
 `tools.science.t6_dossier_binding` adds an evaluator-only integration for existing
-native AsOf v2 T6 dossiers normalized from Open Targets 25.09. It reuses the
+native TETHER v2 T6 dossiers normalized from Open Targets 25.09. It reuses the
 existing original-row verifier instead of accepting a JSON extract as a Parquet
 original. The standalone JSON audit API remains unchanged.
 

@@ -20,8 +20,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from asof.maintenance import validate_catalog, write_new_json
-from asof.serde import ContractError, read_json
+from tether_engine.maintenance import validate_catalog, write_new_json
+from tether_engine.serde import ContractError, read_json
 from tools.review.probe_framework import main as probe_main
 
 EXPECTED_CORE_SKIPS = {'install the ingest extra for adapter tests',
@@ -109,7 +109,7 @@ def structural_checks():
     if len(selected)!=1 or selected[0]['state']!='canonical' or len(selected[0]['cases'])!=10:
         raise ContractError('Invalid canonical registry')
     # Local production assets may be absent in a clean checkout.
-    from asof.serde import safe_child
+    from tether_engine.serde import safe_child
     for row in entries:
         safe_child(ROOT,row['path'])
     return {'tracked_scope_files':len(files),'providers':len(catalog['providers']),'datasets':len(catalog['datasets']),
@@ -119,30 +119,47 @@ def structural_checks():
 def powershell_check():
     if not shutil.which('pwsh'):
         return False
-    code = "$ErrorActionPreference='Stop'; Get-ChildItem tools,planning/review-assets -Recurse -Filter *.ps1 | ForEach-Object { $t=$null; $e=$null; [System.Management.Automation.Language.Parser]::ParseFile($_.FullName,[ref]$t,[ref]$e) | Out-Null; if($e.Count){throw ('Syntax error: '+$_.FullName)} }"
+    code = "$ErrorActionPreference='Stop'; Get-ChildItem -LiteralPath tools -Recurse -Filter *.ps1 | ForEach-Object { $t=$null; $e=$null; [System.Management.Automation.Language.Parser]::ParseFile($_.FullName,[ref]$t,[ref]$e) | Out-Null; if($e.Count){throw ('Syntax error: '+$_.FullName)} }"
     subprocess.run(['pwsh','-NoProfile','-Command',code],cwd=ROOT,check=True)
     return True
 
 
+def validate_engine_wheel(wheel):
+    """Reject stale build payloads and every namespace outside this distribution."""
+    from tether_engine import __version__
+    metadata_root = 'tether_target_engine-' + __version__ + '.dist-info'
+    with zipfile.ZipFile(wheel) as archive:
+        names = [info.orig_filename for info in archive.infolist()]
+        if len(names) != len(set(names)):
+            raise ContractError('Duplicate wheel member')
+        for name in names:
+            parts = name.rstrip('/').split('/')
+            if (not parts or any(part in ('', '.', '..') or ':' in part for part in parts)
+                    or '\\' in name or '\x00' in name or parts[0] not in ('tether_engine', metadata_root)
+                    or len(parts) < 2):
+                raise ContractError('Unexpected wheel namespace/member: '+name)
+        required = {'tether_engine/demo/v2/case.json', 'tether_engine/demo/case.json',
+                    metadata_root+'/METADATA', metadata_root+'/WHEEL', metadata_root+'/RECORD'}
+        if not required.issubset(names):
+            raise ContractError('Packaged runtime/demo metadata missing')
+    return {'members':len(names), 'namespace':'tether_engine', 'metadata_root':metadata_root}
+
+
 def package_check(directory):
-    constraints = ROOT/'paper/release/build-constraints.txt'
+    constraints = ROOT/'tools/build-constraints.txt'
     subprocess.run(['uv','build','--offline','--build-constraints',str(constraints),
                     '--python',sys.executable,'--wheel','--out-dir',str(directory/'dist')],cwd=ROOT,check=True,capture_output=True)
     wheel = next((directory/'dist').glob('*.whl'))
-    with zipfile.ZipFile(wheel) as archive:
-        names = archive.namelist()
-        if 'asof/demo/v2/case.json' not in names or 'asof/demo/case.json' not in names:
-            raise ContractError('Packaged demo fixtures missing')
-        if any(n.startswith(('data/','runs/','tests/')) for n in names):
-            raise ContractError('Non-runtime payload in wheel')
+    inventory = validate_engine_wheel(wheel)
     environment = directory/'wheel-environment'
     subprocess.run(['uv','venv','--offline','--python',sys.executable,str(environment)],check=True,capture_output=True)
     python = environment/('Scripts/python.exe' if os.name=='nt' else 'bin/python')
     subprocess.run(['uv','pip','install','--offline','--no-index','--python',str(python),'--no-deps',str(wheel)],check=True,capture_output=True)
     run = directory/'wheel-demo'
-    subprocess.run([str(python),'-I','-m','asof','demo','--output',str(run)],cwd=directory,check=True,capture_output=True)
-    subprocess.run([str(python),'-I','-m','asof','verify','--run-dir',str(run)],cwd=directory,check=True,capture_output=True)
+    subprocess.run([str(python),'-I','-m','tether_engine','demo','--output',str(run)],cwd=directory,check=True,capture_output=True)
+    subprocess.run([str(python),'-I','-m','tether_engine','verify','--run-dir',str(run)],cwd=directory,check=True,capture_output=True)
     return {'wheel':wheel.name,'wheel_sha256':hashlib.sha256(wheel.read_bytes()).hexdigest(),
+            'wheel_inventory':inventory,
             'build_constraints_sha256':hashlib.sha256(constraints.read_bytes()).hexdigest(),
             'package_network_policy':'offline','dependency_free_demo':'passed'}
 
@@ -177,7 +194,7 @@ def main(argv=None):
         report['tests']={'run':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),
                          'skipped':[{'test':t.id(),'reason':reason} for t,reason in result.skipped]}
         success = successful_tests(result,args.mode)
-        with tempfile.TemporaryDirectory(prefix='asof-validation-') as temporary:
+        with tempfile.TemporaryDirectory(prefix='tether-validation-') as temporary:
             directory=Path(temporary)
             previous=sys.argv
             report['stage'] = 'required_probes'

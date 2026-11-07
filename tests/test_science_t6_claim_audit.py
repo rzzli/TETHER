@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from asof.serde import ContractError, fingerprint, write_json
+from tether_engine.serde import ContractError, fingerprint, write_json
 from tools.science.run_comparison import pin
 from tools.science.t6_claim_audit import audit_claims, pointer
 

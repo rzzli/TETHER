@@ -12,12 +12,12 @@ scientific validation are not established by renaming.
 | Area | Current result |
 | --- | --- |
 | Canonical software | `tether-target-agents` 0.4.0, `tether` command and Python namespace under `packages/tether/` |
-| Compatibility engine | Real local dependency `asof-target-agents==0.3.11`; root build metadata and 100 original core/replay payloads unchanged |
+| Compatibility engine | Real local dependency `tether-target-engine==0.3.11`; root build metadata and 100 original core/replay payloads unchanged |
 | Python identity | Finite lazy aliases preserve original modules, classes, enums, exception types, resources and reference-authority tokens |
 | New run presentation | TETHER dossier/manifest/receipt and attempt journal wrap unchanged `engine/` artifacts; verification checks both layers and the launcher itself |
 | TETHER tests | 49 tests pass in full and core environments, with zero skips; independent 12-probe review passes |
 | Existing regression coverage | 115 targeted legacy tests pass in full; core executes 96 with 19 approved optional-dependency skips; original 1,973-test broad acceptance remains historical baseline |
-| Installed wheel | 24,538 bytes/20 members, 14 runtime source files; 117 independent ZIP/RECORD/source/metadata checks pass; no overlapping `asof/` ownership |
+| Installed wheel | 24,538 bytes/20 members, 14 runtime source files; 117 independent ZIP/RECORD/source/metadata checks pass; no overlapping `tether_engine/` ownership |
 | Source-isolated installation | Two local wheels, no optional packages, no D:/E: imports; synthetic demo, TETHER verification and legacy engine verification pass outside the checkout |
 | Documented development install | Offline locked canonical-project sync, version display and dependency checks pass |
 | Current docs/data | 20 guides plus README/data summaries renamed; 221 initial checks and 210 layout checks pass; no scientific contract fields changed |
@@ -52,14 +52,14 @@ stopped before writes; its corrected inverse and prior failure note are retained
 
 ## What intentionally retains the old name
 
-AsOf/asof names remain in frozen code, old distribution/contract identifiers,
-datasets such as `asof_normalized_packets`, temporal fields such as `asofDate`,
+TETHER/TETHER names remain in frozen code, old distribution/contract identifiers,
+datasets such as `tether_normalized_packets`, temporal snapshot-date fields,
 source paths, original experiment arm labels, receipts, READY files, PDFs/ZIPs,
 original proposals, dated research logs and review evidence. Rewriting these
 would invalidate provenance or misrepresent what actually ran. They are
 compatibility/history names, not a second active project identity.
 
-The old `asof` command/imports still work. TETHER's new distribution owns only
+The old `TETHER` command/imports still work. TETHER's new distribution owns only
 its own namespace and has its own genuine launcher/version proof; it does not
 forge old metadata or claim coverage by old code inventories. Current CLI
 commands create a separately sealed TETHER presentation around the unchanged
@@ -67,7 +67,7 @@ engine result, rather than editing a completed receipt or its dossier.
 
 Current catalog SHA:
 `eafd955cad30dd36bd7417de165a508b1e891f90f42e2cc4bcb573043eaa65ac`.
-The [pre-rename catalog](../data/catalog/history/sources-pre-tether-20261101.json)
+The [pre-rename catalog](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/data/catalog/history/sources-pre-tether-20261101.json)
 retains `3c3108e6318e791985892fecea6ca9ea6185af7810a5ffd4a6311be3ca6f6109`.
 New references must use the genuine new fingerprint. Historical reproduction
 uses its pinned old catalog; a live-path hardpin mismatch is not silently bypassed.
@@ -76,8 +76,8 @@ uses its pinned old catalog; a live-path hardpin mismatch is not silently bypass
 
 - [Canonical software source](../packages/tether/README.md) and [project README](../README.md).
 - [Working paper guide](../paper/README.md) and [current TETHER PDF](../paper/tether-source-reporting-preprint.pdf).
-- [Standalone packet guide](../paper/release/tether/README.md), [qualification](../paper/release/tether/QUALIFICATION.json) and [external hash record](../paper/release/tether/RELEASE-RECORD.json).
-- [Independent code review](review-assets/tether-rename-20261101/FRONTDOOR-NAMESPACE-INDEPENDENT-REVIEW-v2.md), [wheel review](review-assets/tether-rename-20261101/WHEEL-PEER-REVIEW-v1.md), [paper review](review-assets/tether-rename-20261101/PAPER-RENAME-PEER-REVIEW.md) and [actual packet review](review-assets/tether-rename-20261101/PACKET-PEER-REVIEW.md).
+- [Standalone packet guide](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/paper/release/tether/README.md), [qualification](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/paper/release/tether/QUALIFICATION.json) and [external hash record](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/paper/release/tether/RELEASE-RECORD.json).
+- [Independent code review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-rename-20261101/FRONTDOOR-NAMESPACE-INDEPENDENT-REVIEW-v2.md), [wheel review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-rename-20261101/WHEEL-PEER-REVIEW-v1.md), [paper review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-rename-20261101/PAPER-RENAME-PEER-REVIEW.md) and [actual packet review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-rename-20261101/PACKET-PEER-REVIEW.md).
 
 Current packet SHA:
 `e57af7f4e99cf879f9944c83a19d2106f013935ff99f8681803124ed63443b8c`.

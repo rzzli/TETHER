@@ -17,8 +17,8 @@ import time
 import urllib.error
 import urllib.request
 
-from asof.journal import RunJournal, read_chain
-from asof.serde import fingerprint, parse_json, read_json, write_json
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import fingerprint, parse_json, read_json, write_json
 from tools.science import prospective_frame as frame
 
 VERSION_URL = 'https://clinicaltrials.gov/api/v2/version'
@@ -51,7 +51,7 @@ def _journal(output):
 
 
 def _exclusive_json(path, payload):
-    from asof.serde import canonical
+    from tether_engine.serde import canonical
     with path.open('xb') as stream:
         stream.write(canonical(payload) + b'\n')
         stream.flush()

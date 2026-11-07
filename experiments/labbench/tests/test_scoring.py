@@ -1,7 +1,7 @@
 """Invented native MCQ cases; no benchmark answer rows are opened."""
 import unittest
 
-from asof.serde import ContractError
+from tether_engine.serde import ContractError
 from experiments.labbench.native_contract import parse_prediction, validate_prediction, validate_query
 from experiments.labbench.evaluate import evaluate_schedule, source_annotation_metrics
 

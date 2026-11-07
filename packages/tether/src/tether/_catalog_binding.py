@@ -9,12 +9,12 @@ from pathlib import Path
 import re
 import time
 
-from asof.atomic import publish_bytes
-from asof.chrono import load_snapshot
-from asof.contracts import Case, Snapshot, SourceNode
-from asof.provenance import check_receipt_availability
-from asof.serde import ContractError, canonical, decode, encode, fingerprint, parse_json
-from asof.study.stable_read import checked_path, hash_file, read_file
+from tether_engine.atomic import publish_bytes
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case, Snapshot, SourceNode
+from tether_engine.provenance import check_receipt_availability
+from tether_engine.serde import ContractError, canonical, decode, encode, fingerprint, parse_json
+from tether_engine.study.stable_read import checked_path, hash_file, read_file
 
 from ._catalog_policy import (authorize_snapshot, reconcile_receipt, strict_json, validate_policy,
                               validate_source_catalog)

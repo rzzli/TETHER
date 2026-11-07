@@ -3,7 +3,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from asof.serde import ContractError, sha256_file
+from tether_engine.serde import ContractError, sha256_file
 from tools.science.crosswalk import compare, hypothesis_key, pinned, source_identity
 
 

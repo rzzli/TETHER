@@ -8,12 +8,12 @@ import unittest
 from concurrent.futures import ThreadPoolExecutor
 from unittest.mock import patch
 
-from asof.agents import Usage
-from asof.contracts import Case
-from asof.journal import read_chain
-from asof.serde import ContractError, canonical, decode, encode, fingerprint, read_json, write_json
+from tether_engine.agents import Usage
+from tether_engine.contracts import Case
+from tether_engine.journal import read_chain
+from tether_engine.serde import ContractError, canonical, decode, encode, fingerprint, read_json, write_json
 from tools.science.run_comparison import pin
-from asof.workflow import Budget
+from tether_engine.workflow import Budget
 from tools.science.bounded_interpretation import (
     Generated, RecordedInterpreter, prepare_input, validate_response,
     run_interpretation, verify_interpretation)
@@ -26,7 +26,7 @@ class InterpretationTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory(); self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         self.inputs = self.root / 'inputs'
-        fixture = ROOT / 'src/asof/demo/v2'
+        fixture = ROOT / 'src/tether_engine/demo/v2'
         # Create the adapted case once; the other fixture inputs remain exact copies.
         shutil.copytree(fixture, self.inputs, ignore=shutil.ignore_patterns('case.json'))
         self.case = replace(decode(Case, read_json(fixture/'case.json')), task='T6', endpoint=None)
@@ -61,7 +61,7 @@ class InterpretationTests(unittest.TestCase):
             def generate(self, request, timeout_seconds):
                 self.calls += 1
                 if error: raise error
-                from asof.serde import canonical
+                from tether_engine.serde import canonical
                 return Generated(canonical(response or outer.response(request)).decode(), usage)
         return Fake()
 

@@ -9,12 +9,12 @@ from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
-from asof.journal import RunJournal
-from asof.serde import ContractError, canonical, encode, fingerprint
-from asof.study import fixed_evidence as stages
-from asof.study import fixed_evidence_smoke as comparison
-from asof.study.session import StudySession
-from asof.workflow import Budget
+from tether_engine.journal import RunJournal
+from tether_engine.serde import ContractError, canonical, encode, fingerprint
+from tether_engine.study import fixed_evidence as stages
+from tether_engine.study import fixed_evidence_smoke as comparison
+from tether_engine.study.session import StudySession
+from tether_engine.workflow import Budget
 
 
 class FixedEvidenceBoundaryPeerTests(unittest.TestCase):
@@ -125,10 +125,10 @@ class FixedEvidenceBoundaryPeerTests(unittest.TestCase):
             canonical(stages.prepare_payload(second)),
         )
         self.assertEqual(
-            stages.preflight("synthetic-context")["input_reservation"], 31715
+            stages.preflight("synthetic-context")["input_reservation"], 31717
         )
         self.assertEqual(
-            stages.preflight("synthetic-orientation")["input_reservation"], 28503
+            stages.preflight("synthetic-orientation")["input_reservation"], 28505
         )
 
     def test_evaluator_metadata_cannot_enter_rehashed_stage_source(self):

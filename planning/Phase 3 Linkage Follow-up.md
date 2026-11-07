@@ -2,7 +2,7 @@
 title: Phase 3 Linkage Follow-up
 date: 2026-10-17
 status: completed-with-program-qualification-gates
-tags: [asof, clinical-evaluation, aact, feasibility]
+tags: [TETHER, clinical-evaluation, aact, feasibility]
 ---
 
 # Phase 3 linkage follow-up

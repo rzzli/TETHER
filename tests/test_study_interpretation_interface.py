@@ -6,10 +6,10 @@ import re
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError, canonical, encode, fingerprint
-from asof.study.diagnostic import load_synthetic_request
-from asof.study.diagnostic_codec import bind_question, pointer, quote_choices
-from asof.study.interpretation_interface import (
+from tether_engine.serde import ContractError, canonical, encode, fingerprint
+from tether_engine.study.diagnostic import load_synthetic_request
+from tether_engine.study.diagnostic_codec import bind_question, pointer, quote_choices
+from tether_engine.study.interpretation_interface import (
     INTERFACE,
     prepare_payload,
     request_from_payload,
@@ -20,7 +20,7 @@ from asof.study.interpretation_interface import (
 class InterpretationInterfaceTests(unittest.TestCase):
     def setUp(self):
         self.request = load_synthetic_request("synthetic-context")
-        self.prepared = prepare_payload(self.request, "asof_interpretation", 0, [])
+        self.prepared = prepare_payload(self.request, "tether_interpretation", 0, [])
         self.payload = self.prepared["payload"]
 
     def document(self, kind="source_report"):
@@ -195,7 +195,7 @@ class InterpretationInterfaceTests(unittest.TestCase):
     def test_lower_inherited_claim_cap_and_duplicate_text(self):
         request = encode(self.request)
         request["source_request"]["bounds"]["max_claims"] = 1
-        prepared = prepare_payload(request, "asof_interpretation", 0, [])
+        prepared = prepare_payload(request, "tether_interpretation", 0, [])
         self.assertEqual(prepared["claim_limit"], 1)
         doc = self.document("caution")
         second = copy.deepcopy(doc["claims"][0])
@@ -218,7 +218,7 @@ class InterpretationInterfaceTests(unittest.TestCase):
     def test_larger_inherited_bound_keeps_explicit_active_three_claim_ceiling(self):
         request = encode(self.request)
         request["source_request"]["bounds"]["max_claims"] = 64
-        prepared = prepare_payload(request, "asof_interpretation", 0, [])
+        prepared = prepare_payload(request, "tether_interpretation", 0, [])
         self.assertEqual(prepared["claim_limit"], 3)
         validate_output(request, prepared["payload"], self.document())
 
@@ -247,7 +247,7 @@ class InterpretationInterfaceTests(unittest.TestCase):
         request = bind_question(
             request["source_request"], request["question"]["question_id"]
         )
-        prepared = prepare_payload(request, "asof_interpretation", 0, [])
+        prepared = prepare_payload(request, "tether_interpretation", 0, [])
         self.assertEqual(
             fingerprint(request_from_payload(prepared["payload"])), fingerprint(request)
         )
@@ -274,7 +274,7 @@ class InterpretationInterfaceTests(unittest.TestCase):
         with self.assertRaises(ContractError):
             prepare_payload(
                 self.request,
-                "asof_interpretation",
+                "tether_interpretation",
                 0,
                 [dict(stage="chief_of_staff", source_ids=["E0"])],
             )
@@ -297,7 +297,7 @@ class InterpretationInterfaceTests(unittest.TestCase):
             request["source_request"], request["question"]["question_id"]
         )
         with self.assertRaises(ContractError):
-            prepare_payload(request, "asof_interpretation", 0, [])
+            prepare_payload(request, "tether_interpretation", 0, [])
         request = encode(self.request)
         request["source_request"]["evidence"][0]["scientific_record"][
             "unresolved_context"
@@ -306,7 +306,7 @@ class InterpretationInterfaceTests(unittest.TestCase):
             request["source_request"], request["question"]["question_id"]
         )
         with self.assertRaises(ContractError):
-            prepare_payload(request, "asof_interpretation", 0, [])
+            prepare_payload(request, "tether_interpretation", 0, [])
 
     def test_schema_state_and_source_report_literals_are_explicit(self):
         schema = self.payload["json_schema"]
@@ -327,7 +327,7 @@ class InterpretationInterfaceTests(unittest.TestCase):
             patch("subprocess.Popen", side_effect=AssertionError("No dispatch")),
             patch("socket.socket", side_effect=AssertionError("No sockets")),
         ):
-            prepared = prepare_payload(self.request, "asof_interpretation", 0, [])
+            prepared = prepare_payload(self.request, "tether_interpretation", 0, [])
             validate_output(self.request, prepared["payload"], self.document())
 
 

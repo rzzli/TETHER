@@ -1,6 +1,0 @@
-{
-  "error": "Original stage byte count mismatch",
-  "error_type": "ValueError",
-  "status": "FAIL",
-  "traceback": "Traceback (most recent call last):\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\source_preflight.py\", line 204, in <module>\n    main()\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\source_preflight.py\", line 104, in main\n    need(sum(x[\"bytes\"] for x in before.values()) == acceptance[\"inventories\"][\"stage\"][\"retained_bytes\"] == 36570027, \"Original stage byte count mismatch\")\n  File \"D:\\Projects\\drug_target_agents\\planning\\review-assets\\tether-semantic-20261106\\methods\\source_preflight.py\", line 33, in need\n    raise ValueError(message)\nValueError: Original stage byte count mismatch\n"
-}

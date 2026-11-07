@@ -2,10 +2,10 @@ from dataclasses import replace
 import json
 import unittest
 
-from asof.agents import SpecialistRequest, EvidenceView
-from asof.contracts import Category
-from asof.serde import ContractError, canonical, fingerprint
-from asof.wire import encode_wire, decode_wire, request_bytes, FORMAT
+from tether_engine.agents import SpecialistRequest, EvidenceView
+from tether_engine.contracts import Category
+from tether_engine.serde import ContractError, canonical, fingerprint
+from tether_engine.wire import encode_wire, decode_wire, request_bytes, FORMAT
 
 
 class ScientificWireTests(unittest.TestCase):

@@ -1,0 +1,121 @@
+{
+  "kind": "tether_engine_namespace_migration_qualification_v2",
+  "created_at_utc": "2026-11-07T00:18:18.590441+00:00",
+  "source_checkpoint": "b492a8fca9bb1aa500d2939b3e2d19242a55cb96",
+  "engine_version": "0.4.0",
+  "facade_version": "0.6.0",
+  "status": "passed",
+  "tests": {
+    "suite": "packages/tether/tests",
+    "passed": 143,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 80.974,
+    "interpreter": "data/cache/tether-namespace-migration-20261106/installed-final-env/Scripts/python.exe",
+    "import_scope": "Noneditable installed engine; fixture tests deliberately prepend the checked-out facade source, independently verified byte-identical to the final wheel. Installed-only CLI demo and isolated import/file checks are recorded separately."
+  },
+  "controls": {
+    "installed_engine_source_and_resource_files": 93,
+    "installed_facade_source_files": 18,
+    "wheel_installed_and_current_source_byte_identity": "passed",
+    "isolated_imports_from_final_site_packages": "passed",
+    "installed_engine_help": "passed",
+    "installed_public_version": "passed",
+    "installed_offline_demo": "passed",
+    "externally_anchored_source_inclusive_verification": "passed",
+    "dossier_projection": "identity_dossier_v2",
+    "demo_receipt_sha256": "c7b0139b8182a2a7af6d013bd19a5fb28506ffcbfd33bcab09665c86bcafdf1b"
+  },
+  "retained_artifacts": [
+    {
+      "path": "pyproject.toml",
+      "bytes": 682,
+      "sha256": "20f3e54247ca8b9893f7c4df7a9818c8f70c39515175fdeb7f05d06a920072ee"
+    },
+    {
+      "path": "packages/tether/pyproject.toml",
+      "bytes": 580,
+      "sha256": "ee92b196fad497b1b0be8f607210441d38f1ce7e8e956f9f6a98153ebe08ef25"
+    },
+    {
+      "path": "src/tether_engine/archive/semantic_dependencies.json",
+      "bytes": 2713,
+      "sha256": "3a7043945053ddb63565d083aa84489e0654e1f7195838632de7b1e116bfc19f"
+    },
+    {
+      "path": "src/tether_engine/study/resources/fixed-evidence-plan-v1.json",
+      "bytes": 3876,
+      "sha256": "bbcf0048f97255e643f7dc8530e07080a53791a6f7e247e946ccbd680a6778b6"
+    },
+    {
+      "path": "data/cache/tether-namespace-migration-20261106/final-wheels-attempt03/WHEEL-VERIFICATION.json",
+      "bytes": 532,
+      "sha256": "8da0931fde1f36a548947347904d4d8a63af265ff34c6256d1aac1c9f6da2e17"
+    },
+    {
+      "path": "data/cache/tether-namespace-migration-20261106/final-wheels-attempt03/tether_target_engine-0.4.0-py3-none-any.whl",
+      "bytes": 318348,
+      "sha256": "b2bfab39257ba09ec85bfb7b07201dcedd3acc20797f45f275ce2316041ee623"
+    },
+    {
+      "path": "data/cache/tether-namespace-migration-20261106/final-wheels-attempt03/tether_target_agents-0.6.0-py3-none-any.whl",
+      "bytes": 46541,
+      "sha256": "0a9da77e7b55f2c99149203d1c5dd8ea890919b6a7565abf72a77d3616da90b2"
+    },
+    {
+      "path": "packages/tether/runs/namespace-qualification/initial-MIGRATION-VALIDATION.json",
+      "bytes": 3888,
+      "sha256": "c6258c5e809ed4c346ce8aec5cdd34b5a0e8e800b2d61c72e416119e34318013"
+    },
+    {
+      "path": "packages/tether/runs/namespace-qualification/facade-tests-final.log",
+      "bytes": 22851,
+      "sha256": "f10c2f7be25c672a9e27bb367d606d947d2a8f456590ccab7239f63f1e34818f"
+    },
+    {
+      "path": "packages/tether/runs/namespace-qualification/final-installed-code-verification.json",
+      "bytes": 20947,
+      "sha256": "a33f08049747745b2d51e4484d21ac2c942f17c48564b8bc57406d7f555dfcd3"
+    },
+    {
+      "path": "packages/tether/runs/namespace-qualification/final-version.txt",
+      "bytes": 29,
+      "sha256": "47845c78f7f4b7a29ce41223c6ae4c46e058cc754edd059971e3ef0be0169066"
+    },
+    {
+      "path": "packages/tether/runs/namespace-qualification/final-engine-help.txt",
+      "bytes": 905,
+      "sha256": "59dec2c62dbd1bbd8a990e7aae3335f846e0c03e7088de0c431f06905ac89dba"
+    },
+    {
+      "path": "packages/tether/runs/namespace-qualification/final-demo-result.json",
+      "bytes": 405,
+      "sha256": "9c66f1ab41cc4856bcce8505707f47683e1b62a9cbfbd249276ca880289362d7"
+    },
+    {
+      "path": "packages/tether/runs/namespace-qualification/final-demo-verification.json",
+      "bytes": 1174,
+      "sha256": "631fea6030fc63e6a5af289d04846fa235239530b908f154c58e8af271afb40a"
+    },
+    {
+      "path": "packages/tether/runs/namespace-qualification/installed-demo-final/tether-receipt.json",
+      "bytes": 449,
+      "sha256": "c7b0139b8182a2a7af6d013bd19a5fb28506ffcbfd33bcab09665c86bcafdf1b"
+    }
+  ],
+  "superseded_candidate": {
+    "record": {
+      "path": "packages/tether/runs/namespace-qualification/initial-MIGRATION-VALIDATION.json",
+      "bytes": 3888,
+      "sha256": "c6258c5e809ed4c346ce8aec5cdd34b5a0e8e800b2d61c72e416119e34318013"
+    },
+    "reason": "Earlier valid candidate qualification predates the final explicit bounded-tool dependency contract and module-hash update. Original logs, demo and receipt remain preserved; they are not proof of the final source tree."
+  },
+  "scope_limits": [
+    "Engine/facade qualification only; repository and experiment regression gates are separate.",
+    "Generic version-one byte checking retains unavailable semantic consistency; protected historical fixture tests are part of the repository pass.",
+    "Historical version-two proofs require their original source checkpoint; this migration does not re-seal or certify earlier experiments.",
+    "Fictional deterministic demo only. No model calls, scientific runs, external data acquisition, or semantic-goal resumption."
+  ]
+}

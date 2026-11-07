@@ -13,8 +13,8 @@ from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "packages/tether/src"))
-from asof.serde import ContractError, canonical, fingerprint
-from asof.journal import read_chain
+from tether_engine.serde import ContractError, canonical, fingerprint
+from tether_engine.journal import read_chain
 from tether import _catalog_policy as policy, _catalog_binding as binding, _presentation as layer, _cli as cli
 
 
@@ -28,7 +28,7 @@ def make_fixture(root):
     root = Path(root).absolute()
     normalized, raw_root = root / "normalized", root / "raw"
     normalized.mkdir(); raw_root.mkdir()
-    base = ROOT / "src/asof/demo/v2"
+    base = ROOT / "src/tether_engine/demo/v2"
     case = json.loads((base / "case.json").read_text())
     snapshot = json.loads((base / "snapshot.json").read_text())
     snapshot["profile"] = "contemporary_assessment"
@@ -299,9 +299,9 @@ class CatalogBindingTests(unittest.TestCase):
         with patch.object(layer, "invoke_engine") as child:
             binding.prepare_policy_run(self.output, self.f["request"])
         child.assert_not_called()
-        from asof.chrono import load_snapshot
-        from asof.contracts import Case
-        from asof.serde import decode
+        from tether_engine.chrono import load_snapshot
+        from tether_engine.contracts import Case
+        from tether_engine.serde import decode
         store = load_snapshot(self.output / "catalog-policy/inputs/snapshot.json", decode(Case, self.f["case"]),
                               self.output / "catalog-policy/projection.json")
         self.assertTrue(any(item.item_id == record["observation_id"] and item.reason == "publication_after_origin"

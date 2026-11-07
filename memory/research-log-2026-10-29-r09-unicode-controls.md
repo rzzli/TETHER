@@ -72,7 +72,7 @@ Archivecheckerv2passed10author methods/all32synthetic projections, butpeer
 isrejected andboundedhugeperiodicintegerleaksOverflowError. Earliercallback/LF
 self-findingsandv1arepreserved; narrowv3correction andindependentreviewarepending.
 
-The [current full-project reassessment](../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20In%20Memory%20Unicode%20Codec.md) retains all sixteen recovery steps and four human gates. AsOf 0.3.11/default v2 and its retained 1,774 tests/327 source pins remain unchanged. Human reviews are still pending, clinical probabilities remain null and provider spending remains $0.
+The [current full-project reassessment](../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20In%20Memory%20Unicode%20Codec.md) retains all sixteen recovery steps and four human gates. TETHER 0.3.11/default v2 and its retained 1,774 tests/327 source pins remain unchanged. Human reviews are still pending, clinical probabilities remain null and provider spending remains $0.
 
 
 ## Captured archive checker correction accepted
@@ -95,7 +95,7 @@ No port implementation or live file/API operation. Observation design peer
 context clarification before complete trace fixtures. Source work continues.
 The full20-row project reassessment is retained at
 [captured archive checker checkpoint](../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Captured%20Archive%20Checker.md).
-AsOf0.3.11/default v2, original negative/timeout, scientific/human holds, provider
+TETHER0.3.11/default v2, original negative/timeout, scientific/human holds, provider
 $0 and untouched downloader/stopped monitor remain unchanged.
 
 The captured journal/archive source policies are specific to known-launched v7
@@ -130,7 +130,7 @@ need separate new-parent counterparts; no runtime source closure or actual
 native/file/resource/scientific qualification follows from this component.
 
 Full20-row reassessment: [Project Progress Reassessment 2026-10-29 - Unicode Observation Validator.md](../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Unicode%20Observation%20Validator.md).
-AsOf0.3.11/defaultv2, retained1774tests/327pins,65missinginputs,36unqualifiedlabels,
+TETHER0.3.11/defaultv2, retained1774tests/327pins,65missinginputs,36unqualifiedlabels,
 17/32primaryregistry states,0/12jointsource-readycases, empty numericalfeatures,
 nullprobabilities, human reviews pending, provider$0 and untouched downloader/
 stopped monitor remain unchanged.
@@ -152,7 +152,7 @@ owner/registry/output/loader/journal, exact roster and new Unicode policies rema
 pending. The next design maps accepted concrete APIs to those gaps; no real
 binding or runtime is active. Observer743ece01 and other pure acceptances retain
 scope. Full reassessment: [Project Progress Reassessment 2026-10-29 - Portable File Ports.md](../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Portable%20File%20Ports.md).
-AsOf0.3.11/defaultv2/retained1774tests/327pins, data/science/human holds, original
+TETHER0.3.11/defaultv2/retained1774tests/327pins, data/science/human holds, original
 negative/timeout, provider$0 and untouched downloader/stopped monitor remain.
 
 ## Portable raw adoption core accepted
@@ -181,13 +181,13 @@ successor and non-owning views, reuse early bytes once and the same loader/outpu
 journal, and use a continuation-only engine entry. No run_once/reset/seed-ready
 fallback. Actual binding, first-entry, full roster/resource/new-parent/native
 qualification remains separate. Full20-row reassessment: [Project Progress Reassessment 2026-10-29 - Raw Adoption Core.md](../planning/Project%20Progress%20Reassessment%202026-10-29%20-%20Raw%20Adoption%20Core.md).
-AsOf0.3.11/defaultv2/retained1774tests/327pins,65missinginputs/36unqualifiedlabels,
+TETHER0.3.11/defaultv2/retained1774tests/327pins,65missinginputs/36unqualifiedlabels,
 0/12jointsource-readycases, emptyfeatures/nullprobabilities, pending human reviews,
 provider$0 and untouched downloader/stopped monitor remain unchanged.
 
 ## Shared-owner design and literal preparation
 
-The bounded [design v2](../planning/review-assets/recovery-step9-shared-owner-20261029/SHARED-OWNER-CONTINUATION-PROPOSAL-v2.md),90fc021a, closes five clauses from preserveded72/HOLD68ed.
+The bounded [design v2](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-shared-owner-20261029/SHARED-OWNER-CONTINUATION-PROPOSAL-v2.md),90fc021a, closes five clauses from preserveded72/HOLD68ed.
 Peerba12adb9 clears preparation only. Rootba6328a7 verifies11pins and source
 arithmetic: raw payload122994<=131072, immutable captures separately16KiB;
 N4/B2/M2 with R68/C92/E224 ceilings. Exactly one canonical bootstrap-successor

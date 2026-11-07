@@ -1,9 +1,0 @@
-{
-  "diseaseId": "EFO_0000094",
-  "targetA": "ENSG00000009413",
-  "targetB": "ENSG00000026297",
-  "selection_policy_sha256": "d57234aa5facafeeb4956ee9cf80febf00a9aa9ef2e73a186df9e083bdc1edeb",
-  "task_spec_sha256": "25e6d7e577cd0bad3fbb029f0f7b54a8497783f36f22b334ca18de86ade59847",
-  "selection_rule": "Lexicographically first eligible tuple(exact nonempty diseaseId, ordered DISTINCT targetId pair), each target has>=1 direct evidence row and union has>=2 distinct nonempty studyLocusId; no scores, effects, overlap pattern, gene or disease labels considered. Full100-shard projected ID scan.",
-  "selected_at_utc": "2026-11-02T09:16:21.516246+00:00"
-}

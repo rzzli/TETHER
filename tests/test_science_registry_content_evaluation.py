@@ -4,7 +4,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from asof.serde import ContractError, fingerprint
+from tether_engine.serde import ContractError, fingerprint
 from tools.science.registry_content_evaluation import audit_native_rows, compare_states, dependence_diagnostics
 from tools.science.registry_content_workflow import pin
 

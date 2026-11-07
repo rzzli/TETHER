@@ -16,8 +16,8 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-from asof.serde import ContractError,write_json
-from asof.journal import RunJournal
+from tether_engine.serde import ContractError,write_json
+from tether_engine.journal import RunJournal
 
 NCT=re.compile(r'(?<![A-Za-z0-9_])NCT[0-9]{8}(?![A-Za-z0-9_])',re.I)
 SAFE_HEADERS={'date','last-modified','etag','content-type','content-length','content-disposition','cache-control','location'}
@@ -133,7 +133,7 @@ def fetch_control(control,output,*,open_response=None):
         write_json(output/'control.json',control)
         control_sha=hashlib.sha256((output/'control.json').read_bytes()).hexdigest()
         journal.append('build_stage',stage=stage,url=url,nct_id=nct,automatic_retry=False)
-        request=urllib.request.Request(url,headers={'User-Agent':'AsOf-source-readiness/0.1','Accept-Encoding':'identity'})
+        request=urllib.request.Request(url,headers={'User-Agent':'TETHER-source-readiness/0.1','Accept-Encoding':'identity'})
         if open_response is None:
             opener=urllib.request.build_opener(BoundRedirect(hosts,deadline))
             def open_response(request):

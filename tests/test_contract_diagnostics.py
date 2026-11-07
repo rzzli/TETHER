@@ -3,8 +3,8 @@ from dataclasses import MISSING, fields
 from datetime import date
 import unittest
 
-from asof.contracts import Observation, Snapshot
-from asof.serde import ContractError, decode
+from tether_engine.contracts import Observation, Snapshot
+from tether_engine.serde import ContractError, decode
 
 
 class ContractDiagnosticsTests(unittest.TestCase):

@@ -11,7 +11,7 @@ import json
 from pathlib import Path
 from urllib.request import Request, urlopen
 
-from asof.serde import read_json, sha256_file, write_json
+from tether_engine.serde import read_json, sha256_file, write_json
 
 
 def capture(url, root):
@@ -21,7 +21,7 @@ def capture(url, root):
     try:
         if not url.startswith('https://'):
             raise ValueError('Public source capture requires HTTPS')
-        request = Request(url, headers={'User-Agent': 'AsOfResearch/0.2 (public scientific source archiving)'})
+        request = Request(url, headers={'User-Agent': 'TETHERResearch/0.2 (public scientific source archiving)'})
         with urlopen(request, timeout=25) as response:
             if not response.url.startswith('https://'):
                 raise ValueError('Source redirected outside HTTPS')

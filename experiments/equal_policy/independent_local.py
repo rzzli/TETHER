@@ -10,7 +10,7 @@ from .independent import (canonical, digest, hypothesis_key, parse, permitted,
                           validate_usage)
 from .independent_schema import PolicyError, decode, require
 
-FORMAT = 'asof-shared-scientific-fields-v1'
+FORMAT = 'tether-shared-scientific-fields-v1'
 GUIDANCE = {
     'genetics': 'Attend to assay/gene identity, direction, ancestry, LD, cohort overlap and uncertainty. Genetic support is not itself clinical efficacy; request new computation through a future audited tool.',
     'perturbation': 'Attend to intervention, controls, replicates, dose/time and cell context. Keep cancer-cell and primary/disease-context applicability separate.',

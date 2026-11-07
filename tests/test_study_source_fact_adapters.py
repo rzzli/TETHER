@@ -5,8 +5,8 @@ import math
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError, canonical, encode
-from asof.study.source_fact_adapters import adapt_output
+from tether_engine.serde import ContractError, canonical, encode
+from tether_engine.study.source_fact_adapters import adapt_output
 
 
 TASK_ID = "fictional-reporting-task"

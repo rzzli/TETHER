@@ -11,7 +11,7 @@ result, model run, source acquisition or publication.
    metadata, catalog and sealed paper/reconstruction artifacts.
 2. Add the canonical TETHER front door as `tether-target-agents` version0.4.0 in
    `packages/tether/`, with `tether` and `python -m tether`. Its explicit local
-   dependency is the unchanged `asof-target-agents==0.3.11` compatibility engine.
+   dependency is the unchanged `tether-target-engine==0.3.11` compatibility engine.
    The default runtime still needs no third-party Python packages. Optional
    ingestion remains exactly PyArrow21.0.0.
 3. Expose compatible `tether.*` Python access using identical legacy module and
@@ -36,16 +36,16 @@ result, model run, source acquisition or publication.
 
 ## Required historical compatibility
 
-`AsOf`, `asof`, `asof-target-agents`, schema/method/backend identifiers and
-`asof_normalized_packets` remain where they identify existing scientific or
-software contracts. Source paths such as `src/asof/`, original storage roots and
+`TETHER`, `TETHER`, `tether-target-engine`, schema/method/backend identifiers and
+`tether_normalized_packets` remain where they identify existing scientific or
+software contracts. Source paths such as `src/tether_engine/`, original storage roots and
 dated planning filenames may remain as historical references. This is deliberate
 compatibility, not a second current project name. Original dossiers, code pins,
 receipts, READY files, PDFs, ZIPs, protocols, generated results, dated research
 logs, original proposals and archived review materials are not rewritten.
 
 The new distribution owns only `tether/` files; the legacy distribution owns
-`asof/`. Do not create fake distribution metadata or install overlapping package
+`tether_engine/`. Do not create fake distribution metadata or install overlapping package
 ownership. New TETHER code must have its own proof rather than claiming coverage
 by the old 100-payload/78-source inventories.
 

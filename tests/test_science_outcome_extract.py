@@ -4,8 +4,8 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from asof.journal import read_chain
-from asof.serde import ContractError, sha256_file, write_json
+from tether_engine.journal import read_chain
+from tether_engine.serde import ContractError, sha256_file, write_json
 from tools.science.outcome_extract import check_pins, extract, source_lease, validate_plan
 
 

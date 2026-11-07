@@ -36,7 +36,7 @@ in committed/cold facts, and native-mode synthetic mutation routes. A named V2
 contract and independent positive native-bank/ticket expectations are next;
 implementation, extension build and fake/owned-file runs each need exact bindings.
 
-AsOf remains0.3.11/defaultv2; all327 accepted source pins match and1,774 tests are
+TETHER remains0.3.11/defaultv2; all327 accepted source pins match and1,774 tests are
 retained, not rerun. The old recognitionFAILED/whole-verificationINCOMPLETE_TIMEOUT
 remain. Native25/full entry/real roster/native bank/lease/physical14/new84/resources
 and R07–R16/HR1–HR4 stay open as individually described in

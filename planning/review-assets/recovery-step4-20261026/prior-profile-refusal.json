@@ -1,6 +1,0 @@
-{
-  "status": "expected_refusal_before_compatibility_review",
-  "error_class": "ContractError",
-  "message": "Unsupported executing semantic dependencies: artifacts.py, chrono.py, contracts.py, ingest.py, local_model.py, maintenance.py, serde.py, workflow.py",
-  "prior_resource_sha256": "6eeb92cc6543d8f5c886933e51dbf9c6e4ab376e578f8bff847989451b238f12"
-}

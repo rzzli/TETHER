@@ -11,7 +11,7 @@ import random
 from statistics import NormalDist,fmean as mean
 import time
 
-from asof.serde import sha256_file
+from tether_engine.serde import sha256_file
 from tools.feasibility.registry_extract import load,write
 from tools.feasibility.registry_cohort import peak_memory_bytes
 

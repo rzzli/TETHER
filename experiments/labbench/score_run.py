@@ -15,9 +15,9 @@ import re
 import time
 from urllib.parse import unquote, urlsplit
 
-from asof.atomic import publish_bytes
-from asof.journal import RunJournal
-from asof.serde import ContractError, canonical, decode, encode, fingerprint, freeze, parse_json, safe_child
+from tether_engine.atomic import publish_bytes
+from tether_engine.journal import RunJournal
+from tether_engine.serde import ContractError, canonical, decode, encode, fingerprint, freeze, parse_json, safe_child
 
 
 def _need(value,message):
@@ -288,8 +288,8 @@ def _compare_recaptured_context(archived,recaptured):
 
 def verify_case_pair(root,query,case,collection_root,collection_case,cutoff,model_provenance,configuration,alias,*,deadline):
     """Verify original source/request/native bytes before using any answer key."""
-    from asof.study.session import verify_study
-    from asof.study.stable_read import stable_files
+    from tether_engine.study.session import verify_study
+    from tether_engine.study.stable_read import stable_files
     from . import model
     from .tether_adapter import capture_context,verify_candidate
     root=Path(root);row=case['disposition'];artifacts=case['artifacts']
@@ -354,7 +354,7 @@ def verify_case_pair(root,query,case,collection_root,collection_case,cutoff,mode
         raw_proof=artifacts['raw_response'];path=safe_child(root,raw_proof['path'])
         with path.open('rb') as stream:raw=stream.read(1024*1024+1)
         _need(len(raw)==raw_proof['bytes'] and hashlib.sha256(raw).hexdigest()==raw_proof['sha256'],'Malformed native output bytes differ')
-        from asof.study import native
+        from tether_engine.study import native
         native._native(raw,supplied['request'],supplied['payload'],alias)
         try:model.MCQVerifier(model_alias=alias).validate_response(supplied['request'],raw)
         except ContractError:pass
@@ -364,7 +364,7 @@ def verify_case_pair(root,query,case,collection_root,collection_case,cutoff,mode
 
 def _verify_model_assets(manifest,*,deadline):
     """Hash model/runtime originals once; this does not start a server."""
-    from asof.study.stable_read import hash_file,stable_files
+    from tether_engine.study.stable_read import hash_file,stable_files
     from . import model
     receipt=manifest['model_receipt'];limits=manifest['limits']
     spec,bindings,provenance=model.make_server_spec(receipt['path'],receipt['sha256'],port=limits['port'],

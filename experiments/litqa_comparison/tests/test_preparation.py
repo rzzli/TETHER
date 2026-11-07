@@ -1,7 +1,7 @@
 import unittest
 import tempfile
 from pathlib import Path
-from asof.serde import canonical,freeze,encode
+from tether_engine.serde import canonical,freeze,encode
 from experiments.litqa_comparison.preparation import project,load_product
 from experiments.litqa_comparison.codecs import digest
 

@@ -11,7 +11,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError, canonical, fingerprint
+from tether_engine.serde import ContractError, canonical, fingerprint
 from experiments.scifact.tether_adapter import (
     admit_container, reverify_container, validate_resources,
     NativeSession, inspect_session, verify_session, authorize_products,

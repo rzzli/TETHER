@@ -10,10 +10,10 @@ from dataclasses import replace
 from unittest.mock import patch
 import shutil
 
-from asof.agents import Usage
-from asof.contracts import Case
-from asof.journal import read_chain
-from asof.serde import ContractError, canonical, decode, encode, fingerprint, read_json, write_json
+from tether_engine.agents import Usage
+from tether_engine.contracts import Case
+from tether_engine.journal import read_chain
+from tether_engine.serde import ContractError, canonical, decode, encode, fingerprint, read_json, write_json
 from tools.science.bounded_interpretation import prepare_input,run_interpretation,verify_interpretation
 from tools.science.local_interpretation import (compact_request,expand_request,materialize,
                                                LocalInterpreter,payload_for,parse_native,verify_execution)
@@ -24,7 +24,7 @@ ROOT=Path(__file__).resolve().parents[1]
 class LocalInterpretationTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup);self.root=Path(self.temp.name)
-        inputs=self.root/'inputs';shutil.copytree(ROOT/'src/asof/demo/v2',inputs);self.inputs=inputs
+        inputs=self.root/'inputs';shutil.copytree(ROOT/'src/tether_engine/demo/v2',inputs);self.inputs=inputs
         case=replace(decode(Case,read_json(inputs/'case.json')),task='T6',endpoint=None)
         write_json(inputs/'case.json',encode(case))
         full=prepare_input(inputs/'case.json',inputs/'snapshot.json')
@@ -231,7 +231,7 @@ class LocalInterpretationTests(unittest.TestCase):
 
 
 def read_json_text(text):
-    from asof.serde import parse_json
+    from tether_engine.serde import parse_json
     return parse_json(text)
 
 

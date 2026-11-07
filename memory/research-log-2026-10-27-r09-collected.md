@@ -13,7 +13,7 @@ too broad. Pending human references did not prevent necessary engineering:
 the four-arm runner still required an invented request hash. That gate is now
 replaced for explicitly supplied immutable collected-source capabilities.
 
-AsOf 0.3.7 preserves invented behavior, source/admission semantics and matching
+TETHER 0.3.7 preserves invented behavior, source/admission semantics and matching
 0.3.1–0.3.6 verifiers. Fresh parents and token proofs are mandatory. Ordinary
 Windows input leases hold through dispatch/source verification; archived root
 strings are locator metadata. Replay requires caller-approved original roots.

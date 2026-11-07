@@ -1,9 +1,0 @@
-{"event": "started", "monotonic_seconds": 78345.578}
-{"event": "model_load_started", "monotonic_seconds": 78345.578}
-{"event": "models_loaded", "monotonic_seconds": 78345.578}
-{"event": "case_started", "monotonic_seconds": 78345.578, "case_id": "a"}
-{"event": "case_completed", "monotonic_seconds": 78345.593, "case_id": "a"}
-{"event": "case_started", "monotonic_seconds": 78345.593, "case_id": "b"}
-{"event": "case_completed", "monotonic_seconds": 78345.593, "case_id": "b"}
-{"event": "case_started", "monotonic_seconds": 78345.593, "case_id": "c"}
-{"event": "case_completed", "monotonic_seconds": 78345.609, "case_id": "c"}

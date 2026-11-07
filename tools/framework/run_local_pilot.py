@@ -14,7 +14,7 @@ import sys
 import time
 import urllib.request
 
-from asof.serde import fingerprint, sha256_file
+from tether_engine.serde import fingerprint, sha256_file
 
 
 def write(path, value):
@@ -24,7 +24,7 @@ def write(path, value):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--wire-format', default='canonical',
-        choices=('canonical', 'asof-shared-scientific-fields-v1'))
+        choices=('canonical', 'tether-shared-scientific-fields-v1'))
     parser.add_argument('--case-id', action='append', default=[])
     parser.add_argument('--protocol', type=Path, default=Path('planning/protocols/evaluation-v0.1.json'))
     args = parser.parse_args()
@@ -76,7 +76,7 @@ def main():
             check.bind(('127.0.0.1', 55580))
         command = [str(server), '--model', str(model), '--host', '127.0.0.1', '--port', '55580',
             '--ctx-size', '16384', '--parallel', '1', '--n-gpu-layers', '99', '--threads', '8',
-            '--alias', 'asof-qwen25-14b-q4km-b466e1f', '--no-webui', '--offline']
+            '--alias', 'tether-qwen25-14b-q4km-b466e1f', '--no-webui', '--offline']
         write(out / 'server-command.json', {'argv': command, 'runtime_sha256': sha256_file(server)})
         logs = [(out / ('server.' + name + '.log')).open('xb') for name in ('stdout', 'stderr')]
         try:
@@ -125,7 +125,7 @@ def main():
             case_id = case['case_id']; case_started = time.monotonic()
             event('case_started', case_id=case_id)
             run = out / case_id
-            argv = [sys.executable, '-m', 'asof', 'run', '--case', str(base / case_id / 'case.json'),
+            argv = [sys.executable, '-m', 'tether_engine', 'run', '--case', str(base / case_id / 'case.json'),
                 '--snapshot', str(base / case_id / 'snapshot.json'), '--catalog', 'data/catalog/sources.json',
                 '--local-model', str(out / 'model-config.json'), '--output', str(run)]
             with (out / (case_id + '.stdout.log')).open('xb') as stdout, (out / (case_id + '.stderr.log')).open('xb') as stderr:
@@ -134,7 +134,7 @@ def main():
             if completed.returncode:
                 raise RuntimeError('Local development case failed; inspect logs before any retry: ' + case_id)
             # A separate process rereads hashes and recomputes source-inclusive semantics.
-            check = subprocess.run([sys.executable, '-m', 'asof', 'verify', '--run-dir', str(run)],
+            check = subprocess.run([sys.executable, '-m', 'tether_engine', 'verify', '--run-dir', str(run)],
                 capture_output=True, timeout=600, creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
             (out / (case_id + '.verification.stdout.log')).write_bytes(check.stdout)
             (out / (case_id + '.verification.stderr.log')).write_bytes(check.stderr)

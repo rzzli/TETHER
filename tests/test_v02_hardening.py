@@ -8,15 +8,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from unittest.mock import patch
 
-from asof.agents import ExtractiveBackend, ReplayBackend, Usage
-from asof.artifacts import verify_run, write_run
-from asof.chrono import load_snapshot
-from asof.cli import main
-from asof.contracts import Case
-from asof.journal import RunJournal, inspect_run
-from asof.scorer import ScorerArtifact
-from asof.serde import ContractError, decode, encode, fingerprint, read_json, sha256_file, write_json
-from asof.workflow import Budget, run_workflow
+from tether_engine.agents import ExtractiveBackend, ReplayBackend, Usage
+from tether_engine.artifacts import verify_run, write_run
+from tether_engine.chrono import load_snapshot
+from tether_engine.cli import main
+from tether_engine.contracts import Case
+from tether_engine.journal import RunJournal, inspect_run
+from tether_engine.scorer import ScorerArtifact
+from tether_engine.serde import ContractError, decode, encode, fingerprint, read_json, sha256_file, write_json
+from tether_engine.workflow import Budget, run_workflow
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -26,7 +26,7 @@ class HardeningTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name)
         self.fixture = self.root / "fixture"
-        shutil.copytree(ROOT / "src/asof/demo/v2", self.fixture)
+        shutil.copytree(ROOT / "src/tether_engine/demo/v2", self.fixture)
         self.case = decode(Case, read_json(self.fixture / "case.json"))
         self.model = decode(ScorerArtifact, read_json(self.fixture / "scorer.json"))
 
@@ -47,7 +47,7 @@ class HardeningTests(unittest.TestCase):
         write_json(self.fixture / "snapshot.json", snapshot)
 
     def test_v1_execution_rejected(self):
-        legacy = decode(Case, read_json(ROOT / "src/asof/demo/case.json"))
+        legacy = decode(Case, read_json(ROOT / "src/tether_engine/demo/case.json"))
         with self.assertRaisesRegex(ContractError, "v2"):
             legacy.validate()
 
@@ -80,7 +80,7 @@ class HardeningTests(unittest.TestCase):
             self.assertIsNone(result.features.values["direction_alignment"].value)
             self.assertIn("outside_applicability", result.features.values["direction_alignment"].missing_reasons)
         other = replace(self.case, program=replace(self.case.program, program_id="other-program"))
-        self.assertFalse(store.query(other, __import__("asof.contracts", fromlist=["Category"]).Category.CLINICAL))
+        self.assertFalse(store.query(other, __import__("tether_engine.contracts", fromlist=["Category"]).Category.CLINICAL))
 
     def test_new_computed_result_uses_old_input_eligibility(self):
         def modify(packet):

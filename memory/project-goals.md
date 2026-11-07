@@ -8,20 +8,20 @@ updated: 2026-11-06
 
 # TETHER project goals
 
-New owner authorization on6November activates SC01–SC09 in
-[[TETHER Semantic Capability Execution Plan 2026-11-06]] and
-[[research-log-2026-11-06-semantic-execution]]. First decompose the sealed SciFact
-errors, then qualify/execute the full-context solver and evidence-use conditions,
-then LitQA2 retrieval/reranking/repair and ALCE/selectedScholarQA/R2E. Final audit
-requires all stages; a successful diagnostic alone does not complete this goal.
-SC01 is complete with all 300 cases independently reconstructed and old sources
-preserved; SC02 full-model qualification is complete and SC03 is active. Eight
-fictional parity cases plus overflow rejection, 24 component tests, 13 supervisor
-controls and independent reconstruction pass; root acceptance checks 421
-assertions/228 files. No new development predictions yet. See
-[[TETHER MultiVerS Qualification Results 2026-11-06]] and
-[[TETHER SciFact Error Decomposition Results 2026-11-06]]. Previous completed-goal
-status below is historical and does not supersede this new authorization.
+The owner has **paused** SC01–SC09 and requested a complete TETHER namespace and
+GitHub repository migration. See [[research-log-2026-11-06-namespace-migration]].
+The remote is rzzli/TETHER. Current interface0.6.0 and engine0.4.0 have new names
+and source identities; historical evidence stays in the approved tagged archive.
+Migration validation is complete: 2,112 full-suite tests, 905 experiment tests,
+143 facade tests, required probes and offline packaging pass. Finish publication,
+then stop. Do not resume scientific execution without a new owner instruction.
+
+SC01–SC03 were completed with their original code. The SC04 primary199-question,
+four-arm execution sealed796 answers and passed maintained replay. Its separate
+supplied-source diagnostic was interrupted at pause; retained partial outputs
+are not a completed result and must not be automatically repeated. Final
+independent scoring and SC04–SC09 remain unfinished. Later continuation must
+respect archived code/proofs and newly qualify changed namespaces.
 
 Current November 6 UTC execution: BG01–BG06 are complete in their declared scopes.
 SciFact27/300 strict-correct and LitQA2 12/199 correct remain weak public-task
@@ -158,7 +158,7 @@ Current identity: **TETHER — Target Evidence Tracking Harness for Evaluation a
 Reproducibility**. The owner explicitly requested rebranding the active project.
 See [[TETHER Naming and Compatibility Plan 2026-11-01]] and
 [[research-log-2026-11-01-tether-renaming]]. N01-N06 track the migration and final local checkpoint. Canonical
-TETHER 0.4.0 interfaces live in packages/tether; frozen AsOf 0.3.11 core/identifiers
+TETHER 0.4.0 interfaces live in packages/tether; frozen TETHER 0.3.11 core/identifiers
 and dated evidence remain unchanged for compatibility. Namespace/front-door
 tests pass 49/49 in full/core; twelve independent probes and isolated wheel
 installation/source verification pass after bounded-read/process-cleanup fixes.
@@ -443,7 +443,7 @@ checks and188 artifact hashes pass in the0.250s suite. Only the two intended fai
 change; prior31/12,38/5,41/2 and raw bits remain preserved. Full native25/entry/native
 bank/bridge/Win32/leases/physical14/new84/resources/science remain open. Next close
 the four actual bridge joins and independent positive bank/ticket oracle before source.
-AsOf0.3.11/defaultv2 retains1,774 tests/327 unchanged pins; no app-suite rerun or
+TETHER0.3.11/defaultv2 retains1,774 tests/327 unchanged pins; no app-suite rerun or
 default change. Data65/labels36/states17of32/joint-ready0of12 and HR1–HR4 remain
 pending; features empty/probabilities null. $0, downloader/monitor unchanged.
 See [[research-log-2026-10-31-component-guards]]. Independent current documentation QA PASS: `SOURCE5-CURRENT-DOCS-QA-v1.json`.
@@ -627,7 +627,7 @@ output sink, closed helper loading, exact caps and evidence checkers still open.
 The old profile/external timeout and all scientific/human gates remain unchanged.
 See [[research-log-2026-10-29-r09-unicode-controls]].
 
-Accepted AsOf **0.3.11** adds a separate pure v3 direct-GBNF preparation and
+Accepted TETHER **0.3.11** adds a separate pure v3 direct-GBNF preparation and
 validation path. Full 1,774 tests/327 source pins, required probes/package,
 default-installed/relocated checks and ten matching preserved versions pass.
 The ten-version qualification retains seven original successes plus three
@@ -761,7 +761,7 @@ the full original scope. The user has not authorized fabricated scientific
 judgments or a new periodic monitor. See [[research-log-2026-10-28-r09-duration]].
 
 R01–R06 engineering/preparation are accepted under the authorized sixteen-step
-plan. Latest accepted AsOf 0.3.11 passes 1,774 full tests with no failures/errors/skips, probes/package and installed
+plan. Latest accepted TETHER 0.3.11 passes 1,774 full tests with no failures/errors/skips, probes/package and installed
 recorded success/failure smoke; all 7 relocated legacy families pass guarded
 verification. Final validation pins 327 source/resource files and hashes two protected
 files without parsing or viewing their contents. All 63 historical code hashes were recovered
@@ -1259,7 +1259,7 @@ server stopped and port closed. Prediction seal59c4ec60... committeda31e228 befo
 answer join. Post-seal evaluator session25303 exited0; report035acb44... verifies
 all 32 arms and 13 distinct selected original rows. Independent original-candidate
 audit passed16/16 offered rows (reportab583afc...); 21 original files/794765685bytes.
-Acceptancec1650d23... passes. AsOf 6/8, adaptedVB6/8, lexical5/8, provider3/7
+Acceptancec1650d23... passes. TETHER 6/8, adaptedVB6/8, lexical5/8, provider3/7
 applicable. Three ties/two none-sufficient references; neither model abstained.
 Earlier87273/4744 and 25303/23536 handles are terminal; do not restart them.
 All numerical features empty/probabilities null; broader scientific Tasks6–8 open.
@@ -1511,7 +1511,7 @@ The ten-case, six-arm v0.2 comparison completed all **60 case-arm runs**:
 attempt. All sixty passed source-inclusive semantic verification. Predictions were
 sealed and their digest committed/pushed at `aab1c56` before the evaluator opened
 the sparse AI Q1 references. A retained audit then checked **20 distinct original
-rows**, two final AsOf selections per case. Independent agent acceptance passed;
+rows**, two final TETHER selections per case. Independent agent acceptance passed;
 this is a technical source/protocol review, not independently established biological truth.
 
 There were **114 fresh local native calls**, measured
@@ -1523,7 +1523,7 @@ dependency-free core validation runs 551 tests with 57 expected optional-ingesti
 Required probes, packaging/demo and all four Windows/Linux hosted jobs pass for code
 `dbdfa39`. The original pre-inference code `59374ac` passed 550 tests and four hosted jobs.
 
-AsOf selected **all 37 offered candidates**. This run does not establish difficult
+TETHER selected **all 37 offered candidates**. This run does not establish difficult
 prioritization, therapeutic accuracy, superiority or clinical prediction. The adapted
 Virtual Biotech arm is a restricted source-derived five-role reimplementation,
 not execution of its original SDK/research workflow; seven of its ten cases reached
@@ -1758,7 +1758,7 @@ The resumed steps produced a 24-trial origin mapping screen (12 candidates, five
 
 The user supplied the January 1, 2023 versioned AACT archive and confirmed its date. Full ZIP integrity checks, isolated PostgreSQL restoration and technical audits completed: 55 tables, 40,240,578 rows, 437,548 unique studies, 227 application indexes (322 including TOAST) valid, and 72 declared constraints validated. Nine stored-record rows for four NCT IDs have no matching study; they remain unchanged with the exception retained. Snapshot version date is supported by user confirmation/internal timestamps; exact first-public availability and strict benchmark eligibility remain unverified.
 
-Canonical restore: `E:/projects_data/drug_target_agents_data/derived/aact_restore/restore-20261017T011039Z/`. The database is cleanly stopped. Sanitized evidence is `data/manifests/public/2026-10-16-aact-restoration.json`; 419 evidence files are hash-bound locally. The catalog's scoped acquisition update records exactly one archive; no AsOf AACT adapter or agent-visible data was added. See [[AACT Historical Restoration]] for measured storage, date/missingness limitations and reproducible procedures. The 20–30-program audit and regional QTL/GWAS/LD pilot remain deferred next-to-do items. Existing downloader and periodic monitoring remain untouched; $0 provider spending.
+Canonical restore: `E:/projects_data/drug_target_agents_data/derived/aact_restore/restore-20261017T011039Z/`. The database is cleanly stopped. Sanitized evidence is `data/manifests/public/2026-10-16-aact-restoration.json`; 419 evidence files are hash-bound locally. The catalog's scoped acquisition update records exactly one archive; no TETHER AACT adapter or agent-visible data was added. See [[AACT Historical Restoration]] for measured storage, date/missingness limitations and reproducible procedures. The 20–30-program audit and regional QTL/GWAS/LD pilot remain deferred next-to-do items. Existing downloader and periodic monitoring remain untouched; $0 provider spending.
 
 ## Current status — October 16: context correction complete
 
@@ -1811,9 +1811,9 @@ The review's absence of live models/probabilities is accurate but describes inte
 
 ## Current implementation boundary — October 11
 
-The user authorized the full-project corrections and AsOf v0.2 completion. Current contracts, immutability, chronology/hypothesis gates, durable accounting and semantic verification are implemented; the pinned Open Targets 25.09/HGNC adapter is implemented. The fresh ten-case contemporary pilot and retained technical source review determine completion. See [[Project Audit and v0.2 Completion]] for measured status and the complete R01–R20/T1–T6/H1–H6/ablation matrix, [[docs/FRAMEWORK]] and [[docs/V02_MIGRATION]].
+The user authorized the full-project corrections and TETHER v0.2 completion. Current contracts, immutability, chronology/hypothesis gates, durable accounting and semantic verification are implemented; the pinned Open Targets 25.09/HGNC adapter is implemented. The fresh ten-case contemporary pilot and retained technical source review determine completion. See [[Project Audit and v0.2 Completion]] for measured status and the complete R01–R20/T1–T6/H1–H6/ablation matrix, [[docs/FRAMEWORK]] and [[docs/V02_MIGRATION]].
 
-The catalog now has **83 providers / 178 products**, including `asof_normalized_packets`. A selected contemporary normalization is not full-provider acquisition or historical validation. The frozen pilot manifest retains 65 missing inputs. Real numerical features remain empty, probabilities null, and independent biological adjudication unperformed. $0 provider spending; no new acquisitions, live model backend, MR, scorer training, competitor runs, historical backfill, T2–T5 or H6 implementation in this milestone.
+The catalog now has **83 providers / 178 products**, including `tether_normalized_packets`. A selected contemporary normalization is not full-provider acquisition or historical validation. The frozen pilot manifest retains 65 missing inputs. Real numerical features remain empty, probabilities null, and independent biological adjudication unperformed. $0 provider spending; no new acquisitions, live model backend, MR, scorer training, competitor runs, historical backfill, T2–T5 or H6 implementation in this milestone.
 
 Original planning documents, dated logs, old v1 fixtures/runs and the original incomplete build are preserved. The downloader and stopped periodic monitoring are untouched. Next scientific gates remain historical program/outcome access, complete regional genetics/LD, reviewed derivations and expert gold. The v0.2 technical pilot does not resolve clinical predictive validity or empirical power.
 
@@ -1823,19 +1823,19 @@ The dated paragraphs below record the progression from planning to acquisition a
 
 The user requested a detailed feasibility review of the planning documents covering framework, validation/benchmark data access, risks and an independent peer survey. They clarified that the survey should prioritize the agentic target-evaluation review, especially Virtual Biotech and related systems. On October 10 they subsequently requested starting the agent framework implementation.
 
-This review is complete in [[AsOf Feasibility Analysis and Peer Survey]]. The original planning documents remain intact. The user authorized the documentation-only scaffold, then on October 10 explicitly authorized starting public data downloads and checking capacity across D: and `E:\projects_data\drug_target_agents_data`. Resumable transport code, public acquisition, framework implementation and local synthetic checks are now within scope. Paid access/transfers, account registration, paid model runs, external outreach, preregistration submission and a final project budget have not been authorized.
+This review is complete in [[TETHER Feasibility Analysis and Peer Survey]]. The original planning documents remain intact. The user authorized the documentation-only scaffold, then on October 10 explicitly authorized starting public data downloads and checking capacity across D: and `E:\projects_data\drug_target_agents_data`. Resumable transport code, public acquisition, framework implementation and local synthetic checks are now within scope. Paid access/transfers, account registration, paid model runs, external outreach, preregistration submission and a final project budget have not been authorized.
 
 Recommended next stage, subject to the user's project decision: a six-week benchmark-first feasibility phase. Establish an observable clinical program endpoint, historical source restoration, dated mapping/labels, contained baseline execution, and pilot-based power before expanding the agent architecture.
 
 ## Framework implementation started
 
-The runnable first core is in `src/asof/`, with setup and commands in [[README]] and the implementation boundary in [[docs/FRAMEWORK]]. It includes strict case and evidence contracts, catalog-role and temporal gates, a deterministic planner, bounded model-independent extraction interface, critic/retry loop, append-only ledger, known-dependence feature aggregation, frozen logistic scoring/abstention, private run receipts and a separate descriptive evaluator. The offline and replay backends make no provider calls; all bundled observations and weights are synthetic.
+The runnable first core is in `src/tether_engine/`, with setup and commands in [[README]] and the implementation boundary in [[docs/FRAMEWORK]]. It includes strict case and evidence contracts, catalog-role and temporal gates, a deterministic planner, bounded model-independent extraction interface, critic/retry loop, append-only ledger, known-dependence feature aggregation, frozen logistic scoring/abstention, private run receipts and a separate descriptive evaluator. The offline and replay backends make no provider calls; all bundled observations and weights are synthetic.
 
 Real source adapters, dated cohort construction, a live model backend, fixed scientific tools, scorer training/calibration, OS containment, competitors and the full inferential protocol remain open. Periodic download monitoring is paused at the user's request; check progress only when asked.
 
 The user subsequently requested a code review and next-stage plan. See [[Framework Code Review and Next Stage Plan]] and [[framework-code-review]]. Existing tests pass, but targeted probes exposed five correctness issues and four integration gaps. Immediate work should fix T6 program dates, immutable/source-bound records, scorer preflight and durable failure handling, then establish hypothesis-aware real-data packets. The proposed v0.2 gate is ten reviewed real-data development dossiers with optional bounded model selection; historical cohort/evaluation remains separately gated by exact snapshot access. This review did not modify runtime code or begin those work packages.
 
-Unresolved dependencies: model lifecycle/training cutoffs; actual AACT snapshot restoration; UKB-PPP authorized regional retrieval; program/target mapping quality; mature independent label counts; empirical statistical power and staffing resources. See [[asof-feasibility-findings]] and [[research-log-2026-10-09]].
+Unresolved dependencies: model lifecycle/training cutoffs; actual AACT snapshot restoration; UKB-PPP authorized regional retrieval; program/target mapping quality; mature independent label counts; empirical statistical power and staffing resources. See [[tether-feasibility-findings]] and [[research-log-2026-10-09]].
 
 The full six-task benchmark, eight specialists, multiple complete competitors, H6 reanalysis and mature 24-month outcomes are not yet a credible fixed June 2027 commitment. A narrower methods/benchmark paper is the proposed fallback, with prospective outcomes later.
 

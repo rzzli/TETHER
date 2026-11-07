@@ -1,9 +1,0 @@
-{
-  "launcher_error_type": null,
-  "schema_version": 1,
-  "scope": "Parent launch through command return, including native stage sealing and console redirection when successful; excludes this timing record publication. A launcher error leaves process exit unknown.",
-  "completed_at_utc": "2026-11-06T04:03:16.8361456+00:00",
-  "wall_seconds": 77.2505843,
-  "exit_code": 0,
-  "automatic_retry": false
-}

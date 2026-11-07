@@ -7,7 +7,7 @@ import unittest
 import time
 from unittest.mock import patch
 
-from asof.serde import ContractError,canonical,encode,freeze
+from tether_engine.serde import ContractError,canonical,encode,freeze
 from experiments.labbench.score_run import analytical_controls, inspect_collected_sources, normalize_identifier, source_diagnostics,score_run,_compare_recaptured_context,verify_case_pair
 
 
@@ -105,8 +105,8 @@ class EvaluationGateTests(unittest.TestCase):
         from experiments.labbench.tests import test_policy as source_fixture
         from experiments.labbench import model,retrieval
         from experiments.labbench.tether_adapter import capture_context,verify_candidate
-        from asof.study.session import StudySession
-        from asof.workflow import Budget
+        from tether_engine.study.session import StudySession
+        from tether_engine.workflow import Budget
         fixture=transport_fixture.ModelTests();fixture.setUp()
         try:
             root=fixture.root;retrieval_root=root/'retrieval'

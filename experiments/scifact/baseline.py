@@ -22,8 +22,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import SGDClassifier
 from threadpoolctl import threadpool_limits
 
-from asof.atomic import publish_bytes
-from asof.serde import ContractError, canonical, freeze, parse_json
+from tether_engine.atomic import publish_bytes
+from tether_engine.serde import ContractError, canonical, freeze, parse_json
 
 LABELS = ("CONTRADICT", "NEI", "SUPPORT")
 SEED = 20261105

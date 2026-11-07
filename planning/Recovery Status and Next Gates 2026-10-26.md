@@ -26,7 +26,7 @@ The [detached-launch reassessment](<Project Progress Reassessment 2026-10-28 - D
 
 ## Outcome so far
 
-AsOf **0.3.11** is accepted for pure engineering preparation and validation:
+TETHER **0.3.11** is accepted for pure engineering preparation and validation:
 **1,774 full tests/327 unchanged pins**, required probes/package, default-installed
 and relocation checks pass. The v3 direct grammar preserves decoded values and
 complete post-validation; default native/controller dispatch remains v2. Eighteen
@@ -40,8 +40,8 @@ is retained. The optional Arrow proof separately qualifies five generated caches
 against unchanged source plus 755 unchanged copied files. Acceptance does not
 claim all 760 copied files stayed byte-identical.
 
-The [acceptance](review-assets/recovery-step9-generation-contract-20261028/acceptance.json)
-and [closeout](review-assets/recovery-step9-generation-contract-20261028/CLOSEOUT.md)
+The [acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json)
+and [closeout](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/CLOSEOUT.md)
 retain these boundaries. Protected outcomes were hashed only, never decoded.
 V1 semantic verification remains unavailable. The owner-installed C++ tools work
 without restart; the old actual-DLL fixture passes but unchanged-schema conversion
@@ -61,7 +61,7 @@ Observed process peak working set was 12,325,232,640 bytes; GPU peak and end-to-
 human/AI preparation costs were not measured. No stronger-model control was
 available. This cannot identify model capacity as the cause of failure.
 
-The [disposition](review-assets/recovery-step7-20261026/DISPOSITION.md) stops this
+The [disposition](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step7-20261026/DISPOSITION.md) stops this
 native version and batch expansion. Unblinded AI development triage identifies
 interface mismatches and real-source omissions/attribution concerns. It does not
 replace independent human judgment. A future interpretation experiment needs a
@@ -97,13 +97,13 @@ mapping is not a proven exact analytic inclusion roster; paper/repository trial
 counts differ. Known source-family overlap must be quarantined, and unknown
 membership must stay unknown.
 
-The [v4 exposure report](review-assets/recovery-step8-20261026/exposure-v4-report.md)
+The [v4 exposure report](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step8-20261026/exposure-v4-report.md)
 records 20 historical hypotheses / 18 unique targets, preserving all earlier
 revisions. Of the 56 intended preliminary combinations, 31 are conservatively
 quarantined for exact VB mapping overlap and 25 are nonmatches. Nonmatch does not
 prove freshness. All 571 v4 input pins pass its retained check.
 
-The [local metadata scan](review-assets/recovery-step8-20261026/source-feasibility.md)
+The [local metadata scan](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step8-20261026/source-feasibility.md)
 freshly hash-checked 112 originals / 8.22 GB and their archived receipts. It scanned
 22.88 million literature rows and retained 10,413 distinct matching evidence IDs,
 8,573 article identifiers and 1,417 articles shared across combinations. Fourteen
@@ -120,7 +120,7 @@ biological absence.
 There are 440 publication-year/date disagreements affecting 356 articles;
 six differences exceed three years. No date is silently repaired or assigned
 precedence. Publication and evidence dates are identical copies here, not
-independent corroboration. See the [date and review addendum](review-assets/recovery-step8-20261026/date-and-review-addendum.md).
+independent corroboration. See the [date and review addendum](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step8-20261026/date-and-review-addendum.md).
 Verified download observations support bounded contemporary availability, not
 historical eligibility or correct bibliographic dates. Current provider terms
 were checked separately; article/source-version qualification remains distinct.
@@ -131,12 +131,12 @@ CTLA4/Crohn's disease. It contains six fixed article IDs, eight intact passage
 occurrences, seven unique texts and 353 words including a duplicate. All six
 original row locators and source/receipt hashes replay. No replacement, silent
 clipping, case/hypothesis file or model request was created. See the
-[bounded report](review-assets/recovery-step8-20261026/bounded-source-qualification.md)
-and [current metadata follow-up](review-assets/recovery-step8-20261026/metadata-followup-v1.md).
+[bounded report](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step8-20261026/bounded-source-qualification.md)
+and [current metadata follow-up](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step8-20261026/metadata-followup-v1.md).
 All six current identities are now checked, with date precision and remaining
 rights uncertainty preserved separately from the original source fields.
 
-The [identity-only crosswalk](review-assets/recovery-step8-20261026/article-identity-crosswalk-v1/report.md)
+The [identity-only crosswalk](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step8-20261026/article-identity-crosswalk-v1/report.md)
 verified 57 historical descriptors and 58 declared eligible packets, projecting
 102,170 observation occurrences. It found PMID31019502 in a prior IL23A development
 packet. This establishes shared article identity, not identical passage content
@@ -171,7 +171,7 @@ Measured workload, broader domain coverage and final adjudication remain open;
 the two attribution/sufficiency differences are retained without majority voting.
 
 For the fixed two-context feasibility exercise, share only the
-[clean source-only bundle](../docs/expert-review-source-feasibility-20261026/Expert-source-review-share.zip).
+[clean source-only bundle](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/docs/expert-review-source-feasibility-20261026/Expert-source-review-share.zip).
 It is separate from candidate ratings and internal AI triage. A human response
 can assess these excerpts' usefulness and missing context; it does not turn
 development-exposed material into a fresh scientific evaluation.
@@ -183,7 +183,7 @@ are not complete.
 
 ## R09 engineering continuation
 
-The [accepted deterministic slice](review-assets/recovery-step9-20261026/acceptance.json)
+The [accepted deterministic slice](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-20261026/acceptance.json)
 adds pure extraction/lexical selection, exact source quotes, immutable results,
 recompute verification and neutral projections. It accepts only two authenticated
 invented fixtures and produces four fixed results. Nineteen artifact files and
@@ -198,8 +198,8 @@ link-ancestor rejection. File checks detect supported link/identity changes;
 path-based APIs do not establish immunity to every hostile filesystem race.
 The matching 0.3.2 wheel is preserved before further package changes.
 
-R09 is not complete. Its [requirement audit](review-assets/recovery-step9-20261026/R09-REQUIREMENT-AUDIT.md)
-and [comparator audit](review-assets/recovery-step9-20261026/COMPARATOR-ENGINEERING-AUDIT.md)
+R09 is not complete. Its [requirement audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-20261026/R09-REQUIREMENT-AUDIT.md)
+and [comparator audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-20261026/COMPARATOR-ENGINEERING-AUDIT.md)
 identified the earlier finite task: a prospective synthetic fixed-evidence specification
 and recorded contract for generated interpretation and explicitly adapted roles.
 It must preserve the default aggregate case budget, exact source parity, source-ID
@@ -210,7 +210,7 @@ acceptance, not remaining engineering work.
 
 ### Recorded contract and measured token feasibility
 
-The [0.3.3 recorded contract](review-assets/recovery-step9-comparison-20261026/acceptance.json)
+The [0.3.3 recorded contract](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-comparison-20261026/acceptance.json)
 now passes seventeen focused tests and the full1,536-test suite with no skips.
 Its installed twelve scripted cells/four pure results and a restored copy verify
 without original bundle/live-source access. Previous0.3.1 and 0.3.2 artifacts still
@@ -220,7 +220,7 @@ or independently assessed output was added.
 
 The unchanged real IL6R source set fails the current **byte-proxy** policy:85,173
 reservation units, or81,945 in one retained lossless trial, versus32,000. The
-[pinned offline tokenizer measurement](review-assets/recovery-step9-comparison-20261026/tokenizer-measurement-v1/REPORT.md)
+[pinned offline tokenizer measurement](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-comparison-20261026/tokenizer-measurement-v1/REPORT.md)
 resolves a different question: all six old native prompt counts reproduce exactly,
 and the full real six-stage schedule is 28,049 CLI tokens /28,241 with margins.
 Actual tokenized context fits the 16,384 ceiling per stage with 1,024 output reserved.
@@ -233,7 +233,7 @@ scalability.
 
 ### Accepted source/token preparation and next bridge
 
-The [0.3.4 acceptance](review-assets/recovery-step9-token-aware-20261026/acceptance.json)
+The [0.3.4 acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-token-aware-20261026/acceptance.json)
 passes 1,582 full tests, no failures/errors/skips, required probes/package, seven
 installed legacy families and matching frozen prior verifiers. All 297 code/resource
 pins and both protected hashes stayed unchanged. The first full-run discovery error
@@ -248,7 +248,7 @@ No model answers, new data, clinical features or probabilities were produced.
 See [API and limitations](../docs/SOURCE_AND_TOKEN_PREPARATION.md).
 
 The subsequent bounded engineering task was the separately reviewed
-[retrieval bridge](review-assets/recovery-step9-retrieval-20261026/CONTRACT-v3.md).
+[retrieval bridge](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-retrieval-20261026/CONTRACT-v3.md).
 It must qualify every candidate that influences ranking, including excluded
 records, preserve original source fields and parent availability/missingness, and
 distinguish invented fixtures from real admission. A one-row parity check is not
@@ -257,7 +257,7 @@ qualification and independent human/native evaluation remain unfinished.
 
 ### Accepted bounded retrieval and next execution contract
 
-The [0.3.5 bridge](review-assets/recovery-step9-retrieval-20261026/acceptance.json)
+The [0.3.5 bridge](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-retrieval-20261026/acceptance.json)
 passes 34 retrieval tests including seven peer tests, plus the full 1,616-test
 suite with no failures/errors/skips. Two policies operate on six clearly invented
 records; all candidates are authenticated before ranking. Two recorded consumer
@@ -271,7 +271,7 @@ and 65 missing inputs; no real universe is expanded. The previous 0.3.4 parent i
 correctly rejected by current admission before original data access. Matching
 frozen 0.3.4 still verifies its own accepted artifacts.
 
-The [next-gate audit](review-assets/recovery-step9-retrieval-20261026/NEXT-R09-GATE-AUDIT.md)
+The [next-gate audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-retrieval-20261026/NEXT-R09-GATE-AUDIT.md)
 requires one predeclared policy, an authority-aware four-arm contract and exact
 bounded preflight. It does not require a policy grid or a new controller. A narrow
 token-capacity extension is conditional on a concrete failed byte preflight and
@@ -280,7 +280,7 @@ reviews remain pending without blocking that engineering preparation.
 
 ### Accepted authority-bound four-arm execution — 27 October
 
-The [0.3.6 acceptance](review-assets/recovery-step9-four-arm-20261026/acceptance.json)
+The [0.3.6 acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-four-arm-20261026/acceptance.json)
 supersedes the earlier next action above. One invented case, one fixed retrieval
 policy, six recorded cells and two pure results finalize in 192.7 seconds, reserving
 14,315 input/6,144 output tokens under one unchanged budget. Full validation passes
@@ -294,14 +294,14 @@ started six new tokenizer children; both attempts total eight. No model generati
 server, provider spending, original E: writes or new downloads occurred. Parent
 peak working set was 36,966,400 bytes; child peak memory was not instrumented.
 
-The [closeout](review-assets/recovery-step9-four-arm-20261026/CLOSEOUT.md) separates
+The [closeout](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-four-arm-20261026/CLOSEOUT.md) separates
 mechanical acceptance from remaining real evidence-access/source-frame questions
 and native/scientific gates. Human submissions are still pending. Neither model
 quality nor the entire R09 step is accepted by this result.
 
 ### Five-record real retrieval and current scientific gate
 
-The [real-data check](review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md)
+The [real-data check](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md)
 declared all five existing literature records in the exposed IL6R case. All five
 original rows and complete eligible ancestors verify; both policies replay from
 an isolated installed 0.3.6 package. Preparation/replay took 26.218/12.266 seconds;
@@ -321,7 +321,7 @@ locked H5/clinical/genetics claims on this basis. R10–R16 retain their depende
 
 ### Collected-source four-arm integration — prior engineering acceptance
 
-The [0.3.7 closeout](review-assets/recovery-step9-collected-composition-20261027/CLOSEOUT.md)
+The [0.3.7 closeout](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-collected-composition-20261027/CLOSEOUT.md)
 corrects the previous blanket frontier: pending human reviews did not prevent
 connecting verified real sources to recorded execution. The old invented-only
 request gate has been removed for explicitly supplied collected capabilities.
@@ -335,7 +335,7 @@ relocation pass. All six matching preserved package versions pass. Features are
 empty; probabilities null; model calls/provider spending zero. This does not
 qualify source/question fit or independent scientific usefulness.
 
-The [next-gate assessment](review-assets/recovery-step9-collected-composition-20261027/NEXT-GATE-AUDIT.md)
+The [next-gate assessment](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-collected-composition-20261027/NEXT-GATE-AUDIT.md)
 identifies available engineering: separately version the model-backed interface,
 align R07 wire references/states/limits/schema and prove deterministic fixtures
 before prospective native qualification. Human reviews remain a separate open
@@ -352,7 +352,7 @@ all seven matching old versions. The explicit Unicode whitespace fix and origina
 failed schema/temp-path checks remain retained. Preparation is not source or
 dispatch authority and does not establish scientific usefulness.
 
-The [next contract](review-assets/recovery-step9-native-integration-20261027/CONTRACT.md)
+The [next contract](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-integration-20261027/CONTRACT.md)
 requires an actual adapter connected to the existing shared-case controller,
 including source/history/token authority, owned startup/shutdown, original native
 bytes and measured accounting. Fake-transport qualification comes before any
@@ -360,7 +360,7 @@ separately declared live experiment; no scientific gate is completed by it.
 
 ### Native adapter/controller — prior accepted integration slice
 
-The [0.3.9 closeout](review-assets/recovery-step9-native-integration-20261027/CLOSEOUT.md)
+The [0.3.9 closeout](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-integration-20261027/CLOSEOUT.md)
 connects the model-backed adapter to the existing shared-case controller with
 explicit source/model leases, original-path replies, history/token authority,
 owned lifecycle and measured/unknown/conservative accounting. It passes 1,724 full
@@ -375,12 +375,12 @@ zero. Source/model-inclusive installed replay and guarded run-copy relocation
 pass in 43.547/42.219 seconds with all guard lists empty. Original inputs remain
 explicitly available; independent raw/model restoration is not claimed.
 
-Next is [pinned grammar conformance](review-assets/recovery-step9-native-integration-20261027/NEXT-GRAMMAR-GATE.md),
+Next is [pinned grammar conformance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-integration-20261027/NEXT-GRAMMAR-GATE.md),
 then a separately declared finite experiment if eligible. Human reviews remain
 pending. No grammar, model-quality, fresh-case or scientific acceptance follows
 from fixture success, and R07's negative stop remains intact.
 
-Grammar [preparation/discovery](review-assets/recovery-step9-native-grammar-20261028/DISCOVERY-AND-NEXT-STEPS.md)
+Grammar [preparation/discovery](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-grammar-20261028/DISCOVERY-AND-NEXT-STEPS.md)
 now retains static approved-DLL exports and a 109-case corpus checked against the
 installed Python and independent schema engine. Native conversion/acceptance has
 not run. No compiler/toolchain was found on PATH or standard installation paths;
@@ -391,11 +391,11 @@ commit matches the retained runtime build prefix; build equivalence is unproven.
 A compatible model-free bridge and pinned headers/build correspondence are prerequisites for this
 route, not grounds to restart a server or substitute a permissive grammar.
 
-A subsequent [AI engineering audit](review-assets/recovery-step9-native-grammar-20261028/AI-ENGINEERING-AUDIT-039.md)
+A subsequent [AI engineering audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-grammar-20261028/AI-ENGINEERING-AUDIT-039.md)
 reproduces one component-level duration consistency gap in 0.3.9: a 9,999s native wrapper
 duration was accepted against a 244.906s cell budget. Original execution overrun or
 a full resealed-run bypass was not demonstrated. A regression-first
-[0.3.10 correction](review-assets/recovery-step9-native-duration-20261028/CONTRACT.md)
+[0.3.10 correction](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-duration-20261028/CONTRACT.md)
 is now accepted; original evidence remains preserved and human reviews are pending.
 
 The duration correction passes 75 targeted native/controller tests and eight
@@ -407,7 +407,7 @@ preserved. Actual native grammar remains untested.
 
 ### Duration correction — latest accepted engineering slice
 
-The [0.3.10 closeout](review-assets/recovery-step9-native-duration-20261028/CLOSEOUT.md)
+The [0.3.10 closeout](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-duration-20261028/CLOSEOUT.md)
 retains a fresh same-input source-linked simulation and all six wrapper/report/
 allocation comparisons. Installed default checks cover seven legacy families,
 twelve interface preparations and eight duration cases. Source/model-inclusive
@@ -416,7 +416,7 @@ with all guard lists empty. Original source/model roots remain required.
 
 The complete simulation takes **295.922/300 seconds**, leaving **4.078 seconds**
 without actual native startup or inference. Actual integrated feasibility is
-unestablished. The [retained timing audit](review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md)
+unestablished. The [retained timing audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md)
 makes no causal comparison from one observation or favorable-time retry.
 
 The new [full-project reassessment](Project%20Progress%20Reassessment%202026-10-28%20-%20R09%20Duration.md)
@@ -428,12 +428,12 @@ schema repair, permissive fallback or automatic R07 restart follows.
 
 ### Actual converter diagnostic — later terminal result
 
-The [fixed v3 protocol](review-assets/recovery-step9-native-grammar-20261028/FINITE-CONVERTER-EXECUTION-PROTOCOL-v3.json)
+The [fixed v3 protocol](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-grammar-20261028/FINITE-CONVERTER-EXECUTION-PROTOCOL-v3.json)
 ran once after root and independent AI engineering review. The mixed-JSON typed
 round-trip passes. The unchanged schema returns 14,866 bytes of grammar with an
 explicit incomplete-conversion warning: unsupported nonblank patterns accept any
 string. This is a negative qualification despite both children exiting zero.
-The [disposition](review-assets/recovery-step9-native-grammar-20261028/DISPOSITION.md)
+The [disposition](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-grammar-20261028/DISPOSITION.md)
 retains original diagnostics and hashes. Sealing-inclusive execution is 1.297
 seconds; child times are 0.094/0.078 seconds. Native child peak memory is unmeasured.
 No vocabulary, inference, model/server or provider spending occurred.
@@ -450,13 +450,13 @@ The next milestone is separately versioned contract design plus resource
 qualification. Preserve acceptance/post-validation, Unicode/length/reference
 semantics and original failed artifacts. Anchoring alone is insufficient. The
 295.922-second simulation remains evidence of little timing margin. The
-[critical options](review-assets/recovery-step9-native-grammar-20261028/CONTRACT-CORRECTION-OPTIONS.md)
+[critical options](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-grammar-20261028/CONTRACT-CORRECTION-OPTIONS.md)
 and latest reassessment define prerequisites; they authorize no native retry,
 permissive fallback or fresh scientific study.
 
 ### Pure v3 generation contract — accepted engineering milestone
 
-[0.3.11 acceptance](review-assets/recovery-step9-generation-contract-20261028/acceptance.json)
+[0.3.11 acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json)
 has SHA256 `491feb0f5fbeefb9df841de46d104b160e3ad4832241b449115037b79961070b`.
 The 37 new core tests are included in the full 1,774-test result. Four completion
 fault fixtures, five dependency-metadata regressions and five publisher fixtures

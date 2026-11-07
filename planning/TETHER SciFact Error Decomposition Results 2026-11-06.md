@@ -35,12 +35,12 @@ All four official native metric families were independently reconstructed. Raw a
 
 | Artifact | Location |
 |---|---|
-| Actual input/code/authority freeze | [INPUT-MANIFEST.json](review-assets/tether-semantic-20261106/decomposition/actual-freeze-attempt01/INPUT-MANIFEST.json) |
-| Per-case diagnostic output | [DECOMPOSITION.json](../data/benchmark/scifact_diagnostics/20261106-attempt01/DECOMPOSITION.json) |
-| Readable full count tables | [REPORT.md](../data/benchmark/scifact_diagnostics/20261106-attempt01/REPORT.md) |
-| Original-source preflight | [PREFLIGHT.json](review-assets/tether-semantic-20261106/methods/source-preflight-attempt02/PREFLIGHT.json) |
-| Independent comparison | [COMPARISON.json](review-assets/tether-semantic-20261106/methods/actual-comparison-attempt01/COMPARISON.json) |
-| Root acceptance | [ROOT-ACCEPTANCE.json](review-assets/tether-semantic-20261106/decomposition/ROOT-ACCEPTANCE.json) |
+| Actual input/code/authority freeze | [INPUT-MANIFEST.json](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-semantic-20261106/decomposition/actual-freeze-attempt01/INPUT-MANIFEST.json) |
+| Per-case diagnostic output | DECOMPOSITION.json (local artifact: `data/benchmark/scifact_diagnostics/20261106-attempt01/DECOMPOSITION.json`) |
+| Readable full count tables | REPORT.md (local artifact: `data/benchmark/scifact_diagnostics/20261106-attempt01/REPORT.md`) |
+| Original-source preflight | [PREFLIGHT.json](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-semantic-20261106/methods/source-preflight-attempt02/PREFLIGHT.json) |
+| Independent comparison | [COMPARISON.json](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-semantic-20261106/methods/actual-comparison-attempt01/COMPARISON.json) |
+| Root acceptance | [ROOT-ACCEPTANCE.json](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-semantic-20261106/decomposition/ROOT-ACCEPTANCE.json) |
 
 The first new preflight failed because its byte total omitted the receipt while the historical total included it. The failed attempt is retained; the corrected fresh attempt passes. No baseline discrepancy was found or repaired. Independent review here means separately implemented AI-assisted analysis, not external scientific adjudication.
 

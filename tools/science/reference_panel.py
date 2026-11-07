@@ -7,7 +7,7 @@ from datetime import date
 import hashlib
 from pathlib import Path
 
-from asof.serde import (ContractError, MAX_NORMALIZED_JSON_BYTES, fingerprint, parse_json,
+from tether_engine.serde import (ContractError, MAX_NORMALIZED_JSON_BYTES, fingerprint, parse_json,
                         read_json, safe_child, sha256_file)
 
 

@@ -18,7 +18,7 @@ paper result was generated during this review.
 Evidence: 0.3.11/default v2, 1,774 retained tests/327 accepted source pins; ten
 canonical dossiers report 31,554 observations across overlapping case worlds,
 and a 20-original-row mapping/technical audit is retained, not full scientific
-validation. The real selection study has 60 cells/114 calls; AsOf completes
+validation. The real selection study has 60 cells/114 calls; TETHER completes
 10/10, adapted prompt 3/10 with seven budget exhaustion outcomes. The top-one
 study has eight tasks across five exposed cases/32 cells/48 calls; both model
 arms match AI references on 6/8. These are selection/copy results, not full

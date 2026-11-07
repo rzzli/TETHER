@@ -6,7 +6,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from asof.serde import ContractError
+from tether_engine.serde import ContractError
 from tools.science.origin_maturity import maturity_reasons, select_candidates, select_mature
 from tools.science.outcome_inputs import study_query, validate_study_rows
 from tests import test_science_origin_review as source_fixture

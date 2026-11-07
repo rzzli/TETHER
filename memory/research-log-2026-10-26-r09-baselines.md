@@ -12,7 +12,7 @@ The sixteen-step goal remains active. Missing humans gate independent science,
 not all remaining engineering. R09 depends on the relevant R04/R06 helpers and
 R07 direction decision; R07 stopped its current native experiment.
 
-AsOf0.3.2 adds pure baselines and a tiny synthetic artifact publisher, reusing
+TETHER0.3.2 adds pure baselines and a tiny synthetic artifact publisher, reusing
 existing canonical/freezing, atomic publication and package/resource proofs.
 Only two authenticated invented source requests execute. Literal quotes remain
 exact; generated interpretations/features are empty, probability null and actual
@@ -45,7 +45,7 @@ Requirement and comparator audits identify meaningful next engineering without
 human input or model calls: a versioned synthetic fixed-evidence four-arm contract.
 Prospective PLAN-v2 SHA33d2b7dff7a3f834132b005be650129f0378cf74a1f3083dc60f8db2688e3a52
 and twelve payload specs pass peer source/schema/budget checks. One unchanged
-Budget is shared per fixture across AsOf1 + adaptedVB5 recorded stages and two
+Budget is shared per fixture across TETHER1 + adaptedVB5 recorded stages and two
 pure arms: input31715/28503,output6144,$0,300seconds. There is no per-arm reset.
 Only proven same-run source-ID proposals pass as explicitly untrusted feedback;
 no prior narrative, evaluator answer or source promotion. Proofs remain outside

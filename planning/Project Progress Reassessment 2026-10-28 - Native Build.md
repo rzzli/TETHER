@@ -1,7 +1,7 @@
 # Project progress reassessment — typed native build checkpoint
 
 **28 October 2026 UTC. Engineering build independently verified; native execution remains unqualified.**
-Accepted software remains AsOf **0.3.11**. This assessment follows the
+Accepted software remains TETHER **0.3.11**. This assessment follows the
 [sixteen-step plan](Project%20Recovery%20and%20Evaluation%20Plan%202026-10-26.md)
 and preserves the earlier
 [generation assessment](Project%20Progress%20Reassessment%202026-10-28%20-%20R09%20Generation.md).
@@ -13,18 +13,18 @@ payloads were not inspected.
 
 The owner-installed C++ Build Tools work without a restart. A typed public-C
 consumer of the pinned llama.cpp headers now compiles and links successfully.
-The [build report](../data/cache/r09-public-c-bridge-build-20261028T175036Z/build-report.json)
+The build report (local artifact: `data/cache/r09-public-c-bridge-build-20261028T175036Z/build-report.json`)
 records two successful owned tool processes, about 3.547 seconds through helper
 completion, no capture/cleanup error and a 188,416-byte x64 executable with SHA-256
 `9f955aec8310ded1cd26648c7d9828369751219975893d5f45b35073b6927696`.
 The compiler uses warnings-as-errors and the exact MSVC/SDK environment. Static
 inspection finds no upstream llama/GGML, network or process-spawning imports.
-The [independent result review](review-assets/recovery-step9-native-recognition-20261028/BUILD-RESULT-VERIFICATION.md) verifies all 193 input pins, the exact twelve-file output universe, eight journal events, both tool attempts/captures and x64 object/executable imports. The executable has **not run**. Recognition is disabled in its data header;
+The [independent result review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-recognition-20261028/BUILD-RESULT-VERIFICATION.md) verifies all 193 input pins, the exact twelve-file output universe, eight journal events, both tool attempts/captures and x64 object/executable imports. The executable has **not run**. Recognition is disabled in its data header;
 `--abi` exists for a later separately qualified observation. The build report's
 literal `ABI_disabled...built_not_executed` status must not be interpreted as an
 ABI test or as the absence of an ABI entry point.
 
-The [build decision](review-assets/recovery-step9-native-recognition-20261028/BUILD-ROOT-DECISION.json)
+The [build decision](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-recognition-20261028/BUILD-ROOT-DECISION.json)
 permits only compiler and linker execution. Its 193 pinned inputs, seven copied
 public headers and scoped source/helper reviews are retained. Compiler ownership
 covers the launched handles; complete compiler-descendant, memory and OS write
@@ -32,7 +32,7 @@ isolation were not established. That disclosed trusted-tool scope differs from
 the stronger boundary required before native target execution.
 
 Source prerequisites now have a finite
-[qualification](review-assets/recovery-step9-native-recognition-20261028/SOURCE-QUALIFICATION.md):
+[qualification](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-recognition-20261028/SOURCE-QUALIFICATION.md):
 22 new exact-commit references, 1,242,387 bytes and 207 receipt-bound output hashes.
 The public repository include graph closes at seven headers/thirteen edges.
 The selected no-allocation/vocabulary-only path skips explicit tensor-blob reads;
@@ -62,7 +62,7 @@ proof of zero GPU API activity or complete dependency unload is claimed.
    Independent decoding verified all 189 bindings, four grammars, six prefixes
    and 111 input hashes, but one original primary document contains raw NUL.
    Its bytes remain unchanged. The
-   [retained review](review-assets/recovery-step9-native-recognition-20261028/PACK-RESULT-VERIFICATION.md)
+   [retained review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-recognition-20261028/PACK-RESULT-VERIFICATION.md)
    holds native eligibility. Prospective format 2 preserves all 167 original
    documents and their pure 44/123 comparator observations, while separating
    166 byte-front native candidates (44/122) from that one harness-only case.
@@ -72,7 +72,7 @@ proof of zero GPU API activity or complete dependency unload is claimed.
 4. **Initial OS probe assertions were insufficient.** Memory allocation and a
    descendant attempt were rejected; owned explicit termination and last-job
    closure reaped their handles. However,
-   [independent review](review-assets/recovery-step9-native-recognition-20261028/OS-PROBE-RESULT-VERIFICATION.md)
+   [independent review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-recognition-20261028/OS-PROBE-RESULT-VERIFICATION.md)
    found two active-process counts with a configured limit of one. The original
    passing-status report remains preserved; unqualified containment is held.
    A new finite diagnostic will compare raw accounting with job-owned PID lists
@@ -92,7 +92,7 @@ inference or server execution in this checkpoint. The earlier R07 generation and
 closed converter diagnostics remain historical facts, not new successes. Provider
 spending stays $0. The package's 1,774 passing tests/327 source pins are the retained
 0.3.11 software evidence; they do not test this unexecuted native executable.
-Fresh [baseline hash checks](review-assets/recovery-step9-native-recognition-20261028/BUILD-CHECKPOINT-BASELINE-QA.json) match all 327 accepted source/resource pins and two protected hashes; protected payloads were not decoded. Two current working documents also had a Windows-default encoding roundtrip
+Fresh [baseline hash checks](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-recognition-20261028/BUILD-CHECKPOINT-BASELINE-QA.json) match all 327 accepted source/resource pins and two protected hashes; protected payloads were not decoded. Two current working documents also had a Windows-default encoding roundtrip
 corrected reversibly from retained backups; subsequent text edits use explicit
 UTF-8. No frozen evidence was rewritten.
 

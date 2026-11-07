@@ -24,11 +24,11 @@ spec = importlib.util.spec_from_file_location("independent_p05_input_audit", ASS
 s = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(s)
 a, RAW, TASKS = s.a, s.RAW, s.TASKS
-from asof.atomic import publish_bytes
-from asof.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
-from asof.journal import RunJournal
-from asof.provenance import InputGraph, catalog_index
-from asof.serde import encode
+from tether_engine.atomic import publish_bytes
+from tether_engine.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
+from tether_engine.journal import RunJournal
+from tether_engine.provenance import InputGraph, catalog_index
+from tether_engine.serde import encode
 from types import SimpleNamespace
 
 PARENT = ROOT / "data/benchmark/cohorts"
@@ -162,7 +162,7 @@ def build(output):
     try:
         names = ["p05-" + str(i).zfill(2) + ".task.json" for i in range(1, 13)] + ["source-snapshot.json", "selected-case-plan.json"]
         neutral_paths = [TASKS / "SEAL.json"] + [TASKS / n for n in names]
-        code_paths = sorted((ROOT / "src/asof").rglob("*.py")) + [ASSETS / "audit_source_registry_v3.py", ASSETS / "audit_source_inputs_v1.py", Path(__file__).resolve()]
+        code_paths = sorted((ROOT / "src/tether_engine").rglob("*.py")) + [ASSETS / "audit_source_registry_v3.py", ASSETS / "audit_source_inputs_v1.py", Path(__file__).resolve()]
         guard_paths = [p for p, h in PINS.values()] + neutral_paths + code_paths
         with a.stable_files(guard_paths, deadline=deadline):
             docs = {}

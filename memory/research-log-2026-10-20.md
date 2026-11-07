@@ -24,7 +24,7 @@ The ten-case, six-arm v0.2 comparison completed all **60 case-arm runs**:
 attempt. All sixty passed source-inclusive semantic verification. Predictions were
 sealed and their digest committed/pushed at `aab1c56` before the evaluator opened
 the sparse AI Q1 references. A retained audit then checked **20 distinct original
-rows**, two final AsOf selections per case. Independent agent acceptance passed;
+rows**, two final TETHER selections per case. Independent agent acceptance passed;
 this is a technical source/protocol review, not independently established biological truth.
 
 There were **114 fresh local native calls**, measured
@@ -36,7 +36,7 @@ dependency-free core validation runs 551 tests with 57 expected optional-ingesti
 Required probes, packaging/demo and all four Windows/Linux hosted jobs pass for code
 `dbdfa39`. The original pre-inference code `59374ac` passed 550 tests and four hosted jobs.
 
-AsOf selected **all 37 offered candidates**. This run does not establish difficult
+TETHER selected **all 37 offered candidates**. This run does not establish difficult
 prioritization, therapeutic accuracy, superiority or clinical prediction. The adapted
 Virtual Biotech arm is a restricted source-derived five-role reimplementation,
 not execution of its original SDK/research workflow; seven of its ten cases reached

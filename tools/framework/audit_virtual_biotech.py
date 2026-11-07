@@ -9,7 +9,7 @@ import argparse
 import ast
 import urllib.request
 
-from asof.serde import ContractError, sha256_file, write_json
+from tether_engine.serde import ContractError, sha256_file, write_json
 
 
 REVISION = '71f9da68c95c5ee0ef4c1d9b8f45f10693de022d'

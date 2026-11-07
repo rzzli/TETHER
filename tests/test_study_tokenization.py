@@ -10,11 +10,11 @@ import time
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError, canonical, encode, fingerprint
-from asof.journal import RunJournal
-from asof.study import tokenization as tok
-from asof.study.stable_read import checked_path, deadline_check, hash_file, stable_files
-from asof.study.tokenization import parse_token_trace, prepare_tokenizer_spec
+from tether_engine.serde import ContractError, canonical, encode, fingerprint
+from tether_engine.journal import RunJournal
+from tether_engine.study import tokenization as tok
+from tether_engine.study.stable_read import checked_path, deadline_check, hash_file, stable_files
+from tether_engine.study.tokenization import parse_token_trace, prepare_tokenizer_spec
 
 TEMP_ROOT = Path(__file__).resolve().parents[1] / 'data/cache'
 

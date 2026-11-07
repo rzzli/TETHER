@@ -2,8 +2,9 @@
 
 import unittest
 from pathlib import Path
+from tools.history import read_checkpoint
 
-from asof.serde import ContractError
+from tether_engine.serde import ContractError
 from tools import validate
 
 
@@ -12,7 +13,7 @@ ARCHIVE = "planning/review-assets/recovery-step9-native-recognition-20261028/che
 
 class ArchivedSyntaxGateTests(unittest.TestCase):
     def setUp(self):
-        self.raw = (Path(__file__).resolve().parents[1] / ARCHIVE).read_bytes()
+        self.raw = read_checkpoint(ARCHIVE)
 
     def test_exact_failed_original_is_classified_as_nonexecutable_archive(self):
         self.assertEqual(validate.validate_python_artifact(ARCHIVE, self.raw), "archived_invalid_source")
@@ -23,7 +24,7 @@ class ArchivedSyntaxGateTests(unittest.TestCase):
                 validate.validate_python_artifact(ARCHIVE, raw)
 
     def test_same_name_heuristic_or_same_bytes_at_another_path_is_not_exempt(self):
-        for path in ("other_before_syntax.py", "src/asof/" + Path(ARCHIVE).name):
+        for path in ("other_before_syntax.py", "src/tether_engine/" + Path(ARCHIVE).name):
             with self.subTest(path=path), self.assertRaises(SyntaxError):
                 validate.validate_python_artifact(path, self.raw)
 
@@ -32,5 +33,5 @@ class ArchivedSyntaxGateTests(unittest.TestCase):
         with self.assertRaises(SyntaxError):
             validate.validate_python_artifact("src/fictional.py", b"value = r'broken\\'\n")
         corrected = ARCHIVE.replace("_before_syntax.py", ".py")
-        raw = (Path(__file__).resolve().parents[1] / corrected).read_bytes()
+        raw = read_checkpoint(corrected)
         self.assertEqual(validate.validate_python_artifact(corrected, raw), "active_python")

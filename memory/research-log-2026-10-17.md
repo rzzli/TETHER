@@ -8,7 +8,7 @@ metadata:
 # Research log — October 17, 2026
 
 Objective: execute the bounded long-session queue after the user supplied the three
-requested AACT archives. Preserve the AsOf/Virtual Biotech-inspired separation of
+requested AACT archives. Preserve the TETHER/Virtual Biotech-inspired separation of
 agent evidence and evaluator outcomes, immutable originals, public-data scope and
 $0 provider spending. Completion is based on evidence, not consuming twelve hours.
 

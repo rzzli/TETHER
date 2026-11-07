@@ -1,8 +1,8 @@
 """Exact-version evaluator-only document retrieval from a retained registry listing."""
 from pathlib import Path
 import hashlib
-from asof.serde import ContractError,read_json,sha256_file,parse_json
-from asof.journal import read_chain
+from tether_engine.serde import ContractError,read_json,sha256_file,parse_json
+from tether_engine.journal import read_chain
 from tools.science.source_retrieval import registry_document_refs
 
 

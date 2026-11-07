@@ -12,7 +12,6 @@ import unittest
 from unittest.mock import patch
 
 REPOSITORY = Path(__file__).resolve().parents[2]
-QUALIFIED = REPOSITORY / 'data/cache/tether-051-installed-qualification-attempt02'
 sys.path.insert(0, str(REPOSITORY / 'experiments'))
 from equal_policy import cases, independent, materialize, policy_cases, reference
 
@@ -21,11 +20,15 @@ class NativeIndependentIntegration(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         identity = reference.runtime_identity()
-        if not sys.flags.isolated or not all('site-packages' in identity[k] for k in ('asof_file', 'tether_file')):
+        if not sys.flags.isolated or not all('site-packages' in identity[k] for k in ('tether_engine_file', 'tether_file')):
             raise RuntimeError('Run this suite with the pinned installed interpreter and -I')
-        if Path(identity['python']).resolve() != (QUALIFIED / 'environment/Scripts/python.exe').resolve():
-            raise RuntimeError('Wrong qualification environment')
-        cls.trusted = reference.trusted_runtime(QUALIFIED)
+        cls.fixture_root = tempfile.TemporaryDirectory()
+        cls.addClassCleanup(cls.fixture_root.cleanup)
+        fixture = Path(cls.fixture_root.name)
+        (fixture/'QUALIFICATION.json').write_text(json.dumps({
+            'scope':'invented unit envelope; current installed bytes, no inherited qualification',
+            'runtime':identity}),encoding='utf-8')
+        cls.trusted = reference.trusted_runtime(fixture)
 
     def setUp(self):
         cache = REPOSITORY / 'data/cache/equal-policy-native-unit'
@@ -66,8 +69,8 @@ class NativeIndependentIntegration(unittest.TestCase):
         root, descriptor = self.fixture(policy=True)
         before = {p.relative_to(root).as_posix(): p.read_bytes() for p in root.rglob('*') if p.is_file()}
         scratch = self.directory / 'independent-scratch'; scratch.mkdir()
-        with patch('asof.agents.ExtractiveBackend.quote', side_effect=AssertionError('No quote')), \
-             patch('asof.agents.ExtractiveBackend.select', side_effect=AssertionError('No dispatch')):
+        with patch('tether_engine.agents.ExtractiveBackend.quote', side_effect=AssertionError('No quote')), \
+             patch('tether_engine.agents.ExtractiveBackend.select', side_effect=AssertionError('No dispatch')):
             independent_result = independent.validate_bundle(root, descriptor, scratch_dir=scratch)
             reference_result = reference.validate_bundle(root, descriptor, scratch_dir=self.directory)
         self.assertEqual(independent_result['decision'], 'accept', independent_result)

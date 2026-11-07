@@ -8,7 +8,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 import numpy as np
-from asof.serde import ContractError
+from tether_engine.serde import ContractError
 from experiments.scifact import baseline
 from experiments.scifact.baseline import fit_model, load_model, load_model_bytes, save_model
 

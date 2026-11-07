@@ -18,9 +18,9 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 
-from asof.atomic import publish_bytes
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, canonical, freeze, parse_json, safe_child
+from tether_engine.atomic import publish_bytes
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, canonical, freeze, parse_json, safe_child
 
 BASE = "https://www.ebi.ac.uk/europepmc/webservices/rest/"
 DEFAULT_POLICY = freeze({"schema_version": 1, "query_algorithm": "longest_unique_question_tokens_v1",

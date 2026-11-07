@@ -10,7 +10,7 @@ import tempfile
 import unittest
 import zipfile
 
-from asof.serde import ContractError, canonical
+from tether_engine.serde import ContractError, canonical
 from experiments.scifact.native_contract import (
     MAX_PREDICTION_BYTES, parse_prediction, validate_prediction,
     validate_references, validate_schedule,

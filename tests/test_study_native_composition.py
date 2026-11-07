@@ -13,19 +13,19 @@ from threading import Event
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import replace
 from contextlib import ExitStack
-from asof.contracts import Category, Profile, Snapshot, SourceNode, TemporalClass
+from tether_engine.contracts import Category, Profile, Snapshot, SourceNode, TemporalClass
 from unittest.mock import Mock, patch
 
-from asof.serde import ContractError, canonical, encode, parse_json
-from asof.study import (
+from tether_engine.serde import ContractError, canonical, encode, parse_json
+from tether_engine.study import (
     authority_four_arm as composition,
     native,
     native_interpretation,
     source_preparation,
     tokenization,
 )
-from asof.study.interpretation_interface import request_from_payload
-from asof.study.native_mode import NativeExecutionConfig, ALIAS
+from tether_engine.study.interpretation_interface import request_from_payload
+from tether_engine.study.native_mode import NativeExecutionConfig, ALIAS
 from tests import test_study_collected_composition as collected
 from tests import test_study_native_mode as mode_helpers
 from tests import test_study_native as http_helpers

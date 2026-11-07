@@ -11,14 +11,14 @@ from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "packages/tether/src"))
-from asof.agents import ExtractiveBackend, Selection, Usage
-from asof.artifacts import verify_run, write_run
-from asof.chrono import load_snapshot
-from asof.contracts import Case, Category
-from asof.ledger import EvidenceLedger
-from asof.scorer import ScorerArtifact, abstain
-from asof.serde import ContractError, decode, encode, fingerprint, read_json, sha256_file, write_json
-from asof.workflow import Budget, run_workflow
+from tether_engine.agents import ExtractiveBackend, Selection, Usage
+from tether_engine.artifacts import verify_run, write_run
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case, Category
+from tether_engine.ledger import EvidenceLedger
+from tether_engine.scorer import ScorerArtifact, abstain
+from tether_engine.serde import ContractError, decode, encode, fingerprint, read_json, sha256_file, write_json
+from tether_engine.workflow import Budget, run_workflow
 from tether import _cli, _presentation as layer
 
 
@@ -28,7 +28,7 @@ class SemanticBoundaryTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         self.fixture = self.root / "fixture"
-        shutil.copytree(ROOT / "src/asof/demo/v2", self.fixture)
+        shutil.copytree(ROOT / "src/tether_engine/demo/v2", self.fixture)
         self.case = decode(Case, read_json(self.fixture / "case.json"))
         self.model = decode(ScorerArtifact, read_json(self.fixture / "scorer.json"))
         self.store = load_snapshot(self.fixture / "snapshot.json", self.case)
@@ -148,7 +148,7 @@ class SemanticBoundaryTests(unittest.TestCase):
             claim = original(ledger, category, observation_id)
             clock[0] = 2.0
             return claim
-        with patch("asof.workflow.time.monotonic", side_effect=lambda: clock[0]), patch.object(EvidenceLedger, "append", delayed):
+        with patch("tether_engine.workflow.time.monotonic", side_effect=lambda: clock[0]), patch.object(EvidenceLedger, "append", delayed):
             result = self.run_case(budget=Budget(max_seconds=1))
         target, digest = self.write(result)
         self.assertEqual(len(result.claims), 1)
@@ -160,7 +160,7 @@ class SemanticBoundaryTests(unittest.TestCase):
             def select(self, request):
                 clock[0] = 2.0
                 return super().select(request)
-        with patch("asof.workflow.time.monotonic", side_effect=lambda: clock[0]):
+        with patch("tether_engine.workflow.time.monotonic", side_effect=lambda: clock[0]):
             result = self.run_case(Slow(), budget=Budget(max_seconds=1))
         target, digest = self.write(result)
         self.assertIn("tether_semantics", layer.verify_engine(target, digest))

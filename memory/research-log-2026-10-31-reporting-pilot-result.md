@@ -10,8 +10,8 @@ metadata:
 P04 is complete as a negative exposed development result. The exact frozen
 twelve-cell protocol uses two real contexts plus artificial withholding. Final
 run 053531Z: five calls; seven returned, four malformed, one failed, zero
-unexecuted. Literal assembly completes 2/2 clean contexts; plain and AsOf each
-0/2. Literal assembly and AsOf's deterministic preflight correctly report missing
+unexecuted. Literal assembly completes 2/2 clean contexts; plain and TETHER each
+0/2. Literal assembly and TETHER's deterministic preflight correctly report missing
 inputs; always-abstain and plain do not satisfy that endpoint.
 
 Independent audit passes 2,216 checks and reconstructs source-inclusive scores.

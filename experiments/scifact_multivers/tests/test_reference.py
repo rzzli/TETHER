@@ -1,19 +1,37 @@
 """Independent archived-source numerical controls, with fictional tiny weights."""
 import copy
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
+import hashlib
+import json
 import unittest
 
 import torch
 
 from experiments.scifact_multivers.model import MultiVerS, decode, load_state_strict
-from experiments.scifact_multivers.reference import build_reference, capture_reference_sources
+from experiments.scifact_multivers.reference import build_reference, RECEIPTS
+from tools.history import read_checkpoint
 from experiments.scifact_multivers.tests.test_model import tiny_config
 
 
 class ReferenceTests(unittest.TestCase):
     def test_full_original_encoder_and_both_heads_agree_on_padded_global_context(self):
-        bundle = Path(__file__).resolve().parents[3]/'planning/review-assets/tether-semantic-20261106/solver-feasibility'
-        sources = capture_reference_sources(bundle)
+        # Re-read exact upstream bytes from immutable history. This preserves
+        # source-math comparison without pretending old absolute paths moved.
+        prefix = 'planning/review-assets/tether-semantic-20261106/solver-feasibility'
+        sources = {}
+        for name, expected in RECEIPTS.items():
+            raw = read_checkpoint(prefix+'/'+name)
+            self.assertEqual(hashlib.sha256(raw).hexdigest(), expected)
+            for row in json.loads(raw)['files']:
+                parts = PureWindowsPath(row.get('local_path', row['path'])).parts
+                marker = tuple((prefix+'/source').split('/'))
+                matches = [i for i in range(len(parts)) if tuple(parts[i:i+len(marker)]) == marker]
+                self.assertEqual(len(matches), 1)
+                relative = '/'.join(parts[matches[0]+len(marker):])
+                content = read_checkpoint(prefix+'/source/'+relative)
+                self.assertEqual(len(content), row['bytes'])
+                self.assertEqual(hashlib.sha256(content).hexdigest(), row['sha256'])
+                sources[relative] = content.decode('utf-8')
         torch.manual_seed(76)
         config = tiny_config()
         modern = MultiVerS(config).eval()

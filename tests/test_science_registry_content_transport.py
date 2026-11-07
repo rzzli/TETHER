@@ -8,8 +8,8 @@ import tempfile
 import unittest
 from unittest.mock import Mock, patch
 
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError
 from tools.science import registry_content_transport as transport
 
 

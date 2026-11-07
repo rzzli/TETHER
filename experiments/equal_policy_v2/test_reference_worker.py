@@ -26,7 +26,7 @@ class ReferenceTests(unittest.TestCase):
         self.python.parent.mkdir(parents=True)
         self.python.write_bytes(b'fictional interpreter')
         self.modules, proofs = {}, []
-        for name, version in (('asof', '0.3.12'), ('tether', '0.5.1')):
+        for name, version in (('tether_engine', '0.4.0'), ('tether', '0.6.0')):
             package = self.root / 'environment/Lib/site-packages' / name
             package.mkdir(parents=True)
             entry = package / '__init__.py'
@@ -37,14 +37,14 @@ class ReferenceTests(unittest.TestCase):
             wheel = self.root / 'wheels' / (name + '.whl')
             wheel.parent.mkdir(exist_ok=True)
             wheel.write_bytes(b'fictional qualified wheel ' + name.encode())
-            proofs.append(dict(path=str(wheel), distribution=name + '-target-agents',
+            proofs.append(dict(path=str(wheel), distribution={'tether_engine': 'tether-target-engine', 'tether': 'tether-target-agents'}[name],
                 record_verified=True, sha256=sha(wheel), bytes=wheel.stat().st_size,
                 source_sha256={name + '/__init__.py': sha(entry)}))
         presentation = ModuleType('tether._presentation')
         presentation.code_proof = lambda: dict(code={}, method='fictional')
         self.modules['tether._presentation'] = presentation
-        self.document = dict(status='PASS', versions={'asof-target-agents': '0.3.12',
-            'tether-target-agents': '0.5.1'}, wheel_proofs=proofs)
+        self.document = dict(status='PASS', versions={'tether-target-engine': '0.4.0',
+            'tether-target-agents': '0.6.0'}, wheel_proofs=proofs)
         self.save()
         self.addCleanup(patch.stopall)
         patch.dict(sys.modules, self.modules).start()
@@ -55,17 +55,17 @@ class ReferenceTests(unittest.TestCase):
 
     def test_qualified_runtime_captures_versions_and_actual_payload(self):
         observed = reference.trusted_runtime(self.root)
-        self.assertEqual(observed['versions'], dict(tether='0.5.1', asof='0.3.12'))
+        self.assertEqual(observed['versions'], dict(tether='0.6.0', tether_engine='0.4.0'))
         self.assertEqual(len(observed['wheels']), 2)
         self.assertEqual(observed['qualification']['sha256'], sha(self.root / 'QUALIFICATION.json'))
 
-    def test_supported_patched_pair_is_explicit(self):
+    def test_previous_runtime_pair_is_not_requalified_by_renaming(self):
         self.modules['tether'].__version__ = '0.5.2'
-        self.modules['asof'].__version__ = '0.3.13'
-        self.document['versions'] = {'asof-target-agents': '0.3.13', 'tether-target-agents': '0.5.2'}
+        self.modules['tether_engine'].__version__ = '0.3.13'
+        self.document['versions'] = {'tether-target-engine': '0.3.13', 'tether-target-agents': '0.5.2'}
         self.save()
-        self.assertEqual(reference.trusted_runtime(self.root)['versions'],
-                         dict(tether='0.5.2', asof='0.3.13'))
+        with self.assertRaisesRegex(ValueError, 'version pair'):
+            reference.trusted_runtime(self.root)
 
     def test_mixed_or_unsupported_versions_rejected(self):
         self.modules['tether'].__version__ = '0.5.2'
@@ -79,17 +79,17 @@ class ReferenceTests(unittest.TestCase):
             reference.trusted_runtime(self.root)
 
     def test_wheel_mutation_rejected(self):
-        (self.root / 'wheels/asof.whl').write_bytes(b'changed')
+        (self.root / 'wheels/tether_engine.whl').write_bytes(b'changed')
         with self.assertRaisesRegex(ValueError, 'wheel bytes'):
             reference.trusted_runtime(self.root)
 
     def test_installed_payload_cannot_requalify_itself(self):
-        Path(self.modules['asof'].__file__).write_text('# changed since qualification\n')
+        Path(self.modules['tether_engine'].__file__).write_text('# changed since qualification\n')
         with self.assertRaisesRegex(ValueError, 'payload differs'):
             reference.trusted_runtime(self.root)
 
     def test_product_outside_requested_installation_rejected(self):
-        self.modules['asof'].__file__ = str(self.root / 'elsewhere/asof/__init__.py')
+        self.modules['tether_engine'].__file__ = str(self.root / 'elsewhere/tether_engine/__init__.py')
         with self.assertRaisesRegex(ValueError, 'outside'):
             reference.trusted_runtime(self.root)
 

@@ -6,6 +6,7 @@ production claim, reference label, model fitting or benchmark score is used here
 import copy
 import hashlib
 import json
+import platform
 from pathlib import Path
 import sys
 import tempfile
@@ -13,8 +14,8 @@ from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
-from asof.journal import read_chain
-from asof.serde import ContractError, canonical, fingerprint, freeze
+from tether_engine.journal import read_chain
+from tether_engine.serde import ContractError, canonical, fingerprint, freeze
 from tether._process import EngineResult, EngineDeadlineExceeded, supervise_command
 from experiments.scifact.data_views import prepare_release, load_product
 from experiments.scifact.tether_adapter import NativeSession, make_request
@@ -103,7 +104,14 @@ class RunnerTests(unittest.TestCase):
         finally:stage.journal.close()
 
     def test_qualified_runtime_alias_is_explicitly_resolved_without_relaxing_artifact_paths(self):
-        qualification=ROOT/"planning/review-assets/tether-scifact-20261105/ENVIRONMENT-QUALIFICATION-02.json"
+        # Invented executable-identity fixture; not a scientific/runtime qualification.
+        qualification=self.root/"invented-executable-identity.json"
+        expected={"executable":str(Path(sys.executable).absolute()),
+                  "base_executable":str(Path(getattr(sys,"_base_executable",sys.executable)).absolute()),
+                  "version":platform.python_version()}
+        for key in ("executable","base_executable"):
+            expected[key+"_sha256"]=hashlib.sha256(Path(expected[key]).read_bytes()).hexdigest()
+        write(qualification,{"status":"PASS","python":expected,"installed":{}})
         result=capture_runtime(qualification)
         expected=read(qualification)["python"]
         base=result["executables"]["base_executable"]

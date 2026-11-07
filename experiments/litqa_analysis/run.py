@@ -22,7 +22,7 @@ from experiments.litqa_analysis import envelopes
 
 PRIMARY_FIXTURE_SHA='8de520bfdef4dbe7b6363aeb962b8c4bb453adc475297aca2fa08d88e7c10cf0'
 SUPPLIED_FIXTURE_SHA='f9dd1f8b8d0a560730d0450cec03647ec8adcba5d23e0836c16e6af03c1cf19c'
-SOURCE_ROOTS=('experiments/litqa_analysis','experiments/labbench','src/asof','packages/tether/src/tether')
+SOURCE_ROOTS=('experiments/litqa_analysis','experiments/labbench','src/tether_engine','packages/tether/src/tether')
 OUTPUT_CAP=4*1024**2
 
 
@@ -52,7 +52,7 @@ def source_pins():
 
 def environment():
     packages={}
-    for name in ('asof-target-agents','tether-target-agents'):
+    for name in ('tether-target-engine','tether-target-agents'):
         try:packages[name]=importlib.metadata.version(name)
         except importlib.metadata.PackageNotFoundError:packages[name]=None
     return dict(python=sys.version,executable=envelopes.proof(sys.executable),platform=dict(sys_platform=sys.platform,os_name=os.name,windows_version=list(sys.getwindowsversion()) if hasattr(sys,'getwindowsversion') else None),

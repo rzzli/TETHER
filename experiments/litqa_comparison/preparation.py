@@ -6,9 +6,9 @@ the new predictor products. Model/retrieval workers consume only those products.
 """
 from pathlib import Path
 
-from asof.atomic import publish_bytes
-from asof.journal import RunJournal
-from asof.serde import canonical,encode,freeze,parse_json,safe_child
+from tether_engine.atomic import publish_bytes
+from tether_engine.journal import RunJournal
+from tether_engine.serde import canonical,encode,freeze,parse_json,safe_child
 from experiments.labbench.data_views import verify_views,load_queries
 from experiments.labbench.native_contract import validate_query
 from .codecs import question_view,need,digest

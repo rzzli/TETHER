@@ -1,9 +1,0 @@
-test_01_exact_devnull_launch_reap_and_other_writes_rejected (__main__.HarnessV3Tests.test_01_exact_devnull_launch_reap_and_other_writes_rejected) ... ok
-test_02_inventory_overrun_before_receipt_fails_closed (__main__.HarnessV3Tests.test_02_inventory_overrun_before_receipt_fails_closed) ... ok
-test_03_post_receipt_overrun_keeps_receipt_but_failure_vetoes (__main__.HarnessV3Tests.test_03_post_receipt_overrun_keeps_receipt_but_failure_vetoes) ... ok
-
-----------------------------------------------------------------------
-Ran 3 tests in 0.111s
-
-OK
-{"status": "passed", "tests": 3, "output": "D:\\Projects\\drug_target_agents\\data\\cache\\r09-converter-harness-v3-regressions-1793162150480679000", "actual_converter_children": 0}

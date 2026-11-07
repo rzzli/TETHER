@@ -1,7 +1,7 @@
 import copy
 import unittest
 
-from asof.serde import ContractError,fingerprint
+from tether_engine.serde import ContractError,fingerprint
 from tools.science.outcome_results import RESULT_FIELDS,STUDY_FIELDS,results_query,regenerate_results,validate_result_rows
 
 

@@ -10,8 +10,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError, canonical, fingerprint, parse_json
-from asof.study import native_diagnostic as diagnostic
+from tether_engine.serde import ContractError, canonical, fingerprint, parse_json
+from tether_engine.study import native_diagnostic as diagnostic
 from tests import test_study_native_diagnostic as diagnostic_tests
 from tests.test_study_native_diagnostic import fixture_inputs
 

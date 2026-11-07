@@ -8,7 +8,7 @@ updated: 2026-10-28
 
 # Accepted pure generation contract
 
-AsOf 0.3.11 is accepted for pure engineering preparation and validation under
+TETHER 0.3.11 is accepted for pure engineering preparation and validation under
 `planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json`.
 SHA256: `491feb0f5fbeefb9df841de46d104b160e3ad4832241b449115037b79961070b`.
 The earlier [[research-log-2026-10-28-r09-generation]] remains a preserved

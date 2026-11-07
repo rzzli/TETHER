@@ -92,7 +92,7 @@ def main() -> None:
                                   "allow_reconstructed": False, "artifacts": artifacts})
     write(root / "scorer.json", {
         "schema_version": 1, "model_id": "synthetic-logistic-v1", "kind": "synthetic_demo",
-        "feature_schema": "asof-features-v1", "aggregation": "mean_of_unique_dependency_groups_v1",
+        "feature_schema": "tether-features-v1", "aggregation": "mean_of_unique_dependency_groups_v1",
         "endpoint": "phase_2_to_3", "horizon_months": 24, "phases": [2], "modalities": ["small_molecule"],
         "intended_actions": ["inhibit"], "target_namespace_versions": ["demo-v1"],
         "indication_namespace_versions": ["demo-v1"], "training_origin_max": "2020-01-01",

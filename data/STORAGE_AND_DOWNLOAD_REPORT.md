@@ -2,7 +2,7 @@
 title: Storage Capacity and Initial Download Report
 date: 2026-10-10
 tags:
-  - asof
+  - TETHER
   - storage
   - acquisition
 status: downloads-started

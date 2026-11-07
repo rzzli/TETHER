@@ -1,7 +1,0 @@
-{
-  "exit_code": 1,
-  "expected_assertion_failure": true,
-  "script_sha256": "5a0ebfd307e97bd3d1cc37191beec3ec4672c2d5097a748f8844d2e431656eb4",
-  "test": "tests.test_download_report_publication.DownloadReportPublicationTests.test_report_cannot_replace_receipt",
-  "temporary_root": "D:\\Projects\\drug_target_agents\\data\\cache\\review-temp"
-}

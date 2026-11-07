@@ -1,4 +1,6 @@
 ---
+
+> Namespace migration, 6 November 2026: collection measurements below describe retained historical acquisitions. Original receipts are in the [tagged archive](../docs/ARCHIVE.md); current artifact policy has no inherited grants. New engine identities require newly bound products, not rewritten original receipts.
 title: TETHER Full Data Requirements and Acquisition Plan
 date: 2026-10-09
 updated: 2026-11-01
@@ -20,7 +22,7 @@ complete within their declared technical scopes. The retained P09 run reproduces
 source audit passes 6,862 checks. The historical pre-rename 53-member P10b packet
 repeats byte-for-byte and passes 200 independent archive checks. The current
 72-member TETHER review packet also repeats byte-for-byte and passes 946
-independent archive checks; see the [TETHER packet record](../paper/release/tether/RELEASE-RECORD.json)
+independent archive checks; see the [TETHER packet record](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/paper/release/tether/RELEASE-RECORD.json)
 and [current rename/status review](<../planning/TETHER Rename Completion and Project Status 2026-11-01.md>).
 Owner declarations and final author
 acceptance remain deferred, so P08/P10 and submission readiness remain incomplete.
@@ -30,7 +32,7 @@ The rename changes no collection status, original, receipt, dataset role or stud
 selection. Earlier dated acquisition and development checkpoints below retain
 their original scope.
 
-TETHER means Target Evidence Tracking Harness for Evaluation and Reproducibility. See [catalog identity and history](catalog/README.md); the frozen AsOf engine and temporal/dataset identifiers remain compatible.
+TETHER means Target Evidence Tracking Harness for Evaluation and Reproducibility. See [catalog identity and history](catalog/README.md); the frozen TETHER engine and temporal/dataset identifiers remain compatible.
 
 **Current evaluation policy, 31 October 2026:** the owner has removed external expert responses as inputs and prerequisites. Follow the [AI only evaluation plan](../planning/AI%20Only%20Evaluation%20Plan%202026-10-31.md). Existing bespoke responses, ratings, normalizations and response-aware derivatives are archive-only and excluded from future reference building, generation, evaluation, tuning and selection. New AI references remain evaluator-only; mechanically checkable source facts and qualified versioned datasets support automated evaluation, not independent clinical truth. Earlier requirements for expert checks/annotations are superseded for the active phase; unresolved scientific labels stay unknown/excluded or their branch is deferred. Collection metadata changes only with retained neutral acquisition evidence; scientific validation and original data remain separate. P03 enforces source/receipt/role/lineage rules; generation packets never consume evaluator references or descendants.
 
@@ -105,16 +107,16 @@ do not change provider/product counts or promote historical predictors. See
 remain historical; the current project memory and TODO identify the next gate.
 
 
-This is the data implementation of [[AsOf Feasibility Analysis and Peer Survey]] and the revalidated scaffold approved by the user. The initial documentation deliverable was completed without dataset acquisition or analysis. On October 10 the user authorized public downloads, storage sizing and the external E: root; starter data are now collected and the core wave has started. See [[data/STORAGE_AND_DOWNLOAD_REPORT|the acquisition/storage report]] for this subsequent phase. Subsequent technical normalization and regional LD QC are documented below; no adjudicated clinical benchmark labels or validated clinical predictions have been created.
+This is the data implementation of [[TETHER Feasibility Analysis and Peer Survey]] and the revalidated scaffold approved by the user. The initial documentation deliverable was completed without dataset acquisition or analysis. On October 10 the user authorized public downloads, storage sizing and the external E: root; starter data are now collected and the core wave has started. See [[data/STORAGE_AND_DOWNLOAD_REPORT|the acquisition/storage report]] for this subsequent phase. Subsequent technical normalization and regional LD QC are documented below; no adjudicated clinical benchmark labels or validated clinical predictions have been created.
 
-The authoritative inventory, [[data/catalog/sources.json|sources.json]], contains **83 providers and 178 dataset/product records**. It covers every source family in the original proposal plus dependency data needed for identifiers, LD, temporal reconstruction, terminology, validation and optional component compatibility. The additional v0.2 product is `asof_normalized_packets`. Provider count is not study count; overlapping sources and bundles are explicitly recorded. Current implementation status is in [[Project Audit and v0.2 Completion]]; dated scaffold checks below retain their original counts.
+The authoritative inventory, [[data/catalog/sources.json|sources.json]], contains **83 providers and 178 dataset/product records**. It covers every source family in the original proposal plus dependency data needed for identifiers, LD, temporal reconstruction, terminology, validation and optional component compatibility. The additional v0.2 product is `tether_normalized_packets`. Provider count is not study count; overlapping sources and bundles are explicitly recorded. Current implementation status is in [[Project Audit and v0.2 Completion]]; dated scaffold checks below retain their original counts.
 
-October 16 addition: one January 1, 2023 AACT archive is collected and technically restored on E: (55 tables; 437,548 unique studies). Nine stored-record rows have unmatched study IDs and are preserved as exceptions. See [[AACT Historical Restoration]] and `data/manifests/public/2026-10-16-aact-restoration.json`. This does not provide an AsOf AACT adapter, clinical cohort, scientific validation or exact first-public availability; the resumed program screen and regional technical pilot are described next.
+October 16 addition: one January 1, 2023 AACT archive is collected and technically restored on E: (55 tables; 437,548 unique studies). Nine stored-record rows have unmatched study IDs and are preserved as exceptions. See [[AACT Historical Restoration]] and `data/manifests/public/2026-10-16-aact-restoration.json`. This does not provide an TETHER AACT adapter, clinical cohort, scientific validation or exact first-public availability; the resumed program screen and regional technical pilot are described next.
 
 October 16 continuation: [[Clinical and Genetics Feasibility Pilot]] records a 24-trial evaluator-only origin screen and regional BLUEPRINT QTD000021 / GCST90132223 / IGSR slices. The regional QC retains 1,690 variants and 503 EUR reference samples, with explicit provider metadata exceptions. January 2025 follow-up is still missing; labels remain null. Scoped acquisition/provenance is in `data/manifests/public/2026-10-16-feasibility-pilots.json`; this does not promote full-source catalog status or admit historical agent inputs.
 
 
-January 2025 continuation: [[AACT January 2025 Follow-up]] records the second restored AACT archive (50 tables; 520,688 studies), all 24 frozen trial IDs matched, and clean shutdown. The scoped catalog acquisition is now two archives, backed by `data/manifests/public/2026-10-16-aact-paired-acquisition.json`. No AsOf parser/agent admission or clinical labels were added; dated program-event/censoring adjudication remains the next gate. This supersedes the missing-follow-up statements in earlier entries.
+January 2025 continuation: [[AACT January 2025 Follow-up]] records the second restored AACT archive (50 tables; 520,688 studies), all 24 frozen trial IDs matched, and clean shutdown. The scoped catalog acquisition is now two archives, backed by `data/manifests/public/2026-10-16-aact-paired-acquisition.json`. No TETHER parser/agent admission or clinical labels were added; dated program-event/censoring adjudication remains the next gate. This supersedes the missing-follow-up statements in earlier entries.
 
 ## October 17 completed continuation
 
@@ -671,7 +673,7 @@ Every listed ID resolves in the catalog. The `source` column is a provider ID; t
 
 | Dataset/product ID | Source | Stage | Role | Product |
 | --- | --- | --- | --- | --- |
-| `asof_normalized_packets` | `project` | 2 / P1 | agent_evidence | Pinned contemporary OT/HGNC v2 packets with complete raw-parent lineage and coverage |
+| `tether_normalized_packets` | `project` | 2 / P1 | agent_evidence | Pinned contemporary OT/HGNC v2 packets with complete raw-parent lineage and coverage |
 | `evidence_ledgers` | `project` | 2 / P1 | agent_evidence | Typed evidence ledger and dependency groups |
 | `genetics_results` | `project` | 2 / P1 | agent_evidence | Calculated cis-MR, colocalization, direction and PheWAS results |
 | `feature_snapshots` | `project` | 2 / P1 | agent_evidence | Per-origin deterministic and agent-derived predictor features |

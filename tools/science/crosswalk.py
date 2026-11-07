@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 import hashlib
 from pathlib import Path
 
-from asof.serde import ContractError, fingerprint, read_json, sha256_file, write_json
+from tether_engine.serde import ContractError, fingerprint, read_json, sha256_file, write_json
 
 
 HYPOTHESIS_FIELDS = ("target_id", "indication_id", "target_namespace_version",

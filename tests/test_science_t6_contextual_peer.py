@@ -5,7 +5,7 @@ claim, native run, ignored input, network request or model call is involved.
 """
 import unittest
 
-from asof.serde import ContractError
+from tether_engine.serde import ContractError
 from tests import test_science_t6_contextual_audit as fixtures
 from tools.science.t6_contextual_audit import validate_inventory
 

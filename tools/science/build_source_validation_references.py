@@ -22,13 +22,13 @@ sys.path.insert(0, str(WORKSPACE / "src"))
 sys.path.insert(0, str(WORKSPACE / "tools/science"))
 import prepare_source_validation_set as stage1
 import prepare_source_validation_inputs as source_inputs
-from asof.atomic import publish_bytes
-from asof.journal import RunJournal
-from asof.provenance import InputGraph, catalog_index, check_role
-from asof.serde import ContractError, canonical, encode, fingerprint, parse_json
-from asof.study.source_fact_sources import compile_reference, validate_task, verify_reference
-from asof.study.proofs import _relative
-from asof.study.stable_read import checked_path, deadline_check, hash_file, read_file, stable_files
+from tether_engine.atomic import publish_bytes
+from tether_engine.journal import RunJournal
+from tether_engine.provenance import InputGraph, catalog_index, check_role
+from tether_engine.serde import ContractError, canonical, encode, fingerprint, parse_json
+from tether_engine.study.source_fact_sources import compile_reference, validate_task, verify_reference
+from tether_engine.study.proofs import _relative
+from tether_engine.study.stable_read import checked_path, deadline_check, hash_file, read_file, stable_files
 
 ASSETS = stage1.ASSETS
 PLAN_PATH = ASSETS / "REFERENCE-PLAN-DRAFT-v1.json"

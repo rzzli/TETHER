@@ -3,7 +3,7 @@ import hashlib
 from types import SimpleNamespace
 import unittest
 
-from asof.serde import fingerprint
+from tether_engine.serde import fingerprint
 from experiments.scifact_comparison.inputs import digest
 from experiments.scifact_comparison.policy import CONFIGURATION, check_primary, validate_pair_decode
 

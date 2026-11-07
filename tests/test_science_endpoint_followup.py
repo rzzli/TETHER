@@ -6,8 +6,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.journal import RunJournal
-from asof.serde import ContractError,read_json,write_json,sha256_file
+from tether_engine.journal import RunJournal
+from tether_engine.serde import ContractError,read_json,write_json,sha256_file
 from tools.science.endpoint_followup import join_snapshot,verify_extraction,ROOT
 from tools.science.outcome_inputs import validate_study_rows
 from tools.science.outcome_results import validate_result_rows
@@ -23,7 +23,7 @@ class EndpointExecutionTests(unittest.TestCase):
         plan=self.helper.plan(root);plan['parents']=[]
         code=['tools/science/outcome_extract.py','tools/science/endpoint_followup.py','tools/science/outcome_inputs.py',
             'tools/science/outcome_results.py','tools/science/ascertainment_policy.py','tools/science/origin_programs.py',
-            'tools/science/reference_panel.py','src/asof/serde.py','src/asof/journal.py']
+            'tools/science/reference_panel.py','src/tether_engine/serde.py','src/tether_engine/journal.py']
         plan['executed_code']=[{'path':str(ROOT/n),'sha256':sha256_file(ROOT/n)} for n in code]
         archives=[]
         for source in plan['executed_code']:

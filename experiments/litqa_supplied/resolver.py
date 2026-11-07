@@ -10,9 +10,9 @@ import time
 from urllib.parse import urlencode
 import xml.etree.ElementTree as ET
 
-from asof.atomic import publish_bytes
-from asof.journal import RunJournal,read_chain
-from asof.serde import canonical,encode,freeze,parse_json,safe_child,ContractError
+from tether_engine.atomic import publish_bytes
+from tether_engine.journal import RunJournal,read_chain
+from tether_engine.serde import canonical,encode,freeze,parse_json,safe_child,ContractError
 from experiments.labbench import retrieval as legacy
 from experiments.litqa_comparison.codecs import need,digest
 

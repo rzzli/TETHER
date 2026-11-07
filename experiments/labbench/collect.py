@@ -20,10 +20,10 @@ if __package__ in (None, ""):
     sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
     __package__ = "experiments.labbench"
 
-from asof.atomic import publish_bytes
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, canonical, freeze, parse_json, safe_child
-from asof.study.stable_read import read_file, stable_files
+from tether_engine.atomic import publish_bytes
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, canonical, freeze, parse_json, safe_child
+from tether_engine.study.stable_read import read_file, stable_files
 from . import data_views, retrieval
 
 MAX_COLLECTION_JSON = 32 * 1024 * 1024

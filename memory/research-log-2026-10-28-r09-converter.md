@@ -16,7 +16,7 @@ incomplete-conversion warning: unsupported nonblank patterns accept any string.
 This closes the finite gate **negative**, despite both child exit codes being zero.
 No vocabulary, model, inference or server stage followed; provider spending is $0.
 
-The [disposition](../planning/review-assets/recovery-step9-native-grammar-20261028/DISPOSITION.md)
+The [disposition](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-grammar-20261028/DISPOSITION.md)
 retains exact inputs/outputs, diagnostics, module proofs and original failed
 attempts. Protocol SHA256:
 `a4f09687d19bc2803a4b419c6c707044d6f0097515a0f5778770563f0f267ce0`.

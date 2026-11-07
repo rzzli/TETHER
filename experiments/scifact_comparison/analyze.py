@@ -7,7 +7,7 @@ import time
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path[:0] = [str(ROOT),str(ROOT/'src')]
-from asof.serde import encode
+from tether_engine.serde import encode
 from experiments.scifact_comparison.audit import verify_outputs, read
 from experiments.scifact_comparison.prepare import pin, write
 from experiments.scifact_comparison.inputs import CONDITIONS, need

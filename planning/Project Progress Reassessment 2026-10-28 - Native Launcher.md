@@ -8,7 +8,7 @@ actual child architecture. It does not repair the Python failures.
 
 ## Evidence and disposition
 
-Accepted application software remains AsOf0.3.11: the retained full suite has
+Accepted application software remains TETHER0.3.11: the retained full suite has
 1,774 passing tests,327 source/resource pins and ten preserved-version
 qualifications. Default dispatch remains v2. No application runtime source has
 changed during this launcher diagnostic, so the retained full suite is software
@@ -25,13 +25,13 @@ pass33 pure checks and independent source review. Its original execution flag
 remains false. Derived harmless drivers reuse the reviewed creation-time Job,
 restricted stdio, suspended creation, checked identity and cleanup methods.
 
-The [first actual qualification](review-assets/recovery-step9-native-recognition-20261028/HARMLESS-V3-RESULT-VERIFICATION.md)
+The [first actual qualification](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-recognition-20261028/HARMLESS-V3-RESULT-VERIFICATION.md)
 fails a test-policy error: its resources worker deliberately attempts a rejected
 descendant association, but the generic predicate expects lifetime total1.
 Microsoft documents that a rejected limit association can increment this total.
 The original failed result remains immutable; it is not retroactively passed.
 
-The separately declared [v4 actual qualification](review-assets/recovery-step9-native-recognition-20261028/HARMLESS-LAUNCHER-V4-RESULT-VERIFICATION.md)
+The separately declared [v4 actual qualification](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-recognition-20261028/HARMLESS-LAUNCHER-V4-RESULT-VERIFICATION.md)
 has166 verified inputs,17 output files,30 valid journal events and336 recorded
 lease admissions/rechecks whose final close outcomes are successful. Its
 resources-only expectation is exact total2/active0/terminated0/empty PIDs;
@@ -47,7 +47,7 @@ reachable child-process call. Active0 and empty PIDs do not establish a lifetime
 census. Sleep and suspended-abort were not attempted. All failure markers,
 receipts, original buffers and the terminal failure remain retained.
 
-[Source comparison](review-assets/recovery-step9-native-recognition-20261028/SDK-LAUNCH-DELTA-AND-NATIVE-QUALIFICATION-NOTE.md)
+[Source comparison](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-recognition-20261028/SDK-LAUNCH-DELTA-AND-NATIVE-QUALIFICATION-NOTE.md)
 identifies differences from the earlier successful OS diagnostic, but establishes
 no cause. Neither this result nor the earlier consistent diagnostic explains the
 original active2 observation. There is no generic total2 allowance or automatic

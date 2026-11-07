@@ -7,10 +7,10 @@ import tempfile
 import unittest
 from dataclasses import replace
 from pathlib import Path
-from asof.contracts import Case
-from asof.serde import ContractError, encode, decode, read_json, write_json, fingerprint
-from asof.archive.paths import ArchiveResolver
-from asof.archive.interpretation import (verify_interpretation_archive,
+from tether_engine.contracts import Case
+from tether_engine.serde import ContractError, encode, decode, read_json, write_json, fingerprint
+from tether_engine.archive.paths import ArchiveResolver
+from tether_engine.archive.interpretation import (verify_interpretation_archive,
     inspect_failed_interpretation_archive, validate_response, _Context)
 from tools.science import question_interpretation_runtime as runtime
 from tools.science.interpretation_questions import prepare_question
@@ -21,7 +21,7 @@ class ArchiveInterpretationTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)
         self.root=Path(self.temp.name);self.original=self.root/'original'
-        self.inputs=self.original/'inputs';shutil.copytree(ROOT/'src/asof/demo/v2',self.inputs)
+        self.inputs=self.original/'inputs';shutil.copytree(ROOT/'src/tether_engine/demo/v2',self.inputs)
         case=replace(decode(Case,read_json(self.inputs/'case.json')),task='T6',endpoint=None)
         write_json(self.inputs/'case.json',encode(case))
         self.prepared=prepare_question(self.inputs/'case.json',self.inputs/'snapshot.json','mechanism-report.v1')

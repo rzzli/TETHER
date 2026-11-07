@@ -6,7 +6,7 @@ endpoint contracts, regression guards and retained-schema compatibility. **No
 database execution or real cohort selection occurred.** Source-inclusive execution
 binding and origin membership remain the next implementation stage.
 
-The [new frozen protocol](protocols/registry-content-feasibility-v0.1.json) names
+The [new frozen protocol](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/protocols/registry-content-feasibility-v0.1.json) names
 `registry_outcome_measurement_appearance_v1`, with January2025 origin, January2026
 endpoint and a separate April2026 sensitivity. It caps origin screening at128 and
 selected membership at32, preserves the old order/exclusions, and freezes a90%

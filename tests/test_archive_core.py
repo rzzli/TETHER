@@ -7,15 +7,15 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from asof.agents import ExtractiveBackend
-from asof.archive.core import verify_core_archive
-from asof.archive.paths import ArchiveResolver
-from asof.artifacts import write_run
-from asof.chrono import load_snapshot
-from asof.contracts import Case
-from asof.journal import RunJournal
-from asof.serde import ContractError, decode, read_json, write_json
-from asof.workflow import run_workflow
+from tether_engine.agents import ExtractiveBackend
+from tether_engine.archive.core import verify_core_archive
+from tether_engine.archive.paths import ArchiveResolver
+from tether_engine.artifacts import write_run
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case
+from tether_engine.journal import RunJournal
+from tether_engine.serde import ContractError, decode, read_json, write_json
+from tether_engine.workflow import run_workflow
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -27,7 +27,7 @@ class ArchiveCoreTests(unittest.TestCase):
         self.base = Path(self.temp.name)
         self.original = self.base / 'original'
         self.sources = self.original / 'inputs'
-        shutil.copytree(ROOT / 'src/asof/demo/v2', self.sources)
+        shutil.copytree(ROOT / 'src/tether_engine/demo/v2', self.sources)
         self.case = decode(Case, read_json(self.sources / 'case.json'))
         store = load_snapshot(self.sources / 'snapshot.json', self.case)
         self.output = self.original / 'run'
@@ -51,7 +51,7 @@ class ArchiveCoreTests(unittest.TestCase):
         shutil.copytree(self.original, fixture)
         pairs = []
         for name in receipt['code']:
-            old = ROOT / 'src/asof' / name
+            old = ROOT / 'src/tether_engine' / name
             new = project / old.relative_to(ROOT)
             new.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(old, new)
@@ -79,7 +79,7 @@ class ArchiveCoreTests(unittest.TestCase):
 
     def verify(self, resolver=None, anchor=None):
         return verify_core_archive(str(self.output), resolver or self.resolver,
-                                   self.anchor if anchor is None else anchor, code_root=str(ROOT / 'src/asof'))
+                                   self.anchor if anchor is None else anchor, code_root=str(ROOT / 'src/tether_engine'))
 
     def test_v2_replays_sources_features_accounting_after_relocation(self):
         self.relocate()
@@ -132,7 +132,7 @@ class ArchiveCoreTests(unittest.TestCase):
             self.verify(ArchiveResolver(self.bindings, files))
 
     def test_unsupported_live_semantic_drift_fails_explicitly(self):
-        from asof.provenance import InputGraph
+        from tether_engine.provenance import InputGraph
         self.relocate()
         with patch.object(InputGraph, 'exclusion', lambda *_: 'different_policy'):
             with self.assertRaisesRegex(ContractError, 'semantic dependency'):

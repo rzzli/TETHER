@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.serde import sha256_file
+from tether_engine.serde import sha256_file
 from tests import test_registry_sizing as fixtures
 from tools.feasibility.registry_scope import ontology_index,relation,context,compare_context,run,verify_prior_row
 trial=fixtures.trial

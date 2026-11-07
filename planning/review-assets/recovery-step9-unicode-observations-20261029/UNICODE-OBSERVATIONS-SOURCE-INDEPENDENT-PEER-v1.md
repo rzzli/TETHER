@@ -1,9 +1,0 @@
-# Unicode observer first-source peer HOLD
-
-The finite source pass is complete against preserved source58d6 and tables009e. Four guards require a separately versioned correction: bounded JSON integer-conversion errors, marker-only post-collection call deltas, supplied-marker presence before row parsing, and a callback after result freezing. The first two were identified by this reviewer and reproduced in the author's full pure proof; root independently retained the latter two. No source or test was replayed to publish this record.
-
-The full proof otherwise covers six literal bases, 36 scenarios, 33 observe callback identities, 22 strict callback identities and 22 nested mutations. Source inspection checked closed row/body sets, source references, exact setup vectors, case/prefix deltas, geometry delegation, progress commit placement and negative/partial classification. This is not blanket acceptance: the four reproduced boundaries remain held. The earlier stdlib-codec support harness failure is separately preserved and is not an additional observer defect.
-
-The terminal-delta correction must preserve the design distinction between completed-phase cleanup and an unfinished prefix attempt; bounded unknown prefix work is partial evidence, while new tokenize work after full normal completion is a source-order contradiction. No separately reproduced fifth defect is claimed here. Cross-case token-piece mapping and exact reconstruction of unrecorded failure diagnostic indices are not newly imposed gates. Optional opaque module diagnostics remain explicitly pending/partial, not complete-positive.
-
-No runtime, original-source closure, CPU/GGUF/old pack, SDK/native or actual experiment qualification is established. Retained matcher5031 is reused only as a known pure lexical dependency. All source/owner/resource/profile authority remains external and false in this component.

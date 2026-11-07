@@ -17,8 +17,8 @@ import time
 import zipfile
 import zlib
 
-from asof.journal import RunJournal
-from asof.serde import ContractError, fingerprint, parse_json, safe_child, sha256_file
+from tether_engine.journal import RunJournal
+from tether_engine.serde import ContractError, fingerprint, parse_json, safe_child, sha256_file
 from tools.science.ascertainment_inputs import DEFAULT_LIMITS, actual_date, safe_members, save
 from tools.science.endpoint_restore import validate_gate, verify_origin_closure
 

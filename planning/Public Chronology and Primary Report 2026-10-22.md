@@ -34,7 +34,7 @@ remain separate; no record date qualifies historical protocol bytes automaticall
 
 ## Bounded source recovery
 
-The [v0.1 policy](protocols/existing-trial-public-chronology-v0.1.json) was committed
+The [v0.1 policy](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/protocols/existing-trial-public-chronology-v0.1.json) was committed
 before projection/search. Exactly three frozen queries and four source-page actions
 were retained, within caps of three queries and six opens. One action was an explicit
 institutional-to-registry link click. Optional original GETs used **0 of 3**; no
@@ -69,7 +69,7 @@ funding descriptions and descriptive outcome values do not generate efficacy lab
 The first helper used three nonexistent shorthand keys, omitting `Date` from
 `*PostDateStruct`. Its synthetic fixtures repeated that mistake. The old projected
 nulls are **mapping failures, not missing source dates**. Both old code/projection
-and the failing actual-format regression are preserved. The exposed [v0.2 amendment](protocols/existing-trial-public-chronology-v0.2.json)
+and the failing actual-format regression are preserved. The exposed [v0.2 amendment](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/protocols/existing-trial-public-chronology-v0.2.json)
 was committed at `319367a` before corrected projection and queries 2–3; query 1 had
 already run. Search scope and caps were unchanged; no query was repeated. This
 correction is not represented as an untouched prospective or blinded experiment.

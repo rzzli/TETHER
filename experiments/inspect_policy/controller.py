@@ -1,7 +1,7 @@
 """Fresh-process, matched three-arm archive execution; no automatic recovery calls.
 
 Product supervision is imported only by the trusted parent. Independent workers
-do not import asof/tether. Native Inspect scoring follows each sealed case; the
+do not import tether_engine/tether. Native Inspect scoring follows each sealed case; the
 parent's all-scheduled comparison follows the sealed worker or retained prefix.
 """
 from __future__ import annotations
@@ -183,7 +183,7 @@ def freeze_run(corpus_root, environment_receipt_path, environment_receipt_sha256
         for item in inventory["files"]:
             pins[str(env_root/item["path"])] = {key: item[key] for key in ("sha256", "bytes")}
             relative = item["path"].replace("\\", "/")
-            if relative.endswith(".py") and relative.startswith(("Lib/site-packages/asof/", "Lib/site-packages/tether/")):
+            if relative.endswith(".py") and relative.startswith(("Lib/site-packages/tether_engine/", "Lib/site-packages/tether/")):
                 batch_pins[str(env_root/item["path"])] = pins[str(env_root/item["path"])]
         pins[str(env_path)] = env_proof
         pins[str(inventory_path)] = proof(inventory_path)
@@ -243,7 +243,7 @@ def worker_recipe(config, arm, output):
 
 class ImportBoundary(importlib.abc.MetaPathFinder):
     def find_spec(self, fullname, path=None, target=None):
-        if fullname.split(".")[0] in ("asof", "tether"):
+        if fullname.split(".")[0] in ("tether_engine", "tether"):
             raise ImportError("Independent worker cannot import product validation")
         return None
 
@@ -365,7 +365,7 @@ def execute_worker(recipe_path, expected_sha):
                 execute(row, cases)
         execution_wall = time.perf_counter()-execution_start
         postflight = verify_pins(recipe["code_pins"])
-        imported_product = sorted(k for k in sys.modules if k.split(".")[0] in ("asof", "tether"))
+        imported_product = sorted(k for k in sys.modules if k.split(".")[0] in ("tether_engine", "tether"))
         need(arm == "bare_tether" or not imported_product, "Independent worker imported product")
         need(tree_bytes(root) <= recipe["limits"]["worker_output_bytes"], "Worker artifact byte cap")
         import psutil

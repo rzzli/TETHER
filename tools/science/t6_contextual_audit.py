@@ -11,7 +11,7 @@ import math
 import re
 import unicodedata
 
-from asof.serde import ContractError, canonical, fingerprint, parse_json
+from tether_engine.serde import ContractError, canonical, fingerprint, parse_json
 from tools.science.reference_packets import IDENTITY_FIELDS
 from tools.science.t6_claim_audit import MAX_SOURCE_BYTES, pointer, require, text, validate_question
 from tools.science.t6_dossier_binding import _dossier_bytes, verify_binding
@@ -221,8 +221,8 @@ def build_surface(binding_proof, output, *, approved_roots):
     """Reserve a fresh evaluator job and retain failures, without native inference."""
     from pathlib import Path
     import time
-    from asof.journal import RunJournal
-    from asof.serde import write_json
+    from tether_engine.journal import RunJournal
+    from tether_engine.serde import write_json
     from tools.science.run_comparison import pin
     output = Path(output).resolve()
     require(not output.is_relative_to(Path(binding_proof['path']).resolve().parent),

@@ -14,14 +14,14 @@ import subprocess
 import time
 import urllib.request
 
-from asof.chrono import EvidenceStore, load_snapshot
-from asof.contracts import Case, Category, EvidenceStatus
-from asof.ingest import peak_memory_bytes
-from asof.journal import RunJournal
-from asof.local_model import NoRedirect
-from asof.retrieval import RetrievalPolicy
-from asof.serde import ContractError, decode, encode, fingerprint, read_json, safe_child, sha256_file, write_json
-from asof.workflow import Budget
+from tether_engine.chrono import EvidenceStore, load_snapshot
+from tether_engine.contracts import Case, Category, EvidenceStatus
+from tether_engine.ingest import peak_memory_bytes
+from tether_engine.journal import RunJournal
+from tether_engine.local_model import NoRedirect
+from tether_engine.retrieval import RetrievalPolicy
+from tether_engine.serde import ContractError, decode, encode, fingerprint, read_json, safe_child, sha256_file, write_json
+from tether_engine.workflow import Budget
 from tools.science.comparison_workflow import _prepare, run_case, verify_case, default_role_policy
 from tools.science.role_backend import RoleSelectionBackend
 from tools.science.run_comparison import selected_store, pin, check_pin, verify_model, port_closed, _owned_listener
@@ -29,14 +29,14 @@ from tools.science.run_comparison import selected_store, pin, check_pin, verify_
 ROOT = Path(__file__).resolve().parents[2]
 PROTOCOL = ROOT/'planning/protocols/t6-topone-development-v0.1.json'
 PORT = 55582
-ARMS = ['asof', 'adapted_virtual_biotech', 'lexical', 'provider_score']
+ARMS = ['tether', 'adapted_virtual_biotech', 'lexical', 'provider_score']
 SOURCE_BUNDLE = 'data/derived/science2-fresh-20261018T170501Z'
 SOURCE_BUILD_SHA256 = 'b3f5b4352215bd571159f190799d4ce865999d8bf3d9e51712183d55979124f3'
 CODE_FILES = ('tools/science/t6_challenge.py', 'tools/science/run_comparison.py',
               'tools/science/t6_reference.py', 'tools/science/t6_topone_evaluation.py',
               'tools/science/reference_packets.py', 'tools/framework/run_pilot.py',
               'tools/science/comparison_workflow.py', 'tools/science/role_backend.py') + tuple(
-    p.relative_to(ROOT).as_posix() for p in sorted((ROOT/'src/asof').glob('*.py')))
+    p.relative_to(ROOT).as_posix() for p in sorted((ROOT/'src/tether_engine').glob('*.py')))
 
 
 class PinnedRoleSelectionBackend(RoleSelectionBackend):
@@ -166,7 +166,7 @@ def validate_plan(plan):
             raise ContractError('Top-one fixed configuration differs: '+field)
     if (type(plan['backend'].get('selection_cap')) is not int or plan['backend'].get('selection_cap') != 1 or
             plan['backend'].get('retrieval') != {'max_records':12, 'max_request_bytes':12000,
-                                                 'wire_format':'asof-shared-scientific-fields-v1'}):
+                                                 'wire_format':'tether-shared-scientific-fields-v1'}):
         raise ContractError('Top-one packet/output bounds differ')
     for field, name in (('catalog','catalog-policy.json'), ('role_policy','role-policy.json'),
                         ('tasks','tasks.json'), ('model_receipt','model-acquisition.json')):
@@ -306,7 +306,7 @@ def execute(plan_path, expected_sha256, reference_manifest, reference_sha256):
             check.bind(('127.0.0.1',PORT))
         argv = [str(server),'--model',str(model),'--host','127.0.0.1','--port',str(PORT),
                 '--ctx-size','16384','--parallel','1','--n-gpu-layers','99','--threads','8',
-                '--alias','asof-t6-topone','--no-webui','--offline']
+                '--alias','tether-t6-topone','--no-webui','--offline']
         write_json(output/'server-command.json',{'argv':argv,'runtime_sha256':sha256_file(server)})
         with (output/'server.stdout.log').open('xb') as stdout,(output/'server.stderr.log').open('xb') as stderr:
             process = subprocess.Popen(argv,stdout=stdout,stderr=stderr,

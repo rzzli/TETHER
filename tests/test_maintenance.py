@@ -8,8 +8,8 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from unittest.mock import patch
 
-from asof.maintenance import acquisition_report, update_catalog, write_new_json
-from asof.serde import ContractError, read_json, sha256_file, write_json
+from tether_engine.maintenance import acquisition_report, update_catalog, write_new_json
+from tether_engine.serde import ContractError, read_json, sha256_file, write_json
 from tools.framework.prepare_v02_inputs import prepare
 from tools.review.probe_framework import required_probes_passed
 
@@ -72,7 +72,7 @@ class MaintenanceTests(unittest.TestCase):
         self.assertEqual(sha256_file(self.catalog),self.anchor)
         report['datasets'][0].pop('roles')
         write_json(self.report,report)
-        with patch('asof.maintenance.write_json',side_effect=OSError('disk failure')):
+        with patch('tether_engine.maintenance.write_json',side_effect=OSError('disk failure')):
             with self.assertRaises(OSError):
                 update_catalog(self.root,self.catalog,self.report,self.anchor)
         self.assertEqual(sha256_file(self.catalog),self.anchor)
@@ -101,9 +101,9 @@ class MaintenanceTests(unittest.TestCase):
         write_json(self.report,report)
         build = {'inspection':{'missing_inputs':[]},'cases':[{'packet_bytes':123}],
                  'snapshot_id':'fixture-complete'}
-        with patch('asof.maintenance.checked_product_reports',return_value=(build,{},{})):
+        with patch('tether_engine.maintenance.checked_product_reports',return_value=(build,{},{})):
             update_catalog(self.root,self.catalog,self.report,self.anchor)
-        row = next(r for r in read_json(self.catalog)['datasets'] if r['dataset_id']=='asof_normalized_packets')
+        row = next(r for r in read_json(self.catalog)['datasets'] if r['dataset_id']=='tether_normalized_packets')
         self.assertEqual(row['blockers'],['Independent scientific validation not run'])
         self.assertEqual(row['validation_status'],'not_run')
         self.assertNotIn('resolve selected-subset missing inputs',row['verification']['next_acquisition_check'])

@@ -18,20 +18,20 @@ import tempfile
 
 
 def runtime_identity():
-    import asof
+    import tether_engine
     import tether
-    return dict(python=sys.executable, asof_version=asof.__version__,
-                tether_version=tether.__version__, asof_file=asof.__file__,
+    return dict(python=sys.executable, tether_engine_version=tether_engine.__version__,
+                tether_version=tether.__version__, tether_engine_file=tether_engine.__file__,
                 tether_file=tether.__file__)
 
 
 def trusted_runtime(qualification_root):
-    import asof
+    import tether_engine
     from tether._presentation import code_proof
     qualified = Path(qualification_root).resolve()
-    core = Path(asof.__file__).parent
+    core = Path(tether_engine.__file__).parent
     hash_file = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
-    return dict(schema_version=1, versions=dict(tether='0.5.1', asof='0.3.12'),
+    return dict(schema_version=1, versions=dict(tether='0.6.0', tether_engine='0.4.0'),
         launcher_proof=code_proof(), core_code_sha256={p.relative_to(core).as_posix(): hash_file(p)
             for p in sorted(core.rglob('*.py'))},
         qualification=dict(path=str(qualified / 'QUALIFICATION.json'), sha256=hash_file(qualified / 'QUALIFICATION.json')),
@@ -41,7 +41,7 @@ def trusted_runtime(qualification_root):
 
 
 def _path(root, paths, name):
-    from asof.serde import ContractError, safe_child
+    from tether_engine.serde import ContractError, safe_child
     value = paths.get(name)
     if value is None:
         return None
@@ -51,7 +51,7 @@ def _path(root, paths, name):
 
 
 def _descriptor_contract(value):
-    from asof.serde import ContractError
+    from tether_engine.serde import ContractError
     required = {'schema_version', 'control_id', 'operation', 'variant', 'paths', 'options', 'anchors'}
     if type(value) is not dict or set(value) != required:
         raise ContractError('Descriptor fields differ from the declared experiment envelope')
@@ -100,17 +100,17 @@ def _descriptor_contract(value):
         raise ContractError('Invalid process limits declaration')
     if 'review_enabled' in options and type(options['review_enabled']) is not bool:
         raise ContractError('Invalid review flag')
-    from asof.serde import decode
-    from asof.workflow import Budget
+    from tether_engine.serde import decode
+    from tether_engine.workflow import Budget
     decode(Budget, options.get('budget', {})).validate()
 
 
 def _configuration(root, descriptor):
-    from asof.agents import ExtractiveBackend, ReplayBackend
-    from asof.contracts import Category
-    from asof.local_model import LocalSelectionBackend
-    from asof.serde import ContractError
-    from asof.workflow import Budget
+    from tether_engine.agents import ExtractiveBackend, ReplayBackend
+    from tether_engine.contracts import Category
+    from tether_engine.local_model import LocalSelectionBackend
+    from tether_engine.serde import ContractError
+    from tether_engine.workflow import Budget
     from tether._process import ProcessLimits
     paths, options = descriptor['paths'], descriptor.get('options', {})
     limits = ProcessLimits(**options.get('process_limits', {}))
@@ -131,10 +131,10 @@ def _configuration(root, descriptor):
 
 
 def _core_prepare(root, descriptor):
-    from asof.chrono import load_snapshot
-    from asof.contracts import Case, Category, EvidenceStatus
-    from asof.scorer import ScorerArtifact, preflight_scorer
-    from asof.serde import decode, encode, read_json
+    from tether_engine.chrono import load_snapshot
+    from tether_engine.contracts import Case, Category, EvidenceStatus
+    from tether_engine.scorer import ScorerArtifact, preflight_scorer
+    from tether_engine.serde import decode, encode, read_json
     paths = descriptor['paths']
     _configuration(root, descriptor)
     case = decode(Case, read_json(_path(root, paths, 'case')), 'case')
@@ -152,7 +152,7 @@ def _core_prepare(root, descriptor):
 
 
 def _policy_request(root, descriptor):
-    from asof.serde import ContractError
+    from tether_engine.serde import ContractError
     from tether._catalog_binding import PolicyRequest
     paths = descriptor['paths']
     if any(paths.get(key) for key in ('scorer', 'replay', 'local_model')):
@@ -165,7 +165,7 @@ def _policy_request(root, descriptor):
 
 
 def _policy_prepare(root, descriptor, *, scratch_dir=None):
-    from asof.serde import read_json
+    from tether_engine.serde import read_json
     from tether._catalog_binding import prepare_policy_run
     _configuration(root, descriptor)
     request = _policy_request(root, descriptor)
@@ -183,8 +183,8 @@ def _policy_prepare(root, descriptor, *, scratch_dir=None):
 
 def _verified_observations(root):
     """Project verified outputs; validity comes from canonical verification."""
-    from asof.serde import read_json, read_ledger_json, encode
-    from asof.journal import read_chain
+    from tether_engine.serde import read_json, read_ledger_json, encode
+    from tether_engine.journal import read_chain
     run = read_json(root / 'run.json')
     ledger = read_ledger_json(root / 'ledger.json')
     trace = encode(read_chain(root / 'trace.jsonl'))
@@ -199,8 +199,8 @@ def _verified_observations(root):
 
 
 def validate_bundle(root: Path, descriptor: dict, *, scratch_dir=None):
-    from asof.serde import ContractError, encode
-    from asof.journal import inspect_run
+    from tether_engine.serde import ContractError, encode
+    from tether_engine.journal import inspect_run
     from tether import _presentation as presentation
     stage, checked = 'descriptor', []
     result = dict(schema_version=1, control_id=descriptor.get('control_id') if type(descriptor) is dict else None,
@@ -220,7 +220,7 @@ def validate_bundle(root: Path, descriptor: dict, *, scratch_dir=None):
             outer = any((run_dir / name).exists() for name in
                         (presentation.RECEIPT, presentation.MANIFEST, presentation.FAILURE, 'attempt'))
             if operation == 'verify_run':
-                from asof.serde import read_json
+                from tether_engine.serde import read_json
                 policy_present = outer and read_json(run_dir / presentation.MANIFEST).get('artifact_policy') is not None
                 if (variant == 'artifact_policy_v2') != bool(policy_present):
                     raise ContractError('Requested comparison variant differs from sealed artifact policy scope')
@@ -254,14 +254,14 @@ def validate_bundle(root: Path, descriptor: dict, *, scratch_dir=None):
 
 def materialize_core(root, descriptor, producer):
     """Run a fictional producer once; never used during scored validation."""
-    from asof.agents import ExtractiveBackend, ReplayBackend, Selection, Usage, make_request
-    from asof.artifacts import write_run
-    from asof.chrono import load_snapshot
-    from asof.contracts import Case, Category, EvidenceStatus
-    from asof.journal import RunJournal
-    from asof.scorer import ScorerArtifact
-    from asof.serde import decode, read_json, write_json, fingerprint
-    from asof.workflow import BackendFailure, run_workflow
+    from tether_engine.agents import ExtractiveBackend, ReplayBackend, Selection, Usage, make_request
+    from tether_engine.artifacts import write_run
+    from tether_engine.chrono import load_snapshot
+    from tether_engine.contracts import Case, Category, EvidenceStatus
+    from tether_engine.journal import RunJournal
+    from tether_engine.scorer import ScorerArtifact
+    from tether_engine.serde import decode, read_json, write_json, fingerprint
+    from tether_engine.workflow import BackendFailure, run_workflow
     paths = descriptor['paths']
     budget, disabled, review, backend, _ = _configuration(root, descriptor)
     case = decode(Case, read_json(_path(root, paths, 'case')))
@@ -279,7 +279,7 @@ def materialize_core(root, descriptor, producer):
         write_json(replay_path, dict(schema_version=2, responses=responses))
         backend = ReplayBackend(replay_path)
     elif producer.startswith('local_'):
-        from asof.local_model import LocalSelectionBackend
+        from tether_engine.local_model import LocalSelectionBackend
         if not isinstance(backend, LocalSelectionBackend):
             raise RuntimeError('Local corpus recipe requires explicit native configuration')
 

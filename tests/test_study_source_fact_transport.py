@@ -7,8 +7,8 @@ import urllib.error
 import urllib.request
 from unittest.mock import patch
 
-from asof.serde import ContractError, canonical, encode
-from asof.study.source_fact_transport import (
+from tether_engine.serde import ContractError, canonical, encode
+from tether_engine.study.source_fact_transport import (
     TypedReportingClient,
     parse_netstat_listener,
     prepare_completion,

@@ -15,8 +15,8 @@ import time
 import zipfile
 import zlib
 
-from asof.journal import RunJournal
-from asof.serde import ContractError, sha256_file
+from tether_engine.journal import RunJournal
+from tether_engine.serde import ContractError, sha256_file
 
 DEFAULT_LIMITS = {"archive_bytes": 4 * 1024**3, "expanded_bytes": 8 * 1024**3,
     "member_bytes": 6 * 1024**3, "members": 32, "expansion_ratio": 200,

@@ -2,7 +2,7 @@
 import copy
 import unittest
 
-from asof.serde import ContractError, canonical
+from tether_engine.serde import ContractError, canonical
 from experiments.scifact.split import build_split, pair_rows, normalized_claim
 
 

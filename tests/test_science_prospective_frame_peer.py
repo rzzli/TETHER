@@ -2,8 +2,8 @@
 import json
 import unittest
 
-from asof.serde import ContractError, sha256_file
-from asof.journal import read_chain
+from tether_engine.serde import ContractError, sha256_file
+from tether_engine.journal import read_chain
 from tools.science import prospective_frame as frame
 from tests import test_science_prospective_frame as fixtures
 

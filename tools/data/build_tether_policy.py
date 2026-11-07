@@ -18,9 +18,9 @@ import time
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "packages/tether/src"))
-from asof.contracts import Case
-from asof.serde import ContractError, canonical, decode, fingerprint
-from asof.study.stable_read import checked_path, read_file
+from tether_engine.contracts import Case
+from tether_engine.serde import ContractError, canonical, decode, fingerprint
+from tether_engine.study.stable_read import checked_path, read_file
 from tether._catalog_policy import (artifact_record, authorize_snapshot, migrate_catalog,
                                     relative_path, strict_json, validate_policy)
 
@@ -246,7 +246,7 @@ def build(args):
         add_aact(policy, importer, records)
         policy["artifacts"] = sorted(records.values(), key=lambda r: r["artifact_id"])
         for product in policy["products"]:
-            if product["dataset_id"] in {"ot_target", "ot_disease", "ot_evidence", "hgnc_symbols", "asof_normalized_packets"}:
+            if product["dataset_id"] in {"ot_target", "ot_disease", "ot_evidence", "hgnc_symbols", "tether_normalized_packets"}:
                 product["dependency_review_status"] = "reviewed_for_selected_frame"
         stage = "policy_validation"
         validate_policy(policy)

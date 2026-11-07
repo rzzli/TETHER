@@ -76,7 +76,7 @@ checkpoint is excluded from the primary route because its reported 1,109 trainin
 examples match 809 train plus 300 dev; exact per-ID training membership has not
 been verified. This choice does not establish absence of pretraining or
 model-development exposure. Source and rights details remain in the
-[pre-acquisition review](review-assets/tether-semantic-20261106/solver-feasibility/MultiVerS-feasibility.md).
+[pre-acquisition review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-semantic-20261106/solver-feasibility/MultiVerS-feasibility.md).
 No explicit checkpoint-specific redistribution license was located; locally
 acquired weights are excluded from Git and release bundles.
 
@@ -88,9 +88,9 @@ effect or a benefit caused by provenance checking.
 
 ## Evidence and reproduction
 
-- [Root acceptance](review-assets/tether-semantic-20261106/sc02-acceptance-attempt01/ROOT-ACCEPTANCE.json): SHA-256 `bb21dfe9c08f01796457dcf634dcc9a9bc9082c9aec711e765d1b71b5a974ef4`.
-- [Actual launch outcome](review-assets/tether-semantic-20261106/solver-qualification/actual-launch-attempt02/OUTCOME.json), [81-pin freeze](review-assets/tether-semantic-20261106/solver-qualification/full-freeze-attempt02/MANIFEST.json), and [independent parity review](review-assets/tether-semantic-20261106/methods/sc02/actual-parity-review-attempt01/PARITY-REVIEW.json).
-- [24-test result](review-assets/tether-semantic-20261106/solver-qualification/metadata-regression-green01/TEST-SUMMARY.json), [supervisor review](review-assets/tether-semantic-20261106/methods/sc02/SUPERVISOR-REVIEW.json), and [static metadata audit](review-assets/tether-semantic-20261106/solver-qualification/checkpoint-static-audit-attempt01/REPORT.json).
+- [Root acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-semantic-20261106/sc02-acceptance-attempt01/ROOT-ACCEPTANCE.json): SHA-256 `bb21dfe9c08f01796457dcf634dcc9a9bc9082c9aec711e765d1b71b5a974ef4`.
+- [Actual launch outcome](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-semantic-20261106/solver-qualification/actual-launch-attempt02/OUTCOME.json), [81-pin freeze](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-semantic-20261106/solver-qualification/full-freeze-attempt02/MANIFEST.json), and [independent parity review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-semantic-20261106/methods/sc02/actual-parity-review-attempt01/PARITY-REVIEW.json).
+- [24-test result](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-semantic-20261106/solver-qualification/metadata-regression-green01/TEST-SUMMARY.json), [supervisor review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-semantic-20261106/methods/sc02/SUPERVISOR-REVIEW.json), and [static metadata audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-semantic-20261106/solver-qualification/checkpoint-static-audit-attempt01/REPORT.json).
 - Local captured inputs/tensors/outputs: `data/benchmark/scifact_multivers/qualification-20261106-attempt02/`; report SHA-256 `e54fd34919a6c965cbc54397d1b7c44ecadf837e1123cb226ecdc44ff1292374`.
 - Acquisition receipt SHA-256 `a76d300564d0a5a4477a31cf167748e2e5b8540696b1c836d0fb8fab537b1610`; installation receipt SHA-256 `9291f74f724d8490c2eb0720c0baa341c1e4edea3b3c56910f5ebb826f496961`.
 

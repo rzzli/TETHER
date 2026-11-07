@@ -2,7 +2,7 @@
 title: Full Cis Genetics Revision
 date: 2026-10-17
 status: technical-completion-with-source-exceptions
-tags: [asof, genetics, feasibility, provenance]
+tags: [TETHER, genetics, feasibility, provenance]
 ---
 
 # IL6R full-window technical revision

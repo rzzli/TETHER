@@ -2,19 +2,19 @@
 
 import unittest
 from unittest.mock import patch
-from asof.serde import ContractError, canonical, encode
-from asof.study.authority_four_arm import baseline_policy, _schedule, _document
-from asof.study.preparation_payloads import prepare_actual_payload, prepare_payloads
-from asof.study.diagnostic import load_synthetic_request
+from tether_engine.serde import ContractError, canonical, encode
+from tether_engine.study.authority_four_arm import baseline_policy, _schedule, _document
+from tether_engine.study.preparation_payloads import prepare_actual_payload, prepare_payloads
+from tether_engine.study.diagnostic import load_synthetic_request
 
 import io
 from pathlib import Path
 import tempfile
 import time
-from asof.study import authority_four_arm as composition
-from asof.study import tokenization as tok
-from asof.study.proofs import capture_file
-from asof.serde import fingerprint, parse_json
+from tether_engine.study import authority_four_arm as composition
+from tether_engine.study import tokenization as tok
+from tether_engine.study.proofs import capture_file
+from tether_engine.serde import fingerprint, parse_json
 from tests import test_study_tokenization as token_helpers
 
 

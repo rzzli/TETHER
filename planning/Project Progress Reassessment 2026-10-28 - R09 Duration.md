@@ -14,7 +14,7 @@ and extension branches retained under their own gates. The entire project is
 
 ## Current judgment
 
-AsOf **0.3.10 is now accepted for native-duration consistency engineering**.
+TETHER **0.3.10 is now accepted for native-duration consistency engineering**.
 It fixes a demonstrated verification defect, passes its complete stated
 qualification and preserves the original 0.3.9 artifacts. It improves what the
 framework can reliably check; it does not create new scientific evidence.
@@ -37,7 +37,7 @@ resource feasibility and independent scientific qualification open.
 ## What was re-examined
 
 For this assessment, the newly sealed
-[0.3.10 acceptance](review-assets/recovery-step9-native-duration-20261028/acceptance.json)
+[0.3.10 acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-duration-20261028/acceptance.json)
 was checked against its actual hash:
 `27f33a36fd01d48b79e1492ad6b4b185a60e4bd662bb1ee0d955e5a284079cdc`.
 All 34 listed evidence hashes, all 324 current source/resource/test pins and the
@@ -65,8 +65,8 @@ reviewer status remains the owner's report that submissions are pending.
 | Installed source/model replay | 79.734 seconds; guard lists empty | Approved original input roots remain available |
 | Guarded run-copy relocation | 76.359 seconds; original run/live source/archived execution/dispatch guards empty | Run relocation, not independent restoration of raw/model collections |
 
-The [correction closeout](review-assets/recovery-step9-native-duration-20261028/CLOSEOUT.md)
-and [targeted evidence](review-assets/recovery-step9-native-duration-20261028/TARGETED-COMPLETION.json)
+The [correction closeout](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-duration-20261028/CLOSEOUT.md)
+and [targeted evidence](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-duration-20261028/TARGETED-COMPLETION.json)
 define the behavior precisely. Native duration must be finite, nonnegative and
 strictly below a complete validated budget. When the controller has the validated
 child report, native duration cannot exceed that report plus the existing
@@ -74,7 +74,7 @@ absolute one-microsecond rounding allowance. Budget equality remains expired;
 the report allowance does not extend the budget. Finalization and replay both
 apply the concrete check. Generic session and recorded/legacy paths are unchanged.
 
-The prior [P2 probe](review-assets/recovery-step9-native-grammar-20261028/NATIVE-DURATION-CONSISTENCY-PROBE.json)
+The prior [P2 probe](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-grammar-20261028/NATIVE-DURATION-CONSISTENCY-PROBE.json)
 was a metadata consistency reproduction: 9,999 seconds accepted against 244.906
 seconds allocated and 2.531 seconds reported. It did not establish an actual
 runtime overrun or a complete externally anchored resealed-run bypass. That
@@ -89,9 +89,9 @@ reservations remain 24,558 input and 6,144 output tokens. The original cutoff,
 unspecified tissue and scientific missingness remain visible. No relevance or
 source/question sufficiency is thereby qualified.
 
-The [read-only timing audit](review-assets/recovery-step9-native-duration-20261028/STAGE-TIMING-AUDIT.json)
+The [read-only timing audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-duration-20261028/STAGE-TIMING-AUDIT.json)
 checks 68 retained metadata/prompt files without mutating or rerunning the cases.
-The [resource-risk note](review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md)
+The [resource-risk note](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md)
 separates additive root-clock intervals from nested measurements:
 
 | Observation | Retained 0.3.9 | Retained 0.3.10 |
@@ -129,13 +129,13 @@ what this milestone changes and what it leaves unresolved.
 | Step | Current disposition | Basis and remaining condition |
 |---|---|---|
 | R01 Scope/governance | Accepted; unchanged | [Phase decision](decisions/2026-10-26-phase-scope.md): contemporary T6 priority, original branches retained, independent human work and $0 provider boundary. |
-| R02 Checkpoint | Accepted in its scope | [Checkpoint](review-assets/recovery-step2-20261026/completion.json) recovers 63 historical code hashes. It does not prove independent/off-site backup. |
+| R02 Checkpoint | Accepted in its scope | [Checkpoint](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step2-20261026/completion.json) recovers 63 historical code hashes. It does not prove independent/off-site backup. |
 | R03 Archive compatibility | Accepted in its scope | Original archive gate plus current seven installed legacy families and nine matching older study verifiers. New raw/model restoration and unsupported receipt guarantees remain separate. |
 | R04 Correctness boundaries | Accepted engineering | Earlier chronology/backend/payload/store fixes retained; the newly accepted duration correction closes another reproduced boundary. This is not a global proof that no defects remain. |
 | R05 Diagnostic preparation | Accepted preparation | Three requests/six matched payloads and existing assets were qualified. Stronger-model capacity control remains unavailable; no capacity-cause conclusion follows. |
 | R06 Minimal infrastructure | Accepted engineering | Packaged bounded study helpers are reused. No generic platform rewrite is required for the next fixed probe. |
-| R07 Bounded diagnostic | Technical negative closed; scientific assessment open | [Disposition](review-assets/recovery-step7-20261026/DISPOSITION.md): six complete responses, zero accepted contracts, no repair/retry, stopped server. New code does not reopen that batch. |
-| R08 Fresh cases/source feasibility | Preparation only; no fresh frame qualified | [Exposure audit](review-assets/recovery-step8-20261026/exposure-v4-report.md) and bounded sources leave overlap, dates, sufficiency and domain coverage unresolved. |
+| R07 Bounded diagnostic | Technical negative closed; scientific assessment open | [Disposition](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step7-20261026/DISPOSITION.md): six complete responses, zero accepted contracts, no repair/retry, stopped server. New code does not reopen that batch. |
+| R08 Fresh cases/source feasibility | Preparation only; no fresh frame qualified | [Exposure audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step8-20261026/exposure-v4-report.md) and bounded sources leave overlap, dates, sufficiency and domain coverage unresolved. |
 | R09 Interpretation/comparators | Duration engineering now accepted; whole step open | 0.3.10 is the current accepted package. Actual DLL ABI/conversion, grammar/EOG acceptance, real integrated timing, useful source coverage and human scientific qualification are not established. |
 | R10 Human development pilot | Not activated | Needs a qualified frame and independent source-only references before fresh candidate generation, followed by masked ratings and measured workload. |
 | R11 H5 sizing/preregistration | Pending R10 | Needs a defined case-level estimand, pilot variability, dependence/ties/failures, review time and justified precision/power. Suggested sample counts are not measured adequacy. |
@@ -193,8 +193,8 @@ did not reopen clinical payloads, acquire a new dataset/model or scan all raw da
 
 ### Proceed with the compiled actual-DLL bridge, not another broad build project
 
-The [v3 bridge build](review-assets/recovery-step9-native-grammar-20261028/TYPED-CONVERTER-BRIDGE-BUILD-v3.json)
-and [build closeout](review-assets/recovery-step9-native-grammar-20261028/TYPED-CONVERTER-BRIDGE-BUILD-CLOSEOUT.md)
+The [v3 bridge build](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-grammar-20261028/TYPED-CONVERTER-BRIDGE-BUILD-v3.json)
+and [build closeout](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-grammar-20261028/TYPED-CONVERTER-BRIDGE-BUILD-CLOSEOUT.md)
 now exist. The owner-installed toolchain passes its own-source SDK/STL probe
 without restarting. The three exact converter-consumer headers are complete for
 this next converter scope; further header acquisition is not its prerequisite.

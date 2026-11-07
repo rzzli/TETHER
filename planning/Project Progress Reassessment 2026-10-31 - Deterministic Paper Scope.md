@@ -12,7 +12,7 @@ The two controls were new fictional literal-copying inputs, with no biological
 or clinical truth labels. The current v1 adapter was retained; the prompt
 clarification explicitly enumerated nested source objects and status rules.
 Twenty offline tests and independent guard review passed before the once-only
-run under [READY v2](review-assets/preprint-p04b-20261031/PROTOCOL-READY-v2.json).
+run under [READY v2](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p04b-20261031/PROTOCOL-READY-v2.json).
 The unexecuted READY v1 is preserved; v2 changes prior-checkpoint metadata only.
 
 The run `runs/preprint-p04b-20261101T055950Z` made two calls. The two-fact control
@@ -23,7 +23,7 @@ Both responses finished within the cooperative cell deadline. Measured usage is
 and $0 provider spending. Native peak RSS, physical I/O and total platform cost
 remain unknown.
 
-The [independent audit](review-assets/preprint-p04b-20261031/RUN-AUDIT-v1.json)
+The [independent audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p04b-20261031/RUN-AUDIT-v1.json)
 verifies all 70 current/archived code pins, exact protocol, the 79-event chain,
 request/envelope/content hashes, native echoed settings and usage, independently
 reconstructed fictional expectations, cleanup-before-grading and the negative
@@ -49,7 +49,7 @@ Declared enforcement ablations operate in the isolated study harness and do not
 weaken default admission. Faults are artificial challenge cases, not observed
 biological errors. The model outcomes remain exposed development results.
 
-The [earlier P05 design](review-assets/preprint-p05-20261031/FEASIBILITY-DESIGN-v1.json)
+The [earlier P05 design](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/FEASIBILITY-DESIGN-v1.json)
 remains an unlocked design artifact. Its illustrative same-model contrast and
 60-cell/39-call envelope are superseded for execution. Its source, rights,
 exposure and dependence requirements remain useful. A new technical protocol

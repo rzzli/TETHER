@@ -10,9 +10,9 @@ from pathlib import Path
 import threading
 import urllib.request
 
-from asof.agents import Usage
-from asof.local_model import NoRedirect
-from asof.serde import ContractError, canonical, encode, fingerprint, freeze, parse_json
+from tether_engine.agents import Usage
+from tether_engine.local_model import NoRedirect
+from tether_engine.serde import ContractError, canonical, encode, fingerprint, freeze, parse_json
 from tools.science.bounded_interpretation import Generated, checked_usage, need
 from tools.science.local_interpretation import validate_config, verify_native_binding
 from tools.science.question_interpretation_render import render_prompt, output_schema, materialize

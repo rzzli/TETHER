@@ -6,7 +6,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urljoin,urlsplit
 
-from asof.serde import ContractError,read_json,sha256_file
+from tether_engine.serde import ContractError,read_json,sha256_file
 from tools.science.source_retrieval import public_url,trial_id,triage_hits
 
 

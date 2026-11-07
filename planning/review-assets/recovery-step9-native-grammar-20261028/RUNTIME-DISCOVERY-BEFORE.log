@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "D:\Projects\drug_target_agents\planning\review-assets\recovery-step9-native-grammar-20261028\inspect_runtime.py", line 72, in <module>
-    machine,names=exports(raw)
-                  ^^^^^^^^^^^^
-  File "D:\Projects\drug_target_agents\planning\review-assets\recovery-step9-native-grammar-20261028\inspect_runtime.py", line 62, in exports
-    assert end>=start
-           ^^^^^^^^^^
-AssertionError

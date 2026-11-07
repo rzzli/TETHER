@@ -5,16 +5,16 @@ from itertools import combinations
 import json
 import unittest
 
-from asof.agents import SpecialistRequest
-from asof.chrono import load_snapshot
-from asof.local_model import LocalSelectionBackend
-from asof.serde import ContractError, canonical, decode, fingerprint, read_json, sha256_file, write_json
-from asof.workflow import Budget
+from tether_engine.agents import SpecialistRequest
+from tether_engine.chrono import load_snapshot
+from tether_engine.local_model import LocalSelectionBackend
+from tether_engine.serde import ContractError, canonical, decode, fingerprint, read_json, sha256_file, write_json
+from tether_engine.workflow import Budget
 from tests import test_science_comparison_workflow as workflow_fixtures
 from tests import test_science_role_backend as backend_fixtures
 from tools.science.comparison_workflow import run_case, verify_case
 from tools.science.role_backend import ROLE_SELECTION_POLICY, role_allowed_ids, role_selection_payload
-from asof.wire import FORMAT
+from tether_engine.wire import FORMAT
 
 
 class LegacySubsetViolation:

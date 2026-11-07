@@ -11,7 +11,7 @@ BG01–BG04 remain complete in their stated scopes; BG05 and BG06 remain pending
 The owner authorized autonomous sequential execution and local commits. No new
 human gate, paid provider call, model weights or downloader restart is needed.
 
-Inspect0.3.287 is pinned with Python3.11.15 and exact TETHER0.5.2/AsOf0.3.13
+Inspect0.3.287 is pinned with Python3.11.15 and exact TETHER0.5.2/TETHER0.3.13
 wheels. Environment qualification passes:84 distributions,8,071 RECORD-hashed
 payloads,85 identical project source files;80 public dependency wheels total
 81,234,458B and the installed environment209,294,632B. The actual native mock

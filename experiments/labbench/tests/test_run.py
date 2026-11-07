@@ -10,8 +10,8 @@ from unittest.mock import patch
 ROOT=Path(__file__).resolve().parents[3]
 sys.path.insert(0,str(ROOT))
 
-from asof.journal import RunJournal
-from asof.serde import ContractError,canonical,encode,fingerprint,freeze,parse_json
+from tether_engine.journal import RunJournal
+from tether_engine.serde import ContractError,canonical,encode,fingerprint,freeze,parse_json
 from experiments.labbench import run as r
 from experiments.labbench.tests import test_model as fixtures
 from experiments.labbench.tether_adapter import CapturedContext

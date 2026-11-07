@@ -8,7 +8,7 @@ updated: 2026-10-28
 
 # Grammar gate preparation
 
-This follows accepted [[research-log-2026-10-28-r09-native-integration]]. No AsOf
+This follows accepted [[research-log-2026-10-28-r09-native-integration]]. No TETHER
 runtime/resource/test file changed after its 1,724-test/324-pin acceptance.
 Static inspection rehashes approved b11717 common/core/server DLLs and finds C++
 converter overloads and public grammar sampler entry points. No DLL was loaded.
@@ -35,7 +35,7 @@ owner confirmed no existing C++ toolchain. The current model-free
 bridge route needs MSVC-compatible ABI and pinned headers/build identity; no unsafe
 C++-layout guessing, system installation or real inference was attempted. Human
 reviews remain pending. Resume from the
-[retained plan](../planning/review-assets/recovery-step9-native-grammar-20261028/DISCOVERY-AND-NEXT-STEPS.md);
+[retained plan](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-grammar-20261028/DISCOVERY-AND-NEXT-STEPS.md);
 native conformance/R09–R16 remain open.
 
 The owner subsequently installed Build Tools. Its scoped own-source probe now

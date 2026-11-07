@@ -113,7 +113,7 @@ schemas, and does not alter catalog collection status.
 A future adapted local arm must replace execution for every contributing role,
 constrain tools and source access, match the admitted evidence world and budgets,
 exclude known-drug/ChEMBL/outcome leakage, and pass canary/source-binding tests.
-It must be labeled **adapted**, with all deviations retained. Renaming the AsOf
+It must be labeled **adapted**, with all deviations retained. Renaming the TETHER
 selector or using upstream role names would not establish a Virtual Biotech run.
 
 ## Tools, evidence and outstanding gates

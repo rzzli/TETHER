@@ -21,10 +21,10 @@ import time
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from asof.atomic import publish_bytes
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, canonical, fingerprint, freeze, parse_json, safe_child
-from asof.study.proofs import capture_file
+from tether_engine.atomic import publish_bytes
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, canonical, fingerprint, freeze, parse_json, safe_child
+from tether_engine.study.proofs import capture_file
 from tether._process import ProcessLimits, supervise_command, validate_success_report
 from experiments.scifact.data_views import verify_preparation, load_product
 from experiments.scifact.native_contract import validate_prediction

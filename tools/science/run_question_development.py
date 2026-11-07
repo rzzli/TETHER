@@ -8,11 +8,11 @@ import subprocess
 import time
 import urllib.request
 
-from asof.agents import Usage
-from asof.journal import RunJournal,read_chain
-from asof.local_model import NoRedirect
-from asof.serde import decode,encode,fingerprint,freeze,read_json,sha256_file,write_json
-from asof.workflow import Budget,add_usage
+from tether_engine.agents import Usage
+from tether_engine.journal import RunJournal,read_chain
+from tether_engine.local_model import NoRedirect
+from tether_engine.serde import decode,encode,fingerprint,freeze,read_json,sha256_file,write_json
+from tether_engine.workflow import Budget,add_usage
 from tools.science.bounded_interpretation import need
 from tools.science.interpretation_questions import prepare_question
 from tools.science.question_interpretation_local import (LocalQuestionInterpreter,payload_for,verify_local_execution,
@@ -206,7 +206,7 @@ def _start(plan,output,journal,ownership):
     with socket.socket() as probe:probe.bind(('127.0.0.1',plan['port']))
     argv=[str(server),'--model',str(model),'--host','127.0.0.1','--port',str(plan['port']),
         '--ctx-size','16384','--parallel','1','--n-gpu-layers','99','--threads','8',
-        '--alias','asof-question-development','--no-webui','--offline']
+        '--alias','tether-question-development','--no-webui','--offline']
     write_json(output/'server-command.json',dict(argv=argv,runtime_sha256=sha256_file(server)))
     with _preserve_primary((output/'server.stdout.log').open('xb')) as stdout,\
          _preserve_primary((output/'server.stderr.log').open('xb')) as stderr:

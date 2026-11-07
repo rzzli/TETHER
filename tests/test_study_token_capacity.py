@@ -7,17 +7,17 @@ import time
 import unittest
 from unittest.mock import patch
 
-from asof.agents import Usage
-from asof.serde import ContractError, canonical, encode, fingerprint, parse_json
-from asof.study import tokenization as tok
-from asof.study.__main__ import fixture
-from asof.study.diagnostic import REQUIRED_RESOURCES, load_synthetic_request, prepare_payload
-from asof.study.recorded import RecordedVerifier
-from asof.study.session import StudySession, _capacity, verify_study
-from asof.study.token_capacity import (
+from tether_engine.agents import Usage
+from tether_engine.serde import ContractError, canonical, encode, fingerprint, parse_json
+from tether_engine.study import tokenization as tok
+from tether_engine.study.__main__ import fixture
+from tether_engine.study.diagnostic import REQUIRED_RESOURCES, load_synthetic_request, prepare_payload
+from tether_engine.study.recorded import RecordedVerifier
+from tether_engine.study.session import StudySession, _capacity, verify_study
+from tether_engine.study.token_capacity import (
     TrustedTokenCapacity, TokenQuotedRecordedBackend, verify_recorded_execution,
 )
-from asof.workflow import Budget
+from tether_engine.workflow import Budget
 from tests import test_study_tokenization as helpers
 
 

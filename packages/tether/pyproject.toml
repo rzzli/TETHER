@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tether-target-agents"
-version = "0.5.2"
-description = "TETHER: auditable evidence-agent execution with a frozen compatibility engine"
+version = "0.6.0"
+description = "TETHER: auditable evidence-agent execution with a versioned engine"
 requires-python = ">=3.11"
-dependencies = ["asof-target-agents==0.3.13"]
+dependencies = ["tether-target-engine==0.4.0"]
 license = {file = "LICENSE"}
 
 [project.optional-dependencies]
@@ -21,4 +21,4 @@ where = ["src"]
 include = ["tether", "tether.*"]
 
 [tool.uv.sources]
-asof-target-agents = {path = "../.."}
+tether-target-engine = {path = "../.."}

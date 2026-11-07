@@ -6,9 +6,9 @@ accounting, source selection and admission decision before allowing consumption.
 """
 from pathlib import Path
 
-from asof.journal import read_chain
-from asof.serde import canonical,encode,parse_json,freeze
-from asof.study import native
+from tether_engine.journal import read_chain
+from tether_engine.serde import canonical,encode,parse_json,freeze
+from tether_engine.study import native
 from experiments.labbench import model
 from . import acquisition,admission,codecs,pipeline,transport
 

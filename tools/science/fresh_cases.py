@@ -192,7 +192,7 @@ def freeze(proposals_path, inspection_path, raw_root, output):
     output.mkdir(parents=True, exist_ok=False)
     proposals = json.loads(Path(proposals_path).read_text(encoding='utf-8'))
     sources = checked_identity_sources(inspection_path, raw_root)
-    from asof.ingest import PILOT
+    from tether_engine.ingest import PILOT
     cases = resolve_cases(proposals['cases'], *read_identity_rows(sources), exposed=PILOT)
     if len(cases) != 10:
         raise ValueError('Fresh pack requires exactly ten hypotheses')

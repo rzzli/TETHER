@@ -1,12 +1,12 @@
 ---
 name: data-acquisition-plan
-description: Implemented AsOf data inventory, historical compatibility and staged acquisition requirements
+description: Implemented TETHER data inventory, historical compatibility and staged acquisition requirements
 metadata:
   type: project
 updated: 2026-10-17
 ---
 
-# AsOf data acquisition plan
+# TETHER data acquisition plan
 
 ## October 17 completed continuation
 
@@ -28,7 +28,7 @@ The file-access blocker is resolved. The 24 records show four completed, one ter
 
 ## Current addition — October 16
 
-One user-downloaded January 1, 2023 AACT snapshot is collected and technically restored on E:. See [[AACT Historical Restoration]] for 55-table/437,548-study validation, nine unmatched stored-record rows, hashes and resource evidence. The catalog acquisition scope is one archive, not the historical series. This is a direct PostgreSQL restore, not an AsOf parser/agent packet; scientific validation and strict first-public availability remain unverified. No new clinical audit or genetics work; downloader and monitor untouched.
+One user-downloaded January 1, 2023 AACT snapshot is collected and technically restored on E:. See [[AACT Historical Restoration]] for 55-table/437,548-study validation, nine unmatched stored-record rows, hashes and resource evidence. The catalog acquisition scope is one archive, not the historical series. This is a direct PostgreSQL restore, not an TETHER parser/agent packet; scientific validation and strict first-public availability remain unverified. No new clinical audit or genetics work; downloader and monitor untouched.
 
 ## Archived state — October 11
 
@@ -40,7 +40,7 @@ See [[Project Audit and v0.2 Completion]] and [[research-log-2026-10-11]] for fr
 
 The following paragraphs describe the original 177-product scaffold and October 10 acquisition authorization; they are not a claim that the current implementation remains documentation-only.
 
-The user explicitly authorized the revalidated documentation-only scaffold. It is implemented in [[data/README|the data entry point]], [[data/DATA_PLAN|the detailed requirements/roadmap]] and [[data/catalog/sources.json|the provider/product catalog]]. Related context: [[project-goals]], [[asof-feasibility-findings]], [[research-log-2026-10-09]].
+The user explicitly authorized the revalidated documentation-only scaffold. It is implemented in [[data/README|the data entry point]], [[data/DATA_PLAN|the detailed requirements/roadmap]] and [[data/catalog/sources.json|the provider/product catalog]]. Related context: [[project-goals]], [[tether-feasibility-findings]], [[research-log-2026-10-09]].
 
 The inventory contains 83 providers and 177 dataset/product records, including 38 pinned Open Targets components. All products are planned, with parsing and scientific validation not run. Metadata/directory checks and prior sample inspection are recorded independently from collection status. No biomedical datasets were acquired into this scaffold and no downloader, ingestion service or runtime adapter was added.
 

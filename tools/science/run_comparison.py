@@ -18,21 +18,21 @@ import sys
 import time
 import urllib.request
 
-from asof.chrono import EvidenceStore, load_snapshot
-from asof.contracts import Case, Category, EvidenceStatus
-from asof.ingest import peak_memory_bytes
-from asof.journal import RunJournal, read_chain
-from asof.local_model import NoRedirect
+from tether_engine.chrono import EvidenceStore, load_snapshot
+from tether_engine.contracts import Case, Category, EvidenceStatus
+from tether_engine.ingest import peak_memory_bytes
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.local_model import NoRedirect
 from tools.science.role_backend import ROLE_SELECTION_POLICY, RoleSelectionBackend
-from asof.serde import ContractError, decode, encode, fingerprint, read_json, safe_child, sha256_file, write_json
-from asof.workflow import Budget
+from tether_engine.serde import ContractError, decode, encode, fingerprint, read_json, safe_child, sha256_file, write_json
+from tether_engine.workflow import Budget
 
 
 ROOT = Path(__file__).resolve().parents[2]
 PROTOCOL = ROOT/'planning/protocols/science7-matched-t6-v0.2.json'
 PORT = 55581
 CODE_FILES = ('tools/science/run_comparison.py', 'tools/science/comparison_workflow.py', 'tools/science/role_backend.py') + tuple(
-        p.relative_to(ROOT).as_posix() for p in sorted((ROOT/'src/asof').glob('*.py')))
+        p.relative_to(ROOT).as_posix() for p in sorted((ROOT/'src/tether_engine').glob('*.py')))
 EXECUTION_PROOF_FILES = {
     'execution_journal': 'execution/journal.jsonl',
     'server_command': 'server-command.json',
@@ -327,7 +327,7 @@ def execute(plan_path, expected_sha256):
             check.bind(('127.0.0.1', PORT))
         argv = [str(server), '--model', str(model), '--host', '127.0.0.1', '--port', str(PORT),
                 '--ctx-size', '16384', '--parallel', '1', '--n-gpu-layers', '99', '--threads', '8',
-                '--alias', 'asof-science7-qwen25-14b', '--no-webui', '--offline']
+                '--alias', 'tether-science7-qwen25-14b', '--no-webui', '--offline']
         write_json(output/'server-command.json', {'argv': argv, 'runtime_sha256': sha256_file(server)})
         with (output/'server.stdout.log').open('xb') as stdout, (output/'server.stderr.log').open('xb') as stderr:
             process = subprocess.Popen(argv, stdout=stdout, stderr=stderr,

@@ -2,18 +2,19 @@
 import copy
 from dataclasses import replace
 from pathlib import Path
+from tools.history import materialize_checkpoint
 import shutil
 import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.agents import ReplayBackend, Selection, Usage, critique, make_request
-from asof.artifacts import verify_run, write_run
-from asof.chrono import load_snapshot
-from asof.contracts import Case, Category, EvidenceStatus
-from asof.scorer import ScorerArtifact
-from asof.serde import ContractError, canonical, decode, encode, fingerprint, read_json, sha256_file, write_json
-from asof.workflow import Budget, run_workflow
+from tether_engine.agents import ReplayBackend, Selection, Usage, critique, make_request
+from tether_engine.artifacts import verify_run, write_run
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case, Category, EvidenceStatus
+from tether_engine.scorer import ScorerArtifact
+from tether_engine.serde import ContractError, canonical, decode, encode, fingerprint, read_json, sha256_file, write_json
+from tether_engine.workflow import Budget, run_workflow
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -24,7 +25,7 @@ class ReplayArchiveVerificationTests(unittest.TestCase):
         self.addCleanup(self.temporary.cleanup)
         self.root = Path(self.temporary.name)
         self.fixture = self.root / 'fixture'
-        shutil.copytree(ROOT / 'src/asof/demo/v2', self.fixture)
+        shutil.copytree(ROOT / 'src/tether_engine/demo/v2', self.fixture)
         self.case = decode(Case, read_json(self.fixture / 'case.json'))
         self.model = decode(ScorerArtifact, read_json(self.fixture / 'scorer.json'))
         self.store = load_snapshot(self.fixture / 'snapshot.json', self.case)
@@ -223,7 +224,7 @@ class ReplayArchiveVerificationTests(unittest.TestCase):
 
     def test_archived_only_verification_does_not_read_originals_or_overstate_binding(self):
         self.produce()
-        with patch('asof.artifacts.admit_snapshot', side_effect=AssertionError('No source restoration')):
+        with patch('tether_engine.artifacts.admit_snapshot', side_effect=AssertionError('No source restoration')):
             check = verify_run(self.output, verify_sources=False)
         self.assertEqual(check['source_binding'], 'archived_fingerprints_only')
         self.assertEqual(check['replay_binding']['request_binding'], 'archived_dispatch_fingerprints')
@@ -248,7 +249,7 @@ class ReplayArchiveVerificationTests(unittest.TestCase):
 
     def test_legacy_v1_receipt_scope_is_unchanged(self):
         legacy = self.root / 'legacy'
-        shutil.copytree(ROOT / 'tests/fixtures/legacy-v1', legacy)
+        materialize_checkpoint('tests/fixtures/legacy-v1', legacy)
         check = verify_run(legacy, verify_sources=False)
         self.assertEqual(check['semantic_consistency'], 'unavailable_legacy_v1')
         self.assertNotIn('replay_binding', check)

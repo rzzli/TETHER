@@ -4,7 +4,7 @@ date: 2026-10-12
 timezone: America/Los_Angeles
 status: stabilization-implemented-feasibility-gated
 tags:
-  - asof
+  - TETHER
   - planning
   - feasibility
   - v03
@@ -38,7 +38,7 @@ The canonical local pilot is `runs/v02-realdata-20261012T015124Z/`, built from `
 | Tests | Latest retained full run: 100 tests passed; ten current review probes passed; dependency-free demo verified |
 | Scientific boundaries | All real probabilities null, real prediction features empty, provider spending $0; 65 missing inputs remain |
 
-See the [dossier index](../runs/v02-realdata-20261012T015124Z/README.md), [pilot report](../runs/v02-realdata-20261012T015124Z/pilot-report.json), [source audit](../runs/v02-realdata-20261012T015124Z/source-review.json), [build report](../data/derived/v02-contemporary-pilot-20261012T014305Z/build-report.json), and [[data/manifests/public/2026-10-11-project-checks.json]]. These are development artifacts, not ten independent clinical outcomes. ERBB2 and PCSK9 reuse source evidence across different hypotheses.
+See the dossier index (local artifact: `runs/v02-realdata-20261012T015124Z/README.md`), pilot report (local artifact: `runs/v02-realdata-20261012T015124Z/pilot-report.json`), source audit (local artifact: `runs/v02-realdata-20261012T015124Z/source-review.json`), build report (local artifact: `data/derived/v02-contemporary-pilot-20261012T014305Z/build-report.json`), and [[data/manifests/public/2026-10-11-project-checks.json]]. These are development artifacts, not ten independent clinical outcomes. ERBB2 and PCSK9 reuse source evidence across different hypotheses.
 
 The original incomplete snapshot and first superseded run remain retained. The later failed pilot exposed a ledger-output size issue: claim envelopes expanded a valid packet beyond 64 MiB. That was fixed and tested using a separate 256 MiB output-ledger bound; the evidence packet limit remains 64 MiB. The canonical retry above completed after that fix. Rebuilding these ten cases again is not a next-stage prerequisite unless code or input changes invalidate their guarantees.
 
@@ -90,7 +90,7 @@ Two additional planning corrections follow from the source review:
 
 - Replace catalog side effects in `prepare_v02_inputs.py` with a read-only manifest builder. Require explicit roots/queues/output or documented project-relative defaults. Reject an existing output by default; keep the existing frozen manifest byte-for-byte unchanged.
 - Introduce one catalog-update entry point. PowerShell transport inspection emits a proposed acquisition report; it does not rewrite the full catalog. The updater validates IDs, allowed fields, roles, references and report hashes; locks updates, checks the expected prior catalog hash, writes atomically and records provenance. Human-reviewed policy/dependencies/licensing cannot be overwritten by a transport status sync.
-- Keep acquisition, parsing, technical QC and scientific validation separate. Record `asof_normalized_packets` as collected/parsed only for the retained ten-case release; mark independent scientific validation `not_run`. Scope other generated products or source parsing accurately instead of claiming full provider coverage.
+- Keep acquisition, parsing, technical QC and scientific validation separate. Record `tether_normalized_packets` as collected/parsed only for the retained ten-case release; mark independent scientific validation `not_run`. Scope other generated products or source parsing accurately instead of claiming full provider coverage.
 - Use explicit paths and UTC timestamps in report filenames; retain the user-facing reporting timezone in metadata. No-clobber publication also applies to source-size inventories. Same-day repeated execution must preserve both records and consistent catalog links.
 - Resolve monitor identity from explicit batch/queue metadata. Add appropriate PowerShell version declarations and validate them. Test with temporary queue/state files; do not start monitoring or change the active downloader.
 - Give demo utilities argument parsing, complete input preflight and fresh-output behavior. Errors should identify missing fixture inputs before leaving partial output.

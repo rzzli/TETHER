@@ -12,13 +12,14 @@ from types import SimpleNamespace
 from pathlib import Path
 from unittest.mock import patch
 
-from asof.journal import RunJournal, read_chain
-from asof.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
-from asof.serde import ContractError, canonical, encode, fingerprint, parse_json
-from asof.study.source_fact_evaluation import TERMINALS
-from asof.study.source_fact_inputs import make_packet
-from asof.study.source_fact_reporting import literal_report
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
+from tether_engine.serde import ContractError, canonical, encode, fingerprint, parse_json
+from tether_engine.study.source_fact_evaluation import TERMINALS
+from tether_engine.study.source_fact_inputs import make_packet
+from tether_engine.study.source_fact_reporting import literal_report
 from tools.science import run_source_fact_pilot as pilot
+from tools.history import read_checkpoint
 if __package__:
     from .test_study_source_fact_reporting import packet
 else:
@@ -64,7 +65,23 @@ class PilotControllerTests(unittest.TestCase):
         self.stack.enter_context(patch.object(pilot, "OUTPUT_PARENT", self.output_parent))
         self.stack.enter_context(patch.object(pilot, "capture_environment", return_value={
             "fictional_environment": True, "dependencies": {"pyarrow": "21.0.0"}}))
-        self.protocol = parse_json((pilot.ROOT / pilot.ASSETS / "EXECUTION-PROTOCOL-DRAFT-v1.json").read_bytes())
+        self.protocol = parse_json(read_checkpoint((Path(pilot.ASSETS) / "EXECUTION-PROTOCOL-DRAFT-v1.json").as_posix()))
+        # Construct a current, explicitly invented controller fixture from the
+        # historical shape. Original protocol/proof bytes remain untouched.
+        previous_arms = {row['arm'] for row in self.protocol['scheduled_cells']}
+        replacements = dict(zip(sorted(previous_arms-set(pilot.ARMS)),
+                                sorted(set(pilot.ARMS)-previous_arms)))
+        for row in self.protocol['scheduled_cells']:
+            prior = row['arm']
+            if prior in replacements:
+                row['arm'] = replacements[prior]
+                row['cell_id'] = row['cell_id'].replace(prior, row['arm'])
+        budgets = self.protocol['budgets_per_arm_cell']
+        self.protocol['budgets_per_arm_cell'] = {replacements.get(k,k):v for k,v in budgets.items()}
+        self.stack.enter_context(patch.object(pilot, 'PINNED_COMPONENTS', {
+            **pilot.PINNED_COMPONENTS,
+            'scheduled_cells':fingerprint(self.protocol['scheduled_cells']),
+            'budgets_per_arm_cell':fingerprint(self.protocol['budgets_per_arm_cell'])}))
         self.protocol.update(status="READY", evaluation_seconds=3600,
             roots=dict(workspace=str(pilot.ROOT), approved_raw_root=str(pilot.RAW_ROOT),
                        generation=str(pilot.GENERATION_ROOT), reference=str(pilot.REFERENCE_ROOT),

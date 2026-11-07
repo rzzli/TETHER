@@ -1,15 +1,17 @@
+import json
+from tools.history import read_checkpoint
 import copy
 from pathlib import Path
 import tempfile
 import unittest
 
-from asof.serde import ContractError, read_json, sha256_file, write_json
+from tether_engine.serde import ContractError, read_json, sha256_file, write_json
 from tools.feasibility.chronology_policy import validate_protocol, validate_frozen, utc
 
 
 class ChronologyPolicyTests(unittest.TestCase):
     def setUp(self):
-        self.policy = read_json(Path('planning/protocols/evaluation-v0.1.json'))
+        self.policy = json.loads(read_checkpoint('planning/protocols/evaluation-v0.1.json'))
 
     def test_valid_protocol_does_not_certify_lock_or_science(self):
         answer = validate_protocol(self.policy)

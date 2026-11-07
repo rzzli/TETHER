@@ -15,8 +15,8 @@ import stat
 import types
 import zipfile
 
-from asof.atomic import publish_bytes
-from asof.serde import canonical, freeze, parse_json
+from tether_engine.atomic import publish_bytes
+from tether_engine.serde import canonical, freeze, parse_json
 from .native_contract import (
     _fields, _prediction_shape, _reference_shapes, need,
     validate_prediction, validate_references, validate_schedule,

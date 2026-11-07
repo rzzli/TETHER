@@ -13,19 +13,20 @@ import tempfile
 from dataclasses import replace
 from datetime import date, datetime, timezone
 from pathlib import Path
+from tools.history import materialize_checkpoint
 
-from asof.agents import ExtractiveBackend
-from asof.artifacts import verify_run, write_run
-from asof.chrono import load_snapshot
-from asof.contracts import Case, Category
-from asof.journal import RunJournal, inspect_run
-from asof.scorer import ScorerArtifact
-from asof.serde import ContractError, decode, fingerprint, read_json, sha256_file, write_json
-from asof.workflow import run_workflow
+from tether_engine.agents import ExtractiveBackend
+from tether_engine.artifacts import verify_run, write_run
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case, Category
+from tether_engine.journal import RunJournal, inspect_run
+from tether_engine.scorer import ScorerArtifact
+from tether_engine.serde import ContractError, decode, fingerprint, read_json, sha256_file, write_json
+from tether_engine.workflow import run_workflow
 
 
 PROJECT = Path(__file__).resolve().parents[2]
-FIXTURES = PROJECT / "src/asof/demo/v2"
+FIXTURES = PROJECT / "src/tether_engine/demo/v2"
 LEGACY_REPORT = PROJECT / "planning/review-assets/framework-review-2026-10-10.json"
 
 
@@ -240,7 +241,7 @@ def new_computation_old_inputs(root):
 
 def legacy_verification(root):
     archived = root / "legacy-v1"
-    shutil.copytree(PROJECT / "tests/fixtures/legacy-v1", archived)
+    materialize_checkpoint('tests/fixtures/legacy-v1', archived)
     checked = verify_run(archived, (archived / "receipt.sha256").read_text().strip())
     return report("Keep legacy byte verification without claiming v2 semantics",
                   checked["semantic_consistency"] == "unavailable_legacy_v1",
@@ -270,7 +271,7 @@ def main():
               "legacy_verification": legacy_verification}
     results = {}
     for name, probe in probes.items():
-        with tempfile.TemporaryDirectory(prefix="asof-review-v2-") as directory:
+        with tempfile.TemporaryDirectory(prefix="tether-review-v2-") as directory:
             try:
                 results[name] = probe(Path(directory))
             except Exception as error:
@@ -284,7 +285,7 @@ def main():
                                 "sha256": sha256_file(LEGACY_REPORT) if LEGACY_REPORT.is_file() else None,
                                 "meaning": "Preserved v1 historical findings; not current runtime status"},
               "source_hashes": {path.relative_to(PROJECT).as_posix(): sha256_file(path)
-                                for path in sorted((PROJECT / "src/asof").glob("*.py"))},
+                                for path in sorted((PROJECT / "src/tether_engine").glob("*.py"))},
               "probes": results,
               "known_limitations": [{"area": "evaluation",
                   "status": "descriptive_only", "detail":

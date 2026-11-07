@@ -129,12 +129,12 @@ live extraction or reuse an output directory. All five source servers are stoppe
 No imports, original-archive rewrites, new acquisitions or provider-model calls occurred.
 The original download worker and stopped periodic monitor were not changed.
 
-The private repository is [rzzli/drug_target_agents](https://github.com/rzzli/drug_target_agents).
+The private repository is [rzzli/drug_target_agents](https://github.com/rzzli/TETHER).
 Windows/Linux core/full CI passed at both the baseline and registry code checkpoint
-`f57c448` ([registry run](https://github.com/rzzli/drug_target_agents/actions/runs/39067876345)). Baseline recovery assets were downloaded
+`f57c448` ([registry run](https://github.com/rzzli/TETHER/actions/runs/39067876345)). Baseline recovery assets were downloaded
 from private hosting, all 1,811 entries rehashed, a sealed milestone restored and the
 Git bundle cloned/fsck-checked. The final registry release was downloaded and restored: all 146 files / 2.84 GB
 of selected source artifacts rehashed, SQLite integrity and the 21-file milestone seal
-passed, and the Git bundle cloned/fsck-checked. Evidence is recorded in [the milestone evidence index](review-assets/registry-sizing-20261017/README.md).
+passed, and the Git bundle cloned/fsck-checked. Evidence is recorded in [the milestone evidence index](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/registry-sizing-20261017/README.md).
 Full AACT ZIPs/dumps/database pages are outside these small-workspace recovery bundles;
 do not claim a complete raw-data disaster-recovery copy.

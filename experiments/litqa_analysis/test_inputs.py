@@ -1,6 +1,6 @@
 import unittest
 
-from asof.serde import encode
+from tether_engine.serde import encode
 from experiments.labbench.data_views import project_rows
 from experiments.litqa_analysis.inputs import projection, graph_groups
 from experiments.litqa_analysis.native_records import canonical

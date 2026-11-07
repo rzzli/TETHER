@@ -2,7 +2,7 @@
 title: Program Advancement Rules v0.3
 date: 2026-10-17
 status: frozen-development-rules-applied
-tags: [asof, clinical-evaluation, protocol, feasibility]
+tags: [TETHER, clinical-evaluation, protocol, feasibility]
 ---
 
 # Program advancement rules v0.3

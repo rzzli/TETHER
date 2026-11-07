@@ -18,7 +18,7 @@ availability or model result selects a unit; exposure beyond nine excluded
 development symbols remains unknown.
 
 The reference builder was frozen at commit `f4897f6` before original-value
-reads. [READY](review-assets/preprint-p05-20261031/REFERENCE-READY-v1.json) has
+reads. [READY](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/REFERENCE-READY-v1.json) has
 exact byte hash `8dcd3a4a0b328a48d6ad2bb2ceaa73660f757cdf23daf546a761025123cf7800`.
 The author, independent reviewer and root each pass the same 41 fictional
 regressions; those are repeat verification of 41 methods, not 123 distinct
@@ -39,7 +39,7 @@ before references and are not their value parents. The builder has a separate
 author and fresh original reads, but shares scanner/mapping/task algorithms with
 the input builder; this is provenance isolation, not algorithmic independence.
 
-The [independent original-source audit](review-assets/preprint-p05-20261031/REFERENCE-AUDIT-v1.json)
+The [independent original-source audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/REFERENCE-AUDIT-v1.json)
 passes **1,163 checks, zero artifact/semantic findings**. It verifies all
 137 originals/receipts, 89 recipe archives, 69 code pins and 71 pre-run Git files,
 then independently reconstructs every reference without using producer
@@ -66,7 +66,7 @@ and must remain visible when reporting experiment resources.
 
 Producer RSS and peak working set are **unmeasured**: the frozen wrapper relies
 on optional `psutil`, absent from this interpreter, without a fallback. See the
-[retained resource limitation](review-assets/preprint-p05-20261031/REFERENCE-RESOURCE-LIMITATION-v1.json).
+[retained resource limitation](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/REFERENCE-RESOURCE-LIMITATION-v1.json).
 No peak is reconstructed after process closure and no run repeated solely to
 replace the missing measurement. The separate audit took 7.531 seconds and
 308,641,792 bytes process-lifetime peak working set; that is the auditor's
@@ -104,7 +104,7 @@ unchanged. No new download, provider spending or model call occurred here.
 
 ## Critical review of the next step
 
-The [experiment draft](review-assets/preprint-p05-20261031/EXPERIMENT-DESIGN-v1.md)
+The [experiment draft](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/EXPERIMENT-DESIGN-v1.md)
 proposes 38 retained output cells and 90 paired verification decisions: twelve
 native units, literal/abstain controls and fourteen constructed scenarios. It
 has no execution authority. A P05-only packet adapter is required because the

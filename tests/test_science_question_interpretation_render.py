@@ -6,8 +6,8 @@ import shutil
 import tempfile
 import unittest
 
-from asof.contracts import Case
-from asof.serde import ContractError,encode,fingerprint,read_json,write_json
+from tether_engine.contracts import Case
+from tether_engine.serde import ContractError,encode,fingerprint,read_json,write_json
 from tools.science.interpretation_questions import prepare_question,bind_question
 from tools.science import question_interpretation_render as render
 
@@ -17,7 +17,7 @@ ROOT=Path(__file__).resolve().parents[1]
 class QuestionRenderTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)
-        self.inputs=Path(self.temp.name)/'inputs';shutil.copytree(ROOT/'src/asof/demo/v2',self.inputs)
+        self.inputs=Path(self.temp.name)/'inputs';shutil.copytree(ROOT/'src/tether_engine/demo/v2',self.inputs)
         case=replace(decode_case(self.inputs/'case.json'),task='T6',endpoint=None)
         write_json(self.inputs/'case.json',encode(case))
         full=prepare_question(self.inputs/'case.json',self.inputs/'snapshot.json','mechanism-report.v1').request
@@ -170,7 +170,7 @@ class QuestionRenderTests(unittest.TestCase):
 
 
 def decode_case(path):
-    from asof.serde import decode
+    from tether_engine.serde import decode
     return decode(Case,read_json(path))
 
 

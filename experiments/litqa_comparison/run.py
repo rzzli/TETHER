@@ -16,9 +16,9 @@ import time
 
 ROOT=Path(__file__).resolve().parents[2]
 sys.path[:0]=[str(ROOT),str(ROOT/'src'),str(ROOT/'packages/tether/src')]
-from asof.atomic import publish_bytes
-from asof.journal import RunJournal
-from asof.serde import canonical,encode,freeze,parse_json
+from tether_engine.atomic import publish_bytes
+from tether_engine.journal import RunJournal
+from tether_engine.serde import canonical,encode,freeze,parse_json
 from tether._process import ProcessLimits,supervise_command,validate_success_report
 from experiments.labbench import model
 from experiments.labbench.runtime import contain_process_tree,empty_import_cache,process_sample,InputAudit,DeadlineWatchdog,ProcessSamples
@@ -35,7 +35,7 @@ def write(path,value):publish_bytes(Path(path),canonical(value)+b'\n')
 
 def code_pins():
     paths=[]
-    for folder in ('src/asof','packages/tether/src/tether','experiments/labbench','experiments/litqa_comparison'):
+    for folder in ('src/tether_engine','packages/tether/src/tether','experiments/labbench','experiments/litqa_comparison'):
         paths.extend((ROOT/folder).rglob('*.py'))
     return {p.relative_to(ROOT).as_posix():pipeline.proof(p)['sha256'] for p in sorted(paths)}
 

@@ -9,8 +9,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError, canonical, parse_json
-from asof.journal import read_chain
+from tether_engine.serde import ContractError, canonical, parse_json
+from tether_engine.journal import read_chain
 from experiments.scifact.data_views import (load_archive, projected_products, prepare_release,
                                             verify_preparation, load_product, digest, jsonl_bytes)
 

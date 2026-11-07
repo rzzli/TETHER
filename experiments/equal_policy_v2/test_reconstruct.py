@@ -36,32 +36,32 @@ class ReconstructionTests(unittest.TestCase):
             self.sources[path.relative_to(self.project).as_posix()] = audit.file_pin(path)
         installed = {}
         roots = {}
-        for name in ('asof', 'tether'):
+        for name in ('tether_engine', 'tether'):
             root = self.project / 'qualification/environment/Lib/site-packages' / name
-            write(root / '__init__.py', ("__version__ = " + repr({'asof': '0.3.12', 'tether': '0.5.1'}[name]) + '\n').encode())
+            write(root / '__init__.py', ("__version__ = " + repr({'tether_engine': '0.4.0', 'tether': '0.6.0'}[name]) + '\n').encode())
             roots[name] = root
             installed[name] = dict(root=str(root), files={'__init__.py': audit.file_pin(root / '__init__.py')})
         metadata = self.project / 'qualification/environment/Lib/site-packages'
-        for package in ('asof_target_agents-0.3.12', 'tether_target_agents-0.5.1'):
+        for package in ('tether_target_engine-0.4.0', 'tether_target_agents-0.6.0'):
             write(metadata / (package + '.dist-info') / 'METADATA', b'Fictional metadata only\n')
         installed['distribution_metadata'] = dict(root=str(metadata), files={
             path.relative_to(metadata).as_posix(): audit.file_pin(path) for path in metadata.glob('*.dist-info/METADATA')})
         qualification = self.project / 'qualification/QUALIFICATION.json'
         wheel_proofs, trusted_wheels = [], []
-        for name in ('asof', 'tether'):
+        for name in ('tether_engine', 'tether'):
             wheel = qualification.parent / 'wheels' / (name + '.whl')
             write(wheel, b'Fictional wheel bytes, never installed')
             trusted_wheels.append(dict(filename=wheel.name, **audit.file_pin(wheel)))
-            wheel_proofs.append(dict(path=str(wheel), distribution=name + '-target-agents',
+            wheel_proofs.append(dict(path=str(wheel), distribution={'tether_engine': 'tether-target-engine', 'tether': 'tether-target-agents'}[name],
                 record_verified=True, **audit.file_pin(wheel), source_sha256={
                     name + '/' + relative: proof['sha256'] for relative, proof in installed[name]['files'].items()}))
-        write(qualification, dict(status='PASS', versions={'asof-target-agents': '0.3.12',
-            'tether-target-agents': '0.5.1'}, wheel_proofs=wheel_proofs))
-        self.trusted = dict(schema_version=1, versions=dict(asof='0.3.12', tether='0.5.1'),
-            runtime_paths=dict(python=str(self.python), asof_file=str(roots['asof'] / '__init__.py'),
+        write(qualification, dict(status='PASS', versions={'tether-target-engine': '0.4.0',
+            'tether-target-agents': '0.6.0'}, wheel_proofs=wheel_proofs))
+        self.trusted = dict(schema_version=1, versions=dict(tether_engine='0.4.0', tether='0.6.0'),
+            runtime_paths=dict(python=str(self.python), tether_engine_file=str(roots['tether_engine'] / '__init__.py'),
                                tether_file=str(roots['tether'] / '__init__.py')),
-            core_code_sha256={name: pin['sha256'] for name, pin in installed['asof']['files'].items()},
-            launcher_proof=dict(core_version='0.3.12', facade_version='0.5.1',
+            core_code_sha256={name: pin['sha256'] for name, pin in installed['tether_engine']['files'].items()},
+            launcher_proof=dict(core_version='0.4.0', facade_version='0.6.0',
                 code={name: dict(path=name, **pin) for name, pin in installed['tether']['files'].items()}),
             qualification=dict(path=str(qualification), sha256=audit.file_pin(qualification)['sha256']),
             wheels=trusted_wheels)
@@ -129,7 +129,7 @@ class ReconstructionTests(unittest.TestCase):
                 module = {'tether': 'reference.py', 'independent': 'independent.py', 'hash_schema': 'controls.py', 'reject_all': 'controls.py'}[arm]
                 runtime = dict(isolated=True, repository_product_source_on_path=False, python=str(self.python),
                     implementation_file=str(self.project / 'experiments' / ('equal_policy_v2' if arm in ('tether','independent') else 'equal_policy') / module),
-                    loaded_product_modules={name: self.trusted['runtime_paths'][name + '_file'] for name in ('asof', 'tether')} if arm == 'tether' else {})
+                    loaded_product_modules={name: self.trusted['runtime_paths'][name + '_file'] for name in ('tether_engine', 'tether')} if arm == 'tether' else {})
                 worker = dict(schema_version=1, implementation=arm, result=result, metrics=metrics, runtime=runtime)
                 write(cell / 'stdout.json', worker)
                 write(cell / 'stderr.txt', b'')
@@ -203,7 +203,7 @@ class ReconstructionTests(unittest.TestCase):
         with self.assertRaises(audit.ReconstructionError): self.reconstruct()
 
     def test_changed_installed_code_is_detected(self):
-        write(Path(self.trusted['runtime_paths']['asof_file']), b'# modified\n')
+        write(Path(self.trusted['runtime_paths']['tether_engine_file']), b'# modified\n')
         with self.assertRaises(audit.ReconstructionError): self.reconstruct()
 
     def test_changed_installed_metadata_is_detected(self):
@@ -287,7 +287,7 @@ class ReconstructionTests(unittest.TestCase):
         with self.assertRaises(audit.ReconstructionError): audit.statistics_for([-0.1])
 
     def test_product_import_in_independent_worker_invalidates_comparison(self):
-        self.rewrite_cell('UNIT-A-r1-independent', lambda row: row['runtime'].update(loaded_product_modules={'asof': 'wrong'}))
+        self.rewrite_cell('UNIT-A-r1-independent', lambda row: row['runtime'].update(loaded_product_modules={'tether_engine': 'wrong'}))
         with self.assertRaises(audit.ReconstructionError): self.reconstruct()
 
     def test_worker_invocation_input_binding_is_checked(self):
@@ -326,7 +326,7 @@ class ReconstructionTests(unittest.TestCase):
                 imports.append(node.module)
                 if node.module == 'equal_policy':
                     self.assertEqual([item.name for item in node.names], ['reconstruct'])
-        self.assertFalse(any(name.split('.')[0] in ('asof','tether','experiments','run_comparison','cases','materialize')
+        self.assertFalse(any(name.split('.')[0] in ('tether_engine','tether','experiments','run_comparison','cases','materialize')
                              for name in imports))
         self.assertTrue(set(name for name in imports if name.startswith('equal_policy')) <=
                         {'equal_policy','equal_policy.reconstruct'})
@@ -357,7 +357,7 @@ class ReconstructionTests(unittest.TestCase):
             self.reconstruct()
 
     def test_changed_wheel_is_detected(self):
-        write(self.project / 'qualification/wheels/asof.whl', b'changed')
+        write(self.project / 'qualification/wheels/tether_engine.whl', b'changed')
         with self.assertRaises(audit.ReconstructionError): self.reconstruct()
 
     def test_changed_qualification_is_detected(self):
@@ -365,7 +365,7 @@ class ReconstructionTests(unittest.TestCase):
         with self.assertRaises(audit.ReconstructionError): self.reconstruct()
 
     def test_runtime_version_label_must_match_actual_pinned_pair(self):
-        self.frozen['runtime_versions'] = dict(tether='0.5.2', asof='0.3.13')
+        self.frozen['runtime_versions'] = dict(tether='0.5.2', tether_engine='0.3.13')
         self.refreeze()
         with self.assertRaisesRegex(audit.ReconstructionError, 'versions differ'):
             self.reconstruct()

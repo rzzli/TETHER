@@ -8,8 +8,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError, canonical
-from asof.study import baseline_smoke as smoke_module
+from tether_engine.serde import ContractError, canonical
+from tether_engine.study import baseline_smoke as smoke_module
 
 
 class BaselineSmokeTests(unittest.TestCase):

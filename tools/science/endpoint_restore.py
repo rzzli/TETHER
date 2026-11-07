@@ -5,8 +5,8 @@ It cannot open labels, establish ascertainment or activate clinical evaluation.
 """
 from pathlib import Path
 
-from asof.journal import RunJournal
-from asof.serde import ContractError, safe_child, sha256_file, write_json
+from tether_engine.journal import RunJournal
+from tether_engine.serde import ContractError, safe_child, sha256_file, write_json
 from tools.science.reference_panel import read_bound_json
 
 

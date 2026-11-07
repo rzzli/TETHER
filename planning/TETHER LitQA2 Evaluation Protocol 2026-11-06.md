@@ -109,7 +109,7 @@ adjustment, interim answer scoring, case replacement or answer-based exclusion.
 This changes the earlier semantic-smoke prerequisite prospectively; it does not
 reinterpret that failure as success. The purpose is a descriptive baseline that
 can expose low utility despite valid provenance, rather than a selected successful
-solver demonstration. The [independent methods review](review-assets/tether-labbench-20261106/stage/WEAK-SOLVER-METHODS-REVIEW.md)
+solver demonstration. The [independent methods review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-labbench-20261106/stage/WEAK-SOLVER-METHODS-REVIEW.md)
 records the scope and limitations of this decision.
 
 An all-unsure result would be a valid negative measurement with zero substantive
@@ -119,4 +119,4 @@ coverage and all execution costs. No positive accuracy threshold is introduced
 after observing benchmark results. Measurement completion and scientific
 qualification remain separate statuses.
 
-Source reviews: [data feasibility](review-assets/tether-labbench-20261106/data-feasibility.md), [policy feasibility](review-assets/tether-labbench-20261106/policy-feasibility.md), [method feasibility](review-assets/tether-labbench-20261106/method-feasibility.md). The first two are being finalized alongside implementation; their current status is recorded in the stage checkpoint.
+Source reviews: [data feasibility](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-labbench-20261106/data-feasibility.md), [policy feasibility](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-labbench-20261106/policy-feasibility.md), [method feasibility](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-labbench-20261106/method-feasibility.md). The first two are being finalized alongside implementation; their current status is recorded in the stage checkpoint.

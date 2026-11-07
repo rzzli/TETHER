@@ -6,8 +6,8 @@ assets, and require the primary sources to be sealed before diagnostic collectio
 from pathlib import Path
 import time
 
-from asof.atomic import publish_bytes
-from asof.serde import canonical,freeze
+from tether_engine.atomic import publish_bytes
+from tether_engine.serde import canonical,freeze
 from experiments.labbench.native_contract import validate_query
 from experiments.litqa_comparison import codecs,schedule,pipeline as primary,replay as native_replay
 from experiments.litqa_supplied import resolver,admission

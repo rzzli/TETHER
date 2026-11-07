@@ -563,7 +563,7 @@ def supervision(report, limits, stdout_size, stderr_size):
 def outer_envelope(value, extra):
     common = {'schema_version', 'method', 'brand', 'status', 'role', 'agent_visible', 'scientific_validation'}
     need(type(value) is dict and set(value) == common | set(extra), 'Outer envelope fields', 'EP-VERIFY-03')
-    need(type(value['schema_version']) is int and value['schema_version'] == 1 and value['method'] == 'tether.engine_presentation.v1' and
+    need(type(value['schema_version']) is int and value['schema_version'] == 1 and value['method'] == 'tether.engine_presentation.v2' and
          value['brand'] == 'TETHER' and value['status'] == 'completed' and value['role'] == 'evaluation_only' and
          value['agent_visible'] is False and value['scientific_validation'] == 'not_established', 'Outer envelope scope', 'EP-VERIFY-03')
 
@@ -586,11 +586,11 @@ def verify_outer(output, anchor, trusted_runtime, *, expected_policy=None):
     limits = validate_process_limits(manifest['process_limits'])
     check(manifest['command'] in ('run', 'demo') and manifest['engine'] == dict(path='engine', receipt_sha256=receipt['engine_receipt_sha256']), 'Engine identity binding')
     check(type(trusted_runtime) is dict and type(trusted_runtime.get('schema_version')) is int and trusted_runtime['schema_version'] == 1 and
-          trusted_runtime.get('versions') == {'tether': '0.5.1', 'asof': '0.3.12'}, 'Trusted current runtime required')
+          trusted_runtime.get('versions') == {'tether': '0.6.0', 'tether_engine': '0.4.0'}, 'Trusted current runtime required')
     from .independent_runtime import launcher_proof
     check(canonical(manifest['launcher']) == canonical(launcher_proof(trusted_runtime)), 'Launcher identity differs from current installed runtime')
     pin(manifest['invocation_sha256'])
-    check(manifest['projection'] == dict(source='engine/dossier.md', target='dossier.md', transform='exact_first_header_v1'), 'Projection declaration')
+    check(manifest['projection'] == dict(source='engine/dossier.md', target='dossier.md', transform='identity_dossier_v2'), 'Projection declaration')
     check(type(manifest['artifacts']) is dict, 'Outer artifact inventory')
     expected = set(manifest['artifacts']) | {'tether-manifest.json', 'tether-receipt.json', 'attempt/journal.jsonl'}
     files, directories = file_inventory(output)
@@ -617,7 +617,7 @@ def verify_outer(output, anchor, trusted_runtime, *, expected_policy=None):
     supervision(manifest['supervision'], limits, len(stdout), len(stderr))
     source = stable(output / 'engine/dossier.md', deadline, LARGE)
     projected = stable(output / 'dossier.md', deadline, LARGE)
-    check(source.startswith(b'# AsOf dossier:') and projected == b'# TETHER dossier:' + source[len(b'# AsOf dossier:'):], 'Dossier presentation differs')
+    check(source.startswith(b'# TETHER dossier:') and projected == source, 'Dossier presentation differs')
     for name in ('journal.jsonl', 'trace.jsonl'): stable(output / 'engine' / name, deadline, NORMAL)
     engine = verify_core(output / 'engine', receipt['engine_receipt_sha256'], trusted_runtime=trusted_runtime)
     check(engine['semantic_consistency'] == 'verified' and engine.get('code_matches_current') is True and engine['status'] == 'completed', 'Inner source/current-code/completion qualification')

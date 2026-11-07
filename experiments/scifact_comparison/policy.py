@@ -9,7 +9,7 @@ import hashlib
 import math
 from pathlib import Path
 
-from asof.serde import encode, fingerprint, freeze
+from tether_engine.serde import encode, fingerprint, freeze
 from experiments.scifact.data_views import verify_preparation, load_product
 from experiments.scifact.tether_adapter import (
     NativeContext, admit_container, authorize_products, make_request, verify_candidate,

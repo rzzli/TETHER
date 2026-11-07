@@ -18,9 +18,9 @@ import re
 import tarfile
 import time
 
-from asof.atomic import publish_bytes
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, canonical, encode, freeze, parse_json, safe_child
+from tether_engine.atomic import publish_bytes
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, canonical, encode, freeze, parse_json, safe_child
 from .split import build_split, pair_rows
 
 MAX_ARCHIVE = 64 * 1024 * 1024

@@ -9,9 +9,9 @@ import time
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError, canonical, encode, fingerprint
-from asof.study import retrieval_preparation as rp
-from asof.study.diagnostic_codec import bind_question
+from tether_engine.serde import ContractError, canonical, encode, fingerprint
+from tether_engine.study import retrieval_preparation as rp
+from tether_engine.study.diagnostic_codec import bind_question
 from tests import test_study_retrieval_preparation as own_fixtures
 
 TEMP = Path(__file__).resolve().parents[1] / "data/cache"
@@ -180,7 +180,7 @@ class RetrievalPeerTests(unittest.TestCase):
 
 class RetrievalSmokePeerTests(unittest.TestCase):
     def test_second_policy_never_dispatches_after_shared_deadline_expires(self):
-        from asof.study import retrieval_smoke as smoke
+        from tether_engine.study import retrieval_smoke as smoke
 
         with tempfile.TemporaryDirectory(dir=TEMP) as tmp:
             output = Path(tmp) / "expired-second"
@@ -217,7 +217,7 @@ class RetrievalSmokePeerTests(unittest.TestCase):
             )
 
     def test_final_artifact_capture_cannot_publish_after_shared_deadline(self):
-        from asof.study import retrieval_smoke as smoke
+        from tether_engine.study import retrieval_smoke as smoke
 
         with tempfile.TemporaryDirectory(dir=TEMP) as tmp:
             output = Path(tmp) / "late-seal"

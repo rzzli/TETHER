@@ -8,7 +8,7 @@ Current checkpoint, 31 October UTC: [Expert returns](<Project Progress Reassessm
 
 Next: give the existing clean genetics-source ZIP to R2/R3, collect their source-only exports first, then release the separate candidate follow-up per reviewer. Record assistance and actual timing; estimates and undisclosed assistant costs are not measured workload/budget. Preserve the orientation feedback/old responses; no model replay, repaired candidate or native expansion. Fresh-case/H5/clinical gates remain separate. See the orientation disposition/next-round plan; unchanged v2, $0, original failures and downloader/stopped-monitor boundaries remain.
 
-AsOf **0.3.11** retains its accepted **1,774 full tests without failures/errors/skips**,
+TETHER **0.3.11** retains its accepted **1,774 full tests without failures/errors/skips**,
 required probes/package, default-installed checks and seven legacy families.
 All 327 source/resource pins and two protected hash-only checks match. The new
 pure v3 direct-grammar preparation/validation path preserves twelve old v2 payload
@@ -33,7 +33,7 @@ simulation used **295.922/300 seconds without actual startup/inference**, leavin
 qualification, actual-vocabulary document/EOG checks and separate resource
 profiling under the unchanged budget. Do not repair/retry the closed converter
 or infer scientific readiness from pure tests. See the [generation reassessment](<Project Progress Reassessment 2026-10-28 - R09 Generation.md>)
-and [critical next-gate review](review-assets/recovery-step9-generation-contract-20261028/NEXT-GATE-CRITICAL-REVIEW.md).
+and [critical next-gate review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/NEXT-GATE-CRITICAL-REVIEW.md).
 
 The [detached-launch checkpoint](<Project Progress Reassessment 2026-10-28 - Detached Launch.md>)
 passes all four cases on the exact own worker/policy/host. The new
@@ -50,7 +50,7 @@ recognition remain unqualified by that census. Root7e599031... selects a prospec
 trusted-System32 policy for source/pure implementation, preserving protected
 native prefixes/exact self/core4. No further diagnostic census or image-file
 authentication project; future build/ABI observation need separate decisions.
-The [trusted-platform helper build](review-assets/recovery-step9-native-recognition-20261028/TRUSTED-PLATFORM-BUILD-RESULT-VERIFICATION-v2.md)
+The [trusted-platform helper build](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-recognition-20261028/TRUSTED-PLATFORM-BUILD-RESULT-VERIFICATION-v2.md)
 has since independently verified257pins/14files/eight events and4.750s seal under
 separate rootdc1050bd.... The separately authorized [typed ABI observation](<Project Progress Reassessment 2026-10-29 - Typed ABI.md>)
 now verifies177pins/11files/17events and observed0.7.0-dev with exact17defaults/
@@ -58,7 +58,7 @@ now verifies177pins/11files/17events and observed0.7.0-dev with exact17defaults/
 full resources and scientific/human gates open. Current ABI-only policy rejects
 CPU; recognition needs a distinct coordinated policy/header/parent/protocol.
 CPU/model access and accepted application behavior remain unchanged.
-The [first export failure](review-assets/recovery-step9-native-recognition-20261028/DETACHED-ABI-V1-RESULT-VERIFICATION.md),
+The [first export failure](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-recognition-20261028/DETACHED-ABI-V1-RESULT-VERIFICATION.md),
 all source/test failures, prior launcher/observer negatives and the closed IOCP
 gap remain in the [dated assessment index](<Project Progress Reassessments.md>).
 CPU/model access, native recognition, resource budgets and scientific/human gates
@@ -78,13 +78,13 @@ R07 is technically closed negative,
 its native version/batch remains stopped, R08 has no qualified fresh case, and
 independent human reviews remain pending. Overall R09 and R10–R16 remain open.
 
-See [current acceptance](review-assets/recovery-step9-generation-contract-20261028/acceptance.json),
-[resource constraint](review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md),
-[native integration closeout](review-assets/recovery-step9-native-integration-20261027/CLOSEOUT.md),
-[next grammar gate](review-assets/recovery-step9-native-integration-20261027/NEXT-GRAMMAR-GATE.md),
-[next engineering/scientific gates](review-assets/recovery-step9-collected-composition-20261027/NEXT-GATE-AUDIT.md),
-[retrieval acceptance](review-assets/recovery-step9-retrieval-20261026/acceptance.json),
-[R07 disposition](review-assets/recovery-step7-20261026/DISPOSITION.md) and [TODO](../TODO.md).
+See [current acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json),
+[resource constraint](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md),
+[native integration closeout](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-integration-20261027/CLOSEOUT.md),
+[next grammar gate](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-integration-20261027/NEXT-GRAMMAR-GATE.md),
+[next engineering/scientific gates](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-collected-composition-20261027/NEXT-GATE-AUDIT.md),
+[retrieval acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-retrieval-20261026/acceptance.json),
+[R07 disposition](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step7-20261026/DISPOSITION.md) and [TODO](../TODO.md).
 This plan responds to the complete [Opus review](../docs/Opus_20261026T050236Z_review.md)
 and [independent project review](../docs/Independent%20Project%20Review%202026-10-26.md).
 
@@ -123,15 +123,15 @@ A blocked paid-model option need not block correctness fixes or human preparatio
 **Human workstream:** HR1 → HR2 → HR3 → HR4 runs alongside Steps 2–7. Source-only human references must precede human exposure to candidate outputs. Human recruitment cannot be completed by agents.
 
 **Execution update:** the former blanket R07 human hold was an overly broad
-interpretation and is corrected in the retained [gate correction](review-assets/recovery-step7-20261026/gate-correction.md).
+interpretation and is corrected in the retained [gate correction](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step7-20261026/gate-correction.md).
 The exposed/synthetic technical diagnostic was permitted and is now terminal.
 Human assessment is still required for independent scientific claims. R08's own
 dependencies permit exposure and source-feasibility preparation; fresh R10/R12
 generation requires source-only references first. Neither the negative result nor
 this clarification removes the later scientific gates.
 
-R08's retained [v4 exposure audit](review-assets/recovery-step8-20261026/exposure-v4-report.md)
-and [fixed-source qualification](review-assets/recovery-step8-20261026/bounded-source-qualification.md)
+R08's retained [v4 exposure audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step8-20261026/exposure-v4-report.md)
+and [fixed-source qualification](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step8-20261026/bounded-source-qualification.md)
 now distinguish metadata availability from scientific readiness. A shared article
 identity was found against prior project material; no fresh case is qualified.
 The [current execution report](Recovery%20Status%20and%20Next%20Gates%202026-10-26.md)
@@ -266,7 +266,7 @@ Make each fix separately reviewable; add the regression before changing behavior
 1. Support generated interpretation and exact source quotations as distinct fields. If quote pointers materialize text, copy source bytes only; never insert or repair generated reasoning.
 2. Retain answered/partial/abstained states with clear unknowns. Use independent post-validation even when native schema enforcement is available.
 3. Prepare two comparison tracks: fixed evidence for interpretation; end-to-end evidence access for retrieval plus interpretation. Keep them separate in outputs and claims.
-4. Define arms: AsOf interpretation; explicitly adapted Virtual Biotech; deterministic extractive baseline; lexical retrieval/selection baseline. A later scorer/base-rate baseline belongs to the clinical route.
+4. Define arms: TETHER interpretation; explicitly adapted Virtual Biotech; deterministic extractive baseline; lexical retrieval/selection baseline. A later scorer/base-rate baseline belongs to the clinical route.
 5. Freeze comparator adaptations, tool signatures, evidence access, source budgets and model identity. Label unreproduced original dependencies. Do not call a checkout-specific adaptation a full Virtual Biotech reproduction.
 6. Make retrieval strategy configurable and recorded. Vary one factor at a time where possible. Do not add embeddings or new data merely to enlarge the experiment.
 
@@ -287,7 +287,7 @@ Make each fix separately reviewable; add the regression before changing behavior
 
 ### Step 11 — Finalize the H5 estimand, size and preregistration
 
-1. Choose the primary estimand: for example case-level preference for AsOf over the adapted comparator, with ties explicitly handled. Define the target population and minimum useful coverage.
+1. Choose the primary estimand: for example case-level preference for TETHER over the adapted comparator, with ties explicitly handled. Define the target population and minimum useful coverage.
 2. Predeclare paired audited error/omission rates, critical-error rules, operational completion, cost and scientific-utility outcomes. Avoid selecting the winner on a metric chosen after inspecting the pilot.
 3. Specify case/target-family clustering, multiple reviewers, dependence among claims, missing ratings, ties, failures, adjudication and multiplicity. Original lower-error/lower-cost claims require evidence for those endpoints separately.
 4. Use pilot variation and a scientifically justified effect/precision objective to estimate sample size. The original six-expert/forty-pair proposal and Opus's twenty-case suggestion are design inputs, not evidence of sufficient power.

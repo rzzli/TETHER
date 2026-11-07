@@ -39,11 +39,11 @@ cannot supply independent scientific judgments or fresh cases.
 
 ## What has been proved at this checkpoint
 
-The [0.3.9 acceptance](review-assets/recovery-step9-native-integration-20261027/acceptance.json)
+The [0.3.9 acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-integration-20261027/acceptance.json)
 records 1,724 full tests without failures, errors or skips, required probes and
 package/demo checks, 324 unchanged code/resource/test pins, seven installed legacy
 families and eight preserved matching study verifiers. Its
-[measured closeout](review-assets/recovery-step9-native-integration-20261027/CLOSEOUT.md)
+[measured closeout](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-integration-20261027/CLOSEOUT.md)
 retains an actual-format exposed IL6R/RA/inhibit/antibody case with five literature
 candidates, one selected whole record, nine available observations and 65 missing
 inputs. Six actual offline tokenizer children, six simulated native stages and
@@ -71,26 +71,26 @@ AI preparation and future human time are not thereby zero.
 
 ### Known correction in progress
 
-The subsequent [AI engineering audit](review-assets/recovery-step9-native-grammar-20261028/AI-ENGINEERING-AUDIT-039.md)
+The subsequent [AI engineering audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-grammar-20261028/AI-ENGINEERING-AUDIT-039.md)
 reproduced a scoped P2: the native execution verifier accepted a copied wrapper
 duration of 9,999 seconds against a 244.906-second configured cell budget and
-2.531-second child report. The [pure probe](review-assets/recovery-step9-native-grammar-20261028/NATIVE-DURATION-CONSISTENCY-PROBE.json)
+2.531-second child report. The [pure probe](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-grammar-20261028/NATIVE-DURATION-CONSISTENCY-PROBE.json)
 changed that field only in memory and left the accepted bundle unchanged. It did
 not establish that the original execution overran a deadline, nor demonstrate a
 complete externally anchored resealed-run bypass.
 
-Working 0.3.10 implements the [separate correction contract](review-assets/recovery-step9-native-duration-20261028/CONTRACT.md):
+Working 0.3.10 implements the [separate correction contract](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-duration-20261028/CONTRACT.md):
 require a complete typed budget, finite nonnegative native duration strictly below
 its cap, and a duration no greater than the validated enclosing report plus the
 existing absolute one-microsecond rounding allowance. The tolerance does not
 extend the budget. The generic session and recorded/legacy paths are unchanged.
-The [targeted completion record](review-assets/recovery-step9-native-duration-20261028/TARGETED-COMPLETION.json)
+The [targeted completion record](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-duration-20261028/TARGETED-COMPLETION.json)
 contains 13 new tests, preserved before-fix failures, 75 passing native/controller
 tests and eight passing recorded regressions.
 
 At the snapshot, the **1,737-test / 324-pin full validation is still in progress**;
 there is no 0.3.10 acceptance record. All
-[nine older matching installed verifiers](review-assets/recovery-step9-native-duration-20261028/FROZEN-VERIFIER-CHECKS.json)
+[nine older matching installed verifiers](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-duration-20261028/FROZEN-VERIFIER-CHECKS.json)
 have passed. That compatibility result does not complete the still-running full
 gate or the required new-version simulated and installed qualifications.
 
@@ -104,14 +104,14 @@ whole research programme.
 | Step | Current status | Retained evidence and practical limit | Required next evidence |
 |---|---|---|---|
 | R01 Scope/governance | Accepted | [Phase decision](decisions/2026-10-26-phase-scope.md) preserves original hypotheses, contemporary T6 priority, $0 provider boundary and separate human/scientific gates. It is not a fabricated human signature or new paid-resource approval. | Maintain these boundaries when each new experiment is declared. |
-| R02 Checkpoint | Accepted in its scope | [Checkpoint completion](review-assets/recovery-step2-20261026/completion.json) recovers all 63 historical code hashes as inert data. Local preservation is not off-site durability. | Broader release/backup claims require their own restoration and destination evidence. |
-| R03 Archive compatibility | Accepted in its scope | [Archive acceptance](review-assets/recovery-step3-20261026/acceptance.json) verifies seven guarded legacy families. V1 byte integrity does not acquire unavailable semantic guarantees. | Preserve matching verifiers and qualify new receipt families separately. |
-| R04 Correctness boundaries | Accepted | [Engineering acceptance](review-assets/recovery-step4-20261026/acceptance.json) covers chronology, backend error, payload-cap and store-construction corrections with regressions. | New defects require separate repro/version/validation, as with 0.3.10. |
-| R05 Diagnostic preparation | Accepted preparation | [Preparation acceptance](review-assets/recovery-step5-20261026/acceptance.json) binds three requests/six matched payloads and existing assets. A stronger-model capacity control was unavailable. | Do not attribute a failure to model size without a discriminating control. |
-| R06 Minimal infrastructure | Accepted engineering | [0.3.0 acceptance](review-assets/recovery-step6-20261026/acceptance.json) establishes reusable packaged study helpers and compatibility. | Reuse it; a generic agent-platform rewrite is not a prerequisite for the next finite probe. |
-| R07 Bounded diagnostic | Technical negative closed; human assessment open | [Technical closeout](review-assets/recovery-step7-20261026/technical-closeout.json) and [disposition](review-assets/recovery-step7-20261026/DISPOSITION.md): six complete responses, zero accepted contracts, once-only execution and stopped owned server. | Relevant independent judgments remain pending. Preserve the failed version and stop; do not repair its answers retroactively. |
-| R08 Fresh cases/source feasibility | Preparation only; no fresh frame qualified | [Exposure audit](review-assets/recovery-step8-20261026/exposure-v4-report.md), [source scan](review-assets/recovery-step8-20261026/source-feasibility.md) and [bounded sources](review-assets/recovery-step8-20261026/bounded-source-qualification.md) expose overlap, dates and insufficiently qualified contexts. | Prospective eligibility/exposure decisions, sufficient bounded sources and HR3 domain coverage. |
-| R09 Interpretation/comparators | Multiple engineering slices accepted; whole step open | [0.3.9 acceptance](review-assets/recovery-step9-native-integration-20261027/acceptance.json); 0.3.10 is not yet accepted. Native grammar and actual model behavior remain untested in this new integration. | Finish 0.3.10, then actual-runtime conformance; retain source/question sufficiency and human quality gates. |
+| R02 Checkpoint | Accepted in its scope | [Checkpoint completion](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step2-20261026/completion.json) recovers all 63 historical code hashes as inert data. Local preservation is not off-site durability. | Broader release/backup claims require their own restoration and destination evidence. |
+| R03 Archive compatibility | Accepted in its scope | [Archive acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step3-20261026/acceptance.json) verifies seven guarded legacy families. V1 byte integrity does not acquire unavailable semantic guarantees. | Preserve matching verifiers and qualify new receipt families separately. |
+| R04 Correctness boundaries | Accepted | [Engineering acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step4-20261026/acceptance.json) covers chronology, backend error, payload-cap and store-construction corrections with regressions. | New defects require separate repro/version/validation, as with 0.3.10. |
+| R05 Diagnostic preparation | Accepted preparation | [Preparation acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step5-20261026/acceptance.json) binds three requests/six matched payloads and existing assets. A stronger-model capacity control was unavailable. | Do not attribute a failure to model size without a discriminating control. |
+| R06 Minimal infrastructure | Accepted engineering | [0.3.0 acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step6-20261026/acceptance.json) establishes reusable packaged study helpers and compatibility. | Reuse it; a generic agent-platform rewrite is not a prerequisite for the next finite probe. |
+| R07 Bounded diagnostic | Technical negative closed; human assessment open | [Technical closeout](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step7-20261026/technical-closeout.json) and [disposition](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step7-20261026/DISPOSITION.md): six complete responses, zero accepted contracts, once-only execution and stopped owned server. | Relevant independent judgments remain pending. Preserve the failed version and stop; do not repair its answers retroactively. |
+| R08 Fresh cases/source feasibility | Preparation only; no fresh frame qualified | [Exposure audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step8-20261026/exposure-v4-report.md), [source scan](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step8-20261026/source-feasibility.md) and [bounded sources](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step8-20261026/bounded-source-qualification.md) expose overlap, dates and insufficiently qualified contexts. | Prospective eligibility/exposure decisions, sufficient bounded sources and HR3 domain coverage. |
+| R09 Interpretation/comparators | Multiple engineering slices accepted; whole step open | [0.3.9 acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-integration-20261027/acceptance.json); 0.3.10 is not yet accepted. Native grammar and actual model behavior remain untested in this new integration. | Finish 0.3.10, then actual-runtime conformance; retain source/question sufficiency and human quality gates. |
 | R10 Human development pilot | Not activated | Clean packets and coordinator preparation exist; no accepted independent submissions or qualified fresh pilot frame are established. | Source-only references before candidate exposure, domain-matched independent ratings and measured review burden. |
 | R11 H5 sizing/preregistration | Pending R10 | The controlling plan specifies case-level estimands, ties, clustering, missing ratings, workload and multiplicity. Suggested case/reviewer counts are scenarios. | Pilot-based variance/workload, justified effect or precision target, locked analysis and genuine public registration if claimed. |
 | R12 Locked H5 | Gated | There is no qualified locked H5 result. Synthetic/recorded outputs do not provide one. | Qualified mechanics, fresh locked cases, independent references/panel, once-only arms and reproducible analysis. |
@@ -129,9 +129,9 @@ whole research programme.
 | HR3 Fresh pilot references | Gated by fresh/source-qualified cases and reviewers. | Two source-only references per case locked before candidates, domain matching and adjudication arrangements. |
 | HR4 Final panel | Future, dependent on sizing and coverage. | A sufficiently covered scheduled panel, complete independent ratings, preserved disagreements and adjudication. |
 
-The [mechanism packet](../docs/expert-review-20261026/Expert-review-share.zip),
-[genetics source-only packet](../docs/expert-review-genetics-20261026/Expert-source-review-share.zip)
-and [two-context source-feasibility packet](../docs/expert-review-source-feasibility-20261026/Expert-source-review-share.zip)
+The [mechanism packet](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/docs/expert-review-20261026/Expert-review-share.zip),
+[genetics source-only packet](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/docs/expert-review-genetics-20261026/Expert-source-review-share.zip)
+and [two-context source-feasibility packet](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/docs/expert-review-source-feasibility-20261026/Expert-source-review-share.zip)
 serve different purposes. One cannot qualify every domain. Coordinator keys,
 prior AI assessments and completed responses stay separate from agent-visible
 retrieval and clean reviewer materials. This assessment did not open those answers.
@@ -213,23 +213,23 @@ nine matching old verifiers. Preserve all failed attempts and original 0.3.9.
 ### 2. Use the actual pinned converter, with a meaningful negative outcome
 
 The next major technical uncertainty is native schema enforcement, rather than
-another generic controller. A standard JSON Schema engine and the AsOf
+another generic controller. A standard JSON Schema engine and the TETHER
 post-validator agree on the prepared 109 cases apart from the declared
 cross-claim-text-uniqueness exception. That does not establish the language admitted
 by llama.cpp's converter or sampler. Conversion returning a nonempty string is
 also insufficient proof of conformance.
 
 The owner-installed toolchain now passes its
-[own-source x64 SDK/STL compile/link probe](review-assets/recovery-step9-native-grammar-20261028/TOOLCHAIN-LOCAL-PROBE-v2.json)
+[own-source x64 SDK/STL compile/link probe](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-grammar-20261028/TOOLCHAIN-LOCAL-PROBE-v2.json)
 without a restart. It replaces the earlier missing-toolchain constraint, but
 does not establish interoperability with the producer's Clang20.1.8 DLLs. Eight
 initial and five converter-specific exact-commit reference files are retained
 under capped/hash-verified acquisition; the
-[three-header consumer closure](review-assets/recovery-step9-native-grammar-20261028/CONVERTER-HEADER-CLOSURE.json)
+[three-header consumer closure](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-grammar-20261028/CONVERTER-HEADER-CLOSURE.json)
 is checked. These are references/build preparation, not executed foreign code or
 a native conformance result.
 
-Follow the [build-only contract](review-assets/recovery-step9-native-grammar-20261028/CONVERTER-BRIDGE-BUILD-CONTRACT.md):
+Follow the [build-only contract](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-grammar-20261028/CONVERTER-BRIDGE-BUILD-CONTRACT.md):
 an author-written small typed bridge, exact declarations and ordinary C++ object
 lifetime, approved actual DLL/import identities, release x64/standard-library
 settings, constrained DLL search and isolated finite execution. Do not guess C++

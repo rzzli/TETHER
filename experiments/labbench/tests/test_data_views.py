@@ -7,7 +7,7 @@ import unittest
 from unittest.mock import patch
 from uuid import UUID
 
-from asof.serde import ContractError, canonical, fingerprint
+from tether_engine.serde import ContractError, canonical, fingerprint
 from experiments.labbench import data_views as views
 
 

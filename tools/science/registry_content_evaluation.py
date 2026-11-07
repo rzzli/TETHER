@@ -10,8 +10,8 @@ from datetime import datetime, timezone
 import json
 from pathlib import Path
 
-from asof.journal import RunJournal, read_chain
-from asof.serde import fingerprint, write_json
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import fingerprint, write_json
 from tools.science.outcome_extract import check_pins
 from tools.science.outcome_inputs import parse_jsonl
 from tools.science.registry_content import appearance, classify_content

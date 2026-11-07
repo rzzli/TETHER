@@ -1,7 +1,0 @@
-Exact metadata binding/protocol/driver review is clear. Helperb2aafdd9, authority97e06316, protocolb690c63b and driver71101d74 match the frozen source and actual preparation report. All192 software pins (25,413,523B) freshly match;246 leaf/ancestor checks found no reparse entries. The five payload records match descriptor metadata only; none was inspected. Static188, dynamic4, payload5 and owner/driver/decision roles remain disjoint. Future output is absent.
-
-The full protocol bytes independently reconstruct exactly, including9argv, new382754 EXE/sourcee683/header0a, full frozen pack, ordered shards, policy4d5/contract30d82,300/120/117000/2/5 bounds and one attempt. Fourteen critical runtime/role/parser function ASTs remain equal to clearedv6.
-
-Binding evidence is11 methods/102 vectors/3 private publication fixtures, with their saved file hashes verified. Actual metadata preparation17.578s and private fixture20.375s are within60s; these are not native runtime-fit measurements. The pure renderer3-method proof and concrete driver8-method/25-scenario proof match. Only six driver assignments changed; the normalized whole AST is unchanged.
-
-No helper/test/renderer/driver, SDK/target, compiler or child was executed by this reviewer. No CPU/GGUF/pack or unknown-image operation occurred. Root once-decision is absent and separately required before any payload identity validation or target launch. This review does not claim actual recognition, full-mask, inference or scientific qualification.

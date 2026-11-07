@@ -1,8 +1,19 @@
 # TETHER artifact-specific catalog policy
 
-TETHER 0.5.0 adds a deliberately explicit policy path to `run`. The inventory remains [sources.json](../data/catalog/sources.json), schema 1, with its original 178 products and statuses. [policy-v2.json](../data/catalog/policy-v2.json) binds that exact inventory and adds dependency types, exact artifact identities and use-specific grants. The old engine and direct API aliases do not enforce schema 2. Passing a compatibility projection alone is insufficient authorization.
+TETHER 0.6.0 retains an explicit artifact-policy path for `run`. The inventory
+is [sources.json](../data/catalog/sources.json), schema1, with178 products and
+historical collection observations. [policy-v2.json](../data/catalog/policy-v2.json)
+binds its current bytes and dependency classifications. After the namespace
+migration the policy has **zero artifacts and zero permitted uses**. New identities
+need newly verified registrations; old grants are not inherited by relabeling.
+Direct engine API calls do not acquire schema2 authorization merely by importing
+the public namespace. Passing a projection alone is insufficient authorization.
 
-## What the current policy admits
+## Historical policy and qualification (archived)
+
+The following dated import describes the original checkpoint, not current grants.
+Use [its original source and policy](ARCHIVE.md) for exact reconstruction. These
+counts and qualification claims have not been transferred to the new namespace.
 
 The policy indexes all 178 products but declares only **266 artifacts**: 248 raw files actually referenced by the ten canonical T6 snapshots, 11 normalized packets, and seven AACT archive identities. Ten contemporary uses are permitted for their exact cases, snapshots, cutoff and frame. Seven AACT uses remain blocked. Other artifacts and uses are denied.
 
@@ -34,6 +45,11 @@ Raw originals stay external. The wrapper archives exact receipt copies under its
 The additional verification result is `artifact_policy.status: artifact_policy_consistency_verified`; schema-1 compatibility runs report `unavailable_schema1_compatibility`. Schema-2 `run` currently supports offline extractive execution only. Model/replay/scorer controls, synthetic-demo policy bypasses and policy flags on unsupported commands are rejected. Source inspection/build commands keep their legacy interfaces; new generated packets need explicit registration before a schema-2 use can admit them. Record-level publication/eligibility checks still apply after artifact authorization, so an allowed artifact can contribute zero eligible records.
 
 ## Updating policy without mutating history
+
+The current inventory-only policy was freshly generated and validated against
+the current schema1 bytes. Registering real artifacts is a separate operation;
+it must verify their actual dataset identifiers, parents, paths and hashes. The
+dated importer described below belongs to the historical reproduction recipe.
 
 `tools/data/build_tether_policy.py` imports this named metadata frame into a fresh workspace `data/derived/` directory, including content-addressed metadata copies, policy, local roots and an import report. It checks the supplied original-catalog SHA before migration. Failed attempts retain `failure.json`; prior attempts are never overwritten. Run the importer and independent metadata checks before replacing a live policy. `tools/validate.py` checks policy structure and the exact schema-1 anchor without assuming local original data is present in a clean checkout.
 

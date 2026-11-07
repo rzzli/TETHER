@@ -5,7 +5,7 @@ from datetime import datetime
 from pathlib import Path
 import re
 
-from asof.serde import ContractError, read_json, sha256_file
+from tether_engine.serde import ContractError, read_json, sha256_file
 
 
 def utc(value):

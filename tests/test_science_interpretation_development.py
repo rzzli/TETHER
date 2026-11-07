@@ -4,9 +4,9 @@ import unittest
 from unittest.mock import patch
 
 from tests import test_science_local_interpretation as fixtures
-from asof.serde import ContractError,read_json,write_json,encode
-from asof.journal import read_chain,RunJournal
-from asof.agents import Usage
+from tether_engine.serde import ContractError,read_json,write_json,encode
+from tether_engine.journal import read_chain,RunJournal
+from tether_engine.agents import Usage
 from tools.science.run_comparison import pin,check_pin
 from tools.science import run_interpretation_development as launch
 

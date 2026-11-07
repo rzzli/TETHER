@@ -6,7 +6,7 @@ import unittest
 from unittest.mock import patch
 
 from tests import test_science_readiness_sources as fixture
-from asof.serde import ContractError, canonical, fingerprint, read_json, sha256_file, write_json
+from tether_engine.serde import ContractError, canonical, fingerprint, read_json, sha256_file, write_json
 from tools.science import readiness_sources as sources
 from tools.science import prospective_frame as frame
 

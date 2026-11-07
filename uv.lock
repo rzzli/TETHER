@@ -3,20 +3,6 @@ revision = 3
 requires-python = ">=3.11"
 
 [[package]]
-name = "asof-target-agents"
-version = "0.3.13"
-source = { editable = "." }
-
-[package.optional-dependencies]
-ingest = [
-    { name = "pyarrow" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "pyarrow", marker = "extra == 'ingest'", specifier = "==21.0.0" }]
-provides-extras = ["ingest"]
-
-[[package]]
 name = "pyarrow"
 version = "21.0.0"
 source = { registry = "https://pypi.org/simple" }
@@ -51,3 +37,17 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/5a/da/e02544d6997037a4b0d22d8e5f66bc9315c3671371a8b18c79ade1cefe14/pyarrow-21.0.0-cp313-cp313t-musllinux_1_2_x86_64.whl", hash = "sha256:6299449adf89df38537837487a4f8d3bd91ec94354fdd2a7d30bc11c48ef6e79", size = 44951890, upload-time = "2025-07-18T00:56:52.568Z" },
     { url = "https://files.pythonhosted.org/packages/e5/4e/519c1bc1876625fe6b71e9a28287c43ec2f20f73c658b9ae1d485c0c206e/pyarrow-21.0.0-cp313-cp313t-win_amd64.whl", hash = "sha256:222c39e2c70113543982c6b34f3077962b44fca38c0bd9e68bb6781534425c10", size = 26371006, upload-time = "2025-07-18T00:56:56.379Z" },
 ]
+
+[[package]]
+name = "tether-target-engine"
+version = "0.4.0"
+source = { editable = "." }
+
+[package.optional-dependencies]
+ingest = [
+    { name = "pyarrow" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pyarrow", marker = "extra == 'ingest'", specifier = "==21.0.0" }]
+provides-extras = ["ingest"]

@@ -4,9 +4,9 @@
 
 ## 1. Files and sharing
 
-Send the [recruitment brief](expert-review-20261026/Recruitment.md) and [offline expert form](expert-review-20261026/Expert-review.html). The [fillable/printable PDF](expert-review-20261026/Expert-review.pdf) is an alternative. The HTML requires no account or installation and exports answers without uploading them. A reviewer can use a pseudonymous ID.
+Send the [recruitment brief](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/docs/expert-review-20261026/Recruitment.md) and [offline expert form](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/docs/expert-review-20261026/Expert-review.html). The [fillable/printable PDF](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/docs/expert-review-20261026/Expert-review.pdf) is an alternative. The HTML requires no account or installation and exports answers without uploading them. A reviewer can use a pseudonymous ID.
 
-The [clean share bundle](expert-review-20261026/Expert-review-share.zip) contains only those three files and short start instructions. It contains no coordinator interpretations, completed answers or prior AI reviews.
+The [clean share bundle](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/docs/expert-review-20261026/Expert-review-share.zip) contains only those three files and short start instructions. It contains no coordinator interpretations, completed answers or prior AI reviews.
 
 Do not send this guide, prior AI reviews, calibration interpretations, arm-mapping files or another reviewer's answers before independent submission. Keep completed forms in an explicit evaluator-only storage/manifest, outside all agent-visible retrieval. A file under `docs/` is not confidential merely because it is called internal; distribute the reviewer files individually, not the whole repository.
 
@@ -15,7 +15,7 @@ The immediate exercise is unscored development material. The source and candidat
 ### Separate R07 genetics packet and release sequence
 
 The R07 real question concerns genetic-study reporting, not the mechanism review
-above. Use the separate [source-only genetics share bundle](expert-review-genetics-20261026/Expert-source-review-share.zip)
+above. Use the separate [source-only genetics share bundle](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/docs/expert-review-genetics-20261026/Expert-source-review-share.zip)
 for suitably qualified reviewers. It has ten multiple-choice items and thirteen
 supplied passages; no candidate, AI judgment, answer key or inferred missing fact.
 Preserve each independent exported reference and assign its source-reference ID.
@@ -37,7 +37,7 @@ the fresh HR3 pool or establishes underlying MR credibility.
 
 ### Two-context source-feasibility exercise
 
-The separate [clean source-only feasibility bundle](expert-review-source-feasibility-20261026/Expert-source-review-share.zip)
+The separate [clean source-only feasibility bundle](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/docs/expert-review-source-feasibility-20261026/Expert-source-review-share.zip)
 has fourteen multiple-choice groups for BTK/psoriasis and CTLA4/Crohn's disease,
 eight exact supplied passage occurrences and no candidates or AI verdicts. It
 supports assessment of a prospectively fixed development sample, with action,

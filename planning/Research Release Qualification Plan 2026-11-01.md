@@ -40,8 +40,8 @@ matching-row inventory, normalization/date/role/ancestor guards, explicit native
 missingness and bounded failure/accounting records. A fictional-only demo is not
 the native result. No model, original experiment retry, new cohort, MR or scorer.
 
-The original AsOf 0.3.11 source and frozen P05 code stay unchanged. A separate
-`asof-p05-replay` 0.1.0 distribution carries the reviewed policy, literal adapter,
+The original TETHER 0.3.11 source and frozen P05 code stay unchanged. A separate
+`tether-p05-replay` 0.1.0 distribution carries the reviewed policy, literal adapter,
 constructed controls, independent auditor and orchestration. Its qualified scope
 is Windows/Python 3.11/Arrow21; native stable locking is not replaced for Linux.
 Fictional POSIX tests use only an explicit, fixture-scoped test boundary.

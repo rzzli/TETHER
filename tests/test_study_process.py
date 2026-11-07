@@ -7,9 +7,9 @@ import tempfile
 import unittest
 from unittest.mock import Mock, patch
 
-from asof.serde import ContractError
-from asof.study.process import OwnedServer, ServerSpec
-from asof.study.proofs import capture_file
+from tether_engine.serde import ContractError
+from tether_engine.study.process import OwnedServer, ServerSpec
+from tether_engine.study.proofs import capture_file
 
 
 class Clock:

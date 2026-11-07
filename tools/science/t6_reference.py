@@ -1,7 +1,7 @@
 """Evaluator-only sealed source-bounded AI references for the top-one challenge."""
 from pathlib import Path
 
-from asof.serde import ContractError, canonical, read_json
+from tether_engine.serde import ContractError, canonical, read_json
 from tools.science.run_comparison import check_pin, pin
 
 

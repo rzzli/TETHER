@@ -8,11 +8,11 @@ from pathlib import Path
 import argparse
 import re
 
-from asof.agents import make_request
-from asof.contracts import Case, Category, Citation, EvidencePacket, EvidenceStatus, GroundedObservation
-from asof.serde import ContractError, decode, fingerprint, read_json, safe_child, sha256_file, write_json
-from asof.wire import request_bytes, FORMAT
-import asof.wire as wire_module
+from tether_engine.agents import make_request
+from tether_engine.contracts import Case, Category, Citation, EvidencePacket, EvidenceStatus, GroundedObservation
+from tether_engine.serde import ContractError, decode, fingerprint, read_json, safe_child, sha256_file, write_json
+from tether_engine.wire import request_bytes, FORMAT
+import tether_engine.wire as wire_module
 
 
 def probe(pilot):

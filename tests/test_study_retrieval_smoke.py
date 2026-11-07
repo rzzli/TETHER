@@ -9,10 +9,10 @@ import time
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError, canonical, encode
-from asof.study import retrieval_smoke as module
-from asof.study.proofs import capture_file
-from asof.study.retrieval_smoke import smoke, verify, RetrievalRecordedVerifier
+from tether_engine.serde import ContractError, canonical, encode
+from tether_engine.study import retrieval_smoke as module
+from tether_engine.study.proofs import capture_file
+from tether_engine.study.retrieval_smoke import smoke, verify, RetrievalRecordedVerifier
 
 
 TEMP = Path(__file__).resolve().parents[1] / 'data/cache'

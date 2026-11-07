@@ -1,7 +1,7 @@
 """Unscored fictional units for independent policy/outer envelope validation.
 
 These construct data directly; they do not inspect corpus oracles or invoke
-TETHER/asof, a model, a server, or either paired-comparison runner.
+TETHER/tether_engine, a model, a server, or either paired-comparison runner.
 """
 import copy
 import hashlib
@@ -199,16 +199,16 @@ class IndependentOuterUnits(unittest.TestCase):
             retained_stdout_bytes=2, retained_stderr_bytes=0, observed_stdout_bytes=2, observed_stderr_bytes=0,
             observed_counts_are_lower_bounds=False, pipe_eof=dict(stdout=True, stderr=True),
             process_started=True, process_reaped=True, cleanup_errors=[])
-        common = dict(schema_version=1, method='tether.engine_presentation.v1', brand='TETHER', status='completed',
+        common = dict(schema_version=1, method='tether.engine_presentation.v2', brand='TETHER', status='completed',
             role='evaluation_only', agent_visible=False, scientific_validation='not_established')
         trusted = fake_runtime(self.root)
-        files = {'engine/dossier.md': b'# AsOf dossier: FICTIONAL\n', 'dossier.md': b'# TETHER dossier: FICTIONAL\n',
+        files = {'engine/dossier.md': b'# TETHER dossier: FICTIONAL\n', 'dossier.md': b'# TETHER dossier: FICTIONAL\n',
                  'engine/journal.jsonl': journal([('run_reserved', {})]), 'engine/trace.jsonl': b'{}\n',
                  'engine-stdout.txt': b'ok', 'engine-stderr.txt': b''}
         for name, value in files.items(): write(output / name, value)
         manifest = dict(common, command='run', invocation_sha256='b' * 64,
             engine=dict(path='engine', receipt_sha256='c' * 64),
-            projection=dict(source='engine/dossier.md', target='dossier.md', transform='exact_first_header_v1'),
+            projection=dict(source='engine/dossier.md', target='dossier.md', transform='identity_dossier_v2'),
             launcher=trusted['launcher_proof'], artifacts={}, process_limits=limits, supervision=report, artifact_policy=None)
         self.seal_outer(output, manifest)
         return output, manifest, trusted
@@ -240,7 +240,7 @@ class IndependentOuterUnits(unittest.TestCase):
         output, manifest, trusted = self.outer()
         root = Path(trusted['runtime_paths']['tether_file']).parent
         original = (root / 'module.py').read_bytes()
-        metadata = root.parent / 'tether_target_agents-0.5.1.dist-info/METADATA'
+        metadata = root.parent / 'tether_target_agents-0.6.0.dist-info/METADATA'
         original_metadata = metadata.read_bytes()
         inner = dict(semantic_consistency='verified', code_matches_current=True, status='completed')
         for mutation in ('content', 'add', 'remove', 'distribution'):
@@ -248,7 +248,7 @@ class IndependentOuterUnits(unittest.TestCase):
                 if mutation == 'content': (root / 'module.py').write_bytes(b'VALUE = 2\n')
                 elif mutation == 'add': (root / 'extra.py').write_bytes(b'ADDED = True\n')
                 elif mutation == 'remove': (root / 'module.py').unlink()
-                else: metadata.write_bytes(original_metadata.replace(b'0.5.1', b'9.9.9'))
+                else: metadata.write_bytes(original_metadata.replace(b'0.6.0', b'9.9.9'))
                 with self.assertRaises(PolicyError): policy.verify_outer(output, None, trusted)
                 (root / 'module.py').write_bytes(original); metadata.write_bytes(original_metadata)
                 if (root / 'extra.py').exists(): (root / 'extra.py').unlink()

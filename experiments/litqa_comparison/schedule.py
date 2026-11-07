@@ -10,9 +10,9 @@ from collections.abc import Mapping
 from pathlib import Path
 import time
 
-from asof.atomic import publish_bytes
-from asof.journal import RunJournal,read_chain
-from asof.serde import canonical,encode,freeze,parse_json
+from tether_engine.atomic import publish_bytes
+from tether_engine.journal import RunJournal,read_chain
+from tether_engine.serde import canonical,encode,freeze,parse_json
 from .codecs import need,digest
 
 ARMS=('L/O','E/O','L/R','E/R')

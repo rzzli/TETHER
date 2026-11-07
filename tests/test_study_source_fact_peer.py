@@ -18,13 +18,13 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 
-from asof.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
-from asof.serde import ContractError, canonical, encode, sha256_file
-from asof.study.source_fact_adapters import adapt_output
-from asof.study.source_fact_evaluation import aggregate_cells, score_cell
-from asof.study.source_fact_sources import compile_reference, verify_reference
-from asof.study import source_fact_sources as source_module
-from asof.study import stable_read as stable_module
+from tether_engine.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
+from tether_engine.serde import ContractError, canonical, encode, sha256_file
+from tether_engine.study.source_fact_adapters import adapt_output
+from tether_engine.study.source_fact_evaluation import aggregate_cells, score_cell
+from tether_engine.study.source_fact_sources import compile_reference, verify_reference
+from tether_engine.study import source_fact_sources as source_module
+from tether_engine.study import stable_read as stable_module
 
 
 _FACT_KEYS = ("fact_id", "value", "unit", "source", "unknown_reason")

@@ -148,7 +148,7 @@ The own worker EXE is66,560B/SHA
 `0100ee6004531a41a28156385ad66fd5c0bded43c4840091a846573efe6d8e49`.
 It has not been executed.
 
-Independent [build-result verification](../planning/review-assets/recovery-step9-native-recognition-20261028/HARMLESS-NATIVE-BUILD-V3-RESULT-VERIFICATION.json)
+Independent [build-result verification](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-recognition-20261028/HARMLESS-NATIVE-BUILD-V3-RESULT-VERIFICATION.json)
 SHA`7f51e8606ba6cb624c5805ac295e5d5211ad8b5d185c619f4286ab1127c1cc21`
 passes237 input pins,14 output files,eight journal events, both successful owned
 commands, source/PE/import checks and the required post-cleanup terminal seal.
@@ -173,11 +173,11 @@ object/executable artifact, worker, ABI, target DLL or model execution followed.
 The toolchain is available; this is a source compilation error. The failed
 attempt and original source remain preserved.
 
-[Independent failed-build proof](../planning/review-assets/recovery-step9-native-recognition-20261028/HARMLESS-NATIVE-BUILD-V2-RESULT-VERIFICATION.json)
+[Independent failed-build proof](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-recognition-20261028/HARMLESS-NATIVE-BUILD-V2-RESULT-VERIFICATION.json)
 has SHA-256 `e5ea27f9e67561e84c2b04a2a7e6face657853fbb1a561205385568608a8988d`.
 The separately versioned source replaces that one construction with
 `std::string expected = utf8(expected_w);`. Its
-[source-only peer review](../planning/review-assets/recovery-step9-native-recognition-20261028/HARMLESS-NATIVE-WORKER-SOURCE-PEER-v3.json),
+[source-only peer review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-recognition-20261028/HARMLESS-NATIVE-WORKER-SOURCE-PEER-v3.json),
 SHA-256 `c774ecd0ec98dd529b5494c5137679a59e7d1ae9c525920e9f884a57b1f48ebc`,
 clears the one-line correction for build review only. Build v3 preparation is
 pending at this entry; no build success or worker/native qualification is implied.
@@ -197,7 +197,7 @@ no explicit descendant attempt; no hidden binary/OS behavior is thereby excluded
 Sleep and suspended-abort were not attempted. Both Python and C++ paths now
 have this observed pattern; its cause remains unestablished.
 
-Independent [failed-qualification verification](../planning/review-assets/recovery-step9-native-recognition-20261028/HARMLESS-NATIVE-QUALIFICATION-V1-RESULT-VERIFICATION.json)
+Independent [failed-qualification verification](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-recognition-20261028/HARMLESS-NATIVE-QUALIFICATION-V1-RESULT-VERIFICATION.json)
 SHA`939a78fca943ab19a7c3774ea08a9456882cdd0bd14986c5c228711b51df7f1f`
 checks135pins,17files/fivedirectories,30events,eight raw48/136-byte SDK samples,
 274closed lease records and all terminal/early/cleanup/failure anchors. No
@@ -205,7 +205,7 @@ qualification or ABI acceptance is inferred. Original SDKc111 remains disabled;
 no upstream targetDLL/model/GGUF was used.
 
 The predeclared next action is a SINGLE overflow diagnostic with a private Job
-completion port and query-only handles for reported PIDs. [Design7709b18e](../planning/review-assets/recovery-step9-native-recognition-20261028/JOB-IOCP-OBSERVER-DESIGN-v1.md)
+completion port and query-only handles for reported PIDs. [Design7709b18e](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-recognition-20261028/JOB-IOCP-OBSERVER-DESIGN-v1.md)
 and contract5e8c41b6 bound64packets,16PID records,1024zero-time queue calls and
 four stop-boundary snapshots, with observer handles held then released before
 original owner cleanup. QueryFullProcessImageName returns path strings; image
@@ -228,7 +228,7 @@ Raw samples show total2/active2/bothPIDs before explicit stop and active0/empty
 after stop while query handles are held and after release. The counter finding
 stops before stdout cap (zero bytes); main125/reaped, whole case0.328s.
 
-Independent [IOCP verification](../planning/review-assets/recovery-step9-native-recognition-20261028/NATIVE-JOB-IOCP-V1-RESULT-VERIFICATION.json)
+Independent [IOCP verification](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-recognition-20261028/NATIVE-JOB-IOCP-V1-RESULT-VERIFICATION.json)
 SHA`25c648a168c5d836acb44e080ba8c4219c2d38068d15174ab35a92701d5beec5`
 checks176pins,12files/3dirs,49events,eight raw snapshots,tenPIDqueries,356lease
 records and all closure/failure/seal anchors. Nine normal queue returns/three
@@ -236,7 +236,7 @@ packets were retained. The diagnostic observation-completeness flag is not a
 launcher pass; all earlier failures remain failed.
 
 The author's late hold reached root after that once-only execution. A retained
-[fake counterexample70f52](../planning/review-assets/recovery-step9-native-recognition-20261028/IOCP-QUEUE-ATTEMPT-GAP-v1.json)
+[fake counterexample70f52](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-recognition-20261028/IOCP-QUEUE-ATTEMPT-GAP-v1.json)
 shows queue attempts/possible dequeues can be uncounted on an exception after
 dispatch. No such exception/interruption is recorded in the actual nine returns,
 but general budget/interruption guarantees are unestablished. Frozen observerv1
@@ -245,7 +245,7 @@ packet reservations. Its post-review warning remains separate and immutable.
 
 The new [console-identity assessment](../planning/Project%20Progress%20Reassessment%202026-10-28%20-%20Console%20Identity.md)
 SHA5690b09e... covers all20R/HR statuses and six next steps; UTF8/12links/reference
-QA passes. The next source-only [detached-policy contract387d](../planning/review-assets/recovery-step9-native-recognition-20261028/DETACHED-POLICY-CONTRACT-v1.json)
+QA passes. The next source-only [detached-policy contract387d](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-recognition-20261028/DETACHED-POLICY-CONTRACT-v1.json)
 predeclares primary flags0x0008040C, a literal flag-only disabled SDK copy, the
 same EXE and four once-only cases/caps. Generic total1 remains; only resources
 final may be1or2 with exact quota/no-success/null-child/control/exit conditions.

@@ -8,10 +8,10 @@ import time
 import unittest
 from unittest.mock import patch
 from concurrent.futures import ThreadPoolExecutor
-from asof.agents import make_request
-from asof.contracts import Category
-from asof.serde import ContractError, canonical, encode, fingerprint
-from asof.study import retrieval_preparation as rp
+from tether_engine.agents import make_request
+from tether_engine.contracts import Category
+from tether_engine.serde import ContractError, canonical, encode, fingerprint
+from tether_engine.study import retrieval_preparation as rp
 
 
 def prepared(name="invented-six-v1"):

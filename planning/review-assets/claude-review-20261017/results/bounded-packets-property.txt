@@ -1,5 +1,0 @@
-random trials: 300; oversized-observation failures raised correctly: 0 ; violations: 0
-exact limit for 3 observations: first packet holds 3; max size 245 <= 245
-exact limit for 7 observations: first packet holds 7; max size 521 <= 521
-oversized single observation -> Oversized single observation; no splitting or truncation is permitted
-single layout over limit -> Oversized evidence packet; no silent truncation is permitted

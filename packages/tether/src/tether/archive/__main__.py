@@ -21,7 +21,7 @@ def main(argv=None):
     check.add_argument("--journal-sha256")
     args = vars(parser.parse_args(argv))
     command = args.pop("command")
-    from asof.archive.restore import materialize, verify
+    from tether_engine.archive.restore import materialize, verify
     try:
         if command == "restore":
             result = materialize(**args)
@@ -42,4 +42,4 @@ if __name__ == "__main__":
 else:
     from importlib import import_module
     import sys
-    sys.modules[__name__] = import_module("asof.archive.__main__")
+    sys.modules[__name__] = import_module("tether_engine.archive.__main__")

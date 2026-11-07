@@ -11,9 +11,9 @@ was not another full-repository code audit or full-suite execution.
 
 ## Pilot result
 
-The unchanged [READY protocol](review-assets/preprint-p04-20261031/EXECUTION-PROTOCOL-READY-v1.json)
+The unchanged [READY protocol](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p04-20261031/EXECUTION-PROTOCOL-READY-v1.json)
 ran on two exposed development contexts and one artificial withholding condition.
-The [acceptance record](review-assets/preprint-p04-20261031/P04-ACCEPTANCE-v1.json)
+The [acceptance record](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p04-20261031/P04-ACCEPTANCE-v1.json)
 binds all three attempts, their receipts, resources, independent audit and
 structural diagnosis. The final attempt is
 `runs/preprint-p04-typed-report-20261101T053531Z`.
@@ -23,13 +23,13 @@ structural diagnosis. The final attempt is
 | Exact literal assembler | 2/2 | Two returned | Correct insufficient-input report | 0 |
 | Always abstain | 0/2 | Two returned | Abstention, not the required insufficient-input report | 0 |
 | Plain same-model typed report | 0/2 | Two malformed | Malformed | 3 |
-| Declared AsOf two-stage reporting adaptation | 0/2 | One malformed, one output-limit failure | Correct deterministic preflight report | 2 |
+| Declared TETHER two-stage reporting adaptation | 0/2 | One malformed, one output-limit failure | Correct deterministic preflight report | 2 |
 
 Every scheduled cell is retained: seven returned, four malformed, one failed,
 zero unexecuted. Seven cells are structurally scorable. The aggregate 2/12
 completion statistic is all-cell accounting; it is not twelve independent
 scientific cases. Missing-input correctness is separate from clean-case
-completion. The AsOf audit stages were suppressed by the predeclared invalid-
+completion. The TETHER audit stages were suppressed by the predeclared invalid-
 proposal gate; a successful two-stage scientific comparison was not achieved.
 
 The literal baseline reaches 100% coverage on the clean answerable groups.
@@ -40,7 +40,7 @@ prediction, expert-equivalence claim or model-superiority claim is supported.
 
 ## Verification and failure interpretation
 
-The [independent audit](review-assets/preprint-p04-20261031/ATTEMPT-AUDIT-v1.json)
+The [independent audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p04-20261031/ATTEMPT-AUDIT-v1.json)
 passes 2,216 checks. It verifies receipts, file/code/stage/final fingerprints,
 hash-chained terminal journals, all-cell dispatch/usage reconciliation and
 generation-before-evaluation/affirmative-cleanup ordering. One shared replay of
@@ -48,7 +48,7 @@ the three fixed references reconstructs all attempts' source-inclusive scores
 exactly. Its 56.156-second phase includes an estimated 49.297 GB of logical
 source hashing; physical I/O is unknown. Frozen artifacts were not changed.
 
-The [interface diagnosis](review-assets/preprint-p04-20261031/INTERFACE-DIAGNOSIS-v1.json)
+The [interface diagnosis](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p04-20261031/INTERFACE-DIAGNOSIS-v1.json)
 finds three outputs replace each complete source object with the supplied source
 ID string. Full binding objects were available in the prompts; their nested
 schema was not separately enumerated in prose. Another output says `partial`
@@ -90,9 +90,9 @@ sample size, units, ancestry and upstream-study verification remain unresolved.
 Thirteen v3 regression shapes and the independently reviewed integrity gates
 pass. Original files, receipts and the old core state remain unchanged.
 
-A separate source-only agent derived [neutral acquisition metadata](review-assets/preprint-p05-20261031/ACQUISITION-METADATA-v1.json)
+A separate source-only agent derived [neutral acquisition metadata](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/ACQUISITION-METADATA-v1.json)
 directly from receipts, hashes and Parquet footers/schemas, without reading row
-values or evaluator-only join artifacts. The [catalog correction](review-assets/preprint-p05-20261031/CATALOG-RECONCILIATION-v1.json)
+values or evaluator-only join artifacts. The [catalog correction](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/CATALOG-RECONCILIATION-v1.json)
 changes only `ot_credible_set` and root maintenance metadata; the other 177
 datasets and 83 providers are unchanged. Collection is now `collected`, while
 whole-product parsing and scientific validation remain `not_run`. Contemporary
@@ -131,7 +131,7 @@ Do not promote the evaluator-only selected-row packet into generation evidence.
    No old cell is rerun or regraded. Both strict controls must pass before a
    larger model experiment is considered. A failure closes this branch and
    selects a narrower deterministic/technical feasibility scope; no prompt loop.
-2. Review the [P05 design](review-assets/preprint-p05-20261031/FEASIBILITY-DESIGN-v1.json),
+2. Review the [P05 design](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/FEASIBILITY-DESIGN-v1.json),
    which was drafted without pilot candidate-performance selection and remains
    unlocked. Implement a separately versioned neutral source-only builder and
    candidate/exclusion/exposure/dependence register. Freeze actual input pins

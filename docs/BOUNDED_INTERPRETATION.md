@@ -1,13 +1,26 @@
 # TETHER — Experimental bounded interpretation
 
-TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.5.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.
+The current interface is `tether-target-agents` **0.6.0**, with the `tether` CLI
+and public namespace over `tether-target-engine` **0.4.0** (`tether_engine`). See
+[installation](../README.md#quick-start) and the [namespace migration
+boundary](../packages/tether/MIGRATION.md). Public aliases share the new engine's
+module and class identities; they do not certify earlier execution fingerprints.
+
+The component history below retains earlier versioned observations and test
+counts. Those qualifications belong to their original code and dates, preserved
+in the [historical checkpoint](ARCHIVE.md). Names and example paths here use the
+current namespace for readability; exact original identifiers and reproduction
+commands are in that checkpoint. The naming migration is not a scientific rerun
+or a transfer of historical qualification to the new release. The semantic
+experiment remains **paused**; this guide does not reactivate it or retired
+study and expert-review branches.
 
 `tools/science/bounded_interpretation.py` adds a repository-only experimental
 sidecar interface. It leaves `Backend.quote()`/`Backend.select()`, workflow
 execution, evidence ledgers, features, scoring and archived run semantics intact.
 It provides an offline recorded-response interpreter and an explicit optional
 loopback interpreter for the separately pinned local model runtime. It adds no
-remote provider, default `asof` CLI mode, Python runtime dependency or clinical
+remote provider, default `TETHER` CLI mode, Python runtime dependency or clinical
 probability.
 
 ## Source admission and request

@@ -8,18 +8,18 @@ import tempfile
 import unittest
 import urllib.error
 
-from asof.archive.core import observation_exclusion as archived_observation_exclusion
-from asof.artifacts import verify_run, write_run
-from asof.chrono import load_snapshot, observation_exclusion
-from asof.contracts import Case, Category
-from asof.journal import RunJournal
-from asof.local_model import LocalSelectionBackend
-from asof.provenance import InputGraph
-from asof.serde import canonical, decode, encode, read_json, write_json
-from asof.workflow import Budget, run_workflow
+from tether_engine.archive.core import observation_exclusion as archived_observation_exclusion
+from tether_engine.artifacts import verify_run, write_run
+from tether_engine.chrono import load_snapshot, observation_exclusion
+from tether_engine.contracts import Case, Category
+from tether_engine.journal import RunJournal
+from tether_engine.local_model import LocalSelectionBackend
+from tether_engine.provenance import InputGraph
+from tether_engine.serde import canonical, decode, encode, read_json, write_json
+from tether_engine.workflow import Budget, run_workflow
 
 
-FIXTURE = Path(__file__).resolve().parents[1] / 'src/asof/demo/v2'
+FIXTURE = Path(__file__).resolve().parents[1] / 'src/tether_engine/demo/v2'
 
 
 class FailingTransport:

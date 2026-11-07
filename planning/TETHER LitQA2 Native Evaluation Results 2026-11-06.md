@@ -24,7 +24,7 @@ scientific entailment are different outcomes. The experiment measures the first
 two; it does not adjudicate whether a cited passage entails the answer.
 
 The [frozen protocol](<TETHER LitQA2 Evaluation Protocol 2026-11-06.md>) and
-[paired-comparison scope](review-assets/tether-labbench-20261106/stage/PAIRED-COMPARISON-SCOPE.md)
+[paired-comparison scope](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-labbench-20261106/stage/PAIRED-COMPARISON-SCOPE.md)
 define these boundaries. The [original LAB-Bench paper](https://arxiv.org/html/2407.10362v1)
 and [public dataset](https://huggingface.co/datasets/futurehouse/lab-bench)
 define the upstream task. These public questions are exposed development assets,
@@ -69,7 +69,7 @@ After collection closed, amendment A02 corrected two worker cache-root checks.
 The original and corrected source bytes, failing regression and 97-test passing
 gate were retained before benchmark inference. It changed no model, prompt,
 question, source, option shuffle or scientific setting. The
-[generation freeze](review-assets/tether-labbench-20261106/stage/generation-freeze-attempt02/GENERATION-FREEZE.json)
+[generation freeze](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-labbench-20261106/stage/generation-freeze-attempt02/GENERATION-FREEZE.json)
 binds the prospective correction separately from the original collection freeze.
 
 Generation performed 199 calls and 199 tokenizations with no unresolved calls or
@@ -111,7 +111,7 @@ annotation strings/questions form 186 observed components in the reconstruction;
 unresolved aliases and broader dependence prevent interpreting this as an
 independent sample count. No confidence interval treats all 199 as independent.
 
-The separate [DOI audit](review-assets/tether-labbench-20261106/operational-audit/SOURCE-DOI-REVIEW.md)
+The separate [DOI audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-labbench-20261106/operational-audit/SOURCE-DOI-REVIEW.md)
 finds 10/205 annotated per-question DOI pairs (4.88%), covering 10/199 questions
 (5.03%), in both retained articles and selected prompt sources. All 199 questions
 have explicit DOI annotations. Independent article-front XML parsing confirms
@@ -133,7 +133,7 @@ Only 16/205 annotation identifiers resolve through collected discovery metadata;
 the secondary conditional recall of 10/16 (62.5%) is selected by that metadata
 availability and must not replace the overall DOI recall of 10/205.
 
-A [post hoc descriptive join](review-assets/tether-labbench-20261106/stage/SOURCE-ANSWER-CONTINGENCY-01.json)
+A [post hoc descriptive join](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-labbench-20261106/stage/SOURCE-ANSWER-CONTINGENCY-01.json)
 compares selected-paper identity with answer outcomes:
 
 | Selected annotated DOI | Questions | Correct | Wrong substantive | Unsure |
@@ -178,7 +178,7 @@ chronology suggests about 29.4 minutes from the declared parent reservation to
 seal modification time, but this is not an attested stopwatch measurement.
 Do not substitute the worker's approximately 19.4 minutes for total latency.
 
-A [read-only allocation probe](review-assets/tether-labbench-20261106/stage/READ-ALLOCATION-DIAGNOSTIC.md)
+A [read-only allocation probe](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-labbench-20261106/stage/READ-ALLOCATION-DIAGNOSTIC.md)
 found that `proof()` requests 512 MiB reads even for tiny files. Five reads of a
 36,668-byte source file took about 0.455 seconds with that cap versus 0.000719
 seconds with a file-size bound in this local microprobe. The probe is not a
@@ -195,7 +195,7 @@ set was 579,141,632 bytes, not incremental memory. It verified 9,112,208,256 uni
 model/runtime/receipt bytes; this is not physical I/O. Blind native reconstruction
 took 17.203 seconds but performs fewer obligations, so these times are not a
 policy-equivalent speed comparison. The
-[resource-scope record](review-assets/tether-labbench-20261106/stage/RESOURCE-SCOPE-02.json)
+[resource-scope record](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-labbench-20261106/stage/RESOURCE-SCOPE-02.json)
 states measurement scopes and unknowns.
 
 ## Retained artifacts and qualification
@@ -217,8 +217,8 @@ states measurement scopes and unknowns.
 
 Bulk originals and outputs remain in ignored `data/raw/labbench_public/` and
 `data/benchmark/labbench/` directories. The
-[stage checkpoint](review-assets/tether-labbench-20261106/STATUS.md) and
-[execution state](review-assets/tether-labbench-20261106/EXECUTION-STATE.json)
+[stage checkpoint](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-labbench-20261106/STATUS.md) and
+[execution state](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-labbench-20261106/EXECUTION-STATE.json)
 identify the exact current attempts. Failed helper/qualification attempts remain
 separate from actual generation outcomes. The operational auditor required a
 separately tested amendment-proof reader correction and an exact-path invocation;

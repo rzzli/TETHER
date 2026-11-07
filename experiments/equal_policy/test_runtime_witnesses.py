@@ -2,14 +2,15 @@
 import os
 from pathlib import Path
 import subprocess
+import sys
 import tempfile
 import unittest
 
 from experiments.equal_policy.runtime_witnesses import tree_hashes
 
 ROOT = Path(__file__).resolve().parents[2]
-ENVIRONMENT = ROOT / "data/cache/tether-051-installed-qualification-attempt02/environment"
-PYTHON = ENVIRONMENT / "Scripts/python.exe"
+PYTHON = Path(sys.executable).resolve()
+ENVIRONMENT = PYTHON.parent.parent
 SCRIPT = ROOT / "experiments/equal_policy/runtime_witnesses.py"
 
 

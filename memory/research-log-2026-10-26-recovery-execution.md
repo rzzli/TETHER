@@ -33,7 +33,7 @@ data/reference/recovery-checkpoint-supplement-20261026T073709Z. No original rece
 or sealed input was rewritten. E: copies do not establish off-machine durability.
 GitHub authentication/hosted current-HEAD CI remained unverified at the checkpoint.
 
-R03 implements packaged asof.archive, caller-approved logical/physical bindings,
+R03 implements packaged tether_engine.archive, caller-approved logical/physical bindings,
 external receipt/journal anchors, code-as-data verification and explicit v0.2
 compatibility semantics. Seven representative restored families pass isolated
 installed-wheel guards denying original-root reads, tools imports, archived code
@@ -61,7 +61,7 @@ replay. All56 acquired model/runtime assets match pins; only existing Qwen14B
 Q4_K_M found in authorized model root. GPU16,303MiB and RAM observations are not a
 fit/latency guarantee. Stronger-model capacity unresolved; no acquisition or inference.
 
-R06 implementation adds asof.study proof/process/session primitives, versioned
+R06 implementation adds tether_engine.study proof/process/session primitives, versioned
 source-only resources and current/simplified diagnostic validators. Old tools stay
 unchanged. Explicit capabilities/trusted verifier replace backend-ID behavior;
 one planned cell cannot repeat. Durable measured/estimated accounting, stale-proof

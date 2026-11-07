@@ -2,7 +2,7 @@ from datetime import datetime,timedelta,timezone
 import unittest
 from unittest.mock import patch
 
-from asof.serde import canonical
+from tether_engine.serde import canonical
 from experiments.litqa_comparison.tests import test_replay as native_fixtures
 from experiments.litqa_supplied import pipeline as p,resolver,test_resolver as fixtures
 

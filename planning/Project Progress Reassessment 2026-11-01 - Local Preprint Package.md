@@ -51,20 +51,20 @@ adding retries or suppressing errors. That acceptance does not prove future
 filesystem operations cannot fail; retained journals and failure records remain
 part of the operational contract.
 
-The [release record](../paper/release/RELEASE-RECORD.json),
-[public qualification](../paper/release/qualification.json),
-[independent final gates](review-assets/preprint-p09-20261101/FINAL-GATE-PEER-REVIEW-v1.md),
-[archive review](review-assets/preprint-p09-20261101/RELEASE-ZIP-PEER-REVIEW-v1.md),
+The [release record](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/paper/release/RELEASE-RECORD.json),
+[public qualification](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/paper/release/qualification.json),
+[independent final gates](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p09-20261101/FINAL-GATE-PEER-REVIEW-v1.md),
+[archive review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p09-20261101/RELEASE-ZIP-PEER-REVIEW-v1.md),
 [current paper guide](../paper/README.md) and
-[root revision QA](review-assets/preprint-p10-20261101/WORKING-REVISION-ROOT-QA-v2.json)
+[root revision QA](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p10-20261101/WORKING-REVISION-ROOT-QA-v2.json)
 retain exact scopes and file bindings. The new PDF SHA is
 `c9778533984d2a04451c0f535b54704397977a13de1832dc4dfe9364d25d766d`.
 The original17-page P08 PDF and inner frozen P09 paper are unchanged history.
 
-The [working packet record](../paper/release/WORKING-PACKET-RECORD.json),
-[packet qualification](../paper/release/WORKING-PACKET-QUALIFICATION.json),
-[independent source/PDF review](review-assets/preprint-p10-20261101/P10-INDEPENDENT-AUDIT-v1.md)
-and [independent packet review](review-assets/preprint-p10-20261101/WORKING-PACKET-PEER-REVIEW-v1.md)
+The [working packet record](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/paper/release/WORKING-PACKET-RECORD.json),
+[packet qualification](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/paper/release/WORKING-PACKET-QUALIFICATION.json),
+[independent source/PDF review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p10-20261101/P10-INDEPENDENT-AUDIT-v1.md)
+and [independent packet review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p10-20261101/WORKING-PACKET-PEER-REVIEW-v1.md)
 retain the final evidence. Five invented packaging boundary checks pass. The
 packet has a standalone reviewer guide and exact editable paper/PDF,37 historical
 numerical payloads with separately versioned portable metadata, and the unchanged

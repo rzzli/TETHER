@@ -1,9 +1,0 @@
-{
-  "role": "evaluation_only",
-  "status": "diagnostic_not_task2_completion",
-  "canonical_manifest": {
-    "path": "D:/Projects/drug_target_agents/data/benchmark/cohorts/registry-power-20261018T025910Z/evidence-manifest.json",
-    "sha256": "df8772fbed0ee0cd18563c74fc7d62e9fbcfeea14a67d7f1a93378e2ca261305"
-  },
-  "calibration_warning": "0.069 and 0.073 false rejection rates at intended alpha .05; supersede method before task completion."
-}

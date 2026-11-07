@@ -176,7 +176,7 @@ are independent of $0 local inference and cannot be manufactured by additional c
 
 ## Files and preservation
 
-Runtime changes: `src/asof/local_model.py`, `retrieval.py`, `wire.py`, `workflow.py`,
+Runtime changes: `src/tether_engine/local_model.py`, `retrieval.py`, `wire.py`, `workflow.py`,
 `artifacts.py` and `cli.py`. Feasibility utilities add fixed-cohort scope, conditional
 power and chronology checks. Framework utilities prepare pinned assets, own the
 local server, run/replay cases, probe transport and verify pilot summaries. Regression

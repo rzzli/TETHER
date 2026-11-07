@@ -1,9 +1,0 @@
-Using CPython 3.11.15 interpreter at: .venv\Scripts\python.exe
-Creating virtual environment at: packages\tether\.venv
-Resolved 3 packages in 1ms
-   Building asof-target-agents @ file:///D:/Projects/drug_target_agents
-      Built asof-target-agents @ file:///D:/Projects/drug_target_agents
-Prepared 1 package in 3.78s
-Installed 2 packages in 132ms
- + asof-target-agents==0.3.11 (from file:///D:/Projects/drug_target_agents)
- + tether-target-agents==0.4.0 (from file:///D:/Projects/drug_target_agents/packages/tether)

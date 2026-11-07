@@ -16,8 +16,8 @@ import socket
 import subprocess
 import time
 
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, read_json, sha256_file, write_json
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, read_json, sha256_file, write_json
 from tools.science.reference_panel import read_bound_json
 
 PACK_SHA256='5a4842f9b1751d3e0b2e50c166c5bf1786e3639741072b38b8ad264b4b8da56d'
@@ -219,7 +219,7 @@ def extract(plan_path, expected_sha256, output):
         codepaths={Path(p['path']).resolve() for p in plan['executed_code']}
         required_code={'tools/science/outcome_extract.py','tools/science/outcome_inputs.py',
             'tools/science/ascertainment_policy.py','tools/science/origin_programs.py',
-            'tools/science/reference_panel.py','src/asof/serde.py','src/asof/journal.py'}
+            'tools/science/reference_panel.py','src/tether_engine/serde.py','src/tether_engine/journal.py'}
         if plan['phase']=='selected_results':required_code.add('tools/science/outcome_results.py')
         if plan['phase']=='endpoint_followup':required_code.update(('tools/science/endpoint_followup.py','tools/science/outcome_results.py'))
         if plan['phase']=='origin_screening':required_code.update(('tools/science/origin_maturity.py','tools/science/origin_review.py'))

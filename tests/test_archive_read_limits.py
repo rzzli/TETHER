@@ -5,8 +5,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.archive.paths import ArchiveResolver
-from asof.serde import ContractError
+from tether_engine.archive.paths import ArchiveResolver
+from tether_engine.serde import ContractError
 
 
 class ArchiveReadLimitTests(unittest.TestCase):

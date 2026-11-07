@@ -54,7 +54,7 @@ def capture(root, *, exclude_cache):
 
 
 def core_code(trusted):
-    root = package_root(trusted, 'asof')
+    root = package_root(trusted, 'tether_engine')
     return {name: proof['sha256'] for name, proof in capture(root, exclude_cache=False).items()}
 
 
@@ -71,7 +71,7 @@ def literal_version(root):
 
 
 def distribution_versions(roots):
-    wanted = {'tether-target-agents', 'asof-target-agents'}
+    wanted = {'tether-target-agents', 'tether-target-engine'}
     found = {}
     for distribution in metadata.distributions(path=sorted({str(root.parent) for root in roots})):
         name = re.sub(r'[-_.]+', '-', distribution.metadata.get('Name', '')).lower()
@@ -82,14 +82,14 @@ def distribution_versions(roots):
 
 
 def launcher_proof(trusted):
-    facade, core = package_root(trusted, 'tether'), package_root(trusted, 'asof')
+    facade, core = package_root(trusted, 'tether'), package_root(trusted, 'tether_engine')
     first = capture(facade, exclude_cache=True)
     second = capture(facade, exclude_cache=True)
     require(first == second, 'EP-VERIFY-03', 'Installed launcher code changed during capture')
-    versions = dict(tether=literal_version(facade), asof=literal_version(core))
-    require(versions == {'tether': '0.5.1', 'asof': '0.3.12'}, 'EP-VERIFY-03', 'Unsupported installed package version')
+    versions = dict(tether=literal_version(facade), tether_engine=literal_version(core))
+    require(versions == {'tether': '0.6.0', 'tether_engine': '0.4.0'}, 'EP-VERIFY-03', 'Unsupported installed package version')
     distributions = distribution_versions((facade, core))
-    require(distributions['tether-target-agents'] in (None, '0.5.1') and
-            distributions['asof-target-agents'] in (None, '0.3.12'), 'EP-VERIFY-03', 'Installed distribution version differs')
-    return dict(schema_version=1, method='tether.launcher_code.v1', facade_version=versions['tether'],
-        core_version=versions['asof'], installed_distributions=distributions, code=first)
+    require(distributions['tether-target-agents'] in (None, '0.6.0') and
+            distributions['tether-target-engine'] in (None, '0.4.0'), 'EP-VERIFY-03', 'Installed distribution version differs')
+    return dict(schema_version=1, method='tether.launcher_code.v2', facade_version=versions['tether'],
+        core_version=versions['tether_engine'], installed_distributions=distributions, code=first)

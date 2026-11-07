@@ -1,7 +1,7 @@
 # Project progress reassessment — accepted pure generation milestone
 
-**Snapshot: 28 October 2026 UTC. Accepted software: AsOf 0.3.11.** The
-[acceptance record](review-assets/recovery-step9-generation-contract-20261028/acceptance.json),
+**Snapshot: 28 October 2026 UTC. Accepted software: TETHER 0.3.11.** The
+[acceptance record](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json),
 SHA-256 `491feb0f5fbeefb9df841de46d104b160e3ad4832241b449115037b79961070b`,
 accepts the **pure generation-contract engineering milestone**. It does not accept
 the entire R09 step, a scientific evaluation or the whole project. This is an AI
@@ -26,8 +26,8 @@ The new interface is preparation-only: `execution_authorized` is false, features
 remain empty and clinical probabilities null. **The default controller/native route
 remains v2.** V3 has not been wired into dispatch or qualified by actual document/EOG
 tests. The [API documentation](../docs/INTERPRETATION_GENERATION.md),
-[contract](review-assets/recovery-step9-generation-contract-20261028/CONTRACT.md) and
-[bounded-input amendment](review-assets/recovery-step9-generation-contract-20261028/AMENDMENT-1-BOUNDED-INPUT.md)
+[contract](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/CONTRACT.md) and
+[bounded-input amendment](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/AMENDMENT-1-BOUNDED-INPUT.md)
 describe the accepted boundary.
 
 The accepted evidence includes:
@@ -40,19 +40,19 @@ The accepted evidence includes:
   36 state validations and 74 rejection cases**, plus receipt-bound relocation of
   a plain JSON preparation/validated-response fixture. That relocation is not a
   newly qualified native-run or biological-dossier archive family.
-- [Pure construction checks](review-assets/recovery-step9-generation-contract-20261028/PRODUCTION-PURE-CHECKS-v4.json):
+- [Pure construction checks](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/PRODUCTION-PURE-CHECKS-v4.json):
   262,144 BMP membership and 4,064 small bounded-language assertions, with reference,
   scalar/escape and root cases. At 256 short quotes, grammar is 47,732 bytes and its
   JSON-string encoding 58,777 bytes. Complete prompt/HTTP caps still apply; a nominal
   catalog maximum does not guarantee a complete request fits.
-- [Eighteen retained preparations](review-assets/recovery-step9-generation-contract-20261028/PREPARATION-QUALIFICATION.json):
+- [Eighteen retained preparations](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/PREPARATION-QUALIFICATION.json):
   12 synthetic and six exposed IL6R stages. Twelve old-v2 payload fingerprints
   remain unchanged. IL6R grammar is 6,012 bytes and full HTTP payloads
   21,596–21,872 bytes. These are authored preparation/abstention fixtures with
   hypothetical histories, not generated scientific answers or independent references.
 
 The unchanged **109 original plus 58 extension documents** remain distinct. The
-[schema disposition](review-assets/recovery-step9-generation-contract-20261028/SCHEMA-ORACLE-DISPOSITION.md)
+[schema disposition](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/SCHEMA-ORACLE-DISPOSITION.md)
 qualifies 162 typed schema comparisons and 16 Unicode controls through a separately
 qualified jsonschema 4.26.0 tool. Five parser-dependent observations remain ungraded:
 Python parsing retains non-scalar strings or the last duplicate-key value and the
@@ -72,11 +72,11 @@ closed negative on incomplete-conversion warnings. That negative remains termina
 
 The first matching-verifier batch passed versions 0.3.1–0.3.7, then timed out at
 0.3.8's 60-second whole-process ceiling. Its helper's reported timer excluded setup
-and four smoke workflows. The [diagnosis](review-assets/recovery-step9-generation-contract-20261028/FROZEN-TIMEOUT-DIAGNOSIS.md)
+and four smoke workflows. The [diagnosis](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/FROZEN-TIMEOUT-DIAGNOSIS.md)
 and failed primary attempt remain intact. A separately declared
-[completion disposition](review-assets/recovery-step9-generation-contract-20261028/COMPLETION-ATTEMPT-DISPOSITION.md)
+[completion disposition](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/COMPLETION-ATTEMPT-DISPOSITION.md)
 retains the seven successes and adds successful 0.3.8, 0.3.9 and 0.3.10 replays.
-The [new combined qualification](review-assets/recovery-step9-generation-contract-20261028/FROZEN-VERIFIER-COMBINED.json)
+The [new combined qualification](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/FROZEN-VERIFIER-COMBINED.json)
 therefore covers **ten matching installed versions across two retained attempts**,
 not ten successes from the failed original run. Independent result verification
 checked all 462 completion pins, 327 current source files, six child attempts/logs
@@ -91,8 +91,8 @@ five changed copied Arrow caches. The copy manifest had captured bytes before a
 verification import, with source mtimes not preserved; it was not an immutable
 post-import snapshot.
 
-[Amendment 3](review-assets/recovery-step9-generation-contract-20261028/AMENDMENT-3-OPTIONAL-ENVIRONMENT-CACHES.md)
-and the [independent cache review](review-assets/recovery-step9-generation-contract-20261028/OPTIONAL-ARROW-PEER-REVIEW-v3.md)
+[Amendment 3](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/AMENDMENT-3-OPTIONAL-ENVIRONMENT-CACHES.md)
+and the [independent cache review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/OPTIONAL-ARROW-PEER-REVIEW-v3.md)
 qualify exactly **755 unchanged files plus five individually derived caches** in
 the same 760-file universe. All original source pins, binary/library/metadata hashes,
 751 RECORD-hashed rows and explicit link/reparse checks pass. Each changed cache's
@@ -107,7 +107,7 @@ V4 passed every evidence gate but failed publication when `os.link` returned Win
 error 5. Its failure and unproven filesystem/permission cause are retained. V5 changed
 only publication/main to a non-overwriting same-directory Windows rename; every
 evidence-gate function remained identical. The
-[five publication fixtures](review-assets/recovery-step9-generation-contract-20261028/ACCEPTANCE-PUBLICATION-V5-RESULT.json)
+[five publication fixtures](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/ACCEPTANCE-PUBLICATION-V5-RESULT.json)
 cover successful publication, existing destinations, concurrent writers, fsync failure
 and stopping on unsupported platforms. The reviewed v5 aggregation then exited zero
 and published the acceptance cited above. No permission escalation, runtime repair,
@@ -182,8 +182,8 @@ AI engineering or literature assessments cannot supply human submissions.
 
 ## Next ordered gates
 
-Follow the [critical next-gate review](review-assets/recovery-step9-generation-contract-20261028/NEXT-GATE-CRITICAL-REVIEW.md)
-and [native requirements](review-assets/recovery-step9-generation-contract-20261028/NATIVE-RECOGNIZER-REQUIREMENTS.md).
+Follow the [critical next-gate review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/NEXT-GATE-CRITICAL-REVIEW.md)
+and [native requirements](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/NATIVE-RECOGNIZER-REQUIREMENTS.md).
 This reassessment itself authorizes no executable experiment.
 
 1. Preserve the accepted pure boundary, failed routes and frozen 167-document corpus.
@@ -204,7 +204,7 @@ This reassessment itself authorizes no executable experiment.
    strings under bounded counts/stops. Compact acyclic grammar does not prove low
    native runtime cost. Record time, memory, mappings, device behavior and cleanup.
 6. Before **any integrated native case**, profile the preserved
-   [295.922/300-second simulation](review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md):
+   [295.922/300-second simulation](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md):
    only 4.078 seconds remained without actual startup/inference. Separate lease/hash,
    preparation, tokenization, reservations, transport, cleanup and sealing costs.
    **Do not raise case budgets**, weaken integrity checks, choose an easier case or

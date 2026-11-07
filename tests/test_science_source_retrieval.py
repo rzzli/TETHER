@@ -3,8 +3,8 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from asof.serde import ContractError,read_json
-from asof.journal import read_chain
+from tether_engine.serde import ContractError,read_json
+from tether_engine.journal import read_chain
 from tools.science.source_retrieval import fetch_control
 from tests import test_science_source_retrieval_peer as fixture
 

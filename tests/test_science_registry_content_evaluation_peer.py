@@ -5,8 +5,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.journal import RunJournal
-from asof.serde import ContractError, fingerprint, write_json
+from tether_engine.journal import RunJournal
+from tether_engine.serde import ContractError, fingerprint, write_json
 from tools.science.registry_content import FIELDS, classify_content, content_query
 from tools.science import registry_content_evaluation as evaluation
 

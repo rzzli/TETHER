@@ -5,8 +5,8 @@ import io
 import threading
 import unittest
 
-from asof.serde import ContractError, canonical
-from asof.study.source_fact_transport import (
+from tether_engine.serde import ContractError, canonical
+from tether_engine.study.source_fact_transport import (
     MAX_ENVELOPE_BYTES,
     TypedReportingClient,
     parse_netstat_listener,

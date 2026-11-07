@@ -4,14 +4,15 @@ import unittest
 from dataclasses import replace
 from datetime import timedelta
 from pathlib import Path
+from tools.history import materialize_checkpoint
 
-from asof.agents import ExtractiveBackend
-from asof.artifacts import verify_run
-from asof.chrono import load_snapshot
-from asof.contracts import Case, Category
-from asof.ledger import EvidenceLedger
-from asof.serde import ContractError, decode, read_json, write_json, sha256_file
-from asof.workflow import run_workflow
+from tether_engine.agents import ExtractiveBackend
+from tether_engine.artifacts import verify_run
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case, Category
+from tether_engine.ledger import EvidenceLedger
+from tether_engine.serde import ContractError, decode, read_json, write_json, sha256_file
+from tether_engine.workflow import run_workflow
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -21,7 +22,7 @@ class ContextTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
-        shutil.copytree(ROOT / 'src/asof/demo/v2', self.root / 'fixture')
+        shutil.copytree(ROOT / 'src/tether_engine/demo/v2', self.root / 'fixture')
         self.fixture = self.root / 'fixture'
         self.case = decode(Case, read_json(self.fixture / 'case.json'))
         self.store = load_snapshot(self.fixture / 'snapshot.json', self.case)
@@ -70,10 +71,9 @@ class ContextTests(unittest.TestCase):
 
 class PortableLegacyTests(unittest.TestCase):
     def test_required_golden_fixture_verifies_after_relocation(self):
-        source = ROOT / 'tests/fixtures/legacy-v1'
         with tempfile.TemporaryDirectory() as directory:
             target = Path(directory) / 'archived'
-            shutil.copytree(source, target)
+            materialize_checkpoint('tests/fixtures/legacy-v1', target)
             anchor = (target / 'receipt.sha256').read_text().strip()
             result = verify_run(target, anchor)
             self.assertEqual(result['semantic_consistency'], 'unavailable_legacy_v1')

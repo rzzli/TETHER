@@ -3,12 +3,12 @@ import copy
 import importlib.util
 import unittest
 
-from asof.agents import ExtractiveBackend
-from asof.artifacts import write_run
-from asof.chrono import load_snapshot
-from asof.contracts import Case
-from asof.serde import ContractError, decode, read_json, write_json
-from asof.workflow import run_workflow
+from tether_engine.agents import ExtractiveBackend
+from tether_engine.artifacts import write_run
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case
+from tether_engine.serde import ContractError, decode, read_json, write_json
+from tether_engine.workflow import run_workflow
 from tests import test_v02_ingest as fixtures
 from tools.framework.run_pilot import SourceAudit
 

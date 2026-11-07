@@ -1,5 +1,5 @@
 """Explicitly invented HTTP bodies for controller qualification only."""
-from asof.serde import canonical
+from tether_engine.serde import canonical
 
 
 def queries():

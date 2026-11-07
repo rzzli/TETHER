@@ -1,6 +1,6 @@
 ---
 name: research-log-2026-10-10
-description: Completion audit of the accepted AsOf documentation-only data scaffold
+description: Completion audit of the accepted TETHER documentation-only data scaffold
 metadata:
   type: project
 date: 2026-10-10
@@ -38,7 +38,7 @@ The user subsequently requested stopping the 15-minute checks and will ask for s
 
 ## Initial agent framework
 
-The user then requested starting the agent framework. Implemented the narrower core recommended by [[AsOf Feasibility Analysis and Peer Survey]], borrowing Virtual Biotech's plan/review/provenance pattern while separating extraction from prediction. Code is in `src/asof/`; see [[README]] and [[docs/FRAMEWORK]].
+The user then requested starting the agent framework. Implemented the narrower core recommended by [[TETHER Feasibility Analysis and Peer Survey]], borrowing Virtual Biotech's plan/review/provenance pattern while separating extraction from prediction. Code is in `src/tether_engine/`; see [[README]] and [[docs/FRAMEWORK]].
 
 Implemented strict normalized contracts and catalog-role checks; conservative source/release/record/annotation date gates including case mappings/program state; exact artifact hashes and constrained paths; category routing; model-independent selection, offline/replay backends and bounded reviewer retries; grounded append-only claims; study/cohort/dependency grouping; explicit null/missingness coverage; frozen logistic scoring with earlier-label/applicability gates and abstention; hash-chained private run artifacts; separate evaluator-only descriptive T1 metrics with censoring/maturation/coverage checks.
 

@@ -7,7 +7,7 @@ from urllib.parse import urlencode
 from urllib.request import urlopen
 import xml.etree.ElementTree as ET
 
-from asof.serde import ContractError, read_json, sha256_file, write_json
+from tether_engine.serde import ContractError, read_json, sha256_file, write_json
 
 
 def archive(panel_paths, output):

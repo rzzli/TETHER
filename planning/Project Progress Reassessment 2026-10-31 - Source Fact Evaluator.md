@@ -27,7 +27,7 @@ initial contract and later clarifications are retained.
 | Portability boundary | JSON-only dependency-free installed API smoke outside the checkout; logical source paths and same-byte root relocation; Windows original-sharing locks retained, non-Windows lock capability fails closed |
 
 The new APIs are `source_fact_sources`, `source_fact_adapters` and
-`source_fact_evaluation` under `asof.study`. Existing defaults, native interfaces,
+`source_fact_evaluation` under `tether_engine.study`. Existing defaults, native interfaces,
 archived outputs/verifiers, prediction features and probabilities are unchanged.
 This is a development addition to the 0.3.11 base, not a final new software release.
 The test wheel retains version metadata 0.3.11; its exact wheel hash identifies
@@ -36,7 +36,7 @@ archives. Release versioning and exact-SHA full qualification remain P09 work.
 
 ## Verification and corrections
 
-The retained [targeted run](review-assets/preprint-p03-20261031/TARGETED-TESTS-v1.json)
+The retained [targeted run](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p03-20261031/TARGETED-TESTS-v1.json)
 passes **173 tests with zero failures/errors/skips**: 99 new controls and 74
 relevant legacy regressions. Sixty new controls were independently authored.
 This does not mean the complete application suite was rerun. The earlier accepted
@@ -60,7 +60,7 @@ other Python artifacts still must parse.
 Initial missing-module, sandbox TEMP/cache and fixture-contract failures remain
 retained; they are distinguished from production assertion defects.
 
-The [installed smoke](review-assets/preprint-p03-20261031/INSTALLED-SMOKE-v1.json)
+The [installed smoke](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p03-20261031/INSTALLED-SMOKE-v1.json)
 built a wheel entirely offline using existing setuptools 84.0.0, installed it in
 a fresh environment under the permitted C: visualization root, and passed
 source compilation/replay, signed-zero rejection and three-cell accounting with
@@ -69,7 +69,7 @@ the final research release. The failed initial uv cache attempt is preserved.
 
 ## Actual-format source result
 
-The [actual-source report](review-assets/preprint-p03-20261031/ACTUAL-SOURCE-REPLAY-v1.json)
+The [actual-source report](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p03-20261031/ACTUAL-SOURCE-REPLAY-v1.json)
 retains one already fixed, exposed CTLA4/Crohn source row. The compiler read the
 receipt-verified original Parquet row and both source-inclusive replays passed.
 A separate fresh checker verified all 15 projected facts, types, groups, bindings
@@ -124,7 +124,7 @@ already-authorized preservation action, not a download workaround.
    Record source/case selection and every exclusion; use 2–4 exposed development
    units, including bounded missing-input handling. No freshness claim.
 3. Implement the exact literal assembler/always-abstain controls using only
-   generation inputs. Compare any feasible same-model plain and AsOf workflows
+   generation inputs. Compare any feasible same-model plain and TETHER workflows
    under matched evidence and existing budget defaults. An adapted Virtual
    Biotech prompt must be labeled as an adaptation, not a full reproduction.
 4. Freeze all cells, prompts, outputs/adapters, primary contrast, masks, caps,

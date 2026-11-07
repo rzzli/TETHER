@@ -2,7 +2,7 @@ import copy
 import json
 import unittest
 
-from asof.serde import ContractError, fingerprint
+from tether_engine.serde import ContractError, fingerprint
 from tools.science.outcome_inputs import (BEGIN, CHILD_COLUMNS, FOLLOWUP_COLUMNS, ORIGIN_COLUMNS,
     candidate_query, normalized_alias, parse_jsonl, regenerate_request, schema_from_audit,
     study_query, validate_candidates, validate_study_rows)

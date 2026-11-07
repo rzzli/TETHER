@@ -55,7 +55,7 @@ strings/ready booleans cannot select their own trust basis. No implementation
 or new subjectexecution follows from contract preparation alone.
 
 The [whole-project assessment](../planning/Project%20Progress%20Reassessment%202026-10-30%20-%20Entry%20Contract%20Coverage.md)
-covers all R01–R16 / HR1–HR4 and next policy gates. AsOf 0.3.11/default v2 retains
+covers all R01–R16 / HR1–HR4 and next policy gates. TETHER 0.3.11/default v2 retains
 1,774 application tests / 327 pins / ten preserved versions; no new application-suite
 run or integration. $0; downloader/stopped monitor untouched. Data gaps of 65 missing
 inputs, 36 unqualified labels, 17/32 registry states and 0/12 jointly ready clinical

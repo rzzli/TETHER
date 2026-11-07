@@ -43,7 +43,7 @@ def verify_outer(output, anchor, trusted_runtime, *, expected_policy=None):
     from .independent_runtime import launcher_proof
     check(canonical(manifest['launcher']) == canonical(launcher_proof(trusted_runtime)), 'Launcher identity differs from current installed runtime')
     pin(manifest['invocation_sha256'])
-    check(manifest['projection'] == dict(source='engine/dossier.md', target='dossier.md', transform='exact_first_header_v1'), 'Projection declaration')
+    check(manifest['projection'] == dict(source='engine/dossier.md', target='dossier.md', transform='identity_dossier_v2'), 'Projection declaration')
     check(type(manifest['artifacts']) is dict, 'Outer artifact inventory')
     expected = set(manifest['artifacts']) | {'tether-manifest.json', 'tether-receipt.json', 'attempt/journal.jsonl'}
     files, directories = file_inventory(output)
@@ -70,7 +70,7 @@ def verify_outer(output, anchor, trusted_runtime, *, expected_policy=None):
     supervision(manifest['supervision'], limits, len(stdout), len(stderr))
     source = stable(output / 'engine/dossier.md', deadline, LARGE)
     projected = stable(output / 'dossier.md', deadline, LARGE)
-    check(source.startswith(b'# AsOf dossier:') and projected == b'# TETHER dossier:' + source[len(b'# AsOf dossier:'):], 'Dossier presentation differs')
+    check(source.startswith(b'# TETHER dossier:') and projected == source, 'Dossier presentation differs')
     for name in ('journal.jsonl', 'trace.jsonl'): stable(output / 'engine' / name, deadline, NORMAL)
     engine = verify_core(output / 'engine', receipt['engine_receipt_sha256'], trusted_runtime=trusted_runtime)
     check(engine['semantic_consistency'] == 'verified' and engine.get('code_matches_current') is True and engine['status'] == 'completed', 'Inner source/current-code/completion qualification')

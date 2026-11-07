@@ -27,9 +27,9 @@ spec = importlib.util.spec_from_file_location("independent_p05_reference_audit",
 r = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(r)
 s, a = r.s, r.a
-from asof.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
-from asof.provenance import InputGraph, catalog_index
-from asof.serde import decode, encode
+from tether_engine.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
+from tether_engine.provenance import InputGraph, catalog_index
+from tether_engine.serde import decode, encode
 
 METHOD = "p05.independent_source_inclusive_experiment_audit.v1"
 CASES = tuple("p05-" + str(i).zfill(2) for i in range(1, 13))

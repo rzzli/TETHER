@@ -8,7 +8,7 @@ import unittest
 from unittest.mock import patch
 from uuid import UUID
 
-from asof.serde import ContractError,canonical,parse_json,fingerprint
+from tether_engine.serde import ContractError,canonical,parse_json,fingerprint
 from experiments.labbench import collect as c
 from experiments.labbench import retrieval as r
 

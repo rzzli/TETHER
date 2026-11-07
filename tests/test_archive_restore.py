@@ -3,8 +3,8 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
-from asof.archive.restore import materialize, stable_copy, verify
-from asof.serde import ContractError
+from tether_engine.archive.restore import materialize, stable_copy, verify
+from tether_engine.serde import ContractError
 
 class RestoreTests(unittest.TestCase):
     def setUp(self):
@@ -65,7 +65,7 @@ class RestoreTests(unittest.TestCase):
         self.assertCountEqual(results,['created','exists'])
 
     def test_cli_dispatch_requires_explicit_roots(self):
-        from asof.archive.__main__ import main
+        from tether_engine.archive.__main__ import main
         from contextlib import redirect_stderr
         from io import StringIO
         with redirect_stderr(StringIO()),self.assertRaises(SystemExit):

@@ -9,9 +9,20 @@ tags:
   - provenance
 ---
 
-# TETHER — framework: legacy v2 contracts
+# TETHER framework
 
-TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.5.2 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.13 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.
+TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility)
+provides the `tether` CLI and public Python namespace through
+`tether-target-agents` **0.6.0**. Its evidence engine is the separately versioned
+`tether-target-engine` **0.4.0**, imported as `tether_engine`. See the
+[quick start](../README.md#quick-start) and [migration guide](../packages/tether/MIGRATION.md).
+The CLI wraps demo/run outputs in a verifiable outer record; source inspection,
+snapshot construction and evaluation retain their dedicated layouts.
+
+The dated implementation history below describes earlier experiments. Its project
+names have been standardized for readability; exact original commands, proofs
+and code are in the [historical checkpoint](ARCHIVE.md). A namespace migration
+does not qualify the new software against those historical scientific results.
 
 Version 0.4.1 adds canonical CLI checks for coverage terminal state, reviewed selections versus committed claims and deterministic dossier text. Direct legacy API aliases keep the frozen engine semantics. Archived TETHER 0.4.0 outer runs require the matching old wheel; the new source is not covered by its receipt. See the [critical review](<../planning/TETHER Full Project Critical Review 2026-11-02.md>) for reproduced gaps and limits.
 
@@ -30,7 +41,7 @@ than assume `evidence.json`. Existing snapshots and receipts are unchanged.
 The 256 MiB ledger-output bound and execution budgets remain unchanged, so packet
 partitioning alone does not guarantee arbitrary-sized runs can finalize.
 
-TETHER follows the retained [[AsOf Feasibility Analysis and Peer Survey]]: begin with a bounded
+TETHER follows the retained [[TETHER Feasibility Analysis and Peer Survey]]: begin with a bounded
 extractor and deterministic checks, preserving the useful Virtual Biotech pattern of
 planning, specialist routing, review and provenance. Evidence extraction and numerical
 prediction remain separate. Scientific validation and Virtual Biotech reproduction
@@ -207,7 +218,7 @@ its separately sealed outer presentation for `demo` and `run`.
 
 `RetrievalPolicy` bounds whole admitted records by count and UTF-8 transport bytes.
 The default canonical mode retains the original policy and request fingerprints.
-The optional `asof-shared-scientific-fields-v1` mode factors identical fields across
+The optional `tether-shared-scientific-fields-v1` mode factors identical fields across
 records and references duplicate identity fields in their envelope. It preserves all
 fields, nulls, contexts and method parameters and must reconstruct the exact canonical
 logical request before dispatch. It uses a finite cache of small immutable parsed
@@ -235,7 +246,7 @@ statements and retain registered fingerprints. Backend-authored interpretations 
 enter factual claims. Critic retries are bounded; unexpected provider errors do not
 trigger automatic repeat calls.
 
-Features use `asof-features-v2` and `mean_of_unique_dependency_groups_v2`. Their fixed
+Features use `tether-features-v2` and `mean_of_unique_dependency_groups_v2`. Their fixed
 names cover genetics, direction, perturbation, expression, modality, literature, safety
 and pathways. Features require observed evidence, declared passed QC, a versioned
 method and matching hypothesis scope. Clinical/known-drug evidence cannot produce them.
@@ -322,7 +333,7 @@ source interpretation but cannot silently become historical predictor evidence.
 `inspect-source` validates an explicit manifest against receipt identity, bytes, schema,
 roles and paths. `build-snapshot` repeats inspection and creates a new snapshot for the
 fixed ten T6 hypotheses from Open Targets 25.09 and HGNC 2026-10-10. HGNC remains a
-normalization reference. Generated catalog product `asof_normalized_packets` belongs to
+normalization reference. Generated catalog product `tether_normalized_packets` belongs to
 provider `project` and retains complete parents.
 
 The adapter maps target/disease `id` and evidence `targetId`/`diseaseId`, checks approved
@@ -353,7 +364,7 @@ fidelity; biological adjudication remains separate.
 
 ## Evaluator boundary and later milestones
 
-Operational metadata corrections use the existing `asof.maintenance update-catalog`
+Operational metadata corrections use the existing `tether_engine.maintenance update-catalog`
 entry point with a `status_correction` public proposal. It checks referenced evidence
 hashes, the expected prior catalog hash and the exclusive writer lock. The proposal
 can update only collection status, verification and blocker descriptions; it cannot

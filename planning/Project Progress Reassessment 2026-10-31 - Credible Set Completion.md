@@ -14,10 +14,10 @@ two earlier files, the Open Targets 25.09 credible-set inventory contains 25
 Parquet payloads, 2,588,111,695 bytes and 2,862,043 physical rows. This is complete
 for that pinned table inventory, not every Open Targets product or project source.
 
-The [v3 plan](review-assets/preprint-p02-20261031/COMPLETED-JOIN-PLAN-v3.json)
+The [v3 plan](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p02-20261031/COMPLETED-JOIN-PLAN-v3.json)
 was frozen before its source-value scan. It pins the original files, schemas,
 footers, inspected receipts, private receipt archives and fixed development key.
-The [v3 report](review-assets/preprint-p02-20261031/COMPLETED-JOIN-REPORT-v3.json)
+The [v3 report](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p02-20261031/COMPLETED-JOIN-REPORT-v3.json)
 retains exactly one matching physical row with no duplicate or conflicting match.
 Reported beta, standard error and both p-value components are populated; z-score
 and sample size are null. Units, ancestry and independently verified upstream

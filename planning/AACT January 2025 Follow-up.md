@@ -2,14 +2,14 @@
 title: AACT January 2025 follow-up restoration and comparison
 date: 2026-10-16
 status: restored-paired-comparison-complete-program-labels-unadjudicated
-tags: [asof, aact, clinical, feasibility]
+tags: [TETHER, aact, clinical, feasibility]
 ---
 
 # January 2025 follow-up
 
 **The January 2025 snapshot is restored and all 24 frozen trials have been compared.** Technical checks passed; the temporary database server is cleanly stopped. Program-level clinical outcomes and censoring remain unadjudicated.
 
-The user supplied the requested follow-up archive at `E:/projects_data/drug_target_agents_data/raw/aact_snapshots/jan2025zip/d3q4ma1gbexj9z8dnia2w8m7t5a4.zip`. It is retained separately from the January 2023 archive. This continuation preserves the frozen 24-trial selection and earlier mapping exclusions from [[Clinical and Genetics Feasibility Pilot]]. Open the [paired review](../data/benchmark/cohorts/aact-followup-20250101-20261017T051834Z/Review.html) for all 24 dated records and their original qualifications.
+The user supplied the requested follow-up archive at `E:/projects_data/drug_target_agents_data/raw/aact_snapshots/jan2025zip/d3q4ma1gbexj9z8dnia2w8m7t5a4.zip`. It is retained separately from the January 2023 archive. This continuation preserves the frozen 24-trial selection and earlier mapping exclusions from [[Clinical and Genetics Feasibility Pilot]]. Open the paired review (local artifact: `data/benchmark/cohorts/aact-followup-20250101-20261017T051834Z/Review.html`) for all 24 dated records and their original qualifications.
 
 ## Archive identity and compatibility
 
@@ -47,7 +47,7 @@ The retained recipe performs restoration, analysis, table/identifier/constraint/
 | Comparison | All 24 IDs found; deterministic replay identical; original sealed evidence unchanged |
 | Tests | 130 tests passed, no skips; ten required probes passed; four targeted tests rerun after phase-format correction |
 
-Public provenance is `data/manifests/public/2026-10-16-aact-followup.json`. It anchors 395 restoration evidence files and 12 comparison files, excluding private credentials and database pages. Archive/dump hashes bind the large originals separately. The paired acquisition publication updates only the scoped `aact_snapshots` acquisition through the existing catalog writer: two archives, 5,299,237,535 bytes. Catalog parsing/scientific-validation flags remain `not_run` because no AsOf adapter or validated clinical labels were added.
+Public provenance is `data/manifests/public/2026-10-16-aact-followup.json`. It anchors 395 restoration evidence files and 12 comparison files, excluding private credentials and database pages. Archive/dump hashes bind the large originals separately. The paired acquisition publication updates only the scoped `aact_snapshots` acquisition through the existing catalog writer: two archives, 5,299,237,535 bytes. Catalog parsing/scientific-validation flags remain `not_run` because no TETHER adapter or validated clinical labels were added.
 
 ## What the paired records show
 

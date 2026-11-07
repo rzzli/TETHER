@@ -8,8 +8,8 @@ from __future__ import annotations
 
 import re
 
-from asof.local_model import LocalSelectionBackend, selection_payload, validate_selection_cap
-from asof.serde import ContractError, parse_json
+from tether_engine.local_model import LocalSelectionBackend, selection_payload, validate_selection_cap
+from tether_engine.serde import ContractError, parse_json
 
 
 ROLE_SELECTION_POLICY = 'science7-prior-stage-output-schema-v1'

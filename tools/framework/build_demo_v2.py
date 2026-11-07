@@ -4,15 +4,15 @@ import argparse
 from pathlib import Path
 from datetime import datetime, timezone
 
-from asof.agents import Selection, Usage, make_request
-from asof.chrono import load_snapshot
-from asof.contracts import Case, Category, EvidenceStatus
-from asof.serde import decode, encode, fingerprint, read_json, sha256_file, write_json
+from tether_engine.agents import Selection, Usage, make_request
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case, Category, EvidenceStatus
+from tether_engine.serde import decode, encode, fingerprint, read_json, sha256_file, write_json
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--input', type=Path, default=Path(__file__).resolve().parents[2] / 'src/asof/demo')
+    parser.add_argument('--input', type=Path, default=Path(__file__).resolve().parents[2] / 'src/tether_engine/demo')
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
     legacy, root = args.input, args.output
@@ -53,7 +53,7 @@ def main():
                     sources=sources, coverage={"source_completeness": "complete"})
     write_json(root / "snapshot.json", snapshot)
     model = read_json(legacy / "scorer.json")
-    model.update(schema_version=2, model_id="synthetic-logistic-v2", feature_schema="asof-features-v2",
+    model.update(schema_version=2, model_id="synthetic-logistic-v2", feature_schema="tether-features-v2",
                  aggregation="mean_of_unique_dependency_groups_v2")
     write_json(root / "scorer.json", model)
     store = load_snapshot(root / "snapshot.json", case)

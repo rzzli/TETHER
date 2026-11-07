@@ -5,7 +5,7 @@ from collections import Counter, defaultdict
 from hashlib import sha256
 import unicodedata
 
-from asof.serde import ContractError, canonical, freeze
+from tether_engine.serde import ContractError, canonical, freeze
 
 
 def normalized_claim(text: str) -> str:

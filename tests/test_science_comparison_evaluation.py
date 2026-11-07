@@ -7,9 +7,9 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.chrono import EvidenceStore, load_snapshot
-from asof.contracts import Case, Category, EvidenceStatus
-from asof.serde import ContractError, canonical, decode, encode, fingerprint, read_json, sha256_file, write_json
+from tether_engine.chrono import EvidenceStore, load_snapshot
+from tether_engine.contracts import Case, Category, EvidenceStatus
+from tether_engine.serde import ContractError, canonical, decode, encode, fingerprint, read_json, sha256_file, write_json
 from tools.science.comparison_evaluation import evaluate, evaluate_case, reference_bindings, _read_pinned
 from tools.science.comparison_evaluation import audit_selected_rows, select_original_audit_rows
 from tools.science.comparison_evaluation import _configuration_binding
@@ -44,13 +44,13 @@ def fixture_code(folder):
 
 
 def fixture_launcher(folder, plan_path, cases, receipt):
-    from asof.journal import RunJournal
+    from tether_engine.journal import RunJournal
     from tools.science.run_comparison import pin
     model_root = Path(read_json(Path(receipt['path']))['root'])
     native, model = model_root/'runtime/llama-server.exe', model_root/'fixture.gguf'
     write_json(folder/'server-command.json', {'argv': [str(native), '--model', str(model),
         '--host', '127.0.0.1', '--port', '55581', '--ctx-size', '16384', '--parallel', '1',
-        '--n-gpu-layers', '99', '--threads', '8', '--alias', 'asof-science7-qwen25-14b', '--no-webui', '--offline'],
+        '--n-gpu-layers', '99', '--threads', '8', '--alias', 'tether-science7-qwen25-14b', '--no-webui', '--offline'],
         'runtime_sha256': sha256_file(native)})
     (folder/'server.stdout.log').write_bytes(b'Invented fixture; no native process ran.\n')
     (folder/'server.stderr.log').write_bytes(b'')
@@ -78,7 +78,7 @@ class ComparisonEvaluationTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(); self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
-        folder = ROOT/'src/asof/demo/v2'
+        folder = ROOT/'src/tether_engine/demo/v2'
         self.case = replace(decode(Case, read_json(folder/'case.json')), task='T6', endpoint=None)
         original = load_snapshot(folder/'snapshot.json', self.case)
         raw_node = original.snapshot.sources[0]
@@ -110,7 +110,7 @@ class ComparisonEvaluationTests(unittest.TestCase):
                 claims.append({'category': category, 'observation_id': identity,
                     'evidence': encode(record), 'source_claim_sha256': fingerprint(record)})
         return {'case_id': self.case.case_id, 'case_sha256': fingerprint(self.case),
-            'hypothesis_sha256': self.case.hypothesis.key, 'arm': 'asof', 'status': 'completed',
+            'hypothesis_sha256': self.case.hypothesis.key, 'arm': 'tether', 'status': 'completed',
             'features': {}, 'probability': None, 'provider_spend_usd': 0, 'claims': claims,
             'selections': selections, 'coverage': coverage, 'calls': 2, 'elapsed_seconds': 1.0,
             'usage': {'input_tokens': 20, 'output_tokens': 4, 'cost_usd': 0},
@@ -253,7 +253,7 @@ class ComparisonEvaluationTests(unittest.TestCase):
 
     def test_complete_synthetic_six_arm_postseal_integration_without_inference(self):
         from tools.science.role_backend import RoleSelectionBackend
-        from asof.workflow import Budget
+        from tether_engine.workflow import Budget
         from tools.science.comparison_workflow import run_case, verify_case, ARMS
         from tests.test_science_comparison_workflow import NativeFixture, synthetic_policy
         folder = self.root/'predictions'; folder.mkdir()
@@ -261,7 +261,7 @@ class ComparisonEvaluationTests(unittest.TestCase):
             return {'path': str(path.resolve()), 'sha256': sha256_file(path), 'bytes': path.stat().st_size}
         config = {'schema_version': 1, 'endpoint': 'http://127.0.0.1:55581', 'model_id': 'synthetic-only',
             'model_provenance': {'weights_sha256': {'fixture': 'a'*64}, 'runtime_sha256': 'b'*64},
-            'retrieval': {'max_records': 12, 'max_request_bytes': 12000, 'wire_format': 'asof-shared-scientific-fields-v1'},
+            'retrieval': {'max_records': 12, 'max_request_bytes': 12000, 'wire_format': 'tether-shared-scientific-fields-v1'},
             'max_output_tokens': 256, 'timeout_seconds': 2, 'seed': 123}
         receipt = fixture_receipt(folder, config)
         config_path = folder/'model-config.json'; write_json(config_path, config)
@@ -332,7 +332,7 @@ class ComparisonEvaluationTests(unittest.TestCase):
             self.assertEqual(row['source']['sha256'], sha256_file(Path(row['archive']['path'])))
         self.assertIsNone(report['clinical_metrics']); self.assertIsNone(report['probabilities'])
         adapted = next(r for r in report['per_arm'] if r['arm'] == 'adapted_virtual_biotech')
-        simple = next(r for r in report['per_arm'] if r['arm'] == 'asof')
+        simple = next(r for r in report['per_arm'] if r['arm'] == 'tether')
         self.assertGreater(adapted['calls'], simple['calls'])
         self.assertGreater(simple['counts']['unreviewed_unknown'], 0)
         self.assertEqual(simple['counts']['selected_claims'], simple['counts']['exact_normalized_copies'])
@@ -349,9 +349,9 @@ class OriginalSelectedRowAuditTests(unittest.TestCase):
     evidence = _Fixture.evidence
 
     def prepare_predictions(self, catalog_metadata_after_build=False):
-        from asof.ingest import build_snapshot
+        from tether_engine.ingest import build_snapshot
         from tools.science.role_backend import RoleSelectionBackend
-        from asof.workflow import Budget
+        from tether_engine.workflow import Budget
         from tests.test_v02_ingest import GENES
         from tests.test_science_comparison_workflow import NativeFixture, synthetic_policy
         from tools.science.comparison_workflow import ARMS, run_case, verify_case
@@ -377,7 +377,7 @@ class OriginalSelectedRowAuditTests(unittest.TestCase):
         folder = self.root/'predictions'; folder.mkdir()
         self.config = {'schema_version': 1, 'endpoint': 'http://127.0.0.1:55581', 'model_id': 'synthetic-only',
             'model_provenance': {'weights_sha256': {'fixture': 'a'*64}, 'runtime_sha256': 'b'*64},
-            'retrieval': {'max_records': 12, 'max_request_bytes': 12000, 'wire_format': 'asof-shared-scientific-fields-v1'},
+            'retrieval': {'max_records': 12, 'max_request_bytes': 12000, 'wire_format': 'tether-shared-scientific-fields-v1'},
             'max_output_tokens': 256, 'timeout_seconds': 2, 'seed': 123}
         receipt = fixture_receipt(folder, self.config)
         config_path = folder/'model-config.json'; write_json(config_path, self.config)
@@ -432,8 +432,8 @@ class OriginalSelectedRowAuditTests(unittest.TestCase):
         self.prepare_predictions()
         report = self.run_audit()
         rows = read_json(self.root/'audit/original-row-audits.json')
-        asof = next(arm for arm in self.case_rows[0]['arms'] if arm['arm'] == 'asof')
-        selected_ids = {claim['observation_id'] for claim in read_json(Path(asof['result']['path']))['claims']}
+        tether = next(arm for arm in self.case_rows[0]['arms'] if arm['arm'] == 'tether')
+        selected_ids = {claim['observation_id'] for claim in read_json(Path(tether['result']['path']))['claims']}
         self.assertEqual(2, report['audited_rows'])
         self.assertEqual(selected_ids, {row['observation_id'] for row in rows})
         self.assertTrue(all(row['technical_result'] == 'passed' for row in rows))
@@ -464,9 +464,9 @@ class OriginalSelectedRowAuditTests(unittest.TestCase):
             changed = deepcopy(original)
             if mutation == 'duplicate': changed['per_case_arm'].append(deepcopy(changed['per_case_arm'][0]))
             if mutation == 'missing': changed['per_case_arm'].pop()
-            asof = next(row for row in changed['per_case_arm'] if row['arm'] == 'asof')
-            if mutation == 'selection': asof['claims'] = []
-            if mutation == 'hypothesis': asof['hypothesis_sha256'] = 'a'*64
+            tether = next(row for row in changed['per_case_arm'] if row['arm'] == 'tether')
+            if mutation == 'selection': tether['claims'] = []
+            if mutation == 'hypothesis': tether['hypothesis_sha256'] = 'a'*64
             write_json(self.evaluation_path, changed)
             with self.subTest(mutation=mutation), self.assertRaises(ContractError): self.run_audit(f'reject-{number}')
         write_json(self.evaluation_path, original)
@@ -486,12 +486,12 @@ class OriginalSelectedRowAuditTests(unittest.TestCase):
         targets = [self.case_folder/'case.json', self.case_folder/'snapshot.json',
                    Path(snapshot['raw_root'])/raw['path'], Path(snapshot['raw_root'])/raw['receipt_path'],
                    self.reference_path,
-                   self.seal_path.parent/'arms'/self.case.case_id/'asof/backend-execution.json',
-                   self.seal_path.parent/'arms'/self.case.case_id/'asof/journal.jsonl',
-                   self.seal_path.parent/'arms'/self.case.case_id/'asof/executed-source.py',
+                   self.seal_path.parent/'arms'/self.case.case_id/'tether/backend-execution.json',
+                   self.seal_path.parent/'arms'/self.case.case_id/'tether/journal.jsonl',
+                   self.seal_path.parent/'arms'/self.case.case_id/'tether/executed-source.py',
                    self.seal_path.parent/'executed-code/tools/science/comparison_workflow.py',
                    self.seal_path.parent/'invented-model/fixture.gguf',
-                   self.seal_path.parent/'arms'/self.case.case_id/'asof/unexpected-late-file.json']
+                   self.seal_path.parent/'arms'/self.case.case_id/'tether/unexpected-late-file.json']
         reference_hash = sha256_file(self.reference_path)
         for number, target in enumerate(targets):
             original = target.read_bytes() if target.exists() else None
@@ -512,7 +512,7 @@ class OriginalSelectedRowAuditTests(unittest.TestCase):
             else: target.write_bytes(original)
 
     def test_trusted_launcher_proofs_model_bytes_and_PID_fail_before_answers(self):
-        from asof.journal import read_chain
+        from tether_engine.journal import read_chain
         from tools.science.run_comparison import pin
         self.prepare_predictions()
         original_seal = read_json(self.seal_path)

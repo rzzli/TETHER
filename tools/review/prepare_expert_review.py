@@ -5,10 +5,10 @@ import argparse
 from datetime import datetime, timezone
 from pathlib import Path
 
-from asof.artifacts import read_ledger_json
-from asof.contracts import Case
-from asof.maintenance import write_new_json
-from asof.serde import ContractError, decode, read_json, safe_child, sha256_file
+from tether_engine.artifacts import read_ledger_json
+from tether_engine.contracts import Case
+from tether_engine.maintenance import write_new_json
+from tether_engine.serde import ContractError, decode, read_json, safe_child, sha256_file
 
 
 def prepare(project: Path, output: Path):

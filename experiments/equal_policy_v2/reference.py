@@ -16,19 +16,19 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from equal_policy.reference import (materialize_core, materialize_outer,
                                     runtime_identity, validate_bundle)
 
-SUPPORTED_VERSION_PAIRS = {('0.5.1', '0.3.12'), ('0.5.2', '0.3.13')}
+SUPPORTED_VERSION_PAIRS = {('0.6.0', '0.4.0')}
 
 
 def trusted_runtime(qualification_root):
-    import asof
+    import tether_engine
     import tether
     from tether._presentation import code_proof
-    versions = dict(tether=tether.__version__, asof=asof.__version__)
-    if (versions['tether'], versions['asof']) not in SUPPORTED_VERSION_PAIRS:
+    versions = dict(tether=tether.__version__, tether_engine=tether_engine.__version__)
+    if (versions['tether'], versions['tether_engine']) not in SUPPORTED_VERSION_PAIRS:
         raise ValueError('Unsupported corrected-BG02 package version pair')
     qualified = Path(qualification_root).resolve()
     environment = qualified / 'environment'
-    for value in (sys.executable, asof.__file__, tether.__file__):
+    for value in (sys.executable, tether_engine.__file__, tether.__file__):
         if not Path(value).resolve().is_relative_to(environment):
             raise ValueError('Product/interpreter is outside the requested qualified installation')
     qualification = qualified / 'QUALIFICATION.json'
@@ -36,18 +36,18 @@ def trusted_runtime(qualification_root):
     if document.get('status') != 'PASS':
         raise ValueError('Installed qualification did not complete successfully')
     if document.get('versions') != {'tether-target-agents': versions['tether'],
-                                    'asof-target-agents': versions['asof']}:
+                                    'tether-target-engine': versions['tether_engine']}:
         raise ValueError('Qualified package versions differ from actual installation')
     hash_file = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
-    core = Path(asof.__file__).parent
+    core = Path(tether_engine.__file__).parent
     wheels = sorted((qualified / 'wheels').glob('*.whl'))
     if len(wheels) != 2:
         raise ValueError('Expected exactly one core and one facade wheel')
     wheel_proofs = document.get('wheel_proofs', [])
     if len(wheel_proofs) != 2 or {Path(item['path']).resolve() for item in wheel_proofs} != {p.resolve() for p in wheels}:
         raise ValueError('Qualified wheel inventory differs from actual wheels')
-    for package, entry in (('asof', asof.__file__), ('tether', tether.__file__)):
-        matching = [item for item in wheel_proofs if item['distribution'] == package + '-target-agents']
+    for package, entry in (('tether_engine', tether_engine.__file__), ('tether', tether.__file__)):
+        matching = [item for item in wheel_proofs if item['distribution'] == {'tether_engine': 'tether-target-engine', 'tether': 'tether-target-agents'}[package]]
         if len(matching) != 1 or matching[0].get('record_verified') is not True:
             raise ValueError('Missing verified distribution wheel proof')
         proof = matching[0]
@@ -73,15 +73,15 @@ def trusted_runtime(qualification_root):
 def rerender_dossier(root):
     """Native prose refresh after an explicit unscored mutation, before reseal."""
     from types import SimpleNamespace
-    from asof.artifacts import dossier
-    from asof.agents import Usage
-    from asof.contracts import Case, Claim, Snapshot
-    from asof.chrono import Exclusion
-    from asof.features import FeatureVector
-    from asof.journal import read_chain
-    from asof.scorer import Prediction
-    from asof.serde import decode, read_json, read_ledger_json, encode
-    from asof.workflow import Budget, PlanStep, RunResult
+    from tether_engine.artifacts import dossier
+    from tether_engine.agents import Usage
+    from tether_engine.contracts import Case, Claim, Snapshot
+    from tether_engine.chrono import Exclusion
+    from tether_engine.features import FeatureVector
+    from tether_engine.journal import read_chain
+    from tether_engine.scorer import Prediction
+    from tether_engine.serde import decode, read_json, read_ledger_json, encode
+    from tether_engine.workflow import Budget, PlanStep, RunResult
     root = Path(root)
     run, inputs = read_json(root / 'run.json'), read_json(root / 'inputs.json')
     fields = {key: run[key] for key in ('snapshot_id', 'profile', 'backend_id', 'status',

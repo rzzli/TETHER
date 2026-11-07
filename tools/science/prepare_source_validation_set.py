@@ -24,13 +24,13 @@ from types import SimpleNamespace
 
 WORKSPACE = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(WORKSPACE / "src"))
-from asof.atomic import publish_bytes
-from asof.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
-from asof.journal import RunJournal
-from asof.ingest import peak_memory_bytes
-from asof.provenance import InputGraph, catalog_index, check_role
-from asof.serde import ContractError, canonical, encode, fingerprint, parse_json
-from asof.study.stable_read import checked_path, deadline_check, hash_file, read_file, stable_files
+from tether_engine.atomic import publish_bytes
+from tether_engine.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
+from tether_engine.journal import RunJournal
+from tether_engine.ingest import peak_memory_bytes
+from tether_engine.provenance import InputGraph, catalog_index, check_role
+from tether_engine.serde import ContractError, canonical, encode, fingerprint, parse_json
+from tether_engine.study.stable_read import checked_path, deadline_check, hash_file, read_file, stable_files
 
 ASSETS = WORKSPACE / "planning/review-assets/preprint-p05-20261031"
 PLAN_PATH = ASSETS / "REGISTRY-PLAN-DRAFT-v3.json"
@@ -123,7 +123,7 @@ def code_pins():
 
 
 def framework_paths():
-    return sorted((WORKSPACE / "src/asof").rglob("*.py"))
+    return sorted((WORKSPACE / "src/tether_engine").rglob("*.py"))
 
 
 def pinned_documents(deadline):
@@ -319,7 +319,7 @@ class Bounds:
                 "physical_io_status": "not_measured", "peak_sampled_process_rss_bytes": self.peak_process_rss_bytes,
                 "rss_measurement": self.rss_measurement, "max_batch_arrow_bytes": self.max_batch_arrow_bytes,
                 "process_peak_working_set_bytes": peak, "process_peak_working_set_status": peak_status,
-                "process_peak_working_set_basis": "asof.ingest.peak_memory_bytes; Win32 PeakWorkingSetSize; overall Python process lifetime, not a stage-only increment",
+                "process_peak_working_set_basis": "tether_engine.ingest.peak_memory_bytes; Win32 PeakWorkingSetSize; overall Python process lifetime, not a stage-only increment",
                 "selected_arrow_bytes_cumulative": self.selected_arrow_bytes,
                 "output_bytes_before_report_and_seal": self.check()}
 
@@ -806,7 +806,7 @@ def lineage_for(proofs, nodes, plan_hash, ready_hash, computed_at, *, cases=()):
                       "product_kind": "exact_transport_receipt_bytes_not_source_fact_input"}
                      for i, proof in enumerate(proofs)]
     return {"schema_version": 1, "role": "source_only_lineage_not_reference", "source_nodes": encode(nodes),
-            "source_node_contract": "asof SourceNode; graph/catalog/chronology admitted before values; stable hash proofs retained",
+            "source_node_contract": "tether_engine SourceNode; graph/catalog/chronology admitted before values; stable hash proofs retained",
             "neutral_metadata_nodes": neutral,
             "plan_sha256": plan_hash, "code_sha256": code_pins(),
             "verified_originals": [{"source_id": f"original-{i:03d}", "path": p["path"],

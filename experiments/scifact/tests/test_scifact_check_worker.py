@@ -6,7 +6,7 @@ from pathlib import Path
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError, canonical, parse_json
+from tether_engine.serde import ContractError, canonical, parse_json
 from experiments.scifact.check_worker import run
 from experiments.scifact.tether_adapter import NativeSession, inspect_session
 import test_scifact_policy as policy_fixtures

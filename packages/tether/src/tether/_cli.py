@@ -1,4 +1,4 @@
-"""Canonical TETHER CLI; the compatibility engine remains unchanged."""
+"""Canonical TETHER CLI over the separately versioned TETHER engine."""
 from __future__ import annotations
 
 import argparse
@@ -6,18 +6,16 @@ import json
 from pathlib import Path
 import sys
 
-from asof import cli as legacy
-from asof.serde import ContractError, encode
+from tether_engine import cli as legacy
+from tether_engine.serde import ContractError, encode
 
 from . import __version__, __core_version__
 from . import _presentation as presentation
 
 
 def _brand(parser):
-    parser.prog = parser.prog.replace("asof", "tether", 1)
+    parser.prog = parser.prog.replace("tether-engine", "tether", 1)
     parser.allow_abbrev = False
-    if parser.description:
-        parser.description = parser.description.replace("AsOf", "TETHER")
     for action in parser._actions:
         if isinstance(action, argparse._SubParsersAction):
             for child in action.choices.values():
@@ -27,8 +25,8 @@ def _brand(parser):
 
 def parser():
     result = _brand(legacy.parser())
-    result.description = "TETHER auditable evidence workflow (frozen AsOf compatibility engine)"
-    result.add_argument("--version", action="version", version=f"TETHER {__version__} (compatibility engine {__core_version__})")
+    result.description = "TETHER auditable evidence workflow"
+    result.add_argument("--version", action="version", version=f"TETHER {__version__} (engine {__core_version__})")
     for action in result._actions:
         if isinstance(action, argparse._SubParsersAction):
             for name, child in action.choices.items():
@@ -59,7 +57,8 @@ def _delegate(argv, limits):
         sys.stdout.write(result.stdout.decode("utf-8", errors="replace"))
     if result.stderr:
         text = result.stderr.decode("utf-8", errors="replace")
-        sys.stderr.write("\n".join("tether:" + line[5:] if line.startswith("asof:") else line for line in text.split("\n")))
+        prefix = "tether-engine:"
+        sys.stderr.write("\n".join("tether:" + line[len(prefix):] if line.startswith(prefix) else line for line in text.split("\n")))
     return result.returncode
 
 

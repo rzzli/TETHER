@@ -19,7 +19,7 @@ Seal byte hash:
 `84b1e87b187dd5704c143f0da0fcac41103a88affe8c8b022c2890c8dc89c70f`.
 No output, source, protocol, code or expected outcome was edited after execution.
 
-The [independent source-inclusive audit](review-assets/preprint-p05-20261031/EXPERIMENT-AUDIT-v1.json)
+The [independent source-inclusive audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/EXPERIMENT-AUDIT-v1.json)
 passes **2,414 checks, no unresolved findings**, exact report byte hash
 `f10f15959f8497821115f65268808c98ae345079c7361722390a479b15506922`.
 It reconstructs source facts, native inventories, typed values/unknowns,

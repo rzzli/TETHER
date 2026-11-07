@@ -7,8 +7,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.contracts import Case
-from asof.serde import ContractError, canonical, decode, encode, fingerprint, read_json, write_json
+from tether_engine.contracts import Case
+from tether_engine.serde import ContractError, canonical, decode, encode, fingerprint, read_json, write_json
 from tools.science import interpretation_questions as q
 from tools.science.bounded_interpretation import validate_response as validate_v1
 
@@ -21,7 +21,7 @@ class QuestionInterpretationTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(); self.addCleanup(self.temp.cleanup)
         self.inputs = Path(self.temp.name)/'inputs'
-        shutil.copytree(ROOT/'src/asof/demo/v2', self.inputs)
+        shutil.copytree(ROOT/'src/tether_engine/demo/v2', self.inputs)
         case = replace(decode(Case, read_json(self.inputs/'case.json')), task='T6', endpoint=None)
         write_json(self.inputs/'case.json', encode(case))
         self.prepared = self.prepare()

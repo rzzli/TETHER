@@ -8,10 +8,10 @@ import math
 from pathlib import Path
 import time
 
-from asof.agents import Usage
-from asof.atomic import publish_bytes
-from asof.serde import canonical, encode, fingerprint, freeze
-from asof.study import native
+from tether_engine.agents import Usage
+from tether_engine.atomic import publish_bytes
+from tether_engine.serde import canonical, encode, fingerprint, freeze
+from tether_engine.study import native
 from experiments.labbench import model
 from . import codecs
 

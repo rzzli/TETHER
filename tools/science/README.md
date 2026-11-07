@@ -8,7 +8,7 @@ examples do not authorize restarting closed model or clinical attempts.
 
 These evaluator-side tools preserve source identity and distinguish input readiness
 from qualified scientific conclusions. They use the Python standard library and the
-local AsOf package. The ingestion extra is not required for their fixture tests.
+local TETHER package. The ingestion extra is not required for their fixture tests.
 Use fresh output directories; failed or completed outputs are never overwritten.
 
 `prospective_capacity` applies only the reviewedv0.2 capacity override, preserving
@@ -50,7 +50,7 @@ Implementation/fixture tests alone do not establish actual execution or scientif
 accuracy; see `planning/Harder T6 Source Prioritization 2026-10-23.md` for status.
 The October23 execution completed32 source-verified arms/48 native calls; post-seal
 evaluation audited13 distinct selected originals and a separate audit checked all16
-offered originals.800 local tests pass. AsOf and the adapted role arm both agree
+offered originals.800 local tests pass. TETHER and the adapted role arm both agree
 with the AI reference on6/8 tasks; this does not establish clinical superiority.
 The remaining scientific gates/prospective design are documented separately;
 original Tasks6–8 remain open, with no new clinical activation or model dispatch.

@@ -10,9 +10,10 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, fingerprint, read_json, sha256_file, write_json
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, fingerprint, read_json, sha256_file, write_json
 from tools.science import prospective_frame as frame
+from tests.prospective_fixtures import restore_protocol_inputs, archived_json
 from tools.science import prospective_transport as transport
 
 REPO = Path(__file__).resolve().parents[1]
@@ -49,13 +50,7 @@ class ProspectiveCapacityTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
-        protocol = read_json(REPO / frame.PROTOCOL)
-        for relative in [frame.PROTOCOL] + [p['path'] for p in protocol['parents']]:
-            target = self.root / relative
-            target.parent.mkdir(parents=True, exist_ok=True)
-            source = (REPO / 'tests/fixtures/prospective-frame-metadata' / Path(relative).name
-                      if relative.startswith(frame.METADATA) else REPO / relative)
-            shutil.copyfile(source, target)
+        self.source_bytes = restore_protocol_inputs(self.root)
         for module, name in ((frame, '_utc_now'), (transport, '_now')):
             clock = patch.object(module, name, return_value=NOW)
             clock.start()
@@ -101,7 +96,7 @@ class ProspectiveCapacityTests(unittest.TestCase):
             'execution_manifest': pin(old / 'execution.json'), 'journal': pin(old / 'journal.jsonl'),
             'raw_bodies': [pin(old / '00-response.bin'), pin(old / '01-response.bin')]})
         self.amendment_path = self.root / capacity.AMENDMENT
-        amendment = read_json(REPO / capacity.AMENDMENT)
+        amendment = archived_json(capacity.AMENDMENT)
         for key, path in [('base_protocol', self.root / frame.PROTOCOL),
                           ('base_bound_request', self.bound_path), ('stopped_attempt', stop_path)]:
             amendment[key] = dict(pin(path), path=path.relative_to(self.root).as_posix())
@@ -276,7 +271,7 @@ class ProspectiveCapacityTests(unittest.TestCase):
 
     def reseal_events(self, mutate):
         # Recompute the whole public hash chain, so semantic audit must catch it.
-        from asof.serde import canonical
+        from tether_engine.serde import canonical
         events = [json.loads(line) for line in (self.output / 'journal.jsonl').read_text().splitlines()]
         mutate(events)
         previous = None

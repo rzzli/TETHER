@@ -17,7 +17,7 @@ import calendar
 import os
 import time
 
-from asof.serde import sha256_file
+from tether_engine.serde import sha256_file
 from tools.feasibility.registry_extract import load,write,validate_row
 
 

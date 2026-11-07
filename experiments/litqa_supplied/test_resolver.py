@@ -4,7 +4,7 @@ import time
 import unittest
 from unittest.mock import patch
 
-from asof.serde import canonical,encode,parse_json
+from tether_engine.serde import canonical,encode,parse_json
 from experiments.litqa_supplied import resolver as r
 
 DOI='10.1234/invented'

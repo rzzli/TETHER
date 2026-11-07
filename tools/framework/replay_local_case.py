@@ -2,14 +2,14 @@
 import argparse
 from pathlib import Path
 
-from asof.agents import ReplayBackend
-from asof.artifacts import verify_run, write_run
-from asof.chrono import admit_snapshot
-from asof.contracts import Case, Snapshot, Category
-from asof.journal import RunJournal
-from asof.retrieval import RetrievalPolicy, bounded_request
-from asof.serde import ContractError, decode, fingerprint, read_json, sha256_file, write_json
-from asof.workflow import run_workflow, Budget
+from tether_engine.agents import ReplayBackend
+from tether_engine.artifacts import verify_run, write_run
+from tether_engine.chrono import admit_snapshot
+from tether_engine.contracts import Case, Snapshot, Category
+from tether_engine.journal import RunJournal
+from tether_engine.retrieval import RetrievalPolicy, bounded_request
+from tether_engine.serde import ContractError, decode, fingerprint, read_json, sha256_file, write_json
+from tether_engine.workflow import run_workflow, Budget
 
 
 class BoundedReplay(ReplayBackend):

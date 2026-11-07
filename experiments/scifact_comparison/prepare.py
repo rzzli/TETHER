@@ -12,7 +12,7 @@ sys.path[:0] = [str(ROOT), str(ROOT/'src')]
 from experiments.scifact_comparison.inputs import CONDITIONS, build_primary, build_condition, encoded, need
 from experiments.scifact.data_views import verify_preparation, load_product
 from experiments.scifact.tether_adapter import authorize_products
-from asof.serde import encode
+from tether_engine.serde import encode
 
 PREPARATION_SHA = 'cb32f1384c49b66b912a62120abd7137a8a19b303f3ad052f035f21779c131f8'
 BASELINE_SHA = '3a997165aac2f0a85a93890f5e10a66d8117563e380e98f892dd3cb8a93f8968'
@@ -109,7 +109,7 @@ def main():
             parents.append(pin(manifest['archive'][key]))
         sources = [pin(Path(__file__)), pin(Path(__file__).with_name('inputs.py'))]
         sources += [pin(ROOT/p) for p in ('experiments/scifact/data_views.py', 'experiments/scifact/split.py',
-                    'experiments/scifact/tether_adapter.py', 'src/asof/serde.py')]
+                    'experiments/scifact/tether_adapter.py', 'src/tether_engine/serde.py')]
         protocol = ROOT/'planning/TETHER SciFact Full Context Protocol 2026-11-06.md'
         with (output/'PROTOCOL.md').open('xb') as stream:
             stream.write(protocol.read_bytes())

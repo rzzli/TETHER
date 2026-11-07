@@ -12,7 +12,7 @@ import sys
 import threading
 import time
 
-from asof.serde import ContractError, canonical
+from tether_engine.serde import ContractError, canonical
 
 
 def need(condition, message):

@@ -3,15 +3,6 @@ revision = 3
 requires-python = ">=3.11"
 
 [[package]]
-name = "asof-target-agents"
-version = "0.3.13"
-source = { directory = "../../" }
-
-[package.metadata]
-requires-dist = [{ name = "pyarrow", marker = "extra == 'ingest'", specifier = "==21.0.0" }]
-provides-extras = ["ingest"]
-
-[[package]]
 name = "pyarrow"
 version = "21.0.0"
 source = { registry = "https://pypi.org/simple" }
@@ -49,10 +40,10 @@ wheels = [
 
 [[package]]
 name = "tether-target-agents"
-version = "0.5.2"
+version = "0.6.0"
 source = { editable = "." }
 dependencies = [
-    { name = "asof-target-agents" },
+    { name = "tether-target-engine" },
 ]
 
 [package.optional-dependencies]
@@ -62,7 +53,16 @@ ingest = [
 
 [package.metadata]
 requires-dist = [
-    { name = "asof-target-agents", directory = "../../" },
     { name = "pyarrow", marker = "extra == 'ingest'", specifier = "==21.0.0" },
+    { name = "tether-target-engine", directory = "../../" },
 ]
+provides-extras = ["ingest"]
+
+[[package]]
+name = "tether-target-engine"
+version = "0.4.0"
+source = { directory = "../../" }
+
+[package.metadata]
+requires-dist = [{ name = "pyarrow", marker = "extra == 'ingest'", specifier = "==21.0.0" }]
 provides-extras = ["ingest"]

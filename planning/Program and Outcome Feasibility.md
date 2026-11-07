@@ -2,7 +2,7 @@
 title: Program and Outcome Feasibility
 date: 2026-10-17
 status: completed-development-review-with-gates
-tags: [asof, clinical-evaluation, feasibility]
+tags: [TETHER, clinical-evaluation, feasibility]
 ---
 
 # Program and outcome feasibility

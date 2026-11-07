@@ -1,5 +1,5 @@
 """Explicitly invented privileged-paper diagnostic controls."""
-from asof.serde import canonical
+from tether_engine.serde import canonical
 from experiments.litqa_comparison import qualification_fixtures as primary
 
 DOI='10.1234/invented'

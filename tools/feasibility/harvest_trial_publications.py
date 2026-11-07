@@ -22,7 +22,7 @@ def harvest(selected, output):
         receipt = {'nct_id': nct, 'url': url, 'query': query, 'retrieved_at_utc': datetime.now(timezone.utc).isoformat(),
                    'role': 'evaluation_only', 'relevance': 'unreviewed_exact_identifier_search_not_trial_result_validation'}
         try:
-            with urlopen(Request(url, headers={'User-Agent': 'AsOf-research/0.2'}), timeout=45) as response:
+            with urlopen(Request(url, headers={'User-Agent': 'TETHER-research/0.2'}), timeout=45) as response:
                 body = response.read(32 * 1024 * 1024 + 1)
                 if len(body) > 32 * 1024 * 1024:
                     raise ValueError('Response exceeds bounded discovery limit')

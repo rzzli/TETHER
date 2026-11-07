@@ -1,9 +1,0 @@
-{
-  "stage": "offline_development_environment",
-  "status": "partial_then_dependency_resolution_failed",
-  "completed": ["core lock updated to 0.3.12", "TETHER lock updated to 0.5.1", "isolated development environment created"],
-  "failed_command": "uv pip install --offline --python data/cache/tether-051-dev/Scripts/python.exe --build-constraints paper/release/build-constraints.txt -e . -e packages/tether pyarrow==21.0.0",
-  "error": "uv source override selected a noneditable local asof-target-agents path while the direct requirement selected the same path as editable; conflicting URLs",
-  "exit_code": 1,
-  "next_action": "Use --no-sources with explicit local editable requirements; retain locked package versions and offline dependency resolution."
-}

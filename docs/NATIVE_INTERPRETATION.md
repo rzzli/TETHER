@@ -1,13 +1,26 @@
 # TETHER — Native interpretation integration
 
-TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.5.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.
+The current interface is `tether-target-agents` **0.6.0**, with the `tether` CLI
+and public namespace over `tether-target-engine` **0.4.0** (`tether_engine`). See
+[installation](../README.md#quick-start) and the [namespace migration
+boundary](../packages/tether/MIGRATION.md). Public aliases share the new engine's
+module and class identities; they do not certify earlier execution fingerprints.
+
+The component history below retains earlier versioned observations and test
+counts. Those qualifications belong to their original code and dates, preserved
+in the [historical checkpoint](ARCHIVE.md). Names and example paths here use the
+current namespace for readability; exact original identifiers and reproduction
+commands are in that checkpoint. The naming migration is not a scientific rerun
+or a transfer of historical qualification to the new release. The semantic
+experiment remains **paused**; this guide does not reactivate it or retired
+study and expert-review branches.
 
 Current boundary: accepted 0.3.11 adds a separate [pure v3 generation contract](INTERPRETATION_GENERATION.md).
 The native controller described here still uses v2. The old converter diagnostic
 closed negative; actual grammar/document/EOG and full-case resource qualification
 remain required before a separately declared model experiment.
 
-Accepted AsOf 0.3.10, including the separately verified duration correction.
+Accepted TETHER 0.3.10, including the separately verified duration correction.
 The original 0.3.9 integration remains preserved. This adapter connects the original-path interpretation
 interface to the existing authority-bound case controller. No real model/server
 has been started for its qualification. R07's negative result remains unchanged.
@@ -27,7 +40,7 @@ payload fingerprint and earlier parent/caller deadline. Tokenizer weight hashes
 must match the model's approved assets. Positive owned-server checks occur before
 dispatch; no discovery or process killing by port is performed.
 
-One AsOf stage, five adapted Virtual Biotech stages and both deterministic
+One TETHER stage, five adapted Virtual Biotech stages and both deterministic
 baselines share the unchanged budget: 16 calls, 32,000 input/8,000 output tokens,
 $0 and 300 seconds. Startup, source preparation, token counting, calls, shutdown
 and sealing consume that timer. Source admission and qualification of every
@@ -87,7 +100,7 @@ backup. Each older accepted run retains its matching preserved verifier.
 ## Qualification boundaries
 
 Retained evidence is under
-[the native integration workstream](../planning/review-assets/recovery-step9-native-integration-20261027/CONTRACT.md).
+[the native integration workstream](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-integration-20261027/CONTRACT.md).
 Whole-case fixture tests exercise failure, interruption, concurrent reservation,
 source eligibility, partial accounting, shutdown and replay. Acceptance passes
 1,737 full tests without failures/errors/skips, 324 unchanged pins, seven installed
@@ -95,7 +108,7 @@ legacy families and nine matching old verifiers. Eight installed duration cases
 pass. The current real-input simulation takes 295.922 seconds, reserving 24,558
 input/6,144 output tokens. Installed source/model replay and guarded run-copy
 relocation take 79.734/76.359 seconds; all guard lists are empty. See the
-[correction closeout](../planning/review-assets/recovery-step9-native-duration-20261028/CLOSEOUT.md).
+[correction closeout](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-duration-20261028/CLOSEOUT.md).
 Only 4.078 seconds remain in the fixed case budget without actual startup or
 inference; real native-case feasibility is unestablished. The timing pair is not
 a controlled performance comparison.
@@ -103,7 +116,7 @@ a controlled performance comparison.
 The fixed actual-DLL typed JSON round-trip passes. Unchanged-schema conversion
 closes **negative**: the pinned converter explicitly warns that unsupported
 nonblank patterns accept any string. The returned grammar and diagnostics are
-retained in the [disposition](../planning/review-assets/recovery-step9-native-grammar-20261028/DISPOSITION.md).
+retained in the [disposition](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-grammar-20261028/DISPOSITION.md).
 No native document/EOG corpus, vocabulary, model or server stage followed.
 This does not qualify ABI behavior beyond the tested operation or reproducible
 source/build equivalence. A separately versioned generation-contract correction

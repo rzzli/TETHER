@@ -1,38 +1,51 @@
 # TETHER — Packaged study runtime
 
-TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.5.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.
+The current interface is `tether-target-agents` **0.6.0**, with the `tether` CLI
+and public namespace over `tether-target-engine` **0.4.0** (`tether_engine`). See
+[installation](../README.md#quick-start) and the [namespace migration
+boundary](../packages/tether/MIGRATION.md). Public aliases share the new engine's
+module and class identities; they do not certify earlier execution fingerprints.
 
-AsOf 0.3.0 introduced small reusable helpers and a **recorded synthetic smoke
+The component history below retains earlier versioned observations and test
+counts. Those qualifications belong to their original code and dates, preserved
+in the [historical checkpoint](ARCHIVE.md). Names and example paths here use the
+current namespace for readability; exact original identifiers and reproduction
+commands are in that checkpoint. The naming migration is not a scientific rerun
+or a transfer of historical qualification to the new release. The semantic
+experiment remains **paused**; this guide does not reactivate it or retired
+study and expert-review branches.
+
+TETHER 0.3.0 introduced small reusable helpers and a **recorded synthetic smoke
 study**, which makes no native request. Version 0.3.1 adds the separately frozen
 R07 native diagnostic. Its once-only execution is terminal: six complete responses,
 zero accepted output contracts, no retries, stopped owned server. The current
-native experiment is stopped; see the [negative disposition](../planning/review-assets/recovery-step7-20261026/DISPOSITION.md).
+native experiment is stopped; see the [negative disposition](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step7-20261026/DISPOSITION.md).
 Neither consumer establishes scientific validity. Existing clinical and
 interpretation launchers remain unchanged.
 
 ## Scope
 
-`asof.study.proofs` hashes the complete installed AsOf Python inventory and the
+`tether_engine.study.proofs` hashes the complete installed TETHER Python inventory and the
 consumer's explicit required resources. It authenticates original file bytes,
 rejects unsafe logical identities and links/reparse points, and rechecks earlier
 members after later files are hashed. Verification uses the currently trusted
 package; it never imports executable symbols from archived JSON.
 
-`asof.study.process` manages one non-daemonizing process it starts itself. The
+`tether_engine.study.process` manages one non-daemonizing process it starts itself. The
 caller supplies pinned executable/input bindings and trusted listener-ownership
 and health callbacks. Ownership must be positive before health and generation.
 Cleanup uses the retained process handle, preserves a primary failure and records
 bounded terminate/kill results. Fake-process tests do not establish operating-system
 ownership or actual GPU fit. Arbitrary process trees and daemonization are unsupported.
 
-`asof.study.session` reserves one planned cell, checks capabilities and the frozen
+`tether_engine.study.session` reserves one planned cell, checks capabilities and the frozen
 package before dispatch, journals a conservative reservation, then accounts usage
 once. Known measured usage survives invalid content. Accounting-write failure
 leaves an unresolved conservative reservation. There is no retry/resume operation.
 Finalization reconciles accepted state with archived files and the durable journal,
 then closes the journal before publishing the receipt. Inspection is read-only.
 
-`asof.study.diagnostic` supplies source-preserving current/simplified codecs and
+`tether_engine.study.diagnostic` supplies source-preserving current/simplified codecs and
 strict post-validation. Complete payloads reproduce the R05 v2 preparation bytes.
 The simplified response has its own contract; it never fabricates contextual
 propositions to resemble the current interface. Exact quotes, source fidelity,
@@ -47,7 +60,7 @@ from evaluator fixtures, prior outputs and completed expert answers.
 ## Offline installed smoke
 
 ```powershell
-python -I -m asof.study smoke --output <new-output-directory>
+python -I -m tether_engine.study smoke --output <new-output-directory>
 ```
 
 The command retains a valid recorded cell and an intentionally malformed recorded
@@ -73,11 +86,11 @@ an archived adapter or automatically trust an archived callback name.
 This new study format currently requires matching trusted package/environment
 proofs. Independent relocation for this new receipt family is not claimed by the
 older archive support matrix. The seven representative legacy families retain
-their separate `asof.archive` compatibility path; v1 semantics remain unavailable.
+their separate `tether_engine.archive` compatibility path; v1 semantics remain unavailable.
 
 ## R07 native consumer and retained result
 
-`asof.study.native` binds one-use loopback transport to the owned process, exact
+`tether_engine.study.native` binds one-use loopback transport to the owned process, exact
 endpoint, prepared payload and model/runtime proofs. Positive operating-system
 listener ownership precedes health and generation. Original native bytes are
 retained, including partial capture on failures; prompt/model/settings, positive
@@ -85,7 +98,7 @@ completion cause and usage are checked separately from answer contracts. A
 bounded watchdog and socket deadline constrain calls. Recovery inspects records;
 it never automatically repeats a potentially completed call.
 
-`asof.study.native_diagnostic` freezes six cells and complete source/compiler,
+`tether_engine.study.native_diagnostic` freezes six cells and complete source/compiler,
 package, model/runtime and payload proofs. It enforces aggregate budgets,
 preserves each rejection and terminally seals the original response/accounting
 records. Generic failures stop execution; only declared captured response failures
@@ -95,7 +108,7 @@ resuming a terminal experiment or treating each cell as a new aggregate budget.
 The real run is `runs/r07-native-diagnostic-20261026T165505Z`. Its external seal
 SHA256 is `863bf2a9cfb8d4fd01a5223b993d87fbe2ac06992e7206d3d32ef4c712cf2d41`.
 Read-only verification is available through
-`python -m asof.study.native_diagnostic verify --path <run> --sha256 <external-seal-hash> --approved-root <project-root> --approved-root <original-data-root>`.
+`python -m tether_engine.study.native_diagnostic verify --path <run> --sha256 <external-seal-hash> --approved-root <project-root> --approved-root <original-data-root>`.
 Keep the externally retained anchor; a hash read only from the run itself is not
 an independent anchor. Never add post-run reports inside the sealed directory;
 the member inventory is part of verification. Post-run reports live under
@@ -227,7 +240,7 @@ twelve installed stage preparations, seven legacy families and seven matching
 preserved versions. The initial Unicode whitespace mismatch and sandbox temp-path
 failure remain recorded. Source admission, accepted-history proof, exact token
 capacity and native grammar compatibility are separate from pure preparation.
-The [next integration contract](../planning/review-assets/recovery-step9-native-integration-20261027/CONTRACT.md)
+The [next integration contract](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-integration-20261027/CONTRACT.md)
 requires the model-backed adapter to reuse the existing controller and transport.
 
 ## Native adapter/controller integration in 0.3.9
@@ -260,4 +273,4 @@ The fresh same-input simulation and source/model-inclusive installed/relocated
 replay pass, with all six duration comparisons valid. Its 295.922-second execution
 leaves only 4.078 seconds without actual inference. Keep that operational
 constraint explicit; source correctness and a successful simulation do not prove
-real full-case timing. See the [closeout and resource note](../planning/review-assets/recovery-step9-native-duration-20261028/CLOSEOUT.md).
+real full-case timing. See the [closeout and resource note](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-duration-20261028/CLOSEOUT.md).

@@ -7,7 +7,7 @@ from datetime import datetime
 from pathlib import Path
 import re
 
-from asof.serde import ContractError, read_json, safe_child, sha256_file
+from tether_engine.serde import ContractError, read_json, safe_child, sha256_file
 
 
 ENDPOINTS = {'registry_next_phase_actual_start', 'verified_experimental_dosing', 'clinical_success'}

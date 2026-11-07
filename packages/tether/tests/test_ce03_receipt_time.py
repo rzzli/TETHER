@@ -12,8 +12,8 @@ ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "packages/tether/src"))
 sys.path.insert(0, str(Path(__file__).parent))
 
-from asof.serde import ContractError, fingerprint
-from asof.journal import read_chain
+from tether_engine.serde import ContractError, fingerprint
+from tether_engine.journal import read_chain
 from tether import _catalog_binding as binding, _catalog_policy as policy, _presentation as layer
 from test_catalog_binding import argv, make_fixture, write
 

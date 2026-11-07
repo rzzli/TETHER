@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "mode": "full",
+  "status": "passed",
+  "stage": "complete",
+  "structural": {
+    "tracked_scope_files": 997,
+    "providers": 83,
+    "datasets": 178,
+    "preserved_invalid_python_archives": []
+  },
+  "powershell_syntax": true,
+  "tests": {
+    "run": 2112,
+    "failures": 0,
+    "errors": 0,
+    "skipped": []
+  },
+  "required_probes_exit_code": 0,
+  "packaging": {
+    "wheel": "tether_target_engine-0.4.0-py3-none-any.whl",
+    "wheel_sha256": "70be4b7de239a36a0d122aaad2714d5fa6f13de77ea4b5a706d44761627d3351",
+    "wheel_inventory": {
+      "members": 99,
+      "namespace": "tether_engine",
+      "metadata_root": "tether_target_engine-0.4.0.dist-info"
+    },
+    "build_constraints_sha256": "dfc2947f4dce3fa1c1905ef60bd8ee5b286177f603a13645cc2f003188c7d70c",
+    "package_network_policy": "offline",
+    "dependency_free_demo": "passed"
+  },
+  "elapsed_seconds": 1581.4689999999973
+}

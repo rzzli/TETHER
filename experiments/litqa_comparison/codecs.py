@@ -12,7 +12,7 @@ import re
 from collections.abc import Mapping
 from datetime import date
 
-from asof.serde import freeze, encode
+from tether_engine.serde import freeze, encode
 
 CONFIG = freeze(dict(seed=20261106, temperature=0.0, n_predict=256,
               context_tokens=16384, max_prompt_bytes=14000))

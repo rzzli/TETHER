@@ -15,8 +15,8 @@ import time
 from datetime import date, datetime, timezone
 from pathlib import Path
 
-from asof.ingest import PILOT, peak_memory_bytes
-from asof.serde import ContractError, fingerprint, read_json, read_ledger_json, safe_child, sha256_file, write_json
+from tether_engine.ingest import PILOT, peak_memory_bytes
+from tether_engine.serde import ContractError, fingerprint, read_json, read_ledger_json, safe_child, sha256_file, write_json
 
 
 CONTEXT_FIELDS = (
@@ -276,7 +276,7 @@ def main():
             write_json(output / "pilot-report.json", report)
             case_started = time.monotonic()
             with (logs / (case_id + ".stdout.json")).open("w", encoding="utf-8") as stdout, (logs / (case_id + ".stderr.log")).open("w", encoding="utf-8") as stderr:
-                completed = subprocess.run([sys.executable, "-m", "asof", "run", "--case", str(case_dir / "case.json"),
+                completed = subprocess.run([sys.executable, "-m", "tether_engine", "run", "--case", str(case_dir / "case.json"),
                     "--snapshot", str(case_dir / "snapshot.json"), "--catalog", str(args.catalog.resolve()),
                     "--output", str(run_dir)], stdout=stdout, stderr=stderr, check=False)
             entry["exit_code"] = completed.returncode
@@ -284,7 +284,7 @@ def main():
                 raise ContractError(f"Offline case failed: {case_id}; retained console/journal require inspection")
             answer = read_json(logs / (case_id + ".stdout.json"))
             anchor = answer["receipt_sha256"]
-            from asof.artifacts import verify_run
+            from tether_engine.artifacts import verify_run
             verification = verify_run(run_dir, anchor)
             if verification["semantic_consistency"] != "verified":
                 raise ContractError("Pilot semantic verification did not pass")

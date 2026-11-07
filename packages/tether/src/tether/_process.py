@@ -6,7 +6,7 @@ import select
 import subprocess
 import time
 
-from asof.serde import ContractError, canonical
+from tether_engine.serde import ContractError, canonical
 
 CHUNK_BYTES = 16 * 1024
 POLL_SECONDS = 0.01

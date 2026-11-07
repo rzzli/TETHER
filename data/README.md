@@ -1,4 +1,6 @@
 ---
+
+> Namespace migration, 6 November 2026: collection measurements below describe retained historical acquisitions. Original receipts are in the [tagged archive](../docs/ARCHIVE.md); current artifact policy has no inherited grants. New engine identities require newly bound products, not rewritten original receipts.
 title: TETHER Data Workspace
 date: 2026-10-09
 updated: 2026-11-01
@@ -20,7 +22,7 @@ complete within their declared technical scopes. The retained P09 run reproduces
 source audit passes 6,862 checks. The historical pre-rename 53-member P10b packet
 repeats byte-for-byte and passes 200 independent archive checks. The current
 72-member TETHER review packet also repeats byte-for-byte and passes 946
-independent archive checks; see the [TETHER packet record](../paper/release/tether/RELEASE-RECORD.json)
+independent archive checks; see the [TETHER packet record](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/paper/release/tether/RELEASE-RECORD.json)
 and [current rename/status review](<../planning/TETHER Rename Completion and Project Status 2026-11-01.md>).
 Owner declarations and final author
 acceptance remain deferred, so P08/P10 and submission readiness remain incomplete.
@@ -138,16 +140,16 @@ This folder contains the complete data requirements and acquisition inventory fo
 
 Read [[data/STORAGE_AND_DOWNLOAD_REPORT|the capacity and download report]] first for the storage verdict, measured source sizes, current scope and monitoring/resume commands. The collection uses E: for originals and D: mainly for derived data and scratch; the placeholder `raw/` folders shown below are not where the active bulk worker writes.
 
-Start with [[data/DATA_PLAN|the detailed data plan]]. The machine-readable inventory is [[data/catalog/sources.json|catalog/sources.json]]: **83 providers and 178 dataset/product records**, including all 38 components required by the pinned Virtual Biotech release and `asof_normalized_packets`. Counts describe acquisition units and generated products, not independent studies or datasets ready to analyze.
+Start with [[data/DATA_PLAN|the detailed data plan]]. The machine-readable inventory is [[data/catalog/sources.json|catalog/sources.json]]: **83 providers and 178 dataset/product records**, including all 38 components required by the pinned Virtual Biotech release and `tether_normalized_packets`. Counts describe acquisition units and generated products, not independent studies or datasets ready to analyze.
 
-Related project notes: [[AsOf Feasibility Analysis and Peer Survey]], [[Beyond the Virtual Biotech Tooling Gaps and Project Plan]], [[Agentic Target-Evaluation Frameworks Critical Review]].
+Related project notes: [[TETHER Feasibility Analysis and Peer Survey]], [[Beyond the Virtual Biotech Tooling Gaps and Project Plan]], [[Agentic Target-Evaluation Frameworks Critical Review]].
 
 Normalization recipe 2.2 retains four additional source-context fields while preserving
 the pinned Open Targets 25.09/HGNC selection. It is a new derived release, not a new
 acquisition or a correction to provider originals. The before/after comparison remains
 evaluator-only; it must not enter agent-visible manifests. See [[Context Revision Completion]].
 
-October 16 addition: one January 1, 2023 AACT archive is collected and technically restored on E: (55 tables; 437,548 unique studies). Nine stored-record rows have unmatched study IDs and are preserved as exceptions. See [[AACT Historical Restoration]] and `data/manifests/public/2026-10-16-aact-restoration.json`. This does not provide an AsOf AACT adapter, clinical cohort, scientific validation or exact first-public availability; subsequent origin and regional technical pilots are documented below.
+October 16 addition: one January 1, 2023 AACT archive is collected and technically restored on E: (55 tables; 437,548 unique studies). Nine stored-record rows have unmatched study IDs and are preserved as exceptions. See [[AACT Historical Restoration]] and `data/manifests/public/2026-10-16-aact-restoration.json`. This does not provide an TETHER AACT adapter, clinical cohort, scientific validation or exact first-public availability; subsequent origin and regional technical pilots are documented below.
 
 ## Layout
 
@@ -260,4 +262,4 @@ Normalized products remain under ignored `data/derived/`; finalized dossiers and
 
 New bounded feasibility artifacts: [[Clinical and Genetics Feasibility Pilot]] links the 24-trial clinical review and IL6R/RA regional QC. The public scoped manifest is `data/manifests/public/2026-10-16-feasibility-pilots.json`. Regional data are on E:, clinical records remain evaluator-only, and full-provider catalog status is unchanged. Follow-up labels and scientific inference remain unvalidated.
 
-January 2025 continuation: [[AACT January 2025 Follow-up]] records the second restored AACT archive (50 tables; 520,688 studies), all 24 frozen trial IDs matched, and clean shutdown. The scoped catalog acquisition is now two archives, backed by `data/manifests/public/2026-10-16-aact-paired-acquisition.json`. No AsOf parser/agent admission or clinical labels were added; dated program-event/censoring adjudication remains the next gate. This supersedes the missing-follow-up statements in earlier entries.
+January 2025 continuation: [[AACT January 2025 Follow-up]] records the second restored AACT archive (50 tables; 520,688 studies), all 24 frozen trial IDs matched, and clean shutdown. The scoped catalog acquisition is now two archives, backed by `data/manifests/public/2026-10-16-aact-paired-acquisition.json`. No TETHER parser/agent admission or clinical labels were added; dated program-event/censoring adjudication remains the next gate. This supersedes the missing-follow-up statements in earlier entries.

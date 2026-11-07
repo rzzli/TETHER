@@ -16,8 +16,8 @@ The goal API still reports its earlier blocked state; its tool cannot resume a
 goal. Work is nevertheless authorized by the owner's latest steering. Do not
 create a replacement goal or call complete merely to change that state.
 
-Separate distribution asof-p05-replay0.1.0 under paper/release/code uses unchanged
-asof-target-agents0.3.11/Arrow21. Its policy/baseline, controls, independent auditor,
+Separate distribution tether-p05-replay0.1.0 under paper/release/code uses unchanged
+tether-target-engine0.3.11/Arrow21. Its policy/baseline, controls, independent auditor,
 authority and CLI are being qualified. All frozen78 P05 code pins and core92
 wheel payloads remain unchanged. No model or original P06 runner repeats.
 

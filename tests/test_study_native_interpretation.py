@@ -10,28 +10,28 @@ from concurrent.futures import ThreadPoolExecutor
 from types import SimpleNamespace
 from unittest.mock import Mock, patch
 
-from asof.agents import Usage
-from asof.serde import ContractError, canonical, encode, fingerprint, parse_json
-from asof.study import native
-from asof.study import tokenization as tok
-from asof.study.diagnostic_codec import bind_question
-from asof.study.diagnostic import load_synthetic_request
-from asof.study.interpretation_interface import prepare_payload
-from asof.study.native_interpretation import (
+from tether_engine.agents import Usage
+from tether_engine.serde import ContractError, canonical, encode, fingerprint, parse_json
+from tether_engine.study import native
+from tether_engine.study import tokenization as tok
+from tether_engine.study.diagnostic_codec import bind_question
+from tether_engine.study.diagnostic import load_synthetic_request
+from tether_engine.study.interpretation_interface import prepare_payload
+from tether_engine.study.native_interpretation import (
     TokenQuotedNativeBackend,
     verify_native_duration,
     validate_native_response,
     verify_native_execution,
 )
-from asof.study.session import StudySession, _identity, verify_study
-from asof.study.token_capacity import TrustedTokenCapacity
-from asof.workflow import Budget
+from tether_engine.study.session import StudySession, _identity, verify_study
+from tether_engine.study.token_capacity import TrustedTokenCapacity
+from tether_engine.workflow import Budget
 from tests import test_study_native as transport
 from tests import test_study_tokenization as tokens
 
 
 class NativeV2Verifier:
-    from asof.study.interpretation_interface import (
+    from tether_engine.study.interpretation_interface import (
         REQUIRED_RESOURCES as required_resources,
     )
 
@@ -196,7 +196,7 @@ class NativeInterpretationTests(unittest.TestCase):
         self.request = dict(
             original_request=encode(original), cell=0, kind="invented_native_test_stage"
         )
-        self.payload = prepare_payload(original, "asof_interpretation", 0, [])[
+        self.payload = prepare_payload(original, "tether_interpretation", 0, [])[
             "payload"
         ]
         spec = tokens.TokenizationArtifactTests.spec
@@ -594,7 +594,7 @@ class NativeInterpretationTests(unittest.TestCase):
             request["source_request"], request["question"]["question_id"]
         )
         with self.assertRaisesRegex(ContractError, "quotable"):
-            prepare_payload(request, "asof_interpretation", 0, [])
+            prepare_payload(request, "tether_interpretation", 0, [])
 
 
 if __name__ == "__main__":

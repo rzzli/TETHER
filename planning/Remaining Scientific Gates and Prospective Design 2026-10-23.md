@@ -116,7 +116,7 @@ This is a synthesis of retained project evidence, without new literature claims,
 internet enrichment, model dispatch or trial queries. Sources reviewed:
 
 - [Original proposal and task definitions](Beyond%20the%20Virtual%20Biotech%20Tooling%20Gaps%20and%20Project%20Plan.md).
-- [Feasibility analysis](AsOf%20Feasibility%20Analysis%20and%20Peer%20Survey.md).
+- [Feasibility analysis](TETHER%20Feasibility%20Analysis%20and%20Peer%20Survey.md).
 - [Scientific prerequisites](Scientific%20Prerequisites%20Execution%202026-10-18.md).
 - [Clinical design and data feasibility](Clinical%20Validation%20Design%20and%20Data%20Feasibility%20Plan%202026-10-22.md).
 - [B0 finite audit](B0%20Registry%20Content%20Feasibility%202026-10-22.md).

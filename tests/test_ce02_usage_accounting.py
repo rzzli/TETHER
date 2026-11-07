@@ -6,15 +6,15 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from asof.agents import Usage
-from asof.chrono import load_snapshot
-from asof.contracts import Case
-from asof.local_model import LocalSelectionBackend, verify_backend_execution
-from asof.serde import ContractError, canonical, decode, encode, fingerprint, freeze, read_json, write_json
-from asof.workflow import BackendFailure, Budget, run_workflow
+from tether_engine.agents import Usage
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case
+from tether_engine.local_model import LocalSelectionBackend, verify_backend_execution
+from tether_engine.serde import ContractError, canonical, decode, encode, fingerprint, freeze, read_json, write_json
+from tether_engine.workflow import BackendFailure, Budget, run_workflow
 
 
-FIXTURES = Path(__file__).resolve().parents[1] / "src/asof/demo/v2"
+FIXTURES = Path(__file__).resolve().parents[1] / "src/tether_engine/demo/v2"
 
 
 class FictionalOpener:
@@ -77,8 +77,8 @@ class CE02UsageAccountingTests(unittest.TestCase):
     def test_overquote_exception_carries_validated_usage(self):
         backend = LocalSelectionBackend(self.path)
         backend.opener = FictionalOpener({"tokens_evaluated": 1000000})
-        from asof.agents import make_request
-        from asof.contracts import Category
+        from tether_engine.agents import make_request
+        from tether_engine.contracts import Category
         store = load_snapshot(FIXTURES / "snapshot.json", self.case)
         request = make_request(self.case, Category.GENETICS, store.query(self.case, Category.GENETICS), ())
         request, _ = backend.prepare_request(request)

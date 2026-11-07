@@ -63,13 +63,13 @@ def installed_inventory(trusted):
     """Actual compared product payloads, not an OS/stdlib attestation."""
     paths = trusted['runtime_paths']
     result = {}
-    for product in ('asof', 'tether'):
+    for product in ('tether_engine', 'tether'):
         root = Path(paths[product + '_file']).parent
         result[product] = dict(root=str(root), files={
             path.relative_to(root).as_posix(): pin(path) for path in sorted(root.rglob('*.py'))})
     metadata = {}
-    site_packages = Path(paths['asof_file']).parent.parent
-    for pattern in ('asof_target_agents-*.dist-info', 'tether_target_agents-*.dist-info'):
+    site_packages = Path(paths['tether_engine_file']).parent.parent
+    for pattern in ('tether_target_engine-*.dist-info', 'tether_target_agents-*.dist-info'):
         for directory in sorted(site_packages.glob(pattern)):
             for path in sorted(directory.rglob('*')):
                 if path.is_file():
@@ -79,7 +79,7 @@ def installed_inventory(trusted):
 
 
 def check_trusted_installation(trusted, installed):
-    actual_core = {name: proof['sha256'] for name, proof in installed['asof']['files'].items()}
+    actual_core = {name: proof['sha256'] for name, proof in installed['tether_engine']['files'].items()}
     actual_facade = {name: proof['sha256'] for name, proof in installed['tether']['files'].items()}
     expected_facade = {name: proof['sha256'] for name, proof in trusted['launcher_proof']['code'].items()}
     if actual_core != trusted['core_code_sha256'] or actual_facade != expected_facade:

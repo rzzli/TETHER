@@ -8,7 +8,7 @@ from __future__ import annotations
 from collections.abc import Mapping
 from uuid import UUID
 
-from asof.serde import ContractError, freeze, parse_json
+from tether_engine.serde import ContractError, freeze, parse_json
 
 UNSURE_TEXT = "Insufficient information to answer the question"
 MAX_RESPONSE_BYTES = 65536

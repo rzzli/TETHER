@@ -5,7 +5,7 @@ import time
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError, canonical, fingerprint
+from tether_engine.serde import ContractError, canonical, fingerprint
 from experiments.labbench import retrieval as r
 
 

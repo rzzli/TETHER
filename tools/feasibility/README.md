@@ -3,7 +3,7 @@
 Current TETHER scope and decisions: [full project review](<../../planning/TETHER Full Project Critical Review 2026-11-02.md>)
 and [corrective plan](<../../planning/TETHER Corrective Execution Plan 2026-11-02.md>).
 Below are historical recipes and examples, not instructions to restart completed
-restores or seek external expert responses. Old AsOf names identify their original
+restores or seek external expert responses. Old TETHER names identify their original
 engine/protocol. Current QC rejects identical REF/ALT or effect/other alleles;
 this correction does not retrospectively qualify earlier technical subsets.
 
@@ -51,7 +51,7 @@ protocol directory; `verify_program_feasibility.py` checks sealed bytes, parent 
 the journal and source-inclusive replay. These utilities do not assign training labels.
 Use the public manifest anchor and the current pointer in `data/derived/active-program-feasibility.json`.
 
-These scripts produce evaluator-only development artifacts, not AsOf agent inputs or scientific gold. Use fresh output locations. Clinical extraction requires the existing isolated AACT restore and reads its locally protected credential internally; never pass or print a password. The database must already be running and should be stopped after use.
+These scripts produce evaluator-only development artifacts, not TETHER agent inputs or scientific gold. Use fresh output locations. Clinical extraction requires the existing isolated AACT restore and reads its locally protected credential internally; never pass or print a password. The database must already be running and should be stopped after use.
 
 - `audit_clinical_origin.py`: read-only origin extraction and deterministic selection from a prewritten `protocol.json`.
 - `render_clinical_audit.py`: render retained origin records, explicitly authored review annotations and separate current-record receipts. Does not derive outcome labels.

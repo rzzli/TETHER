@@ -1,6 +1,19 @@
 # TETHER — Authority-bound four-arm recorded comparison
 
-TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.5.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.
+The current interface is `tether-target-agents` **0.6.0**, with the `tether` CLI
+and public namespace over `tether-target-engine` **0.4.0** (`tether_engine`). See
+[installation](../README.md#quick-start) and the [namespace migration
+boundary](../packages/tether/MIGRATION.md). Public aliases share the new engine's
+module and class identities; they do not certify earlier execution fingerprints.
+
+The component history below retains earlier versioned observations and test
+counts. Those qualifications belong to their original code and dates, preserved
+in the [historical checkpoint](ARCHIVE.md). Names and example paths here use the
+current namespace for readability; exact original identifiers and reproduction
+commands are in that checkpoint. The naming migration is not a scientific rerun
+or a transfer of historical qualification to the new release. The semantic
+experiment remains **paused**; this guide does not reactivate it or retired
+study and expert-review branches.
 
 The recorded composition was qualified under 0.3.7. Current package 0.3.10 connects
 the [original-path interface](INTERPRETATION_INTERFACE.md) to an explicit
@@ -16,9 +29,9 @@ quality, scientific sufficiency or biological validity.
 ## Collected-source extension in 0.3.7
 
 ```python
-from asof.contracts import Category
-from asof.study.collected_source import CollectedSourceInput
-from asof.study.authority_four_arm import smoke, verify
+from tether_engine.contracts import Category
+from tether_engine.study.collected_source import CollectedSourceInput
+from tether_engine.study.authority_four_arm import smoke, verify
 
 source = CollectedSourceInput(authority_path, authority_sha256,
                               approved_input_roots, Category.LITERATURE)
@@ -56,8 +69,8 @@ Acceptance passes 1,660 full tests without failures/errors/skips, 26 focused
 regressions, 314 unchanged pins, seven installed legacy families and all six
 matching 0.3.1–0.3.6 verifiers. The 14 new tests are code-author tests; retained
 independent tests are not a new independent review of this extension. See
-[acceptance and limitations](../planning/review-assets/recovery-step9-collected-composition-20261027/CLOSEOUT.md)
-and [next engineering/scientific gates](../planning/review-assets/recovery-step9-collected-composition-20261027/NEXT-GATE-AUDIT.md).
+[acceptance and limitations](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-collected-composition-20261027/CLOSEOUT.md)
+and [next engineering/scientific gates](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-collected-composition-20261027/NEXT-GATE-AUDIT.md).
 
 ## Preserved 0.3.6 invented qualification
 
@@ -73,7 +86,7 @@ candidate, including excluded records, is qualified. All arms receive the same
 complete selected scientific records, original references, identifiers and
 coverage. Statements, structured context and missingness are preserved.
 
-The comparison contains one AsOf interpretation stage, five explicitly adapted
+The comparison contains one TETHER interpretation stage, five explicitly adapted
 Virtual Biotech role stages, an exact-statement extractive baseline and an
 exact-statement lexical baseline. The adapted arm does not reproduce Virtual
 Biotech's original tools, data access or full protocol. Recorded responses are
@@ -131,7 +144,7 @@ does not retry. Deadline checks are cooperative, not hard filesystem/CPU preempt
 ## Interfaces and verification
 
 ```python
-from asof.study.authority_four_arm import smoke, verify
+from tether_engine.study.authority_four_arm import smoke, verify
 
 # Explicit approved existing tokenizer authority/roots; output must be new.
 result = smoke(output, tokenizer_authority, tokenizer_roots)
@@ -150,7 +163,7 @@ The prior byte sizing failed at 47,753 input units. The separate accepted-versio
 feasibility experiment measured 14,315 input/6,144 output reservations for those
 six exact prompts. Current 0.3.6 qualification retained fresh parents and all six
 exact quotes, matching the original payloads. Its resource report and installed
-and relocated replay pass. See the [acceptance](../planning/review-assets/recovery-step9-four-arm-20261026/acceptance.json).
+and relocated replay pass. See the [acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-four-arm-20261026/acceptance.json).
 
 The first E: attempt timed out after two tokenizer calls and two accepted cells;
 their separate read-only verification passes. That whole case remains failed.
@@ -170,7 +183,7 @@ from case execution. Source/spec preparation and all asset checks remain inside
 the unchanged execution budget; later cases are not guaranteed to fit.
 
 Independent human reviews remain pending. A subsequent
-[five-record real retrieval qualification](../planning/review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md)
+[five-record real retrieval qualification](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md)
 passes admission/selection mechanics but shows no policy contrast and retains
 byte-bound coverage limits. The original check did not execute these arms; the
 separate 0.3.7 recorded integration above now does so mechanically.

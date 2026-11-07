@@ -1,9 +1,0 @@
-test_changed_reference_bytes_fail_and_retain_attempt (test_scifact_score_worker.ScoringWorkerTests.test_changed_reference_bytes_fail_and_retain_attempt) ... ok
-test_exact_native_metrics_and_managed_input_scope (test_scifact_score_worker.ScoringWorkerTests.test_exact_native_metrics_and_managed_input_scope) ... ok
-test_extra_model_input_rejected_before_scoring (test_scifact_score_worker.ScoringWorkerTests.test_extra_model_input_rejected_before_scoring) ... ok
-test_operational_failure_never_becomes_successful_nei (test_scifact_score_worker.ScoringWorkerTests.test_operational_failure_never_becomes_successful_nei) ... ok
-
-----------------------------------------------------------------------
-Ran 4 tests in 1.477s
-
-OK

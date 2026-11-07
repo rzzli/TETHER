@@ -3,3 +3,9 @@
 * -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 # Legacy receipt-bound bytes intentionally retain their original Windows endings.
 tests/fixtures/legacy-v1/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Document/media bytes are binary, including PDFs with readable xref tables.
+*.pdf binary
+*.png binary
+*.jpg binary
+*.zip binary

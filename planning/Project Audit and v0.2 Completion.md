@@ -5,7 +5,7 @@ timezone: America/Los_Angeles
 status: technical-pilot-complete-administrative-closeout-open
 updated: 2026-10-12
 tags:
-  - asof
+  - TETHER
   - audit
   - v02
 ---
@@ -89,9 +89,9 @@ This is the correction record for the full-project pass requested after [[Framew
 
 ## Production completion evidence
 
-Updated October 12: the technical pilot is complete. The canonical [ten-dossier index](../runs/v02-realdata-20261012T015124Z/README.md) links all finalized cases. Its [pilot report](../runs/v02-realdata-20261012T015124Z/pilot-report.json) records source-inclusive semantic verification, sealed request files and matching runtime fingerprints for every case. The [retained source audit](../runs/v02-realdata-20261012T015124Z/source-review.json) checks 20 distinct original rows across all ten cases. Receipt anchors and the source-audit hash matched during the replanning check. This is technical fidelity review; independent scientific adjudication remains unperformed.
+Updated October 12: the technical pilot is complete. The canonical ten-dossier index (local artifact: `runs/v02-realdata-20261012T015124Z/README.md`) links all finalized cases. Its pilot report (local artifact: `runs/v02-realdata-20261012T015124Z/pilot-report.json`) records source-inclusive semantic verification, sealed request files and matching runtime fingerprints for every case. The retained source audit (local artifact: `runs/v02-realdata-20261012T015124Z/source-review.json`) checks 20 distinct original rows across all ten cases. Receipt anchors and the source-audit hash matched during the replanning check. This is technical fidelity review; independent scientific adjudication remains unperformed.
 
-The [production build report](../data/derived/v02-contemporary-pilot-20261012T014305Z/build-report.json) records 2,141 files / 3,752,440,123 bytes, 14,940,949 physical rows scanned, 14,207 accepted matching source rows and 16,914 normalized case records. There are no blocked cases; 65 missing inputs remain explicit. Build elapsed time was 255.25 seconds with peak memory 1,150,431,232 bytes. The largest packet is 60,883,175 bytes, below 64 MiB. The pilot plus source verification/audit took 242.609 seconds; its parent-process peak was 1,544,667,136 bytes, not an aggregate child-process peak. Provider spending was $0. All real probabilities remain null and numerical features empty.
+The production build report (local artifact: `data/derived/v02-contemporary-pilot-20261012T014305Z/build-report.json`) records 2,141 files / 3,752,440,123 bytes, 14,940,949 physical rows scanned, 14,207 accepted matching source rows and 16,914 normalized case records. There are no blocked cases; 65 missing inputs remain explicit. Build elapsed time was 255.25 seconds with peak memory 1,150,431,232 bytes. The largest packet is 60,883,175 bytes, below 64 MiB. The pilot plus source verification/audit took 242.609 seconds; its parent-process peak was 1,544,667,136 bytes, not an aggregate child-process peak. Provider spending was $0. All real probabilities remain null and numerical features empty.
 
 The final integrated suite passed **100 tests**; the current review utility passed **ten probes**. A dependency-free demo ran and verified with site packages disabled. Original plans/downloader/monitor hashes, archived v1/v2 verification and the 83-provider/178-product documentation index were checked in [[data/manifests/public/2026-10-11-project-checks.json]]. V1 semantic verification remains unavailable.
 

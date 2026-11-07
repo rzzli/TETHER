@@ -12,8 +12,8 @@ import shutil
 import time
 from urllib.parse import urlencode
 
-from asof.journal import RunJournal, read_chain
-from asof.serde import fingerprint, parse_json, read_json, write_json
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import fingerprint, parse_json, read_json, write_json
 from tools.science import prospective_frame as frame
 from tools.science import prospective_transport as transport
 

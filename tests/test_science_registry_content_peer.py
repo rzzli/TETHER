@@ -2,7 +2,7 @@
 import copy
 import unittest
 
-from asof.serde import ContractError
+from tether_engine.serde import ContractError
 from tools.science.registry_content import (
     FIELDS, TABLES, appearance, classify_content, content_query,
 )

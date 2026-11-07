@@ -12,11 +12,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 import time
 
-from asof.contracts import Case, Observation, Profile, Snapshot, validate_observation
-from asof.ingest import EVIDENCE_COLUMNS, NORMALIZATION_VERSION, _load_case_pack, _publication, peak_memory_bytes
-from asof.journal import RunJournal
-from asof.provenance import InputGraph, catalog_index
-from asof.serde import ContractError, decode, fingerprint, read_json, safe_child, sha256_file, write_json
+from tether_engine.contracts import Case, Observation, Profile, Snapshot, validate_observation
+from tether_engine.ingest import EVIDENCE_COLUMNS, NORMALIZATION_VERSION, _load_case_pack, _publication, peak_memory_bytes
+from tether_engine.journal import RunJournal
+from tether_engine.provenance import InputGraph, catalog_index
+from tether_engine.serde import ContractError, decode, fingerprint, read_json, safe_child, sha256_file, write_json
 from tools.framework.run_pilot import CATEGORIES, CONTEXT_FIELDS, FORBIDDEN, SourceAudit
 
 
@@ -155,7 +155,7 @@ def audit_observation(audit, observation, *, case, nodes, graph, mapping_refs, s
     if node is None or node["dataset_id"] != "ot_evidence" or node["release_id"] != "25.09":
         raise ContractError("Reference evidence uses an incorrect raw source product")
     _source(audit, graph, node, proofs)
-    if (observation["method"]["code_id"] != "asof.opentargets.normalize" or
+    if (observation["method"]["code_id"] != "tether.opentargets.normalize" or
             observation["method"]["version"] != NORMALIZATION_VERSION or
             observation["method"]["qc_status"] != "passed" or observation["computed_at"] is not None or
             observation["availability"] != node["availability"]):
@@ -309,7 +309,7 @@ def build_reference_packets(bundle: Path, output: Path, *, case_pack: Path, cata
                 path = safe_child(folder, artifact.path)
                 if (artifact.path != record["path"] or artifact.sha256 != record["sha256"] or
                         sha256_file(path) != artifact.sha256 or path.stat().st_size != record["bytes"] or
-                        artifact.role != "agent_evidence" or artifact.dataset_id != "asof_normalized_packets" or
+                        artifact.role != "agent_evidence" or artifact.dataset_id != "tether_normalized_packets" or
                         not artifact.access_approved or artifact.availability.exclusion(case.cutoff) or
                         graph.exclusion(artifact.input_refs, case)):
                     raise ContractError("Reference artifact integrity, role or lineage mismatch")

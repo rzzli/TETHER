@@ -1,9 +1,0 @@
-# Native harmless worker v1: source-only peer review
-
-**CLEAR for separate bounded build preparation. No compilation or worker execution is authorized by this review.** Source `d9bd78c7fdd2c9fc7d70ade21fa06d76b5d5c25251f06f68ff9b03734d254f25`; design `377c29e0144fa3be989db2c78719513f4694f41763131180b4b8e3eb1aeda3f4`.
-
-The exact normal argc5 and nonrecursive argc2 child entry, own-module/cache/case-output checks,1MiB BCrypt protocol hash,4KiB complete/flush/close/nonoverwriting markers and counted writes are consistent. Role/executable/source authorization is explicitly the parent's responsibility; the worker does not pretend to parse general JSON. Resource controls include a touched/released64KiB control,384MiB committed allocation attempt and one same-EXE descendant attempt requiring quota1816. Unexpected success is bounded and still fails. Overflow/sleep/abort require the parent's real cap/timeout/never-resume controls.
-
-No expected-path source blocker was found. A nonblocking evidence improvement before actual qualification is to emit the already returned PID/thread IDs if the descendant unexpectedly starts; currently those IDs are discarded, although the result still fails. No extra API is needed for that addition.
-
-Prospective /MD matches the retained bridge's actual compile command; /MT is excluded. Exact build protocol, tool/header/lib pins, output PE imports and CRT/system dependency inspection remain required. Neither compilation nor real SDK behavior has been exercised here. A pass would concern only the exact compiled-child architecture; Python Total2 and original active2 remain unexplained. Predeclare generic total1/resource total2 and stop on any new unexplained count, reserving bounded job/PID diagnostics rather than another allowance. No ABI, target DLL, model, inference or scientific gate is cleared.

@@ -2,8 +2,8 @@
 import hashlib
 import unittest
 
-from asof.archive.paths import ArchiveResolver
-from asof.serde import ContractError, read_json, write_json
+from tether_engine.archive.paths import ArchiveResolver
+from tether_engine.serde import ContractError, read_json, write_json
 from tests import test_archive_core as fixtures
 
 

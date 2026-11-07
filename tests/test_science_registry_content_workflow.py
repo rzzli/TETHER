@@ -6,8 +6,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, write_json
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, write_json
 from tools.science.registry_content import FIELDS
 from tools.science import registry_content_workflow as flow
 

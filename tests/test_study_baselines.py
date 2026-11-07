@@ -2,15 +2,15 @@
 
 import unittest
 
-from asof.serde import ContractError, canonical, encode, fingerprint
-from asof.study.baselines import (
+from tether_engine.serde import ContractError, canonical, encode, fingerprint
+from tether_engine.study.baselines import (
     _select,
     _tokens,
     reviewer_view,
     run_baseline,
     verify_baseline,
 )
-from asof.study.diagnostic import load_synthetic_request
+from tether_engine.study.diagnostic import load_synthetic_request
 
 
 def policy(**updates):

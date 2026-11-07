@@ -1,0 +1,1650 @@
+"""One authority-bound invented four-arm composition; no model generation.
+
+Six one-use recorded cells and two pure baselines share one default budget.
+Offline tokenizer execution is explicit in smoke; verification never dispatches.
+"""
+
+import argparse
+from contextlib import ExitStack
+from dataclasses import replace
+import hashlib
+from importlib import resources
+import json
+import math
+import os
+from pathlib import Path
+import time
+
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import canonical, decode, encode, fingerprint, freeze, parse_json
+from tether_engine.workflow import Budget
+from .baseline_smoke import _prepare_parent, _read, _write
+from .baselines import _policy, _select
+from .collected_source import (
+    CollectedSourceInput,
+    MODE_FILES,
+    SOURCE_FILES,
+    literal_document,
+)
+from .collected_source import TRACK as COLLECTED_TRACK
+from .diagnostic import validate_output
+from .diagnostic_codec import need, quote_choices
+from .fixed_evidence import INTERFACE, load_plan
+from .fixed_evidence_smoke import _assignment, _interpretation_view
+from .preparation_payloads import prepare_actual_payload
+from .proofs import _no_links, capture_file, capture_package_proof, verify_package_proof
+from .retrieval_preparation import (
+    _records,
+    authority_anchor,
+    fixture_authority,
+    policy_for,
+    prepare_retrieval,
+    verify_retrieval_preparation,
+)
+from .retrieval_smoke import (
+    CELL_FILES,
+    PARENT_FILES,
+    REQUIRED_RESOURCES as RETRIEVAL_RESOURCES,
+    RetrievalRecordedVerifier,
+)
+from .session import StudySession, verify_study
+from . import native_mode, native_interpretation
+from .native_accounting import accounting as native_accounting
+from .interpretation_interface import prepare_payload as prepare_native_payload
+from .tokenization import (
+    REQUIRED_RESOURCES as TOKEN_RESOURCES,
+    prepare_tokenizer_spec,
+    tokenize_prompt,
+)
+
+STRATEGY = "literal_case_overlap_then_id_v1"
+REQUEST_SHA256 = "fdb7c21b5d5758fabd4a17e8110b134861836bf65d0d715398a046838b40a4a5"
+STIMULI = "resources/authority-four-arm-stimuli-v1.json"
+STIMULI_SHA256 = "dfcacdad1bb907ffcbade393a8c474e2b9d420f27d982d10090c4f0207a2363c"
+REQUIRED_RESOURCES = tuple(
+    dict.fromkeys((*RETRIEVAL_RESOURCES, *TOKEN_RESOURCES, STIMULI))
+)
+TRACK = "authority_bound_invented_four_arm_recorded"
+QUOTE_FILES = {
+    "spec.json",
+    "prompt.bin",
+    "package-proof.json",
+    "journal.jsonl",
+    "stdout.bin",
+    "stderr.bin",
+    "child.json",
+    "quote.json",
+    "receipt.json",
+}
+
+
+def _track(source, execution=None):
+    need(
+        source is None or type(source) is CollectedSourceInput,
+        "Explicit collected-source input required",
+    )
+    if execution is not None:
+        need(
+            type(execution) is native_mode.NativeExecutionConfig,
+            "Explicit concrete native configuration required",
+        )
+        value = native_mode.TRACKS[int(source is not None)]
+        return (
+            value.replace("_native_v2", "_simulated_native_v2")
+            if execution.execution_scope == "simulated_native_transport"
+            else value
+        )
+    return TRACK if source is None else COLLECTED_TRACK
+
+
+def _schedule():
+    plan = load_plan()
+    return [
+        (arm, index, stage)
+        for arm, stages in (
+            ("tether_interpretation", plan["tether_stages"]),
+            ("adapted_virtual_biotech_interpretation", plan["stage_order"]),
+        )
+        for index, stage in enumerate(stages)
+    ]
+
+
+def _required(native=False):
+    return (
+        REQUIRED_RESOURCES + (native_mode.RESOURCE,) if native else REQUIRED_RESOURCES
+    )
+
+
+def _resources(native=False):
+    return {name: "study/" + name for name in _required(native)}
+
+
+def _package_check(package, native=False):
+    need(
+        {k: v.get("relative_path") for k, v in package.get("resources", {}).items()}
+        == _resources(native),
+        "Composition resource paths differ",
+    )
+    verify_package_proof(package, required_resources=_required(native))
+
+
+def _document(stage, payload):
+    raw = resources.files("tether_engine.study").joinpath(STIMULI).read_bytes()
+    need(
+        hashlib.sha256(raw).hexdigest() == STIMULI_SHA256, "Composition stimuli differ"
+    )
+    doc = parse_json(raw)
+    need(doc["role"] == "evaluation_only_fixture", "Wrong fixture role")
+    return freeze(
+        dict(
+            schema_version=1,
+            role=doc["role"],
+            request_sha256=fingerprint(stage),
+            payload_sha256=fingerprint(payload),
+            content_utf8=canonical(doc["response"]).decode(),
+            usage=doc["usage"],
+            outcome="return",
+        )
+    )
+
+
+def _remaining(deadline):
+    remaining = deadline - time.monotonic()
+    need(
+        math.isfinite(remaining) and 0 < remaining <= 300,
+        "Shared composition deadline exhausted",
+    )
+    return remaining
+
+
+def _single(events, name, **where):
+    items = [
+        e["details"]
+        for e in events
+        if e["event"] == name
+        and all(e["details"].get(k) == v for k, v in where.items())
+    ]
+    need(len(items) == 1, "Missing or duplicate " + name)
+    return items[0]
+
+
+def _members(collected=False, native=False):
+    base = {
+        "package-proof.json",
+        "journal.jsonl",
+        "summary.json",
+        "assignment.json",
+        "tokenizer-spec.json",
+    }
+    base |= {f"preparation/{STRATEGY}/{name}" for name in PARENT_FILES}
+    for cell, (_, _, stage) in enumerate(_schedule()):
+        base |= {f"cells/{cell:02d}/{name}" for name in CELL_FILES}
+        base |= {f"quotes/{cell:02d}/{name}" for name in QUOTE_FILES}
+    base |= {
+        f"{method}-{kind}.json"
+        for method in ("extractive", "lexical")
+        for kind in ("policy", "result", "reviewer")
+    }
+    base |= {
+        "tether_interpretation-reviewer.json",
+        "adapted_virtual_biotech_interpretation-reviewer.json",
+    }
+    if collected:
+        base |= MODE_FILES | {"source/" + name for name in SOURCE_FILES}
+    if native:
+        base |= native_mode.FILES
+    return base
+
+
+def _inventory(root, collected=False, native=False):
+    _no_links(root)
+    found, dirs = set(), set()
+    for directory, children, names in os.walk(root, followlinks=False):
+        for name in children:
+            path = Path(directory) / name
+            _no_links(path)
+            dirs.add(path.relative_to(root).as_posix())
+        for name in names:
+            path = Path(directory) / name
+            _no_links(path)
+            need(path.is_file(), "Invalid composition file")
+            found.add(path.relative_to(root).as_posix())
+    expected = {
+        p.as_posix()
+        for n in _members(collected, native)
+        for p in Path(n).parents
+        if p != Path(".")
+    }
+    need(dirs == expected, "Unexpected composition directories")
+    return found
+
+
+def baseline_policy(request, method):
+    return _policy(
+        dict(
+            schema_version=1,
+            method=method,
+            query=request["question"]["text"] if method == "lexical" else None,
+            max_excerpts=min(3, request["source_request"]["bounds"]["max_claims"]),
+            max_quote_bytes=8192,
+            max_request_bytes=1048576,
+            max_result_bytes=1048576,
+        )
+    )
+
+
+class AuthorityRecordedVerifier:
+    """Source and predecessor receipts authorize each exact stage; never caller JSON."""
+
+    required_resources = REQUIRED_RESOURCES
+
+    def __init__(self, root, run_id, *, deadline, collected_source=None):
+        self.root = Path(root).absolute()
+        self.run_id = run_id
+        self.deadline = deadline
+        _track(collected_source)
+        self.collected_source = collected_source
+        self._source_cache = None
+        self._stage_cache = {}
+
+    def track(self):
+        return _track(self.collected_source)
+
+    def selected_sources(self, response):
+        return {
+            s for claim in response["response"]["claims"] for s in claim["source_ids"]
+        }
+
+    def render(self, stage):
+        return prepare_actual_payload(
+            stage["original_request"],
+            stage["arm"],
+            stage["stage_index"],
+            stage["feedback"],
+        )["payload"]
+
+    def events(self):
+        _remaining(self.deadline)
+        _no_links(self.root)
+        events = read_chain(self.root / "journal.jsonl")
+        need(
+            events[0]["event"] == "build_reserved"
+            and events[0]["details"]["run_id"] == self.run_id,
+            "Wrong composition identity",
+        )
+        return events
+
+    def original(self):
+        if self.collected_source is not None:
+            self.collected_source.assert_active()
+        ready = _single(self.events(), "retrieval_ready", strategy=STRATEGY)
+        parent = self.root / "preparation" / STRATEGY
+        pins = {
+            name: encode(capture_file(parent / name, name))
+            for name in sorted(PARENT_FILES)
+        }
+        key = fingerprint(dict(ready=ready, pins=pins))
+        if self.collected_source is not None:
+            extra = {
+                name: encode(capture_file(self.root / name, name))
+                for name in sorted(MODE_FILES | {"source/" + n for n in SOURCE_FILES})
+            }
+            key = fingerprint(dict(retrieval=key, source=extra))
+        if self._source_cache is not None and self._source_cache[0] == key:
+            return self._source_cache[1]
+        if self.collected_source is None:
+            source = RetrievalRecordedVerifier(
+                self.root, self.run_id, deadline=self.deadline
+            ).prepare_stage(STRATEGY)
+            original = source["original_request"]
+            need(
+                fingerprint(original) == REQUEST_SHA256
+                and [
+                    r["observation_id"] for r in original["source_request"]["evidence"]
+                ]
+                == ["id03", "id04"],
+                "Unsupported composition source",
+            )
+            parent_sha = source["retrieval_receipt_sha256"]
+        else:
+            authority = self.collected_source.retrieval_authority(
+                self.root, self.events(), self.deadline
+            )
+            checked = verify_retrieval_preparation(
+                parent,
+                ready["receipt_sha256"],
+                authority_anchor(authority),
+                roots=self.collected_source.physical_roots(self.root),
+                deadline=self.deadline,
+            )
+            original, proof = _read(parent, "request.json")
+            receipt, _ = _read(parent, "receipt.json")
+            policy, _ = _read(parent, "policy.json")
+            need(
+                original is not None,
+                "No whole collected record fits; interpretation cannot dispatch",
+            )
+            need(
+                canonical(proof) == canonical(receipt["files"]["request.json"])
+                and fingerprint(original)
+                == ready["request_sha256"]
+                == checked["request_sha256"]
+                and canonical(policy) == canonical(policy_for(STRATEGY)),
+                "Collected retrieval source/policy differs",
+            )
+            parent_sha = ready["receipt_sha256"]
+        _records(original)
+        result = (freeze(original), parent_sha)
+        self._source_cache = (key, result)
+        return result
+
+    def capacity(self, cell, payload):
+        from .token_capacity import TrustedTokenCapacity
+
+        event = _single(self.events(), "quote_ready", cell=cell)
+        need(
+            event["payload_sha256"] == fingerprint(payload)
+            and event["prompt_sha256"]
+            == hashlib.sha256(payload["prompt"].encode()).hexdigest(),
+            "Stage quote differs",
+        )
+        spec, _ = _read(self.root, "tokenizer-spec.json")
+        need(event["spec_sha256"] == fingerprint(spec), "Stage tokenizer spec differs")
+        return TrustedTokenCapacity(
+            self.root / "quotes" / f"{cell:02d}",
+            event["receipt_sha256"],
+            event["prompt_sha256"],
+            event["spec_sha256"],
+            event["payload_sha256"],
+        )
+
+    def stage(self, cell):
+        need(
+            type(cell) is int and 0 <= cell < len(_schedule()),
+            "Invalid composition cell",
+        )
+        arm, index, name = _schedule()[cell]
+        original, parent_sha = self.original()
+        history = []
+        predecessors = []
+        events = self.events()
+        # A cache hit requires the same authoritative journal and every predecessor
+        # byte. It never turns a stored object or caller hash into source authority.
+        pins = {}
+        for previous, (prior_arm, _, _) in enumerate(_schedule()[:cell]):
+            if prior_arm != arm:
+                continue
+            accepted = _single(events, "cell_accepted", cell=previous)
+            pins[str(previous)] = dict(
+                accepted=encode(accepted),
+                artifacts={
+                    prefix + "/" + name: encode(
+                        capture_file(
+                            self.root / prefix / f"{previous:02d}" / name, name
+                        )
+                    )
+                    for prefix, names in (
+                        ("cells", CELL_FILES),
+                        ("quotes", QUOTE_FILES),
+                    )
+                    for name in sorted(names)
+                },
+            )
+        key = fingerprint(
+            dict(
+                source=parent_sha,
+                request=original,
+                pins=pins,
+                quote_events=[
+                    encode(e)
+                    for e in events
+                    if e["event"] == "quote_ready"
+                    and e["details"].get("cell", 6) < cell
+                ],
+            )
+        )
+        if cell in self._stage_cache and self._stage_cache[cell][0] == key:
+            return self._stage_cache[cell][1]
+        aliases = list(quote_choices(original))
+        for previous, (prior_arm, prior_index, prior_name) in enumerate(
+            _schedule()[:cell]
+        ):
+            if prior_arm != arm:
+                continue
+            accepted = _single(events, "cell_accepted", cell=previous)
+            retained, _ = _read(self.root / "cells" / f"{previous:02d}", "request.json")
+            need(
+                retained.get("run_id") == self.run_id
+                and retained.get("cell") == previous
+                and retained.get("arm") == prior_arm
+                and retained.get("stage_index") == prior_index
+                and retained.get("stage_name") == prior_name,
+                "Predecessor identity differs before recursion",
+            )
+            prior = self.stage(previous)
+            need(canonical(retained) == canonical(prior), "Predecessor request differs")
+            payload = self.payload(prior)
+            policy = self.capacity(previous, payload)
+            path = self.root / "cells" / f"{previous:02d}"
+            verify_study(
+                path,
+                expected_receipt_sha256=accepted["receipt_sha256"],
+                verifier=self,
+                capacity_policy=policy,
+                deadline=self.deadline,
+            )
+            response, _ = _read(path, "response.json")
+            ids = self.selected_sources(response)
+            history.append(
+                dict(stage=prior_name, source_ids=[s for s in aliases if s in ids])
+            )
+            predecessors.append(
+                dict(
+                    cell=previous,
+                    receipt_sha256=accepted["receipt_sha256"],
+                    response_sha256=fingerprint(response),
+                    request_sha256=fingerprint(prior),
+                )
+            )
+        result = freeze(
+            dict(
+                schema_version=1,
+                kind=self.track(),
+                run_id=self.run_id,
+                cell=cell,
+                arm=arm,
+                stage_index=index,
+                stage_name=name,
+                original_request=encode(original),
+                original_request_sha256=fingerprint(original),
+                source_receipt_sha256=parent_sha,
+                predecessor_proofs=predecessors,
+                feedback=history,
+            )
+        )
+        self._stage_cache[cell] = (key, result)
+        return result
+
+    def payload(self, stage):
+        # Reject identity before any predecessor recursion.
+        stage = freeze(encode(stage))
+        need(
+            stage.get("run_id") == self.run_id
+            and type(stage.get("cell")) is int
+            and 0 <= stage["cell"] < len(_schedule()),
+            "Foreign composition stage",
+        )
+        expected = self.stage(stage["cell"])
+        need(
+            canonical(stage) == canonical(expected),
+            "Composition stage authority differs",
+        )
+        return self.render(expected)
+
+    def validate_payload(self, request, payload):
+        need(
+            canonical(self.payload(request)) == canonical(payload),
+            "Composition payload differs",
+        )
+
+    def validate_response(self, request, content):
+        self.payload(request)
+        need(
+            isinstance(content, bytes) and len(content) <= 65536,
+            "Composition response too large",
+        )
+        return validate_output(
+            request["original_request"], "simplified", parse_json(content)
+        )
+
+    def verify_execution(self, request, payload, content, configuration, usage):
+        from .token_capacity import verify_recorded_execution
+
+        _package_check(configuration["package_proof"])
+        self.validate_payload(request, payload)
+        expected = self.document(request, payload)
+        need(
+            content == expected["content_utf8"].encode()
+            and canonical(usage) == canonical(expected["usage"]),
+            "Unapproved recorded stimulus or usage",
+        )
+        start = _single(self.events(), "integration_started")
+        policy = self.capacity(request["cell"], payload)
+        verify_recorded_execution(
+            request,
+            payload,
+            content,
+            configuration,
+            usage,
+            capacity_policy=policy,
+            case_deadline=start["case_end_monotonic"],
+            interface=INTERFACE,
+        )
+
+    def document(self, request, payload):
+        self.validate_payload(request, payload)
+        return (
+            _document(request, payload)
+            if self.collected_source is None
+            else literal_document(request, payload)
+        )
+
+
+class NativeAuthorityVerifier(AuthorityRecordedVerifier):
+    """The same source/history authority, with bound native v2 bytes and capacity."""
+
+    required_resources = _required(True)
+
+    def __init__(self, *args, native_execution, **kwargs):
+        super().__init__(*args, **kwargs)
+        need(
+            type(native_execution) is native_mode.NativeExecutionConfig,
+            "Explicit native verification capability required",
+        )
+        self.native_execution = native_execution
+
+    def track(self):
+        return _track(self.collected_source, self.native_execution)
+
+    def original(self):
+        spec, _ = _read(self.root, "tokenizer-spec.json")
+        self.native_execution.check_archive(self.root, spec)
+        return super().original()
+
+    def selected_sources(self, response):
+        return {q["source_id"] for q in response["quotes"]}
+
+    def render(self, stage):
+        return prepare_native_payload(
+            stage["original_request"],
+            stage["arm"],
+            stage["stage_index"],
+            stage["feedback"],
+        )["payload"]
+
+    def context(self):
+        spec, _ = _read(self.root, "tokenizer-spec.json")
+        return self.native_execution.verify_archive(
+            self.root, spec, self.events(), successful=False
+        )
+
+    def validate_response(self, request, content):
+        payload = self.payload(request)
+        return native_interpretation.validate_native_response(
+            request, payload, content, model_alias=self.context()["model_alias"]
+        )
+
+    def verify_execution(self, request, payload, content, configuration, usage):
+        _package_check(configuration["package_proof"], True)
+        self.validate_payload(request, payload)
+        native_interpretation.verify_native_execution(
+            request,
+            payload,
+            content,
+            configuration,
+            usage,
+            capacity_policy=self.capacity(request["cell"], payload),
+            case_deadline=_single(self.events(), "integration_started")[
+                "case_end_monotonic"
+            ],
+            expected_native=self.context(),
+            deadline=self.deadline,
+        )
+
+    def document(self, *args):
+        raise ValueError("Native execution cannot consume recorded stimuli")
+
+    def verify_duration(self, path):
+        # Called only after verify_study authenticates this completed child's
+        # configuration, wrapper and report. The final inventory pass rechecks bytes.
+        configuration, _ = _read(path, "configuration.json")
+        wrapper, _ = _read(path, "raw-response.bin")
+        report, _ = _read(path, "report.json")
+        native_interpretation.verify_native_duration(
+            wrapper, configuration, report=report
+        )
+
+
+def _baseline(verifier, method):
+    request, parent_sha = verifier.original()
+    policy = baseline_policy(request, method)
+    need(
+        len(canonical(request)) <= policy["max_request_bytes"]
+        and policy["max_excerpts"] <= request["source_request"]["bounds"]["max_claims"]
+        and policy["max_quote_bytes"]
+        <= request["source_request"]["bounds"]["max_text_bytes"],
+        "Baseline source exceeds fixed bounds",
+    )
+    quotes, trace = _select(request["source_request"]["evidence"], policy)
+    records = {r["observation_id"]: r for r in request["source_request"]["evidence"]}
+    for quote in quotes:
+        row = records[quote["observation_id"]]
+        quote["grounded_sha256"] = quote.pop("source_record_sha256")
+        quote["scientific_record_sha256"] = fingerprint(row["scientific_record"])
+    result = dict(
+        schema_version=1,
+        kind="authority_exact_source_baseline",
+        role="evaluation_only",
+        scope="invented_authority_bound_not_real_evidence",
+        source_receipt_sha256=parent_sha,
+        request_sha256=fingerprint(request),
+        policy=encode(policy),
+        policy_sha256=fingerprint(policy),
+        excerpts=quotes,
+        trace=trace,
+        coverage=encode(request["source_request"]["coverage"]),
+        extraction_state="empty"
+        if not quotes
+        else "complete"
+        if len(quotes) == len(trace)
+        else "partial",
+        scientific_answer_status="not_attempted",
+        generated_interpretations=[],
+        features={},
+        clinical_probability=None,
+        model_calls=0,
+        input_tokens=0,
+        output_tokens=0,
+        provider_cost_usd=0.0,
+    )
+    if verifier.collected_source is not None:
+        result.update(
+            scope="receipt_verified_collected_source_not_scientific_interpretation",
+            case=encode(request["source_request"]["case"]),
+            question=encode(request["question"]),
+        )
+    need(
+        len(canonical(result)) <= policy["max_result_bytes"],
+        "Baseline result exceeds cap",
+    )
+    return freeze(result)
+
+
+def _baseline_view(result, label):
+    view = dict(
+        schema_version=1,
+        role="evaluation_only",
+        label=label,
+        scope="invented_source_extraction_not_scientific_answer",
+        excerpts=result["excerpts"],
+        coverage=result["coverage"],
+        extraction_state=result["extraction_state"],
+        scientific_answer_status="not_attempted",
+        generated_interpretations=[],
+        features={},
+        clinical_probability=None,
+    )
+    if "case" in result:
+        view.update(
+            scope="collected_source_extraction_not_scientific_answer",
+            case=encode(result["case"]),
+            question=encode(result["question"]),
+        )
+    return freeze(view)
+
+
+def _caller(run_id, cell, source=None, execution=None, spec=None):
+    result = dict(
+        track=TRACK,
+        run_id=run_id,
+        cell=cell,
+        fixture="invented-six-v1",
+        strategy=STRATEGY,
+    )
+    if source is not None:
+        result.pop("fixture")
+        result.update(
+            track=_track(source), source_authority_sha256=source.authority_sha256
+        )
+    if execution is not None:
+        result.update(
+            track=_track(source, execution),
+            native_descriptor_sha256=fingerprint(execution.describe(spec)),
+        )
+    return result
+
+
+def _summary(run_id, inputs, outputs, elapsed, source=None, execution=None, root=None):
+    result = dict(
+        schema_version=1,
+        role="evaluation_only",
+        track=TRACK,
+        run_id=run_id,
+        fixture="invented-six-v1",
+        strategy=STRATEGY,
+        recorded_calls=6,
+        pure_invocations=2,
+        input_reserved=inputs,
+        output_reserved=outputs,
+        tokenizer_processes=6,
+        actual_model_calls=0,
+        observed_model_usage=dict(input_tokens=0, output_tokens=0, cost_usd=0.0),
+        fixture_declared_usage=dict(input_tokens=384, output_tokens=384, cost_usd=0.0),
+        native_processes=0,
+        scientific_validation="not_attempted",
+        automatic_retries=False,
+        elapsed_seconds=elapsed,
+        budget=encode(Budget()),
+    )
+    if source is not None:
+        result.pop("fixture")
+        result.update(
+            track=_track(source),
+            source_authority_sha256=source.authority_sha256,
+            source_scope="receipt_verified_collected_case_not_scientific_validation",
+        )
+    if execution is not None:
+        simulated = execution.execution_scope == "simulated_native_transport"
+        result.update(native_accounting(root, execution.execution_scope))
+        result.update(
+            track=_track(source, execution),
+            recorded_calls=0,
+            native_processes=0 if simulated else 1,
+            simulated_server_processes=1 if simulated else 0,
+            simulated_native_calls=result["native_dispatch_attempts"]
+            if simulated
+            else 0,
+            execution_scope=execution.execution_scope,
+            fixture_declared_usage=dict(input_tokens=0, output_tokens=0, cost_usd=0.0),
+        )
+    return result
+
+
+def _interpretation_projection(stage, response, label, source, execution=None):
+    if execution is not None:
+        return dict(
+            schema_version=1,
+            role="evaluation_only",
+            label=label,
+            scope=execution.execution_scope + "_unreviewed",
+            case=encode(stage["original_request"]["source_request"]["case"]),
+            question=encode(stage["original_request"]["question"]),
+            answer_status=response["response"]["answer_status"],
+            claims=[
+                dict(
+                    authored_claim=encode(claim),
+                    literal_quotes=[
+                        encode(q) for q in response["quotes"] if q["claim_index"] == i
+                    ],
+                )
+                for i, claim in enumerate(response["response"]["claims"])
+            ],
+            unresolved=encode(response["response"]["unresolved"]),
+            abstention_reason=response["response"]["abstention_reason"],
+            coverage=encode(stage["original_request"]["source_request"]["coverage"]),
+            features={},
+            clinical_probability=None,
+        )
+    view = _interpretation_view(stage, response, label)
+    if source is not None:
+        view.update(
+            scope="collected_source_recorded_transport_not_model_or_human_reference",
+            case=encode(stage["original_request"]["source_request"]["case"]),
+            question=encode(stage["original_request"]["question"]),
+        )
+    return view
+
+
+def _failure_usage(root, execution, primary):
+    if execution is None:
+        return dict(actual_model_calls=0)
+    try:
+        return dict(
+            accounting_status="available",
+            execution_scope=execution.execution_scope,
+            **native_accounting(root, execution.execution_scope),
+        )
+    except BaseException as secondary:
+        primary.add_note("Native accounting unavailable: " + type(secondary).__name__)
+        # Failure reporting must not depend on successfully reading the very
+        # artifacts whose interruption/corruption is being reported.
+        return dict(
+            accounting_status="unavailable",
+            accounting_error_class=type(secondary).__name__,
+            execution_scope=execution.execution_scope,
+            actual_model_calls=0
+            if execution.execution_scope == "simulated_native_transport"
+            else None,
+        )
+
+
+def smoke(
+    output,
+    tokenizer_authority,
+    tokenizer_roots,
+    *,
+    collected_source=None,
+    native_execution=None,
+):
+    """Explicit offline tokenizer + recorded fixture work; no actual generation."""
+    from .token_capacity import TokenQuotedRecordedBackend
+
+    start = time.monotonic()
+    end = start + Budget().max_seconds
+    _track(collected_source, native_execution)
+    authority, roots = (
+        freeze(encode(tokenizer_authority)),
+        freeze(encode(tokenizer_roots)),
+    )
+    root = Path(output).absolute()
+    _prepare_parent(root.parent)
+    journal = RunJournal(root, kind="build")
+    run_id = journal.events[0]["details"]["run_id"]
+    accepted = []
+    published = False
+    source_lease = ExitStack()
+    server_scope = ExitStack()
+    try:
+        if collected_source is not None:
+            source_lease.enter_context(collected_source.locked(end))
+        is_native = native_execution is not None
+        package = capture_package_proof(_resources(is_native), _required(is_native))
+        _write(root, "package-proof.json", package)
+        journal.append(
+            "integration_started",
+            start_monotonic=start,
+            case_end_monotonic=end,
+            budget=encode(Budget()),
+            package_proof_sha256=fingerprint(package),
+        )
+        _remaining(end)
+        if collected_source is None:
+            source = fixture_authority()
+            collected_roots = None
+        else:
+            collected_source.prepare_parent(root, journal, end)
+            source = collected_source.retrieval_authority(root, journal.events, end)
+            collected_roots = collected_source.physical_roots(root)
+        journal.append(
+            "retrieval_preparing",
+            strategy=STRATEGY,
+            policy_sha256=fingerprint(policy_for(STRATEGY)),
+        )
+        prepared = prepare_retrieval(
+            source,
+            authority_anchor(source),
+            policy_for(STRATEGY),
+            root / "preparation" / STRATEGY,
+            roots=collected_roots,
+            deadline=end,
+        )
+        journal.append(
+            "retrieval_ready",
+            strategy=STRATEGY,
+            receipt_sha256=prepared["receipt_sha256"],
+            request_sha256=prepared["request_sha256"],
+            elapsed_seconds=300 - _remaining(end),
+        )
+        spec = prepare_tokenizer_spec(authority, roots, deadline=end)
+        _write(root, "tokenizer-spec.json", spec)
+        journal.append(
+            "tokenizer_ready",
+            spec_sha256=fingerprint(spec),
+            elapsed_seconds=300 - _remaining(end),
+        )
+        verifier = AuthorityRecordedVerifier(
+            root, run_id, deadline=end, collected_source=collected_source
+        )
+        if is_native:
+            verifier.original()  # All candidate/source eligibility before any server.
+            source_lease.enter_context(native_execution.locked(spec, end))
+            owner = server_scope.enter_context(
+                native_execution.running(root, journal, spec, end)
+            )
+            verifier = NativeAuthorityVerifier(
+                root,
+                run_id,
+                deadline=end,
+                collected_source=collected_source,
+                native_execution=native_execution,
+            )
+        inputs = outputs = 0
+        for cell, (_, _, _) in enumerate(_schedule()):
+            stage = verifier.stage(cell)
+            payload = verifier.payload(stage)
+            _remaining(end)
+            journal.append(
+                "quote_preparing",
+                cell=cell,
+                request_sha256=fingerprint(stage),
+                payload_sha256=fingerprint(payload),
+            )
+            quoted = tokenize_prompt(
+                payload["prompt"],
+                spec,
+                end,
+                root / "quotes" / f"{cell:02d}",
+                payload_sha256=fingerprint(payload),
+            )
+            journal.append(
+                "quote_ready",
+                cell=cell,
+                receipt_sha256=quoted["receipt_sha256"],
+                prompt_sha256=hashlib.sha256(payload["prompt"].encode()).hexdigest(),
+                payload_sha256=fingerprint(payload),
+                spec_sha256=fingerprint(spec),
+                elapsed_seconds=300 - _remaining(end),
+            )
+            policy = verifier.capacity(cell, payload)
+            caps = native_interpretation._capabilities(policy) if is_native else None
+            if not is_native:
+                document = verifier.document(stage, payload)
+                backend = TokenQuotedRecordedBackend(
+                    document,
+                    capacity_policy=policy,
+                    case_deadline=end,
+                    interface=INTERFACE,
+                )
+                quote = backend.quote(stage, payload)
+            else:
+                quote = policy.reservation(stage, payload, caps, deadline=end)
+            need(
+                inputs + quote.input_tokens <= 32000
+                and outputs + quote.output_tokens <= 8000,
+                "Shared capacity exhausted",
+            )
+            budget = replace(
+                Budget(),
+                max_calls=16 - cell,
+                max_input_tokens=32000 - inputs,
+                max_output_tokens=8000 - outputs,
+                max_seconds=_remaining(end),
+            )
+            path = root / "cells" / f"{cell:02d}"
+            _prepare_parent(path.parent)
+            with StudySession(
+                path,
+                budget=budget,
+                configuration=_caller(
+                    run_id, cell, collected_source, native_execution, spec
+                ),
+                resources=_resources(is_native),
+                required_resources=_required(is_native),
+                capacity_policy=policy,
+            ) as session:
+                _remaining(end)
+                budget = replace(budget, max_seconds=end - session.started)
+                need(0 < budget.max_seconds <= 300, "Invalid shared child deadline")
+                session.budget = decode(Budget, encode(budget))
+                if is_native:
+                    backend = native_interpretation.TokenQuotedNativeBackend(
+                        endpoint=verifier.context()["endpoint"],
+                        model_alias=native_mode.ALIAS,
+                        model_provenance=verifier.context()["model_provenance"],
+                        owner=owner,
+                        failure_directory=path,
+                        request=stage,
+                        payload=payload,
+                        capacity_policy=policy,
+                        case_deadline=end,
+                    )
+                journal.append(
+                    "cell_reserved",
+                    cell=cell,
+                    allocated_budget=encode(budget),
+                    quote=encode(quote),
+                    request_sha256=fingerprint(stage),
+                    payload_sha256=fingerprint(payload),
+                )
+                inputs += quote.input_tokens
+                outputs += quote.output_tokens
+                session.call_once(
+                    request=stage, payload=payload, backend=backend, verifier=verifier
+                )
+                session.finish()
+            receipt = capture_file(path / "receipt.json", "receipt.json")["sha256"]
+            verify_study(
+                path,
+                expected_receipt_sha256=receipt,
+                verifier=verifier,
+                capacity_policy=policy,
+                deadline=end,
+            )
+            if is_native:
+                verifier.verify_duration(path)
+            journal.append(
+                "cell_accepted",
+                cell=cell,
+                receipt_sha256=receipt,
+                elapsed_seconds=300 - _remaining(end),
+            )
+            accepted.append(cell)
+        server_scope.close()
+        pure_seconds = {}
+        assignment = _assignment()
+        _write(root, "assignment.json", assignment)
+        for method in ("extractive", "lexical"):
+            pure_start = time.monotonic()
+            result = _baseline(verifier, method)
+            _write(root, f"{method}-policy.json", result["policy"])
+            _write(root, f"{method}-result.json", result)
+            _write(
+                root,
+                f"{method}-reviewer.json",
+                _baseline_view(result, assignment["arms"][method]),
+            )
+            pure_seconds[method] = time.monotonic() - pure_start
+            _remaining(end)
+        for cell in (0, 5):
+            stage = verifier.stage(cell)
+            response, _ = _read(root / "cells" / f"{cell:02d}", "response.json")
+            _write(
+                root,
+                stage["arm"] + "-reviewer.json",
+                _interpretation_projection(
+                    stage,
+                    response,
+                    assignment["arms"][stage["arm"]],
+                    collected_source,
+                    native_execution,
+                ),
+            )
+        summary = _summary(
+            run_id,
+            inputs,
+            outputs,
+            300 - _remaining(end),
+            collected_source,
+            native_execution,
+            root,
+        )
+        _write(root, "summary.json", summary)
+        journal.append("integration_completed", summary_sha256=fingerprint(summary))
+        journal.close()
+        sealing_start = time.monotonic()
+        _package_check(package, is_native)
+        collected = collected_source is not None
+        need(
+            _inventory(root, collected, is_native) == _members(collected, is_native),
+            "Unexpected composition inventory",
+        )
+        artifacts = {}
+        for name in sorted(_members(collected, is_native)):
+            _remaining(end)
+            artifacts[name] = encode(capture_file(root / name, name))
+        receipt = dict(
+            schema_version=1,
+            kind=_track(collected_source, native_execution),
+            role="evaluation_only",
+            run_id=run_id,
+            artifacts=artifacts,
+            sealed_elapsed_seconds=300 - _remaining(end),
+            timings=dict(pure_seconds=pure_seconds, sealing_seconds=0.0),
+        )
+        if collected:
+            receipt["timings"]["source_release_seconds"] = 0.0
+        anchor = fingerprint(receipt)
+        result = _verify(
+            root,
+            anchor,
+            prospective_receipt=receipt,
+            deadline=end,
+            source_roots=None
+            if collected_source is None
+            else collected_source.physical_roots(),
+            native_roots=None
+            if not is_native
+            else {"model": native_execution.model_root},
+        )
+        release_started = time.monotonic()
+        source_lease.close()
+        if collected:
+            receipt["timings"]["source_release_seconds"] = (
+                time.monotonic() - release_started
+            )
+        receipt["timings"]["sealing_seconds"] = time.monotonic() - sealing_start
+        receipt["sealed_elapsed_seconds"] = 300 - _remaining(end)
+        anchor = fingerprint(receipt)
+        _write(root, "receipt.json", receipt)
+        published = True
+        _remaining(end)
+        return freeze(
+            dict(
+                encode(result),
+                receipt_sha256=anchor,
+                sealed_elapsed_seconds=receipt["sealed_elapsed_seconds"],
+            )
+        )
+    except BaseException as primary:
+        try:
+            server_scope.__exit__(type(primary), primary, primary.__traceback__)
+        except BaseException as secondary:
+            primary.add_note("Native shutdown: " + type(secondary).__name__)
+        if published:
+            try:
+                need(
+                    _read(root, "receipt.json")[1]["sha256"] == anchor,
+                    "Published receipt changed",
+                )
+                (root / "receipt.json").unlink()
+            except BaseException as secondary:
+                primary.add_note("Receipt withdrawal: " + type(secondary).__name__)
+        for action in (
+            lambda: journal.fail(primary, "authority_four_arm"),
+            lambda: _write(
+                root,
+                "failure.json",
+                dict(
+                    schema_version=1,
+                    role="evaluation_only",
+                    error_class=type(primary).__name__,
+                    accepted_cells=accepted,
+                    **_failure_usage(root, native_execution, primary),
+                    recovery="Inspect only; no automatic retry",
+                ),
+            ),
+        ):
+            try:
+                action()
+            except BaseException as secondary:
+                primary.add_note("Failure retention: " + type(secondary).__name__)
+        raise
+    finally:
+        # Failure retention must never replace the original interruption/error.
+        import sys
+
+        primary = sys.exception()
+        try:
+            source_lease.close()
+        except BaseException as secondary:
+            if primary is None:
+                raise
+            primary.add_note("Source lease cleanup: " + type(secondary).__name__)
+        try:
+            journal.close()
+        except BaseException as secondary:
+            if primary is None:
+                raise
+            primary.add_note("Journal close: " + type(secondary).__name__)
+
+
+def verify(path, sha256, *, deadline=None, source_roots=None, native_roots=None):
+    return _verify(
+        path,
+        sha256,
+        deadline=deadline,
+        source_roots=source_roots,
+        native_roots=native_roots,
+    )
+
+
+def _verify(
+    path,
+    sha256,
+    *,
+    prospective_receipt=None,
+    deadline=None,
+    source_roots=None,
+    native_roots=None,
+):
+    root = Path(path).absolute()
+    end = time.monotonic() + 299 if deadline is None else deadline
+    _remaining(end)
+    if prospective_receipt is None:
+        receipt, proof = _read(root, "receipt.json")
+        need(proof["sha256"] == sha256, "External composition anchor differs")
+    else:
+        receipt = encode(prospective_receipt)
+        need(fingerprint(receipt) == sha256, "Prospective composition anchor differs")
+    native_tracks = (
+        *native_mode.TRACKS,
+        *(n.replace("_native_v2", "_simulated_native_v2") for n in native_mode.TRACKS),
+    )
+    is_native = receipt.get("kind") in native_tracks
+    collected = receipt.get("kind") == COLLECTED_TRACK or (
+        is_native and "_collected_source_" in receipt["kind"]
+    )
+    need(
+        receipt.get("kind") in (TRACK, COLLECTED_TRACK, *native_tracks),
+        "Unknown composition semantics",
+    )
+    need(
+        collected or source_roots is None,
+        "Invented replay cannot select collected-source semantics",
+    )
+    need(
+        is_native or native_roots is None,
+        "Recorded replay cannot select native semantics",
+    )
+    source = CollectedSourceInput.from_run(root, source_roots) if collected else None
+    execution = (
+        native_mode.NativeExecutionConfig.from_run(root, native_roots)
+        if is_native
+        else None
+    )
+    with ExitStack() as leases:
+        if source is not None:
+            leases.enter_context(source.locked(end))
+        if execution is not None:
+            spec, _ = _read(root, "tokenizer-spec.json")
+            leases.enter_context(execution.locked(spec, end))
+        return _verify_bound(
+            root,
+            sha256,
+            prospective_receipt=prospective_receipt,
+            deadline=end,
+            collected_source=source,
+            native_execution=execution,
+        )
+
+
+def _verify_bound(
+    path,
+    sha256,
+    *,
+    prospective_receipt=None,
+    deadline=None,
+    collected_source=None,
+    native_execution=None,
+):
+    root = Path(path).absolute()
+    end = time.monotonic() + 299 if deadline is None else deadline
+    _remaining(end)
+    collected = collected_source is not None
+    is_native = native_execution is not None
+    expected = _members(collected, is_native) | (
+        {"receipt.json"} if prospective_receipt is None else set()
+    )
+    need(
+        _inventory(root, collected, is_native) == expected,
+        "Composition inventory differs",
+    )
+    if prospective_receipt is None:
+        receipt, proof = _read(root, "receipt.json")
+        need(proof["sha256"] == sha256, "External composition anchor differs")
+    else:
+        receipt = encode(prospective_receipt)
+        need(fingerprint(receipt) == sha256, "Prospective composition anchor differs")
+    need(
+        set(receipt)
+        == {
+            "schema_version",
+            "kind",
+            "role",
+            "run_id",
+            "artifacts",
+            "sealed_elapsed_seconds",
+            "timings",
+        }
+        and receipt["schema_version"] == 1
+        and receipt["kind"] == _track(collected_source, native_execution)
+        and receipt["role"] == "evaluation_only"
+        and set(receipt["artifacts"]) == _members(collected, is_native),
+        "Invalid composition receipt",
+    )
+    for name, pin in receipt["artifacts"].items():
+        _remaining(end)
+        need(
+            canonical(capture_file(root / name, name)) == canonical(pin),
+            "Composition artifact changed",
+        )
+    package, _ = _read(root, "package-proof.json")
+    _package_check(package, is_native)
+    events = read_chain(root / "journal.jsonl")
+    run_id = receipt["run_id"]
+    verifier = (
+        NativeAuthorityVerifier(
+            root,
+            run_id,
+            deadline=end,
+            collected_source=collected_source,
+            native_execution=native_execution,
+        )
+        if is_native
+        else AuthorityRecordedVerifier(
+            root, run_id, deadline=end, collected_source=collected_source
+        )
+    )
+    verifier.original()
+    start = _single(events, "integration_started")
+    need(
+        set(start)
+        == {"start_monotonic", "case_end_monotonic", "budget", "package_proof_sha256"}
+        and type(start["start_monotonic"]) in (int, float)
+        and math.isfinite(start["start_monotonic"])
+        and start["case_end_monotonic"] == start["start_monotonic"] + 300
+        and canonical(start["budget"]) == canonical(Budget())
+        and start["package_proof_sha256"] == fingerprint(package),
+        "Shared case identity or budget differs",
+    )
+    ready = _single(events, "retrieval_ready", strategy=STRATEGY)
+    spec_event = _single(events, "tokenizer_ready")
+    spec, _ = _read(root, "tokenizer-spec.json")
+    need(spec_event["spec_sha256"] == fingerprint(spec), "Tokenizer readiness differs")
+    expected_events = [
+        "build_reserved",
+        "integration_started",
+        "retrieval_preparing",
+        "retrieval_ready",
+        "tokenizer_ready",
+    ]
+    if collected:
+        expected_events[2:2] = ["source_preparing", "source_ready"]
+    if is_native:
+        expected_events += [
+            "native_preparing",
+            "server_started",
+            "server_ready",
+            "native_context_qualified",
+        ]
+        native_execution.verify_archive(root, spec, events, successful=True)
+    need(
+        canonical(_single(events, "retrieval_preparing"))
+        == canonical(
+            dict(strategy=STRATEGY, policy_sha256=fingerprint(policy_for(STRATEGY)))
+        ),
+        "Retrieval policy differs",
+    )
+    elapsed = 0
+    if collected:
+        elapsed = _single(events, "source_ready")["elapsed_seconds"]
+        need(
+            type(elapsed) in (int, float)
+            and math.isfinite(elapsed)
+            and 0 <= elapsed < 300,
+            "Collected source preparation timing differs",
+        )
+    for item in (ready, spec_event):
+        value = item["elapsed_seconds"]
+        need(
+            type(value) in (int, float)
+            and math.isfinite(value)
+            and elapsed <= value < 300,
+            "Preparation timing differs",
+        )
+        elapsed = value
+    if is_native:
+        for name in ("native_preparing", "native_context_qualified"):
+            value = _single(events, name)["elapsed_seconds"]
+            need(
+                type(value) in (int, float)
+                and math.isfinite(value)
+                and elapsed <= value < 300,
+                "Native startup resets shared case clock",
+            )
+            elapsed = value
+    inputs = outputs = 0
+    last_remaining = 300 - elapsed
+    for cell in range(6):
+        expected_events += [
+            "quote_preparing",
+            "quote_ready",
+            "cell_reserved",
+            "cell_accepted",
+        ]
+        stage = verifier.stage(cell)
+        payload = verifier.payload(stage)
+        need(
+            canonical(_single(events, "quote_preparing", cell=cell))
+            == canonical(
+                dict(
+                    cell=cell,
+                    request_sha256=fingerprint(stage),
+                    payload_sha256=fingerprint(payload),
+                )
+            ),
+            "Quote preparation differs",
+        )
+        qevent = _single(events, "quote_ready", cell=cell)
+        qelapsed = qevent["elapsed_seconds"]
+        need(
+            type(qelapsed) in (int, float)
+            and math.isfinite(qelapsed)
+            and elapsed <= qelapsed < 300,
+            "Quote setup timing overlaps",
+        )
+        policy = verifier.capacity(cell, payload)
+        reservation = _single(events, "cell_reserved", cell=cell)
+        seconds = reservation["allocated_budget"]["max_seconds"]
+        need(
+            type(seconds) in (int, float)
+            and math.isfinite(seconds)
+            and 0 < seconds <= min(last_remaining, 300 - qelapsed) + 1e-6,
+            "Shared deadline reset",
+        )
+        budget = replace(
+            Budget(),
+            max_calls=16 - cell,
+            max_input_tokens=32000 - inputs,
+            max_output_tokens=8000 - outputs,
+            max_seconds=seconds,
+        )
+        path = root / "cells" / f"{cell:02d}"
+        config, _ = _read(path, "configuration.json")
+        from .session import BackendCapabilities
+
+        caps = decode(BackendCapabilities, config["backend_capabilities"])
+        quote = policy.reservation(stage, payload, caps, deadline=end)
+        need(
+            canonical(reservation)
+            == canonical(
+                dict(
+                    cell=cell,
+                    allocated_budget=encode(budget),
+                    quote=encode(quote),
+                    request_sha256=fingerprint(stage),
+                    payload_sha256=fingerprint(payload),
+                )
+            ),
+            "Allocation differs",
+        )
+        need(
+            inputs + quote.input_tokens <= 32000
+            and outputs + quote.output_tokens <= 8000,
+            "Shared token capacity exceeded",
+        )
+        need(
+            canonical(config["budget"]) == canonical(decode(Budget, encode(budget)))
+            and canonical(config["caller_configuration"])
+            == canonical(
+                _caller(run_id, cell, collected_source, native_execution, spec)
+            ),
+            "Child allocation differs",
+        )
+        accepted = _single(events, "cell_accepted", cell=cell)
+        retained, _ = _read(path, "request.json")
+        need(
+            canonical(retained) == canonical(stage),
+            "Retained child request differs before replay",
+        )
+        verify_study(
+            path,
+            expected_receipt_sha256=accepted["receipt_sha256"],
+            verifier=verifier,
+            capacity_policy=policy,
+            deadline=end,
+        )
+        report, _ = _read(path, "report.json")
+        if is_native:
+            verifier.verify_duration(path)
+        elapsed = accepted["elapsed_seconds"]
+        need(
+            type(elapsed) in (int, float)
+            and math.isfinite(elapsed)
+            and 300 - seconds + report["elapsed_seconds"] <= elapsed + 1e-6
+            and qelapsed <= elapsed < 300,
+            "Accepted cell timing differs",
+        )
+        last_remaining = min(seconds - report["elapsed_seconds"], 300 - elapsed)
+        inputs += quote.input_tokens
+        outputs += quote.output_tokens
+    if is_native:
+        expected_events += ["server_terminal", "native_stopped"]
+        value = _single(events, "native_stopped")["elapsed_seconds"]
+        need(
+            type(value) in (int, float)
+            and math.isfinite(value)
+            and elapsed <= value < 300,
+            "Native shutdown resets shared case clock",
+        )
+        elapsed = value
+    assignment, _ = _read(root, "assignment.json")
+    need(canonical(assignment) == canonical(_assignment()), "Assignment differs")
+    for method in ("extractive", "lexical"):
+        result = _baseline(verifier, method)
+        expected = {
+            "policy": result["policy"],
+            "result": result,
+            "reviewer": _baseline_view(result, assignment["arms"][method]),
+        }
+        for kind, value in expected.items():
+            actual, _ = _read(root, f"{method}-{kind}.json")
+            need(
+                canonical(actual) == canonical(value),
+                "Pure baseline or reviewer view differs",
+            )
+    for cell in (0, 5):
+        stage = verifier.stage(cell)
+        response, _ = _read(root / "cells" / f"{cell:02d}", "response.json")
+        view, _ = _read(root, stage["arm"] + "-reviewer.json")
+        need(
+            canonical(view)
+            == canonical(
+                _interpretation_projection(
+                    stage,
+                    response,
+                    assignment["arms"][stage["arm"]],
+                    collected_source,
+                    native_execution,
+                )
+            ),
+            "Interpretation reviewer view differs",
+        )
+    summary, _ = _read(root, "summary.json")
+    total = summary["elapsed_seconds"]
+    need(
+        type(total) in (int, float) and math.isfinite(total) and elapsed <= total < 300,
+        "Composition total time differs",
+    )
+    need(
+        canonical(summary)
+        == canonical(
+            _summary(
+                run_id, inputs, outputs, total, collected_source, native_execution, root
+            )
+        ),
+        "Composition summary differs",
+    )
+    sealed = receipt["sealed_elapsed_seconds"]
+    need(
+        type(sealed) in (int, float)
+        and math.isfinite(sealed)
+        and total <= sealed < 300,
+        "Sealing time exceeds shared deadline",
+    )
+    timings = receipt["timings"]
+    need(
+        set(timings)
+        == (
+            {"pure_seconds", "sealing_seconds"}
+            | ({"source_release_seconds"} if collected else set())
+        )
+        and set(timings["pure_seconds"]) == {"extractive", "lexical"},
+        "Incomplete composition timing",
+    )
+    values = [timings["sealing_seconds"], *timings["pure_seconds"].values()]
+    if collected:
+        values.append(timings["source_release_seconds"])
+        need(
+            type(timings["source_release_seconds"]) in (int, float)
+            and math.isfinite(timings["source_release_seconds"])
+            and 0 <= timings["source_release_seconds"] <= timings["sealing_seconds"],
+            "Collected source release timing differs",
+        )
+    need(
+        all(type(v) in (int, float) and math.isfinite(v) and v >= 0 for v in values)
+        and sum(timings["pure_seconds"].values()) <= total
+        and timings["sealing_seconds"] <= sealed - total + 1e-6,
+        "Invalid pure or sealing duration",
+    )
+    expected_events.append("integration_completed")
+    need(
+        [e["event"] for e in events] == expected_events
+        and events[-1]["details"] == freeze(dict(summary_sha256=fingerprint(summary))),
+        "Composition event order or summary differs",
+    )
+    for name, pin in receipt["artifacts"].items():
+        _remaining(end)
+        need(
+            canonical(capture_file(root / name, name)) == canonical(pin),
+            "Composition changed during replay",
+        )
+    if prospective_receipt is None:
+        need(
+            _read(root, "receipt.json")[1]["sha256"] == sha256,
+            "Receipt changed during replay",
+        )
+    _remaining(end)
+    return freeze(dict(summary, receipt_sha256=sha256, sealed_elapsed_seconds=sealed))
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    commands = parser.add_subparsers(dest="command", required=True)
+    run = commands.add_parser("smoke")
+    run.add_argument("--output", required=True)
+    run.add_argument("--tokenizer-authority", required=True)
+    run.add_argument("--tokenizer-roots", required=True)
+    run.add_argument("--collected-authority")
+    run.add_argument("--collected-authority-sha256")
+    run.add_argument("--collected-category")
+    run.add_argument("--source-roots")
+    check = commands.add_parser("verify")
+    check.add_argument("--path", required=True)
+    check.add_argument("--sha256", required=True)
+    check.add_argument("--source-roots")
+    check.add_argument("--native-roots")
+    args = parser.parse_args(argv)
+    if args.command == "verify":
+        source_roots = None
+        if args.source_roots:
+            source_roots, _ = _read(
+                Path(args.source_roots).absolute().parent, Path(args.source_roots).name
+            )
+        native_roots = None
+        if args.native_roots:
+            native_roots, _ = _read(
+                Path(args.native_roots).absolute().parent, Path(args.native_roots).name
+            )
+        result = verify(
+            args.path, args.sha256, source_roots=source_roots, native_roots=native_roots
+        )
+    else:
+        authority, _ = _read(
+            Path(args.tokenizer_authority).absolute().parent,
+            Path(args.tokenizer_authority).name,
+        )
+        roots, _ = _read(
+            Path(args.tokenizer_roots).absolute().parent,
+            Path(args.tokenizer_roots).name,
+        )
+        source = None
+        supplied = [
+            args.collected_authority,
+            args.collected_authority_sha256,
+            args.collected_category,
+            args.source_roots,
+        ]
+        need(
+            not any(supplied) or all(supplied),
+            "All collected source options must be supplied together",
+        )
+        if all(supplied):
+            from tether_engine.contracts import Category
+
+            source_roots, _ = _read(
+                Path(args.source_roots).absolute().parent, Path(args.source_roots).name
+            )
+            source = CollectedSourceInput(
+                args.collected_authority,
+                args.collected_authority_sha256,
+                source_roots,
+                Category(args.collected_category),
+            )
+        result = smoke(args.output, authority, roots, collected_source=source)
+    print(json.dumps(encode(result), indent=2))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

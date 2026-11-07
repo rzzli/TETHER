@@ -1,9 +1,0 @@
-Traceback (most recent call last):
-  File "D:\Projects\drug_target_agents\tools\science\freeze_p09_runtime_bundle.py", line 90, in <module>
-    main()
-  File "D:\Projects\drug_target_agents\tools\science\freeze_p09_runtime_bundle.py", line 86, in main
-    freeze(args.draft.resolve(), args.output, args.review, args.review_sha256, args.record, args.draft_sha256)
-  File "D:\Projects\drug_target_agents\tools\science\freeze_p09_runtime_bundle.py", line 38, in freeze
-    not checked["unresolved_findings"] and not checked["privacy_findings"], "A passing independent allowlist review is required")
-        ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-KeyError: 'unresolved_findings'

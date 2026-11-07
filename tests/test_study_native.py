@@ -10,11 +10,11 @@ import unittest
 from types import SimpleNamespace
 from unittest.mock import Mock, patch
 
-from asof.agents import Usage
-from asof.serde import ContractError, canonical, encode, parse_json
-from asof.study import native
-from asof.study.diagnostic import load_synthetic_request, prepare_payload
-from asof.study.session import _identity
+from tether_engine.agents import Usage
+from tether_engine.serde import ContractError, canonical, encode, parse_json
+from tether_engine.study import native
+from tether_engine.study.diagnostic import load_synthetic_request, prepare_payload
+from tether_engine.study.session import _identity
 
 
 class Response:

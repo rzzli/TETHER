@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from asof.serde import canonical
+from tether_engine.serde import canonical
 from tether._process import ProcessLimits, supervise_command
 from experiments.scifact.baseline import LEARNER_SETTINGS, VECTORIZER_SETTINGS, SEED
 from experiments.scifact.tether_adapter import verify_session

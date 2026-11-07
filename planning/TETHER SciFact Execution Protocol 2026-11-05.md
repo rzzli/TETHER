@@ -1,7 +1,7 @@
 # TETHER SciFact execution protocol — BG03
 
 **Execution checkpoint:** preparation and fictional component qualification have
-advanced since this protocol was written; see the [current status](review-assets/tether-scifact-20261105/STATUS.md).
+advanced since this protocol was written; see the [current status](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-scifact-20261105/STATUS.md).
 The acquisition table and final paragraph below retain the plan-time state.
 They are not the current implementation inventory. Evaluation rules, model/grid,
 denominators and completion criteria remain unchanged.
@@ -21,7 +21,7 @@ Independent semantic judging, revision loops, dense retrieval, MultiVerS and cal
 
 ## 2. Pinned acquisition checkpoint and unresolved inputs
 
-Root acquired the following public assets separately; this protocol performs no download or dataset extraction. [Acquisition checkpoint](../data/raw/scifact_public/20261105-attempt01/COMPLETE.json) says `downloaded_not_parsed`, with references restricted pending projection. The subsequent [acquisition audit](review-assets/tether-scifact-20261105/ACQUISITION-20261105.json) verifies original bytes/receipts and records archive-member metadata; task-content parsing remains pending.
+Root acquired the following public assets separately; this protocol performs no download or dataset extraction. Acquisition checkpoint (local artifact: `data/raw/scifact_public/20261105-attempt01/COMPLETE.json`) says `downloaded_not_parsed`, with references restricted pending projection. The subsequent [acquisition audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-scifact-20261105/ACQUISITION-20261105.json) verifies original bytes/receipts and records archive-member metadata; task-content parsing remains pending.
 
 | Asset | Retained identity | Current evidence / remaining gate |
 |---|---|---|
@@ -79,7 +79,7 @@ Train the two learners once on fit data; tune the fixed nine settings without re
 
 ## 6. Native integration seam and scoped TETHER adapter
 
-Current [StudySession](../src/asof/study/session.py) is an LLM cell interface: its capacity checks require `prompt`, `n_predict` and conservative token reservations. **Do not implement a sklearn backend by inventing prompts, token counts, tokenizer identities or model usage.** `Case(T1/T6)` also must not receive fake target/indication IDs.
+Current [StudySession](../src/tether_engine/study/session.py) is an LLM cell interface: its capacity checks require `prompt`, `n_predict` and conservative token reservations. **Do not implement a sklearn backend by inventing prompts, token counts, tokenizer identities or model usage.** `Case(T1/T6)` also must not receive fake target/indication IDs.
 
 Implement a separate native-task adapter, initially under `experiments/scifact/`, with a versioned contract and explicit product imports. Proposed components are `data_views.py`, `split.py`, `baseline.py`, `native_contract.py`, `tether_adapter.py`, `run.py` and `evaluate.py`; these are intended files, not existing commands or completed code.
 
@@ -87,7 +87,7 @@ The native request identifies benchmark release, claim ID/text hash, approved co
 
 Reuse actual TETHER primitives for stable source reads, canonical serialization, target-free `Snapshot`/`SourceNode`/`Availability`, `InputGraph`, `catalog_index`/`check_role`, hash-chained `RunJournal`, trusted code/package proofs and exclusive atomic publication. `source_fact_sources.py` already demonstrates calling `InputGraph.exclusion` with an object containing `cutoff`; reuse the graph, **not that compiler's therapeutic-task schema**. Existing `InputGraph` accepts only `agent_evidence`/`reference`, so do not invent `training_reference` or `model` roles and expect them to pass.
 
-Use `Snapshot`/`InputGraph` to admit original receipt-bound container bytes in the trusted **preparation** phase under an explicit phase/use grant. Low-level `reference` is not permission for arbitrary consumers: the new native authority restricts purpose and fields. Runtime prediction receives only sealed products and fitted parameters, with actual information-dependency parents retained. The reviewed projection verifier reconciles those products with archive/member proofs without fabricating child download receipts. This is a new scoped policy, not an exception silently supplied by the existing graph. The [architecture peer note](<../research_notes/TETHER benchmark priorities and methods/scifact-native-seam.md>) details this unimplemented seam.
+Use `Snapshot`/`InputGraph` to admit original receipt-bound container bytes in the trusted **preparation** phase under an explicit phase/use grant. Low-level `reference` is not permission for arbitrary consumers: the new native authority restricts purpose and fields. Runtime prediction receives only sealed products and fitted parameters, with actual information-dependency parents retained. The reviewed projection verifier reconciles those products with archive/member proofs without fabricating child download receipts. This is a new scoped policy, not an exception silently supplied by the existing graph. The [architecture peer note](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/research_notes/TETHER%20benchmark%20priorities%20and%20methods/scifact-native-seam.md) details this unimplemented seam.
 
 Keep three separately typed proof domains and join them in the run receipt:
 

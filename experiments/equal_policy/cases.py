@@ -97,7 +97,7 @@ def source_documents(base="core_t1"):
         relative_path="source.json", sha256="0" * 64, bytes=0, url="https://example.invalid/source-1",
         status="completed", completed_at_utc="2021-01-01T00:00:00+00:00")
     scorer = dict(schema_version=2, model_id="fictional-logistic-v1", kind="synthetic_demo",
-        feature_schema="asof-features-v2", aggregation="mean_of_unique_dependency_groups_v2", endpoint="phase_2_to_3",
+        feature_schema="tether-features-v2", aggregation="mean_of_unique_dependency_groups_v2", endpoint="phase_2_to_3",
         horizon_months=24, phases=[2], modalities=["small_molecule"], intended_actions=["inhibit"],
         target_namespace_versions=["fictional-target-v1"], indication_namespace_versions=["fictional-disease-v1"],
         training_origin_max="2022-01-01", training_label_available_max="2023-01-01",
@@ -328,7 +328,7 @@ def case_specs():
         S("EP094", "Local structured archive verifies without a live model", ["EP-EXEC-02", "EP-EXEC-04"],
           operation="verify_run", observed=scored, recipe={"local_config": True, "sealed_producer": "local_valid", "sealed_mutation": "none"}),
         S("EP095", "Shared-scientific-field transport preserves local request semantics", ["EP-WIRE-01", "EP-EXEC-02"],
-          operation="verify_run", observed=scored, changes=[C("local_model", ["retrieval", "wire_format"], "asof-shared-scientific-fields-v1")],
+          operation="verify_run", observed=scored, changes=[C("local_model", ["retrieval", "wire_format"], "tether-shared-scientific-fields-v1")],
           recipe={"local_config": True, "sealed_producer": "local_valid", "sealed_mutation": "none"}),
         S("EP096", "Malformed local response retains an honest failed archive", ["EP-EXEC-02", "EP-EXEC-04", "EP-FAIL-01"],
           operation="verify_run", observed={"selected_observation_ids": [], "probability_is_null": True, "accounting_basis": "quoted_upper_bound_not_measured"},

@@ -4,7 +4,7 @@ import hashlib
 from unittest.mock import patch
 import unittest
 
-from asof.serde import ContractError, read_json, sha256_file, write_json
+from tether_engine.serde import ContractError, read_json, sha256_file, write_json
 from tools.science import prospective_capacity as capacity
 from tools.science import prospective_transport as transport
 from tools.science import prospective_frame as frame

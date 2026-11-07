@@ -15,9 +15,9 @@ import re
 import string
 from uuid import UUID
 
-from asof.atomic import publish_bytes
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, canonical, freeze, parse_json, safe_child
+from tether_engine.atomic import publish_bytes
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, canonical, freeze, parse_json, safe_child
 
 REFUSE_CHOICE = "Insufficient information to answer the question"
 SEED = 20261106

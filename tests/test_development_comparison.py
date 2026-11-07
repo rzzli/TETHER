@@ -1,3 +1,5 @@
+import json
+from tools.history import read_checkpoint
 from copy import deepcopy
 from dataclasses import replace
 from pathlib import Path
@@ -5,9 +7,9 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.agents import EvidenceView, SpecialistRequest
-from asof.contracts import Category
-from asof.serde import ContractError, canonical, encode, fingerprint, read_json, sha256_file, write_json
+from tether_engine.agents import EvidenceView, SpecialistRequest
+from tether_engine.contracts import Category
+from tether_engine.serde import ContractError, canonical, encode, fingerprint, read_json, sha256_file, write_json
 from tools.framework.compare_development import (ablation_masks, analyze_attempt,
     checked_request, compare, pilot_wire_format, select_baseline, selection_comparison, validate_protocol, verify_comparison)
 
@@ -38,7 +40,7 @@ def entry(req=None, selected=('id-0',)):
 
 class DevelopmentComparisonTests(unittest.TestCase):
     def test_protocol_caps_budget_and_duplicate_groups_checked(self):
-        protocol = read_json(Path('planning/protocols/development-comparison-v0.1.json'))
+        protocol = json.loads(read_checkpoint('planning/protocols/development-comparison-v0.1.json'))
         validate_protocol(protocol)
         for field, value in [('selection_cap', 4), ('new_model_calls', 1), ('clinical_labels_read', True), ('baselines', [])]:
             changed = deepcopy(protocol); changed[field] = value
@@ -49,7 +51,7 @@ class DevelopmentComparisonTests(unittest.TestCase):
     def test_full_report_failure_retention_and_output_reservation(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary); pilot = root / 'pilot'; case = pilot / 'fixture'; case.mkdir(parents=True)
-            protocol = read_json(Path('planning/protocols/development-comparison-v0.1.json'))
+            protocol = json.loads(read_checkpoint('planning/protocols/development-comparison-v0.1.json'))
             protocol['pilots'] = [{'id': 'fixture_group', 'path': str(pilot), 'case_count': 1, 'seal_sha256': 'a' * 64}]
             protocol_path = root / 'protocol.json'; write_json(protocol_path, protocol)
             write_json(pilot / 'pilot-report.json', {'cases': [{'case_id': 'fixture', 'receipt_sha256': 'b' * 64}]})
@@ -135,7 +137,7 @@ class DevelopmentComparisonTests(unittest.TestCase):
         for field, value in [('observation_id', 'other'), ('statement', 'changed'), ('target_id', 'wrong'),
                              ('category', 'literature'), ('features', {'unvalidated': 1}), ('status', 'unavailable')]:
             req = request(); data = encode(req)
-            from asof.serde import parse_json
+            from tether_engine.serde import parse_json
             record = parse_json(data['evidence'][0]['scientific_record_json']); record[field] = value
             data['evidence'][0]['scientific_record_json'] = canonical(record).decode()
             with self.assertRaises(ContractError): checked_request(data)
@@ -144,7 +146,7 @@ class DevelopmentComparisonTests(unittest.TestCase):
         req = request()
         with self.assertRaises(ContractError):
             checked_request(encode(replace(req, evidence=(req.evidence[0], req.evidence[0]))))
-        from asof.serde import parse_json
+        from tether_engine.serde import parse_json
         case = parse_json(req.case_json); case['task'] = 'T1'
         with self.assertRaises(ContractError): checked_request(encode(replace(req, case_json=canonical(case).decode())))
 

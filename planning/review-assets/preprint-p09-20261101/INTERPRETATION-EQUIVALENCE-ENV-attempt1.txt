@@ -1,6 +1,0 @@
-Supplemental fixture-equivalence probe did not start successfully.
-The new exec process omitted the explicit workspace TEMP/TMP overrides used by all targeted test runs.
-Default sandbox TEMP failed at shutil.copytree -> os.makedirs(inputs), PermissionError WinError5.
-This is a different stage and location from the retained full-gate case.json os.replace error.
-No equivalence report was created, so the immediately dependent summary command also stopped with FileNotFoundError.
-Corrective action: rerun only the supplemental probe with a fresh explicit D: workspace TEMP/TMP; do not retry or suppress a production write failure.

@@ -3,37 +3,37 @@
 31 October 2026, America/Los_Angeles. P03 is accepted at `77d2455`. **P04 inputs,
 references and execution mechanics are prepared; the model comparison has not
 run and P04 remains incomplete.** The exact prospective protocol is
-[EXECUTION-PROTOCOL-READY-v1.json](review-assets/preprint-p04-20261031/EXECUTION-PROTOCOL-READY-v1.json),
+[EXECUTION-PROTOCOL-READY-v1.json](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p04-20261031/EXECUTION-PROTOCOL-READY-v1.json),
 SHA-256 `9cc1f688624f8a4803c200fabccb390ab1ee45bfbe04d17a1a17a83ccdeceeb4`.
 
 Two original fixed-pack contexts, CD276/non-small-cell lung carcinoma and
 OSMR/ulcerative colitis, are exposed development material. A controlled empty
 CD276 input is artificial missingness, not a third independent biological case.
 The pilot schedules twelve cells: literal assembly, always-abstain, one-call
-plain reporting and a declared two-stage AsOf reporting adaptation for each
+plain reporting and a declared two-stage TETHER reporting adaptation for each
 condition. This is not full T6 interpretation or full Virtual Biotech reproduction.
 
 ## Verified preparation
 
-- [Original-only inputs](review-assets/preprint-p04-20261031/GENERATION-INPUTS-v1.json):
+- [Original-only inputs](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p04-20261031/GENERATION-INPUTS-v1.json):
   111 original files/8,216,226,905 bytes authenticated; first two distinct lexical
   evidence IDs per real context selected from the full pinned 100-file Europe PMC
   inventory. Generation packets sealed before references; no expected-answer
   artifacts or response-derived data entered them.
-- [Separate references](review-assets/preprint-p04-20261031/REFERENCES-v1.json):
+- [Separate references](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p04-20261031/REFERENCES-v1.json):
   three compilations and three source-inclusive replays pass. Each real context
   has eight fields, six answerable facts and four answerable primary groups;
   missing context has none. All references are evaluator-only. No measurement
   field is studied, and no clinical or biological-truth endpoint is inferred.
-- [Independent source audit](review-assets/preprint-p04-20261031/INPUT-REFERENCE-AUDIT-v1.json):
+- [Independent source audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p04-20261031/INPUT-REFERENCE-AUDIT-v1.json):
   1,779 finite checks pass, including eight original evidence/mapping locators,
   seven selected original/receipt hashes, seals, roles, task/source bindings and
   missingness. Global lexical minimality, 188/5 match counts and mapping uniqueness
   were not independently rescanned.
-- [Targeted tests](review-assets/preprint-p04-20261031/TARGETED-TESTS-v1.json):
+- [Targeted tests](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p04-20261031/TARGETED-TESTS-v1.json):
   217 tests pass with zero skips, covering all new source-fact modules plus
   selected existing process/wire/validation regressions; not the complete suite.
-- [Installed qualification](review-assets/preprint-p04-20261031/INSTALLED-SMOKE-v1.json):
+- [Installed qualification](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p04-20261031/INSTALLED-SMOKE-v1.json):
   fresh dependency-free wheel outside the checkout, no Arrow, twelve installed
   code pins matched, three mock client dispatches and correct accounting. Actual
   model/server/HTTP calls remained zero.

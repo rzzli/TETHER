@@ -7,12 +7,12 @@ from contextlib import redirect_stdout
 from pathlib import Path
 from unittest.mock import patch
 
-from asof import ingest
-from asof.cli import main, parser
-from asof.contracts import Case
-from asof.ingest import PILOT, _case_definitions, _load_case_pack, build_snapshot
-from asof.journal import inspect_run, read_chain
-from asof.serde import ContractError, decode, read_json, sha256_file, write_json
+from tether_engine import ingest
+from tether_engine.cli import main, parser
+from tether_engine.contracts import Case
+from tether_engine.ingest import PILOT, _case_definitions, _load_case_pack, build_snapshot
+from tether_engine.journal import inspect_run, read_chain
+from tether_engine.serde import ContractError, decode, read_json, sha256_file, write_json
 from tests import test_v02_ingest as fixtures
 
 
@@ -79,7 +79,7 @@ class CasePackContractTests(unittest.TestCase):
         args = ["build-snapshot", "--manifest", "input.json", "--catalog", "catalog.json",
                 "--output", "output"]
         self.assertIsNone(parser().parse_args(args).cases)
-        with patch("asof.ingest.build_snapshot", return_value={"status": "fixture"}) as build:
+        with patch("tether_engine.ingest.build_snapshot", return_value={"status": "fixture"}) as build:
             with redirect_stdout(io.StringIO()):
                 self.assertEqual(main(args + ["--cases", "cases.json", "--cases-sha256", "1" * 64]), 0)
         self.assertEqual(build.call_args.kwargs["cases_path"], Path("cases.json"))
@@ -179,7 +179,7 @@ class ScienceCaseBuildTests(unittest.TestCase):
 
     def test_initial_anchor_failure_is_preserved_before_source_inspection(self):
         output = self.root / "bad-anchor"
-        with patch("asof.ingest._inspect") as inspect:
+        with patch("tether_engine.ingest._inspect") as inspect:
             with self.assertRaisesRegex(ContractError, "frozen SHA-256"):
                 build_snapshot(self.manifest, self.catalog, output, cases_path=self.case_file(), cases_sha256="0" * 64)
         inspect.assert_not_called()
@@ -195,7 +195,7 @@ class ScienceCaseBuildTests(unittest.TestCase):
             path.write_bytes(original + b" \n")
             return answer
         output = self.root / "mutated"
-        with patch("asof.ingest._inspect", side_effect=mutate):
+        with patch("tether_engine.ingest._inspect", side_effect=mutate):
             with self.assertRaisesRegex(ContractError, "Case pack changed"):
                 build_snapshot(self.manifest, self.catalog, output, cases_path=path)
         self.assertEqual((output / "case-pack.json").read_bytes(), original)
@@ -209,7 +209,7 @@ class ScienceCaseBuildTests(unittest.TestCase):
         def mutate(*args):
             archive(*args)
             (output / "case-pack.json").write_bytes(b"{}")
-        with patch("asof.ingest._archive_receipts", side_effect=mutate):
+        with patch("tether_engine.ingest._archive_receipts", side_effect=mutate):
             with self.assertRaisesRegex(ContractError, "Case pack changed"):
                 build_snapshot(self.manifest, self.catalog, output, cases_path=path)
         self.assertEqual(read_json(output / "build-failure.json")["stage"], "source_recheck")

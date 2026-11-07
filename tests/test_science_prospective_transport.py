@@ -10,9 +10,10 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, fingerprint, read_json, sha256_file, write_json
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, fingerprint, read_json, sha256_file, write_json
 from tools.science import prospective_frame as frame
+from tests.prospective_fixtures import restore_protocol_inputs, archived_json
 from tools.science import prospective_transport as transport
 
 REPO = Path(__file__).resolve().parents[1]
@@ -47,13 +48,7 @@ class ProspectiveTransportTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
-        protocol = read_json(REPO / frame.PROTOCOL)
-        for relative in [frame.PROTOCOL] + [p['path'] for p in protocol['parents']]:
-            target = self.root / relative
-            target.parent.mkdir(parents=True, exist_ok=True)
-            source = (REPO / 'tests/fixtures/prospective-frame-metadata' / Path(relative).name
-                      if relative.startswith(frame.METADATA) else REPO / relative)
-            shutil.copyfile(source, target)
+        self.source_bytes = restore_protocol_inputs(self.root)
         for module, name in ((frame, '_utc_now'), (transport, '_now')):
             clock = patch.object(module, name, return_value=NOW)
             clock.start()

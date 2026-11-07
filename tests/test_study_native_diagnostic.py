@@ -8,10 +8,10 @@ from types import SimpleNamespace
 import unittest
 from unittest.mock import Mock, patch
 
-from asof.serde import ContractError, canonical
-from asof.study import native_diagnostic as diagnostic
-from asof.study import native
-from asof.study.diagnostic import (
+from tether_engine.serde import ContractError, canonical
+from tether_engine.study import native_diagnostic as diagnostic
+from tether_engine.study import native
+from tether_engine.study.diagnostic import (
     load_synthetic_request,
     prepare_payload,
     request_from_payload,

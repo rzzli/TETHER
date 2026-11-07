@@ -13,8 +13,8 @@ respectively; all twelve references and 180 facts verified against 24 distinct
 original rows. Sources are contemporary and receipt-bound, not historically
 qualified or independently verified studies.
 
-The [original-derived register](review-assets/preprint-p05-20261031/REGISTER-MANIFEST-v1.json)
-passes 772 builder checks and [478 separate root checks](review-assets/preprint-p05-20261031/REGISTER-ROOT-AUDIT-v1.json)
+The [original-derived register](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/REGISTER-MANIFEST-v1.json)
+passes 772 builder checks and [478 separate root checks](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/REGISTER-ROOT-AUDIT-v1.json)
 with all 24 records physically reread. It retains 108/132 answerable identity
 slots, 40/48 answerable measurement slots and 32 explicit native nulls. The
 twelve measurement groups have two answerable components in one case, three
@@ -31,11 +31,11 @@ Peer/root review corrected output-reservation, trusted-root and terminal
 serialization/cleanup defects before execution. A final root integration probe
 reproduced an auditor list/dictionary mismatch; its failed regression is retained
 and the corrected mapping plus malformed/missing-key checks pass in the final
-25-method suite. See the [correction record](review-assets/preprint-p05-20261031/AUDITOR-MAPPING-CORRECTION-v1.json).
+25-method suite. See the [correction record](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/AUDITOR-MAPPING-CORRECTION-v1.json).
 The earlier 23-test auditor acceptance and non-authorizing READY draft remain
 preserved; neither produced a native study run.
 
-The [persistent fictional qualification](review-assets/preprint-p05-20261031/FICTIONAL-QUALIFICATION-v1.json)
+The [persistent fictional qualification](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/FICTIONAL-QUALIFICATION-v1.json)
 passes fourteen invented JSON/core scenarios and 42 decisions, with zero native
 outputs. All 24 native output slots and 48 native decisions remain unexecuted.
 Native Parquet column guards were not weakened to support generic JSON
@@ -46,7 +46,7 @@ at its resource checkpoints. Physical I/O/platform cost are unmeasured.
 
 ## Frozen execution contract
 
-[Root READY](review-assets/preprint-p05-20261031/EXPERIMENT-READY-v1.json) byte SHA:
+[Root READY](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/EXPERIMENT-READY-v1.json) byte SHA:
 `49c2ce672356bfcfd572a7b6c963c56bd5c96e3d042a9972f2c36434ebb8de3f`.
 It binds the non-executable design, all 71 runtime/test code pins, seven extra
 auditor/analysis/helper/test pins, environment, source cutoff, input/reference
@@ -54,7 +54,7 @@ seals and audits, register counts, all native hashes, fictional fixtures,
 qualification and schedule. Root promoted the separately retained v2 metadata
 draft only after checking every input descriptor and current code hash.
 
-The [design](review-assets/preprint-p05-20261031/EXPERIMENT-DESIGN-v1.md) fixes
+The [design](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/EXPERIMENT-DESIGN-v1.md) fixes
 38 output cells and 90 paired verification decisions: twelve native literal
 reports, twelve abstention controls and fourteen invented valid/fault scenarios.
 FULL, WITHOUT_WRAPPER and WIRE_ONLY are diagnostic guard policies over retained
@@ -96,7 +96,7 @@ probabilities remain null and prediction features empty.
 Keep 65 missing interpretation inputs, 36 unqualified clinical labels, 17/32
 observable primary registry states and 0/12 jointly ready clinical packages
 distinct. Reference preparation memory remains unmeasured; the new instrumentation
-cannot recover it. The [release replay prerequisites](review-assets/preprint-p05-20261031/RELEASE-REPLAY-PREREQUISITES-v1.md)
+cannot recover it. The [release replay prerequisites](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/RELEASE-REPLAY-PREREQUISITES-v1.md)
 retain local-root/exact-environment portability limits. Bundled document/chart
 tools are available for the later paper without new installation.
 

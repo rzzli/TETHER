@@ -1,4 +1,4 @@
-"""Bounded top-one selection and legacy-byte regressions; no native model runs."""
+"""Bounded top-one selection and current-byte regressions; no native model runs."""
 from copy import deepcopy
 from dataclasses import replace
 import io
@@ -7,14 +7,14 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from asof.agents import EvidenceView, Selection, SpecialistRequest, Usage
-from asof.chrono import load_snapshot
-from asof.contracts import Category
-from asof.local_model import (LocalSelectionBackend, parse_selection, selection_payload,
+from tether_engine.agents import EvidenceView, Selection, SpecialistRequest, Usage
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Category
+from tether_engine.local_model import (LocalSelectionBackend, parse_selection, selection_payload,
                               validate_selection_cap, verify_backend_execution)
-from asof.serde import ContractError, canonical, encode, fingerprint, read_json, sha256_file, write_json
-from asof.wire import FORMAT
-from asof.workflow import Budget
+from tether_engine.serde import ContractError, canonical, encode, fingerprint, read_json, sha256_file, write_json
+from tether_engine.wire import FORMAT
+from tether_engine.workflow import Budget
 from tools.science import comparison_workflow as comparison
 from tools.science.role_backend import RoleSelectionBackend, STAGES, role_allowed_ids, role_selection_payload
 from tests import test_science_comparison_workflow as fixtures
@@ -52,9 +52,11 @@ class SelectionCapTests(unittest.TestCase):
         return replace(self.request, instructions='Role: '+stage+'; mapped upstream specialist: fixture.',
             feedback=(canonical({'prior_role_choices': prior}).decode(),) if prior else ())
 
-    def test_default_payload_bytes_match_prechange_fingerprints(self):
+    def test_default_payload_bytes_match_current_namespace_fingerprints(self):
+        # The wire brand changes the compact prompt bytes at this version boundary;
+        # this is a new invented-payload pin, not a historical-run qualification.
         hashes = {'canonical':'863590c2e1fc406e7264d6819f96e415c35fb9fb117b87e7ea75467ff4b9d005',
-                  FORMAT:'0d6c4887797e650d38d6da6c7b90d49f1594aa555e83b7fd43c3f4a7376dae29'}
+                  FORMAT:'380cc17d9f836527689664460a7858cc6250e157c356e94c12a60c650bfa7e88'}
         for wire, expected in hashes.items():
             payload = selection_payload(self.request, 256, 123, wire)
             self.assertEqual(expected, fingerprint(payload))
@@ -165,7 +167,7 @@ class ComparisonSelectionCapTests(unittest.TestCase):
 
     def test_cap_one_matches_all_arm_packets_and_survives_semantic_verification(self):
         audits=[]
-        for arm in ('asof','adapted_virtual_biotech','lexical','provider_score','no_literature','no_perturbation'):
+        for arm in ('tether','adapted_virtual_biotech','lexical','provider_score','no_literature','no_perturbation'):
             result,out,backend=self.run_arm(arm,backend=self.backend(take=3))
             self.assertEqual('completed',result['status'])
             self.assertTrue(all(len(ids)<=1 for ids in result['selections'].values()))
@@ -177,7 +179,7 @@ class ComparisonSelectionCapTests(unittest.TestCase):
         self.assertTrue(all(a==audits[0] for a in audits))
 
     def test_config_policy_mismatch_fails_before_output_or_dispatch(self):
-        for arm in ('asof','lexical'):
+        for arm in ('tether','lexical'):
             backend=self.backend(); policy={**self.policy,'selection_cap':3}; out=self.root/('mismatch-'+arm)
             with self.assertRaisesRegex(ContractError,'selection cap'):
                 comparison.run_case(self.case,self.store,backend,Budget(),arm,out,policy)
@@ -247,7 +249,7 @@ class ComparisonSelectionCapTests(unittest.TestCase):
         for value in ('','  ',None,True,1,[]):
             backend=self.backend(); output=self.root/('bad-question-'+str(type(value).__name__)+str(len(str(value))))
             with self.assertRaisesRegex(ContractError,'Prioritization question'):
-                comparison.run_case(self.case,self.store,backend,Budget(),'asof',output,
+                comparison.run_case(self.case,self.store,backend,Budget(),'tether',output,
                                     {**self.policy,'prioritization_question':value})
             self.assertFalse(output.exists()); self.assertEqual([],backend.opener.calls)
 

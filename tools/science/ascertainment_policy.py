@@ -6,7 +6,7 @@ substitute for original-version proof. It does not produce an outcome label.
 from datetime import date, datetime, timedelta, timezone
 import re
 
-from asof.serde import ContractError
+from tether_engine.serde import ContractError
 
 POLICY_ID = 'aact-public-date-offset-envelope-v1'
 

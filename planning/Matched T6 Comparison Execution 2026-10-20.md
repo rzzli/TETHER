@@ -15,7 +15,7 @@ The ten-case, six-arm v0.2 comparison completed all **60 case-arm runs**:
 attempt. All sixty passed source-inclusive semantic verification. Predictions were
 sealed and their digest committed/pushed at `aab1c56` before the evaluator opened
 the sparse AI Q1 references. A retained audit then checked **20 distinct original
-rows**, two final AsOf selections per case. Independent agent acceptance passed;
+rows**, two final TETHER selections per case. Independent agent acceptance passed;
 this is a technical source/protocol review, not independently established biological truth.
 
 There were **114 fresh local native calls**, measured
@@ -27,7 +27,7 @@ dependency-free core validation runs 551 tests with 57 expected optional-ingesti
 Required probes, packaging/demo and all four Windows/Linux hosted jobs pass for code
 `dbdfa39`. The original pre-inference code `59374ac` passed 550 tests and four hosted jobs.
 
-AsOf selected **all 37 offered candidates**. This run does not establish difficult
+TETHER selected **all 37 offered candidates**. This run does not establish difficult
 prioritization, therapeutic accuracy, superiority or clinical prediction. The adapted
 Virtual Biotech arm is a restricted source-derived five-role reimplementation,
 not execution of its original SDK/research workflow; seven of its ten cases reached
@@ -115,7 +115,7 @@ world remains incomplete biological knowledge, and the purposively chosen cases
 are not a newly qualified independent held-out benchmark.
 
 All arms share whole-record bounded retrieval: at most twelve records and 12,000
-request bytes per category with `asof-shared-scientific-fields-v1`. Selection and
+request bytes per category with `tether-shared-scientific-fields-v1`. Selection and
 exclusion audits retain the relationship between full source world, retrieved
 candidates and selected claims. Missing, held or excluded evidence cannot become
 biological absence. Prediction features remain `{}` and probabilities remain null.
@@ -132,7 +132,7 @@ agent-visible source packet. The launcher opens no evaluator answers.
 
 | Arm | Behavior and qualification |
 |---|---|
-| `asof` | One bounded mapped-specialist call per eligible category, followed by exact source-ID claim copying. |
+| `TETHER` | One bounded mapped-specialist call per eligible category, followed by exact source-ID claim copying. |
 | `adapted_virtual_biotech` | Restricted source-derived role reimplementation; a completed category traverses five separate physical role calls. |
 | `lexical` | Deterministic case/source token overlap ranking, with zero model calls. |
 | `provider_score` | Ranking only within one identified datasource with finite numeric scores; otherwise explicit inapplicable/abstain. |
@@ -200,7 +200,7 @@ launcher records, not cryptographic attestation from a remote native process.
 
 Evaluation remains descriptive: copied-source fidelity, reference coverage and
 dispositions, selected-set overlap, missingness and actual resources. A separate
-post-seal original-row audit targets up to two distinct final `asof` selections per
+post-seal original-row audit targets up to two distinct final `TETHER` selections per
 case, without substituting unavailable claims. It requires a completed matching
 evaluation; its completed twenty-row coverage and limitations are reported below.
 
@@ -268,7 +268,7 @@ monitor remain unchanged.
 
 | Arm | Calls | Claims | Completed / budget exhausted | Q1 overlap / selected | Unreviewed unknown |
 |---|---:|---:|---|---:|---:|
-| asof | 20 | 37 | 10 / 0 | 8 / 37 | 29 |
+| TETHER | 20 | 37 | 10 / 0 | 8 / 37 | 29 |
 | adapted_virtual_biotech | 65 | 17 | 3 / 7 | 5 / 17 | 12 |
 | lexical | 0 | 37 | 10 / 0 | 8 / 37 | 29 |
 | provider_score | 0 | 31 | 10 / 0 | 5 / 31 | 26 |

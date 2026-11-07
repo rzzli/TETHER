@@ -9,7 +9,7 @@ import hashlib
 from pathlib import Path
 import re
 
-from asof.serde import ContractError, fingerprint, parse_json
+from tether_engine.serde import ContractError, fingerprint, parse_json
 
 MAX_SOURCE_BYTES = 64 * 1024 * 1024
 ENTAILMENT = {'supported', 'contradicted', 'unsupported', 'unassessable'}

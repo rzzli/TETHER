@@ -1,7 +1,7 @@
 import copy
 import unittest
 
-from asof.serde import ContractError
+from tether_engine.serde import ContractError
 from tests import test_science_qualification as fixtures
 from tools.science.outcome_feasibility import assess
 from tools.science.qualification import ENDPOINTS

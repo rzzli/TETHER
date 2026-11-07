@@ -8,7 +8,7 @@ not evidence that the trials lack documents or clinical decisions.
 
 ## Frozen procedure and implementation
 
-The [calibration policy](protocols/exact-trial-retrieval-calibration-v0.1.json)
+The [calibration policy](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/protocols/exact-trial-retrieval-calibration-v0.1.json)
 and implementation were committed and pushed at `712c4fb` before dispatch. Two
 independent AI agents reviewed the immutable controls, parent hashes, criteria
 and scientific boundaries before execution. Their reports and original failure
@@ -34,7 +34,7 @@ Nineteen new regressions include independent adversarial probes. All635 full
 tests passed; the dependency-free suite also passed with57 expected ingestion
 skips. Required verification probes, PowerShell parsing, wheel packaging and the
 installed dependency-free demo passed. Exact report hashes are in
-[pre-dispatch validation](review-assets/source-readiness-20261021/pre-dispatch-validation.json).
+[pre-dispatch validation](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/source-readiness-20261021/pre-dispatch-validation.json).
 
 ## Retained results
 
@@ -75,7 +75,7 @@ features or probabilities were assigned.
 
 ## Next design and stopping decision
 
-The [source-readiness design](protocols/source-readiness-feasibility-v0.1.json)
+The [source-readiness design](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/protocols/source-readiness-feasibility-v0.1.json)
 preserves the existing origin-only128-candidate rank and36 maturity-eligible
 dispositions. After earlier exclusions,24 candidates remain in the proposed
 pool; the next12 may be selected only after complete origin closure and a new

@@ -10,10 +10,10 @@ import threading
 import unittest
 from unittest.mock import patch
 
-from asof.ingest import _archive_receipts
-from asof.atomic import ensure_directory
-from asof.maintenance import write_new_json
-from asof.serde import ContractError
+from tether_engine.ingest import _archive_receipts
+from tether_engine.atomic import ensure_directory
+from tether_engine.maintenance import write_new_json
+from tether_engine.serde import ContractError
 
 
 @dataclass(frozen=True)
@@ -45,7 +45,7 @@ class AtomicPublicationTests(unittest.TestCase):
         def mkdir(*args, **kwargs):
             self.assertEqual(checked.owner, threading.get_ident())
             self.assertEqual(kwargs, {'parents': True, 'exist_ok': True})
-        with patch('asof.atomic._directory_initialization_lock', checked), patch.object(Path, 'mkdir', side_effect=mkdir):
+        with patch('tether_engine.atomic._directory_initialization_lock', checked), patch.object(Path, 'mkdir', side_effect=mkdir):
             with ThreadPoolExecutor(max_workers=8) as pool:
                 list(pool.map(ensure_directory, [self.root/'new'] * 32))
         self.assertEqual(checked.entries, 32)

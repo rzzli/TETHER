@@ -8,7 +8,7 @@ availability**. Clinical labels, features and probabilities remain unchanged.
 
 ## Source and execution
 
-The [frozen request](protocols/existing-trial-protocol-audit-v0.1.json) selects only
+The [frozen request](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/protocols/existing-trial-protocol-audit-v0.1.json) selects only
 `Prot_SAP_002.pdf` from previously retained, exact-trial registry API bytes. The
 request and code were committed/pushed at `2d6a0cc` before the single PDF request.
 No API refresh, search query, version replacement or retry occurred.

@@ -4,7 +4,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
-from asof.serde import ContractError
+from tether_engine.serde import ContractError
 from tools.science.registry_documents import select_document,verify_document
 from tools.science.source_retrieval import registry_document_refs,fetch_control
 from tests.test_science_source_retrieval_peer import FakeResponse

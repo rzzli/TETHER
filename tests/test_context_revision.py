@@ -4,13 +4,13 @@ import copy
 import unittest
 from unittest.mock import patch
 
-from asof.agents import ExtractiveBackend
-from asof.artifacts import dossier
-from asof.chrono import load_snapshot
-from asof.contracts import Case
-from asof.ingest import REVIEW_CONTEXT_COLUMNS
-from asof.serde import ContractError, canonical, decode, read_json
-from asof.workflow import run_workflow
+from tether_engine.agents import ExtractiveBackend
+from tether_engine.artifacts import dossier
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case
+from tether_engine.ingest import REVIEW_CONTEXT_COLUMNS
+from tether_engine.serde import ContractError, canonical, decode, read_json
+from tether_engine.workflow import run_workflow
 from tests import test_v02_ingest as fixtures
 from tools.framework.compare_context_revision import compare_observation
 
@@ -109,7 +109,7 @@ class ContextRevisionTests(unittest.TestCase):
                     compare_observation(before, changed)
 
     def test_oversized_packet_still_fails_without_truncation(self):
-        with patch("asof.ingest.canonical", return_value=b" " * (64 * 1024 * 1024 + 1)):
+        with patch("tether_engine.ingest.canonical", return_value=b" " * (64 * 1024 * 1024 + 1)):
             with self.assertRaisesRegex(ContractError, "Oversized evidence packet"):
                 self.fixture.build()
         failure = read_json(self.fixture.root / "snapshot" / "build-failure.json")

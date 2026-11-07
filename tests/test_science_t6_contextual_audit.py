@@ -8,7 +8,7 @@ from pathlib import Path
 from unittest.mock import patch
 from concurrent.futures import ThreadPoolExecutor
 
-from asof.serde import ContractError, canonical, fingerprint, parse_json, write_json
+from tether_engine.serde import ContractError, canonical, fingerprint, parse_json, write_json
 from tools.science.run_comparison import pin
 from tools.science.t6_claim_audit import pointer
 from tools.science.t6_contextual_audit import (assess_review, json_nodes, proposition_key,
@@ -382,7 +382,7 @@ class ContextualOriginalIntegrationTests(unittest.TestCase):
         with self.assertRaises(ContractError):compile_surface(f.binding_proof,approved_roots=[f.root])
 
     def test_build_retains_draft_scope_and_refuses_existing_output(self):
-        from asof.journal import read_chain
+        from tether_engine.journal import read_chain
         f=self.fixture;out=f.root/'contextual'
         result=build_surface(f.binding_proof,out,approved_roots=[f.root])
         self.assertEqual(result['scientific_atomization'],'not_performed')
@@ -393,7 +393,7 @@ class ContextualOriginalIntegrationTests(unittest.TestCase):
         self.assertEqual(original,(out/'report.json').read_bytes())
 
     def test_interrupt_and_write_failure_leave_terminal_journal(self):
-        from asof.journal import read_chain
+        from tether_engine.journal import read_chain
         f=self.fixture
         for error in (KeyboardInterrupt(),OSError('invented disk fault')):
             output=f.root/type(error).__name__
@@ -401,7 +401,7 @@ class ContextualOriginalIntegrationTests(unittest.TestCase):
             if target:
                 context=patch('tools.science.t6_contextual_audit.compile_surface',side_effect=error)
             else:
-                context=patch('asof.serde.write_json',side_effect=error)
+                context=patch('tether_engine.serde.write_json',side_effect=error)
             with context,self.assertRaises(type(error)):
                 build_surface(f.binding_proof,output,approved_roots=[f.root])
             self.assertEqual(read_chain(output/'journal.jsonl')[-1]['event'],
@@ -418,7 +418,7 @@ class ContextualOriginalIntegrationTests(unittest.TestCase):
         self.assertIn('already_reserved',results)
 
     def test_oversized_output_fails_without_truncating_values(self):
-        from asof.journal import read_chain
+        from tether_engine.journal import read_chain
         f=self.fixture;surface=compile_surface(f.binding_proof,approved_roots=[f.root]);out=f.root/'oversize'
         with patch('tools.science.t6_contextual_audit.compile_surface',return_value=surface), \
              patch('tools.science.t6_contextual_audit.MAX_SOURCE_BYTES',32):

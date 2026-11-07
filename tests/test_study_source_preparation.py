@@ -8,7 +8,7 @@ import unittest
 from unittest.mock import patch
 from dataclasses import replace
 
-from asof.study.source_preparation import (
+from tether_engine.study.source_preparation import (
     PROFILE,
     RECIPE,
     validate_authority,
@@ -16,10 +16,10 @@ from asof.study.source_preparation import (
     prepare_source_request,
     verify_source_preparation,
 )
-from asof.study.source_rows import reconstruct_observation
-from asof.study.diagnostic import load_synthetic_request
-from asof.contracts import Case, Citation, GroundedObservation, Profile
-from asof.serde import ContractError, canonical, decode, encode, fingerprint, freeze
+from tether_engine.study.source_rows import reconstruct_observation
+from tether_engine.study.diagnostic import load_synthetic_request
+from tether_engine.contracts import Case, Citation, GroundedObservation, Profile
+from tether_engine.serde import ContractError, canonical, decode, encode, fingerprint, freeze
 
 
 def authority():
@@ -201,7 +201,7 @@ class PublicationTests(unittest.TestCase):
             root = Path(temp)
             a, anchor, result = self.fixture(root)
             out = root / "new"
-            with patch("asof.study.source_preparation._build", return_value=result):
+            with patch("tether_engine.study.source_preparation._build", return_value=result):
                 receipt = prepare_source_request(
                     a, anchor, {}, out, deadline=time.monotonic() + 299
                 )
@@ -235,7 +235,7 @@ class PublicationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             a, anchor, result = self.fixture(root)
-            with patch("asof.study.source_preparation._build") as build:
+            with patch("tether_engine.study.source_preparation._build") as build:
                 with self.assertRaises(ContractError):
                     prepare_source_request(
                         a, "0" * 64, {}, root / "bad", deadline=time.monotonic() + 299
@@ -243,7 +243,7 @@ class PublicationTests(unittest.TestCase):
                 build.assert_not_called()
             self.assertTrue((root / "bad/failure.json").is_file())
             with patch(
-                "asof.study.source_preparation._build", side_effect=KeyboardInterrupt
+                "tether_engine.study.source_preparation._build", side_effect=KeyboardInterrupt
             ):
                 with self.assertRaises(KeyboardInterrupt):
                     prepare_source_request(
@@ -288,7 +288,7 @@ class PublicationTests(unittest.TestCase):
             self.assertEqual((out / "failure.json").read_bytes(), original)
 
     def test_publication_write_failure_keeps_primary_error(self):
-        from asof.atomic import publish_bytes
+        from tether_engine.atomic import publish_bytes
 
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
@@ -301,9 +301,9 @@ class PublicationTests(unittest.TestCase):
                 return publish_bytes(path, data)
 
             with (
-                patch("asof.study.source_preparation._build", return_value=result),
+                patch("tether_engine.study.source_preparation._build", return_value=result),
                 patch(
-                    "asof.study.source_preparation.publish_bytes",
+                    "tether_engine.study.source_preparation.publish_bytes",
                     side_effect=fail_request,
                 ),
             ):
@@ -317,7 +317,7 @@ class PublicationTests(unittest.TestCase):
 
 class PreReadBoundaryTests(unittest.TestCase):
     def test_protected_primary_path_is_rejected_before_read_or_lock(self):
-        from asof.study.source_preparation import _build
+        from tether_engine.study.source_preparation import _build
 
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
@@ -329,8 +329,8 @@ class PreReadBoundaryTests(unittest.TestCase):
             (protected / "case.json").write_text("DO NOT READ")
             a["files"]["case"]["relative_path"] = "gold_evidence/case.json"
             with (
-                patch("asof.study.stable_read.stable_files") as locks,
-                patch("asof.study.stable_read.hash_file") as hashes,
+                patch("tether_engine.study.stable_read.stable_files") as locks,
+                patch("tether_engine.study.stable_read.hash_file") as hashes,
             ):
                 with self.assertRaises(ContractError):
                     _build(
@@ -340,7 +340,7 @@ class PreReadBoundaryTests(unittest.TestCase):
                 hashes.assert_not_called()
 
     def test_future_graph_node_never_hashed(self):
-        from asof.study.source_preparation import _build
+        from tether_engine.study.source_preparation import _build
         from contextlib import nullcontext
 
         with tempfile.TemporaryDirectory() as temp:
@@ -367,19 +367,19 @@ class PreReadBoundaryTests(unittest.TestCase):
                 exclusion=lambda refs, case: "available_after_origin",
                 path=lambda node: root / "raw.json",
             )
-            from asof.study.stable_read import hash_file
+            from tether_engine.study.stable_read import hash_file
 
             with (
                 patch(
-                    "asof.study.stable_read.stable_files",
+                    "tether_engine.study.stable_read.stable_files",
                     side_effect=lambda *a, **kw: nullcontext(),
                 ),
                 patch(
-                    "asof.study.source_preparation.decode", side_effect=[case, snapshot]
+                    "tether_engine.study.source_preparation.decode", side_effect=[case, snapshot]
                 ),
-                patch("asof.study.source_preparation.catalog_index", return_value={}),
-                patch("asof.study.source_preparation.InputGraph", return_value=graph),
-                patch("asof.study.stable_read.hash_file", wraps=hash_file) as hashing,
+                patch("tether_engine.study.source_preparation.catalog_index", return_value={}),
+                patch("tether_engine.study.source_preparation.InputGraph", return_value=graph),
+                patch("tether_engine.study.stable_read.hash_file", wraps=hash_file) as hashing,
             ):
                 with self.assertRaisesRegex(ContractError, "Ineligible source"):
                     _build(
@@ -390,7 +390,7 @@ class PreReadBoundaryTests(unittest.TestCase):
                 )
 
     def test_hgnc_reference_directory_not_blanket_denied(self):
-        from asof.study.source_preparation import _source_path_guard
+        from tether_engine.study.source_preparation import _source_path_guard
 
         _source_path_guard(Path("data/reference/hgnc_symbols/source.txt"))
         for name in [

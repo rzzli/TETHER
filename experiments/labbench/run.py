@@ -20,13 +20,13 @@ import time
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT))
 
-from asof.agents import Usage
-from asof.atomic import publish_bytes
-from asof.journal import RunJournal,read_chain
-from asof.serde import ContractError,canonical,decode,encode,fingerprint,freeze,parse_json,safe_child
-from asof.study import native
-from asof.study.session import StudySession,verify_study
-from asof.workflow import Budget
+from tether_engine.agents import Usage
+from tether_engine.atomic import publish_bytes
+from tether_engine.journal import RunJournal,read_chain
+from tether_engine.serde import ContractError,canonical,decode,encode,fingerprint,freeze,parse_json,safe_child
+from tether_engine.study import native
+from tether_engine.study.session import StudySession,verify_study
+from tether_engine.workflow import Budget
 from tether._process import ProcessLimits,supervise_command,validate_success_report
 from experiments.labbench import model
 from experiments.labbench.data_views import load_queries

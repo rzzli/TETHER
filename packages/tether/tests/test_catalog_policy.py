@@ -11,8 +11,8 @@ PROJECT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT.parents[1]
 sys.path.insert(0, str(PROJECT / "src"))
 
-from asof.serde import ContractError, canonical, fingerprint
-from asof.provenance import catalog_index
+from tether_engine.serde import ContractError, canonical, fingerprint
+from tether_engine.provenance import catalog_index
 from tether import _catalog_policy as policy
 
 

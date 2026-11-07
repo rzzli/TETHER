@@ -2,7 +2,8 @@
 
 Frozen-v2 anchors and versioned worker identities are checked here. Byte I/O,
 observable interpretation, resource aggregation and statistical primitives reuse
-the separately qualified, unchanged v1 independent evaluator, pinned below.
+the separately pinned shared independent evaluator below. This namespace revision
+is new code; historical qualification remains in the archived checkpoint.
 """
 from __future__ import annotations
 
@@ -26,8 +27,8 @@ from equal_policy.reconstruct import (
     source_size, root_concordance,
 )
 
-SHARED_EVALUATOR_SHA256 = 'a62b9019e4d820b485bcc6918a17b6c627a523df50ab8c833caafafb5ffbed65'
-SUPPORTED_PAIRS = {('0.5.1', '0.3.12'), ('0.5.2', '0.3.13')}
+SHARED_EVALUATOR_SHA256 = 'd304b9f0ddeedb15f0e3217c0002138b50f384781fb48ca3c179d3dedbb87d4f'
+SUPPORTED_PAIRS = {('0.6.0', '0.4.0')}
 EXECUTION_SOURCE_CLOSURE = {
     'experiments/equal_policy/' + name for name in (
         'worker.py', 'reference.py', 'run_comparison.py', 'cases.py', 'materialize.py',
@@ -87,8 +88,8 @@ def qualification_anchors(project, frozen):
 
 def runtime_anchors(project, frozen, trusted):
     versions = trusted['versions']
-    require(type(versions) is dict and set(versions) == {'asof', 'tether'}
-            and (versions['tether'], versions['asof']) in SUPPORTED_PAIRS,
+    require(type(versions) is dict and set(versions) == {'tether_engine', 'tether'}
+            and (versions['tether'], versions['tether_engine']) in SUPPORTED_PAIRS,
             'Unsupported version pair')
     require(equal(frozen['runtime_versions'], versions), 'Frozen/trusted versions differ')
     qualification = Path(trusted['qualification']['path']).resolve()
@@ -98,7 +99,7 @@ def runtime_anchors(project, frozen, trusted):
             'Frozen interpreter is not the declared qualified interpreter')
     document = read_json(qualification)
     require(document.get('status') == 'PASS', 'Qualification did not pass')
-    require(equal(document.get('versions'), {name + '-target-agents': version for name, version in versions.items()}),
+    require(equal(document.get('versions'), {{'tether_engine': 'tether-target-engine', 'tether': 'tether-target-agents'}[name]: version for name, version in versions.items()}),
             'Qualification/package versions differ')
     expected = {str(qualification): file_pin(qualification)}
     require(expected[str(qualification)]['sha256'] == trusted['qualification']['sha256'],
@@ -119,8 +120,8 @@ def runtime_anchors(project, frozen, trusted):
             'Qualified wheel inventory changed')
     require({Path(row['path']).resolve() for row in declared} == set(wheel_paths),
             'Qualification wheel paths differ')
-    for package in ('asof', 'tether'):
-        proofs = [row for row in declared if row.get('distribution') == package + '-target-agents']
+    for package in ('tether_engine', 'tether'):
+        proofs = [row for row in declared if row.get('distribution') == {'tether_engine': 'tether-target-engine', 'tether': 'tether-target-agents'}[package]]
         require(len(proofs) == 1 and proofs[0].get('record_verified') is True,
                 'Missing verified wheel distribution')
         proof = proofs[0]
@@ -184,7 +185,7 @@ def implementation_identity(project, frozen, trusted, record, output, descriptor
             'Versioned implementation module differs')
     loaded = runtime['loaded_product_modules']
     if arm == 'tether':
-        require(set(loaded) == {'asof', 'tether'}, 'Reference worker omitted product identity')
+        require(set(loaded) == {'tether_engine', 'tether'}, 'Reference worker omitted product identity')
         for name in loaded:
             require(Path(loaded[name]).resolve() == Path(trusted['runtime_paths'][name + '_file']).resolve(),
                     'Reference product import escaped pinned installation')
@@ -268,7 +269,7 @@ def reconstruct(project, output, *, require_primary=True):
     installation = installed_inventory(project, trusted)
     require(Path(trusted['runtime_paths']['python']).resolve() == Path(frozen['python']['path']).resolve(),
             'Trusted and frozen interpreter anchors disagree')
-    for name in ('asof', 'tether'):
+    for name in ('tether_engine', 'tether'):
         require(equal(installation[name], frozen['installed_runtime'][name]),
                 'Trusted and frozen package inventories disagree: ' + name)
     started = read_json(output / 'comparison/STARTED.json')

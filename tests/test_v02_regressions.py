@@ -6,15 +6,15 @@ from dataclasses import replace
 from datetime import date
 from pathlib import Path
 
-from asof.agents import ExtractiveBackend
-from asof.chrono import load_snapshot
-from asof.contracts import Case
-from asof.scorer import ScorerArtifact
-from asof.serde import ContractError, decode, read_json
-from asof.workflow import run_workflow
+from tether_engine.agents import ExtractiveBackend
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case
+from tether_engine.scorer import ScorerArtifact
+from tether_engine.serde import ContractError, decode, read_json
+from tether_engine.workflow import run_workflow
 
 
-FIXTURES = Path(__file__).resolve().parents[1] / "src/asof/demo/v2"
+FIXTURES = Path(__file__).resolve().parents[1] / "src/tether_engine/demo/v2"
 
 
 class Counter(ExtractiveBackend):

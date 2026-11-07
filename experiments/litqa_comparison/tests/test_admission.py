@@ -2,7 +2,7 @@ from datetime import datetime,timedelta,timezone
 import unittest
 from unittest.mock import patch
 
-from asof.serde import encode
+from tether_engine.serde import encode
 from experiments.litqa_comparison import acquisition as a,admission as adm
 from experiments.litqa_comparison.tests import test_acquisition as fixtures
 

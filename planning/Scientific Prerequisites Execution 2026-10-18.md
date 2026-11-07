@@ -82,7 +82,7 @@ Earlier blocked/running/next-item statements below remain explicit dated history
 | 4. Outcomes/power/precision | Completed bounded audit | Twelve cases/36 endpoints, two source reviews and third reconciliation; all unresolved/null. Power nonestimable; clinical qualification and fitting withheld. |
 | 5. Conditional genetics | Completed conditional defer | Fresh38-file QC, method review and independently corrected lineage guard; no predictive feature admitted. |
 | 6. Qualified training/calibration | Completed no-fit | Historical training inventory unknown, no qualified pilot classes/predictor bundle; 485 full tests and independent guard review pass. No training or calibration. |
-| 7. Supported comparisons | Completed supported development scope | All60 runs source-verified (53 completed/7 budget exhausted), prediction digest anchored before answers,20 distinct original-row checks and independent agent acceptance passed.551 full tests/core57 expected skips and4 hosted jobs pass. AsOf selected37/37 offered candidates; no difficult ranking, therapeutic or clinical performance claim. Response-informed correction/prior58-call failure retained. Clinical gates false. |
+| 7. Supported comparisons | Completed supported development scope | All60 runs source-verified (53 completed/7 budget exhausted), prediction digest anchored before answers,20 distinct original-row checks and independent agent acceptance passed.551 full tests/core57 expected skips and4 hosted jobs pass. TETHER selected37/37 offered candidates; no difficult ranking, therapeutic or clinical performance claim. Response-informed correction/prior58-call failure retained. Clinical gates false. |
 
 ## Completed reference work
 
@@ -349,7 +349,7 @@ The ten-case, six-arm v0.2 comparison completed all **60 case-arm runs**:
 attempt. All sixty passed source-inclusive semantic verification. Predictions were
 sealed and their digest committed/pushed at `aab1c56` before the evaluator opened
 the sparse AI Q1 references. A retained audit then checked **20 distinct original
-rows**, two final AsOf selections per case. Independent agent acceptance passed;
+rows**, two final TETHER selections per case. Independent agent acceptance passed;
 this is a technical source/protocol review, not independently established biological truth.
 
 There were **114 fresh local native calls**, measured
@@ -361,7 +361,7 @@ dependency-free core validation runs 551 tests with 57 expected optional-ingesti
 Required probes, packaging/demo and all four Windows/Linux hosted jobs pass for code
 `dbdfa39`. The original pre-inference code `59374ac` passed 550 tests and four hosted jobs.
 
-AsOf selected **all 37 offered candidates**. This run does not establish difficult
+TETHER selected **all 37 offered candidates**. This run does not establish difficult
 prioritization, therapeutic accuracy, superiority or clinical prediction. The adapted
 Virtual Biotech arm is a restricted source-derived five-role reimplementation,
 not execution of its original SDK/research workflow; seven of its ten cases reached

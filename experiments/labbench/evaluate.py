@@ -9,7 +9,7 @@ from __future__ import annotations
 from collections import Counter
 from collections.abc import Mapping
 
-from asof.serde import ContractError, freeze
+from tether_engine.serde import ContractError, freeze
 from .native_contract import evidence_ids, validate_prediction, validate_query, visible_unsure_index
 
 PRODUCER_STATUSES = frozenset(("produced", "parse_failure", "timeout", "error", "interrupted", "unexecuted", "input_unavailable"))

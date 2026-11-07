@@ -1,5 +1,10 @@
 # TETHER research memory index
 
+- [[research-log-2026-11-06-namespace-migration]] - Current task: complete TETHER namespace and remote rename; semantic goal paused. Exact originals archived; current-package regression validation in progress. No scientific requalification claimed.
+
+Other entries below are dated checkpoints; their use of "current" refers to the
+time of that entry. The paused state above takes precedence.
+
 - [[research-log-2026-11-06-semantic-execution]] - Current SC01–SC03 complete; SC04 active. All five SciFact conditions complete; independent30,220/root9,305 checks pass. Strict127/300 vs27, rationalizedF1 .192 vs.087, lower rationale recall; no filter gain. Required exact-event supplement closes frozen-auditor gap. SC04–SC09 incomplete; no clinical claim or monitor restart.
 
 - [[research-log-2026-11-06-benchmark-goal-complete]] - Current BG01–BG06 complete in bounded scopes: defects/replay corrected; independent policy comparison, weak native SciFact/LitQA2 and partial Inspect portability measured; requirements/science/preservation audits pass. No active goal task remains. Broader science, full migration and owner-deferred publication remain separate; no reruns or monitor restart.
@@ -40,7 +45,7 @@ The first entry is current. Older entries retain their then-current status and
 next actions; they do not reactivate superseded tasks or expert gates.
 
 Current project identity: **TETHER — Target Evidence Tracking Harness for
-Evaluation and Reproducibility**. Earlier AsOf names are retained in dated
+Evaluation and Reproducibility**. Earlier TETHER names are retained in dated
 research records, code/contract identifiers and sealed artifacts for compatibility.
 
 - [[research-log-2026-11-01-tether-renaming]] - Completed naming/interface milestone: TETHER 0.4.0 front door, unchanged 0.3.11 compatibility engine, active documentation/catalog display rebrand and new 18-page paper. All 49 interface tests pass in both profiles; isolated installation and 946 independent packet checks pass. The 72-member packet repeats byte for byte; author facts/scientific extensions stay deferred.
@@ -157,7 +162,7 @@ research records, code/contract identifiers and sealed artifacts for compatibili
 
 - [[T6_CONTEXTUAL_AUDIT]] — Contextual contract/source surface checkpoint:1055 tests, 92 isolated; exact raw/decoded locations and separated review dimensions. Semantic reference qualification remains next.
 
-- [[project-goals]] - Current AsOf 0.3.11/default v2. Three mixed/unverified-provenance mechanism returns are processed development material; independent source-only references, fresh-source and capability readiness remain open. No R07 genetics/HR3/H5 gate is passed. Optional native expansion deferred; existing failures, $0 and no new model run preserved.
+- [[project-goals]] - Current TETHER 0.3.11/default v2. Three mixed/unverified-provenance mechanism returns are processed development material; independent source-only references, fresh-source and capability readiness remain open. No R07 genetics/HR3/H5 gate is passed. Optional native expansion deferred; existing failures, $0 and no new model run preserved.
 
 - [[T6_DOSSIER_BINDING]] — Native v2 dossier/span and original Open Targets binding validated:1008 tests, 45 isolated checks,nine-row IL6R development replay. Next complete atomic extraction and independently sealed scientific reviews.
 
@@ -209,7 +214,7 @@ research records, code/contract identifiers and sealed artifacts for compatibili
 - [[research-log-2026-10-21]] — Clinical-label data gap closure, corrected negative/result guards, retained source recovery and explicit revise-before-scaling decision.
 
 - [[research-log-2026-10-20]] — Completed Science5/6 conditional assessments and Science7 matched development comparison; failed attempt/correction, audit, resource accounting and remaining science gates retained.
-- [[Matched T6 Comparison Execution 2026-10-20]] — Final bounded Science7 closeout:60 source-verified runs/20 distinct original-row checks, 114 fresh calls/$0,551 full tests/core57 skips/four hosted jobs pass. Predictions anchored before Q1 join; independent agent acceptance passed. AsOf 37/37 offered; no hard prioritization/scientific superiority. Response-informed v02 and failed prior58 calls retained; clinical gates false.
+- [[Matched T6 Comparison Execution 2026-10-20]] — Final bounded Science7 closeout:60 source-verified runs/20 distinct original-row checks, 114 fresh calls/$0,551 full tests/core57 skips/four hosted jobs pass. Predictions anchored before Q1 join; independent agent acceptance passed. TETHER 37/37 offered; no hard prioritization/scientific superiority. Response-informed v02 and failed prior58 calls retained; clinical gates false.
 - [[Scientific Prerequisites Execution 2026-10-18]] — All seven bounded assessment dispositions closed, including genetics defer, scorer no-fit and supported T6 development comparison. This does not qualify clinical/scoring gates or finish the broader project. See [[project-goals]].
 - [[research-log-2026-10-19]] — Dated Science 4 audit: twelve cases/36 unresolved endpoints, source reconciliation and independent checks passed; power nonestimable and 445 tests passed at that checkpoint. Its Science 5-next pointer is superseded by the current Science 7 entry.
 
@@ -238,7 +243,7 @@ research records, code/contract identifiers and sealed artifacts for compatibili
 - [[Clinical Long Session Progress]] — Completed five-date/24-trial clinical review, complete-input ten-dossier release, 149-test verification and remaining scientific gates.
 - [[Full Cis Genetics Revision]] — Complete source-defined IL6R regional technical revision, 2,979 QC variants, source conflicts and independent LD checks; no causal inference.
 - [[Long Run Data Preflight]] — Manual AACT preparations, public-data gaps and checkpointed next-session work; no long-running task started.
-- [[asof-feasibility-findings]] — Dated source/code/data findings and methodological corrections from the planning review.
+- [[tether-feasibility-findings]] — Dated source/code/data findings and methodological corrections from the planning review.
 - [[research-log-2026-10-09]] — Session record, peer-survey scope, created artifacts and remaining verification.
 - [[research-log-template]] — Template for future seed-driven research sessions.
 - [[data-acquisition-plan]] — Current data inventory, pinned contemporary normalization and remaining acquisition gates.

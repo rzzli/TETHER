@@ -6,8 +6,8 @@ import time
 import unittest
 from unittest.mock import patch
 
-from asof.atomic import publish_bytes
-from asof.serde import canonical,encode
+from tether_engine.atomic import publish_bytes
+from tether_engine.serde import canonical,encode
 from experiments.labbench.tests import test_model as model_fixtures,test_retrieval as source_fixtures
 from experiments.litqa_comparison import pipeline as p,replay,transport as t,acquisition as a
 from experiments.labbench.retrieval import DEFAULT_POLICY

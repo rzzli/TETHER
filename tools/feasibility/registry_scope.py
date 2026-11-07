@@ -10,7 +10,7 @@ import re
 import sqlite3
 import time
 
-from asof.serde import sha256_file
+from tether_engine.serde import sha256_file
 from tools.feasibility.registry_extract import load,write
 from tools.feasibility.registry_cohort import norm,category,start_bounds,peak_memory_bytes
 

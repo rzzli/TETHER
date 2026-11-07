@@ -6,7 +6,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from asof.serde import ContractError
+from tether_engine.serde import ContractError
 from experiments.scifact.runtime import load_input, measured, Watchdog
 
 ROOT = Path(__file__).resolve().parents[3]

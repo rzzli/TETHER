@@ -1,9 +1,0 @@
-# File-only ports: v2 design correction
-
-The v1 contract (bc734277), its freeze (3c53615e), and independent review (08f7d4c0) remain unchanged. This separately versioned proposal addresses the review's one required metadata-directory grammar gap. It contains no file-port implementation or API qualification.
-
-The ancestor index admits a distinct `CanonicalDriveRoot` descriptor whose path is exactly an approved uppercase drive root, `[A-Z]:\`. It is derived from an already admitted finite ancestor roster, not discovered from the filesystem. Each unique root is counted once in U and receives the same known-directory/non-reparse attribute requirement. Its only permitted operation is the existing `GetFileAttributesExW` ancestor observation. It cannot be an original/output file leaf, a scan root, an enumerated authority source, or a reason to inspect another drive. Ordinary leaf, output, scan, role, and path restrictions remain unchanged.
-
-The successor also makes two previously reviewed clarifications normative: output write/flush/close observations are registry records rather than recursive extra journal events, and a late known write may retain its immutable record and known offset while hashing remains pending. No late hash completion, artifact pin, or successful publication is inferred. The declared path capacity does not prove that a Windows long-path policy permits every spelling; documented API failure remains negative, without a prefix or policy fallback.
-
-The metadata writer checks the exact permitted semantic-field delta and the existing event/API formula strings. U already includes drive roots, so this correction adds no hidden call allowance. Exact future roster admission, typed source implementation, harmless API qualification, production continuation, and all profile/science gates remain pending. This design grants none of them.

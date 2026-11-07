@@ -6,7 +6,7 @@ Later update, 31 October Los Angeles: the two additional genetics source files a
 
 The following records the completed orientation disposition and original next-round assignment; the new assessment governs current genetics status.
 
-31 October 2026. **Authorship/disclosure intake for the three mechanism-orientation returns is complete.** The owner confirms three different people. R1 is human-authored without AI by owner correction; R2 and R3 disclose human authorship with AI assistance. The latest [provenance record](review-assets/expert-intake-20261031/OWNER-PROVENANCE-NOTE-v3.json) preserves all prior files and statements.
+31 October 2026. **Authorship/disclosure intake for the three mechanism-orientation returns is complete.** The owner confirms three different people. R1 is human-authored without AI by owner correction; R2 and R3 disclose human authorship with AI assistance. The latest [provenance record](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/expert-intake-20261031/OWNER-PROVENANCE-NOTE-v3.json) preserves all prior files and statements.
 
 | Reviewer alias | Reported field | Assistance | Source-first disclosure | Time |
 |---|---|---|---|---|
@@ -32,11 +32,11 @@ HR2's orientation-submission/disclosure portion has advanced; its measured-workl
 
 R2 and R3's reported field makes them appropriate proposed reviewers for the existing R07 genetics-reporting exercise. Let them use the outside-expertise/cannot-assess options where needed. This round asks about supplied study reporting; it does not require new QTL data or an MR computation.
 
-1. Give each reviewer only the [clean genetics source-only ZIP](../docs/expert-review-genetics-20261026/Expert-source-review-share.zip). It contains the source-only form with thirteen supplied passages and ten questions. Do not send the repository, this coordinator disposition, AI triage, the mask key or candidate follow-up yet.
+1. Give each reviewer only the [clean genetics source-only ZIP](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/docs/expert-review-genetics-20261026/Expert-source-review-share.zip). It contains the source-only form with thirteen supplied passages and ten questions. Do not send the repository, this coordinator disposition, AI triage, the mask key or candidate follow-up yet.
 2. Use aliases **R2** and **R3** in their exports. Preserve each original independently. Record conflicts/exposure, actual minutes, outside-source use and AI assistance for this round; do not copy the orientation estimates as measured time.
 3. If AI assistance is used, start with a clean source-only context containing that packet. The assistant should not receive candidate answers, another reviewer's answers, prior AI judgments or the wider repository. Record any accidental exposure. This is procedural separation, not a claimed technical sandbox.
 4. Collect the exported source-only answers first. Store originals as evaluator-only; provide their local paths. A source-first self-report and an actual first-pass export are recorded separately, with missingness preserved.
-5. After each reference is received, assign a source-reference ID and release the separate [candidate-follow-up form](../docs/expert-review-genetics-followup-20261026/Candidate-followup.html) to that reviewer. Keep its internal mask key withheld. Preserve ratings, uncertainty and disagreements; do not correct old model outputs.
+5. After each reference is received, assign a source-reference ID and release the separate [candidate-follow-up form](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/docs/expert-review-genetics-followup-20261026/Candidate-followup.html) to that reviewer. Keep its internal mask key withheld. Preserve ratings, uncertainty and disagreements; do not correct old model outputs.
 6. Assess the returned source/candidate judgments and update R07's scientific disposition. Its six-response/zero-contract-pass technical result remains negative regardless of content ratings. No new model call, paid access or native-stack expansion follows automatically.
 
 No messages or invitations were sent. The owner coordinates the next human round. All original responses/addenda, source cards, model outputs and previous failures are preserved; the current framework, empty prediction features/null probabilities, $0 project provider limit, downloader and stopped monitor are unchanged.

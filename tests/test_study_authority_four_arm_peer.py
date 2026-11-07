@@ -6,10 +6,10 @@ import time
 import unittest
 from unittest.mock import patch
 
-from asof.journal import read_chain
-from asof.serde import ContractError, canonical, encode, fingerprint, parse_json
-from asof.study import authority_four_arm as composition
-from asof.study.proofs import capture_file, capture_package_proof
+from tether_engine.journal import read_chain
+from tether_engine.serde import ContractError, canonical, encode, fingerprint, parse_json
+from tether_engine.study import authority_four_arm as composition
+from tether_engine.study.proofs import capture_file, capture_package_proof
 from tests import test_study_authority_four_arm as fixtures
 
 

@@ -15,14 +15,14 @@ import subprocess
 import sys
 import time
 
-import asof
-from asof.artifacts import verify_run
-from asof.atomic import publish_bytes
-from asof.journal import RunJournal
-from asof.serde import (ContractError, MAX_LEDGER_JSON_BYTES, MAX_NORMALIZED_JSON_BYTES,
+import tether_engine
+from tether_engine.artifacts import verify_run
+from tether_engine.atomic import publish_bytes
+from tether_engine.journal import RunJournal
+from tether_engine.serde import (ContractError, MAX_LEDGER_JSON_BYTES, MAX_NORMALIZED_JSON_BYTES,
                         canonical, encode, fingerprint, parse_json)
-from asof.study.proofs import capture_file
-from asof.study.stable_read import read_file
+from tether_engine.study.proofs import capture_file
+from tether_engine.study.stable_read import read_file
 
 from . import __version__
 from ._process import (EngineResult, EngineInterrupted, ProcessLimits, supervise_command,
@@ -32,7 +32,7 @@ MANIFEST = "tether-manifest.json"
 RECEIPT = "tether-receipt.json"
 FAILURE = "tether-failure.json"
 JOURNAL = "attempt/journal.jsonl"
-METHOD = "tether.engine_presentation.v1"
+METHOD = "tether.engine_presentation.v2"
 MAX_METADATA_BYTES = MAX_NORMALIZED_JSON_BYTES
 MAX_DOSSIER_BYTES = MAX_LEDGER_JSON_BYTES
 READ_SECONDS = 300
@@ -161,22 +161,22 @@ def code_proof():
     need(set(proof) == {p.relative_to(root).as_posix() for p in root.rglob("*.py") if "__pycache__" not in p.parts},
          "TETHER code inventory changed")
     versions = {}
-    for name in ("tether-target-agents", "asof-target-agents"):
+    for name in ("tether-target-agents", "tether-target-engine"):
         try:
             versions[name] = metadata.version(name)
         except metadata.PackageNotFoundError:
             versions[name] = None
-    need(asof.__version__ == "0.3.13" and __version__ == "0.5.2", "Unsupported TETHER/core version")
-    need(versions["asof-target-agents"] in (None, "0.3.13")
-         and versions["tether-target-agents"] in (None, "0.5.2"), "Installed distribution version differs")
-    return dict(schema_version=1, method="tether.launcher_code.v1", facade_version=__version__,
-                core_version=asof.__version__, installed_distributions=versions, code=proof)
+    need(tether_engine.__version__ == "0.4.0" and __version__ == "0.6.0", "Unsupported TETHER/core version")
+    need(versions["tether-target-engine"] in (None, "0.4.0")
+         and versions["tether-target-agents"] in (None, "0.6.0"), "Installed distribution version differs")
+    return dict(schema_version=1, method="tether.launcher_code.v2", facade_version=__version__,
+                core_version=tether_engine.__version__, installed_distributions=versions, code=proof)
 
 
 def project_dossier(payload):
-    prefix = b"# AsOf dossier:"
+    prefix = b"# TETHER dossier:"
     need(type(payload) is bytes and payload.startswith(prefix), "Unexpected engine dossier header")
-    return b"# TETHER dossier:" + payload[len(prefix):]
+    return payload
 
 
 class EngineFailure(ContractError):
@@ -186,7 +186,7 @@ class EngineFailure(ContractError):
 
 
 def invoke_engine(argv, *, limits=ProcessLimits()):
-    return supervise_command([sys.executable, "-I", "-m", "asof", *argv], limits=limits)
+    return supervise_command([sys.executable, "-I", "-m", "tether_engine", *argv], limits=limits)
 
 
 def preflight_run_journals(output, *, verify=False):
@@ -288,7 +288,7 @@ def create_outer(output, argv, *, engine=None, limits=ProcessLimits(), policy_re
                         process_limits=limits.payload(), supervision=result.supervision,
                         artifact_policy=policy_binding,
                         engine=dict(path="engine", receipt_sha256=engine_receipt),
-                        projection=dict(source="engine/dossier.md", target="dossier.md", transform="exact_first_header_v1"),
+                        projection=dict(source="engine/dossier.md", target="dossier.md", transform="identity_dossier_v2"),
                         launcher=proof, artifacts=artifacts)
         _save(output / MANIFEST, canonical(manifest) + b"\n")
         stage = "finalization"
@@ -390,7 +390,7 @@ def verify_outer(output, expected_receipt_sha256=None):
     need(canonical(manifest["launcher"]) == canonical(code_proof()), "TETHER current launcher code/version differs")
     need(type(manifest["invocation_sha256"]) is str and re.fullmatch(r"[0-9a-f]{64}", manifest["invocation_sha256"]),
          "TETHER invocation binding differs")
-    need(manifest["projection"] == dict(source="engine/dossier.md", target="dossier.md", transform="exact_first_header_v1"),
+    need(manifest["projection"] == dict(source="engine/dossier.md", target="dossier.md", transform="identity_dossier_v2"),
          "TETHER projection declaration differs")
     need(type(manifest["artifacts"]) is dict, "TETHER artifact inventory is invalid")
     expected_files = set(manifest["artifacts"]) | {MANIFEST, RECEIPT, JOURNAL}
@@ -434,7 +434,7 @@ def verify_outer(output, expected_receipt_sha256=None):
         policy_result = dict(status="unavailable_schema1_compatibility", scientific_validation="not_established")
     return dict(brand="TETHER", status="integrity_verified", receipt_sha256=digest(raw),
                 external_anchor_checked=expected_receipt_sha256 is not None, launcher_code_verified=True,
-                presentation_projection="exact_first_header_v1", engine=engine_result,
+                presentation_projection="identity_dossier_v2", engine=engine_result,
                 artifact_policy=policy_result,
                 scientific_validation="not_established")
 

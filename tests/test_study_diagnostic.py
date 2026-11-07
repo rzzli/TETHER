@@ -4,15 +4,15 @@ import copy
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError, canonical, encode, fingerprint
-from asof.study.diagnostic import (
+from tether_engine.serde import ContractError, canonical, encode, fingerprint
+from tether_engine.study.diagnostic import (
     load_synthetic_request,
     prepare_payload,
     request_from_payload,
     validate_output,
 )
-from asof.study.diagnostic_codec import bind_question
-from asof.study.diagnostic_resources import load_resource
+from tether_engine.study.diagnostic_codec import bind_question
+from tether_engine.study.diagnostic_resources import load_resource
 
 
 class StudyDiagnosticTests(unittest.TestCase):
@@ -250,7 +250,7 @@ class StudyDiagnosticTests(unittest.TestCase):
                     validate_output(self.request, interface, document)
 
     def test_resource_authentication_and_role(self):
-        from asof.study.diagnostic import ACTIVE_SIMPLIFIED_SCHEMA
+        from tether_engine.study.diagnostic import ACTIVE_SIMPLIFIED_SCHEMA
 
         self.assertIn(
             "implemented diagnostic._flat", ACTIVE_SIMPLIFIED_SCHEMA["$comment"]
@@ -259,7 +259,7 @@ class StudyDiagnosticTests(unittest.TestCase):
             "No runtime post-validator has been implemented",
             load_resource("simplified-response-schema-v1.json")["$comment"],
         )
-        with patch("asof.study.diagnostic_resources.files") as files:
+        with patch("tether_engine.study.diagnostic_resources.files") as files:
             files.return_value.joinpath.return_value.joinpath.return_value.read_bytes.return_value = b"{}"
             with self.assertRaises(ContractError):
                 load_resource("synthetic-context-v1.json")

@@ -6,8 +6,9 @@ import unittest
 from unittest.mock import patch
 
 from tests import test_science_prospective_capacity as fixtures
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, canonical, fingerprint, read_json, sha256_file, write_json
+from tests.prospective_fixtures import archived_json
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, canonical, fingerprint, read_json, sha256_file, write_json
 from tools.science import prospective_capacity as capacity
 from tools.science import prospective_frame as frame
 from tools.science import prospective_transport as transport
@@ -56,7 +57,7 @@ class ReadinessSourcesTests(unittest.TestCase):
         write_json(frame_audit, {'execution_manifest': pin(fixture.output / 'execution.json'),
             'capture_receipt': pin(fixture.output / 'receipt.json'), 'capture_journal': pin(fixture.output / 'journal.jsonl')})
         membership = dict(sources.BOUNDARIES, status='readiness_membership_sealed', members=members,
-            sampling_seed_sha256=capacity.SEED, asof_cases_created=0,
+            sampling_seed_sha256=capacity.SEED, tether_cases_created=0,
             frame_audit=pin(frame_audit), capture_receipt=pin(fixture.output / 'receipt.json'), independent_review=pin(review))
         write_json(proof / 'membership.json', membership)
         write_json(proof / 'origin-metadata.json', {'role': 'evaluation_only', 'records': origins})
@@ -71,7 +72,7 @@ class ReadinessSourcesTests(unittest.TestCase):
         self.freeze_path.parent.mkdir(parents=True, exist_ok=True)
         write_json(self.freeze_path, freeze)
         self.protocol_path = self.root / sources.PROTOCOL
-        protocol = read_json(fixtures.REPO / sources.PROTOCOL)
+        protocol = archived_json(sources.PROTOCOL)
         protocol['base_protocol'] = dict(pin(self.root / frame.PROTOCOL), path=frame.PROTOCOL)
         protocol['membership_freeze'] = dict(pin(self.freeze_path), path=sources.MEMBERSHIP_FREEZE)
         write_json(self.protocol_path, protocol)

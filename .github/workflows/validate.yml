@@ -21,6 +21,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7, verified 2026-10-12
         with:
           persist-credentials: false
+          fetch-depth: 0
       - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9 # v7, verified 2026-10-12
         with:
           version: '0.11.2'
@@ -32,30 +33,9 @@ jobs:
         if: matrix.mode == 'full'
         run: uv sync --locked --python 3.11 --extra ingest --no-install-project
       - name: Install project with pinned build backend
-        run: uv pip install --no-deps --editable . --build-constraints paper/release/build-constraints.txt
+        run: uv pip install --no-deps . packages/tether --build-constraints tools/build-constraints.txt
       - name: Validate clean checkout
         run: uv run --no-sync python tools/validate.py --mode ${{ matrix.mode }} --package
-  p09-replay-fictional:
-    runs-on: windows-latest
-    timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
-        with:
-          persist-credentials: false
-      - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9
-        with:
-          version: '0.11.2'
-          python-version: '3.11.15'
-      - name: Install core and pinned Arrow
-        run: uv sync --locked --python 3.11.15 --extra ingest --no-install-project
-      - name: Install core with pinned build backend
-        run: uv pip install --python .venv/Scripts/python.exe --no-deps --editable . --build-constraints paper/release/build-constraints.txt
-      - name: Install separately versioned reconstruction package
-        run: uv pip install --python .venv/Scripts/python.exe --no-deps --build-constraints paper/release/build-constraints.txt ./paper/release/code
-      - name: Validate invented replay fixtures
-        run: uv run --no-sync python -m unittest discover -s paper/release/code/tests -v
-      - name: Validate allowlist and preparation failures
-        run: uv run --no-sync python -m unittest discover -s planning/review-assets/preprint-p09-20261101 -p "test_*.py" -v
   tether-interface:
     runs-on: windows-latest
     timeout-minutes: 15
@@ -63,16 +43,17 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           persist-credentials: false
+          fetch-depth: 0
       - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9
         with:
           version: '0.11.2'
           python-version: '3.11.15'
-      - name: Resolve compatibility engine dependencies
+      - name: Resolve engine dependencies
         run: uv sync --locked --python 3.11.15 --no-install-project
-      - name: Install frozen compatibility engine
-        run: uv pip install --python .venv/Scripts/python.exe --no-deps --editable . --build-constraints paper/release/build-constraints.txt
+      - name: Install TETHER engine
+        run: uv pip install --python .venv/Scripts/python.exe --no-deps . --build-constraints tools/build-constraints.txt
       - name: Install canonical TETHER interface
-        run: uv pip install --python .venv/Scripts/python.exe --no-deps --editable packages/tether --build-constraints paper/release/build-constraints.txt
+        run: uv pip install --python .venv/Scripts/python.exe --no-deps packages/tether --build-constraints tools/build-constraints.txt
       - name: Check installed dependencies
         run: uv pip check --python .venv/Scripts/python.exe
       - name: Validate TETHER namespace and execution boundaries

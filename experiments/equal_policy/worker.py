@@ -152,7 +152,7 @@ def _run_worker(implementation, root, descriptor, scratch):
             experiments_path=str(experiments), implementation_file=str(module.__file__) if module else None,
             removed_repository_source_paths=removed,
             loaded_product_modules={name: str(getattr(sys.modules[name], '__file__', None))
-                                    for name in ('asof', 'tether') if name in sys.modules},
+                                    for name in ('tether_engine', 'tether') if name in sys.modules},
             repository_product_source_on_path=any(Path(path).resolve() in
                 (experiments.parent / 'src', experiments.parent / 'packages/tether/src') for path in sys.path if path)),
         diagnostics=dict(captured_stdout=stdout.getvalue(), captured_stderr=stderr.getvalue(),

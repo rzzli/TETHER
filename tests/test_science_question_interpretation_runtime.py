@@ -10,11 +10,11 @@ import unittest
 from concurrent.futures import ThreadPoolExecutor
 from unittest.mock import patch
 
-from asof.agents import Usage
-from asof.contracts import Case
-from asof.journal import RunJournal,read_chain
-from asof.serde import ContractError,canonical,decode,encode,fingerprint,read_json,write_json
-from asof.workflow import Budget
+from tether_engine.agents import Usage
+from tether_engine.contracts import Case
+from tether_engine.journal import RunJournal,read_chain
+from tether_engine.serde import ContractError,canonical,decode,encode,fingerprint,read_json,write_json
+from tether_engine.workflow import Budget
 from tools.science.bounded_interpretation import Generated
 from tools.science.interpretation_questions import prepare_question
 from tools.science.run_comparison import pin
@@ -48,7 +48,7 @@ class FixtureBackend:
 class QuestionRuntimeTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup);self.root=Path(self.temp.name)
-        self.inputs=self.root/'inputs';shutil.copytree(ROOT/'src/asof/demo/v2',self.inputs)
+        self.inputs=self.root/'inputs';shutil.copytree(ROOT/'src/tether_engine/demo/v2',self.inputs)
         case=replace(decode(Case,read_json(self.inputs/'case.json')),task='T6',endpoint=None)
         write_json(self.inputs/'case.json',encode(case));self.prepared=self.prepare();self.out=self.root/'run'
 
@@ -211,7 +211,7 @@ class QuestionRuntimeTests(unittest.TestCase):
                 if kind=='evaluator':
                     snapshot=read_json(self.inputs/'snapshot.json');snapshot['sources'][0]['role']='evaluation_only';write_json(self.inputs/'snapshot.json',snapshot)
                 else:
-                    shutil.copyfile(ROOT/'src/asof/demo/v2/snapshot.json',self.inputs/'snapshot.json')
+                    shutil.copyfile(ROOT/'src/tether_engine/demo/v2/snapshot.json',self.inputs/'snapshot.json')
                     case=read_json(self.inputs/'case.json');case['program']['availability']['annotation_public_at']='2024-01-01';write_json(self.inputs/'case.json',case)
                 with self.assertRaises(ContractError):self.run_job(backend)
                 self.assertEqual(backend.calls,0);self.assertEqual(runtime.inspect_question_interpretation(self.out)['calls'],0)
@@ -347,7 +347,7 @@ class QuestionRuntimeTests(unittest.TestCase):
 
     def test_code_closure_includes_package_initializers(self):
         closure=set(runtime.code_paths())
-        for relative in ['src/asof/__init__.py','tools/__init__.py','tools/science/__init__.py']:
+        for relative in ['src/tether_engine/__init__.py','tools/__init__.py','tools/science/__init__.py']:
             path=ROOT/relative
             if path.is_file():self.assertIn(path.resolve(),closure)
 

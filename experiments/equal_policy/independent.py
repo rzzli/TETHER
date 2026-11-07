@@ -25,7 +25,7 @@ from .independent_schema import (CATEGORIES, FEATURES, SIGNED_FEATURES,
 NORMAL_LIMIT = 64 * 1024 * 1024
 LEDGER_LIMIT = 256 * 1024 * 1024
 SHA = re.compile(r'[0-9a-f]{64}\Z')
-FEATURE_SCHEMA = 'asof-features-v2'
+FEATURE_SCHEMA = 'tether-features-v2'
 AGGREGATION = 'mean_of_unique_dependency_groups_v2'
 RUN_FILES = ('run.json', 'inputs.json', 'ledger.json', 'features.json',
              'prediction.json', 'trace.jsonl', 'dossier.md', 'journal.jsonl')

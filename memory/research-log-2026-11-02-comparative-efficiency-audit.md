@@ -8,7 +8,7 @@ updated: 2026-11-02
 
 # Comparative efficiency and value audit
 
-The user's request was to compare TETHER deeply with similar work, audit current code for incorrect, inefficient or redundant behavior, and identify analyses/data that strengthen the argument. The report is [[TETHER efficiency and comparative value]], with source notes under `research_notes/TETHER efficiency and comparative value/` and an explicit `REPORT-VALIDATION.json`. Five directly cited compact peer/pipeline JSON records are retained byte-identical under `evidence-v1/`, with original paths and hashes in `EVIDENCE-MANIFEST.json`; fixture trees and raw datasets were not copied. Baseline is `b8d107059c781bb96ab27807f857f1127ed09608`, TETHER 0.5.0 over the frozen AsOf 0.3.11 engine. Runtime code and sealed paper/results/releases were not edited; corrections below remain proposals.
+The user's request was to compare TETHER deeply with similar work, audit current code for incorrect, inefficient or redundant behavior, and identify analyses/data that strengthen the argument. The report is [[TETHER efficiency and comparative value]], with source notes under `research_notes/TETHER efficiency and comparative value/` and an explicit `REPORT-VALIDATION.json`. Five directly cited compact peer/pipeline JSON records are retained byte-identical under `evidence-v1/`, with original paths and hashes in `EVIDENCE-MANIFEST.json`; fixture trees and raw datasets were not copied. Baseline is `b8d107059c781bb96ab27807f857f1127ed09608`, TETHER 0.5.0 over the frozen TETHER 0.3.11 engine. Runtime code and sealed paper/results/releases were not edited; corrections below remain proposals.
 
 ## Comparative finding
 

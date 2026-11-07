@@ -7,11 +7,11 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from asof.agents import EvidenceView, SpecialistRequest, Usage
-from asof.contracts import Category
-from asof.local_model import LocalSelectionBackend, selection_payload
-from asof.serde import ContractError, canonical, fingerprint, write_json
-from asof.wire import FORMAT
+from tether_engine.agents import EvidenceView, SpecialistRequest, Usage
+from tether_engine.contracts import Category
+from tether_engine.local_model import LocalSelectionBackend, selection_payload
+from tether_engine.serde import ContractError, canonical, fingerprint, write_json
+from tether_engine.wire import FORMAT
 from tools.science.role_backend import RoleSelectionBackend, STAGES, role_allowed_ids, role_selection_payload
 
 

@@ -5,9 +5,9 @@ from pathlib import Path
 import unittest
 from unittest.mock import patch
 
-from asof.ingest import build_snapshot
-from asof.journal import inspect_run, read_chain
-from asof.serde import ContractError, read_json, sha256_file, write_json
+from tether_engine.ingest import build_snapshot
+from tether_engine.journal import inspect_run, read_chain
+from tether_engine.serde import ContractError, read_json, sha256_file, write_json
 from tests import test_v02_ingest as fixtures
 from tools.science import reference_packets as reference
 

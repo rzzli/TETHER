@@ -5,9 +5,9 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.archive.interpretation import _Context
-from asof.archive.paths import ArchiveResolver
-from asof.serde import ContractError, canonical, fingerprint, freeze
+from tether_engine.archive.interpretation import _Context
+from tether_engine.archive.paths import ArchiveResolver
+from tether_engine.serde import ContractError, canonical, fingerprint, freeze
 
 
 class ArchiveReviewRegressions(unittest.TestCase):

@@ -3,7 +3,7 @@ title: Framework Code Review and Next Stage Plan
 date: 2026-10-10
 status: reviewed-plan-proposed
 tags:
-  - asof
+  - TETHER
   - code-review
   - implementation-plan
 ---
@@ -28,7 +28,7 @@ was performed.
 
 ## Review scope and evidence
 
-Reviewed the thirteen top-level Python modules in `src/asof/`, the tests, fixtures,
+Reviewed the thirteen top-level Python modules in `src/tether_engine/`, the tests, fixtures,
 packaging and implementation documentation. Findings are tied to the source hashes in
 [[planning/review-assets/framework-review-2026-10-10.json|the review evidence]].
 The retained probe program is `tools/review/probe_framework.py`:
@@ -54,8 +54,8 @@ known-dependence grouping and an evaluator that is not imported by the workflow.
 
 ### F01 — P1 correctness: T6 bypasses program temporal validation
 
-Location: [Case.validate](D:/Projects/drug_target_agents/src/asof/contracts.py:127) and
-[request serialization](D:/Projects/drug_target_agents/src/asof/agents.py:138).
+Location: [Case.validate](D:/Projects/drug_target_agents/src/tether_engine/contracts.py:127) and
+[request serialization](D:/Projects/drug_target_agents/src/tether_engine/agents.py:138).
 
 Program availability and eligibility checks sit entirely inside `if self.task == "T1"`.
 A T6 case can still contain a program, and the entire case is serialized for every
@@ -69,10 +69,10 @@ context before any request. Test both supplied-program and program-free T6 cases
 
 ### F02 — P1 correctness: mutable records break source and prediction consistency
 
-Location: [observation dictionaries](D:/Projects/drug_target_agents/src/asof/contracts.py:219),
-[store queries](D:/Projects/drug_target_agents/src/asof/chrono.py:32),
-[feature vector](D:/Projects/drug_target_agents/src/asof/features.py:28) and
-[verification](D:/Projects/drug_target_agents/src/asof/artifacts.py:110).
+Location: [observation dictionaries](D:/Projects/drug_target_agents/src/tether_engine/contracts.py:219),
+[store queries](D:/Projects/drug_target_agents/src/tether_engine/chrono.py:32),
+[feature vector](D:/Projects/drug_target_agents/src/tether_engine/features.py:28) and
+[verification](D:/Projects/drug_target_agents/src/tether_engine/artifacts.py:110).
 
 Frozen dataclasses contain mutable dictionaries for features and method parameters.
 Store queries/lookups return those same objects. Changing an admitted genetic-support
@@ -94,8 +94,8 @@ Report byte integrity and semantic consistency as separate checks.
 
 ### F03 — P1 correctness: case-dependent features lack hypothesis binding
 
-Location: [retrieval matching](D:/Projects/drug_target_agents/src/asof/chrono.py:32) and
-[observation schema](D:/Projects/drug_target_agents/src/asof/contracts.py:202).
+Location: [retrieval matching](D:/Projects/drug_target_agents/src/tether_engine/chrono.py:32) and
+[observation schema](D:/Projects/drug_target_agents/src/tether_engine/contracts.py:202).
 
 Matching uses target ID, indication ID, category and optional program ID. It does not
 bind a feature to intended action, modality, tissue or identifier namespace version.
@@ -113,8 +113,8 @@ different tissues and program-specific measurements against the same target/indi
 
 ### F04 — P1 correctness: provider errors can lose attempts, usage and run artifacts
 
-Location: [backend exception handling](D:/Projects/drug_target_agents/src/asof/workflow.py:147)
-and [final artifact creation](D:/Projects/drug_target_agents/src/asof/cli.py:89).
+Location: [backend exception handling](D:/Projects/drug_target_agents/src/tether_engine/workflow.py:147)
+and [final artifact creation](D:/Projects/drug_target_agents/src/tether_engine/cli.py:89).
 
 The workflow catches `BackendFailure`, `ContractError` and `RuntimeError`. A backend
 `TimeoutError` or ordinary `ValueError` escapes after an attempted call without returning
@@ -132,8 +132,8 @@ from spending money before discovering that their output paths collide.
 
 ### F05 — P1 correctness: scorer cutoff checks happen after all backend calls
 
-Location: [scoring eligibility](D:/Projects/drug_target_agents/src/asof/scorer.py:116) and
-[workflow final scoring](D:/Projects/drug_target_agents/src/asof/workflow.py:201).
+Location: [scoring eligibility](D:/Projects/drug_target_agents/src/tether_engine/scorer.py:116) and
+[workflow final scoring](D:/Projects/drug_target_agents/src/tether_engine/workflow.py:201).
 
 The CLI validates scorer structure early, but training/calibration cutoffs, profile and
 case applicability are checked later inside `score`. A model with a `2024-01-01` training
@@ -148,8 +148,8 @@ Feature coverage remains a post-extraction check because it depends on available
 
 ### F06 — P1 before locked evaluation: predictions are not linked to registered runs
 
-Location: [evaluator inputs](D:/Projects/drug_target_agents/src/asof/cli.py:60) and
-[cohort matching](D:/Projects/drug_target_agents/src/asof/evaluation.py:41).
+Location: [evaluator inputs](D:/Projects/drug_target_agents/src/tether_engine/cli.py:60) and
+[cohort matching](D:/Projects/drug_target_agents/src/tether_engine/evaluation.py:41).
 
 The descriptive evaluator accepts standalone prediction JSONs. There is no receipt,
 registered cohort artifact, prediction freeze, input-policy/model identity or independent
@@ -167,8 +167,8 @@ need a prediction anchor that predates the relevant observed outcomes.
 
 ### F07 — P2 integration: receipts omit parts of the input-policy/backend provenance
 
-Location: [catalog loading](D:/Projects/drug_target_agents/src/asof/chrono.py:59) and
-[run input/receipt construction](D:/Projects/drug_target_agents/src/asof/artifacts.py:84).
+Location: [catalog loading](D:/Projects/drug_target_agents/src/tether_engine/chrono.py:59) and
+[run input/receipt construction](D:/Projects/drug_target_agents/src/tether_engine/artifacts.py:84).
 
 Receipts include admitted normalized packets and Python file hashes, but do not snapshot
 or hash the admission catalog, replay document, interpreter/build environment, or future
@@ -185,7 +185,7 @@ resolvers for portable verification; private absolute paths are local convenienc
 
 ### F08 — P2 before scorer training: feature-level missingness loses reasons
 
-Location: [feature construction](D:/Projects/drug_target_agents/src/asof/features.py:69).
+Location: [feature construction](D:/Projects/drug_target_agents/src/tether_engine/features.py:69).
 
 The run's coverage records preserve `absent` versus `access_denied`, but both become
 `Feature(value=null, status="not_measured")`. These reasons therefore disappear from the
@@ -201,8 +201,8 @@ biological evidence. Do not convert a partly downloaded source into “no eviden
 
 ### F09 — P1 architecture before computed tools: output creation and input availability are conflated
 
-Location: [availability rule](D:/Projects/drug_target_agents/src/asof/contracts.py:63) and
-[record admission](D:/Projects/drug_target_agents/src/asof/chrono.py:121).
+Location: [availability rule](D:/Projects/drug_target_agents/src/tether_engine/contracts.py:63) and
+[record admission](D:/Projects/drug_target_agents/src/tether_engine/chrono.py:121).
 
 Every observed result, including `source_kind="computed"`, must have record-public
 availability before origin. A newly calculated result dated October 2026 is excluded
@@ -238,7 +238,7 @@ assets. A new code implementation and a newer scientific input are different dep
   Git repository. Preserve this reviewed file-hash baseline, then establish version control,
   ignore rules, environment fingerprints and Windows/Linux checks before broader changes.
 
-## Next release objective: AsOf v0.2
+## Next release objective: TETHER v0.2
 
 **Deliver ten development dossiers from real, pinned public data with auditable lineage,
 hypothesis-aware applicability, durable execution and an optional bounded selection

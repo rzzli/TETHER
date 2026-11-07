@@ -12,7 +12,7 @@ import sys
 import urllib.request
 import zipfile
 
-from asof.serde import sha256_file
+from tether_engine.serde import sha256_file
 
 
 def main():
@@ -38,7 +38,7 @@ def main():
             raise ValueError('Insufficient free storage with working reserve')
         for item in items:
             dest = root / item['name']; temporary = dest.with_suffix(dest.suffix + '.partial')
-            request = urllib.request.Request(item['url'], headers={'User-Agent': 'AsOf local model qualification'})
+            request = urllib.request.Request(item['url'], headers={'User-Agent': 'TETHER local model qualification'})
             digest = hashlib.sha256(); count = 0
             item['status'] = 'started'; save()
             with urllib.request.urlopen(request, timeout=60) as response, temporary.open('xb') as stream:

@@ -1,12 +1,25 @@
 # TETHER — Pure interpretation generation contract
 
-TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.5.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.
+The current interface is `tether-target-agents` **0.6.0**, with the `tether` CLI
+and public namespace over `tether-target-engine` **0.4.0** (`tether_engine`). See
+[installation](../README.md#quick-start) and the [namespace migration
+boundary](../packages/tether/MIGRATION.md). Public aliases share the new engine's
+module and class identities; they do not certify earlier execution fingerprints.
 
-Status: AsOf **0.3.11** is accepted for pure engineering preparation and validation. [Acceptance evidence](../planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json) covers full, installed and preserved-version checks; native conformance and scientific validation remain unestablished.
+The component history below retains earlier versioned observations and test
+counts. Those qualifications belong to their original code and dates, preserved
+in the [historical checkpoint](ARCHIVE.md). Names and example paths here use the
+current namespace for readability; exact original identifiers and reproduction
+commands are in that checkpoint. The naming migration is not a scientific rerun
+or a transfer of historical qualification to the new release. The semantic
+experiment remains **paused**; this guide does not reactivate it or retired
+study and expert-review branches.
+
+Status: TETHER **0.3.11** is accepted for pure engineering preparation and validation. [Acceptance evidence](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/acceptance.json) covers full, installed and preserved-version checks; native conformance and scientific validation remain unestablished.
 
 The `source-quote-interpretation-v3-gbnf` interface prepares a deterministic grammar and validates authored replies offline. Its generator identity is `strict-interpretation-gbnf-v1`. Preparation returns `execution_authorized: false` and `native_conformance: "unverified"`. Existing v2 preparation, the default controller route, native-wrapper behavior and archived artifacts retain their existing identities.
 
-The public modules are [interpretation_generation](../src/asof/study/interpretation_generation.py) and [interpretation_grammar](../src/asof/study/interpretation_grammar.py). They use the standard library and perform no model dispatch.
+The public modules are [interpretation_generation](../src/tether_engine/study/interpretation_generation.py) and [interpretation_grammar](../src/tether_engine/study/interpretation_grammar.py). They use the standard library and perform no model dispatch.
 
 | API | Behavior |
 |---|---|
@@ -20,11 +33,11 @@ Preparation binds request, quote-catalog, payload, acceptance-schema and generat
 This example validates an authored synthetic abstention entirely offline:
 
 ```python
-from asof.study.diagnostic import load_synthetic_request
-from asof.study.interpretation_generation import prepare_payload, validate_output
+from tether_engine.study.diagnostic import load_synthetic_request
+from tether_engine.study.interpretation_generation import prepare_payload, validate_output
 
 request = load_synthetic_request("synthetic-context")
-prepared = prepare_payload(request, "asof_interpretation", 0, [])
+prepared = prepare_payload(request, "tether_interpretation", 0, [])
 answer = {
     "answer_status": "abstained",
     "claims": [],
@@ -41,6 +54,6 @@ The payload carries `grammar` instead of `json_schema`. Generation uses compact 
 
 - **Bounds:** at most 256 quote IDs and three claims, subject to the inherited lower claim cap. Original quote text totals at most 32,768 UTF-8 bytes, a necessary bound derived from the existing prompt cap. Final prompt, grammar and complete serialized payload caps remain 32,768, 65,536 and 65,536 bytes; raw/canonical responses remain capped at 256 KiB. Oversize inputs raise `ContractError` without pruning. A quote longer than 1,800 code points retains its reference while its impossible source-report literal branch is omitted.
 - **Acceptance:** answered/partial/abstained states, original quote pairing, scalar/nonblank text and collection limits remain mandatory. Text strings are capped at 1,800 code points; reasons at 512. Global claim-text uniqueness, response-byte limits and source/request/history authority remain post-validation responsibilities. Numerical features stay empty and clinical probabilities null.
-- **Evidence limits:** the [reference disposition](../planning/review-assets/recovery-step9-generation-contract-20261028/SCHEMA-ORACLE-DISPOSITION.md) qualifies 162 typed schema expectations and 16 controls; five parser-edge observations remain separate. Schema acceptance does not establish strict wire parsing, entailment or clinical usefulness.
+- **Evidence limits:** the [reference disposition](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/SCHEMA-ORACLE-DISPOSITION.md) qualifies 162 typed schema expectations and 16 controls; five parser-edge observations remain separate. Schema acceptance does not establish strict wire parsing, entailment or clinical usefulness.
 
-See the [contract](../planning/review-assets/recovery-step9-generation-contract-20261028/CONTRACT.md) and [bounded-input amendment](../planning/review-assets/recovery-step9-generation-contract-20261028/AMENDMENT-1-BOUNDED-INPUT.md) for design decisions. The next critical review follows the [native recognizer requirements](../planning/review-assets/recovery-step9-generation-contract-20261028/NATIVE-RECOGNIZER-REQUIREMENTS.md): qualify exact headers and vocabulary-only loading before any separately authorized native document/EOG, rejection or resource experiment. Pure preparation grants no execution authority; native conformance and scientific validation remain pending.
+See the [contract](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/CONTRACT.md) and [bounded-input amendment](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/AMENDMENT-1-BOUNDED-INPUT.md) for design decisions. The next critical review follows the [native recognizer requirements](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/NATIVE-RECOGNIZER-REQUIREMENTS.md): qualify exact headers and vocabulary-only loading before any separately authorized native document/EOG, rejection or resource experiment. Pure preparation grants no execution authority; native conformance and scientific validation remain pending.

@@ -6,11 +6,11 @@ import time
 import unittest
 from unittest.mock import patch
 
-from asof.agents import Usage
-from asof.serde import ContractError
-from asof.study import session as study
-from asof.study import tokenization as tok
-from asof.workflow import Budget
+from tether_engine.agents import Usage
+from tether_engine.serde import ContractError
+from tether_engine.study import session as study
+from tether_engine.study import tokenization as tok
+from tether_engine.workflow import Budget
 from tests import test_study_token_capacity as fixtures
 
 

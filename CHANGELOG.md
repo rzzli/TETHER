@@ -1,5 +1,18 @@
 # Changelog
 
+## TETHER 0.6.0 / engine 0.4.0 — 2026-11-06
+
+- Rename the engine distribution, Python namespace, commands, source paths and
+  new serialized identities; the public command remains `tether`.
+- Use an exact dossier identity projection and explicit current-version semantic
+  verification. Generic version-one byte checks remain available.
+- Preserve original experiments and release bundles in a tagged checkpoint;
+  historical receipts are not relabeled as new execution.
+- Refresh the current paper presentation without changing scientific outcomes.
+- Rebind the 178-product catalog as an inventory with no inherited artifact grants.
+
+See [migration](packages/tether/MIGRATION.md) and [archive reproduction](docs/ARCHIVE.md).
+
 ## 0.3.11 — 2026-10-28 UTC
 
 - Add a separate pure v3 direct-GBNF builder and bound preparation/validation API.
@@ -142,16 +155,16 @@
 
 ## 0.3.0 — 2026-10-26
 
-- Add a dependency-free `asof.archive` resolver, externally anchored restoration
+- Add a dependency-free `tether_engine.archive` resolver, externally anchored restoration
   and versioned verification of representative historical runs. Archived Python
   is authenticated as data and never imported or executed.
 - Harden publication metadata consistency, execution-store readiness, local
   transport errors, complete native payload preflight, union diagnostics,
   atomic no-overwrite publication and Windows path identity.
-- Add small `asof.study` proof, owned-process and once-only session primitives.
+- Add small `tether_engine.study` proof, owned-process and once-only session primitives.
   The first consumer is a recorded contemporary diagnostic with source-only
   versioned resources and distinct current/simplified response contracts.
-- Add `python -m asof.study smoke --output <new-directory>` for a dependency-free
+- Add `python -m tether_engine.study smoke --output <new-directory>` for a dependency-free
   recorded success/failure check. It has no native inference mode.
 
 Original v1/v2 receipts and fixtures are preserved. Old runs use the supported

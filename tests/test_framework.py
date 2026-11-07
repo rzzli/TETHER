@@ -10,18 +10,18 @@ from datetime import date
 from pathlib import Path
 from unittest.mock import patch
 
-from asof.agents import ExtractiveBackend, ReplayBackend, Selection, Usage
-from asof.artifacts import verify_run, write_run
-from asof.chrono import load_snapshot
-from asof.contracts import Case, Category, EvidencePacket, Profile, validate_observation
-from asof.evaluation import Outcome, Outcomes, add_months, evaluate
-from asof.ledger import EvidenceLedger
-from asof.scorer import ScorerArtifact
-from asof.serde import ContractError, decode, encode, parse_json, read_json, sha256_file, write_json
-from asof.workflow import BackendFailure, Budget, run_workflow
+from tether_engine.agents import ExtractiveBackend, ReplayBackend, Selection, Usage
+from tether_engine.artifacts import verify_run, write_run
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case, Category, EvidencePacket, Profile, validate_observation
+from tether_engine.evaluation import Outcome, Outcomes, add_months, evaluate
+from tether_engine.ledger import EvidenceLedger
+from tether_engine.scorer import ScorerArtifact
+from tether_engine.serde import ContractError, decode, encode, parse_json, read_json, sha256_file, write_json
+from tether_engine.workflow import BackendFailure, Budget, run_workflow
 
 
-FIXTURES = Path(__file__).resolve().parents[1] / "src" / "asof" / "demo" / "v2"
+FIXTURES = Path(__file__).resolve().parents[1] / "src" / "tether_engine" / "demo" / "v2"
 
 
 class RecordingBackend(ExtractiveBackend):
@@ -341,7 +341,7 @@ class FrameworkTests(unittest.TestCase):
         self.assertTrue(result.prediction.synthetic)
 
     def test_cli_replay_run_and_overwrite_rejection(self):
-        from asof.cli import main
+        from tether_engine.cli import main
         output = self.root / "cli-run"
         arguments = ["run", "--case", str(self.fixture / "case.json"),
                      "--snapshot", str(self.fixture / "snapshot.json"),
@@ -474,7 +474,7 @@ class EvaluationTests(unittest.TestCase):
         self.assertEqual(add_months(date(2024, 2, 29), 12), date(2025, 2, 28))
 
     def test_cli_evaluator_round_trip(self):
-        from asof.cli import main
+        from tether_engine.cli import main
         predictions, labels = self.pair()
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

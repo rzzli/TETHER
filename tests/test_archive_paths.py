@@ -6,8 +6,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.archive.paths import ArchiveResolver, from_envelope, join, logical_key
-from asof.serde import ContractError
+from tether_engine.archive.paths import ArchiveResolver, from_envelope, join, logical_key
+from tether_engine.serde import ContractError
 
 
 class ArchivePathsTests(unittest.TestCase):
@@ -119,7 +119,7 @@ class ArchivePathsTests(unittest.TestCase):
                     st_mtime_ns, st_ctime_ns = info.st_mtime_ns + 1, info.st_ctime_ns
                 return Changed()
             return info
-        with patch('asof.archive.paths.os.fstat', changing), self.assertRaises(ContractError):
+        with patch('tether_engine.archive.paths.os.fstat', changing), self.assertRaises(ContractError):
             resolver.read_bytes(self.files[0]['logical_path'])
 
     def test_conflicting_cas_alias_and_bool_size_denied(self):

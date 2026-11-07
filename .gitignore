@@ -22,3 +22,27 @@ runs/
 # Returned scientific reviews are evaluator-only originals, not agent inputs.
 /docs/expert-response10312026/
 /docs/expert-review-genetics-20261026/responses/
+
+# Frozen pre-migration evidence is retained at the tagged historical checkpoint.
+# Local originals stay available, but are not part of the current published tree.
+/planning/review-assets/*
+!/planning/review-assets/README.md
+/planning/protocols/
+/research_notes/
+/docs/history/
+/docs/expert-review-*/
+/tests/fixtures/legacy-v1/
+
+# Original sealed release recipes belong to the historical checkpoint.
+/tools/presentation/build_tether_manuscript.py
+/tools/presentation/build_tether_manuscript_v2.py
+/tools/presentation/package_tether_review.py
+/tools/presentation/package_tether_review_v2.py
+/tools/science/prepare_p09_relocated_inputs.py
+/tools/science/prepare_p05_public_bridge.py
+/tools/science/package_p09_release.py
+/tools/science/p05_wheel_allowlist.py
+/tools/science/freeze_p09_runtime_bundle.py
+/tools/science/build_p05_release_bundle.py
+/tools/science/build_p05_paper_assets.py
+/tools/science/audit_p05_paper_results.py

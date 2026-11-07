@@ -4,7 +4,7 @@ Oct 8, 2026 · @R
 
 ## Bottom line
 
-Build a time-locked target-evaluation system (working name **AsOf**) and a benchmark on which AsOf and the Virtual Biotech run with the same model, data and as-of date. Claim "better" only if pre-registered tests pass.
+Build a time-locked target-evaluation system (working name **TETHER**) and a benchmark on which TETHER and the Virtual Biotech run with the same model, data and as-of date. Claim "better" only if pre-registered tests pass.
 
 **What the audit found.** 78 of Virtual Biotech's 105 tools are lookups into one Open Targets release. Its strengths are process: planning, review, provenance and replay. Four gaps leave room to beat it on public data:
 
@@ -15,8 +15,8 @@ Build a time-locked target-evaluation system (working name **AsOf**) and a bench
 
 **Deliverables**
 
-- **Repo** (Apache-2.0): AsOf, plus a harness that runs Virtual Biotech, Biomni, OriGene and baselines unchanged.
-- **AsOf-Bench** (CC BY-SA 4.0): time-locked (target, indication) pairs, leakage tests and a leaderboard.
+- **Repo** (Apache-2.0): TETHER, plus a harness that runs Virtual Biotech, Biomni, OriGene and baselines unchanged.
+- **TETHER-Bench** (CC BY-SA 4.0): time-locked (target, indication) pairs, leakage tests and a leaderboard.
 - **Preprint** on bioRxiv by June 2027, about eight months after start, with an OSF pre-registration; journal submission follows.
 
 **Decision needed now:** approve Phase 0, six weeks to size the post-cutoff label set, simulate power and file the pre-registration. Everything after depends on that count.
@@ -106,14 +106,14 @@ The project should reuse other groups' best parts and run every open competitor 
 
 ## Project thesis and hypotheses
 
-**Thesis.** With the same model, the same data and the same as-of date, a system that computes causal genetics, records typed evidence, and scores it with a model trained only on earlier outcomes will rank (target, indication) pairs by later clinical success better than the Virtual Biotech, at lower cost, with every claim auditable. Working name for the system: **AsOf**.
+**Thesis.** With the same model, the same data and the same as-of date, a system that computes causal genetics, records typed evidence, and scores it with a model trained only on earlier outcomes will rank (target, indication) pairs by later clinical success better than the Virtual Biotech, at lower cost, with every claim auditable. Working name for the system: **TETHER**.
 
 Hypotheses are registered on OSF before test labels are unlocked. The preprint claims "better" only if H1 and H2 both pass; otherwise it reports the benchmark and the negative result.
 
 | ID | Hypothesis | Test | Pass criterion |
 | --- | --- | --- | --- |
-| H1 (primary) | AsOf discriminates later success better than Virtual Biotech | Paired DeLong on locked post-cutoff test set; Brier score as co-primary | AUROC gain > 0, one-sided p < 0.05; smallest effect of interest 0.05 |
-| H2 | AsOf beats simple baselines | Same test vs genetics-only and time-masked Open Targets association score | AUROC gain > 0 vs both |
+| H1 (primary) | TETHER discriminates later success better than Virtual Biotech | Paired DeLong on locked post-cutoff test set; Brier score as co-primary | AUROC gain > 0, one-sided p < 0.05; smallest effect of interest 0.05 |
+| H2 | TETHER beats simple baselines | Same test vs genetics-only and time-masked Open Targets association score | AUROC gain > 0 vs both |
 | H3 | Gains are not popularity | H1 repeated within the bottom tercile of target publication count | Gain retains sign; CI reported |
 | H4 | Computed causal genetics adds signal | Ablate cis-MR and direction-of-effect features | AUROC drop > 0 with bootstrap CI excluding 0 |
 | H5 | Dossiers are better and cheaper | Blinded expert panel preference; audited claim error rate; cost per dossier | Panel preference > 50% (sign test); lower error rate and cost |
@@ -123,13 +123,13 @@ H6 is not a bet against the Virtual Biotech; it is an independent check of its m
 
 ## System design
 
-AsOf keeps Virtual Biotech's strengths (specialists, review, provenance, open-ended code) and adds the three things it lacks: a time gate on every input, a typed ledger instead of prose, and a scorer trained on past outcomes.
+TETHER keeps Virtual Biotech's strengths (specialists, review, provenance, open-ended code) and adds the three things it lacks: a time gate on every input, a typed ledger instead of prose, and a scorer trained on past outcomes.
 
-&#91;embedded content: AsOf architecture · time gate, 8 specialists, ledger, critics, scorer\]
+&#91;embedded content: TETHER architecture · time gate, 8 specialists, ledger, critics, scorer\]
 
 Specialists never set the final number. They write evidence into the ledger; critics can send work back; the scorer turns the ledger into a probability, and the LLM only explains it.
 
-## Benchmark design (AsOf-Bench)
+## Benchmark design (TETHER-Bench)
 
 Each item is a (target, indication) pair frozen at an as-of date T0 and labeled by what happened next; every input any system sees is filtered to what was public before T0.
 
@@ -165,12 +165,12 @@ Each item is a (target, indication) pair frozen at an as-of date T0 and labeled 
 
 ## Head-to-head protocol
 
-Virtual Biotech runs exactly as released, on the same masked data and the same model as AsOf; the only addition is the question we ask it.
+Virtual Biotech runs exactly as released, on the same masked data and the same model as TETHER; the only addition is the question we ask it.
 
 **Fairness rules**
 
 1. **Pinned code.** Virtual Biotech at commit `71f9da6` (MIT license). Masking keeps the Open Targets 25.09 schema, so its loaders run unchanged.
-2. **Same model.** Both systems use Virtual Biotech's defaults (Claude Sonnet 4.5 for reasoning, Haiku 4.5 for infrastructure). AsOf is also run on an open-weight model to show the gain comes from design.
+2. **Same model.** Both systems use Virtual Biotech's defaults (Claude Sonnet 4.5 for reasoning, Haiku 4.5 for infrastructure). TETHER is also run on an open-weight model to show the gain comes from design.
 3. **Same world.** Web search is off for both, as in Virtual Biotech's own B7-H3 case. Live ClinicalTrials.gov is replaced by an AACT-at-T0 shim with identical tool signatures.
 4. **Same question.** "Evaluate {target} for {indication} as of {T0}; end with the probability it advances to the next phase within 24 months." No system prompt is edited. Its categorical confidence is also scored as an ordinal, as a sensitivity check.
 5. **Variance.** Three seeds per system on a 100-pair subset.
@@ -187,7 +187,7 @@ Virtual Biotech runs exactly as released, on the same masked data and the same m
 | B4 | Same LLM, no tools | Isolates the value of tools |
 | B5 | Virtual Biotech | Primary comparator |
 | B6 | Biomni; OriGene | Other agents, on a cost-capped subset |
-| A1–A5 | AsOf minus cis-MR and direction of effect; minus scorer (LLM states probability); minus critics; minus perturbation; minus literature | Ablations for H4 and design claims |
+| A1–A5 | TETHER minus cis-MR and direction of effect; minus scorer (LLM states probability); minus critics; minus perturbation; minus literature | Ablations for H4 and design claims |
 
 **Metrics and statistics**
 
@@ -207,7 +207,7 @@ The direct cost is roughly $90k–110k over nine months, and running Virtual Bio
 | Item | Basis | Estimate |
 | --- | --- | --- |
 | Virtual Biotech runs | \~400 test pairs + 200 repeat-seed runs, \~$50 each | \~$30k |
-| AsOf runs | Same 600 runs at a target of ≤ $15 each | \~$9k |
+| TETHER runs | Same 600 runs at a target of ≤ $15 each | \~$9k |
 | Ablations | Mostly re-scoring saved ledgers; some reruns | \~$5k |
 | Biomni and OriGene | 100-pair subset each | \~$4k |
 | Development LLM spend | Building and debugging agents and tools | $10k–15k |
@@ -224,7 +224,7 @@ The direct cost is roughly $90k–110k over nine months, and running Virtual Bio
 
 The preprint is targeted for June 2027, about eight months after a mid-October 2026 start; the journal submission follows once the locked results are in, and the prospective log keeps scoring into 2028.
 
-&#91;embedded content: AsOf roadmap · 4 phases, 4 gates, 3 milestones\]
+&#91;embedded content: TETHER roadmap · 4 phases, 4 gates, 3 milestones\]
 
 Each phase ends at a gate. A failed gate changes scope, not the publication plan:
 
@@ -239,12 +239,12 @@ Predictions for the prospective log are registered by the end of Phase 1, so rea
 
 ## Repo, preprint and venues
 
-Three public outputs come from one repo: the AsOf system, the AsOf-Bench benchmark with its harness, and the preprint with every figure regenerable from a script.
+Three public outputs come from one repo: the TETHER system, the TETHER-Bench benchmark with its harness, and the preprint with every figure regenerable from a script.
 
 **Repo layout**
 
 ```
-asof/
+tether_engine/
   chrono/    as-of data layer: masked Open Targets, AACT snapshots, dated ChEMBL, date-bounded literature
   tools/     MCP servers: cis-MR, direction of effect, PheWAS safety, perturbation, structure, base rates, literature
   agents/    model-agnostic orchestrator, specialists, critics
@@ -265,8 +265,8 @@ asof/
 **Preprint outline**
 
 1. Tooling audit of Virtual Biotech and the field (inventory and gaps).
-2. AsOf-Bench: construction, label audit, leakage tests (canaries, contamination probe).
-3. AsOf architecture.
+2. TETHER-Bench: construction, label audit, leakage tests (canaries, contamination probe).
+3. TETHER architecture.
 4. Head-to-head: discrimination, calibration and cost against Virtual Biotech and baselines, including the low-literature stratum.
 5. Ablations: computed causal genetics, ledger-plus-scorer versus LLM-stated probability, critics.
 6. Expert panel and claim-level error audit.
@@ -288,7 +288,7 @@ The biggest risk is too few decisive post-cutoff outcomes to separate two good s
 | Risk | Likelihood | Mitigation |
 | --- | --- | --- |
 | Too few decisive post-cutoff pairs for H1 | High | Measure in Phase 0; add Phase 1→2 transitions and matched pairs (T2) for power; extend the label freeze; lean on rolling-origin results for the scorer |
-| AsOf does not beat Virtual Biotech | Medium | Pre-registration makes a null publishable; the benchmark, leakage tests and H6 re-analysis stand alone |
+| TETHER does not beat Virtual Biotech | Medium | Pre-registration makes a null publishable; the benchmark, leakage tests and H6 re-analysis stand alone |
 | Pretraining leakage inflates both systems | High | Model cutoff before T0; contamination probe; report with and without known pairs |
 | Masking breaks Virtual Biotech or changes its behavior | Medium | Keep the 25.09 schema; run its own test suite on masked data; share the harness with its authors |
 | Label noise in trial outcomes | Medium | Combine sources; double-annotate 200; sensitivity analysis excluding ambiguous multi-arm trials |

@@ -21,9 +21,9 @@ PROJECT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT.parents[1]
 sys.path.insert(0, str(PROJECT / "src"))
 
-from asof import cli as legacy
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, canonical, fingerprint
+from tether_engine import cli as legacy
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, canonical, fingerprint
 from tether import _cli as cli
 from tether import _presentation as layer
 from tether import _process as supervisor
@@ -80,21 +80,21 @@ class FrontDoorTests(unittest.TestCase):
     def test_distribution_and_license_are_separate_from_legacy_core(self):
         project = tomllib.loads((PROJECT / "pyproject.toml").read_text())
         self.assertEqual(project["project"]["name"], "tether-target-agents")
-        self.assertEqual(project["project"]["version"], "0.5.2")
-        self.assertEqual(project["project"]["dependencies"], ["asof-target-agents==0.3.13"])
+        self.assertEqual(project["project"]["version"], "0.6.0")
+        self.assertEqual(project["project"]["dependencies"], ["tether-target-engine==0.4.0"])
         self.assertEqual(project["project"]["optional-dependencies"]["ingest"], ["pyarrow==21.0.0"])
         self.assertEqual(project["tool"]["setuptools"]["packages"]["find"]["include"], ["tether", "tether.*"])
         self.assertEqual((PROJECT / "LICENSE").read_bytes(), (ROOT / "LICENSE").read_bytes())
 
     def test_help_version_and_legacy_parser_are_independent(self):
-        for argv, expected in [(["--help"], "usage: tether"), (["--version"], "TETHER 0.5.2"),
+        for argv, expected in [(["--help"], "usage: tether"), (["--version"], "TETHER 0.6.0"),
                                (["run", "--help"], "usage: tether run")]:
             stream = io.StringIO()
             with redirect_stdout(stream), self.assertRaises(SystemExit) as stop:
                 cli.main(argv)
             self.assertEqual(stop.exception.code, 0)
             self.assertIn(expected, stream.getvalue())
-        self.assertEqual(legacy.parser().prog, "asof")
+        self.assertEqual(legacy.parser().prog, "tether-engine")
 
     def test_invalid_arguments_are_branded_and_never_reserve_or_dispatch(self):
         stream = io.StringIO()
@@ -231,11 +231,27 @@ class FrontDoorTests(unittest.TestCase):
         engine_before = {p.name: p.read_bytes() for p in (self.output / "engine").iterdir()}
         expected = layer.project_dossier(engine_before["dossier.md"])
         self.assertEqual((self.output / "dossier.md").read_bytes(), expected)
+        self.assertEqual(expected, engine_before["dossier.md"])
         answer = layer.verify_outer(self.output, result["receipt_sha256"])
         self.assertTrue(answer["external_anchor_checked"])
         self.assertEqual(answer["engine"]["source_binding"], "current_originals")
         self.assertEqual(engine_before, {p.name: p.read_bytes() for p in (self.output / "engine").iterdir()})
         self.assertFalse(layer.verify_outer(self.output)["external_anchor_checked"])
+        self.assertEqual(answer["presentation_projection"], "identity_dossier_v2")
+
+    def test_engine_receipt_from_another_release_requires_original_checkout(self):
+        self.complete()
+        from tether_engine.artifacts import verify_run
+        path = self.output / "engine/receipt.json"
+        receipt = json.loads(path.read_text())
+        receipt["software_version"] = "0.0.0"
+        path.write_bytes(canonical(receipt))
+        with self.assertRaisesRegex(ContractError, "original engine checkout"):
+            verify_run(self.output / "engine", verify_sources=False)
+
+    def test_identity_projection_rejects_unrecognized_engine_header(self):
+        with self.assertRaisesRegex(ContractError, "Unexpected engine dossier header"):
+            layer.project_dossier(b"# Earlier-engine dossier: fixture\n")
 
     def test_cli_demo_and_inspect_do_not_redispatch(self):
         stdout = io.StringIO()
@@ -295,7 +311,7 @@ class FrontDoorTests(unittest.TestCase):
 
     def test_source_tamper_uses_only_copied_synthetic_json(self):
         sources = self.root / "fictional-sources"
-        shutil.copytree(ROOT / "src/asof/demo/v2", sources)
+        shutil.copytree(ROOT / "src/tether_engine/demo/v2", sources)
         argv = ["run", "--case", str(sources / "case.json"), "--snapshot", str(sources / "snapshot.json"),
                 "--scorer", str(sources / "scorer.json"), "--output", str(self.output)]
         self.complete(argv)
@@ -362,7 +378,7 @@ class FrontDoorTests(unittest.TestCase):
     def test_nonzero_engine_retains_attempt_and_has_no_success_receipt(self):
         with self.assertRaises(layer.EngineFailure):
             layer.create_outer(self.output, ["demo", "--output", str(self.output)],
-                               engine=lambda argv: layer.EngineResult(3, b"out", b"asof: failure\n"))
+                               engine=lambda argv: layer.EngineResult(3, b"out", b"tether-engine: failure\n"))
         self.assertEqual((self.output / "engine-stdout.txt").read_bytes(), b"out")
         self.assertEqual(layer.inspect_outer(self.output)["failure"]["status"], "failed")
         self.assertFalse((self.output / layer.RECEIPT).exists())
@@ -505,7 +521,7 @@ class FrontDoorTests(unittest.TestCase):
         with redirect_stderr(stream):
             self.assertEqual(cli.main(["verify", "--run-dir", str(self.output), "--outputs-only"]), 2)
         self.assertIn("tether:", stream.getvalue())
-        with patch.object(layer, "invoke_engine", return_value=layer.EngineResult(2, stderr=b"asof: bad fixture\n")), redirect_stderr(stream):
+        with patch.object(layer, "invoke_engine", return_value=layer.EngineResult(2, stderr=b"tether-engine: bad fixture\n")), redirect_stderr(stream):
             self.assertEqual(cli.main(["inspect-run", "--run-dir", str(self.root / "absent")]), 2)
         self.assertIn("tether: bad fixture", stream.getvalue())
 

@@ -41,7 +41,7 @@ adjudication. The third reviewer assessed all twelve original records and all
 180 required method-field judgments, including reviewer agreements. Root closeout
 rehashed 35 unique input/output files and replayed 465 original JSON-pointer/value
 references. The retained receipt is
-[source-readiness-final-adjudication.json](review-assets/prospective-endpoint-readiness-20261023/source-readiness-final-adjudication.json).
+[source-readiness-final-adjudication.json](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/prospective-endpoint-readiness-20261023/source-readiness-final-adjudication.json).
 
 | Disposition | Fixed records |
 |---|---:|

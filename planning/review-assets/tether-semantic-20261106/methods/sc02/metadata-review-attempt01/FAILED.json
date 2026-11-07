@@ -1,9 +1,0 @@
-{
-  "status": "FAIL_BEFORE_REVIEW",
-  "error_type": "ModuleNotFoundError",
-  "error": "No module named 'pip'",
-  "reason": "The qualified SciFact interpreter intentionally lacks pip. The first metadata review attempted to use pip's vendored packaging parser before reading any lock or model input.",
-  "command": ["data/cache/tether-scifact-env-attempt02/environment/Scripts/python.exe", "-I", "-B", "-X", "utf8", "planning/review-assets/tether-semantic-20261106/methods/sc02/check_metadata_lock.py"],
-  "returncode": 1,
-  "recovery": "Use explicit existing qualified Inspect environment vendored packaging source as a read-only parser dependency, retain its hashes, and rerun in a fresh output directory. No install or environment modification."
-}

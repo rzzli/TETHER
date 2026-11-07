@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from statistics import mean,variance
 
-from asof.serde import sha256_file
+from tether_engine.serde import sha256_file
 from tools.feasibility.registry_power import paired_stats,placements,wilson,simulate,dependency_profile,run,mc_pvalue
 
 

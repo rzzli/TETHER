@@ -28,9 +28,9 @@ Both were added. A table label now calls all 180 emissions fact entries, includi
 and versioned closeouts are retained in
 `planning/review-assets/preprint-p08-20261101/`.
 
-The [final content audit](review-assets/preprint-p08-20261101/MANUSCRIPT-CONTENT-AUDIT-v3.json)
+The [final content audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p08-20261101/MANUSCRIPT-CONTENT-AUDIT-v3.json)
 carries forward 118 passing checks with no unresolved findings. The
-[positioning closeout](review-assets/preprint-p08-20261101/PAPER-POSITIONING-REVIEW-v4.json)
+[positioning closeout](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p08-20261101/PAPER-POSITIONING-REVIEW-v4.json)
 also passes. They bind manuscript `b01d42fccaf046ad0db52d0becd36be994eac440759f23aefaa0673bf7a9ce29`
 and supplement `977aba2fc3cab68513a78fde08b3cacf0a375af52c908c0fd46bbf1818337200`.
 The last supplement edit adds seven readability spaces only; exact inverse
@@ -49,7 +49,7 @@ headings, table cells, references and captions. Six omission/duplicate/reorder/
 content controls and two invalid-preview/render-failure controls pass. All 17
 pages are visually checked; three figures remain vector, with no raster image,
 out-of-page glyph or body/figure overlap. Fresh-process repetition reproduces
-the exact PDF. The [build manifest](../paper/PDF-BUILD.json) binds sources,
+the exact PDF. The [build manifest](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/paper/PDF-BUILD.json) binds sources,
 renderer, figure bytes, libraries, fonts and preview hashes. Font metadata was
 corrected to say subset when used rather than claiming every loaded font appears
 in the PDF. This changes no PDF bytes or scientific result.
@@ -58,7 +58,7 @@ PDF SHA: `4f19060e0bb67fdd932780de9765a415f42c518cde74895302aa45b942ead588`.
 Renderer SHA: `0d6044702a8e6f97de605f7f92acf140c337f7a3f19b1bf6a2c0abb0b432238f`.
 The root additionally passes 108 structural/hash consistency checks, runs the
 formatter self-tests and inspects selected final pages. These checks and the
-separate [peer renderer/visual closeout](review-assets/preprint-p08-20261101/PDF-RENDERER-PEER-REVIEW-v1.md)
+separate [peer renderer/visual closeout](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p08-20261101/PDF-RENDERER-PEER-REVIEW-v1.md)
 are retained with the P08 reviews. The peer independently inventories all 273
 source units, repeats rendering in a fresh process, checks figure/body geometry
 and tests rollback at each of the two output-replacement calls. All four renderer
@@ -126,7 +126,7 @@ was introduced by the continuation audit.
 
 Follow the requested task order: finish P08 before implementing P09. Technical
 readiness is narrower than publication readiness. The existing
-[release prerequisites](review-assets/preprint-p05-20261031/RELEASE-REPLAY-PREREQUISITES-v1.md)
+[release prerequisites](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/RELEASE-REPLAY-PREREQUISITES-v1.md)
 remain unresolved and must not be replaced with a figure rebuild or JSON-only
 smoke claim.
 

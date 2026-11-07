@@ -7,17 +7,17 @@ from datetime import date
 from pathlib import Path
 from unittest.mock import patch
 
-from asof.agents import ExtractiveBackend
-from asof.artifacts import verify_run, write_run
-from asof.chrono import load_snapshot
-from asof.contracts import Case, Category
-from asof.journal import RunJournal
-from asof.ledger import EvidenceLedger
-from asof.scorer import ScorerArtifact
-from asof.serde import (ContractError, MAX_LEDGER_JSON_BYTES, canonical, decode, fingerprint,
+from tether_engine.agents import ExtractiveBackend
+from tether_engine.artifacts import verify_run, write_run
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case, Category
+from tether_engine.journal import RunJournal
+from tether_engine.ledger import EvidenceLedger
+from tether_engine.scorer import ScorerArtifact
+from tether_engine.serde import (ContractError, MAX_LEDGER_JSON_BYTES, canonical, decode, fingerprint,
                        read_json, read_ledger_json, sha256_file, write_json)
-from asof.semantics import check_semantics
-from asof.workflow import Budget, run_workflow
+from tether_engine.semantics import check_semantics
+from tether_engine.workflow import Budget, run_workflow
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -28,7 +28,7 @@ class AuditVerificationTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name)
         self.fixture = self.root / "fixture"
-        shutil.copytree(ROOT / "src/asof/demo/v2", self.fixture)
+        shutil.copytree(ROOT / "src/tether_engine/demo/v2", self.fixture)
         self.case = decode(Case, read_json(self.fixture / "case.json"))
         self.model = decode(ScorerArtifact, read_json(self.fixture / "scorer.json"))
         self.store = load_snapshot(self.fixture / "snapshot.json", self.case)
@@ -114,7 +114,7 @@ class AuditVerificationTests(unittest.TestCase):
             result = original(ledger, category, observation_id)
             clock[0] = 2.0
             return result
-        with patch("asof.workflow.time.monotonic", side_effect=lambda: clock[0]), \
+        with patch("tether_engine.workflow.time.monotonic", side_effect=lambda: clock[0]), \
                 patch.object(EvidenceLedger, "append", slow_commit):
             result = run_workflow(self.case, self.store, ExtractiveBackend(), self.model,
                                   Budget(max_seconds=1))

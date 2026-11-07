@@ -1,6 +1,6 @@
 import unittest
 
-from asof.serde import ContractError
+from tether_engine.serde import ContractError
 from tools.framework.audit_virtual_biotech import agent_configuration, literal_assignment
 
 

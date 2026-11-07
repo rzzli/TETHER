@@ -5,7 +5,7 @@ the exposed 300-claim development set, but loses rationale recall. The harness
 admits all outputs and adds no answer-correctness gain. SC04–SC09 remain open.**
 
 This report closes the [prospective protocol](<TETHER SciFact Full Context Protocol 2026-11-06.md>)
-through [root acceptance](review-assets/tether-semantic-20261106/sc03/root-acceptance-attempt01/ROOT-ACCEPTANCE.json).
+through [root acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-semantic-20261106/sc03/root-acceptance-attempt01/ROOT-ACCEPTANCE.json).
 There were 9,305 acceptance checks, 30,220 independent reconstruction checks,
 62 component tests and five supplemental event controls, all passing. The earlier
 actual-model fictional rehearsal and independently reconstructed source inputs
@@ -129,7 +129,7 @@ gate** now checks complete ordering and coverage, including supervisor signals.
 All five conditions pass with 5,102 journal events and 604 signals each. Root
 acceptance requires this supplement in addition to the original source-inclusive
 audit and independent metric reconstruction. The original auditor alone is
-insufficient. See the retained [amendment](review-assets/tether-semantic-20261106/sc03/ACCEPTANCE-AMENDMENT-01.md).
+insufficient. See the retained [amendment](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-semantic-20261106/sc03/ACCEPTANCE-AMENDMENT-01.md).
 
 The original analysis report's `independent_reconstruction: pending` field
 records its creation state. Its bytes remain sealed; the later independent
@@ -141,7 +141,7 @@ continuous host attestation or biological correctness.
 ## Reproduction and next step
 
 Retained controls and result anchors are in
-[the production freeze](review-assets/tether-semantic-20261106/sc03/production-freeze-attempt01/).
+[the production freeze](https://github.com/rzzli/TETHER/tree/tether-pre-namespace-migration-20261106/planning/review-assets/tether-semantic-20261106/sc03/production-freeze-attempt01).
 Bulk outputs remain in ignored local data paths:
 `data/benchmark/scifact_comparison/production-20261106-attempt01/` and
 `data/benchmark/scifact_comparison/analysis-20261106-attempt01/`.

@@ -1,8 +1,0 @@
-test_exclusive_generation_cache_passes_entry_and_final_check (__main__.WorkerCachePathTests.test_exclusive_generation_cache_passes_entry_and_final_check) ... ok
-test_nonempty_prefix_is_rejected_without_removing_contents (__main__.WorkerCachePathTests.test_nonempty_prefix_is_rejected_without_removing_contents) ... ok
-test_wrong_expected_prefix_is_rejected_by_both_checks (__main__.WorkerCachePathTests.test_wrong_expected_prefix_is_rejected_by_both_checks) ... ok
-
-----------------------------------------------------------------------
-Ran 3 tests in 0.960s
-
-OK

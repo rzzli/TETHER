@@ -30,7 +30,7 @@ def retain(entries, out):
     def fetch(entry):
         row = {**entry, 'retrieved_at_utc': datetime.now(timezone.utc).isoformat(), 'role': 'evaluation_only'}
         try:
-            with urlopen(Request(entry['url'], headers={'User-Agent': 'AsOf-development-research/0.2'}), timeout=45) as response:
+            with urlopen(Request(entry['url'], headers={'User-Agent': 'TETHER-development-research/0.2'}), timeout=45) as response:
                 body = response.read(32 * 1024 * 1024 + 1)
                 if len(body) > 32 * 1024 * 1024:
                     raise ValueError('Source exceeds 32 MiB archival bound')

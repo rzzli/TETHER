@@ -15,15 +15,11 @@
 !/cache/**/
 !/cache/**/.gitkeep
 
-# Only deliberately reviewed/sanitized JSON or Markdown manifests are versionable.
+# Historical manifests remain local and in the tagged checkpoint.
 /manifests/**
-!/manifests/**/
 !/manifests/.gitkeep
-!/manifests/public/
-!/manifests/public/**/
-!/manifests/public/**/.gitkeep
-!/manifests/public/**/*.json
-!/manifests/public/**/*.md
+!/manifests/README.md
+/catalog/history/
 
 # Never track local credentials, signed-link files or editor/runtime residue.
 **/.env
@@ -44,3 +40,5 @@
 /reference/recovery-checkpoint-*/
 /reference/recovery-restored-*/
 /cache/recovery-restore-*/
+/cache/tether-namespace-migration-20261106/
+/cache/original-reproduction/

@@ -1,5 +1,6 @@
-"""Invented corruption controls plus read-only retained fictional-run qualification."""
+"""Invented current-format controls; no actual model captures or dispatch."""
 from copy import deepcopy
+from datetime import timedelta
 from pathlib import Path
 import os
 import shutil
@@ -8,10 +9,7 @@ import unittest
 
 from experiments.litqa_analysis import envelopes as e
 
-PRIMARY = e.REPO / 'data/cache/sc04-controller-qualification-attempt01'
-PRIMARY_SHA = '8de520bfdef4dbe7b6363aeb962b8c4bb453adc475297aca2fa08d88e7c10cf0'
-SUPPLIED = e.REPO / 'data/cache/sc04-supplied-controller-qualification-attempt01'
-SUPPLIED_SHA = 'f9dd1f8b8d0a560730d0450cec03647ec8adcba5d23e0836c16e6af03c1cf19c'
+from experiments.litqa_analysis.invented_run_fixtures import InventedRuns
 
 
 def write(path, value):
@@ -30,6 +28,11 @@ def chain(path, values):
 
 
 class EnvelopeControls(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.fixtures = InventedRuns()
+        cls.addClassCleanup(cls.fixtures.close)
+
     def setUp(self):
         parent = e.REPO / 'data/cache/sc04-envelope-tests'
         parent.mkdir(exist_ok=True)
@@ -128,7 +131,7 @@ class EnvelopeControls(unittest.TestCase):
 
     def test_native_measured_corruption_rejected(self):
         destination = self.root / 'products/0000'
-        shutil.copytree(PRIMARY / 'expand/worker/phase/products/0000', destination)
+        shutil.copytree(self.fixtures.primary_path / 'expand/worker/phase/products/0000', destination)
         summary = e.load(destination / 'SUMMARY.json')
         summary['usage']['output_tokens'] += 1
         write(destination / 'SUMMARY.json', summary)
@@ -137,7 +140,7 @@ class EnvelopeControls(unittest.TestCase):
 
     def test_native_reservation_corruption_rejected(self):
         destination = self.root / 'products/0000'
-        shutil.copytree(PRIMARY / 'expand/worker/phase/products/0000', destination)
+        shutil.copytree(self.fixtures.primary_path / 'expand/worker/phase/products/0000', destination)
         summary = e.load(destination / 'SUMMARY.json')
         summary['reservation_input_tokens'] += 1
         write(destination / 'SUMMARY.json', summary)
@@ -153,7 +156,7 @@ class EnvelopeControls(unittest.TestCase):
 
     def test_http_original_body_corruption_rejected(self):
         destination = self.root / 'products/0000'
-        shutil.copytree(SUPPLIED / 'collect/worker/phase/products/0000', destination)
+        shutil.copytree(self.fixtures.supplied_path / 'collect/worker/phase/products/0000', destination)
         (destination / 'responses/000.body').write_bytes(b'changed original')
         with self.assertRaisesRegex(ValueError, 'HTTP measured bytes'):
             e._http_resources(self.root)
@@ -179,20 +182,20 @@ class EnvelopeControls(unittest.TestCase):
                 e.utc(value)
 
     def pair(self):
-        # Invented metadata fixture; retained fictional runs are never relabelled on disk.
-        left = e.load(PRIMARY / 'FRAME.json')
-        right = e.load(SUPPLIED / 'FRAME.json')
+        # Invented metadata only; no actual captured run is read or relabelled.
+        left = e.load(self.fixtures.primary_path / 'FRAME.json')
+        right = e.load(self.fixtures.supplied_path / 'FRAME.json')
         left['purpose'] = right['purpose'] = 'production'
         write(self.root / 'invented-primary-frame.json', left)
-        primary = dict(kind='primary', root=str(PRIMARY), frame=left, root_sha256=PRIMARY_SHA,
+        primary = dict(kind='primary', root=str(self.fixtures.primary_path), frame=left, root_sha256=self.fixtures.primary_sha,
                        frame_sha256=e.proof(self.root / 'invented-primary-frame.json')['sha256'],
-                       complete=dict(source_cutoff='2026-11-06T20:00:00+00:00'))
+                       complete=dict(source_cutoff=self.fixtures.cutoff.isoformat()))
         right['primary_frame'] = e.proof(self.root / 'invented-primary-frame.json')
-        right['primary_execution'] = dict(root=str(PRIMARY), receipt=e.proof(PRIMARY / 'ROOT-RECEIPT.json'))
-        right['created_at_utc'] = '2026-11-06T21:00:00+00:00'
+        right['primary_execution'] = dict(root=str(self.fixtures.primary_path), receipt=e.proof(self.fixtures.primary_path / 'ROOT-RECEIPT.json'))
+        right['created_at_utc'] = (self.fixtures.cutoff + timedelta(seconds=1)).isoformat()
         right['products']['answer_queries'] = left['query_products']['answer_queries']
-        supplied = dict(kind='supplied', root=str(SUPPLIED), frame=right, root_sha256=SUPPLIED_SHA,
-                        complete=dict(source_cutoff='2026-11-06T22:00:00+00:00'))
+        supplied = dict(kind='supplied', root=str(self.fixtures.supplied_path), frame=right, root_sha256=self.fixtures.supplied_sha,
+                        complete=dict(source_cutoff=(self.fixtures.cutoff + timedelta(seconds=3)).isoformat()))
         return primary, supplied
 
     def test_pair_bindings_and_declared_order(self):
@@ -206,7 +209,7 @@ class EnvelopeControls(unittest.TestCase):
 
     def test_pair_future_freeze_rejected(self):
         left, right = self.pair()
-        right['frame']['created_at_utc'] = '2026-11-07T21:00:00+00:00'
+        right['frame']['created_at_utc'] = (self.fixtures.cutoff + timedelta(days=1)).isoformat()
         with self.assertRaisesRegex(ValueError, 'chronology'):
             e.verify_pair(left, right)
 
@@ -251,12 +254,13 @@ class EnvelopeControls(unittest.TestCase):
             e.audit_records(e.canonical(self.event('source-query.json')), inputs=[], output=self.root/'output', code_roots=[])
 
 
-class RetainedFictionalQualification(unittest.TestCase):
+class InventedRunQualification(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        # No new native/network calls. All roots contain only fictional questions.
-        cls.primary = e.verify_run(PRIMARY, PRIMARY_SHA, kind='primary')
-        cls.supplied = e.verify_run(SUPPLIED, SUPPLIED_SHA, kind='supplied')
+        cls.fixtures = InventedRuns()
+        cls.addClassCleanup(cls.fixtures.close)
+        cls.primary = e.verify_run(cls.fixtures.primary_path, cls.fixtures.primary_sha, kind='primary')
+        cls.supplied = e.verify_run(cls.fixtures.supplied_path, cls.fixtures.supplied_sha, kind='supplied')
 
     def test_primary_full_four_arm_schedule(self):
         self.assertEqual([r['branch'] for r in self.primary['phases']['answer']['rows']], list(e.ARMS) * 2)
@@ -264,23 +268,28 @@ class RetainedFictionalQualification(unittest.TestCase):
 
     def test_primary_native_usage_reconstructs(self):
         totals = self.primary['resources']['physical_model']
-        self.assertEqual((totals['measured_input_tokens'], totals['measured_output_tokens']), (3773, 433))
+        self.assertEqual((totals['measured_input_tokens'], totals['measured_output_tokens']), (14 * 50, 14 * 12))
         self.assertGreater(totals['reserved_input_tokens'], totals['measured_input_tokens'])
 
     def test_supplied_separate_diagnostic_resources(self):
         totals = self.supplied['resources']['physical_model']
-        self.assertEqual((totals['generation_calls'], totals['measured_input_tokens'], totals['measured_output_tokens']), (2, 619, 86))
-        self.assertEqual(self.supplied['resources']['physical_http']['measured_response_bytes'], 815)
+        self.assertEqual((totals['generation_calls'], totals['measured_input_tokens'], totals['measured_output_tokens']), (2, 2 * 50, 2 * 12))
+        from experiments.litqa_supplied import qualification_fixtures as invented
+        expected_bytes = sum(len(invented.fetch(url)['body']) for url in ('/search?fixture', '/article/fixture'))
+        self.assertEqual(self.supplied['resources']['physical_http']['measured_response_bytes'], expected_bytes)
         self.assertEqual(self.supplied['kind'], 'supplied')
 
     def test_resource_and_scientific_limits_remain_explicit(self):
         for result in (self.primary, self.supplied):
+            self.assertEqual(result['frame']['fixture_kind'], 'invented_no_inference_no_network_v1')
+            self.assertEqual(result['frame']['real_model_calls'], 0)
+            self.assertEqual(result['frame']['real_http_requests'], 0)
             self.assertIsNone(result['resources']['measured_gpu_memory_bytes'])
             self.assertIsNone(result['resources']['physical_http']['wire_bytes'])
             self.assertFalse(result['source_eligibility_reconstructed'])
             self.assertFalse(result['semantic_predictions_reconstructed'])
 
-    def test_every_retained_phase_reconciles_its_original_io_audit(self):
+    def test_every_invented_phase_reconciles_its_io_audit(self):
         for run in (self.primary, self.supplied):
             for phase in run['resources']['phases'].values():
                 self.assertGreater(phase['io_audit']['events'], 0)

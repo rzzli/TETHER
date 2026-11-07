@@ -77,7 +77,7 @@ class _AliasFinder(importlib.abc.MetaPathFinder):
         if suffix in _CANONICAL_ALIASES:
             legacy_name = _CANONICAL_ALIASES[suffix]
         elif suffix in _LEGACY_MODULES:
-            legacy_name = "asof." + suffix
+            legacy_name = "tether_engine." + suffix
         else:
             # Do not fall through to a legacy package __path__, which could
             # execute an unapproved module under the new public namespace.

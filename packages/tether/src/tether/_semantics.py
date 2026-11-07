@@ -4,14 +4,14 @@ This is a deterministic consistency check, not source authenticity, therapeutic
 validation or an operating-system boundary. The frozen engine stays unchanged.
 """
 from types import SimpleNamespace
-from asof.artifacts import dossier
-from asof.chrono import Exclusion
-from asof.agents import Usage
-from asof.contracts import Case, Claim, Snapshot
-from asof.features import FeatureVector
-from asof.scorer import Prediction
-from asof.serde import ContractError, canonical, decode
-from asof.workflow import Budget, PlanStep, RunResult
+from tether_engine.artifacts import dossier
+from tether_engine.chrono import Exclusion
+from tether_engine.agents import Usage
+from tether_engine.contracts import Case, Claim, Snapshot
+from tether_engine.features import FeatureVector
+from tether_engine.scorer import Prediction
+from tether_engine.serde import ContractError, canonical, decode
+from tether_engine.workflow import Budget, PlanStep, RunResult
 
 HANDLED_ERRORS = {"BackendFailure", "ContractError", "TimeoutError", "ConnectionError",
                   "ValueError", "RuntimeError", "RecursionError"}
@@ -217,7 +217,7 @@ def check_engine_semantics(root, load_json, read_bytes, journal_events, ledger_l
     run, inputs = load_json(root / "run.json"), load_json(root / "inputs.json")
     trace = journal_events(read_bytes(root / "trace.jsonl"))
     check_states(run, trace, inputs["configuration"])
-    from asof.serde import parse_json
+    from tether_engine.serde import parse_json
     ledger = parse_json(read_bytes(root / "ledger.json", max_bytes=ledger_limit))
     fields = {k: run[k] for k in ("snapshot_id", "profile", "backend_id", "status", "budget", "calls",
               "usage", "plan", "coverage", "measured_usage", "estimated_usage")}

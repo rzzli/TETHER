@@ -2,7 +2,7 @@
 title: Stabilization completion and feasibility gates
 date: 2026-10-12
 status: stabilization-verified-scientific-gates-open
-tags: [asof, implementation, verification]
+tags: [TETHER, implementation, verification]
 ---
 
 # Stabilization completion report
@@ -15,7 +15,7 @@ Original proposals and the independent repository review were preserved.
 | Work package | State | Evidence and limits |
 | --- | --- | --- |
 | A — Completion record and Git | Implemented | Baseline `91e9cc4`; versioned [[planning/run-registry.json]] selects ten canonical dossiers; superseded/unknown-failure sidecars are outside sealed outputs. No remote published. |
-| B — Utility/catalog ownership | Implemented | `asof.maintenance` validates reports, prior hashes, references and exclusive writes; preparation is read-only; fresh-output reports cannot overwrite history. Catalog stays 83 providers / 178 products. |
+| B — Utility/catalog ownership | Implemented | `tether_engine.maintenance` validates reports, prior hashes, references and exclusive writes; preparation is read-only; fresh-output reports cannot overwrite history. Catalog stays 83 providers / 178 products. |
 | C — Program contracts/required checks | Implemented | Invalid T6 context fails before dispatch. Withdrawn dated context remains valid; confidence-zero mappings cannot support program-specific claims. Mandatory relocated v1 fixture verifies with legacy semantic limits explicit. |
 | D — Reproducible validation | Passed locally from fresh checkout | Full: 114 tests, zero skips. Core: 114 discovered, 92 executed, 22 explicit ingestion skips. Both pass ten probes and installed-wheel demo checks. Hosted CI has not run. |
 | E — Scientific feasibility | Review package prepared; required evidence missing | User can arrange domain review; ten unanswered forms/20 selected claims prepared. Historical/regional files confirmed absent locally. Historical restore, empirical event counts/power, regional QC and independent expert gold remain unverified. |

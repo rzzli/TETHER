@@ -2,7 +2,7 @@
 title: One historical AACT restoration
 date: 2026-10-16
 status: restored-with-documented-data-exceptions
-tags: [asof, aact, historical-data, feasibility]
+tags: [TETHER, aact, historical-data, feasibility]
 ---
 
 # One historical AACT restoration
@@ -26,7 +26,7 @@ tags: [asof, aact, historical-data, feasibility]
 
 The restore root is `E:/projects_data/drug_target_agents_data/derived/aact_restore/restore-20261017T011039Z/`. UTC artifact names use October 17; the work occurred October 16 in America/Los_Angeles. The original dump, schema, TOC, reproducible setup/restore/audit scripts, SQL queries, execution logs and per-table audit are retained there. `sealed-evidence/evidence-manifest.json` binds 419 evidence files by SHA-256; local credentials and database files are excluded from that manifest. Credentials are stored only in a Windows-user-restricted local directory. No passwords, signed download URLs or outcome records enter public metadata.
 
-The sanitized [restoration report](../data/manifests/public/2026-10-16-aact-restoration.json) records hashes, dates, counts, exceptions, resources and the sealed evidence manifest hash. The [acquisition publication](../data/manifests/public/2026-10-16-aact-acquisition.json) updates only `aact_snapshots` through the existing validated catalog writer. Its collection scope is exactly one archive. Catalog parser/scientific-validation flags remain `not_run`: this milestone adds no AsOf AACT adapter or agent-visible packets. Earlier catalog verification text is dated pre-acquisition evidence; the new acquisition snapshot and restoration report describe current local holdings.
+The sanitized [restoration report](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/data/manifests/public/2026-10-16-aact-restoration.json) records hashes, dates, counts, exceptions, resources and the sealed evidence manifest hash. The [acquisition publication](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/data/manifests/public/2026-10-16-aact-acquisition.json) updates only `aact_snapshots` through the existing validated catalog writer. Its collection scope is exactly one archive. Catalog parser/scientific-validation flags remain `not_run`: this milestone adds no TETHER AACT adapter or agent-visible packets. Earlier catalog verification text is dated pre-acquisition evidence; the new acquisition snapshot and restoration report describe current local holdings.
 
 ## Data exceptions and temporal limits
 

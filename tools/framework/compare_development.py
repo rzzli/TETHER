@@ -10,10 +10,10 @@ import math
 import re
 import time
 
-from asof.agents import SpecialistRequest
-from asof.artifacts import verify_run
-from asof.local_model import parse_selection
-from asof.serde import ContractError, decode, fingerprint, read_json, safe_child, sha256_file, write_json
+from tether_engine.agents import SpecialistRequest
+from tether_engine.artifacts import verify_run
+from tether_engine.local_model import parse_selection
+from tether_engine.serde import ContractError, decode, fingerprint, read_json, safe_child, sha256_file, write_json
 from tools.framework.summarize_local_pilot import summarize
 
 
@@ -26,7 +26,7 @@ def checked_request(value):
     if case['task'] != 'T6':
         raise ContractError('This comparison accepts exposed T6 development requests only')
     for item in request.evidence:
-        from asof.serde import parse_json
+        from tether_engine.serde import parse_json
         record = parse_json(item.scientific_record_json)
         if (record['observation_id'] != item.observation_id or record['statement'] != item.statement or
                 record['category'] != request.category.value or record['target_id'] != case['hypothesis']['target_id'] or
@@ -37,7 +37,7 @@ def checked_request(value):
 
 
 def read_case(request):
-    from asof.serde import parse_json
+    from tether_engine.serde import parse_json
     return parse_json(request.case_json)
 
 
@@ -57,7 +57,7 @@ def select_baseline(request, method, k=3):
         selected = sorted(evidence, key=lambda x: (
             -len(tokens & set(re.findall(r'[a-z0-9_]{3,}', x.statement.casefold()))), x.observation_id))[:k]
     elif method == 'provider_score_top_k':
-        from asof.serde import parse_json
+        from tether_engine.serde import parse_json
         records = [(x, parse_json(x.scientific_record_json)) for x in evidence]
         groups = {r.get('source_locator', {}).get('datasource_id') for _, r in records}
         scores = [r.get('source_metrics', {}).get('score') for _, r in records]

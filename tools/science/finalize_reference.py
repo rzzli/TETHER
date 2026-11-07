@@ -6,8 +6,8 @@ the assembler checks its exact source coverage and binds the accepted artifacts.
 from datetime import datetime, timezone
 from pathlib import Path
 
-from asof.contracts import Case
-from asof.serde import ContractError, decode, read_json, safe_child, sha256_file, write_json
+from tether_engine.contracts import Case
+from tether_engine.serde import ContractError, decode, read_json, safe_child, sha256_file, write_json
 from tools.science.qualification import validate_reference
 from tools.science.reference_panel import read_bound_json, validate_q1
 

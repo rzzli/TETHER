@@ -5,8 +5,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError, canonical, encode
-from asof.study.fixed_evidence import (
+from tether_engine.serde import ContractError, canonical, encode
+from tether_engine.study.fixed_evidence import (
     PLAN_SHA256,
     RoleRecordedVerifier,
     load_plan,
@@ -14,7 +14,7 @@ from asof.study.fixed_evidence import (
     prepare_payload,
     prepare_stage,
 )
-from asof.study.fixed_evidence_smoke import smoke, verify
+from tether_engine.study.fixed_evidence_smoke import smoke, verify
 
 
 class FixedEvidenceTests(unittest.TestCase):
@@ -22,14 +22,14 @@ class FixedEvidenceTests(unittest.TestCase):
         plan = load_plan()
         self.assertEqual(plan["aggregate_budget"]["max_input_tokens"], 32000)
         self.assertEqual(len(PLAN_SHA256), 64)
-        self.assertEqual(preflight("synthetic-context")["input_reservation"], 31715)
-        self.assertEqual(preflight("synthetic-orientation")["input_reservation"], 28503)
+        self.assertEqual(preflight("synthetic-context")["input_reservation"], 31717)
+        self.assertEqual(preflight("synthetic-orientation")["input_reservation"], 28505)
         self.assertEqual(preflight("synthetic-context")["output_reservation"], 6144)
         with self.assertRaises(ContractError):
             preflight("real-case")
 
     def test_bad_resource_rejected(self):
-        with patch("asof.study.fixed_evidence.PLAN_SHA256", "0" * 64):
+        with patch("tether_engine.study.fixed_evidence.PLAN_SHA256", "0" * 64):
             with self.assertRaises(ContractError):
                 load_plan()
 
@@ -93,7 +93,7 @@ class FixedEvidenceSmokeTests(unittest.TestCase):
             if mutation == "run":
                 bad["comparison_run_id"] = "other-run"
             if mutation == "arm":
-                bad["arm"] = "asof_interpretation"
+                bad["arm"] = "tether_interpretation"
             if mutation == "source":
                 bad["original_request"]["role"] = "evaluation_only"
             with self.assertRaises(ContractError):
@@ -108,7 +108,7 @@ class FixedEvidenceSmokeTests(unittest.TestCase):
     def test_interrupted_and_expired_runs_retain_failure(self):
         path = Path(self.tmp.name) / "interrupted"
         with patch(
-            "asof.study.fixed_evidence_smoke._recorded_document",
+            "tether_engine.study.fixed_evidence_smoke._recorded_document",
             side_effect=KeyboardInterrupt("stop"),
         ):
             with self.assertRaises(KeyboardInterrupt):
@@ -117,7 +117,7 @@ class FixedEvidenceSmokeTests(unittest.TestCase):
         self.assertFalse((path / "receipt.json").exists())
         path = Path(self.tmp.name) / "expired"
         with patch(
-            "asof.study.fixed_evidence_smoke.time.monotonic", side_effect=[0.0, 301.0]
+            "tether_engine.study.fixed_evidence_smoke.time.monotonic", side_effect=[0.0, 301.0]
         ):
             with self.assertRaises(ContractError):
                 smoke(path)

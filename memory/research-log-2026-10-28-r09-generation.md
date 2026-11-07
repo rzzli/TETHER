@@ -8,7 +8,7 @@ updated: 2026-10-28
 
 # Pure generation contract — working, not accepted
 
-The [new prospective contract](../planning/review-assets/recovery-step9-generation-contract-20261028/CONTRACT.md)
+The [new prospective contract](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/CONTRACT.md)
 follows the preserved converter negative. New pure modules construct bounded
 GBNF and separate v3 payload/validation fingerprints. Old v2 source/default
 native/controller behavior is unchanged. All decoded scalar values, reference

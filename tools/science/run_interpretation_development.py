@@ -13,11 +13,11 @@ import sys
 import time
 import urllib.request
 
-from asof.agents import Usage
-from asof.journal import RunJournal,read_chain
-from asof.local_model import NoRedirect
-from asof.serde import ContractError,decode,encode,fingerprint,read_json,sha256_file,write_json
-from asof.workflow import Budget,add_usage
+from tether_engine.agents import Usage
+from tether_engine.journal import RunJournal,read_chain
+from tether_engine.local_model import NoRedirect
+from tether_engine.serde import ContractError,decode,encode,fingerprint,read_json,sha256_file,write_json
+from tether_engine.workflow import Budget,add_usage
 from tools.science.bounded_interpretation import (dependency_paths,prepare_input,run_interpretation,
                                                  verify_interpretation,need)
 from tools.science.local_interpretation import LocalInterpreter,payload_for,validate_config
@@ -28,7 +28,7 @@ ROOT=Path(__file__).resolve().parents[2]
 
 def code_proofs():
     paths=[Path(__file__).resolve(),ROOT/'tools/science/bounded_interpretation.py',
-           ROOT/'src/asof/local_model.py',*dependency_paths()]
+           ROOT/'src/tether_engine/local_model.py',*dependency_paths()]
     return [pin(p) for p in dict.fromkeys(paths)]
 
 
@@ -128,7 +128,7 @@ def execute(plan_proof):
         with socket.socket() as probe:probe.bind(('127.0.0.1',plan['port']))
         argv=[str(server),'--model',str(model),'--host','127.0.0.1','--port',str(plan['port']),
               '--ctx-size','16384','--parallel','1','--n-gpu-layers','99','--threads','8',
-              '--alias','asof-interpretation-development','--no-webui','--offline']
+              '--alias','tether-interpretation-development','--no-webui','--offline']
         write_json(output/'server-command.json',dict(argv=argv,runtime_sha256=sha256_file(server)))
         with (output/'server.stdout.log').open('xb') as stdout,(output/'server.stderr.log').open('xb') as stderr:
             process=subprocess.Popen(argv,stdout=stdout,stderr=stderr,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))

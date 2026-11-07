@@ -13,7 +13,7 @@ import math
 import re
 import unicodedata
 
-from asof.serde import ContractError
+from tether_engine.serde import ContractError
 from tools.science.qualification import ENDPOINTS, utc, validate_outcome, validate_source_refs
 
 STATES=('qualified_positive','qualified_negative','resolved_unqualified','unresolved','censored','competing_event')

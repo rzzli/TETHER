@@ -1,6 +1,19 @@
 # TETHER — Synthetic deterministic baselines
 
-TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.5.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.
+The current interface is `tether-target-agents` **0.6.0**, with the `tether` CLI
+and public namespace over `tether-target-engine` **0.4.0** (`tether_engine`). See
+[installation](../README.md#quick-start) and the [namespace migration
+boundary](../packages/tether/MIGRATION.md). Public aliases share the new engine's
+module and class identities; they do not certify earlier execution fingerprints.
+
+The component history below retains earlier versioned observations and test
+counts. Those qualifications belong to their original code and dates, preserved
+in the [historical checkpoint](ARCHIVE.md). Names and example paths here use the
+current namespace for readability; exact original identifiers and reproduction
+commands are in that checkpoint. The naming migration is not a scientific rerun
+or a transfer of historical qualification to the new release. The semantic
+experiment remains **paused**; this guide does not reactivate it or retired
+study and expert-review branches.
 
 The 0.3.2 engineering slice adds pure extraction and lexical selection for two
 authenticated, invented source fixtures. It supplies part of recovery R09. Real
@@ -10,7 +23,7 @@ The stopped R07 native experiment is preserved without retry or answer repair.
 
 ## Public interface
 
-`asof.study.baselines.run_baseline(request, policy)` returns an immutable result.
+`tether_engine.study.baselines.run_baseline(request, policy)` returns an immutable result.
 `verify_baseline(request, policy, result)` recomputes it against the caller's
 expected request and policy. `reviewer_view(result, neutral_label)` verifies the
 result before projecting literal sources and coverage under a label from
@@ -66,8 +79,8 @@ no model-oriented StudySession reservation or fabricated prompt/token accounting
 ## Installed fixture check
 
 ```powershell
-python -m asof.study.baseline_smoke smoke --output data/cache/baselines-example
-python -m asof.study.baseline_smoke verify --path data/cache/baselines-example --sha256 YOUR_RETAINED_SHA256
+python -m tether_engine.study.baseline_smoke smoke --output data/cache/baselines-example
+python -m tether_engine.study.baseline_smoke verify --path data/cache/baselines-example --sha256 YOUR_RETAINED_SHA256
 ```
 
 Use a new output directory. The command creates four deterministic results:

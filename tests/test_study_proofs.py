@@ -7,8 +7,8 @@ from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError, encode
-from asof.study import proofs
+from tether_engine.serde import ContractError, encode
+from tether_engine.study import proofs
 
 
 class StudyProofTests(unittest.TestCase):
@@ -55,11 +55,11 @@ class StudyProofTests(unittest.TestCase):
         proof = self.capture()
         self.assertEqual(
             [p["logical_id"] for p in proof["code"]],
-            ["asof/__init__.py", "asof/nested/extra.py"],
+            ["tether_engine/__init__.py", "tether_engine/nested/extra.py"],
         )
         self.assertEqual(
             proof["resources"]["template_v1"]["proof"]["logical_id"],
-            "asof/template.json",
+            "tether_engine/template.json",
         )
         proofs.verify_package_proof(proof, required_resources=self.required)
         with self.assertRaises(TypeError):

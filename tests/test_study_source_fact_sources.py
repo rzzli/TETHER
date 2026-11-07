@@ -11,10 +11,10 @@ import time
 import unittest
 from unittest.mock import patch
 
-from asof.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
-from asof.serde import ContractError, canonical, encode, fingerprint
-from asof.study import source_fact_sources as sources
-from asof.study.stable_read import stable_files as platform_stable_files
+from tether_engine.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
+from tether_engine.serde import ContractError, canonical, encode, fingerprint
+from tether_engine.study import source_fact_sources as sources
+from tether_engine.study.stable_read import stable_files as platform_stable_files
 
 
 class SourceFactSourceTests(unittest.TestCase):
@@ -38,7 +38,7 @@ class SourceFactSourceTests(unittest.TestCase):
         deadline = time.monotonic() + 30
         # The primitive rejects this platform flag before any Path/file calls.
         # All other Windows controls continue using real, uninjected locks.
-        with patch("asof.study.stable_read.os.name", "posix"):
+        with patch("tether_engine.study.stable_read.os.name", "posix"):
             with self.assertRaises(ContractError):
                 with platform_stable_files((path,), deadline=deadline):
                     self.fail("Unpatched non-Windows stable read unexpectedly admitted input")

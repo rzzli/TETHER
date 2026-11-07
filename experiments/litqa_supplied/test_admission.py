@@ -3,7 +3,7 @@ import unittest
 import time
 from unittest.mock import patch
 
-from asof.serde import encode
+from tether_engine.serde import encode
 from experiments.litqa_supplied import resolver,admission as a,test_resolver as fixtures
 
 

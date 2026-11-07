@@ -10,8 +10,8 @@ def main(argv=None):
     parser.add_argument("command", choices=("smoke",))
     parser.add_argument("--output", required=True, type=Path)
     args = parser.parse_args(argv)
-    from asof.serde import canonical
-    from asof.study.__main__ import smoke
+    from tether_engine.serde import canonical
+    from tether_engine.study.__main__ import smoke
     print(canonical(smoke(args.output)).decode("utf-8"))
     return 0
 
@@ -24,4 +24,4 @@ else:
     # executes this physical wrapper under the interpreter's __main__ name.
     from importlib import import_module
     import sys
-    sys.modules[__name__] = import_module("asof.study.__main__")
+    sys.modules[__name__] = import_module("tether_engine.study.__main__")

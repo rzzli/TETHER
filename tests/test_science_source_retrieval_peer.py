@@ -8,7 +8,7 @@ import tempfile
 import unittest
 from urllib.request import Request
 
-from asof.serde import ContractError
+from tether_engine.serde import ContractError
 from tools.science.source_retrieval import (
     BoundRedirect, fetch_control, public_url, registry_document_refs, triage_hits,
 )

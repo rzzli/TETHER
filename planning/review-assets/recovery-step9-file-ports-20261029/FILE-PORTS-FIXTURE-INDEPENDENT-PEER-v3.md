@@ -1,7 +1,0 @@
-# File-port fixture independent peer v3
-
-The corrected schema, 84 literal cases and callable fake interchange are clear for a separate source-implementation decision. The prior finite precheck remains preserved. Admission fields now derive from actual numeric dimensions; E/read/write controls are explicitly forged-derived claims. Guard actions use fixed plan/facts references, and the DAG negatives contain actual self edges, aliased node paths or unknown operation states.
-
-Independent inspection reconstructed all 189 scripted API attempts, six unreturned calls, six byte-count projections and once-only correct closer counts. The earlier API scripts and authored expected ownership/byte outcomes are unchanged. Signed BOOL controls, original/output flags, metadata/UTF16 limits and work-versus-hard cutoff evidence align with the design. The author's ten methods pass; this reviewer did not rerun them or invoke the sequencer.
-
-This clears fictional preparation only. No file-port behavior was evaluated. An injected RawReturn already exists as a Python object: its checkpoints cannot qualify the later FFI wrapper's raw handle/flag/count registration before RawReturn construction. Portable caller ordering, actual typed binding, full bootstrap/checker integration, live namespace behavior, source/resource fit and all profile/science gates remain separate. No API, original, CPU/GGUF/pack or old-archive operation occurred.

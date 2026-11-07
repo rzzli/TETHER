@@ -4,7 +4,7 @@ from pathlib import Path
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError,read_json,sha256_file,write_json
+from tether_engine.serde import ContractError,read_json,sha256_file,write_json
 from tests import test_v02_ingest as fixtures
 from tests import test_science_reference_packets as reference_fixtures
 from tools.science.finalize_reference import assemble

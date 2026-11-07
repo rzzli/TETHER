@@ -13,7 +13,7 @@ from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "packages/tether/src"))
-from asof.serde import ContractError, canonical
+from tether_engine.serde import ContractError, canonical
 from tether import _process as supervisor, _presentation as layer, _cli as cli
 
 

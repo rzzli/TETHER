@@ -1,8 +1,21 @@
 # TETHER — Original-path interpretation interface
 
-TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.5.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.
+The current interface is `tether-target-agents` **0.6.0**, with the `tether` CLI
+and public namespace over `tether-target-engine` **0.4.0** (`tether_engine`). See
+[installation](../README.md#quick-start) and the [namespace migration
+boundary](../packages/tether/MIGRATION.md). Public aliases share the new engine's
+module and class identities; they do not certify earlier execution fingerprints.
 
-Introduced and accepted in AsOf 0.3.8; retained in 0.3.10. This pure interface prepares prompts and
+The component history below retains earlier versioned observations and test
+counts. Those qualifications belong to their original code and dates, preserved
+in the [historical checkpoint](ARCHIVE.md). Names and example paths here use the
+current namespace for readability; exact original identifiers and reproduction
+commands are in that checkpoint. The naming migration is not a scientific rerun
+or a transfer of historical qualification to the new release. The semantic
+experiment remains **paused**; this guide does not reactivate it or retired
+study and expert-review branches.
+
+Introduced and accepted in TETHER 0.3.8; retained in 0.3.10. This pure interface prepares prompts and
 validates replies. It does not admit evidence, prove history, quote token usage,
 start a model, contact a server or establish scientific truth. R07's original
 interfaces and failed outputs remain unchanged.
@@ -15,11 +28,11 @@ none of that execution authority.
 ## Use with an independently authorized source request
 
 ```python
-from asof.study.interpretation_interface import (
+from tether_engine.study.interpretation_interface import (
     prepare_payload, request_from_payload, validate_output,
 )
 
-prepared = prepare_payload(question_request, "asof_interpretation", 0, [])
+prepared = prepare_payload(question_request, "tether_interpretation", 0, [])
 payload = prepared["payload"]
 assert not prepared["execution_authorized"]
 original = request_from_payload(payload)
@@ -28,7 +41,7 @@ result = validate_output(original, payload, response_bytes)
 ```
 
 The request uses the existing question/source contract. Preparation supports the
-existing one AsOf/five adapted Virtual Biotech stages and exact source-ID history
+existing one TETHER/five adapted Virtual Biotech stages and exact source-ID history
 shape. It reuses those bounds and role definitions. The full original request
 remains in the prompt, including context, coverage, nulls and unknowns. Inputs
 support one to three source aliases; limits fail explicitly rather than silently
@@ -90,12 +103,12 @@ one declared difference is cross-claim text uniqueness. The executable and loade
 library versions/hashes are retained. Full validation passes 1,681 tests with no
 failures/errors/skips and 316 unchanged code/resource pins. Twelve installed stage
 preparations check all three response states; seven legacy families and all seven
-matching 0.3.1–0.3.7 verifiers pass. [Acceptance evidence](../planning/review-assets/recovery-step9-interface-20261027/acceptance.json)
+matching 0.3.1–0.3.7 verifiers pass. [Acceptance evidence](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-interface-20261027/acceptance.json)
 preserves the original failures and stated limits.
 No new independent peer or scientific review is claimed.
 
-The [contract](../planning/review-assets/recovery-step9-interface-20261027/CONTRACT.md)
-and [next adapter design](../planning/review-assets/recovery-step9-interface-20261027/NEXT-ADAPTER-DESIGN.md)
+The [contract](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-interface-20261027/CONTRACT.md)
+and [next adapter design](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-interface-20261027/NEXT-ADAPTER-DESIGN.md)
 require explicit current source/history/token authority, owned transport and
 durable accounting before any future execution. Pending human references and
 source/question sufficiency remain separate scientific requirements.

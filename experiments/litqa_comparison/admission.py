@@ -10,10 +10,10 @@ import time
 from dataclasses import dataclass
 from collections.abc import Mapping
 
-from asof.contracts import Availability,Profile,Snapshot,SourceNode,TemporalClass
-from asof.provenance import InputGraph,catalog_index
-from asof.serde import Frozen,canonical,encode,freeze,fingerprint,parse_json,safe_child
-from asof.study.stable_read import stable_files,read_file
+from tether_engine.contracts import Availability,Profile,Snapshot,SourceNode,TemporalClass
+from tether_engine.provenance import InputGraph,catalog_index
+from tether_engine.serde import Frozen,canonical,encode,freeze,fingerprint,parse_json,safe_child
+from tether_engine.study.stable_read import stable_files,read_file
 from experiments.labbench.native_contract import validate_query,validate_prediction,visible_unsure_index
 from experiments.labbench.tether_adapter import DEFAULT_CATALOG
 from . import acquisition,codecs,transport

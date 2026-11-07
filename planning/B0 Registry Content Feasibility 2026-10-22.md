@@ -4,7 +4,7 @@ Status, updated October23: **origin membership and both follow-up reads complete
 final source-inclusive feasibility audit in progress**.
 
 The [design](Clinical%20Validation%20Design%20and%20Data%20Feasibility%20Plan%202026-10-22.md)
-and [B0 protocol](protocols/registry-content-feasibility-v0.1.json) define an exposed,
+and [B0 protocol](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/protocols/registry-content-feasibility-v0.1.json) define an exposed,
 snapshot-state audit, not clinical success prediction. January2025 is the source
 origin, January2026 the primary snapshot and April2026 a separate sensitivity.
 The selected-member cap is32; the operational coverage threshold is90%.
@@ -20,7 +20,7 @@ represented by this request.
 
 Plan: `data/benchmark/labels/registry-content-20261022/requests-origin-v1/plan.json`;
 SHA256 `ed82b3583f70fd108ba52c96707d9f0dc59f63693acbd10784fb3f2c821078cf`.
-The tracked [origin anchor](review-assets/registry-content-execution-20261022/origin-plan-anchor.json)
+The tracked [origin anchor](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/registry-content-execution-20261022/origin-plan-anchor.json)
 binds this exact plan, generated SQL, policy, schema manifest and executing code.
 Archive/dump/technical-source hashes were checked during preparation. All earlier
 clinical twelve-member runner guards remain unchanged.
@@ -77,7 +77,7 @@ The sealed roster has32 origin-absent members. All128 screen dispositions remain
 32selected,15origin-unknown,12excluded prior-pilot members and69eligible beyond cap.
 No follow-up was used. The membership SHA256 is
 `2dac62ca0c2b7fe37f8daa1c7da7b2b2ea7ada7e328c89830130c64cc5bf651d`;
-the [tracked membership anchor](review-assets/registry-content-execution-20261022/origin-membership-anchor.json)
+the [tracked membership anchor](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/registry-content-execution-20261022/origin-membership-anchor.json)
 was committed at `27c0b26` before follow-up preparation.
 
 The origin first read is41,109bytes, repeated exactly. Total runner time was
@@ -101,7 +101,7 @@ failure. The loader now accepts the two explicit complete layouts, rejects missi
 or conflicting identities and still verifies original archive/dump bytes. Failed
 preparation, its journal and failing test output remain untouched.
 
-The [compatibility amendment](protocols/registry-content-archive-compatibility-v0.1.json)
+The [compatibility amendment](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/protocols/registry-content-archive-compatibility-v0.1.json)
 preserves verification of the exact archived origin execution after that loader
 changes. Strict validation remains default; origin-receipt verification can use
 only the original byte-pinned plan and its verified archived code. New dispatch

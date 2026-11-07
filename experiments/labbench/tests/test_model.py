@@ -14,11 +14,11 @@ from unittest.mock import patch
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT))
 
-from asof.agents import Usage
-from asof.serde import ContractError, canonical, encode, fingerprint, parse_json
-from asof.study.process import OwnedServer
-from asof.study.session import StudySession, _identity, verify_study
-from asof.workflow import Budget
+from tether_engine.agents import Usage
+from tether_engine.serde import ContractError, canonical, encode, fingerprint, parse_json
+from tether_engine.study.process import OwnedServer
+from tether_engine.study.session import StudySession, _identity, verify_study
+from tether_engine.workflow import Budget
 from experiments.labbench import model as m
 
 

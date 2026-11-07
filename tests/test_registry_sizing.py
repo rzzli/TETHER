@@ -6,7 +6,7 @@ import unittest
 from unittest.mock import patch
 from tools.feasibility.registry_extract import frame_query,validate_row
 from tools.feasibility.registry_cohort import arm_facts,start_bounds,build,stratified_sample
-from asof.serde import sha256_file
+from tether_engine.serde import sha256_file
 from tools.feasibility.registry_audit import source_check,audit
 
 

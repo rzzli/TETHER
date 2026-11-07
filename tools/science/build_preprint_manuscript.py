@@ -25,12 +25,13 @@ import unicodedata
 ROOT = Path(__file__).resolve().parents[2]
 PAPER = ROOT / "paper"
 SOURCES = (PAPER / "manuscript.md", PAPER / "supplement.md")
-OUTPUT = PAPER / "asof-source-reporting-preprint.pdf"
-BUILD = PAPER / "PDF-BUILD.json"
+OUTPUT = PAPER / "tether-source-reporting-preprint.pdf"
+BUILD = PAPER / "CURRENT-PDF-BUILD.json"
 RESULTS = PAPER / "results/ARTIFACTS.json"
 RESULTS_SHA = "84d4a31e842d3085133d384429729ef2501425d33bf2b92f65d9c64699a87428"
 POPLER = Path("C:/Users/zzric/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/poppler/Library/bin/pdftoppm.EXE")
-MARKER = "C:/Users/zzric/.codex/plugins/cache/openai-primary-runtime/pdf/26.1026.10807/skills/pdf/container_tools/mark_artifact_operation_started.mjs"
+MARKER = "C:/Users/zzric/.codex/plugins/cache/openai-primary-runtime/pdf/26.1105.12137/skills/pdf/container_tools/mark_artifact_operation_started.mjs"
+TEMP_ROOT = ROOT / "data/cache/tether-paper-render-temp"
 FONTS = {"Body": Path("C:/Windows/Fonts/arial.ttf"), "Body-Bold": Path("C:/Windows/Fonts/arialbd.ttf"),
          "Body-Italic": Path("C:/Windows/Fonts/ariali.ttf"), "Body-BoldItalic": Path("C:/Windows/Fonts/arialbi.ttf"),
          "Mono": Path("C:/Windows/Fonts/consola.ttf")}
@@ -119,7 +120,7 @@ def inline_markup(text, definitions, references, *, citations=True):
         saved.append(markup)
         return key
     text=re.sub(r"`([^`]+)`",lambda m:save('<font name="Mono" size="9">'+html.escape(m[1])+"</font>"),text)
-    text=re.sub(r"\[([^\]]+)\]\((https?://[^\s)]+|[^\s)]+\.md(?:#[^\s)]*)?)\)",
+    text=re.sub(r"\[([^\]]+)\]\((https?://[^\s)]+|[^\s)]+\.(?:md|json)(?:#[^\s)]*)?)\)",
         lambda m:save('<link href="'+html.escape(m[2],quote=True)+'" color="#245F7A">'+html.escape(m[1])+"</link>"),text)
     def reference_link(match):
         label,key=match[1],match[2]
@@ -299,7 +300,7 @@ def render_once(blocks,definitions,references,figures,font_bytes):
     doc._headings=[]
     def page_frame(c,d):
         c.saveState();c.setFont("Body",8);c.setFillColor(colors.HexColor("#526673"))
-        c.drawString(LEFT,HEIGHT-30,"AsOf - Working research draft")
+        c.drawString(LEFT,HEIGHT-30,"TETHER - Working research draft")
         c.drawRightString(WIDTH-LEFT,30,str(d.page))
         c.setStrokeColor(colors.HexColor("#DDE5E8"));c.setLineWidth(.5);c.line(LEFT,HEIGHT-39,WIDTH-LEFT,HEIGHT-39)
         c.restoreState()
@@ -361,7 +362,7 @@ def render_once(blocks,definitions,references,figures,font_bytes):
         transform=Transformation().scale(position["scale"]).translate(position["x"],position["y"])
         writer.pages[position["page"]-1].merge_transformed_page(source.pages[0],transform,over=True,expand=False)
     writer.add_metadata({"/Title":next(b.text for b in blocks if b.kind=="heading"),"/Author":"", "/Subject":"Working research draft; author declarations pending",
-                         "/Creator":"AsOf deterministic Markdown renderer","/Producer":"ReportLab + pypdf (invariant local build)"})
+                         "/Creator":"TETHER deterministic Markdown renderer","/Producer":"ReportLab + pypdf (invariant local build)"})
     result=io.BytesIO();writer.write(result)
     return result.getvalue(),expected,overlays,block_log
 
@@ -395,14 +396,14 @@ def qa(raw,expected,overlays):
 
 def validate_preview_root(path):
     path=Path(path).resolve()
-    need(path.is_relative_to(ROOT/"tmp/pdfs"),"QA preview root must stay in workspace tmp/pdfs")
+    need(path.is_relative_to(ROOT/"data/cache"),"QA preview root must stay in workspace data/cache")
     return path
 
 
 def commit_pair(pdf,build,out_pdf=OUTPUT,out_build=BUILD):
     """Publish only after QA; restore prior reviewed pair on a caught write error."""
     old={path:path.read_bytes() if path.exists() else None for path in (out_pdf,out_build)}
-    temp_parent=ROOT/"tmp/pdfs";temp_parent.mkdir(parents=True,exist_ok=True)
+    temp_parent=TEMP_ROOT;temp_parent.mkdir(parents=True,exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="p08-publish-",dir=temp_parent) as folder:
         folder=Path(folder)
         staged_pdf,staged_build=folder/"document.pdf",folder/"build.json"
@@ -424,7 +425,8 @@ def publish_document(pdf,manifest,preview_root,*,out_pdf=OUTPUT,out_build=BUILD,
     # prior PDF's reviewed previews. They are local QA intermediates only.
     previews_at=preview_root/digest(pdf)[:16]
     previews_at.mkdir(parents=True,exist_ok=True)
-    with tempfile.TemporaryDirectory(prefix="p08-render-",dir=ROOT/"tmp/pdfs") as folder:
+    TEMP_ROOT.mkdir(parents=True,exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix="p08-render-",dir=TEMP_ROOT) as folder:
         staged=Path(folder)/"candidate.pdf";staged.write_bytes(pdf)
         (renderer or subprocess.run)([str(POPLER),"-r","100","-png",str(staged),str(previews_at/"page")],check=True,capture_output=True)
     previews=sorted(previews_at.glob("page-*.png"))
@@ -436,7 +438,7 @@ def publish_document(pdf,manifest,preview_root,*,out_pdf=OUTPUT,out_build=BUILD,
 
 
 def publication_regressions():
-    temp_parent=ROOT/"tmp/pdfs";temp_parent.mkdir(parents=True,exist_ok=True)
+    temp_parent=TEMP_ROOT;temp_parent.mkdir(parents=True,exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="p08-regression-",dir=temp_parent) as folder:
         folder=Path(folder);pdf,build=folder/"old.pdf",folder/"old.json"
         pdf.write_bytes(b"reviewed-pdf");build.write_bytes(b"reviewed-build")
@@ -457,7 +459,7 @@ def main(argv=None):
     group.add_argument("--self-test",action="store_true")
     parser.add_argument("--marker-confirmed",action="store_true",help="Successful external one-PDF create marker already run once for this authoring operation")
     parser.add_argument("--repeat-check",action="store_true")
-    parser.add_argument("--preview-root",type=Path,default=ROOT/"tmp/pdfs/preprint-manuscript-pages")
+    parser.add_argument("--preview-root",type=Path,default=ROOT/"data/cache/tether-paper-presentation-20261106/pages")
     args=parser.parse_args(argv)
     if args.self_test:
         print(json.dumps(dict(retention=retention_regressions(),publication=publication_regressions()),sort_keys=True));return

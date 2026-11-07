@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "D:\Projects\drug_target_agents\planning\review-assets\tether-scifact-20261105\verify_bytecode.py", line 68, in <module>
-    main()
-  File "D:\Projects\drug_target_agents\planning\review-assets\tether-scifact-20261105\verify_bytecode.py", line 23, in main
-    raise RuntimeError('Cache qualification requires assertions enabled and default hash-cache policy')
-RuntimeError: Cache qualification requires assertions enabled and default hash-cache policy

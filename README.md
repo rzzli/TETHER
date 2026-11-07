@@ -63,7 +63,7 @@ For stronger integrity checking, save the printed receipt hash separately and pa
 
 ## Status & results
 
-- **Built:** offline execution, verifiable runs, and [10 development dossiers](planning/run-registry.json).
+- **Built:** offline execution and verifiable runs; [historical 10-case pilot](planning/run-registry.json).
 - **Measured:** [SciFact](<planning/TETHER SciFact Full Context Results 2026-11-06.md>) and [initial LitQA2](<planning/TETHER LitQA2 Native Evaluation Results 2026-11-06.md>) results, including failures and limitations.
 - **Under development:** stronger retrieval and scientific answering. [Roadmap →](TODO.md)
 
@@ -71,6 +71,6 @@ For stronger integrity checking, save the printed receipt hash separately and pa
 
 ## Explore
 
-[CLI guide](packages/tether/README.md) · [Architecture](docs/FRAMEWORK.md) · [Verification limits](docs/TETHER-VERIFICATION-SCOPE.md) · [Data](data/README.md) · [Experiments](experiments/) · [Working paper](paper/README.md)
+[CLI guide](packages/tether/README.md) · [Architecture](docs/FRAMEWORK.md) · [Verification limits](docs/TETHER-VERIFICATION-SCOPE.md) · [Data](data/README.md) · [Experiments](experiments/) · [Working paper](paper/README.md) · [History](docs/ARCHIVE.md)
 
-[Apache-2.0](LICENSE). Data has separate terms; bulk datasets and model weights are excluded. The compatibility engine lives in `src/asof/`.
+[Apache-2.0](LICENSE). Data has separate terms; bulk datasets and model weights are excluded. The evidence engine lives in `src/tether_engine/`.

@@ -12,7 +12,7 @@ retains the same pinned local model, source packet, role overhead and per-arm
 ceilings. The adapted Virtual Biotech arm remains a restricted five-role source
 reimplementation, not its original SDK or external research workflow.
 
-The governing recipe is [t6-topone-development-v0.1.json](protocols/t6-topone-development-v0.1.json).
+The governing recipe is [t6-topone-development-v0.1.json](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/protocols/t6-topone-development-v0.1.json).
 Source-only selection considers the original ten-case build in order and every
 Category in enumeration order, selecting at most eight tasks and two per case.
 Every screening disposition is retained. Eligibility depends only on at least two
@@ -34,7 +34,7 @@ dispatch. Reviewers receive no previous references, model outputs or internet
 enrichment. Ties and none-sufficient answers remain valid. This source-bounded test
 does not need external-literature claims; such claims require a separate evaluation.
 
-Four arms share candidates and output cap: AsOf, adapted Virtual Biotech, lexical
+Four arms share candidates and output cap: TETHER, adapted Virtual Biotech, lexical
 and provider score. Provider scores are comparable only within one identified
 datasource with finite known values; otherwise that baseline is inapplicable.
 No category-removal ablation is claimed for a single-category task. No explanation
@@ -133,7 +133,7 @@ request-layer applicability annotation without treating it as a raw source field
 
 | Arm | Agreement with AI reference | Native calls | Input/output tokens | Reference context mismatches | Abstentions |
 |---|---|---|---|---|---|
-| AsOf | 6/8 | 8 | 26,777 / 449 | 1 | 0 |
+| TETHER | 6/8 | 8 | 26,777 / 449 | 1 | 0 |
 | Adapted Virtual Biotech | 6/8 | 40 | 138,334 / 2,252 | 1 | 0 |
 | Lexical | 5/8 | 0 | 0 / 0 | 0 | 0 |
 | Provider score | 3/7 applicable | 0 | 0 / 0 | 3 | 0 |

@@ -8,9 +8,9 @@ from pathlib import Path
 import hashlib
 import time
 
-from asof.atomic import publish_bytes
-from asof.journal import RunJournal
-from asof.serde import canonical,encode,freeze,parse_json
+from tether_engine.atomic import publish_bytes
+from tether_engine.journal import RunJournal
+from tether_engine.serde import canonical,encode,freeze,parse_json
 from experiments.labbench.native_contract import validate_query
 from . import acquisition,admission,codecs,schedule,transport
 

@@ -1,7 +1,0 @@
-Traceback (most recent call last):
-  File "D:\Projects\drug_target_agents\planning\review-assets\recovery-step9-native-grammar-20261028\probe_installed_toolchain.py", line 191, in <module>
-    run('linker-version-help', [linker, '/?'], build_env)
-  File "D:\Projects\drug_target_agents\planning\review-assets\recovery-step9-native-grammar-20261028\probe_installed_toolchain.py", line 92, in run
-    assert result.returncode in expected, (label, result.returncode)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: ('linker-version-help', 1100)

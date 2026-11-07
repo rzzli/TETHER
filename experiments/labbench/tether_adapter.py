@@ -16,10 +16,10 @@ import re
 import time
 from types import SimpleNamespace
 
-from asof.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
-from asof.provenance import InputGraph, catalog_index
-from asof.serde import ContractError, Frozen, canonical, decode, encode, fingerprint, freeze, parse_json, safe_child
-from asof.study.stable_read import read_file, stable_files
+from tether_engine.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
+from tether_engine.provenance import InputGraph, catalog_index
+from tether_engine.serde import ContractError, Frozen, canonical, decode, encode, fingerprint, freeze, parse_json, safe_child
+from tether_engine.study.stable_read import read_file, stable_files
 from .model import make_request
 from .native_contract import validate_prediction, validate_query, visible_unsure_index
 from .retrieval import select_passages, verify_retrieval

@@ -4,8 +4,8 @@ No execution, model adapter or scientific truth validation. Only prepare_questio
 performs source admission; binding, codecs and validators check structure alone.
 Legacy modules and archived responses are deliberately unchanged.
 """
-from asof.contracts import Case
-from asof.serde import ContractError, canonical, decode, encode, fingerprint, freeze
+from tether_engine.contracts import Case
+from tether_engine.serde import ContractError, canonical, decode, encode, fingerprint, freeze
 from tools.science.bounded_interpretation import (
     MAX_BYTES, MAX_RESPONSE_BYTES, Prepared, need, nonempty,
     prepare_input as prepare_sources, validate_response as validate_legacy_claims)

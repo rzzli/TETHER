@@ -5,9 +5,9 @@ import json
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError, fingerprint, parse_json
-from asof.study.source_fact_inputs import make_packet
-from asof.study.source_fact_reporting import reporting_view, literal_report, render_reporting_prompt
+from tether_engine.serde import ContractError, fingerprint, parse_json
+from tether_engine.study.source_fact_inputs import make_packet
+from tether_engine.study.source_fact_reporting import reporting_view, literal_report, render_reporting_prompt
 
 
 def packet(*, missing=False):

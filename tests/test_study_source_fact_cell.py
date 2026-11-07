@@ -5,13 +5,13 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, canonical, parse_json
-from asof.study.source_fact_cell import run_reporting_cell
-from asof.study import source_fact_cell
-from asof.study.source_fact_reporting import literal_report
-from asof.study.source_fact_transport import TypedReportingClient
-from asof.workflow import Budget
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, canonical, parse_json
+from tether_engine.study.source_fact_cell import run_reporting_cell
+from tether_engine.study import source_fact_cell
+from tether_engine.study.source_fact_reporting import literal_report
+from tether_engine.study.source_fact_transport import TypedReportingClient
+from tether_engine.workflow import Budget
 if __package__:
     from .test_study_source_fact_reporting import packet
 else:
@@ -19,7 +19,7 @@ else:
 
 
 PLAIN = "plain_same_model_typed_report"
-ASOF = "asof_declared_two_stage_typed_report"
+TETHER = "tether_declared_two_stage_typed_report"
 
 
 class Response:
@@ -120,11 +120,11 @@ class SourceFactCellTests(unittest.TestCase):
         with self.assertRaises(TypeError):
             result["measured_usage"]["input_tokens"] = 99
 
-    def test_asof_structural_proposal_then_audit_without_semantic_grading(self):
+    def test_tether_structural_proposal_then_audit_without_semantic_grading(self):
         wrong = parse_json(self.raw)
         wrong["facts"][0]["value"] = "invented-but-structurally-valid"
         factory = Factory(self.raw, outcomes={"proposal": dict(content=canonical(wrong))})
-        result, factory = self.run_cell(ASOF, factory=factory)
+        result, factory = self.run_cell(TETHER, factory=factory)
         self.assertEqual(result["terminal"], "returned")
         self.assertEqual(factory.created, ["proposal", "audit"])
         self.assertEqual(result["dispatches"], 2)
@@ -135,7 +135,7 @@ class SourceFactCellTests(unittest.TestCase):
 
     def test_stage_one_malformed_stops_without_audit_or_repair(self):
         factory = Factory(self.raw, outcomes={"proposal": dict(content=b"{}")})
-        result, factory = self.run_cell(ASOF, factory=factory)
+        result, factory = self.run_cell(TETHER, factory=factory)
         self.assertEqual(result["terminal"], "malformed")
         self.assertIsNone(result["raw_final"])
         self.assertEqual(factory.created, ["proposal"])
@@ -143,7 +143,7 @@ class SourceFactCellTests(unittest.TestCase):
 
     def test_audit_failed_keeps_proposal_but_never_promotes_it_to_final(self):
         factory = Factory(self.raw, outcomes={"audit": TimeoutError("fictional timeout")})
-        result, factory = self.run_cell(ASOF, factory=factory)
+        result, factory = self.run_cell(TETHER, factory=factory)
         self.assertEqual(result["terminal"], "timeout")
         self.assertIsNone(result["raw_final"])
         self.assertEqual(result["dispatches"], 2)
@@ -152,9 +152,9 @@ class SourceFactCellTests(unittest.TestCase):
         self.assertEqual(result["estimated_usage"]["output_tokens"], 2048)
         self.assertEqual(factory.created, ["proposal", "audit"])
 
-    def test_missing_asof_is_source_only_preflight_without_client(self):
+    def test_missing_tether_is_source_only_preflight_without_client(self):
         source = packet(missing=True)
-        result, factory = self.run_cell(ASOF, source=source)
+        result, factory = self.run_cell(TETHER, source=source)
         self.assertEqual(result["terminal"], "returned")
         self.assertEqual(parse_json(result["raw_final"])["status"], "insufficient_input")
         self.assertEqual(result["dispatches"], 0)
@@ -168,7 +168,7 @@ class SourceFactCellTests(unittest.TestCase):
             self.assertEqual(result["dispatches"], 0)
             self.assertEqual(factory.created, [])
             self.assertEqual(result["estimated_usage"]["input_tokens"], 0)
-        result, factory = self.run_cell(ASOF, cell_id="only-proposal", budget=Budget(max_calls=1))
+        result, factory = self.run_cell(TETHER, cell_id="only-proposal", budget=Budget(max_calls=1))
         self.assertEqual(result["terminal"], "failed")
         self.assertEqual(factory.created, ["proposal"])
         self.assertIsNone(result["raw_final"])
@@ -184,7 +184,7 @@ class SourceFactCellTests(unittest.TestCase):
         self.assertEqual(accounted[0]["basis"], "not_dispatched")
 
     def test_over_quote_usage_is_preserved_and_prevents_audit(self):
-        result, factory = self.run_cell(ASOF, factory=Factory(self.raw,
+        result, factory = self.run_cell(TETHER, factory=Factory(self.raw,
             outcomes={"proposal": dict(tokens_predicted=2049)}))
         self.assertEqual(result["terminal"], "failed")
         self.assertEqual(result["measured_usage"]["output_tokens"], 2049)
@@ -193,7 +193,7 @@ class SourceFactCellTests(unittest.TestCase):
 
     def test_write_failure_aborts_before_http_with_retained_cell_terminal(self):
         factory = Factory(self.raw)
-        with patch("asof.study.source_fact_cell._write_exclusive", side_effect=OSError("fictional disk failure")):
+        with patch("tether_engine.study.source_fact_cell._write_exclusive", side_effect=OSError("fictional disk failure")):
             with self.assertRaises(OSError):
                 self.run_cell(factory=factory)
         self.assertEqual(factory.opens, [])
@@ -204,7 +204,7 @@ class SourceFactCellTests(unittest.TestCase):
     def test_interruption_retains_attempt_and_terminal_then_propagates(self):
         factory = Factory(self.raw, outcomes={"proposal": KeyboardInterrupt("fictional interrupt")})
         with self.assertRaises(KeyboardInterrupt) as caught:
-            self.run_cell(ASOF, factory=factory)
+            self.run_cell(TETHER, factory=factory)
         self.assertEqual(factory.created, ["proposal"])
         terminal = [e["details"] for e in self.journal.events if e["event"] == "cell_terminal"][-1]
         self.assertEqual(terminal["terminal"], "interrupted")
@@ -251,7 +251,7 @@ class SourceFactCellTests(unittest.TestCase):
             if path.name == "raw-request.bin":
                 clock[0] = 301
             return proof
-        with patch("asof.study.source_fact_cell._write_exclusive", side_effect=slow_write):
+        with patch("tether_engine.study.source_fact_cell._write_exclusive", side_effect=slow_write):
             result, _ = self.run_cell(cell_id="expired-retention", factory=factory,
                                       monotonic=lambda: clock[0])
         self.assertEqual(result["terminal"], "unexecuted")
@@ -265,9 +265,9 @@ class SourceFactCellTests(unittest.TestCase):
             if path.name == "content.bin":
                 raise OSError("fictional content retention failure")
             return original_write(path, raw)
-        with patch("asof.study.source_fact_cell._write_exclusive", side_effect=broken_content):
+        with patch("tether_engine.study.source_fact_cell._write_exclusive", side_effect=broken_content):
             with self.assertRaises(OSError):
-                self.run_cell(ASOF, factory=factory)
+                self.run_cell(TETHER, factory=factory)
         self.assertEqual(factory.created, ["proposal"])
         terminal = [e["details"] for e in self.journal.events if e["event"] == "cell_terminal"][-1]
         self.assertEqual(terminal["dispatches"], 1)

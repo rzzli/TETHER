@@ -8,7 +8,7 @@ updated: 2026-10-26
 
 # R09 source and token preparation
 
-Accepted AsOf 0.3.4 passes 1,582 full tests with zero failures/errors/skips,
+Accepted TETHER 0.3.4 passes 1,582 full tests with zero failures/errors/skips,
 required probes, dependency-free wheel demo and seven installed legacy families.
 All 297 source/resource pins and two protected hashes remain unchanged during
 validation; protected outcomes were hashed only. Eight peer tests reproduce and

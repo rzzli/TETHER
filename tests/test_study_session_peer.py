@@ -6,17 +6,17 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.agents import Usage
-from asof.serde import ContractError, canonical, encode, fingerprint, parse_json
-from asof.study.__main__ import fixture
-from asof.study.diagnostic import (
+from tether_engine.agents import Usage
+from tether_engine.serde import ContractError, canonical, encode, fingerprint, parse_json
+from tether_engine.study.__main__ import fixture
+from tether_engine.study.diagnostic import (
     REQUIRED_RESOURCES,
     load_synthetic_request,
     prepare_payload,
 )
-from asof.study.proofs import capture_file
-from asof.study.recorded import RecordedBackend, RecordedVerifier
-from asof.study.session import GeneratedBytes, StudySession, inspect_study, verify_study
+from tether_engine.study.proofs import capture_file
+from tether_engine.study.recorded import RecordedBackend, RecordedVerifier
+from tether_engine.study.session import GeneratedBytes, StudySession, inspect_study, verify_study
 
 
 class StudySessionPeerTests(unittest.TestCase):

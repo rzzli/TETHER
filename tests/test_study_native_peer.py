@@ -5,11 +5,11 @@ from types import SimpleNamespace
 import unittest
 from unittest.mock import Mock, patch
 
-from asof.agents import Usage
-from asof.serde import ContractError, canonical, encode, parse_json
-from asof.study import native
-from asof.study.diagnostic import REQUIRED_RESOURCES
-from asof.study.session import StudySession, inspect_study
+from tether_engine.agents import Usage
+from tether_engine.serde import ContractError, canonical, encode, parse_json
+from tether_engine.study import native
+from tether_engine.study.diagnostic import REQUIRED_RESOURCES
+from tether_engine.study.session import StudySession, inspect_study
 from tests import test_study_native as native_tests
 from tests.test_study_native import Response
 

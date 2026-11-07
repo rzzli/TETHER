@@ -2,7 +2,7 @@
 title: Clinical and genetics feasibility pilot
 date: 2026-10-16
 status: origin-screen-complete-regional-qc-qualified-followup-missing
-tags: [asof, feasibility, clinical, genetics]
+tags: [TETHER, feasibility, clinical, genetics]
 ---
 
 # Clinical and genetics feasibility pilot
@@ -15,7 +15,7 @@ Dates in this report use America/Los_Angeles; artifacts retain their actual Octo
 
 ## Clinical screen
 
-Open the [24-case review](../data/benchmark/cohorts/aact-origin-audit-20261017T021043Z/Review.html) for readable cards with decisions, endpoints, current-source links and unresolved follow-up. The [Markdown review](../data/benchmark/cohorts/aact-origin-audit-20261017T021043Z/REVIEW.md) is also retained.
+Open the 24-case review (local artifact: `data/benchmark/cohorts/aact-origin-audit-20261017T021043Z/Review.html`) for readable cards with decisions, endpoints, current-source links and unresolved follow-up. The Markdown review (local artifact: `data/benchmark/cohorts/aact-origin-audit-20261017T021043Z/REVIEW.md`) is also retained.
 
 The frozen selection protocol used the restored January 1, 2023 AACT snapshot, exact normalized intervention/alias matches, eligible interventional phases and origin statuses, first-posted dates and nonempty conditions. A deterministic hash-ordered, round-robin selection produced 24 trial representatives across seven target families from 2,078 matched trials. There were 1,696 eligibility exclusions; the remaining eligible trials were not all sampled. The provisional drug/verbatim-condition key deduplicates candidates but does not establish independent programs. Current registry records were fetched only after selection. A later guard against future origin-record updates replays to identical selections and exclusions; the exact original executed script is retained separately.
 
@@ -65,7 +65,7 @@ The ALT-dosage LD matrix is finite, symmetric and has unit diagonal. An independ
 
 Regional acquisition took 27.55 seconds for QTL, 11.29 seconds for GWAS and 17.90 seconds for LD, excluding metadata/tool setup. QC took 3.13 seconds. Compressed regional subsets total 7,479,287 bytes; local indices total 3,675,589 bytes. The LD matrix is approximately 22.85 MB. Uncompressed selected row streams total 297,559,390 bytes. Actual network transfer bytes, end-to-end wall time and peak process memory were not measured; no estimates are presented as measurements.
 
-The tools used isolated pysam 0.24.1 under existing WSL and NumPy 2.3.4 under an isolated cache. Wheel hashes and source metadata receipts are retained. Default AsOf dependencies are unchanged. These scoped subsets do not promote whole-provider catalog acquisition or parsing status; the public pilot manifest records the acquired scope.
+The tools used isolated pysam 0.24.1 under existing WSL and NumPy 2.3.4 under an isolated cache. Wheel hashes and source metadata receipts are retained. Default TETHER dependencies are unchanged. These scoped subsets do not promote whole-provider catalog acquisition or parsing status; the public pilot manifest records the acquired scope.
 
 ## Verification and reproducibility
 

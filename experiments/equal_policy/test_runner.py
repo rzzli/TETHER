@@ -42,13 +42,13 @@ class RunnerTests(unittest.TestCase):
         runner.publish(self.output / "oracle.json", self.oracle)
         installed = self.project / 'installed'
         runtime_paths = {}
-        for product in ('asof', 'tether'):
+        for product in ('tether_engine', 'tether'):
             package = installed / product
             package.mkdir(parents=True)
             (package / '__init__.py').write_text('# Fictional product payload\n', encoding='utf-8')
             runtime_paths[product + '_file'] = str(package / '__init__.py')
         self.trusted = dict(runtime_paths=runtime_paths,
-            core_code_sha256={'__init__.py': runner.pin(installed / 'asof/__init__.py')['sha256']},
+            core_code_sha256={'__init__.py': runner.pin(installed / 'tether_engine/__init__.py')['sha256']},
             launcher_proof=dict(code={'__init__.py': runner.pin(installed / 'tether/__init__.py')}))
         runner.publish(self.output / "trusted-runtime.json", self.trusted)
         records = []
@@ -137,7 +137,7 @@ class RunnerTests(unittest.TestCase):
 
     def test_changed_installed_product_after_execution_is_rejected(self):
         self.terminal_records()
-        Path(self.trusted['runtime_paths']['asof_file']).write_text('# Altered installed payload\n', encoding='utf-8')
+        Path(self.trusted['runtime_paths']['tether_engine_file']).write_text('# Altered installed payload\n', encoding='utf-8')
         with self.assertRaises((RuntimeError, ValueError)):
             runner.analyze(self.output)
 

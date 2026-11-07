@@ -5,7 +5,7 @@ import sys
 import tempfile
 import unittest
 
-from asof.serde import canonical
+from tether_engine.serde import canonical
 from tether._process import ProcessLimits, supervise_command
 from experiments.scifact.run import file_proof, read, write, session_cells
 

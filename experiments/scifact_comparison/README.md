@@ -10,6 +10,6 @@ change the frozen sparse baseline or the production T6 backend.
 
 The [protocol](<../../planning/TETHER SciFact Full Context Protocol 2026-11-06.md>)
 fixes conditions, measurements and scientific limits before prediction. The
-[checkpoint](../../planning/review-assets/tether-semantic-20261106/sc03/STATUS.md)
+[checkpoint](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/tether-semantic-20261106/sc03/STATUS.md)
 records actual qualification. Presence of prepared inputs or a successful
 fictional rehearsal does not establish benchmark completion or performance.

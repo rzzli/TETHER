@@ -10,10 +10,10 @@ from contextlib import ExitStack
 from concurrent.futures import ThreadPoolExecutor
 from threading import Event
 
-from asof.chrono import load_snapshot
-from asof.contracts import Case, Category, EvidenceStatus
-from asof.retrieval import RetrievalPolicy
-from asof.serde import ContractError, decode, encode, fingerprint, read_json, sha256_file, write_json
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case, Category, EvidenceStatus
+from tether_engine.retrieval import RetrievalPolicy
+from tether_engine.serde import ContractError, decode, encode, fingerprint, read_json, sha256_file, write_json
 from tools.science.comparison_workflow import STAGES
 from tools.science.run_comparison import selected_store, pin
 from tools.science.t6_challenge import freeze_tasks, task_store, check_reference, execute
@@ -25,7 +25,7 @@ class TopOneTaskTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory(); self.addCleanup(self.temp.cleanup)
         self.root=Path(self.temp.name); folder=self.root/'source'
-        shutil.copytree(ROOT/'src/asof/demo/v2',folder)
+        shutil.copytree(ROOT/'src/tether_engine/demo/v2',folder)
         packet=read_json(folder/'evidence.json')
         original=packet['observations'][0]
         rows=[]
@@ -41,7 +41,7 @@ class TopOneTaskTests(unittest.TestCase):
         self.policy={'schema_version':1,'stage_order':list(STAGES),'control_reserve_bytes':2048,
             'stage_guidance':{s:'Select provided source identifiers only.' for s in STAGES},
             'specialists':{c.value:'fixture' for c in Category},'selection_cap':1}
-        self.retrieval=RetrievalPolicy(max_records=12,max_request_bytes=12000,wire_format='asof-shared-scientific-fields-v1')
+        self.retrieval=RetrievalPolicy(max_records=12,max_request_bytes=12000,wire_format='tether-shared-scientific-fields-v1')
 
     def test_task_projection_preserves_complete_parent_and_source_proofs(self):
         projected,proof=task_store(self.case,self.store,Category.GENETICS)
@@ -73,7 +73,7 @@ class TopOneTaskTests(unittest.TestCase):
         self.assertTrue(all(r['disposition']=='beyond_total_cap' for r in frozen['dispositions'][4*len(Category):]))
 
     def test_whole_record_bound_can_leave_no_eligible_tasks(self):
-        tiny=RetrievalPolicy(max_records=1,max_request_bytes=12000,wire_format='asof-shared-scientific-fields-v1')
+        tiny=RetrievalPolicy(max_records=1,max_request_bytes=12000,wire_format='tether-shared-scientific-fields-v1')
         frozen=freeze_tasks([(self.case,self.store)],self.policy,tiny)
         self.assertEqual(frozen['tasks'],[])
         self.assertTrue(all(r['disposition']=='insufficient_offered_candidates' for r in frozen['dispositions']))
@@ -168,7 +168,7 @@ class TopOneTaskTests(unittest.TestCase):
             'model_receipt':pin(receipt),'role_policy':pin(roles),
             'budget':{'max_calls':16,'max_input_tokens':32000,'max_output_tokens':8000,
                       'max_cost_usd':0,'max_seconds':300,'max_retries':1},
-            'execution_order':[{'task_id':task['task_id'],'arms':['asof','lexical']}],
+            'execution_order':[{'task_id':task['task_id'],'arms':['tether','lexical']}],
             'backend':{'retrieval':encode(self.retrieval),'max_output_tokens':1,
                        'timeout_seconds':1,'seed':1,'selection_cap':1}})
         process=MagicMock(); process.pid=99999

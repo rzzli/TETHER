@@ -35,31 +35,31 @@ def _cases_module():
 
 
 def execute(output, expected_runtime_root):
-    import asof
+    import tether_engine
     import tether
-    from asof.agents import ExtractiveBackend, Usage
-    from asof.artifacts import write_run
-    from asof.chrono import load_snapshot
-    from asof.cli import main as cli_main
-    from asof.contracts import Case, Category
-    from asof.journal import RunJournal
-    from asof.ledger import EvidenceLedger
-    from asof.scorer import ScorerArtifact
-    from asof.serde import decode, encode, fingerprint, read_json, write_json
-    from asof.workflow import Budget, run_workflow
+    from tether_engine.agents import ExtractiveBackend, Usage
+    from tether_engine.artifacts import write_run
+    from tether_engine.chrono import load_snapshot
+    from tether_engine.cli import main as cli_main
+    from tether_engine.contracts import Case, Category
+    from tether_engine.journal import RunJournal
+    from tether_engine.ledger import EvidenceLedger
+    from tether_engine.scorer import ScorerArtifact
+    from tether_engine.serde import decode, encode, fingerprint, read_json, write_json
+    from tether_engine.workflow import Budget, run_workflow
     from tether._presentation import verify_engine
 
     output, expected_runtime_root = Path(output).resolve(), Path(expected_runtime_root).resolve()
     output.mkdir(parents=True, exist_ok=False)
-    runtime = dict(python=sys.executable, isolated=sys.flags.isolated, asof_version=asof.__version__,
-        tether_version=tether.__version__, asof_file=str(Path(asof.__file__).resolve()), tether_file=str(Path(tether.__file__).resolve()))
-    if runtime["isolated"] != 1 or (asof.__version__, tether.__version__) != ("0.3.12", "0.5.1"):
+    runtime = dict(python=sys.executable, isolated=sys.flags.isolated, tether_engine_version=tether_engine.__version__,
+        tether_version=tether.__version__, tether_engine_file=str(Path(tether_engine.__file__).resolve()), tether_file=str(Path(tether.__file__).resolve()))
+    if runtime["isolated"] != 1 or (tether_engine.__version__, tether.__version__) != ("0.4.0", "0.6.0"):
         raise RuntimeError("Require isolated qualified installed candidate")
-    for module in (asof, tether):
+    for module in (tether_engine, tether):
         path = Path(module.__file__).resolve()
         if not path.is_relative_to(expected_runtime_root) or "site-packages" not in path.parts:
             raise RuntimeError("Runtime import did not come from expected installed environment")
-    runtime_pins = {str(path): file_hash(path) for module in (asof, tether)
+    runtime_pins = {str(path): file_hash(path) for module in (tether_engine, tether)
                     for path in Path(module.__file__).parent.rglob("*.py")}
     cases = _cases_module()
     fixture = output / "fixture"

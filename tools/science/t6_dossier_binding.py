@@ -9,12 +9,12 @@ import re
 import time
 from types import SimpleNamespace
 
-from asof.artifacts import verify_run
-from asof.chrono import required_source_proofs
-from asof.contracts import Case, Snapshot
-from asof.journal import RunJournal
-from asof.provenance import InputGraph, catalog_index
-from asof.serde import (ContractError, canonical, decode, fingerprint, read_json, read_ledger_json,
+from tether_engine.artifacts import verify_run
+from tether_engine.chrono import required_source_proofs
+from tether_engine.contracts import Case, Snapshot
+from tether_engine.journal import RunJournal
+from tether_engine.provenance import InputGraph, catalog_index
+from tether_engine.serde import (ContractError, canonical, decode, fingerprint, read_json, read_ledger_json,
                         safe_child, sha256_file, write_json)
 from tools.framework.run_pilot import SourceAudit
 from tools.science.reference_packets import _mappings, audit_observation

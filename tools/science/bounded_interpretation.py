@@ -11,13 +11,13 @@ import platform
 import time
 import uuid
 
-from asof.agents import Usage
-from asof.chrono import load_snapshot
-from asof.contracts import Case, Category
-from asof.journal import RunJournal, read_chain
-from asof.serde import (ContractError, Frozen, canonical, decode, encode, fingerprint,
+from tether_engine.agents import Usage
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case, Category
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import (ContractError, Frozen, canonical, decode, encode, fingerprint,
                         freeze, parse_json, read_json, write_json)
-from asof.workflow import Budget, BudgetMeter, over_quote
+from tether_engine.workflow import Budget, BudgetMeter, over_quote
 from tools.science.run_comparison import pin, check_pin
 from tools.science.t6_claim_audit import pointer
 from tools.science.t6_contextual_audit import PROPOSITION_KEYS
@@ -43,7 +43,7 @@ def checked_usage(usage):
 
 def dependency_paths():
     root = Path(__file__).resolve().parents[2]
-    return tuple(root/'src/asof'/name for name in
+    return tuple(root/'src/tether_engine'/name for name in
         ('agents.py','chrono.py','contracts.py','serde.py','provenance.py','workflow.py','journal.py','local_model.py')) + tuple(
         Path(__file__).with_name(name).resolve() for name in
         ('run_comparison.py','t6_claim_audit.py','t6_contextual_audit.py','t6_dossier_binding.py','local_interpretation.py'))

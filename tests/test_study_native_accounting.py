@@ -7,10 +7,10 @@ import tempfile
 import unittest
 from contextlib import closing
 
-from asof.journal import RunJournal
-from asof.serde import canonical, fingerprint
-from asof.study.native_accounting import accounting
-from asof.study.native import PROTOCOL
+from tether_engine.journal import RunJournal
+from tether_engine.serde import canonical, fingerprint
+from tether_engine.study.native_accounting import accounting
+from tether_engine.study.native import PROTOCOL
 
 
 class NativeAccountingTests(unittest.TestCase):

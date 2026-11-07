@@ -3,7 +3,7 @@ title: Scientific feasibility gate decision
 date: 2026-10-12
 status: paired-registry-comparison-complete-program-labels-open
 updated: 2026-10-16
-tags: [asof, feasibility, t6]
+tags: [TETHER, feasibility, t6]
 ---
 
 # Scientific feasibility decision
@@ -83,8 +83,8 @@ before reporting lag. A June 2027 deliverable can concern methods, not those out
 ## T6 development review protocol, ready for reviewer input
 
 **Preferred reviewer format:** open
-[the guided workbook](../data/benchmark/gold_evidence/expert-review-workbook-20261012-final/Review.html)
-or send the [portable ZIP](../data/benchmark/gold_evidence/expert-review-workbook-20261012-final/Expert-review.zip).
+the guided workbook (local artifact: `data/benchmark/gold_evidence/expert-review-workbook-20261012-final/Review.html`)
+or send the portable ZIP (local artifact: `data/benchmark/gold_evidence/expert-review-workbook-20261012-final/Expert-review.zip`).
 Each scientist should use their own blank copy, review the supplied excerpts, and
 export their answers. It supports browser draft saving, source links, readable summary
 export and printing. No ratings are preselected; no completed scientific review is claimed.

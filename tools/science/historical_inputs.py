@@ -15,7 +15,7 @@ from pathlib import Path
 import re
 import urllib.request
 
-from asof.serde import ContractError, parse_json, sha256_file
+from tether_engine.serde import ContractError, parse_json, sha256_file
 
 BASE = "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/24.09/"
 NOTICE = "https://community.opentargets.org/t/24-09-platform-release-now-live/1556.json"
@@ -212,7 +212,7 @@ class Archive:
             raise ContractError("URL outside selected official release")
         path.parent.mkdir(parents=True, exist_ok=True)
         started = stamp()
-        request = urllib.request.Request(address, headers={"User-Agent": "asof-public-historical-qualification/1"})
+        request = urllib.request.Request(address, headers={"User-Agent": "tether-public-historical-qualification/1"})
         with urllib.request.urlopen(request, timeout=45) as response:
             headers = dict(response.headers); status = response.status
             declared = int(response.headers.get("Content-Length", "0"))

@@ -1,8 +1,8 @@
 import unittest
 from datetime import date, datetime, timezone
-from asof.study.source_rows import reconstruct_observation, verify_observation
-from asof.serde import ContractError, encode
-from asof.contracts import Availability
+from tether_engine.study.source_rows import reconstruct_observation, verify_observation
+from tether_engine.serde import ContractError, encode
+from tether_engine.contracts import Availability
 
 
 class SourceRowsTests(unittest.TestCase):
@@ -110,7 +110,7 @@ class ProjectedRowTests(unittest.TestCase):
     def test_arrow_batches_convert_only_selected_row(self):
         from types import SimpleNamespace
         from unittest.mock import patch
-        from asof.study.source_rows import parquet_row
+        from tether_engine.study.source_rows import parquet_row
 
         conversions = []
         calls = []
@@ -139,7 +139,7 @@ class ProjectedRowTests(unittest.TestCase):
                 return iter([Batch(0, 4), Batch(4, 4)])
 
         with patch(
-            "asof.study.source_rows.arrow",
+            "tether_engine.study.source_rows.arrow",
             return_value=SimpleNamespace(ParquetFile=lambda path: Parquet()),
         ):
             result = parquet_row(
@@ -156,13 +156,13 @@ class ProjectedRowTests(unittest.TestCase):
     def test_row_reader_rejects_bad_locator_and_missing_column(self):
         from types import SimpleNamespace
         from unittest.mock import patch
-        from asof.study.source_rows import parquet_row
+        from tether_engine.study.source_rows import parquet_row
 
         parquet = SimpleNamespace(
             num_row_groups=1, schema_arrow=SimpleNamespace(names=["id"])
         )
         with patch(
-            "asof.study.source_rows.arrow",
+            "tether_engine.study.source_rows.arrow",
             return_value=SimpleNamespace(ParquetFile=lambda path: parquet),
         ):
             for locator, columns in [

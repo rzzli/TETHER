@@ -36,13 +36,13 @@ class ReconstructionTests(unittest.TestCase):
             self.sources[path.relative_to(self.project).as_posix()] = audit.file_pin(path)
         installed = {}
         roots = {}
-        for name in ('asof', 'tether'):
+        for name in ('tether_engine', 'tether'):
             root = self.project / 'qualification/site-packages' / name
             write(root / '__init__.py', b'# Fictional package, never imported\n')
             roots[name] = root
             installed[name] = dict(root=str(root), files={'__init__.py': audit.file_pin(root / '__init__.py')})
         metadata = self.project / 'qualification/site-packages'
-        for package in ('asof_target_agents-0.3.12', 'tether_target_agents-0.5.1'):
+        for package in ('tether_target_engine-0.4.0', 'tether_target_agents-0.6.0'):
             write(metadata / (package + '.dist-info') / 'METADATA', b'Fictional metadata only\n')
         installed['distribution_metadata'] = dict(root=str(metadata), files={
             path.relative_to(metadata).as_posix(): audit.file_pin(path) for path in metadata.glob('*.dist-info/METADATA')})
@@ -50,11 +50,11 @@ class ReconstructionTests(unittest.TestCase):
         write(qualification, dict(fictional=True))
         wheel = self.project / 'qualification/wheels/fictional.whl'
         write(wheel, b'Fictional wheel bytes, never installed')
-        self.trusted = dict(schema_version=1, versions=dict(asof='0.3.12', tether='0.5.1'),
-            runtime_paths=dict(python=str(self.python), asof_file=str(roots['asof'] / '__init__.py'),
+        self.trusted = dict(schema_version=1, versions=dict(tether_engine='0.4.0', tether='0.6.0'),
+            runtime_paths=dict(python=str(self.python), tether_engine_file=str(roots['tether_engine'] / '__init__.py'),
                                tether_file=str(roots['tether'] / '__init__.py')),
-            core_code_sha256={name: pin['sha256'] for name, pin in installed['asof']['files'].items()},
-            launcher_proof=dict(core_version='0.3.12', facade_version='0.5.1',
+            core_code_sha256={name: pin['sha256'] for name, pin in installed['tether_engine']['files'].items()},
+            launcher_proof=dict(core_version='0.4.0', facade_version='0.6.0',
                 code={name: dict(path=name, **pin) for name, pin in installed['tether']['files'].items()}),
             qualification=dict(path=str(qualification), sha256=audit.file_pin(qualification)['sha256']),
             wheels=[dict(filename=wheel.name, **audit.file_pin(wheel))])
@@ -105,7 +105,7 @@ class ReconstructionTests(unittest.TestCase):
                 module = {'tether': 'reference.py', 'independent': 'independent.py', 'hash_schema': 'controls.py', 'reject_all': 'controls.py'}[arm]
                 runtime = dict(isolated=True, repository_product_source_on_path=False, python=str(self.python),
                     implementation_file=str(self.project / 'experiments/equal_policy' / module),
-                    loaded_product_modules={name: self.trusted['runtime_paths'][name + '_file'] for name in ('asof', 'tether')} if arm == 'tether' else {})
+                    loaded_product_modules={name: self.trusted['runtime_paths'][name + '_file'] for name in ('tether_engine', 'tether')} if arm == 'tether' else {})
                 worker = dict(schema_version=1, implementation=arm, result=result, metrics=metrics, runtime=runtime)
                 write(cell / 'stdout.json', worker)
                 write(cell / 'stderr.txt', b'')
@@ -180,7 +180,7 @@ class ReconstructionTests(unittest.TestCase):
         with self.assertRaises(audit.ReconstructionError): self.reconstruct()
 
     def test_changed_installed_code_is_detected(self):
-        write(Path(self.trusted['runtime_paths']['asof_file']), b'# modified\n')
+        write(Path(self.trusted['runtime_paths']['tether_engine_file']), b'# modified\n')
         with self.assertRaises(audit.ReconstructionError): self.reconstruct()
 
     def test_changed_installed_metadata_is_detected(self):
@@ -264,7 +264,7 @@ class ReconstructionTests(unittest.TestCase):
         with self.assertRaises(audit.ReconstructionError): audit.statistics_for([-0.1])
 
     def test_product_import_in_independent_worker_invalidates_comparison(self):
-        self.rewrite_cell('UNIT-A-r1-independent', lambda row: row['runtime'].update(loaded_product_modules={'asof': 'wrong'}))
+        self.rewrite_cell('UNIT-A-r1-independent', lambda row: row['runtime'].update(loaded_product_modules={'tether_engine': 'wrong'}))
         with self.assertRaises(audit.ReconstructionError): self.reconstruct()
 
     def test_worker_invocation_input_binding_is_checked(self):
@@ -300,7 +300,7 @@ class ReconstructionTests(unittest.TestCase):
         for node in ast.walk(tree):
             if isinstance(node, ast.Import): roots.update(name.name.split('.')[0] for name in node.names)
             if isinstance(node, ast.ImportFrom): roots.add((node.module or '').split('.')[0])
-        self.assertFalse(roots & {'asof', 'tether', 'experiments', 'equal_policy', 'run_comparison', 'cases', 'materialize'})
+        self.assertFalse(roots & {'tether_engine', 'tether', 'experiments', 'equal_policy', 'run_comparison', 'cases', 'materialize'})
 
 
 if __name__ == '__main__':

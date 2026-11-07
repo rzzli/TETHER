@@ -1,1 +1,0 @@
-{"status": "frozen_corpus_and_schema_oracle_passed_native_grammar_pending", "cases": 109, "oracle_elapsed_seconds": 0.625, "differences": [{"id": "duplicate_claim_texts", "expected_exception": "Cross-claim text uniqueness is explicitly post-validation only"}]}

@@ -14,10 +14,10 @@ if (-not $OutputPath) {
 }
 $OutputPath = [IO.Path]::GetFullPath($OutputPath)
 if (Test-Path -LiteralPath $OutputPath) { throw 'Report exists; choose a new output path.' }
-$arguments = @('run','--no-sync','--directory',$ProjectRoot,'python','-m','asof.maintenance','inspect-transport',
+$arguments = @('run','--no-sync','--directory',$ProjectRoot,'python','-m','tether_engine.maintenance','inspect-transport',
     '--project-root',$ProjectRoot,'--catalog',(Join-Path $ProjectRoot 'data/catalog/sources.json'),
     '--raw-root',$DataRoot,'--output',$OutputPath)
 foreach ($queue in $QueuePath) { $arguments += @('--queue',([IO.Path]::GetFullPath($queue))) }
 & uv @arguments
 if ($LASTEXITCODE -ne 0) { throw 'Acquisition inspection failed; catalog was not changed.' }
-Write-Host 'Report only. Apply through asof.maintenance update-catalog with an explicit expected catalog hash.'
+Write-Host 'Report only. Apply through tether_engine.maintenance update-catalog with an explicit expected catalog hash.'

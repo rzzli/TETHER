@@ -1,6 +1,6 @@
 ---
 name: research-log-2026-11-01-tether-renaming
-description: Owner-selected TETHER identity, current interface migration and immutable AsOf compatibility evidence
+description: Owner-selected TETHER identity, current interface migration and immutable TETHER compatibility evidence
 metadata:
   type: project
 updated: 2026-11-01
@@ -15,7 +15,7 @@ migration, final validation and timestamped local checkpoint. See
 [[TETHER Rename Completion and Project Status 2026-11-01]].
 
 TETHER 0.4.0 is a separate canonical distribution/CLI/Python namespace under
-packages/tether, depending on frozen asof-target-agents 0.3.11. Root legacy build
+packages/tether, depending on frozen tether-target-engine 0.3.11. Root legacy build
 metadata and 100 core/replay payloads remain unchanged. Aliases share the same
 module/type/enum/exception/reference-token objects; they do not reexecute the
 engine under duplicate module identities. New run presentation wraps an intact
@@ -24,7 +24,7 @@ engine/ run with its own launcher proof, journal, receipt and branded dossier.
 Pre-rename baseline 118 files/three sealed artifacts passed. Twenty active guides,
 README and data documentation are rebranded. Catalog changes exactly two display
 fields; current hash eafd955c, original 3c3108e6 retained in catalog/history. IDs,
-roles, date facts and asof temporal/schema keys are unchanged. Old references
+roles, date facts and TETHER temporal/schema keys are unchanged. Old references
 keep their genuine historical fingerprints; new catalog inputs get new hashes.
 
 Current TETHER paper: 18 pages/c5cd6d70, with 274 freshly checked text units, three
@@ -50,4 +50,4 @@ new download, live model, protected/human-return read, publication or hosted run
 Download worker, receipts and stopped monitoring remain untouched. Broader
 scientific routes remain conditional, as in [[research-log-2026-11-01-working-paper-packet]].
 [[project-goals]] and [[MEMORY]] must identify TETHER as current while keeping
-dated AsOf records as immutable compatibility history.
+dated TETHER records as immutable compatibility history.

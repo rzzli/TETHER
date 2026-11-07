@@ -19,7 +19,7 @@ The six input keys are:
 | `candidates` | Stage `check-inputs/candidates.json`, using each completed candidate's unchanged prediction and ordered retrieved records |
 | `evaluation` | Stage `evaluation.json`, using every retained native case result |
 
-`SOURCE_CLOSURE` in the analyzer lists its eight required local Python files, including the unchanged native scorer/contract and their AsOf dependencies. Standard-library interpreter identity is recorded by root qualification. The CLI is designed for a qualified fresh interpreter with `-I -B`, a fresh workspace `-X pycache_prefix=...`, and workspace `TEMP` and `TMP`:
+`SOURCE_CLOSURE` in the analyzer lists its eight required local Python files, including the unchanged native scorer/contract and their TETHER dependencies. Standard-library interpreter identity is recorded by root qualification. The CLI is designed for a qualified fresh interpreter with `-I -B`, a fresh workspace `-X pycache_prefix=...`, and workspace `TEMP` and `TMP`:
 
 ```text
 python -I -B -X pycache_prefix=<fresh-workspace-path> experiments/scifact_diagnostics/analyze.py --manifest <absolute-manifest> --manifest-sha256 <frozen-sha256> --output <fresh-absolute-output-directory>

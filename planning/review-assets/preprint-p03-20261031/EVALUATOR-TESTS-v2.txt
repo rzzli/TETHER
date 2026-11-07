@@ -1,9 +1,0 @@
-test_group_means_prevent_component_rich_record_dominance (test_study_source_fact_evaluation.SourceFactEvaluationTests.test_group_means_prevent_component_rich_record_dominance) ... ok
-test_no_rescue_of_failed_or_malformed_cells_and_complete_schedule (test_study_source_fact_evaluation.SourceFactEvaluationTests.test_no_rescue_of_failed_or_malformed_cells_and_complete_schedule) ... ok
-test_reference_and_scored_cells_cannot_be_substituted_by_serialized_dicts (test_study_source_fact_evaluation.SourceFactEvaluationTests.test_reference_and_scored_cells_cannot_be_substituted_by_serialized_dicts) ... ok
-test_wrong_native_types_sign_units_or_source_are_critical (test_study_source_fact_evaluation.SourceFactEvaluationTests.test_wrong_native_types_sign_units_or_source_are_critical) ... ok
-
-----------------------------------------------------------------------
-Ran 4 tests in 0.063s
-
-OK

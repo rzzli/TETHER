@@ -37,7 +37,7 @@ SHA9cc1f688624f8a4803c200fabccb390ab1ee45bfbe04d17a1a17a83ccdeceeb4.
 Binds69codefiles+environment and ownedexistingQwen model/runtime, port55591,
 12cells, per-arm16calls/32kinput/8koutput/$0/300s. Ordinary/ completion strict
 postvalidation, no grammar/v3 inheritance. Source-only literal/always-abstain,
-plainonecall, declaredtwo-stageAsOfreportingadaptation (notfullT6/VBT). No retries;
+plainonecall, declaredtwo-stageTETHERreportingadaptation (notfullT6/VBT). No retries;
 all-cell terminals; references opened onlyaftergenends/affirmedservercleanup.
 Next launch one fresh output onlyafter prospective commit, verify allassets and
 ownedPID/netstat/livePopen. Keep actualsessionhandle; no auto restart ontimeout.

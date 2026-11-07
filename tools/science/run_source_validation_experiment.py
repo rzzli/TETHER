@@ -25,17 +25,17 @@ sys.path.insert(0, str(WORKSPACE / "tools/science"))
 import prepare_source_validation_set as stage1
 import prepare_source_validation_inputs as source_inputs
 import build_source_validation_references as reference_builder
-from asof.atomic import publish_bytes
-from asof.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
-from asof.journal import RunJournal, read_chain
-from asof.provenance import InputGraph, catalog_index
-from asof.serde import ContractError, canonical, decode, encode, fingerprint, freeze, parse_json
-from asof.study.source_fact_adapters import adapt_output
-from asof.study.source_fact_evaluation import aggregate_cells, score_cell
-from asof.study.source_fact_sources import compile_reference, validate_task, verify_reference
-from asof.study.proofs import _relative
-from asof.study.stable_read import checked_path, deadline_check, hash_file, read_file, stable_files
-from asof.wire import same_json
+from tether_engine.atomic import publish_bytes
+from tether_engine.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.provenance import InputGraph, catalog_index
+from tether_engine.serde import ContractError, canonical, decode, encode, fingerprint, freeze, parse_json
+from tether_engine.study.source_fact_adapters import adapt_output
+from tether_engine.study.source_fact_evaluation import aggregate_cells, score_cell
+from tether_engine.study.source_fact_sources import compile_reference, validate_task, verify_reference
+from tether_engine.study.proofs import _relative
+from tether_engine.study.stable_read import checked_path, deadline_check, hash_file, read_file, stable_files
+from tether_engine.wire import same_json
 
 ASSETS = stage1.ASSETS
 DESIGN_PATH = ASSETS / "EXPERIMENT-DESIGN-v1.md"

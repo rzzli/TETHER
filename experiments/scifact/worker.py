@@ -11,8 +11,8 @@ from pathlib import Path
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from asof.atomic import publish_bytes
-from asof.serde import canonical, parse_json
+from tether_engine.atomic import publish_bytes
+from tether_engine.serde import canonical, parse_json
 from experiments.scifact.baseline import fit_model, load_model_bytes, save_model, LEARNER_SETTINGS, VECTORIZER_SETTINGS, SEED
 from experiments.scifact.runtime import IOAudit, Watchdog, load_input, measured
 from experiments.scifact.tether_adapter import NativeSession

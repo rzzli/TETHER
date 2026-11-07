@@ -43,7 +43,7 @@ authority and qualified bulk-lease branches. Real roster,
 physical14, joint budgets, distinct84 and integrated resources remain open.
 
 The prior [[research-log-2026-10-29-large-injected-producer]] remains separate,
-as do the original FAILED/INCOMPLETE_TIMEOUT native outcomes. AsOf0.3.11/defaultv2
+as do the original FAILED/INCOMPLETE_TIMEOUT native outcomes. TETHER0.3.11/defaultv2
 retains1,774 full tests/327 pins/ten preserved versions; no new application-suite
 run or runtime integration was claimed. Recorded gaps remain65 missing inputs,
 36 unqualified endpoint labels,17/32 observable registry states and0/12 jointly

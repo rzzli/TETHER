@@ -3,13 +3,13 @@ import tempfile
 import unittest
 import os
 
-from asof.serde import ContractError, sha256_file, write_json
+from tether_engine.serde import ContractError, sha256_file, write_json
 from tools.framework.summarize_local_pilot import verify_seal, summarize
 
 
 class LocalPilotReportTests(unittest.TestCase):
     def test_relative_roots_and_windows_separator_members_are_portable(self):
-        with tempfile.TemporaryDirectory(prefix='asof-report-test-', dir=Path.cwd()) as d:
+        with tempfile.TemporaryDirectory(prefix='tether-report-test-', dir=Path.cwd()) as d:
             root = Path(d); (root / 'case').mkdir()
             for name in ['pilot-report.json', 'pilot-journal.jsonl', 'case/record.json']:
                 (root / name).write_bytes(b'{}')

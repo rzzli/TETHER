@@ -7,7 +7,7 @@ from experiments.litqa_analysis import lineage as l, collection as c
 from experiments.litqa_comparison.tests import test_admission as fixtures
 from experiments.litqa_comparison.pipeline import proof
 from experiments.labbench import tether_adapter
-from asof.serde import encode
+from tether_engine.serde import encode
 from experiments.litqa_supplied import test_admission as supplied_fixtures
 from experiments.litqa_analysis import supplied_collection
 

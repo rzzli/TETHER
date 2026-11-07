@@ -3,6 +3,12 @@
 The generation phase receives only authenticated source packets. Evaluator values
 are opened only after generation has ended and the owned server has been stopped.
 This controller deliberately does not inherit any native-v2 qualification path.
+
+The fixed scientific manifests and schedule pins below belong to the historical
+P04 protocol in tag tether-pre-namespace-migration-20261106. They are not current
+namespace qualification. Replay original P04 work from that archived checkout;
+a new scientific execution requires a separately reviewed prospective protocol
+and runtime qualification. Current controller tests use invented inputs only.
 """
 
 from __future__ import annotations
@@ -21,20 +27,20 @@ import sys
 import time
 import urllib.request
 
-from asof.contracts import Snapshot
-from asof.journal import RunJournal, read_chain
-from asof.provenance import InputGraph, catalog_index
-from asof.serde import ContractError, canonical, decode, encode, fingerprint, freeze, parse_json
-from asof.study.process import OwnedServer, ServerSpec
-from asof.study.source_fact_cell import ARMS, run_reporting_cell
-from asof.study.source_fact_evaluation import TERMINALS, aggregate_cells, score_cell
-from asof.study.source_fact_reporting import reporting_view
-from asof.study.source_fact_sources import verify_reference
-from asof.study.source_fact_transport import (
+from tether_engine.contracts import Snapshot
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.provenance import InputGraph, catalog_index
+from tether_engine.serde import ContractError, canonical, decode, encode, fingerprint, freeze, parse_json
+from tether_engine.study.process import OwnedServer, ServerSpec
+from tether_engine.study.source_fact_cell import ARMS, run_reporting_cell
+from tether_engine.study.source_fact_evaluation import TERMINALS, aggregate_cells, score_cell
+from tether_engine.study.source_fact_reporting import reporting_view
+from tether_engine.study.source_fact_sources import verify_reference
+from tether_engine.study.source_fact_transport import (
     MAX_NETSTAT_BYTES, TypedReportingClient, parse_netstat_listener,
 )
-from asof.study.stable_read import checked_path, read_file, stable_files
-from asof.workflow import Budget
+from tether_engine.study.stable_read import checked_path, read_file, stable_files
+from tether_engine.workflow import Budget
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -94,11 +100,11 @@ def capture_environment():
                 python_implementation=platform.python_implementation(),
                 platform=platform.platform(),
                 dependencies={name: metadata.version(name)
-                              for name in ("asof-target-agents", "pyarrow")})
+                              for name in ("tether-target-engine", "pyarrow")})
 
 
 def code_inventory():
-    paths = list((ROOT / "src/asof").rglob("*.py"))
+    paths = list((ROOT / "src/tether_engine").rglob("*.py"))
     paths.extend(ROOT / name for name in (
         "tools/science/run_source_fact_pilot.py",
         ASSETS + "prepare_generation_inputs.py", ASSETS + "prepare_references.py"))

@@ -1,7 +1,7 @@
 import copy
 import unittest
 
-from asof.serde import ContractError
+from tether_engine.serde import ContractError
 from tools.science.reference_panel import RUBRIC, validate_panel, validate_q1_rows
 
 

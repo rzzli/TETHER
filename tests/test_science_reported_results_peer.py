@@ -6,7 +6,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError, fingerprint, sha256_file, write_json
+from tether_engine.serde import ContractError, fingerprint, sha256_file, write_json
 from tools.science import outcome_extract
 from tools.science.outcome_results import (
     RESULT_FIELDS, STUDY_FIELDS, regenerate_results, results_query, validate_result_rows,

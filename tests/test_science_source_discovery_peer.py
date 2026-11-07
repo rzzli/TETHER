@@ -7,7 +7,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from asof.serde import ContractError
+from tether_engine.serde import ContractError
 from tools.science.source_retrieval import fetch_control
 from tools.science.source_discovery import official_links, candidate_routes, qualify_original
 

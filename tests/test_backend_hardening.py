@@ -8,12 +8,12 @@ import unittest
 import urllib.error
 from unittest.mock import Mock
 
-from asof.agents import EvidenceView, SpecialistRequest
-from asof.contracts import Category
-from asof.local_model import LocalSelectionBackend, parse_selection, selection_payload
-from asof.retrieval import RetrievalPolicy, bounded_request
-from asof.wire import request_bytes
-from asof.serde import ContractError, canonical, fingerprint, write_json
+from tether_engine.agents import EvidenceView, SpecialistRequest
+from tether_engine.contracts import Category
+from tether_engine.local_model import LocalSelectionBackend, parse_selection, selection_payload
+from tether_engine.retrieval import RetrievalPolicy, bounded_request
+from tether_engine.wire import request_bytes
+from tether_engine.serde import ContractError, canonical, fingerprint, write_json
 
 
 class BackendHardeningTests(unittest.TestCase):

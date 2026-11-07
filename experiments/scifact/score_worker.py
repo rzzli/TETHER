@@ -12,8 +12,8 @@ import time
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from asof.atomic import publish_bytes
-from asof.serde import ContractError, canonical, parse_json
+from tether_engine.atomic import publish_bytes
+from tether_engine.serde import ContractError, canonical, parse_json
 from experiments.scifact.evaluate import official_metrics, evaluate_schedule
 from experiments.scifact.native_contract import validate_prediction, validate_references, validate_schedule
 from experiments.scifact.runtime import IOAudit, Watchdog, load_input, measured

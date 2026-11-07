@@ -5,7 +5,7 @@ from itertools import zip_longest
 import re
 from collections.abc import Mapping
 
-from asof.serde import freeze
+from tether_engine.serde import freeze
 from experiments.labbench.retrieval import question_tokens
 from .codecs import digest, need, question_view, validate_pool
 

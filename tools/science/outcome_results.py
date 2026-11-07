@@ -8,7 +8,7 @@ from __future__ import annotations
 import copy
 import re
 
-from asof.serde import ContractError, fingerprint
+from tether_engine.serde import ContractError, fingerprint
 from tools.science.ascertainment_policy import version_eligibility
 from tools.science.outcome_inputs import PRELUDE, _literal, _seal
 

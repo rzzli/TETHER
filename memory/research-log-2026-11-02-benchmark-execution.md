@@ -69,7 +69,7 @@ independent preflightPASS and FROZEN f7b4b09f. Patched preparation-attempt01 als
 has109cases; preflight is in progress. Neither corrected run has scored. Original
 experiment unchanged. See tether-equal-policy-v2-20261105/EXECUTION-STATE.json.
 
-November 5, 21:34 UTC correction checkpoint: candidate AsOf0.3.13/TETHER0.5.2
+November 5, 21:34 UTC correction checkpoint: candidate TETHER0.3.13/TETHER0.5.2
 passes25 focused replay and52 archive tests plus fresh isolated two-wheel/14-command
 qualification (7486fc50). Full gate01 retains a sandbox hard-link/packaging failure;
 gate02 aborted before dispatch on a preserved historical temp-directory collision.
@@ -131,7 +131,7 @@ Full-gate03 is terminal/interrupted after869 passing methods and one repeated Wi
 
 The owner activated the full sequential goal: three correctness fixes, an independent equal-policy validator comparison, SciFact, one LAB-Bench task family, and an actual Inspect-based implementation/comparison. Proceed without repeated confirmation, retain regular commits and explicit checkpoints, and keep the goal active until all stages are implemented and verified. The authority is [[TETHER Benchmark Execution Plan 2026-11-02]], tracked as BG01–BG06 in TODO. Earlier recommendation-only statements do not block this newly authorized work; closed historical model cells, source-reporting results, external-expert retirement and deferred owner declarations remain unchanged.
 
-BG01 implementations are present as TETHER 0.5.1 with AsOf 0.3.12. CE01 protects receipt/queue/source paths and publishes fresh reports without replacement. CE02 carries validated over-reservation usage through measured failure, stops later dispatch and reconciles failed archives. CE03 checks download availability relationships for all supplied raw nodes through a shared pure helper. Focused/peer scopes pass:12 CE01 tests;12 CE02 plus122 related;9 CE03 plus85 related;138 complete facade tests. These overlap and are not summed. Old wheels/releases and the disabled monitor are separately preserved; no actual model or provider call occurred.
+BG01 implementations are present as TETHER 0.5.1 with TETHER 0.3.12. CE01 protects receipt/queue/source paths and publishes fresh reports without replacement. CE02 carries validated over-reservation usage through measured failure, stops later dispatch and reconciles failed archives. CE03 checks download availability relationships for all supplied raw nodes through a shared pure helper. Focused/peer scopes pass:12 CE01 tests;12 CE02 plus122 related;9 CE03 plus85 related;138 complete facade tests. These overlap and are not summed. Old wheels/releases and the disabled monitor are separately preserved; no actual model or provider call occurred.
 
 The first full core gate was interrupted after14 errors/failures caused by the old archive dependency profile rejecting the three changed engine modules. It is terminal (session78654 exit1; no matching Python process), with rawlog/interruption record retained and no final driverJSON. Initial root commentary incorrectly reported no failures because it checked only final headers; the correction is explicit. The first0.3.12 profile migration retained old bytes and changed exactly3pins/19unchanged. The second changed onlyserde.py relative to that first profile; its fresh52 archive tests and3 relocated old controls pass. No archive Python guard was weakened.
 

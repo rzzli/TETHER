@@ -9,11 +9,11 @@ import tempfile
 import unittest
 from unittest.mock import MagicMock, Mock, patch
 
-from asof.chrono import load_snapshot
-from asof.contracts import Case, Category, EvidenceStatus
-from asof.serde import ContractError, decode, encode, fingerprint, read_json, sha256_file, write_json
-from asof.workflow import Budget
-from asof.journal import RunJournal, read_chain
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case, Category, EvidenceStatus
+from tether_engine.serde import ContractError, decode, encode, fingerprint, read_json, sha256_file, write_json
+from tether_engine.workflow import Budget
+from tether_engine.journal import RunJournal, read_chain
 from tools.science import run_comparison as launcher
 
 
@@ -33,7 +33,7 @@ class RunComparisonTests(unittest.TestCase):
         write_json(output/'catalog-policy.json', {'fixture': 'catalog'})
         write_json(output/'role-policy.json', {'fixture': 'policy','output_constraint_policy':launcher.RoleSelectionBackend.output_scope_policy})
         policy_source=self.root/'role-policy-source.json';shutil.copyfile(output/'role-policy.json',policy_source)
-        arms = ['asof', 'adapted_virtual_biotech', 'lexical', 'provider_score', 'no_literature', 'no_perturbation']
+        arms = ['tether', 'adapted_virtual_biotech', 'lexical', 'provider_score', 'no_literature', 'no_perturbation']
         protocol = {'protocol_id': 'science7-matched-source-bounded-t6-v0.2', 'source_bundle': 'data/derived/source',
             'arms': arms, 'budget_per_case_per_arm': encode(Budget()),
             'candidate_world': {'maximum_total_observations_per_case': None, 'seed': None},
@@ -144,7 +144,7 @@ class RunComparisonTests(unittest.TestCase):
 
     def fixture_store(self):
         directory = self.root/'source-fixture'
-        shutil.copytree(ROOT/'src/asof/demo/v2', directory)
+        shutil.copytree(ROOT/'src/tether_engine/demo/v2', directory)
         packet = read_json(directory/'evidence.json')
         for row in packet['observations']: row['features'] = {}
         write_json(directory/'evidence.json', packet)
@@ -169,7 +169,7 @@ class RunComparisonTests(unittest.TestCase):
             with self.assertRaises(ContractError): launcher.selected_store(case, full, maximum, seed)
 
     def test_nonempty_prediction_features_never_enter_real_candidate_world(self):
-        from asof.chrono import EvidenceStore
+        from tether_engine.chrono import EvidenceStore
         case, full = self.fixture_store()
         row = next(r for category in Category for r in full.query(case, category)
                    if r.observation.status == EvidenceStatus.OBSERVED)
@@ -203,7 +203,7 @@ class RunComparisonTests(unittest.TestCase):
             with self.assertRaisesRegex(ContractError, 'pinned bytes'): launcher._load_case(plan, row)
 
     def test_case_reload_rejects_same_id_source_content_substitution(self):
-        from asof.chrono import EvidenceStore
+        from tether_engine.chrono import EvidenceStore
         case, full = self.fixture_store()
         case_path = self.root/'source-fixture'/'case.json'; write_json(case_path, encode(case))
         _, selection = launcher.selected_store(case, full)
@@ -275,9 +275,9 @@ class RunComparisonTests(unittest.TestCase):
         from tools.science import comparison_workflow as engine
         plan, output = self.plan_fixture()
         plan['backend'] = {'retrieval': {'max_records': 12, 'max_request_bytes': 12000,
-            'wire_format': 'asof-shared-scientific-fields-v1'}, 'max_output_tokens': 256,
+            'wire_format': 'tether-shared-scientific-fields-v1'}, 'max_output_tokens': 256,
             'timeout_seconds': 2, 'seed': 123}
-        plan['execution_order'] = [{'case_id': plan['cases'][0]['case_id'], 'arms': ['asof', 'lexical']}]
+        plan['execution_order'] = [{'case_id': plan['cases'][0]['case_id'], 'arms': ['tether', 'lexical']}]
         write_json(output/'model-acquisition.json', {'revision': 'synthetic-only', 'items': []})
         plan['model_receipt'] = launcher.pin(output/'model-acquisition.json')
         plan_path = output/'run-plan.json'; write_json(plan_path, plan)
@@ -293,7 +293,7 @@ class RunComparisonTests(unittest.TestCase):
 
         def arm_result(case, store, backend, budget, arm, folder, role_policy):
             folder.mkdir(parents=True)
-            result = {'arm': arm, 'status': first_status if arm == 'asof' else 'completed',
+            result = {'arm': arm, 'status': first_status if arm == 'tether' else 'completed',
                 'features': {}, 'probability': None, 'claims': [], 'calls': 0,
                 'usage': {'input_tokens': 0, 'output_tokens': 0, 'cost_usd': 0}}
             write_json(folder/'result.json', result); write_json(folder/'seal.json', {'synthetic': True})

@@ -12,21 +12,21 @@ from pathlib import Path
 import re
 import time
 
-from asof.agents import Selection, SpecialistRequest, Usage, make_request
-from asof.contracts import Category, EvidenceStatus, Profile
-from asof.journal import RunJournal, read_chain
-from asof.local_model import LocalSelectionBackend, parse_selection, selection_payload, validate_selection_cap
-from asof.retrieval import RetrievalPolicy, bounded_request
-from asof.serde import ContractError, canonical, decode, encode, fingerprint, parse_json, read_json, safe_child, sha256_file, write_json
-from asof.workflow import Budget, BudgetMeter, add_usage, over_quote
+from tether_engine.agents import Selection, SpecialistRequest, Usage, make_request
+from tether_engine.contracts import Category, EvidenceStatus, Profile
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.local_model import LocalSelectionBackend, parse_selection, selection_payload, validate_selection_cap
+from tether_engine.retrieval import RetrievalPolicy, bounded_request
+from tether_engine.serde import ContractError, canonical, decode, encode, fingerprint, parse_json, read_json, safe_child, sha256_file, write_json
+from tether_engine.workflow import Budget, BudgetMeter, add_usage, over_quote
 from tools.science.role_backend import ROLE_SELECTION_POLICY, role_allowed_ids, role_selection_payload
 
 
 ROOT = Path(__file__).resolve().parents[2]
 POLICY = ROOT/'planning/review-assets/science-prerequisites-20261018/item7/adapter-role-policy-r1.json'
-ARMS = ('asof', 'adapted_virtual_biotech', 'lexical', 'provider_score', 'no_literature', 'no_perturbation')
+ARMS = ('tether', 'adapted_virtual_biotech', 'lexical', 'provider_score', 'no_literature', 'no_perturbation')
 STAGES = ('chief_of_staff', 'coordinator_delegate', 'mapped_specialist', 'scientific_reviewer', 'coordinator_synthesize')
-DEFAULT_RETRIEVAL = {'max_records': 12, 'max_request_bytes': 12000, 'wire_format': 'asof-shared-scientific-fields-v1'}
+DEFAULT_RETRIEVAL = {'max_records': 12, 'max_request_bytes': 12000, 'wire_format': 'tether-shared-scientific-fields-v1'}
 
 
 def default_role_policy():

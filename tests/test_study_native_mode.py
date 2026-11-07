@@ -8,10 +8,10 @@ import time
 import unittest
 from unittest.mock import Mock, patch
 
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, canonical, encode, parse_json
-from asof.study import native_mode as mode
-from asof.study import process as process_module
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, canonical, encode, parse_json
+from tether_engine.study import native_mode as mode
+from tether_engine.study import process as process_module
 from tests import test_study_process as processes
 from tests import test_study_tokenization as tokens
 
@@ -72,7 +72,7 @@ class NativeModeTests(unittest.TestCase):
             with self.assertRaises(ContractError):
                 mode.NativeExecutionConfig(self.model, port)
         desc = self.config.describe(self.spec)
-        self.assertEqual(desc["model_alias"], "asof-interpretation-v2")
+        self.assertEqual(desc["model_alias"], "tether-interpretation-v2")
         argv = self.config.server_spec(self.spec, time.monotonic() + 30).argv
         self.assertIn("--offline", argv)
         self.assertEqual(argv[argv.index("--host") + 1], "127.0.0.1")

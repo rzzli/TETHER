@@ -5,8 +5,8 @@ import tempfile
 import unittest
 import zipfile
 
-from asof.journal import read_chain
-from asof.serde import ContractError, read_json, sha256_file
+from tether_engine.journal import read_chain
+from tether_engine.serde import ContractError, read_json, sha256_file
 from tools.science.ascertainment_inputs import DEFAULT_LIMITS, actual_date, qualify, safe_members
 
 

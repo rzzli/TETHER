@@ -11,8 +11,8 @@ import json
 from pathlib import Path
 import time
 
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, fingerprint, sha256_file, write_json
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, fingerprint, sha256_file, write_json
 from tools.science.outcome_extract import (APPROVED_BASE, APPROVED_RESTORES,
                                            check_pins)
 from tools.science.outcome_inputs import parse_jsonl, schema_from_audit
@@ -33,7 +33,7 @@ CODE = ('tools/science/registry_content_workflow.py', 'tools/science/registry_co
         'tools/science/outcome_inputs.py', 'tools/science/origin_maturity.py',
         'tools/science/origin_review.py', 'tools/science/origin_programs.py',
         'tools/science/ascertainment_policy.py', 'tools/science/reference_panel.py',
-        'src/asof/serde.py', 'src/asof/journal.py')
+        'src/tether_engine/serde.py', 'src/tether_engine/journal.py')
 
 
 def require(condition, message):

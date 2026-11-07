@@ -12,7 +12,7 @@ import socket
 import subprocess
 import time
 
-from asof.serde import ContractError, read_json, sha256_file, write_json
+from tether_engine.serde import ContractError, read_json, sha256_file, write_json
 from tools.science.outcome_extract import check_pins, source_lease
 
 STARTUP_SETTLE_SECONDS = 50

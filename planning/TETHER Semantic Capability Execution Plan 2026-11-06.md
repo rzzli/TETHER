@@ -1,5 +1,11 @@
 # TETHER semantic capability execution plan
 
+**Owner pause, 6 November 2026:** scientific execution is paused while the full
+namespace migration is completed. The primary SC04 run sealed796 answers; the
+supplied-source run was stopped with partial outputs retained. No automatic retry
+or later-stage execution is authorized by the naming task. Original qualifications
+belong to the [archived checkpoint](../docs/ARCHIVE.md), not renamed code.
+
 Activated by the owner on 6 November 2026. Baseline commit: `5f6f1fa`.
 The owner authorizes autonomous execution of the recommendations in the
 [comparison report](<../reports/TETHER benchmark comparison update 2026-11-06.md>)

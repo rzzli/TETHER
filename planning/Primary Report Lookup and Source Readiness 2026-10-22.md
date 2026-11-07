@@ -40,7 +40,7 @@ inherited **April 1, 2026 cutoff stays unchanged**.
 
 ## Execution and corrections
 
-The [frozen policy](protocols/existing-trial-primary-report-v0.1.json), exact queries,
+The [frozen policy](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/protocols/existing-trial-primary-report-v0.1.json), exact queries,
 identity threshold and stop rule were committed/pushed at `6e662ed` before new
 source access. Method and technical preflights preceded dispatch. Execution used
 **4 searches, 1 page open and 1 original GET**; zero retries, registry refreshes,

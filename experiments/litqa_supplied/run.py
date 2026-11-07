@@ -10,9 +10,9 @@ import time
 
 ROOT=Path(__file__).resolve().parents[2]
 sys.path[:0]=[str(ROOT),str(ROOT/'src'),str(ROOT/'packages/tether/src')]
-from asof.atomic import publish_bytes
-from asof.journal import RunJournal
-from asof.serde import canonical,encode,parse_json
+from tether_engine.atomic import publish_bytes
+from tether_engine.journal import RunJournal
+from tether_engine.serde import canonical,encode,parse_json
 from experiments.labbench import model
 from experiments.labbench.native_contract import validate_query
 from experiments.labbench.runtime import contain_process_tree,empty_import_cache,DeadlineWatchdog,InputAudit,ProcessSamples,process_sample

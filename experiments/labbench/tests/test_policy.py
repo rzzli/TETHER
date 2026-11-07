@@ -6,8 +6,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, canonical, encode
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, canonical, encode
 from experiments.labbench import retrieval
 from experiments.labbench.tether_adapter import capture_context, verify_candidate, DEFAULT_CATALOG
 
@@ -103,7 +103,7 @@ class PolicyTests(unittest.TestCase):
         def unknown_fetch(url,**kw):
             value=fake_fetch(url,**kw)
             if not url.endswith("fullTextXML"):
-                from asof.serde import parse_json
+                from tether_engine.serde import parse_json
                 body=parse_json(value["body"]);body["resultList"]["result"][0]["firstPublicationDate"]=None
                 value["body"]=canonical(body)
             return value

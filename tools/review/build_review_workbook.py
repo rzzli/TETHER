@@ -6,8 +6,8 @@ import json
 from pathlib import Path
 import zipfile
 
-from asof.maintenance import write_new_json
-from asof.serde import ContractError, read_json, safe_child, sha256_file
+from tether_engine.maintenance import write_new_json
+from tether_engine.serde import ContractError, read_json, safe_child, sha256_file
 
 LABELS = {
     'EFO_0003060': 'Non-small cell lung carcinoma', 'EFO_0000729': 'Ulcerative colitis',

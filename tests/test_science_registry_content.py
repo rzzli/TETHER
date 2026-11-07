@@ -1,7 +1,7 @@
 import copy
 import unittest
 
-from asof.serde import ContractError, fingerprint
+from tether_engine.serde import ContractError, fingerprint
 from tools.science.registry_content import (
     FIELDS, TABLES, appearance, classify_content, content_query, regenerate_query,
 )

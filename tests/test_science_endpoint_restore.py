@@ -2,7 +2,7 @@ import tempfile
 from pathlib import Path
 import unittest
 
-from asof.serde import ContractError,read_json,sha256_file,write_json
+from tether_engine.serde import ContractError,read_json,sha256_file,write_json
 from tools.science.endpoint_restore import restore,validate_gate,verify_origin_closure
 from tests import test_science_historical_inputs as history_fixtures
 

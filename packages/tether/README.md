@@ -1,132 +1,85 @@
 # TETHER
 
-TETHER is the canonical front door for the evidence-agent framework. This
-distribution is `tether-target-agents` 0.5.2, with Python namespace `tether` and
-command `tether`. It depends on the separately versioned `asof-target-agents==0.3.13`
-compatibility engine. The default uses no third-party runtime libraries; the
-optional `ingest` extra pins PyArrow 21.0.0. Local models remain explicit opt-in.
+**Auditable evidence workflows, with source-linked dossiers and bounded execution.**
 
-The separate project preserves the original root project, wire IDs, dataclass
-identities, code proofs and historical release bytes. Legacy names in those
-artifacts identify their actual implementation; they are not silently rewritten.
-An installed TETHER launcher is additional code, with its own proof.
+The public package is `tether-target-agents` **0.6.0**, command and namespace
+`tether`. It pins `tether-target-engine==0.4.0`, whose namespace is `tether_engine`
+and direct command is `tether-engine`. The runtime has no third-party library
+dependencies; optional ingestion pins `pyarrow==21.0.0`.
 
-Version 0.4.1 adds deterministic verification of category status transitions,
-reviewed selections versus committed claims, and the complete engine dossier.
-The `tether verify` command applies these checks to v2 engine runs as well as
-new outer runs. The aliases `tether.artifacts` and `tether.semantics` continue to
-expose the frozen legacy API; use the CLI or `tether._presentation.verify_engine`
-for the additional boundary. Version-one receipts retain their original scope.
-
-Archived TETHER 0.4.0, 0.4.1 and 0.4.2 outer runs require their pinned wheel/source to verify
-their launcher fingerprint. The original review packet remains that historical
-version; this correction does not rewrite its sources, paper or artifacts.
-
-From this directory, development tooling resolves the engine through
-`tool.uv.sources` at `../..`. Root integration instructions own environment/lock
-setup. There is no implicit provider download or new scientific study.
+From the repository root, follow the [quick start](../../README.md#quick-start).
+Use a fresh output directory with an existing parent:
 
 ```text
-tether --help
 tether --version
-tether demo --output <existing-parent>/fresh-demo
-tether verify --run-dir <existing-parent>/fresh-demo --receipt-sha256 <saved-hash>
-tether inspect-run --run-dir <existing-parent>/fresh-demo
+tether demo --output runs/fresh-demo
+tether verify --run-dir runs/fresh-demo --receipt-sha256 <saved-hash>
+tether inspect-run --run-dir runs/fresh-demo
 ```
 
-Version 0.5.0 adds an explicit artifact-policy path for `run`:
+The bundled demo uses fictional evidence and deterministic offline extraction.
+Local models are separate opt-in configurations, not part of the default demo.
+
+## Output and verification
+
+`demo` and `run` reserve a new outer directory. `engine/` contains the engine's
+source bindings, claims, journal and receipt. The outer `dossier.md` is an exact
+byte copy of the engine dossier, checked under `identity_dossier_v2`.
+`tether-manifest.json` binds the full file inventory and launcher code;
+`tether-receipt.json` seals the completed attempt. Save the printed receipt hash
+separately: a sibling receipt cannot detect replacement of the entire tree.
+
+Verification checks the launcher, journal, inventory, dossier, source bindings
+and deterministic execution consistency. Outer `--outputs-only` is rejected.
+Scientific correctness and clinical validity are not established by verification.
+See [verification limits](../../docs/TETHER-VERIFICATION-SCOPE.md).
+
+Failures preserve `tether-failure.json` and available journals. `inspect-run`
+reads them without restarting calls. A later attempt requires a new output path.
+This is trusted local execution, not an operating-system sandbox.
+
+## Explicit artifact permissions
+
+The optional policy path requires all five arguments together:
 
 ```text
 tether run --case <case.json> --snapshot <snapshot.json> --output <fresh-output> \
-  --catalog <original-schema1-catalog.json> --catalog-policy <schema2-policy.json> \
-  --policy-use <exact-use-id> --policy-roots <roots.json> --policy-frame-sha256 <frame-hash>
+  --catalog <schema1-catalog.json> --catalog-policy <schema2-policy.json> \
+  --policy-use <use-id> --policy-roots <roots.json> --policy-frame-sha256 <hash>
 ```
 
-All five policy/catalog arguments are required together. `roots.json` is a
-schema-1 object with a `roots` mapping of aliases to absolute local paths,
-including `metadata` for the source catalog and selected provenance reports.
-The use record names its raw and snapshot root aliases. Every supplied packet,
-source node and actual parent must match an exact grant, including unused nodes.
-Selected raw/source metadata is checked before packet interpretation or child
-dispatch. Record-level eligibility and publication filters still apply during
-admission; newly computed results may use eligible older informational parents.
+`roots.json` maps root aliases to absolute local paths, including `metadata`.
+Every supplied packet and source ancestor, including unused nodes, must have an
+exact grant. Controls are copied into the attempt, while raw originals remain
+external and pinned. Eligibility and publication filters still apply. A current
+computation may use older eligible information; a receipt is not evidence of
+historical availability.
 
-This path copies the policy, original catalog, case, snapshot, normalized packets,
-computed mapping inputs and selected provenance evidence into the reserved outer
-attempt, retaining relative packet/mapping paths. The child receives those
-copied controls and a deterministic schema-1 projection limited to the selected
-use. Verification reconstructs the policy decision/projection and compares them
-with actual engine inputs. Raw originals remain external and pinned. Exact
-receipt bytes are archived locally, while the frozen engine continues to read
-the original pinned receipt paths; wrapper checks compare those originals with
-the copies before dispatch, finalization and verification. This is not exclusive
-OS ownership or a guarantee that external originals will always remain available.
+This path supports only the offline extractive backend without scorer, replay or
+local-model configuration. Demo and ingestion commands do not support it.
+Ordinary schema-1 execution remains available with explicitly weaker catalog
+scope. Direct module aliases do not acquire artifact authorization.
 
-Artifact-policy execution currently permits only the offline extractive backend,
-without scorer, replay or local-model configuration. `demo`, `build-snapshot`,
-`inspect-source` and synthetic-demo snapshots do not support this new path; policy
-flags are rejected. Ordinary demo and schema-1 runs remain available with their
-explicitly weaker catalog scope. Direct legacy aliases do not acquire artifact
-authorization by importing the new module, and a projection alone is not an
-artifact grant. These fixture-qualified contracts do not authorize reopening
-closed scientific studies or establish scientific validity. Each policy
-preparation/verification pass uses bounded reads and a 300-second I/O deadline;
-raw proof verification can require substantial repeated streaming I/O.
+## Process and file limits
 
-Version 0.4.2 supervises each engine child with a separate absolute process
-deadline (default 3,600 seconds) and aggregate stdout/stderr capture cap (default
-16 MiB, configurable up to 64 MiB). Use `--process-timeout-seconds` and
-`--process-output-bytes` on engine-backed subcommands. These are conservative
-wrapper defaults, not estimates of scientific workload feasibility; the engine's
-default 300-second workflow budget is unchanged. CLI options require their full
-spelling. Effective limits and process timing/capture accounting are sealed in
-outer manifests and journals. Exact-cap output is accepted; one extra observed
-byte triggers failure without retaining bytes beyond the aggregate cap.
+Engine-backed commands default to a 3,600-second process deadline and aggregate
+16 MiB stdout/stderr limit; use `--process-timeout-seconds` and
+`--process-output-bytes` to set explicit limits (output maximum 64 MiB).
+The engine workflow's 300-second default budget is separate. Cleanup has its own
+five-second budget. These controls do not contain descendant processes, preempt
+OS process creation, or bound later outer verification. Uncertain calls are
+never automatically repeated.
 
-The process deadline covers execution and pipe EOF, followed by a separate
-five-second cleanup wait budget. It cannot preempt OS process creation, contain
-descendants, or bound outer verification/publication after the child returns.
-The qualified Windows CLI polls pipes with no reader threads or shared handles.
-Synchronous Windows pipe handles are not universally nonblocking in arbitrary
-embedded multithreaded applications; that context and the POSIX polling branch
-have not been qualified here. Cleanup records
-whether the owned child was reaped; failures never redispatch. An inherited pipe
-handle cannot indefinitely hold the supervisor, but descendants are not killed.
-In-process verification rejects process-limit flags; outer inspection rejects
-explicit flags as well. Failed delegated commands emit supervision diagnostics
-to stderr without implicitly creating an outer directory or a partial-byte
-artifact. Their existing engine output paths, when present, remain available.
-See [verification scope](../../docs/TETHER-VERIFICATION-SCOPE.md).
+Metadata/journal reads are capped at 64 MiB; dossiers at 256 MiB. Bounded reads
+reject links, reparse points and nonregular files and check file identity.
+Policy I/O uses a separate 300-second deadline. These checks do not guarantee
+exclusive ownership of external files. Windows is the qualified supervisor
+platform; other platform guarantees remain limited to their tested scope.
 
-`demo` and `run` reserve a new outer directory. `engine/` contains the unchanged
-legacy run, including its dossier, source bindings, journal and receipt. The
-outer `dossier.md` changes only the exact first `AsOf dossier` header to `TETHER
-dossier`; its remaining bytes are identical. `tether-manifest.json` binds this
-projection, all engine files and the launcher code/version. The outer attempt
-journal closes before `tether-receipt.json` is published. Save the printed
-outer receipt hash independently; without it wholesale tree replacement is not
-detectable. Receipt roles are evaluation-only, with scientific validation
-explicitly unestablished.
+## Version boundary
 
-Outer verification checks the launcher, paths, complete file inventory, journal,
-exact dossier projection and genuine source-inclusive engine verification.
-`--outputs-only` is rejected for an outer run. Direct v2 engine verification adds
-the checks described above; other commands retain their engine semantics. TETHER metadata/journal reads are
-limited to 64 MiB; dossier reads/products have a separate 256 MiB limit. These
-reads reject oversized or nonregular files before opening, use bounded chunks,
-reject links/reparse points and check file identity before and after reading.
-Inspection parses one captured journal buffer; legacy verification/inspection
-also receive journal-size preflight from the new wrapper. This per-read check is
-not a promise of exclusive filesystem ownership across all later engine reads.
-Help and frontend errors are branded
-TETHER; legacy wire formats and core outputs retain compatibility identities.
-
-For outer `run`/`demo`, failures and interruptions preserve `tether-failure.json`, the outer attempt and
-any inner journal. `inspect-run` reads them without retrying. Choose a new output
-for any later attempt. Any exception from the supervised engine pipe attempts
-bounded termination/draining, killing if necessary, and reaping. The original
-error (or interrupt cause), cleanup errors and available partial bytes are kept;
-failed cleanup remains explicit rather than reported as successful. This is
-trusted local execution, not an OS sandbox or a
-clinical/model-quality/scientific validation claim. No frozen P05/P09 package or
-paper archive is modified by this distribution.
+The new namespace, distributions, method identities and code fingerprints are a
+breaking release. The public aliases share the new engine's module/class objects.
+There is no old namespace shim. Pre-migration version-two runs require their
+original source checkpoint; generic version-one byte verification still reports
+semantic verification unavailable. See [migration details](MIGRATION.md).

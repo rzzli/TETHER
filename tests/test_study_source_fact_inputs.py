@@ -12,8 +12,8 @@ import time
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError, canonical, fingerprint
-from asof.study import source_fact_inputs as inputs
+from tether_engine.serde import ContractError, canonical, fingerprint
+from tether_engine.study import source_fact_inputs as inputs
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -267,7 +267,7 @@ class InputTests(unittest.TestCase):
 
     @requires_parquet
     def test_progress_journal_and_callback_write_failure_stop_source_work(self):
-        from asof.journal import RunJournal, read_chain
+        from tether_engine.journal import RunJournal, read_chain
         f = fixture(self.root)
         journal = RunJournal(self.root / "success-journal", kind="build")
         try:

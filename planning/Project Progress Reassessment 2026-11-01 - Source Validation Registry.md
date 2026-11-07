@@ -11,7 +11,7 @@ than claiming a new full-repository audit or full-suite pass.
 
 ## Verified registry and resources
 
-The [v3 protocol](review-assets/preprint-p05-20261031/REGISTRY-READY-v3.json)
+The [v3 protocol](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/REGISTRY-READY-v3.json)
 was committed at `2f138db` before source-value scans. It fixes 137 originals,
 2,866,248,239 compressed bytes, a contemporary information cutoff of
 1 November 2026 at 07:16:26 UTC, canonical identifier requirements, known
@@ -32,8 +32,8 @@ credible-set row at the exact native locus key. All 25 credible files and
 2,862,043 rows were scanned. A matching locus key does not resolve cross-source
 study/variant identity or establish a causal gene relationship.
 
-The [main independent audit](review-assets/preprint-p05-20261031/REGISTRY-AUDIT-v3.json)
-and [metadata supplement](review-assets/preprint-p05-20261031/REGISTRY-AUDIT-CAPTURE-METADATA-v3.json)
+The [main independent audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/REGISTRY-AUDIT-v3.json)
+and [metadata supplement](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/REGISTRY-AUDIT-CAPTURE-METADATA-v3.json)
 pass **789 checks, zero findings**. Independently authored replay covers every
 GWAS identity/locator/eligibility/hash, all credible selected matches and
 deterministic selection, all 137 original/receipt proofs, roles, chronology,
@@ -76,7 +76,7 @@ historical annotation availability.
 
 ## Current input and reference stage
 
-The [input protocol](review-assets/preprint-p05-20261031/INPUT-READY-v1.json)
+The [input protocol](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/INPUT-READY-v1.json)
 and builder were committed at `98346a9` before the original-only input build.
 Forty fictional tests and independent review pass, using real path, lock and
 journal APIs. Stage2 additionally guards native annotation dates, keeps all
@@ -84,7 +84,7 @@ eligible physical locus matches and enforces existing representation limits.
 
 The build `data/derived/preprint-p05-source-inputs-20261101T074942Z` completed
 with twelve packets and zero blocked cases. It creates no reference, baseline
-output, model call or biological conclusion. The [independent input audit](review-assets/preprint-p05-20261031/INPUT-AUDIT-v1.json)
+output, model call or biological conclusion. The [independent input audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/INPUT-AUDIT-v1.json)
 passes **1,238 checks, zero findings**. It freshly verifies all 137 original
 payloads/receipts, 77 exact recipe archives and 68 code pins, independently
 reconstructs all twelve tasks and 180 value-free fact bindings from original
@@ -92,7 +92,7 @@ rows, and checks every neutral projection byte for byte. Production took
 42.125 seconds; sampled producer RSS is unavailable. The separate audit took
 7.078 seconds with 299,233,280 bytes process-lifetime peak working set. These
 costs remain separate from the earlier registry build and audit.
-[Value-free task definitions](review-assets/preprint-p05-20261031/NEUTRAL-TASKS-v1.json)
+[Value-free task definitions](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p05-20261031/NEUTRAL-TASKS-v1.json)
 were projected and sealed before reference construction. The new reference
 builder receives those query definitions and original sources, not packet row
 values, producer audit values or prior answers.

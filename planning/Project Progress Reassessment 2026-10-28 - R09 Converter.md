@@ -16,14 +16,14 @@ unanchored patterns were replaced by a broad string rule. This is a useful
 negative result, not successful grammar enforcement or model-quality evidence.
 The prescribed stop occurred before vocabulary loading.
 
-The [terminal report](../data/cache/r09-finite-converter-execution-20261028T043655Z/terminal-report.json),
-[receipt](../data/cache/r09-finite-converter-execution-20261028T043655Z/receipt.json)
-and [seal state](../data/cache/r09-finite-converter-execution-20261028T043655Z/seal-state.json)
+The terminal report (local artifact: `data/cache/r09-finite-converter-execution-20261028T043655Z/terminal-report.json`),
+receipt (local artifact: `data/cache/r09-finite-converter-execution-20261028T043655Z/receipt.json`)
+and seal state (local artifact: `data/cache/r09-finite-converter-execution-20261028T043655Z/seal-state.json`)
 were inspected. The receipt SHA256 is
 `73c3f2bede92d2f51238831dea8012e3e4d20a0dd9655002d9f51432bdefcaa4`.
 All 48 inventoried output hashes/sizes and 324 current software pins match;
 the root failure marker is absent and the seal binds that receipt. The
-[independent AI engineering verification](review-assets/recovery-step9-native-grammar-20261028/RESULT-VERIFICATION.json)
+[independent AI engineering verification](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-grammar-20261028/RESULT-VERIFICATION.json)
 also checks the journal and external pins. These are integrity/engineering checks,
 not independent biological adjudication.
 
@@ -42,7 +42,7 @@ is carried forward in its original scope. No broad raw-data audit was repeated.
 | Stopped later work | Zero vocabulary loads, model inference calls, servers and provider spending; no GGUF inputs in this workflow | No native code ran: the approved DLLs did execute |
 | Prepared document corpus | 109 fixed cases and Python/independent JSON Schema checks retained | **No 109-case native document/EOG test ran** |
 
-The [separate V3 authorization](review-assets/recovery-step9-native-grammar-20261028/FINITE-CONVERTER-ROOT-DECISION-v3.json)
+The [separate V3 authorization](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-grammar-20261028/FINITE-CONVERTER-ROOT-DECISION-v3.json)
 followed root review, an independent AI precheck and three passing harmless
 harness regressions. V3 denotes the execution protocol, not a repaired response
 interface. The earlier V2 attempt failed at Popen's DEVNULL guard before any
@@ -124,7 +124,7 @@ by this converter result.
 ## Critical next-step decision
 
 Proceed with a **separately versioned contract design**, following the
-[correction options](review-assets/recovery-step9-native-grammar-20261028/CONTRACT-CORRECTION-OPTIONS.md),
+[correction options](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-grammar-20261028/CONTRACT-CORRECTION-OPTIONS.md),
 not another unchanged-schema execution. The measured warning now makes silent
 keyword dropping or anchors-only repair particularly inappropriate. Preserve
 answer states, exact fields/counts, literal quote/ID binding, nonblank and decoded
@@ -151,7 +151,7 @@ Any vocabulary-only load requires its own declared metadata/model-handle scope,
 source qualification and accounting, even without weights/context/inference.
 
 Before an actual integrated model case, address the separate
-[295.922/300-second simulation](review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md):
+[295.922/300-second simulation](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-native-duration-20261028/RESOURCE-RISK-NOTE.md):
 only 4.078 seconds remained without real startup or inference. Use controlled
 stage profiling and a prospectively scoped performance correction/feasibility
 test. Do not increase budgets, weaken admission, select an easier substitute or

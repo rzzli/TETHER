@@ -10,7 +10,20 @@ tags:
 
 # TETHER — Explicit migration from v1 to v2
 
-TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.5.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.
+The current interface is `tether-target-agents` **0.6.0**, with the `tether` CLI
+and public namespace over `tether-target-engine` **0.4.0** (`tether_engine`). See
+[installation](../README.md#quick-start) and the [namespace migration
+boundary](../packages/tether/MIGRATION.md). Public aliases share the new engine's
+module and class identities; they do not certify earlier execution fingerprints.
+
+The component history below retains earlier versioned observations and test
+counts. Those qualifications belong to their original code and dates, preserved
+in the [historical checkpoint](ARCHIVE.md). Names and example paths here use the
+current namespace for readability; exact original identifiers and reproduction
+commands are in that checkpoint. The naming migration is not a scientific rerun
+or a transfer of historical qualification to the new release. The semantic
+experiment remains **paused**; this guide does not reactivate it or retired
+study and expert-review branches.
 
 Version 0.4.1 adds canonical CLI checks for coverage terminal state, reviewed selections versus committed claims and deterministic dossier text. Direct legacy API aliases keep the frozen engine semantics. Archived TETHER 0.4.0 outer runs require the matching old wheel; the new source is not covered by its receipt. See the [critical review](<../planning/TETHER Full Project Critical Review 2026-11-02.md>) for reproduced gaps and limits.
 
@@ -40,10 +53,10 @@ v1 artifacts and prepare a new conversion directory. Changing `schema_version` a
 is insufficient: v2 requires information that v1 did not retain. Missing lineage or
 availability evidence remains a blocker.
 
-Archived v1 runs still support `asof verify`, with byte integrity and
+Archived v1 runs still support `tether-engine verify`, with byte integrity and
 `semantic_consistency: unavailable_legacy_v1`. Conversion cannot retroactively add v2
-guarantees to a completed run. Original fictional fixtures remain in `src/asof/demo/`;
-new fixtures live in `src/asof/demo/v2/`. `tools/framework/build_demo_v2.py --output <fresh-directory>` regenerates
+guarantees to a completed run. Original fictional fixtures remain in `src/tether_engine/demo/`;
+new fixtures live in `src/tether_engine/demo/v2/`. `tools/framework/build_demo_v2.py --output <fresh-directory>` regenerates
 only fictional v2 fixtures and is not a scientific-data conversion tool.
 
 ## Cases and exact cutoffs
@@ -84,7 +97,7 @@ dates separately and reject future information. Newly calculated results may use
 eligible data; `computed_at` does not replace lineage eligibility. Missing parents,
 cycles and evaluator-only ancestors fail. Do not relabel outcome or gold products.
 
-Use `asof_normalized_packets` only for generated products with complete catalog-resolved
+Use `tether_normalized_packets` only for generated products with complete catalog-resolved
 parents. Seal newly written packet bytes with exact hashes. Each normalized JSON file
 must fit the 64 MiB limit; oversized packets fail explicitly.
 
@@ -103,7 +116,7 @@ descriptive provider metrics. Do not map association scores into support weights
 effect sizes. Unknown quantitative scales/context stay null with reasons. T6 clinical
 probabilities remain null.
 
-Scorers require schema version 2, `asof-features-v2` and
+Scorers require schema version 2, `tether-features-v2` and
 `mean_of_unique_dependency_groups_v2`, plus frozen applicability, imputation, coverage
 and training/calibration declarations. Do not mechanically upgrade real trained weights:
 revalidate changed feature semantics and their training manifest. Invalid schema/profile/

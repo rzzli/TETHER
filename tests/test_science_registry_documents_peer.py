@@ -5,7 +5,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from asof.serde import ContractError, canonical, fingerprint
+from tether_engine.serde import ContractError, canonical, fingerprint
 from tools.science.registry_documents import verify_document
 from tests import test_science_registry_documents as fixtures
 

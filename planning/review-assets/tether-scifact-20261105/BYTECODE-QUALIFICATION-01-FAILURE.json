@@ -1,8 +1,0 @@
-{
-  "schema_version": 1,
-  "status": "initial_checker_rejected_stale_cache",
-  "observed_error": "Import-cache code differs from current source: experiments/scifact/__pycache__/run.cpython-311.pyc",
-  "output_written": false,
-  "correction": "Qualify cache header freshness and interpreter optimization before requiring source-code equality. An old cache invalidated by Python is not executed. Usable caches must match freshly compiled source.",
-  "artifact_changes": "No bytecode, source module, worker or running rehearsal was changed."
-}

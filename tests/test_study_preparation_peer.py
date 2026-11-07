@@ -8,16 +8,16 @@ import time
 import unittest
 from unittest.mock import patch
 
-from asof.journal import RunJournal
-from asof.serde import ContractError, canonical, encode, fingerprint
-from asof.study import source_preparation as source
-from asof.study import tokenization as tok
-from asof.study.proofs import capture_file, capture_package_proof
-from asof.study.source_rows import verify_observation
-from asof.study.preparation_payloads import prepare_payloads
-from asof.study.diagnostic import load_synthetic_request
-from asof.study.diagnostic_codec import bind_question
-from asof.study.stable_read import read_file
+from tether_engine.journal import RunJournal
+from tether_engine.serde import ContractError, canonical, encode, fingerprint
+from tether_engine.study import source_preparation as source
+from tether_engine.study import tokenization as tok
+from tether_engine.study.proofs import capture_file, capture_package_proof
+from tether_engine.study.source_rows import verify_observation
+from tether_engine.study.preparation_payloads import prepare_payloads
+from tether_engine.study.diagnostic import load_synthetic_request
+from tether_engine.study.diagnostic_codec import bind_question
+from tether_engine.study.stable_read import read_file
 from tests import test_study_source_preparation as source_fixtures
 from tests import test_study_tokenization as token_fixtures
 

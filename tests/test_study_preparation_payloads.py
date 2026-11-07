@@ -2,9 +2,9 @@
 
 import unittest
 
-from asof.serde import ContractError, canonical, encode
-from asof.study.diagnostic import load_synthetic_request
-from asof.study.preparation_payloads import prepare_payloads
+from tether_engine.serde import ContractError, canonical, encode
+from tether_engine.study.diagnostic import load_synthetic_request
+from tether_engine.study.preparation_payloads import prepare_payloads
 
 
 class PreparationPayloadTests(unittest.TestCase):

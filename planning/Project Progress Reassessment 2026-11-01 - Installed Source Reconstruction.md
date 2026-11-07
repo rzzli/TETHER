@@ -25,8 +25,8 @@ The initial revision's metrics below are retained historical evidence.
 
 ## Initial revision retained for history
 
-The separately versioned `asof-p05-replay` 0.1.0 was built with cached setuptools 84.0.0
-and installed with unchanged AsOf 0.3.11 and Arrow 21.0.0 into a fresh C: environment,
+The separately versioned `tether-p05-replay` 0.1.0 was built with cached setuptools 84.0.0
+and installed with unchanged TETHER 0.3.11 and Arrow 21.0.0 into a fresh C: environment,
 outside the checkout and original D:/E: roots. Python 3.11.15 `-I` imports resolve
 to that environment and its C: base runtime. Installation was offline, using copied
 package files rather than cache hardlinks.
@@ -51,8 +51,8 @@ authority after exposure to the original result.
 | Reconstruction process |229.422s wall/222.671875s CPU/477,118,464B checkpoint lifetime peak |
 | Independent audit process |14.953s wall/14.796875s CPU/298,065,920B checkpoint lifetime peak |
 
-See [acceptance](review-assets/preprint-p09-20261101/ACTUAL-RECONSTRUCTION-ACCEPTANCE-v1.json)
-and [peer review](review-assets/preprint-p09-20261101/ACTUAL-QUALIFICATION-PEER-REVIEW-v1.json).
+See [acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p09-20261101/ACTUAL-RECONSTRUCTION-ACCEPTANCE-v1.json)
+and [peer review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/preprint-p09-20261101/ACTUAL-QUALIFICATION-PEER-REVIEW-v1.json).
 Exact receipt-verified archive copies remain in the ignored
 `data/derived/preprint-p09-installed-20261101T205500Z/`: 156 reconstruction files and
 3 audit files. The C: temporary originals/environment remain available.

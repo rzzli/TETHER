@@ -2,9 +2,9 @@
 
 **Review date:** 26 October 2026 UTC / 25 October Los Angeles. **Baseline:** `cc0042c5e8a83d86c8718a2e2a6762fc24a26390`. **Reviewer:** Codex, with separate engineering, scientific-feasibility and review-instrument audits. These are AI reviews, not independent human scientific validation.
 
-**Conclusion:** AsOf has a useful, technically tested provenance framework and substantial development evidence. It has not demonstrated clinical prediction, causal genetics or superior scientific dossier quality. The next phase should test whether source-grounded interpretation is useful on a bounded contemporary development set, with independent human references. Another elaborate repair of the exposed IL6R pilot should not be the automatic next task.
+**Conclusion:** TETHER has a useful, technically tested provenance framework and substantial development evidence. It has not demonstrated clinical prediction, causal genetics or superior scientific dossier quality. The next phase should test whether source-grounded interpretation is useful on a bounded contemporary development set, with independent human references. Another elaborate repair of the exposed IL6R pilot should not be the automatic next task.
 
-The [detailed recovery plan](../planning/Project%20Recovery%20and%20Evaluation%20Plan%202026-10-26.md) orders the work. The [expert recruitment brief](expert-review-20261026/Recruitment.md) and [blank expert exercise](expert-review-20261026/Expert-review.html) separate the immediate human requirement from engineering work.
+The [detailed recovery plan](../planning/Project%20Recovery%20and%20Evaluation%20Plan%202026-10-26.md) orders the work. The [expert recruitment brief](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/docs/expert-review-20261026/Recruitment.md) and [blank expert exercise](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/docs/expert-review-20261026/Expert-review.html) separate the immediate human requirement from engineering work.
 
 ## 1. What this review did
 
@@ -32,7 +32,7 @@ Evidence is separated below:
 | Latest model attempt | Original candidate, model-visible source view, failure report and third adjudication inspected | Exposed development case, not a fresh evaluation |
 | Release and durability | Packaging/CI definitions, Git ancestry and backup claims examined | Remote state was not refreshed; E: is a local drive, not established off-site storage |
 
-Fresh inventory reproduces 3,946 core Python lines and 20,974 utility lines. The installed wheel contains the core, not the research study stack. The 213 source/test pins in the previous full-validation code guard match the current files. All 12 canonical registry report/receipt pins match. Both protected outcome hashes match. See [audit evidence](../planning/review-assets/opus-response-20261026/audit-evidence.json) and its repeatable, read-only helper.
+Fresh inventory reproduces 3,946 core Python lines and 20,974 utility lines. The installed wheel contains the core, not the research study stack. The 213 source/test pins in the previous full-validation code guard match the current files. All 12 canonical registry report/receipt pins match. Both protected outcome hashes match. See [audit evidence](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/opus-response-20261026/audit-evidence.json) and its repeatable, read-only helper.
 
 The earlier full-mode report contains **1,262 tests, zero failures/errors/skips**, required probes and dependency-free wheel/demo checks. Its code guard still matches. Opus independently reran core mode with one expected PowerShell skip; that is a different environment, not a contradictory test result. This review also freshly passed full mode: **1,262 tests, zero failures/errors/skips**, required probes and installed-wheel/demo verification, in 618.3 seconds outside the restricted sandbox. The failed sandbox attempts remain separately retained.
 
@@ -172,7 +172,7 @@ The recommended plan pauses the old automatic wire-repair/pilot sequence. It pre
 |---|---|
 | Full mode, portable PowerShell, Arrow 21.0.0 | 1,262 tests; zero failures, errors or skips; PowerShell syntax check passes |
 | Required framework probes | Exit 0 |
-| Wheel/install/demo/source verification | `asof_target_agents-0.2.0` builds; dependency-free installed demo runs and verifies |
+| Wheel/install/demo/source verification | `tether_target_agents-0.2.0` builds; dependency-free installed demo runs and verifies |
 | Framework/code baseline | All 213 previous validation pins still match; no production framework/test edits |
 | Engineering reproductions | C1 precision behavior, C2 error taxonomy, C3 cap mismatch and C7 constructor failure reproduced with synthetic fixtures |
 | Existing local-model regressions | 14 pass, no skips |
@@ -180,7 +180,7 @@ The recommended plan pauses the old automatic wire-repair/pilot sequence. It pre
 | HTML interaction | Ten headless-browser checks pass, including stage order, draft preservation, export and rejection of a wrong-packet import |
 | PDF | Nine pages, 63 fields / 135 widgets; blank choices, bounds, appearances and fill/read-back checked; rendered layout inspected |
 
-The [full validation report](../planning/review-assets/opus-response-20261026/full-validation.json), [engineering probes](../planning/review-assets/opus-response-20261026/engineering-probes.json), [independent engineering notes](../planning/review-assets/opus-response-20261026/engineering-audit.md), [scientific audit](../planning/review-assets/opus-response-20261026/science-audit.md) and expert validation reports are retained under `planning/review-assets/opus-response-20261026/`.
+The [full validation report](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/opus-response-20261026/full-validation.json), [engineering probes](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/opus-response-20261026/engineering-probes.json), [independent engineering notes](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/opus-response-20261026/engineering-audit.md), [scientific audit](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/opus-response-20261026/science-audit.md) and expert validation reports are retained under `planning/review-assets/opus-response-20261026/`.
 
 Two initial environment failures are not erased: system-temp validation stalled and was interrupted; workspace-temp sandbox validation ran all 1,262 tests with 89 errors and one failure, then packaging failed on uv cache persistence. A standalone hard-link probe reproduced access denial inside the sandbox and succeeded outside it. The approved offline outside-sandbox rerun passed unchanged code. This is an execution-environment dependency to document, not a reason to weaken the no-overwrite implementation or disguise the failed checks. Logs remain in the ignored audit cache and are identified by hashes in the closeout evidence.
 

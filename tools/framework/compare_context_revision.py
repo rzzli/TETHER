@@ -11,9 +11,9 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
-from asof.contracts import Case
-from asof.ingest import REVIEW_CONTEXT_COLUMNS
-from asof.serde import ContractError, decode, fingerprint, read_json, safe_child, sha256_file, write_json
+from tether_engine.contracts import Case
+from tether_engine.ingest import REVIEW_CONTEXT_COLUMNS
+from tether_engine.serde import ContractError, decode, fingerprint, read_json, safe_child, sha256_file, write_json
 from tools.framework.run_pilot import SourceAudit
 
 
@@ -28,7 +28,7 @@ def compare_observation(before, after):
     if set(new_metrics) - set(old_metrics) - set(REVIEW_CONTEXT_COLUMNS):
         raise ContractError("Unexpected new provider field")
     method = after["method"]
-    if method["code_id"] != "asof.opentargets.normalize" or method["version"] != "2.2":
+    if method["code_id"] != "tether.opentargets.normalize" or method["version"] != "2.2":
         raise ContractError("Expected normalization recipe 2.2")
     if method["parameters"].get("interpretation_scope") != "resource_annotation_only":
         raise ContractError("Missing interpretation boundary")

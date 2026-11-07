@@ -3,7 +3,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from asof.serde import ContractError, sha256_file
+from tether_engine.serde import ContractError, sha256_file
 from tools.science.qualification import (ENDPOINTS, STAGES, validate_feature_chronology,
     validate_outcome, validate_reference, validate_register)
 

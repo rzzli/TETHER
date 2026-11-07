@@ -12,13 +12,13 @@ Objective: review both planning documents for framework feasibility, validation/
 
 Method: seed-driven primary-source review, backward references from R2E to genetic-support/locus-to-gene work, statistical-genetics methodology checks, and focused additions on process/preclinical benchmarks. Academic-research MCP was not exposed, so web retrieval and public repository requests were used. This was not a systematic review.
 
-Created [[AsOf Feasibility Analysis and Peer Survey]] and supporting access audit, reproducible power approximation, and peer-survey inventory in `planning/review-assets/`. The original planning notes were preserved.
+Created [[TETHER Feasibility Analysis and Peer Survey]] and supporting access audit, reproducible power approximation, and peer-survey inventory in `planning/review-assets/`. The original planning notes were preserved.
 
 Key additions relative to the existing notes: distinction between model reliable knowledge and training cutoff; announced comparison-model retirement; actual endpoint/progression label missingness; controlled-access UKB-PPP caveat; agent network bypass; supervised-scorer attribution controls; cluster/censoring-aware benchmark design; updated process and preclinical benchmark positioning.
 
 No agent execution, model billing, account creation, full biomedical-dataset restoration, MR analysis, empirical power simulation or prospective predictions occurred. HTTP failures and incomplete source inspections are recorded explicitly.
 
-Recommended next step: benchmark-first feasibility phase with model/source/label/power/attribution gates, as described in [[project-goals]]. Staffing and budget remain assumptions. See [[asof-feasibility-findings]] for dated facts and source references.
+Recommended next step: benchmark-first feasibility phase with model/source/label/power/attribution gates, as described in [[project-goals]]. Staffing and budget remain assumptions. See [[tether-feasibility-findings]] for dated facts and source references.
 
 ## Follow-up: revalidated data scaffold implemented
 

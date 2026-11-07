@@ -5,9 +5,9 @@ import tempfile
 import unittest
 from unittest.mock import Mock, patch
 
-from asof.serde import ContractError, encode
-from asof.study import proofs
-from asof.study.process import OwnedServer, ServerSpec
+from tether_engine.serde import ContractError, encode
+from tether_engine.study import proofs
+from tether_engine.study.process import OwnedServer, ServerSpec
 
 
 class StudyHelpersPeerTests(unittest.TestCase):
@@ -82,7 +82,7 @@ class StudyHelpersPeerTests(unittest.TestCase):
 
         def capture(path, logical):
             result = original(path, logical)
-            if logical == "asof/later.py":
+            if logical == "tether_engine/later.py":
                 early.write_text("changed_after_hash=2\n")
             return result
 

@@ -8,8 +8,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.ingest import _archive_receipts
-from asof.serde import ContractError, safe_child, _windows_path_spelling
+from tether_engine.ingest import _archive_receipts
+from tether_engine.serde import ContractError, safe_child, _windows_path_spelling
 
 
 @dataclass(frozen=True)

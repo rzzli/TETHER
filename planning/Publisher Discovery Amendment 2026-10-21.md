@@ -7,7 +7,7 @@ inspection identified an uncollected protocol/SAP lead for an existing trial.
 
 ## What changed
 
-The [new policy](protocols/exact-trial-retrieval-calibration-v0.2.json) was frozen,
+The [new policy](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/protocols/exact-trial-retrieval-calibration-v0.2.json) was frozen,
 committed and pushed at `da8d147` before network requests. It preserves the
 failed v0.1 unchanged. The two newly tested document identities were an informed
 consent and a sponsor-hosted trial-design poster from the previously exposed
@@ -73,7 +73,7 @@ artifacts remain byte-identical; no probabilities or numerical features were add
 
 ## Decision and next work
 
-The [retained gate amendment](protocols/source-readiness-retrieval-gate-v0.2.json)
+The [retained gate amendment](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/protocols/source-readiness-retrieval-gate-v0.2.json)
 keeps the original source-readiness study inactive. G3 origin closure is
 unperformed and next12 membership remains null/unsealed. Successful engineering
 controls alone cannot silently activate that study.

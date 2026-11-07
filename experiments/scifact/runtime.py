@@ -14,7 +14,7 @@ import threading
 import time
 from pathlib import Path
 
-from asof.serde import ContractError, canonical
+from tether_engine.serde import ContractError, canonical
 
 
 def memory_bytes():

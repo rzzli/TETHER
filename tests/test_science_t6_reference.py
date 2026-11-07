@@ -3,10 +3,10 @@ import unittest
 import tempfile
 from pathlib import Path
 
-from asof.serde import ContractError
+from tether_engine.serde import ContractError
 from tools.science.t6_reference import validate_review, seal_references
 from tools.science.run_comparison import pin
-from asof.serde import write_json
+from tether_engine.serde import write_json
 
 
 class T6ReferenceTests(unittest.TestCase):

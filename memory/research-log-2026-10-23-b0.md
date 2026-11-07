@@ -129,9 +129,9 @@ Closeoutacceptancec1650d23... verifies retained evidence and original72labelhash
 Its first attempt expected bytes on peer hash-only pins; fixed the closeout check
 without touching runtime/authoritative outputs. No new native dispatch.
 
-AsOf6/8 and adaptedVB6/8 reference agreement, lexical5/8, provider3/7 applicable.
+TETHER6/8 and adaptedVB6/8 reference agreement, lexical5/8, provider3/7 applicable.
 Reference3singletons/3ties/2none; no model abstentions on insufficient tasks.
-Models chose sameIDs7/8; adaptedworkflow40calls versusAsOf8, no inferential claim.
+Models chose sameIDs7/8; adaptedworkflow40calls versusTETHER8, no inferential claim.
 Source-only AI reference and purposive5case/8task design do not establish clinical
 truth or original expert-dossier objective. Repeated full-parent source replay is
 a measured scaling concern, not permission to weaken lineage verification.

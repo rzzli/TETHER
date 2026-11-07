@@ -8,7 +8,7 @@ from .independent import canonical
 
 def render_dossier(case, snapshot, run, claims, prediction):
     h, p = case['hypothesis'], prediction
-    lines = [f"# AsOf dossier: {case['case_id']}", '',
+    lines = [f"# TETHER dossier: {case['case_id']}", '',
         f"Target: {h['target_id']}; indication: {h['indication_id']}.",
         f"Intended action: {h['intended_action']}; modality: {h['modality']}; tissue: {h['tissue'] or 'unspecified'}.",
         f"Origin: {case['origin']}; profile: {run['profile']}; task: {case['task']}.",

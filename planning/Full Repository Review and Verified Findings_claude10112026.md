@@ -4,7 +4,7 @@ date: 2026-10-11
 timezone: America/Los_Angeles
 status: review-complete
 tags:
-  - asof
+  - TETHER
   - review
   - audit
 ---
@@ -12,9 +12,9 @@ tags:
 # Full repository review and verified findings
 
 This is an independent, full-repository flaw/gap review requested outside the normal
-development flow, covering `src/asof/`, `tools/`, `data/`, `runs/`, `tests/`, `docs/`,
+development flow, covering `src/tether_engine/`, `tools/`, `data/`, `runs/`, `tests/`, `docs/`,
 `memory/` and `planning/` itself. It cross-references the existing self-reviews
-([[Agentic Target-Evaluation Frameworks Critical Review]], [[AsOf Feasibility Analysis
+([[Agentic Target-Evaluation Frameworks Critical Review]], [[TETHER Feasibility Analysis
 and Peer Survey]], [[Framework Code Review and Next Stage Plan]], [[Project Audit and
 v0.2 Completion]]) rather than repeating them, and adds a verification pass: the
 highest-stakes claims below were re-checked by actually executing code against this
@@ -23,7 +23,7 @@ that execution; it is marked below.
 
 ## Scope and method
 
-Direct reading of all 14 `src/asof/*.py` modules, `tools/framework/run_pilot.py`,
+Direct reading of all 14 `src/tether_engine/*.py` modules, `tools/framework/run_pilot.py`,
 `tools/review/probe_framework.py`, all top-level docs, `pyproject.toml`/`.gitignore`, and
 representative tests, plus three parallel explorations covering (1) the data-acquisition
 pipeline and `tools/`/`runs/` outputs, (2) synthesis of the five prior planning documents
@@ -45,10 +45,10 @@ here, confirmed by recursive search.
    on. Both `.gitignore` files are already correct; `git init` today would cleanly exclude
    the ~990MB of generated content already on disk (`runs/` 768MB, `data/derived/` 141MB,
    `.venv/` 81MB) with nothing to clean up first.
-2. **No live model backend exists anywhere in the codebase.** `src/asof/agents.py` ships
+2. **No live model backend exists anywhere in the codebase.** `src/tether_engine/agents.py` ships
    only `ExtractiveBackend` (a non-ML baseline that selects all visible evidence verbatim)
    and `ReplayBackend` (fixture replay for tests). Confirmed at runtime: running
-   `python -m asof demo` end-to-end and inspecting the produced `run.json` and
+   `python -m tether_engine demo` end-to-end and inspecting the produced `run.json` and
    `dossier.md` shows `"backend_id": "offline-extractive-v1"` and the dossier's own text,
    *"No live model provider or scientific computation is invoked by the default
    backend."* `tools/framework/run_pilot.py`'s subprocess call never passes `--replay`
@@ -59,8 +59,8 @@ here, confirmed by recursive search.
    reading `prediction.json` from the completed real-data pilot run
    (`runs/v02-realdata-20261012T015124Z/cftr-mondo_0009061-activate-small_molecule/`):
    `"probability": null, "status": "audit_only", "synthetic": false`. All ten real-data
-   cases are built as task `T6` (`src/asof/ingest.py:428`, `program=None, endpoint=None`),
-   which `src/asof/scorer.py:118-119` hard-codes to always withhold probability. The
+   cases are built as task `T6` (`src/tether_engine/ingest.py:428`, `program=None, endpoint=None`),
+   which `src/tether_engine/scorer.py:118-119` hard-codes to always withhold probability. The
    scored path (`T1`) has only ever run against synthetic demo fixtures — confirmed by
    running the demo, which does score (`probability: 0.4825...`) but is explicitly marked
    `"synthetic": true`.
@@ -68,7 +68,7 @@ here, confirmed by recursive search.
    via manual `python -m unittest discover`. Combined with (1), nothing enforces that
    tests pass before a change is kept.
 5. **The project's own feasibility blockers remain unresolved, and engineering continued
-   on a different track anyway.** [[AsOf Feasibility Analysis and Peer Survey]] found:
+   on a different track anyway.** [[TETHER Feasibility Analysis and Peer Survey]] found:
    AACT historical trial-snapshot restoration fails (HTTP 404); UKB-PPP access returns
    HTTP 403; the comparison LLM (Sonnet 4.5) retires November 30, 2026, inside the
    project's own working window; a 24-month post-cutoff outcome horizon cannot finish by
@@ -83,7 +83,7 @@ here, confirmed by recursive search.
 
 ## Verified code-level findings
 
-6. **Latent contract gap in `src/asof/contracts.py:154-166` (a residual of the project's
+6. **Latent contract gap in `src/tether_engine/contracts.py:154-166` (a residual of the project's
    own previously-fixed "F01" finding), confirmed end-to-end at runtime.**
    `Case.validate()` checks `program.availability.exclusion(...)` for both task `T1` and
    `T6` (line 154), but the structural checks — phase/endpoint match, `status_at_origin ==

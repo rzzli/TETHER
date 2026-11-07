@@ -10,7 +10,7 @@ import copy
 from datetime import date
 import re
 
-from asof.serde import ContractError, fingerprint
+from tether_engine.serde import ContractError, fingerprint
 from tools.science.outcome_inputs import PRELUDE, _literal
 
 ENDPOINT = 'registry_outcome_measurement_appearance_v1'

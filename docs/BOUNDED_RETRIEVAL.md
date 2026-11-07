@@ -1,15 +1,28 @@
 # TETHER — Bounded retrieval and interpretation preparation
 
-TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.5.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.
+The current interface is `tether-target-agents` **0.6.0**, with the `tether` CLI
+and public namespace over `tether-target-engine` **0.4.0** (`tether_engine`). See
+[installation](../README.md#quick-start) and the [namespace migration
+boundary](../packages/tether/MIGRATION.md). Public aliases share the new engine's
+module and class identities; they do not certify earlier execution fingerprints.
 
-AsOf 0.3.5 adds a receipt-bound bridge from an explicitly qualified candidate
+The component history below retains earlier versioned observations and test
+counts. Those qualifications belong to their original code and dates, preserved
+in the [historical checkpoint](ARCHIVE.md). Names and example paths here use the
+current namespace for readability; exact original identifiers and reproduction
+commands are in that checkpoint. The naming migration is not a scientific rerun
+or a transfer of historical qualification to the new release. The semantic
+experiment remains **paused**; this guide does not reactivate it or retired
+study and expert-review branches.
+
+TETHER 0.3.5 adds a receipt-bound bridge from an explicitly qualified candidate
 universe to original-record interpretation requests. It is a collected-corpus
 preparation track. It does not reproduce open-web search, original Virtual
 Biotech tool access or scientific evaluation.
 
 ## Public interfaces
 
-`asof.study.retrieval_preparation` provides:
+`tether_engine.study.retrieval_preparation` provides:
 
 - `fixture_authority(name)` and `authority_anchor(authority)` for the explicitly
   invented packaged corpus and its declared empty/oversized variants.
@@ -60,8 +73,8 @@ answer. Incomplete collection or nonselection is never biological absence.
 The installed finite integration is:
 
 ```powershell
-python -m asof.study.retrieval_smoke smoke --output NEW_DIRECTORY
-python -m asof.study.retrieval_smoke verify --path DIRECTORY --sha256 EXTERNAL_ANCHOR
+python -m tether_engine.study.retrieval_smoke smoke --output NEW_DIRECTORY
+python -m tether_engine.study.retrieval_smoke verify --path DIRECTORY --sha256 EXTERNAL_ANCHOR
 ```
 
 Two retrieval preparations and two scripted consumer cells share one unchanged
@@ -80,7 +93,7 @@ remain empty. Replay never dispatches or executes archived code.
 
 ## Accepted evidence and remaining scope
 
-The [0.3.5 acceptance](../planning/review-assets/recovery-step9-retrieval-20261026/acceptance.json)
+The [0.3.5 acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-retrieval-20261026/acceptance.json)
 passes **1,616 full tests, zero failures/errors/skips**, 34 retrieval tests including
 seven independent peer tests, required probes/package checks and seven installed
 legacy families. All 305 code/resource pins and both protected hashes stay unchanged
@@ -106,7 +119,7 @@ claims stay gated. Numerical features remain empty and clinical probabilities nu
 
 ## Five existing real candidates — 27 October
 
-The [real-data acceptance](../planning/review-assets/recovery-step9-real-retrieval-20261027/acceptance.json)
+The [real-data acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-real-retrieval-20261027/acceptance.json)
 uses all five existing literature records in the same exposed IL6R case. A fresh
 current-package parent reconstructs every original row and eligible ancestor,
 including later-excluded candidates. Parent availability remains nine and missing
@@ -119,7 +132,7 @@ alone; three fit individually, but no pair with the selected record fits. The
 four exclusions therefore include cumulative size limits, not just individual
 oversize. Source records are not clipped to force success. This is nontrivial
 candidate admission/selection, not evidence that ranking is scientifically good
-or coverage is sufficient. The [closeout and bound diagnostic](../planning/review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md)
+or coverage is sufficient. The [closeout and bound diagnostic](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-real-retrieval-20261027/CLOSEOUT.md)
 retain this design limitation. Scientific evaluation and native generation retain
 their source/reference, fresh-frame and model-quality prerequisites. Pending
 human reviews do not prevent recorded engineering integration.

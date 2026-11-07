@@ -18,12 +18,12 @@ import re
 from threading import Lock
 import time
 
-from asof.agents import Usage
-from asof.atomic import publish_bytes
-from asof.serde import canonical, encode, fingerprint, freeze, parse_json
-from asof.study import native
-from asof.study.process import OwnedServer, ServerSpec
-from asof.study.session import BackendCapabilities, _identity, need
+from tether_engine.agents import Usage
+from tether_engine.atomic import publish_bytes
+from tether_engine.serde import canonical, encode, fingerprint, freeze, parse_json
+from tether_engine.study import native
+from tether_engine.study.process import OwnedServer, ServerSpec
+from tether_engine.study.session import BackendCapabilities, _identity, need
 
 
 KIND = "labbench_mcq_local_v2"

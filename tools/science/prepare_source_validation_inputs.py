@@ -23,14 +23,14 @@ WORKSPACE = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(WORKSPACE / "src"))
 sys.path.insert(0, str(WORKSPACE / "tools/science"))
 import prepare_source_validation_set as stage1
-from asof.atomic import publish_bytes
-from asof.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
-from asof.journal import RunJournal
-from asof.provenance import InputGraph, catalog_index, check_role
-from asof.serde import ContractError, canonical, encode, fingerprint, parse_json
-from asof.study.source_fact_adapters import _json_value, _source
-from asof.study.source_fact_sources import FIELD_FAMILIES, _publication, validate_task
-from asof.study.stable_read import checked_path, deadline_check, hash_file, read_file, stable_files
+from tether_engine.atomic import publish_bytes
+from tether_engine.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
+from tether_engine.journal import RunJournal
+from tether_engine.provenance import InputGraph, catalog_index, check_role
+from tether_engine.serde import ContractError, canonical, encode, fingerprint, parse_json
+from tether_engine.study.source_fact_adapters import _json_value, _source
+from tether_engine.study.source_fact_sources import FIELD_FAMILIES, _publication, validate_task
+from tether_engine.study.stable_read import checked_path, deadline_check, hash_file, read_file, stable_files
 
 ASSETS = stage1.ASSETS
 PLAN_PATH = ASSETS / "INPUT-PLAN-DRAFT-v1.json"

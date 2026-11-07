@@ -1,5 +1,5 @@
 import unittest
-from asof.serde import ContractError
+from tether_engine.serde import ContractError
 from tools.science.ascertainment_policy import publication_bounds,version_eligibility
 
 

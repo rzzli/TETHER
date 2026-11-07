@@ -9,7 +9,7 @@ protocol/SAP.
 
 ## Method and exposure
 
-The [local validation policy](protocols/existing-trial-document-history-v0.1.json)
+The [local validation policy](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/protocols/existing-trial-document-history-v0.1.json)
 was committed/pushed at `e27a24b` before independent revalidation. An earlier
 root-authorized metadata peek is disclosed and remains immutable. This is
 exposed validation, not a prospective/blinded experiment. The technical verifier

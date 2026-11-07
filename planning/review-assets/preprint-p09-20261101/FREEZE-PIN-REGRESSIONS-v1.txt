@@ -1,9 +1,0 @@
-test_new_explicit_pin_freezes_exact_inventory_and_external_record (test_freeze_p09_runtime_bundle.FreezeTests.test_new_explicit_pin_freezes_exact_inventory_and_external_record) ... ok
-test_rehashed_review_for_different_draft_or_failure_cannot_authorize (test_freeze_p09_runtime_bundle.FreezeTests.test_rehashed_review_for_different_draft_or_failure_cannot_authorize) ... ok
-test_wrong_caller_pin_is_rejected_before_reservation (test_freeze_p09_runtime_bundle.FreezeTests.test_wrong_caller_pin_is_rejected_before_reservation) ... ok
-
-----------------------------------------------------------------------
-Ran 3 tests in 0.854s
-
-OK
-{"protocol_sha256":"b120067b8daa76d04abf8642a44676ba1923a297982b98bed55430b339668264","runtime_bundle":"data/cache/runtime","status":"READY_FOR_INSTALLED_LOCAL_RECONSTRUCTION"}

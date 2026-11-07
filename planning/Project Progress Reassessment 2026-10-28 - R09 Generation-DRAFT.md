@@ -28,21 +28,21 @@ from the helper's own elapsed field. Longer verification-only wrapper allowances
 do not change the 300-second scientific case budget or demonstrate speed gains.
 New completion helpers remain subject to source/fault-path review before use.
 
-The [pure construction report](review-assets/recovery-step9-generation-contract-20261028/PRODUCTION-PURE-CHECKS-v4.json)
+The [pure construction report](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/PRODUCTION-PURE-CHECKS-v4.json)
 checks the actual finite productions independently: 262,144 BMP membership and
 4,064 small bounded-language assertions, plus reference, scalar/escape and root
 cases. At 256 short quotes, raw grammar is 47,732 bytes and JSON-string encoding
 58,777 bytes. The complete original prompt and HTTP caps still apply; the nominal
 catalog maximum does not guarantee a request fits.
 
-Eighteen [retained preparations](review-assets/recovery-step9-generation-contract-20261028/PREPARATION-QUALIFICATION.json)
+Eighteen [retained preparations](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/PREPARATION-QUALIFICATION.json)
 cover 12 synthetic and six exposed IL6R stages. Twelve old-v2 payload fingerprints
 remain unchanged. The IL6R grammar is 6,012 bytes, full HTTP payloads 21,596–21,872
 bytes, with one selected observation, nine available and 65 missing inputs. These
 are authored preparation/abstention fixtures with hypothetical histories, not new
 model responses, source sufficiency or scientific interpretation.
 
-The [schema disposition](review-assets/recovery-step9-generation-contract-20261028/SCHEMA-ORACLE-DISPOSITION.md)
+The [schema disposition](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/SCHEMA-ORACLE-DISPOSITION.md)
 retains the original PowerShell comparison's failed status. That tool accepted a
 1,802-code-point combining sequence under `maxLength:1800`. A separately qualified
 cached jsonschema 4.26.0 reference passes 162 typed comparisons and 16 Unicode
@@ -112,7 +112,7 @@ qualified by grammar work. More AACT downloads are not justified by these result
 
 First finish and independently verify the current engineering gates, preserving
 the failed primary verification and all pre-dispatch corrections. Then follow the
-[critical next-gate review](review-assets/recovery-step9-generation-contract-20261028/NEXT-GATE-CRITICAL-REVIEW.md):
+[critical next-gate review](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-generation-contract-20261028/NEXT-GATE-CRITICAL-REVIEW.md):
 close exact typed header/loader prerequisites; prospectively qualify approved CPU
 vocabulary-only behavior; test actual token-byte roundtrip and vocabulary EOG
 against the unchanged 167 documents; distinguish singleton membership from full

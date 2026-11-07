@@ -8,7 +8,7 @@ from __future__ import annotations
 from collections.abc import Mapping, Sequence
 import re
 
-from asof.serde import ContractError, freeze, parse_json
+from tether_engine.serde import ContractError, freeze, parse_json
 
 MAX_PREDICTION_BYTES = 1024 * 1024
 LABELS = frozenset({'SUPPORT', 'CONTRADICT'})

@@ -2,14 +2,14 @@
 title: Clinical Long Session Progress
 date: 2026-10-17
 status: completed-with-scientific-gates
-tags: [asof, clinical, aact, feasibility]
+tags: [TETHER, clinical, aact, feasibility]
 ---
 
 # Long-session completion and remaining gates
 
 The prepared execution queue is complete. The three supplied intermediate AACT archives are restored, verified and stopped; the frozen 24-trial review now includes five registry dates. The complete selected literature inputs produced ten new source-verified contemporary dossiers after an explicitly diagnosed packet-size failure and bounded-packet correction. Clinical training remains **no-go for this development set**. Independent program/event labels, censoring and power are not established.
 
-Open [the local results page](../data/benchmark/cohorts/clinical-long-session-20261017T064802Z/Review.html) for the integrated clinical review, timeline, origin-arm evidence and all ten dossiers. Read `data/derived/active-clinical-session.json` before resuming. No work in this completed batch should be automatically repeated.
+Open the local results page (local artifact: `data/benchmark/cohorts/clinical-long-session-20261017T064802Z/Review.html`) for the integrated clinical review, timeline, origin-arm evidence and all ten dossiers. Read `data/derived/active-clinical-session.json` before resuming. No work in this completed batch should be automatically repeated.
 
 ## Restored snapshots and clinical review
 

@@ -5,7 +5,7 @@ from statistics import median
 import argparse
 import json
 
-from asof.serde import ContractError, fingerprint, read_json, safe_child, sha256_file, write_json
+from tether_engine.serde import ContractError, fingerprint, read_json, safe_child, sha256_file, write_json
 
 
 def verify_seal(root, expected):

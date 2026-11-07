@@ -2,10 +2,10 @@
 title: Updated Project Plan — October 17, 2026
 date: 2026-10-17
 status: registry-v04-technically-audited-scientific-gates-open
-tags: [asof, roadmap, clinical-evaluation, feasibility]
+tags: [TETHER, roadmap, clinical-evaluation, feasibility]
 ---
 
-# AsOf: current project plan
+# TETHER: current project plan
 
 ## October 18 resumption
 

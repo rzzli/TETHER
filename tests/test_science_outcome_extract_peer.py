@@ -14,8 +14,8 @@ from types import SimpleNamespace
 from unittest.mock import MagicMock, patch
 
 import tools.science.outcome_extract as runner
-from asof.journal import read_chain
-from asof.serde import ContractError, fingerprint, sha256_file, write_json
+from tether_engine.journal import read_chain
+from tether_engine.serde import ContractError, fingerprint, sha256_file, write_json
 from tools.science.outcome_inputs import (candidate_query, schema_from_audit,
                                          study_query)
 
@@ -24,7 +24,7 @@ def executing_code_pins():
     project = Path(runner.__file__).resolve().parents[2]
     names = ('tools/science/outcome_extract.py', 'tools/science/outcome_inputs.py',
              'tools/science/ascertainment_policy.py', 'tools/science/origin_programs.py',
-             'tools/science/reference_panel.py', 'src/asof/serde.py', 'src/asof/journal.py')
+             'tools/science/reference_panel.py', 'src/tether_engine/serde.py', 'src/tether_engine/journal.py')
     return [{'path': str((project / name).resolve()),
              'sha256': sha256_file(project / name),
              'bytes': (project / name).stat().st_size} for name in names]

@@ -9,7 +9,7 @@ import copy
 import json
 import re
 
-from asof.serde import ContractError, fingerprint
+from tether_engine.serde import ContractError, fingerprint
 from tools.science.ascertainment_policy import version_eligibility
 from tools.science.origin_programs import start_bounds
 

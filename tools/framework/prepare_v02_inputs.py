@@ -1,9 +1,9 @@
 """Prepare a fresh explicit manifest from receipts without changing catalog or transport."""
 import argparse
 from pathlib import Path
-from asof.ingest import InputFile, InputManifest
-from asof.maintenance import write_new_json, validate_catalog
-from asof.serde import ContractError, read_json, safe_child
+from tether_engine.ingest import InputFile, InputManifest
+from tether_engine.maintenance import write_new_json, validate_catalog
+from tether_engine.serde import ContractError, read_json, safe_child
 
 
 def prepare(raw_root, queues, catalog_path, destination):
@@ -11,14 +11,14 @@ def prepare(raw_root, queues, catalog_path, destination):
         raise ContractError('Manifest exists; preserve frozen inputs and choose a new output')
     catalog = read_json(catalog_path)
     validate_catalog(catalog)
-    required = {'ot_target','ot_disease','ot_evidence','hgnc_symbols','asof_normalized_packets'}
+    required = {'ot_target','ot_disease','ot_evidence','hgnc_symbols','tether_normalized_packets'}
     if not required.issubset({row['dataset_id'] for row in catalog['datasets']}):
         raise ContractError('Catalog lacks required products; use the reviewed maintenance workflow')
     raw_root = raw_root.resolve()
     files, missing, expected, seen = [], [], {}, set()
     for queue_path in queues:
         for row in read_json(queue_path)['files']:
-            if row['dataset_id'] not in required - {'asof_normalized_packets'}:
+            if row['dataset_id'] not in required - {'tether_normalized_packets'}:
                 continue
             key = row['relative_path'].replace('\\','/')
             if 'sourceId=chembl' in key.split('/'):

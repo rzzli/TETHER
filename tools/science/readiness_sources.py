@@ -13,8 +13,8 @@ import shutil
 import time
 from urllib.parse import urlencode
 
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, fingerprint, parse_json, read_json, write_json
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, fingerprint, parse_json, read_json, write_json
 from tools.science import prospective_frame as frame
 from tools.science import prospective_transport as transport
 from tools.science import prospective_capacity as capacity
@@ -332,7 +332,7 @@ def _membership(root, freeze_path):
             and membership['sampling_seed_sha256'] == capacity.SEED
             and membership['clinical_activation'] is False and membership['model_dispatch_allowed'] is False
             and membership['outcome_labels'] is None and membership['probabilities'] is None
-            and membership['asof_cases_created'] == 0 and membership['replacement_allowed'] is False,
+            and membership['tether_cases_created'] == 0 and membership['replacement_allowed'] is False,
             'Fixed membership boundaries differ')
     members = membership['members']
     require(isinstance(members, list) and len(members) == 12

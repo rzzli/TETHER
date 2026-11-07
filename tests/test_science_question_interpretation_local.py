@@ -11,9 +11,9 @@ import threading
 import unittest
 from concurrent.futures import ThreadPoolExecutor
 
-from asof.contracts import Case
-from asof.serde import ContractError,canonical,decode,encode,fingerprint,read_json,write_json
-from asof.workflow import Budget
+from tether_engine.contracts import Case
+from tether_engine.serde import ContractError,canonical,decode,encode,fingerprint,read_json,write_json
+from tether_engine.workflow import Budget
 from tools.science.interpretation_questions import prepare_question
 from tools.science import question_interpretation_local as local
 from tools.science import question_interpretation_runtime as runtime
@@ -32,7 +32,7 @@ class FakeOpener:
 class QuestionLocalTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup);self.root=Path(self.temp.name)
-        self.inputs=self.root/'inputs';shutil.copytree(ROOT/'src/asof/demo/v2',self.inputs)
+        self.inputs=self.root/'inputs';shutil.copytree(ROOT/'src/tether_engine/demo/v2',self.inputs)
         case=replace(decode(Case,read_json(self.inputs/'case.json')),task='T6',endpoint=None)
         write_json(self.inputs/'case.json',encode(case))
         full=prepare_question(self.inputs/'case.json',self.inputs/'snapshot.json','mechanism-report.v1').request

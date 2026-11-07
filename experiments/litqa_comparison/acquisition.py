@@ -12,9 +12,9 @@ from pathlib import Path
 import time
 import urllib.parse
 
-from asof.atomic import publish_bytes
-from asof.journal import RunJournal,read_chain
-from asof.serde import ContractError,canonical,encode,freeze,parse_json,safe_child
+from tether_engine.atomic import publish_bytes
+from tether_engine.journal import RunJournal,read_chain
+from tether_engine.serde import ContractError,canonical,encode,freeze,parse_json,safe_child
 from experiments.labbench import retrieval as legacy
 from .codecs import question_view,expanded_queries,parse_expansion,need,digest
 from .selection import balanced_candidates,build_pool

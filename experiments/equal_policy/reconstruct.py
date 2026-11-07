@@ -148,14 +148,14 @@ def frozen_inputs(project, output, frozen):
 
 
 def check_installed_manifest(project, declaration):
-    require(type(declaration) is dict and set(declaration) == {'asof', 'tether', 'distribution_metadata'},
+    require(type(declaration) is dict and set(declaration) == {'tether_engine', 'tether', 'distribution_metadata'},
             'Installed runtime inventory lacks required groups')
     for name, group in declaration.items():
         base = Path(group['root']).resolve()
         require(base.is_relative_to(project), 'Installed runtime inventory escaped project')
         if name == 'distribution_metadata':
             paths = []
-            for prefix in ('asof_target_agents-', 'tether_target_agents-'):
+            for prefix in ('tether_target_engine-', 'tether_target_agents-'):
                 for directory in base.glob(prefix + '*.dist-info'):
                     paths.extend(path for path in directory.rglob('*') if path.is_file())
         else:
@@ -169,11 +169,11 @@ def installed_inventory(project, trusted):
     paths = trusted['runtime_paths']
     versions = trusted['versions']
     proof = trusted['launcher_proof']
-    require(proof['core_version'] == versions['asof'] and proof['facade_version'] == versions['tether'],
+    require(proof['core_version'] == versions['tether_engine'] and proof['facade_version'] == versions['tether'],
             'Runtime version/proof contradiction')
     groups = {}
     for package, path_key, expected in (
-        ('asof', 'asof_file', trusted['core_code_sha256']),
+        ('tether_engine', 'tether_engine_file', trusted['core_code_sha256']),
         ('tether', 'tether_file', {name: entry['sha256'] for name, entry in proof['code'].items()}),
     ):
         base = Path(paths[path_key]).resolve().parent
@@ -334,7 +334,7 @@ def implementation_identity(project, frozen, trusted, record, output, descriptor
             'Worker implementation module differs')
     loaded = runtime['loaded_product_modules']
     if arm == 'tether':
-        require(set(loaded) == {'asof', 'tether'}, 'Reference worker omitted product identity')
+        require(set(loaded) == {'tether_engine', 'tether'}, 'Reference worker omitted product identity')
         for name in loaded:
             require(Path(loaded[name]).resolve() == Path(trusted['runtime_paths'][name + '_file']).resolve(),
                     'Reference product import escaped pinned installation')
@@ -436,7 +436,7 @@ def reconstruct(project, output, *, require_primary=True):
     installation = installed_inventory(project, trusted)
     require(Path(trusted['runtime_paths']['python']).resolve() == Path(frozen['python']['path']).resolve(),
             'Trusted and frozen interpreter anchors disagree')
-    for name in ('asof', 'tether'):
+    for name in ('tether_engine', 'tether'):
         require(equal(installation[name], frozen['installed_runtime'][name]),
                 'Trusted and frozen package inventories disagree: ' + name)
     started = read_json(output / 'comparison/STARTED.json')

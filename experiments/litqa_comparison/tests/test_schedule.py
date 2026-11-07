@@ -3,7 +3,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from asof.serde import canonical,encode
+from tether_engine.serde import canonical,encode
 from experiments.litqa_comparison import schedule as s
 
 

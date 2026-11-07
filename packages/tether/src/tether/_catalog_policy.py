@@ -15,8 +15,8 @@ import math
 from pathlib import PurePosixPath, PureWindowsPath
 import re
 
-from asof.contracts import Availability
-from asof.serde import ContractError, canonical, decode, fingerprint
+from tether_engine.contracts import Availability
+from tether_engine.serde import ContractError, canonical, decode, fingerprint
 
 MAX_POLICY_BYTES = 16 * 1024 * 1024
 ROLES = {"agent_evidence", "reference", "evaluation_only", "comparison_only"}

@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.serde import canonical,encode,parse_json
+from tether_engine.serde import canonical,encode,parse_json
 from experiments.litqa_comparison import run as r,qualification_fixtures as f
 
 

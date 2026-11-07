@@ -12,8 +12,8 @@ from pathlib import Path
 import re
 from urllib.parse import urlencode
 
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, fingerprint, parse_json, read_json, sha256_file, write_json
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, fingerprint, parse_json, read_json, sha256_file, write_json
 
 
 ENDPOINT = 'https://clinicaltrials.gov/api/v2/studies'

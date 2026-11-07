@@ -7,7 +7,7 @@ import hashlib
 import json
 from pathlib import Path
 
-from asof.serde import ContractError,read_json,sha256_file
+from tether_engine.serde import ContractError,read_json,sha256_file
 from tools.science.origin_review import eligibility
 from tools.science.origin_programs import start_bounds
 from tools.science.outcome_inputs import study_query,regenerate_request,schema_from_audit,ORIGIN_COLUMNS,CHILD_COLUMNS

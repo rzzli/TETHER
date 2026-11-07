@@ -48,5 +48,5 @@ Two AACT browser requests failed; no archive was restored and this is not proof 
 unavailability. Preserve stopped monitoring and check downloads only when requested.
 
 Related: [[project-goals]], [[research-log-2026-10-10]], [[docs/FRAMEWORK]],
-[[asof-feasibility-findings]], [[data-acquisition-plan]].
+[[tether-feasibility-findings]], [[data-acquisition-plan]].
 

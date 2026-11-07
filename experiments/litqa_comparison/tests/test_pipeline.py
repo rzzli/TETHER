@@ -4,8 +4,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.atomic import publish_bytes
-from asof.serde import canonical,encode
+from tether_engine.atomic import publish_bytes
+from tether_engine.serde import canonical,encode
 from experiments.labbench.retrieval import DEFAULT_POLICY
 from experiments.labbench.tests import test_retrieval as fixtures
 from experiments.litqa_comparison import pipeline as p,transport,acquisition as a,schedule

@@ -39,7 +39,7 @@ class CorrectedCorpusTests(unittest.TestCase):
         self.assertEqual(original.canonical(original.case_specs()), before)
         self.assertTrue(cases.case_specs()[0]['oracle']['observables'])
         tree = ast.parse(Path(cases.__file__).read_text(encoding='utf-8'))
-        forbidden = {'asof','tether','reference','independent','reconstruct','run_comparison'}
+        forbidden = {'tether_engine','tether','reference','independent','reconstruct','run_comparison'}
         for node in ast.walk(tree):
             if isinstance(node,ast.Import): names=[a.name for a in node.names]
             elif isinstance(node,ast.ImportFrom): names=[node.module or '']+[a.name for a in node.names]
@@ -79,12 +79,12 @@ class CorrectedCorpusTests(unittest.TestCase):
 
     def test_overquote_has_later_admitted_eligible_records_in_both_implementations(self):
         from equal_policy import independent, reference
-        from asof.chrono import load_snapshot
-        from asof.contracts import Case, Category
-        from asof.serde import decode
+        from tether_engine.chrono import load_snapshot
+        from tether_engine.contracts import Case, Category
+        from tether_engine.serde import decode
         identity=reference.runtime_identity()
         self.assertTrue(sys.flags.isolated)
-        self.assertTrue(all('site-packages' in identity[k] for k in ('asof_file','tether_file')))
+        self.assertTrue(all('site-packages' in identity[k] for k in ('tether_engine_file','tether_file')))
         root=self.temporary()
         for cid in ('EP072','EP097'):
             with self.subTest(control=cid):
@@ -101,10 +101,10 @@ class CorrectedCorpusTests(unittest.TestCase):
                 later=[k for k,r in other['records'].items() if independent.permitted(case_doc,r,'perturbation')]
                 self.assertEqual(later,['obs-later-perturbation'])
                 self.assertEqual(other['exclusions'],[])
-                with patch('asof.agents.ExtractiveBackend.quote',side_effect=AssertionError('No quote')) as quote, \
-                     patch('asof.agents.ExtractiveBackend.select',side_effect=AssertionError('No dispatch')) as select, \
-                     patch('asof.local_model.LocalSelectionBackend.quote',side_effect=AssertionError('No local quote')), \
-                     patch('asof.local_model.LocalSelectionBackend.select',side_effect=AssertionError('No local dispatch')):
+                with patch('tether_engine.agents.ExtractiveBackend.quote',side_effect=AssertionError('No quote')) as quote, \
+                     patch('tether_engine.agents.ExtractiveBackend.select',side_effect=AssertionError('No dispatch')) as select, \
+                     patch('tether_engine.local_model.LocalSelectionBackend.quote',side_effect=AssertionError('No local quote')), \
+                     patch('tether_engine.local_model.LocalSelectionBackend.select',side_effect=AssertionError('No local dispatch')):
                     for validator in (reference.validate_bundle,independent.validate_bundle):
                         result=validator(folder,descriptor)
                         self.assertEqual(result['decision'],'accept',result)

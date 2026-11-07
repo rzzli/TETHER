@@ -8,9 +8,9 @@ from itertools import combinations
 from pathlib import Path
 import time
 
-from asof.contracts import Category, EvidenceStatus
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, encode, fingerprint, parse_json, safe_child, sha256_file, write_json
+from tether_engine.contracts import Category, EvidenceStatus
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, encode, fingerprint, parse_json, safe_child, sha256_file, write_json
 from tools.science.qualification import require_hash, validate_reference
 
 
@@ -150,7 +150,7 @@ def _launcher_boundary(seal, plan, config, *, verify_native=True):
     command = _open_proof(provided['server_command'])
     argv = [str(server), '--model', str(model), '--host', '127.0.0.1', '--port', '55581',
         '--ctx-size', '16384', '--parallel', '1', '--n-gpu-layers', '99', '--threads', '8',
-        '--alias', 'asof-science7-qwen25-14b', '--no-webui', '--offline']
+        '--alias', 'tether-science7-qwen25-14b', '--no-webui', '--offline']
     if command != {'argv': argv, 'runtime_sha256': servers[0]['sha256']}:
         raise ContractError('Trusted launcher command differs from pinned offline loopback recipe')
     preparation = read_chain(expected['preparation_journal'])
@@ -535,7 +535,7 @@ def evaluate(predictions_seal_path, expected_seal_sha256, references_path, expec
 
 
 def select_original_audit_rows(claims, case_id, seen):
-    """Choose at most two distinct physical rows from final asof claims only."""
+    """Choose at most two distinct physical rows from final tether claims only."""
     from tools.science.reference_packets import select_observations, _physical_key
     eligible, local = [], set()
     for claim in claims:
@@ -551,13 +551,13 @@ def select_original_audit_rows(claims, case_id, seen):
 
 def audit_selected_rows(predictions_seal_path, expected_seal_sha256, evaluation_report_path,
                         expected_evaluation_sha256, output):
-    """Independently audit up to twenty final asof rows against original bytes.
+    """Independently audit up to twenty final tether rows against original bytes.
 
     Requires the completed, independently hash-pinned post-seal evaluation. This
     technical source check neither creates Q1 answers nor upgrades scientific truth.
     """
-    from asof.ingest import _load_case_pack
-    from asof.provenance import InputGraph, catalog_index
+    from tether_engine.ingest import _load_case_pack
+    from tether_engine.provenance import InputGraph, catalog_index
     from tools.science.reference_packets import _mappings, audit_observation
     from tools.framework.run_pilot import SourceAudit
     from tools.science.run_comparison import validate_plan, _load_case
@@ -613,18 +613,18 @@ def audit_selected_rows(predictions_seal_path, expected_seal_sha256, evaluation_
                         *(proof for row in code_inventory for proof in row.values()),
                         *_executed_code_proofs(plan), *launcher_proofs]
         inventories = []
-        reported = {r['case_id']: r for r in evaluation['per_case_arm'] if r['arm'] == 'asof'}
+        reported = {r['case_id']: r for r in evaluation['per_case_arm'] if r['arm'] == 'tether'}
         paired = {r['case_id']: r for r in seal['cases']}
         for planned in plan['cases']:
             case, store = _load_case(plan, planned)
             input_proofs.extend(_source_input_proofs(store))
-            case_arms = [arm for arm in paired[case.case_id]['arms'] if arm['arm'] == 'asof']
+            case_arms = [arm for arm in paired[case.case_id]['arms'] if arm['arm'] == 'tether']
             if len(case_arms) != 1 or case.case_id not in reported:
-                raise ContractError('Original-row audit lacks a unique final asof arm')
+                raise ContractError('Original-row audit lacks a unique final tether arm')
             arm = case_arms[0]
             folder = Path(arm['path']).resolve()
-            if folder != safe_child(Path(plan['root']), 'arms/'+case.case_id+'/asof'):
-                raise ContractError('Original-row audit asof path differs')
+            if folder != safe_child(Path(plan['root']), 'arms/'+case.case_id+'/tether'):
+                raise ContractError('Original-row audit tether path differs')
             result = _open_proof(arm['result'])
             _configuration_binding(result, plan, config)
             _open_proof(arm['seal'])
@@ -634,13 +634,13 @@ def audit_selected_rows(predictions_seal_path, expected_seal_sha256, evaluation_
             input_proofs.extend(nested); inventories.append(inventory)
             if validation != _open_proof(arm['verification']):
                 raise ContractError('Original-row audit verification differs')
-            if (result['arm'] != 'asof' or result['status'] != arm['status'] or result['calls'] != arm['calls'] or
+            if (result['arm'] != 'tether' or result['status'] != arm['status'] or result['calls'] != arm['calls'] or
                     result['usage'] != arm['usage'] or reported[case.case_id]['case_sha256'] != fingerprint(case) or
                     reported[case.case_id]['hypothesis_sha256'] != case.hypothesis.key):
-                raise ContractError('Original-row audit asof summary or case scope differs')
+                raise ContractError('Original-row audit tether summary or case scope differs')
             actual_ids = {claim['observation_id'] for claim in result['claims']}
             if actual_ids != {claim['observation_id'] for claim in reported[case.case_id]['claims']}:
-                raise ContractError('Original-row audit selected statements differ from evaluated asof claims')
+                raise ContractError('Original-row audit selected statements differ from evaluated tether claims')
             chosen = select_original_audit_rows(result['claims'], case.case_id, seen)
             case_folder = Path(planned['case']['path']).parent
             raw_case = _open_proof(planned['case'])
@@ -652,7 +652,7 @@ def audit_selected_rows(predictions_seal_path, expected_seal_sha256, evaluation_
                 mapping_refs=mapping_refs, symbol=definitions[case.case_id].symbol, disease_name=disease_name,
                 proofs=source_proofs) for observation in chosen]
             rows.extend(audited)
-            summaries.append({'case_id': case.case_id, 'final_asof_claims': len(result['claims']),
+            summaries.append({'case_id': case.case_id, 'final_tether_claims': len(result['claims']),
                 'original_rows_audited': len(audited), 'requested': 2,
                 'coverage': 'two_distinct_final_claims_audited' if len(audited) == 2 else 'fewer_distinct_final_claims_available_no_substitution',
                 'observation_ids': [r['observation_id'] for r in audited]})
@@ -678,7 +678,7 @@ def audit_selected_rows(predictions_seal_path, expected_seal_sha256, evaluation_
             'evaluation_report_sha256': expected_evaluation_sha256, 'requested_rows': 20, 'audited_rows': len(rows),
             'catalog_binding': catalog_binding,
             'model_byte_verification_scope': 'Requires matching completed evaluation model/runtime byte verification; launcher proofs revalidated, weights not rehashed by this audit.',
-            'cases': summaries, 'selection': 'Up to two category/provider/study-spread distinct physical final asof statements per case; no substitution.',
+            'cases': summaries, 'selection': 'Up to two category/provider/study-spread distinct physical final tether statements per case; no substitution.',
             'source_proofs': list(source_proofs.values()), 'input_proofs': input_proofs,
             'rows_proof': _proof(output/'original-row-audits.json'), 'elapsed_seconds': time.monotonic()-started,
             'source_files_hashed': len(source_audit.hashes), 'provider_spend_usd': 0,

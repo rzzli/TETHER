@@ -45,18 +45,19 @@ def write_json(path, value):
 def fake_runtime(root):
     """Fictional files only: importing these packages would deliberately fail."""
     site = root / 'fake-site-packages'
-    for package, version in (('asof', '0.3.12'), ('tether', '0.5.1')):
+    for package, version in (('tether_engine', '0.4.0'), ('tether', '0.6.0')):
         folder = site / package; folder.mkdir(parents=True)
         (folder / '__init__.py').write_text("__version__ = " + repr(version) + "\nraise AssertionError('must not import fixture')\n", encoding='utf-8')
         (folder / 'module.py').write_text('VALUE = 1\n', encoding='utf-8')
-        dist = site / (package + '_target_agents-' + version + '.dist-info'); dist.mkdir()
-        (dist / 'METADATA').write_text('Metadata-Version: 2.1\nName: ' + package + '-target-agents\nVersion: ' + version + '\n', encoding='utf-8')
-    core = {p.name: iv.file_digest(p) for p in (site / 'asof').glob('*.py')}
+        distribution = {'tether_engine': 'tether-target-engine', 'tether': 'tether-target-agents'}[package]
+        dist = site / (distribution.replace('-', '_') + '-' + version + '.dist-info'); dist.mkdir()
+        (dist / 'METADATA').write_text('Metadata-Version: 2.1\nName: ' + distribution + '\nVersion: ' + version + '\n', encoding='utf-8')
+    core = {p.name: iv.file_digest(p) for p in (site / 'tether_engine').glob('*.py')}
     facade = {p.name: dict(path=p.name, sha256=iv.file_digest(p), bytes=p.stat().st_size) for p in (site / 'tether').glob('*.py')}
-    proof = dict(schema_version=1, method='tether.launcher_code.v1', facade_version='0.5.1', core_version='0.3.12',
-        installed_distributions={'tether-target-agents': '0.5.1', 'asof-target-agents': '0.3.12'}, code=facade)
-    return dict(schema_version=1, versions=dict(tether='0.5.1', asof='0.3.12'), launcher_proof=proof,
-        core_code_sha256=core, runtime_paths=dict(asof_file=str(site / 'asof/__init__.py'), tether_file=str(site / 'tether/__init__.py')))
+    proof = dict(schema_version=1, method='tether.launcher_code.v2', facade_version='0.6.0', core_version='0.4.0',
+        installed_distributions={'tether-target-agents': '0.6.0', 'tether-target-engine': '0.4.0'}, code=facade)
+    return dict(schema_version=1, versions=dict(tether='0.6.0', tether_engine='0.4.0'), launcher_proof=proof,
+        core_code_sha256=core, runtime_paths=dict(tether_engine_file=str(site / 'tether_engine/__init__.py'), tether_file=str(site / 'tether/__init__.py')))
 
 
 def fixture(root, observations=None):
@@ -168,7 +169,7 @@ class IndependentContractTests(unittest.TestCase):
                     modules = [node.module or '']
                 else:
                     continue
-                self.assertFalse(any(name.split('.')[0] in ('asof', 'tether') for name in modules), path)
+                self.assertFalse(any(name.split('.')[0] in ('tether_engine', 'tether') for name in modules), path)
 
     def test_duplicate_json_and_nonfinite_are_rejected(self):
         for payload in (b'{"x":1,"x":2}', b'{"x":NaN}', b'{"x":Infinity}', b'\xff'):
@@ -502,7 +503,7 @@ class IndependentArchiveTests(unittest.TestCase):
         receipt['code'] = trusted['core_code_sha256']
         write_json(self.run_dir / 'receipt.json', receipt)
         self.assertTrue(iv.verify_core(self.run_dir, trusted_runtime=trusted)['code_matches_current'])
-        module = Path(trusted['runtime_paths']['asof_file']).parent / 'module.py'
+        module = Path(trusted['runtime_paths']['tether_engine_file']).parent / 'module.py'
         original = module.read_bytes()
         for mutation in ('content', 'add', 'remove'):
             with self.subTest(mutation=mutation):

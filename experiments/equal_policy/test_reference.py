@@ -30,16 +30,16 @@ class ReferenceAdapterTests(unittest.TestCase):
 
     def test_installed_identity_is_not_checkout(self):
         identity = reference.runtime_identity()
-        self.assertEqual(identity['tether_version'], '0.5.1')
-        self.assertEqual(identity['asof_version'], '0.3.12')
-        self.assertIn('site-packages', identity['asof_file'])
+        self.assertEqual(identity['tether_version'], '0.6.0')
+        self.assertEqual(identity['tether_engine_version'], '0.4.0')
+        self.assertIn('site-packages', identity['tether_engine_file'])
         self.assertIn('site-packages', identity['tether_file'])
 
     def test_prepare_never_quotes_selects_or_scores(self):
         root, descriptor, _ = self.bundle()
-        with patch('asof.agents.ExtractiveBackend.quote', side_effect=AssertionError('quote forbidden')), \
-             patch('asof.agents.ExtractiveBackend.select', side_effect=AssertionError('select forbidden')), \
-             patch('asof.scorer.score', side_effect=AssertionError('score forbidden')):
+        with patch('tether_engine.agents.ExtractiveBackend.quote', side_effect=AssertionError('quote forbidden')), \
+             patch('tether_engine.agents.ExtractiveBackend.select', side_effect=AssertionError('select forbidden')), \
+             patch('tether_engine.scorer.score', side_effect=AssertionError('score forbidden')):
             result = reference.validate_bundle(root, descriptor)
         self.assertEqual(result['decision'], 'accept', result)
         self.assertEqual(result['observables']['eligible_observation_ids'], ['obs-1'])
@@ -142,7 +142,7 @@ class ReferenceAdapterTests(unittest.TestCase):
         descriptor['variant'] = spec['variant'] = 'artifact_policy_v2'
         descriptor, pending = prepare_policy_sources(root, spec, descriptor)
         self.assertIsNone(pending)
-        with patch('asof.agents.ExtractiveBackend.select', side_effect=AssertionError('No dispatch')):
+        with patch('tether_engine.agents.ExtractiveBackend.select', side_effect=AssertionError('No dispatch')):
             result = reference.validate_bundle(root, descriptor, scratch_dir=self.directory)
         self.assertEqual(result['decision'], 'accept', result)
         prepared = Path(result['observables']['preparation_evidence']['directory'])

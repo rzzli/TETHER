@@ -12,10 +12,10 @@ import unittest
 from contextlib import nullcontext
 from unittest.mock import patch
 
-from asof.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
-from asof.serde import ContractError, canonical, encode
-from asof.study.source_fact_sources import compile_reference
-from asof.study.source_fact_evaluation import score_cell, aggregate_cells
+from tether_engine.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
+from tether_engine.serde import ContractError, canonical, encode
+from tether_engine.study.source_fact_sources import compile_reference
+from tether_engine.study.source_fact_evaluation import score_cell, aggregate_cells
 
 
 class SourceFactEvaluationTests(unittest.TestCase):
@@ -24,7 +24,7 @@ class SourceFactEvaluationTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name).resolve()
         if os.name != "nt":
-            self.guard = patch("asof.study.source_fact_sources.stable_files",
+            self.guard = patch("tether_engine.study.source_fact_sources.stable_files",
                                side_effect=lambda *a, **k: nullcontext())
             self.guard.start()
             self.addCleanup(self.guard.stop)

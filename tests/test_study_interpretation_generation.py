@@ -8,17 +8,17 @@ import unittest
 from collections.abc import Mapping
 from unittest.mock import patch
 
-from asof.serde import ContractError, canonical, encode, fingerprint
-from asof.study import (
+from tether_engine.serde import ContractError, canonical, encode, fingerprint
+from tether_engine.study import (
     authority_four_arm,
     interpretation_interface,
     native_interpretation,
 )
-from asof.study.diagnostic import load_synthetic_request
-from asof.study.diagnostic_codec import bind_question, pointer, quote_choices
-from asof.study.fixed_evidence import load_plan
-from asof.study.interpretation_grammar import GENERATOR, build_grammar
-from asof.study.interpretation_generation import (
+from tether_engine.study.diagnostic import load_synthetic_request
+from tether_engine.study.diagnostic_codec import bind_question, pointer, quote_choices
+from tether_engine.study.fixed_evidence import load_plan
+from tether_engine.study.interpretation_grammar import GENERATOR, build_grammar
+from tether_engine.study.interpretation_generation import (
     INTERFACE,
     prepare_payload,
     request_from_payload,
@@ -215,7 +215,7 @@ class InterpretationGrammarContractTests(unittest.TestCase):
 
         value = MustNotScan("x" * 32769)
         with patch(
-            "asof.study.interpretation_grammar.hashlib.sha256",
+            "tether_engine.study.interpretation_grammar.hashlib.sha256",
             side_effect=AssertionError("Oversized text must not be hashed"),
         ):
             with self.assertRaises(ContractError):
@@ -245,7 +245,7 @@ class InterpretationGrammarContractTests(unittest.TestCase):
 class InterpretationGenerationTests(unittest.TestCase):
     def setUp(self):
         self.request = load_synthetic_request("synthetic-context")
-        self.prepared = prepare_payload(self.request, "asof_interpretation", 0, [])
+        self.prepared = prepare_payload(self.request, "tether_interpretation", 0, [])
         self.payload = self.prepared["payload"]
 
     def document(self, kind="source_report"):
@@ -298,7 +298,7 @@ class InterpretationGenerationTests(unittest.TestCase):
 
     def test_old_and_new_payload_reconstruction_are_separate(self):
         old = interpretation_interface.prepare_payload(
-            self.request, "asof_interpretation", 0, []
+            self.request, "tether_interpretation", 0, []
         )
         with self.assertRaises(ContractError):
             interpretation_interface.request_from_payload(self.payload)
@@ -321,11 +321,12 @@ class InterpretationGenerationTests(unittest.TestCase):
         )
         self.assertNotEqual(native_interpretation.INTERFACE, INTERFACE)
 
-    def test_twelve_prechange_v2_fingerprints_and_catalogs_are_preserved(self):
-        # Captured in BEFORE-IMPLEMENTATION.json before v3 feature code existed.
+    def test_twelve_current_namespace_v2_fingerprints_and_catalogs_are_fixed(self):
+        # New namespace pins for invented payloads; original pre-v3 fingerprints
+        # remain unchanged in the immutable pre-migration checkpoint.
         expected = {
             "synthetic-context": (
-                "6d6fe967b4349b105d1f8e354c4774a5813d9a0cacd8386c5a28c32d7901a8fe",
+                "c44006befe827b3a4c9d68124fa0e90dd1e6b7e654a48147fe5bc10ecf36666e",
                 "74c709a691f5ab6e0b0dd85bb6ab9e60ddb29b1124146a6241a2d5b50318da6c",
                 "ae993084816d871e3e264923791af5ba71611e820b40b7cced7b186e269c3e9a",
                 "71e1dc896f57904b8ffef976eea9ec5d6f0a1ca79e8189ea15797f714a3c8573",
@@ -333,7 +334,7 @@ class InterpretationGenerationTests(unittest.TestCase):
                 "e8d133d56eba8abe8467449c070916a3cd56880d961b2d1b04946cc5f3a3ba72",
             ),
             "synthetic-orientation": (
-                "4602751213d10ea960b77c0a13cf3a34f307b8ed30e37f89d7070180b86e689f",
+                "00f5a097293212e811f91af71fc9de68c728dec4986aa3b3204547d730584e71",
                 "2dec321a6d17a8f4da31eba0cb03eef71a24a3fda4e98250f1004c1b98fdef00",
                 "947ef0dac513e88addb0e504c31f65e89eb1ca9ebfc083fb5acfe14382348d80",
                 "cc0b40d9693c3eab80c28941a19a699f67fb0047a1a061c7cd418ed19b6fe12d",
@@ -348,7 +349,7 @@ class InterpretationGenerationTests(unittest.TestCase):
             aliases = list(quote_choices(request))
             observed = []
             for arm, stages in (
-                ("asof_interpretation", plan["asof_stages"]),
+                ("tether_interpretation", plan["tether_stages"]),
                 ("adapted_virtual_biotech_interpretation", plan["stage_order"]),
             ):
                 for index, _ in enumerate(stages):
@@ -554,7 +555,7 @@ class InterpretationGenerationTests(unittest.TestCase):
     def test_value_preserving_generation_spelling_does_not_narrow_post_validator(self):
         text = '  α😀 <|im_end|> <|im_start|> "quoted" \\ \x00\n  '
         request = self.changed_source(text)
-        prepared = prepare_payload(request, "asof_interpretation", 0, [])
+        prepared = prepare_payload(request, "tether_interpretation", 0, [])
         self.assertNotIn("<|im_end|>", prepared["generation_grammar"]["grammar"])
         document = self.document()
         document["claims"][0]["text"] = text
@@ -592,7 +593,7 @@ class InterpretationGenerationTests(unittest.TestCase):
         for inherited, expected in ((1, 1), (64, 3)):
             request = encode(self.request)
             request["source_request"]["bounds"]["max_claims"] = inherited
-            prepared = prepare_payload(request, "asof_interpretation", 0, [])
+            prepared = prepare_payload(request, "tether_interpretation", 0, [])
             self.assertEqual(prepared["claim_limit"], expected)
             document = self.document("caution")
             document["claims"] = [
@@ -640,7 +641,7 @@ class InterpretationGenerationTests(unittest.TestCase):
         with self.assertRaises(ContractError):
             prepare_payload(
                 self.request,
-                "asof_interpretation",
+                "tether_interpretation",
                 0,
                 [dict(stage="chief_of_staff", source_ids=["E0"])],
             )
@@ -654,7 +655,7 @@ class InterpretationGenerationTests(unittest.TestCase):
             request["source_request"], request["question"]["question_id"]
         )
         with self.assertRaises(ContractError):
-            prepare_payload(request, "asof_interpretation", 0, [])
+            prepare_payload(request, "tether_interpretation", 0, [])
         request = encode(self.request)
         request["source_request"]["evidence"][0]["scientific_record"][
             "unresolved_context"
@@ -663,7 +664,7 @@ class InterpretationGenerationTests(unittest.TestCase):
             request["source_request"], request["question"]["question_id"]
         )
         with self.assertRaises(ContractError):
-            prepare_payload(request, "asof_interpretation", 0, [])
+            prepare_payload(request, "tether_interpretation", 0, [])
 
     def test_pure_preparation_and_validation_never_dispatch_or_load_native_code(self):
         with (
@@ -671,7 +672,7 @@ class InterpretationGenerationTests(unittest.TestCase):
             patch("socket.socket", side_effect=AssertionError("No socket")),
             patch("ctypes.CDLL", side_effect=AssertionError("No native DLL")),
         ):
-            prepared = prepare_payload(self.request, "asof_interpretation", 0, [])
+            prepared = prepare_payload(self.request, "tether_interpretation", 0, [])
             validate_output(self.request, prepared["payload"], self.document())
 
 

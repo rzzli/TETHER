@@ -8,10 +8,10 @@ from pathlib import Path
 from types import SimpleNamespace
 import time
 
-from asof.contracts import Availability,Profile,Snapshot,SourceNode,TemporalClass
-from asof.provenance import InputGraph,catalog_index
-from asof.serde import canonical,freeze,fingerprint,parse_json,safe_child
-from asof.study.stable_read import stable_files,read_file
+from tether_engine.contracts import Availability,Profile,Snapshot,SourceNode,TemporalClass
+from tether_engine.provenance import InputGraph,catalog_index
+from tether_engine.serde import canonical,freeze,fingerprint,parse_json,safe_child
+from tether_engine.study.stable_read import stable_files,read_file
 from experiments.labbench.native_contract import validate_query
 from experiments.labbench.tether_adapter import DEFAULT_CATALOG
 from experiments.litqa_comparison import codecs,selection,transport

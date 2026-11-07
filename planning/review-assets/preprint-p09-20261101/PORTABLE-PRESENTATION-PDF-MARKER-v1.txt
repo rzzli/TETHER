@@ -1,4 +1,0 @@
-PDF skill marker invocation evidence
-Command: node C:/Users/zzric/.codex/plugins/cache/openai-primary-runtime/pdf/26.1026.10807/skills/pdf/container_tools/mark_artifact_operation_started.mjs --operation-kind create --expected-output-count 3 --output-format pdf
-Observed tool command exit_code:0. Standard output:empty. No standard error observed.
-Invoked exactly once for this portable P09 presentation authoring operation, immediately before its first --build. The relocated repeat did not invoke the marker again. This is a retained operational observation, not a fabricated marker stdout transcript.

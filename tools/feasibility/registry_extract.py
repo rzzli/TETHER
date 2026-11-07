@@ -13,7 +13,7 @@ import re
 import subprocess
 import time
 
-from asof.serde import sha256_file
+from tether_engine.serde import sha256_file
 
 
 def load(path):

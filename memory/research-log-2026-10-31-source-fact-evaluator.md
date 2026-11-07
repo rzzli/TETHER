@@ -10,7 +10,7 @@ updated: 2026-10-31
 
 Current full assessment: planning/Project Progress Reassessment 2026-10-31 - Source
 Fact Evaluator.md. P03 engineering complete: source_fact_sources/adapters/evaluation
-under src/asof/study plus docs/SOURCE_FACT_EVALUATION.md. Separate reporting scope,
+under src/tether_engine/study plus docs/SOURCE_FACT_EVALUATION.md. Separate reporting scope,
 nullable action/modality/tissue; no v2/native/default replacement. Equal-weight
 answerable groups, not old unweighted H5-A slots. All measurement groups empty
 means measurement coverage/pass null; context/linkage/provider values do not rescue.

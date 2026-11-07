@@ -11,12 +11,12 @@ import unittest
 from unittest.mock import patch
 from concurrent.futures import ThreadPoolExecutor
 
-from asof.contracts import Category
-from asof.serde import ContractError, canonical, fingerprint, freeze, parse_json
-from asof.study.collected_source import CollectedSourceInput, literal_document, TRACK
-from asof.study import authority_four_arm as composition
-from asof.study import source_preparation as source_module
-from asof.study import tokenization as tok
+from tether_engine.contracts import Category
+from tether_engine.serde import ContractError, canonical, fingerprint, freeze, parse_json
+from tether_engine.study.collected_source import CollectedSourceInput, literal_document, TRACK
+from tether_engine.study import authority_four_arm as composition
+from tether_engine.study import source_preparation as source_module
+from tether_engine.study import tokenization as tok
 from tests import test_study_source_preparation as sources
 from tests import test_study_tokenization as tokens
 
@@ -74,7 +74,7 @@ class CollectedInputTests(unittest.TestCase):
                 with (
                     self.subTest(roots=candidate.roots),
                     patch(
-                        "asof.study.collected_source.checked_path",
+                        "tether_engine.study.collected_source.checked_path",
                         side_effect=AssertionError(
                             "No data lookup before authority admission"
                         ),

@@ -1,9 +1,0 @@
-{
-  "schema_version": 1,
-  "recorded_at_utc": "2026-10-28T17:13:42.462790+00:00",
-  "decision": "proceed_once_OS_only_own_source_probe",
-  "helper_sha256": "fdd651b4393cf0afd7e86061c710d2210a4d44aafe74a374fe27f90e4c265590",
-  "peer_sha256": "a361ea9fefcfa71765e7a9c218a60daeac804e5f9c94ef20003134e3ea298ee2",
-  "scope": "Three hidden owned direct Python workers;64MiB committed-memory cap, one active process, quota rejection, explicit termination and last-job-handle closure. Every child waits for successful assignment before fixture. No target DLL/model/GGUF/network/dataset. Preserve failures; no OS-wide guarantee.",
-  "provider_spend_usd": 0
-}

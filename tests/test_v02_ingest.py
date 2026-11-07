@@ -7,14 +7,14 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from unittest.mock import patch
 
-from asof.agents import ExtractiveBackend
-from asof.artifacts import verify_run, write_run
-from asof.chrono import load_snapshot
-from asof.contracts import Case
-from asof.ingest import PILOT, InputFile, InputManifest, build_snapshot, inspect_sources
-from asof.journal import inspect_run, read_chain
-from asof.serde import ContractError, canonical, decode, read_json, sha256_file, write_json
-from asof.workflow import run_workflow
+from tether_engine.agents import ExtractiveBackend
+from tether_engine.artifacts import verify_run, write_run
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case
+from tether_engine.ingest import PILOT, InputFile, InputManifest, build_snapshot, inspect_sources
+from tether_engine.journal import inspect_run, read_chain
+from tether_engine.serde import ContractError, canonical, decode, read_json, sha256_file, write_json
+from tether_engine.workflow import run_workflow
 
 GENES = {"CD276": "ENSG00000103855", "OSMR": "ENSG00000145623", "ERBB2": "ENSG00000141736",
          "PCSK9": "ENSG00000169174", "IL6R": "ENSG00000160712", "CFTR": "ENSG00000001626",
@@ -34,7 +34,7 @@ class IngestTests(unittest.TestCase):
         self.catalog = self.root / "catalog.json"
         write_json(self.catalog, {"schema_version": 1, "datasets": [
             {"dataset_id": key, "roles": ["reference"] if key == "hgnc_symbols" else ["agent_evidence"]}
-            for key in ("ot_target", "ot_disease", "ot_evidence", "hgnc_symbols", "asof_normalized_packets")]})
+            for key in ("ot_target", "ot_disease", "ot_evidence", "hgnc_symbols", "tether_normalized_packets")]})
         target = [{"id": value, "approvedSymbol": key, "approvedName": "Fictional fixture", "biotype": "protein_coding"}
                   for key, value in GENES.items()]
         disease = [{"id": key, "name": "Fictional disease label " + key} for key in sorted({row[1] for row in PILOT})]
@@ -122,7 +122,7 @@ class IngestTests(unittest.TestCase):
         limit = max(len(canonical({"schema_version": 2, "observations": [r]}))
                     for rows in before.values() for r in rows) + 128
         output = self.root / "bounded"
-        with patch("asof.ingest.MAX_NORMALIZED_JSON_BYTES", limit):
+        with patch("tether_engine.ingest.MAX_NORMALIZED_JSON_BYTES", limit):
             report = build_snapshot(self.manifest, self.catalog, output, packet_layout="bounded")
         self.assertEqual(report["normalization_recipe"]["packet_layout"], "bounded")
         multiple = []
@@ -155,14 +155,14 @@ class IngestTests(unittest.TestCase):
             verify_run(run, anchor)
 
     def test_oversized_single_record_still_fails_with_bounded_layout(self):
-        with patch("asof.ingest.MAX_NORMALIZED_JSON_BYTES", 100):
+        with patch("tether_engine.ingest.MAX_NORMALIZED_JSON_BYTES", 100):
             with self.assertRaisesRegex(ContractError, "single observation"):
                 build_snapshot(self.manifest, self.catalog, self.root / "too-large", packet_layout="bounded")
         failure = read_json(self.root / "too-large" / "build-failure.json")
         self.assertEqual(failure["stage"], "packet_finalization")
 
     def test_single_packet_default_does_not_implicitly_shard(self):
-        with patch("asof.ingest.MAX_NORMALIZED_JSON_BYTES", 100):
+        with patch("tether_engine.ingest.MAX_NORMALIZED_JSON_BYTES", 100):
             with self.assertRaisesRegex(ContractError, "Oversized evidence packet"):
                 build_snapshot(self.manifest, self.catalog, self.root / "single-large")
         self.assertEqual(read_json(self.root / "single-large" / "build-failure.json")["status"], "failed")
@@ -274,7 +274,7 @@ class IngestTests(unittest.TestCase):
         self.assertEqual(report["counters"]["accepted_source_rows"], 3)
 
     def test_archived_receipts_retain_exact_inspected_bytes_after_transport_rewrite(self):
-        from asof import ingest
+        from tether_engine import ingest
         originals = {entry.receipt_path: (self.raw / entry.receipt_path).read_bytes() for entry in self.entries}
         archive = ingest._archive_receipts
 
@@ -284,7 +284,7 @@ class IngestTests(unittest.TestCase):
                 write_json(self.raw / entry.receipt_path, {**receipt, "retry_note": "transport changed after inspection"})
             return archive(root, files)
 
-        with patch("asof.ingest._archive_receipts", side_effect=rewrite_transport):
+        with patch("tether_engine.ingest._archive_receipts", side_effect=rewrite_transport):
             output, report = self.build()
         directory = output / report["cases"][0]["case_id"]
         snapshot = read_json(directory / "snapshot.json")
@@ -302,7 +302,7 @@ class IngestTests(unittest.TestCase):
                                 (KeyboardInterrupt(), "build_interrupted")):
             with self.subTest(error=type(error).__name__):
                 output = self.root / expected
-                with patch("asof.ingest._inspect", side_effect=error):
+                with patch("tether_engine.ingest._inspect", side_effect=error):
                     with self.assertRaises(type(error)):
                         build_snapshot(self.manifest, self.catalog, output)
                 inspected = inspect_run(output)
@@ -313,7 +313,7 @@ class IngestTests(unittest.TestCase):
                 self.assertEqual(read_chain(output / "journal.jsonl")[0]["event"], "build_reserved")
 
     def test_packet_write_failure_retains_progress_and_failure(self):
-        from asof import ingest
+        from tether_engine import ingest
         real_write = ingest.write_json
 
         def fail_packet(path, value, **kwargs):
@@ -321,7 +321,7 @@ class IngestTests(unittest.TestCase):
                 raise OSError("fixture full disk")
             return real_write(path, value, **kwargs)
 
-        with patch("asof.ingest.write_json", side_effect=fail_packet):
+        with patch("tether_engine.ingest.write_json", side_effect=fail_packet):
             with self.assertRaisesRegex(OSError, "full disk"):
                 self.build()
         inspected = inspect_run(self.root / "snapshot")

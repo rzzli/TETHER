@@ -9,12 +9,12 @@ import threading
 import unittest
 from unittest.mock import patch
 
-from asof.chrono import load_snapshot
-from asof.contracts import Case, Category
-from asof.local_model import LocalSelectionBackend
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case, Category
+from tether_engine.local_model import LocalSelectionBackend
 from tools.science.role_backend import RoleSelectionBackend
-from asof.serde import ContractError, canonical, decode, fingerprint, parse_json, read_json, sha256_file, write_json
-from asof.workflow import Budget
+from tether_engine.serde import ContractError, canonical, decode, fingerprint, parse_json, read_json, sha256_file, write_json
+from tether_engine.workflow import Budget
 from tools.science.comparison_workflow import STAGES, run_case, verify_case, _seal
 
 
@@ -51,7 +51,7 @@ class ComparisonWorkflowTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory(); self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         self.fixture = self.root/'input'
-        shutil.copytree(ROOT/'src/asof/demo/v2', self.fixture)
+        shutil.copytree(ROOT/'src/tether_engine/demo/v2', self.fixture)
         packet = read_json(self.fixture/'evidence.json')
         packet['observations'] = [r for r in packet['observations'] if r['category'] == 'genetics']
         for row in packet['observations']:
@@ -65,7 +65,7 @@ class ComparisonWorkflowTests(unittest.TestCase):
         self.policy = synthetic_policy()
         self.config = {'schema_version':1,'endpoint':'http://127.0.0.1:55581','model_id':'synthetic-only',
             'model_provenance':{'weights_sha256':{'fixture':'a'*64},'runtime_sha256':'b'*64},
-            'retrieval':{'max_records':12,'max_request_bytes':12000,'wire_format':'asof-shared-scientific-fields-v1'},
+            'retrieval':{'max_records':12,'max_request_bytes':12000,'wire_format':'tether-shared-scientific-fields-v1'},
             'max_output_tokens':256,'timeout_seconds':2,'seed':123}
         self.config_path = self.root/'config.json'; write_json(self.config_path,self.config)
 
@@ -74,7 +74,7 @@ class ComparisonWorkflowTests(unittest.TestCase):
         backend.opener = NativeFixture(**options)
         return backend
 
-    def run_arm(self, arm='asof', backend=None, **budget):
+    def run_arm(self, arm='tether', backend=None, **budget):
         backend = backend or self.backend()
         output = self.root/('run-'+arm)
         result = run_case(self.case,self.store,backend,Budget(**budget),arm,output,self.policy)
@@ -108,7 +108,7 @@ class ComparisonWorkflowTests(unittest.TestCase):
         for claim in result['claims']:
             self.assertEqual(claim['source_claim_sha256'],fingerprint(self.store.lookup(claim['observation_id'])))
 
-    def test_asof_single_specialist_and_actual_ablation_dispatch(self):
+    def test_tether_single_specialist_and_actual_ablation_dispatch(self):
         full,_,b = self.run_arm()
         removed,_,r = self.run_arm('no_literature')
         self.assertEqual(full['calls'],1)
@@ -119,7 +119,7 @@ class ComparisonWorkflowTests(unittest.TestCase):
         self.assertEqual(len(r.opener.calls),1)
 
     def test_disabled_category_has_zero_backend_calls_before_retrieval(self):
-        from asof.chrono import EvidenceStore
+        from tether_engine.chrono import EvidenceStore
         records = tuple(replace(r,observation=replace(r.observation,category=Category.LITERATURE))
                         for r in self.store.query(self.case,Category.GENETICS))
         self.store = EvidenceStore(self.store.snapshot,records,(),(),None)
@@ -138,7 +138,7 @@ class ComparisonWorkflowTests(unittest.TestCase):
 
     def test_time_expiry_during_claim_commit_retains_only_reviewed_committed_prefix(self):
         from copy import deepcopy
-        from asof.journal import RunJournal
+        from tether_engine.journal import RunJournal
         packet=read_json(self.fixture/'evidence.json')
         extra=deepcopy(packet['observations'][0]);extra['observation_id']='second-fixture-genetics-row'
         packet['observations'].append(extra)
@@ -167,13 +167,13 @@ class ComparisonWorkflowTests(unittest.TestCase):
         self.assertEqual(result['measured_usage']['input_tokens'],0)
         self.verify(out)
         with self.assertRaises(FileExistsError):
-            run_case(self.case,self.store,backend,Budget(),'asof',out,self.policy)
+            run_case(self.case,self.store,backend,Budget(),'tether',out,self.policy)
         self.assertEqual(len(backend.opener.calls),1)
 
     def test_malformed_and_interruption_keep_attempt_accounting(self):
         for name,opts in (('malformed',{'malformed':True}),('interrupted',{'error':KeyboardInterrupt()})):
             backend=self.backend(**opts);out=self.root/name
-            result=run_case(self.case,self.store,backend,Budget(),'asof',out,self.policy)
+            result=run_case(self.case,self.store,backend,Budget(),'tether',out,self.policy)
             self.assertEqual(result['calls'],1)
             self.assertEqual(result['claims'],[])
             self.assertIn(result['status'],('failed','interrupted'))
@@ -185,7 +185,7 @@ class ComparisonWorkflowTests(unittest.TestCase):
         def attempt():
             b=self.backend();barrier.wait()
             try:
-                run_case(self.case,self.store,b,Budget(),'asof',output,self.policy)
+                run_case(self.case,self.store,b,Budget(),'tether',output,self.policy)
                 return len(b.opener.calls)
             except FileExistsError:
                 return 0

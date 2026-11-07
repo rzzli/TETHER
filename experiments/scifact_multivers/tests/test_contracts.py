@@ -59,12 +59,12 @@ class ContractTests(unittest.TestCase):
             tensorize_pair(FictionalTokenizer(), 'claim', ['one </s> two'], title='title')
 
     def test_entries_preserve_order_and_exact_text(self):
-        claims = [{'id': 7, 'claim': ' α study? ', 'doc_ids': [20, 10]}]
+        claims = [{'id': 7, 'claim': ' Î± study? ', 'doc_ids': [20, 10]}]
         corpus = [{'doc_id': 10, 'title': 'X', 'abstract': ['first']},
                   {'doc_id': 20, 'title': 'Y', 'abstract': ['line one\nline two', 'second']}]
         entries = prepare_entries(claims, corpus)
         self.assertEqual([e['abstract_id'] for e in entries], [20, 10])
-        self.assertEqual(entries[0]['claim'], ' α study? ')
+        self.assertEqual(entries[0]['claim'], ' Î± study? ')
         self.assertEqual(entries[0]['sentences'][0], 'line one\nline two')
 
     def test_annotation_bearing_claims_are_rejected(self):
@@ -112,7 +112,7 @@ class ContractTests(unittest.TestCase):
         self.assertEqual(events[0]['claim_id'],1)
 
     def test_capture_verifies_consumed_bytes_and_declared_files_only(self):
-        scratch = Path(__file__).resolve().parents[3] / 'planning/review-assets/tether-semantic-20261106/solver-feasibility/test-temp'
+        scratch = Path(__file__).resolve().parents[3] / 'data/cache/scifact-multivers-unit-temp'
         scratch.mkdir(parents=True, exist_ok=True)
         with tempfile.TemporaryDirectory(dir=scratch) as name:
             root = Path(name); raw = b'fictional config'
@@ -127,7 +127,7 @@ class ContractTests(unittest.TestCase):
                 capture_asset_bytes(root, {'../escape': {'bytes': 0, 'sha256': '0'*64}})
 
     def test_actual_transport_pass_schema_and_incomplete_row_rejection(self):
-        scratch = Path(__file__).resolve().parents[3] / 'planning/review-assets/tether-semantic-20261106/solver-feasibility/test-temp'
+        scratch = Path(__file__).resolve().parents[3] / 'data/cache/scifact-multivers-unit-temp'
         scratch.mkdir(parents=True, exist_ok=True)
         with tempfile.TemporaryDirectory(dir=scratch) as name:
             root=Path(name).resolve(); (root/'tokenizer').mkdir()

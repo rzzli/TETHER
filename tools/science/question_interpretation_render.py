@@ -5,7 +5,7 @@ mechanical validity never establishes scientific entailment or usefulness.
 """
 import json
 
-from asof.serde import canonical, encode, fingerprint, freeze, parse_json
+from tether_engine.serde import canonical, encode, fingerprint, freeze, parse_json
 from tools.science.bounded_interpretation import MAX_BYTES, need, nonempty
 from tools.science.interpretation_questions import scientific_view, expand_view, validate_request, validate_response
 

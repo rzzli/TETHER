@@ -8,11 +8,11 @@ from types import SimpleNamespace
 import unittest
 from unittest.mock import Mock, patch
 
-from asof.serde import ContractError, canonical, encode, fingerprint
-from asof.study.baselines import reviewer_view, run_baseline, verify_baseline
-from asof.study.diagnostic import load_synthetic_request
-from asof.study import diagnostic_resources
-from asof.study import baseline_smoke
+from tether_engine.serde import ContractError, canonical, encode, fingerprint
+from tether_engine.study.baselines import reviewer_view, run_baseline, verify_baseline
+from tether_engine.study.diagnostic import load_synthetic_request
+from tether_engine.study import diagnostic_resources
+from tether_engine.study import baseline_smoke
 
 
 def limits(**changes):
@@ -71,7 +71,7 @@ class BaselinePeerTests(unittest.TestCase):
     def test_request_limit_precedes_fixture_resource_access(self):
         cap = len(canonical(self.request)) - 1
         with patch(
-            "asof.study.baselines.load_synthetic_request",
+            "tether_engine.study.baselines.load_synthetic_request",
             side_effect=AssertionError("Must not load after failing byte preflight"),
         ):
             with self.assertRaises(ContractError):
@@ -157,7 +157,7 @@ class BaselinePeerTests(unittest.TestCase):
 
     def test_neutral_label_cannot_spell_actual_arm_identity(self):
         result = run_baseline(self.request, limits())
-        for name in ("Candidate ASOF", "Candidate BASELINE", "Candidate LEXICAL"):
+        for name in ("Candidate TETHER", "Candidate BASELINE", "Candidate LEXICAL"):
             with self.subTest(name=name), self.assertRaises(ContractError):
                 reviewer_view(result, name)
 

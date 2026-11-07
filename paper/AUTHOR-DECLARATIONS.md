@@ -27,4 +27,5 @@ was part of the reported technical experiment; this does not replace an
 institutional determination where one is required.
 
 Until these facts are confirmed, the PDF remains clearly labeled a working
-draft. No publication, repository push or public deposit is performed.
+draft. Publishing source-code changes does not constitute author approval,
+paper submission or a public research-data deposit.

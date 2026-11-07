@@ -12,10 +12,10 @@ import time
 import uuid
 from pathlib import Path
 
-from asof.agents import Usage
-from asof.journal import RunJournal, read_chain
-from asof.serde import ContractError, canonical, decode, encode, fingerprint, freeze, parse_json, read_json, write_json
-from asof.workflow import Budget, BudgetMeter, add_usage, over_quote
+from tether_engine.agents import Usage
+from tether_engine.journal import RunJournal, read_chain
+from tether_engine.serde import ContractError, canonical, decode, encode, fingerprint, freeze, parse_json, read_json, write_json
+from tether_engine.workflow import Budget, BudgetMeter, add_usage, over_quote
 from tools.science.bounded_interpretation import Generated, MAX_BYTES, MAX_RESPONSE_BYTES, checked_usage, need, nonempty
 from tools.science.interpretation_questions import prepare_question, scientific_view, validate_response
 from tools.science.run_comparison import pin, check_pin

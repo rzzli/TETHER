@@ -7,19 +7,19 @@ import shutil
 import tempfile
 import unittest
 
-from asof.agents import EvidenceView, SpecialistRequest, ExtractiveBackend, Selection, Usage
-from asof.artifacts import verify_run, write_run
-from asof.chrono import load_snapshot
-from asof.contracts import Case, Category
-from asof.journal import RunJournal
-from asof.local_model import LocalSelectionBackend, selection_payload, verify_backend_execution, parse_selection
-from asof.retrieval import RetrievalPolicy, bounded_request, verify_retrieval_trace
-from asof.serde import ContractError, canonical, decode, encode, fingerprint, read_json, sha256_file, write_json
-from asof.workflow import run_workflow
-from asof.wire import request_bytes, FORMAT
+from tether_engine.agents import EvidenceView, SpecialistRequest, ExtractiveBackend, Selection, Usage
+from tether_engine.artifacts import verify_run, write_run
+from tether_engine.chrono import load_snapshot
+from tether_engine.contracts import Case, Category
+from tether_engine.journal import RunJournal
+from tether_engine.local_model import LocalSelectionBackend, selection_payload, verify_backend_execution, parse_selection
+from tether_engine.retrieval import RetrievalPolicy, bounded_request, verify_retrieval_trace
+from tether_engine.serde import ContractError, canonical, decode, encode, fingerprint, read_json, sha256_file, write_json
+from tether_engine.workflow import run_workflow
+from tether_engine.wire import request_bytes, FORMAT
 
 
-FIXTURES = Path(__file__).resolve().parents[1] / 'src/asof/demo/v2'
+FIXTURES = Path(__file__).resolve().parents[1] / 'src/tether_engine/demo/v2'
 
 
 class FakeOpener:
@@ -99,7 +99,7 @@ class LocalModelTests(unittest.TestCase):
         p = copy.deepcopy(self.config); p['model_provenance']['runtime_sha256'] = 'main'
         write_json(self.path, p)
         with self.assertRaises(ContractError): LocalSelectionBackend(self.path)
-        from asof.local_model import NoRedirect
+        from tether_engine.local_model import NoRedirect
         with self.assertRaises(ContractError): NoRedirect().redirect_request(None, None, 302, '', {}, 'http://remote')
 
     def test_prompt_role_injection_escaped_and_quote_covers_rendered_bytes(self):

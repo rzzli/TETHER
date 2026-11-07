@@ -10,8 +10,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof import serde
-from asof.maintenance import write_new_json
+from tether_engine import serde
+from tether_engine.maintenance import write_new_json
 
 
 def native_error(code, source="fictional-stage", destination="fictional-destination"):
@@ -31,11 +31,18 @@ class AtomicReplaceTests(unittest.TestCase):
         self.path.write_bytes(self.before)
 
     def test_success_needs_one_replace_and_no_backoff(self):
-        with patch.object(serde.os, "replace", wraps=os.replace) as replace, patch("time.sleep") as sleep:
-            serde.write_json(self.path, {"after": True})
-        self.assertEqual(replace.call_count, 1)
+        # This is the no-error control-flow case. Actual Windows replacement
+        # can transiently fail even without a deliberately held test handle.
+        staged = self.root / 'invented-staged.json'
+        with patch.object(serde.os, "replace", return_value=None) as replace, patch("time.sleep") as sleep:
+            serde._replace_staged(staged, self.path)
+        replace.assert_called_once_with(staged, self.path)
         sleep.assert_not_called()
+
+    def test_actual_write_publishes_complete_content_and_cleans_staging(self):
+        serde.write_json(self.path, {"after": True})
         self.assertEqual(json.loads(self.path.read_bytes()), {"after": True})
+        self.assertEqual(list(self.root.glob('.writing-*')), [])
 
     def test_native_retry_reuses_exact_staged_bytes_and_preserves_old_until_success(self):
         real_replace = os.replace

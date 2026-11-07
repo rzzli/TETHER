@@ -6,8 +6,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from asof.serde import ContractError
-from asof.serde import fingerprint
+from tether_engine.serde import ContractError
+from tether_engine.serde import fingerprint
 from tools.data.build_tether_policy import (MetadataImport, add_record, checked_json,
                                           check_frame_case, raw_artifact, receipt_archive_path)
 

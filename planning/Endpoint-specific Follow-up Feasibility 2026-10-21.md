@@ -7,7 +7,7 @@ assessment, not Step 1's scientific qualification gate or the broader project.
 
 ## What was executed
 
-The [frozen protocol](protocols/endpoint-followup-feasibility-v0.1.json) retains the
+The [frozen protocol](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/protocols/endpoint-followup-feasibility-v0.1.json) retains the
 same twelve trials selected from origin-only information. It separates primary
 efficacy decisions, first same-program higher-phase registry starts and first
 selected-arm dosing. Formal analysis/decision, observation and public disclosure
@@ -156,10 +156,10 @@ packaging/demo and all four Windows/Linux hosted jobs passed for implementation
 commit `48b2671e047b40b3a1a02a7e5d11237f025594db`. Framework dependencies and budget
 defaults are unchanged. PDF parsing used an isolated research-only pypdf target.
 
-- [Pre-dispatch validation](review-assets/endpoint-followup-feasibility-20261021/pre-dispatch-validation.json): policy/request/test commitments before new source access.
-- [Extraction anchor](review-assets/endpoint-followup-feasibility-20261021/extraction-anchor.json): committed as `cda280f`; report hash `aca4f3e5015058c595866c0856c4de4984cf6df1107385022c27fb323b82edc3`.
-- [Review-pack anchor](review-assets/endpoint-followup-feasibility-20261021/review-pack-anchor.json): packet seal `f7ecf5d26642d50265a07f347343d8443e1d7cd0a353f7cfc5700a47d2a5528a`.
-- [Final acceptance](review-assets/endpoint-followup-feasibility-20261021/final-acceptance.json): independent source, review, adjudication and separate-disclosure checks.
+- [Pre-dispatch validation](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/endpoint-followup-feasibility-20261021/pre-dispatch-validation.json): policy/request/test commitments before new source access.
+- [Extraction anchor](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/endpoint-followup-feasibility-20261021/extraction-anchor.json): committed as `cda280f`; report hash `aca4f3e5015058c595866c0856c4de4984cf6df1107385022c27fb323b82edc3`.
+- [Review-pack anchor](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/endpoint-followup-feasibility-20261021/review-pack-anchor.json): packet seal `f7ecf5d26642d50265a07f347343d8443e1d7cd0a353f7cfc5700a47d2a5528a`.
+- [Final acceptance](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/endpoint-followup-feasibility-20261021/final-acceptance.json): independent source, review, adjudication and separate-disclosure checks.
 
 The separate bounded-backup receipt is written after ZIP CRC, every entry hash and
 the Git bundle are verified. This preserves this phase's source originals and

@@ -8,7 +8,7 @@ updated: 2026-10-26
 
 # Bounded retrieval acceptance
 
-AsOf 0.3.5 passes 1,616 full tests, zero failures/errors/skips, required probes and
+TETHER 0.3.5 passes 1,616 full tests, zero failures/errors/skips, required probes and
 wheel/demo checks. All 305 source/resource pins and both protected hashes stay
 unchanged during validation. The 34 retrieval tests include seven independent
 peer tests; six reproduced defects in mutable input use, parent path/order checks

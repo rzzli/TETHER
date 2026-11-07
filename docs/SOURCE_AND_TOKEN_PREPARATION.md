@@ -1,15 +1,28 @@
 # TETHER — Source and token preparation
 
-TETHER (Target Evidence Tracking Harness for Evaluation and Reproducibility) is the current project name. The `tether-target-agents` 0.5.0 package in `packages/tether` supplies the `tether` CLI and import namespace over the frozen AsOf 0.3.11 engine. See [installation and compatibility](../README.md#installation-and-compatibility). Historical version/arm names, module commands, source paths and wire IDs below remain unchanged; the rename does not reactivate retired study or expert-review branches. Direct API aliases preserve legacy outputs; only the separate `tether._presentation` CLI layer wraps `demo`/`run` in the [TETHER run layout](../README.md#tether-cli-run-layout). Delegated source inspection, snapshot construction and evaluation keep their engine layouts.
+The current interface is `tether-target-agents` **0.6.0**, with the `tether` CLI
+and public namespace over `tether-target-engine` **0.4.0** (`tether_engine`). See
+[installation](../README.md#quick-start) and the [namespace migration
+boundary](../packages/tether/MIGRATION.md). Public aliases share the new engine's
+module and class identities; they do not certify earlier execution fingerprints.
 
-Accepted AsOf 0.3.4 adds preparation capabilities separate from execution. The
+The component history below retains earlier versioned observations and test
+counts. Those qualifications belong to their original code and dates, preserved
+in the [historical checkpoint](ARCHIVE.md). Names and example paths here use the
+current namespace for readability; exact original identifiers and reproduction
+commands are in that checkpoint. The naming migration is not a scientific rerun
+or a transfer of historical qualification to the new release. The semantic
+experiment remains **paused**; this guide does not reactivate it or retired
+study and expert-review branches.
+
+Accepted TETHER 0.3.4 adds preparation capabilities separate from execution. The
 existing byte-based `StudySession` capacity policy, recorded synthetic allowlist
 and R07 native stop remain unchanged. These APIs do not start a model server,
 generate an answer or establish scientific validity.
 
 ## Source admission and row reconstruction
 
-`asof.study.source_preparation.prepare_source_request(authority_path,
+`tether_engine.study.source_preparation.prepare_source_request(authority_path,
 authority_sha256, roots, output, deadline=...)` requires an independently retained
 authority hash and a new output directory. Its supported profile is contemporary
 T6, Open Targets 25.09 normalization 2.2 and the pinned HGNC 2026-10-10 reference.
@@ -43,7 +56,7 @@ snapshot admission count and selected-row audit count are distinct denominators.
 
 ## Offline token quotation
 
-`asof.study.tokenization.prepare_tokenizer_spec(authority, roots, deadline=...)`
+`tether_engine.study.tokenization.prepare_tokenizer_spec(authority, roots, deadline=...)`
 authenticates the fixed R05 acquisition/inventory and all 34 approved local assets:
 the dedicated tokenizer utility, its runtime DLLs and three GGUF shards. Arbitrary
 executables, new model bytes, extra DLLs, relative/device roots and path aliases are
@@ -75,9 +88,9 @@ external anchor.
 
 ## Payload and budget boundaries
 
-`asof.study.preparation_payloads.prepare_payloads(request)` is pure rendering,
+`tether_engine.study.preparation_payloads.prepare_payloads(request)` is pure rendering,
 not admission. It preserves the whole request and returns six exact hypothetical
-payloads: one AsOf interpretation and five role-inspired adapted Virtual Biotech
+payloads: one TETHER interpretation and five role-inspired adapted Virtual Biotech
 stages. The original Virtual Biotech tool/retrieval system is not reproduced.
 Guide and schema share `min(3, original max_claims)`. Source-ID history is labeled
 untrusted and contains no prior prose or answers.
@@ -100,7 +113,7 @@ The already exposed IL6R request was reconstructed exactly as
 The final preparation verifies its selected whole source row and mappings, six
 quotes and source-inclusive replay. Input reservation is 28,241; output is 6,144;
 preparation took 98.5 seconds. See
-[the retained report](../planning/review-assets/recovery-step9-token-aware-20261026/REAL-PREPARATION.json).
+[the retained report](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-token-aware-20261026/REAL-PREPARATION.json).
 The initial harness failure is preserved separately; it rejected the first child
 before launch because Windows serializes its subprocess audit arguments. The
 revised harness changed no source, model, prompt policy or runtime code.
@@ -119,7 +132,7 @@ genetics/MR feature validation, clinical prediction or independent adjudication.
 Numerical features remain empty, probabilities remain null, human reviews are
 pending, and R09 and the later study gates remain open. Full 0.3.4 acceptance
 passes 1,582 tests with no failures/errors/skips and 297 unchanged source/resource
-pins. [Acceptance evidence](../planning/review-assets/recovery-step9-token-aware-20261026/acceptance.json)
+pins. [Acceptance evidence](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/recovery-step9-token-aware-20261026/acceptance.json)
 also records installed source-inclusive replay, seven legacy families and matching
 frozen prior verifiers. The original full-run test-discovery failure is retained;
 its correction only qualified two test-module imports.

@@ -1,13 +1,13 @@
 import unittest
 import copy
-from asof.serde import ContractError
+from tether_engine.serde import ContractError
 from tools.science.t6_topone_evaluation import score_task, verify_execution_transcript
 
 
 class TopOneEvaluationTests(unittest.TestCase):
     def setUp(self):
         self.task = {'task_id': 't', 'case_id': 'c', 'category': 'genetics', 'offered_candidate_ids': ['a', 'b']}
-        self.result = {'arm': 'asof', 'status': 'completed', 'claims': [{'observation_id': 'a'}],
+        self.result = {'arm': 'tether', 'status': 'completed', 'claims': [{'observation_id': 'a'}],
             'coverage': {'genetics': {'status': 'completed'}}, 'calls': 1,
             'measured_usage': {}, 'estimated_usage': {}, 'elapsed_seconds': 1}
         self.reference = {'candidates': [{'observation_id': 'a', 'applicability': 'uncertain'},
@@ -47,11 +47,11 @@ class TopOneEvaluationTests(unittest.TestCase):
 
     def test_deleted_reordered_and_changed_launcher_events_fail(self):
         execution={'status':'all_topone_runs_verified','tasks':[{'task_id':'t','arms':[
-            {'arm':'asof','result':{'sha256':'a'*64}}]}]}
+            {'arm':'tether','result':{'sha256':'a'*64}}]}]}
         events=[{'event':name,'details':details} for name,details in [
             ('build_reserved',{}),('model_verification_started',{}),('server_started',{'pid':123}),
-            ('arm_started',{'task_id':'t','arm':'asof'}),
-            ('arm_verified',{'task_id':'t','arm':'asof','result_sha256':'a'*64}),
+            ('arm_started',{'task_id':'t','arm':'tether'}),
+            ('arm_verified',{'task_id':'t','arm':'tether','result_sha256':'a'*64}),
             ('execution_terminal',{'status':'all_topone_runs_verified','server_stopped':True})]]
         verify_execution_transcript(events,execution)
         variants=[events[:3]+events[4:]]

@@ -6,7 +6,7 @@ power and training remain unresolved. Follow-up has not been opened for this sam
 
 ## Frozen definitions
 
-[The protocol](protocols/endpoint-origin-feasibility-v0.1.json) separates a selected
+[The protocol](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/protocols/endpoint-origin-feasibility-v0.1.json) separates a selected
 trial's primary efficacy decision, a same-program higher-phase registry start and
 experimental-arm first dosing. Each requires its own origin risk set. Clinical
 observation, formal analysis/decision and first public disclosure remain separate.
@@ -77,7 +77,7 @@ The earlier same-day 58-skip core report included one PowerShell-utility skip as
 well as 57 ingestion skips. The current child environment includes the verified
 portable PowerShell runtime and runs that utility test; earlier evidence is preserved.
 
-The tracked [sample anchor](review-assets/endpoint-origin-feasibility-20261021/sample-anchor.json)
+The tracked [sample anchor](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/endpoint-origin-feasibility-20261021/sample-anchor.json)
 pins seal `005db13e5d51f595fa5849d72b3d495e12cad797c20a632db511be85ba514ac6`.
 Detailed source packets and AI review records remain evaluator-only under
 `data/benchmark/labels/endpoint-origin-feasibility-20261021/`.
@@ -112,7 +112,7 @@ decision rule. All inherited scientific holds remain, with no replacements or la
 The final primary-agent cross-check matched all 137 retained review evidence values
 to exact sealed-packet JSON pointers and confirmed all twelve inherited hold lists,
 membership and null labels. See the retained
-[acceptance record](review-assets/endpoint-origin-feasibility-20261021/final-acceptance.json).
+[acceptance record](https://github.com/rzzli/TETHER/blob/tether-pre-namespace-migration-20261106/planning/review-assets/endpoint-origin-feasibility-20261021/final-acceptance.json).
 The bounded backup receipt, written after the backup succeeds, identifies the
 verified E: ZIP and Git bundle. It preserves this phase and selected source records;
 full parent frames, AACT dumps and runtime originals remain at their existing

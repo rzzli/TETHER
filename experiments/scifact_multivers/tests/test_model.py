@@ -21,7 +21,7 @@ def tiny_config():
 
 
 def temporary_directory():
-    scratch = Path(__file__).resolve().parents[3] / 'planning/review-assets/tether-semantic-20261106/solver-feasibility/test-temp'
+    scratch = Path(__file__).resolve().parents[3] / 'data/cache/scifact-multivers-unit-temp'
     scratch.mkdir(parents=True, exist_ok=True)
     return tempfile.TemporaryDirectory(dir=scratch)
 

@@ -2,7 +2,7 @@
 title: Context revision completion
 date: 2026-10-16
 status: technically-complete-scientific-validation-open
-tags: [asof, ingestion, t6, validation]
+tags: [TETHER, ingestion, t6, validation]
 ---
 
 # Context revision completion
@@ -56,4 +56,4 @@ Scientific interpretation remains unreviewed for the full dataset. AI review is 
 
 No narrower HER2, FH, CFTR or neuropathy case was invented. Future specified qualifiers require a versioned hypothesis contract and new fingerprints before execution; coverage text alone cannot bind refined scientific scope. Historical AACT restoration, a complete regional QTL/GWAS/LD pilot, event counts/power and a controlled model comparison remain later gates. See [[Feasibility Gate Decision]].
 
-Sanitized evidence: [[data/manifests/public/2026-10-16-context-revision.json|closeout manifest]] and [[data/manifests/public/2026-10-16-context-normalization.json|normalization registration]]. Detailed comparison rows remain ignored and evaluator-only. Catalog publication updates only `asof_normalized_packets` through the validated maintenance entry point after runs have sealed their effective policy.
+Sanitized evidence: [[data/manifests/public/2026-10-16-context-revision.json|closeout manifest]] and [[data/manifests/public/2026-10-16-context-normalization.json|normalization registration]]. Detailed comparison rows remain ignored and evaluator-only. Catalog publication updates only `tether_normalized_packets` through the validated maintenance entry point after runs have sealed their effective policy.
