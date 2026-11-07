@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "policy": "tether-engine-0.4.0-20261106",
-  "executing_build_profile": "tether-engine-namespace-0.4.0-20261106",
-  "previous_resource_sha256": "645b1fb409b11f4d0e8d5d9e96e14f2b6302b1ecb5d03c64ddf5cfc8d683d016",
-  "scope": "Executing dependency pins for the renamed TETHER engine 0.4.0. New version-two semantic verification requires this engine version; generic version-one byte checks retain unavailable semantic status. Historical source proofs require the original checkpoint and are not rewritten or certified by this migration.",
+  "executing_build_profile": "tether-engine-0.4.0-receipt-read-v2-20261107",
+  "previous_resource_sha256": "3a7043945053ddb63565d083aa84489e0654e1f7195838632de7b1e116bfc19f",
+  "scope": "Exact executing dependency pins for TETHER engine 0.4.0 after the bounded Windows receipt-read correction. The semantic policy, schemas and version gate are unchanged; every module still requires its exact reviewed hash. Build-profile and predecessor fields record provenance and do not authorize compatibility. Original archived source proofs and receipts remain unchanged; generic version-one byte checks retain unavailable semantic status.",
   "compatibility_review": "packages/tether/MIGRATION.md",
   "modules": {
     "__init__.py": "1c3cd449ab6889d256607de2e0bc1ff623ec8ec473938d3f3a9ecd21b9d29c26",
@@ -16,7 +16,7 @@
     "contracts.py": "8c79c76efd9e670a0a663228fdc2ae106bb348a57cd5a5b99c5f018d438aa8e0",
     "evaluation.py": "d76ca20564a289a66ec4ac27c98aa35e0a90afbec5afef46d643e09691644eb3",
     "features.py": "03cc40063a00d5362ace5535e1b434f6576a87dd16da8df316c01a64b69b12ab",
-    "ingest.py": "16ed647cd230244198906bdefe83480fbe035e14d9c3fa7dfd47e121f5102f24",
+    "ingest.py": "00d74ddb2aa3bf0cc27d063ca3c2852119373227d2bcd3b27c150dea8f01de73",
     "journal.py": "498362a56e2597f5381093592240e8dd350f8b74d8728beeef8b8e1e7adaeb11",
     "ledger.py": "86ab06ee8ae3b7a03158296f4b370d71007770549cb8ab6f92570819a749828b",
     "local_model.py": "1bdd8f50e2db729cd8854e1ba3859e71de70833ac70a11a9ff3d0a24a56697e4",

@@ -33,3 +33,23 @@ use the original run's matching checkout and dependencies. Generic version-one
 byte verification remains supported, with semantic consistency unavailable.
 See [historical compatibility](../../docs/ARCHIVE.md) and
 [verification limits](../../docs/TETHER-VERIFICATION-SCOPE.md).
+
+## Receipt-read build correction, 7 November 2026
+
+The engine 0.4.0 development build now bounds Windows `EACCES` retries while
+reading an archived receipt. It does not retry publication, change receipt bytes,
+or alter lineage, temporal eligibility, claims, features or scoring semantics.
+The exact ingestion module pin is updated in the archive dependency declaration;
+the executing build profile is `tether-engine-0.4.0-receipt-read-v2-20261107`.
+
+The semantic policy remains `tether-engine-0.4.0-20261106`. Every declared module
+still requires one exact reviewed hash, and unsupported engine versions remain
+rejected. The predecessor resource hash records which declaration changed; it
+does not grant compatibility with arbitrary source files. Reports retain the
+executing dependency-resource hash to distinguish builds.
+
+Existing environments, sealed receipts and original source proofs are preserved.
+Use a fresh installation to check this build; changing checkout files does not
+update an installed wheel. Qualification must exercise archive reconstruction and
+receipt handling together against that installation, including rejection of an
+incorrect module pin. Earlier results retain their original source identities.

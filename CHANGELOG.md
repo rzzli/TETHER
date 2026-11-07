@@ -8,6 +8,9 @@
 - Canonicalize temporary fixture roots before recording path identities, and
   classify Windows-only tokenizer fixtures explicitly in portable CI. Runtime
   path and file-sharing protections remain enforced.
+- Rebind the archive dependency declaration to the reviewed receipt-read build.
+  Preserve its semantic policy and exact-hash rejection of unsupported code;
+  qualify archive and receipt behavior together in a fresh installation.
 
 ## Interface 0.6.0 / engine 0.4.0
 

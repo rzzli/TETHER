@@ -94,3 +94,9 @@ fail; an input node is updated only after exact-byte verification. Source hashes
 distinguish this development implementation from earlier builds. Preserve original
 code and sealed outputs and qualify changed source before a new execution; this
 change does not migrate or reseal an existing run.
+
+After a reviewed engine change, check the archive's exact dependency declaration
+as well as the affected function tests. A stale module pin deliberately blocks
+archive verification. Update it only with a documented compatibility review and
+qualify a fresh installation; a test run against an older installed wheel cannot
+qualify changed checkout code.
