@@ -1,6 +1,10 @@
 """Invented bounded worker controls; no model weights or native references."""
 import json
+import importlib.metadata
+import os
 from pathlib import Path
+import platform
+import socket
 import sys
 import subprocess
 import tempfile
@@ -102,6 +106,53 @@ class WorkerTests(unittest.TestCase):
         with self.assertRaises(ContractError):self.run_worker(Swallows())
         status=json.loads((self.root/'output/STATUS.json').read_bytes())
         self.assertEqual(status['status'],'failed');self.assertGreater(status['io_denials'],0)
+
+    def test_literal_null_device_only_has_audited_exception(self):
+        from experiments.scifact_calibration.worker import InputAudit
+        output=self.root/'audit';output.mkdir();audit=InputAudit(set(),output,())
+        audit.active=True
+        try:
+            audit.hook('open',(os.devnull,None,os.O_RDWR))
+            for alias in (str(self.root/Path(os.devnull).name),os.devnull+'.txt',os.devnull+' '):
+                with self.subTest(alias=alias),self.assertRaises((PermissionError,ContractError)):
+                    audit.hook('open',(alias,None,os.O_RDWR))
+        finally:audit.close()
+        events=[json.loads(line) for line in (output/'io-audit.jsonl').read_bytes().splitlines()]
+        self.assertEqual(events[0]['basis'],'null_device');self.assertTrue(events[0]['allowed'])
+
+    def test_dependency_discovery_filters_metadata_only_and_restores_on_error(self):
+        from experiments.scifact_calibration.worker import isolated_dependency_discovery
+        seen=[];old_path=list(sys.path);old_ipv6=socket.has_ipv6;old_version=getattr(platform,'_syscmd_ver',None)
+        def discover(cls,context=None,**kwargs):
+            seen.append(list(context.path));return iter(())
+        with patch.object(importlib.metadata.Distribution,'discover',classmethod(discover)):
+            descriptor=importlib.metadata.Distribution.__dict__['discover']
+            with self.assertRaisesRegex(RuntimeError,'invented'):
+                with isolated_dependency_discovery():
+                    self.assertFalse(socket.has_ipv6);self.assertEqual(sys.path,old_path)
+                    if os.name=='nt' and old_version is not None:
+                        self.assertEqual(platform._syscmd_ver('system','release','version'),('system','release','version'))
+                        with patch('subprocess.check_output',side_effect=AssertionError('shell command')):
+                            self.assertTrue(platform.win32_ver()[1])
+                    list(importlib.metadata.distributions(path=[str(ROOT),str(ROOT/'src'),str(ROOT/'packages/tether/src'),str(self.root)]))
+                    raise RuntimeError('invented')
+            self.assertIs(importlib.metadata.Distribution.__dict__['discover'],descriptor)
+        self.assertEqual(seen,[[str(self.root)]]);self.assertEqual(socket.has_ipv6,old_ipv6)
+        self.assertIs(getattr(platform,'_syscmd_ver',None),old_version)
+
+    def test_worker_dependency_guard_does_not_exempt_network(self):
+        from experiments.scifact_calibration.worker import InputAudit
+        old_ipv6=socket.has_ipv6
+        class Guarded(FakeSolver):
+            def predict(inner,*a,**k):
+                self.assertFalse(socket.has_ipv6)
+                return super().predict(*a,**k)
+        report=self.run_worker(Guarded());self.assertEqual(report['status'],'completed')
+        self.assertEqual(socket.has_ipv6,old_ipv6)
+        output=self.root/'audit';output.mkdir();audit=InputAudit(set(),output,());audit.active=True
+        try:
+            with self.assertRaises(PermissionError):audit.hook('socket.bind',(None,('::1',0)))
+        finally:audit.close()
 
     def test_committed_prediction_survives_write_failure(self):
         from experiments.scifact_comparison.worker import Writer

@@ -7,11 +7,16 @@ from __future__ import annotations
 
 import argparse
 from collections.abc import Mapping
+from contextlib import contextmanager
+import copy
 import hashlib
+import importlib.metadata
 import json
 import math
 import os
 from pathlib import Path
+import platform
+import socket
 import sys
 import threading
 import time
@@ -27,6 +32,41 @@ from experiments.scifact_calibration.inputs import anchored, capture, digest, lo
 
 MAX_OUTPUT_BYTES=2*1024**3
 _FINAL_LOCK=threading.RLock()
+
+
+@contextmanager
+def isolated_dependency_discovery():
+    """Suppress optional network/shell probes and project metadata discovery.
+
+    Imports retain their exact pinned source paths. Only distribution metadata
+    discovery excludes those project roots. Network/child audit denial is never
+    relaxed; the Windows version fallback uses native sys.getwindowsversion.
+    """
+    metadata=importlib.metadata
+    descriptor=metadata.Distribution.__dict__['discover']
+    excluded={os.path.normcase(os.path.abspath(p)) for p in (ROOT,ROOT/'src',ROOT/'packages/tether/src')}
+    original_ipv6=socket.has_ipv6;version_probe=getattr(platform,'_syscmd_ver',None)
+    uname_cache=getattr(platform,'_uname_cache',None)
+    def discover(cls,**kwargs):
+        context=kwargs.pop('context',None)
+        if context is not None and kwargs:raise ValueError('cannot accept context and kwargs')
+        context=context or metadata.DistributionFinder.Context(**kwargs)
+        isolated=copy.copy(context)
+        vars(isolated)['path']=[p for p in context.path if os.path.normcase(os.path.abspath(p)) not in excluded]
+        return descriptor.__func__(cls,context=isolated)
+    def no_shell_version(system='',release='',version='',**unused):return system,release,version
+    metadata.Distribution.discover=classmethod(discover)
+    socket.has_ipv6=False
+    if os.name=='nt' and version_probe is not None:platform._syscmd_ver=no_shell_version
+    try:
+        yield dict(ipv6_import_probe='disabled_without_socket_call',
+                   project_distribution_discovery='exact_project_import_roots_excluded',
+                   windows_version_probe='native_fallback_without_shell' if os.name=='nt' else 'not_applicable',
+                   network_and_child_audit='unconditionally_denied',sys_path_modified=False)
+    finally:
+        metadata.Distribution.discover=descriptor;socket.has_ipv6=original_ipv6
+        if os.name=='nt' and version_probe is not None:platform._syscmd_ver=version_probe
+        if hasattr(platform,'_uname_cache'):platform._uname_cache=uname_cache
 
 
 def _shape(proof, maximum):
@@ -95,6 +135,8 @@ class InputAudit:
                 name,mode,flags=args
                 if isinstance(name,int):
                     row=dict(event=event,path=None,descriptor=name,allowed=True,basis='existing_descriptor')
+                elif (os.fsdecode(name).casefold()==os.devnull.casefold() if os.name=='nt' else os.fsdecode(name)==os.devnull):
+                    row=dict(event=event,path=None,opened_path=os.devnull,mode=mode,flags=flags,allowed=True,basis='null_device')
                 else:
                     raw_path=Path(os.fsdecode(name))
                     opened=raw_path.absolute()
@@ -201,7 +243,7 @@ def run_calibration(recipe_path, recipe_sha256, output, *, _solver_factory=None,
     output.mkdir(parents=True,exist_ok=False)
     started=time.perf_counter();cpu=time.process_time();tracker=Tracker()
     state=dict(writer=None,audit=None,finished=False,report=None,load_seconds=None,deadline_fired=False)
-    timers=[];old_cache=sys.pycache_prefix
+    timers=[];old_cache=sys.pycache_prefix;dependency_guard=None
 
     def finish(error=None, hard=False):
         with _FINAL_LOCK:
@@ -292,6 +334,10 @@ def run_calibration(recipe_path, recipe_sha256, output, *, _solver_factory=None,
         validate_requests(requests,expected_schedule=recipe['schedule'],expected_k=5)
         tracker.requests=requests
         writer.event('inputs_admitted',requests_sha256=recipe['requests']['sha256'],claims=len(requests),pairs=len(requests)*5,references_read=False)
+        dependency_guard=isolated_dependency_discovery()
+        dependency_policy=dependency_guard.__enter__()
+        writer.publish('DEPENDENCY-POLICY.json',dependency_policy)
+        writer.event('dependency_discovery_isolated',policy=dependency_policy)
         if _solver_factory is None:
             from experiments.scifact_multivers.inference import LoadedSolver
             _solver_factory=LoadedSolver
@@ -329,6 +375,7 @@ def run_calibration(recipe_path, recipe_sha256, output, *, _solver_factory=None,
         raise
     finally:
         for timer in timers:timer.cancel()
+        if dependency_guard is not None:dependency_guard.__exit__(None,None,None)
         sys.pycache_prefix=old_cache
 
 
