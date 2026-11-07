@@ -35,6 +35,68 @@ class StageTests(unittest.TestCase):
         for _ in IDS: stage.call(self.operation)
         return stage.finish()
 
+    def reseal(self):
+        path = self.root / 'STAGE-RECEIPT.json'
+        receipt = s.parse_json(path.read_bytes())
+        receipt['files'] = s._inventory(self.root, s.time.monotonic() + 30)
+        path.write_bytes(canonical(receipt))
+
+    @unittest.skipUnless(os.name == 'nt', 'native held-handle test requires Windows')
+    def test_resealed_orphan_product_and_empty_directory_are_rejected(self):
+        self.complete()
+        orphan = self.root / 'products' / '0999'
+        orphan.mkdir(parents=True)
+        (orphan / 'unaccounted.json').write_bytes(b'{}')
+        self.reseal()
+        with self.assertRaisesRegex(ValueError, 'membership|unexpected|Unexpected'):
+            self.verify()
+        (orphan / 'unaccounted.json').unlink()
+        self.reseal()
+        with self.assertRaisesRegex(ValueError, 'membership|unexpected|Unexpected'):
+            self.verify()
+
+    @unittest.skipUnless(os.name == 'nt', 'native held-handle test requires Windows')
+    def test_resealed_extra_slot_and_nested_product_files_are_rejected(self):
+        self.complete()
+        extra = self.root / 'slots' / '0999.json'; extra.write_bytes(b'{}')
+        self.reseal()
+        with self.assertRaisesRegex(ValueError, 'membership|unexpected|Unexpected'):
+            self.verify()
+        extra.unlink()
+        cell = self.root / 'products' / '0000'; cell.mkdir(parents=True)
+        (cell / 'unaccounted.json').write_bytes(b'{}'); self.reseal()
+        with self.assertRaisesRegex(ValueError, 'membership|unexpected|Unexpected'):
+            self.verify()
+
+    @unittest.skipUnless(os.name == 'nt', 'native held-handle test requires Windows')
+    def test_partial_native_capture_remains_verifiable_as_incomplete(self):
+        stage = self.stage()
+        def failed(slot, end):
+            cell = self.root / 'products' / '0000'; native = cell / 'native'
+            tokenizer = native / 'tokenization'; tokenizer.mkdir(parents=True)
+            for path in (cell / 'INPUT.json', cell / 'FAILURE.json', native / 'request.json',
+                         native / 'failure.json', tokenizer / 'request.json'):
+                path.write_bytes(b'{}')
+            (tokenizer / 'body.bin').write_bytes(b'invented partial body')
+            raise TimeoutError('invented interrupted capture')
+        with self.assertRaises(TimeoutError): stage.call(failed)
+        stage.finish()
+        self.assertEqual(self.verify()['report']['status'], 'incomplete')
+
+    @unittest.skipUnless(os.name == 'nt', 'native held-handle test requires Windows')
+    def test_legitimate_capacity_cell_and_context_input_are_allowed(self):
+        stage = self.stage()
+        (self.root / 'INPUTS.json').write_bytes(b'{}')
+        for _ in IDS:
+            def capacity(slot, end):
+                cell = self.root / 'products' / f'{slot["ordinal"]:04d}'; cell.mkdir(parents=True)
+                for name in ('INPUT.json', 'SUMMARY.json', 'journal.jsonl', 'DECISION.json'):
+                    (cell / name).write_bytes(b'{}')
+                return self.operation(slot, end)
+            stage.call(capacity)
+        stage.finish()
+        self.assertEqual(self.verify()['report']['status'], 'complete')
+
     @unittest.skipUnless(os.name == 'nt', 'native held-handle test requires Windows')
     def test_complete_all_scheduled_and_independent_byte_journal_agreement(self):
         report = self.complete()

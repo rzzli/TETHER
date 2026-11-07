@@ -47,6 +47,39 @@ def _inventory(root,end):
     return freeze(result)
 
 
+def _membership(root, rows, end):
+    """Close the stage namespace without discarding incomplete native captures."""
+    def children(folder, files, directories, required=()):
+        deadline_check(end)
+        actual_files = set(); actual_directories = set()
+        for item in folder.iterdir():
+            checked_path(root, item.relative_to(root).as_posix())
+            if item.is_file(): actual_files.add(item.name)
+            elif item.is_dir(): actual_directories.add(item.name)
+            else: raise ValueError('Unexpected nonregular stage member')
+        contracts.need(actual_files <= set(files) and actual_directories <= set(directories) and
+                       set(required) <= actual_files, 'Unexpected stage artifact membership')
+        return actual_files, actual_directories
+
+    required = {'CONFIG.json', 'REPORT.json', 'journal.jsonl', 'STAGE-RECEIPT.json'}
+    _, directories = children(root, required | {'INPUTS.json'}, {'slots', 'failures', 'products'}, required)
+    for name, statuses in (('slots', set(scope.TERMINAL_STATUSES)), ('failures', {'failed', 'interrupted'})):
+        expected = {f'{row["ordinal"]:04d}.json' for row in rows if row['status'] in statuses}
+        contracts.need(not expected or name in directories, 'Missing scheduled stage artifact membership')
+        if name in directories: children(root / name, expected, (), expected)
+    if 'products' not in directories: return
+    entered = {f'{row["ordinal"]:04d}' for row in rows if row['status'] != 'unexecuted'}
+    _, cells = children(root / 'products', (), entered)
+    for name in cells:
+        cell = root / 'products' / name
+        _, nested = children(cell, {'INPUT.json', 'SUMMARY.json', 'journal.jsonl', 'DECISION.json', 'FAILURE.json'}, {'native'})
+        if 'native' not in nested: continue
+        native = cell / 'native'
+        _, nested = children(native, {'request.json', 'payload.json', 'native-response.bin', 'result.json', 'failure.json'}, {'tokenization'})
+        if 'tokenization' in nested:
+            children(native / 'tokenization', {'request.json', 'result.json', 'body.bin'}, ())
+
+
 def _summary(rows,config,elapsed):
     known=[r['accounting'] for r in rows if r['accounting'] is not None]
     uncertain=[r['id'] for r in rows if r['status'] in ('failed','interrupted','entered')]
@@ -153,6 +186,7 @@ def verify(root,receipt_sha256,*,expected_ids=None,expected_phase=None,purpose=N
             contracts.need(type(elapsed) in (int,float) and type(seal) in (int,float) and
                 math.isfinite(elapsed) and math.isfinite(seal) and 0<=elapsed<=seal,'Stage nonnegative elapsed accounting')
             rows=report['rows'];contracts.need(len(rows)==len(ordered),'All scheduled rows retained')
+            _membership(root, rows, end)
             events=read_chain(root/'journal.jsonl')
             contracts.need(events[0]['event']=='build_reserved' and events[1]['event']=='evidence_first_stage_configured'
                 and events[1]['details']==dict(config_sha256=contracts.codecs.digest(canonical(config))),'Stage journal configuration')

@@ -5,6 +5,7 @@ the independently reconstructed original parent. Qualification inputs are
 explicitly invented and cannot be promoted into production by changing a flag.
 """
 from datetime import datetime, timezone
+from collections.abc import Mapping
 from pathlib import Path
 import sys
 
@@ -29,11 +30,34 @@ def code_files():
     return freeze([result[key] for key in sorted(result)])
 
 
+def _qualification_origin(anchor):
+    """Derive registry identity from anchored metadata without opening answers."""
+    receipt = c.read(anchor); base = c.path(anchor['path']).parent
+    c.need(Path(anchor['path']).name == 'RECEIPT.json' and
+           receipt['kind'] == 'sc05_failed_production_metadata_audit_receipt_v1' and receipt['status'] == 'complete',
+           'Externally pinned original inspection required')
+    files = receipt['files']
+    for name in ('RESULT.json', 'ORIGINAL-INVENTORY.json'):
+        c.need(name in files and c.path(files[name]['path']) == base / name, 'Original inspection metadata location differs')
+    result = c.read(files['RESULT.json']); inventory = c.read(files['ORIGINAL-INVENTORY.json'])
+    c.need(result['kind'] == 'sc05_failed_production_metadata_forensics_v1' and
+           result['status'] == 'metadata_and_byte_inventory_verified', 'Original inspection status differs')
+    root = c.path(result['original_root']); frozen = c.path(result['freeze_root'])
+    frame_proof = result['original_frame']
+    c.need(inventory['root'] == str(root) and inventory['files']['FRAME.json'] == frame_proof and
+           c.path(frame_proof['path']) == root / 'FRAME.json', 'Original frame metadata binding differs')
+    frame = c.read(frame_proof)
+    c.need(type(frame['schema_version']) is int and frame['schema_version'] == 1 and
+           frame['kind'] == 'sc05_refinement_execution_v1' and frame['purpose'] == 'production' and
+           c.path(frame['output']) == root, 'Original production frame identity differs')
+    c.schedule(frame['schedule'], 'production')
+    return (previous_contracts.identity(str(root), frame_proof),
+            [anchor, files['RESULT.json'], files['ORIGINAL-INVENTORY.json'], frame_proof], [base, root, frozen])
+
+
 def _bank(descriptor):
-    c.need(set(descriptor) == {'bank', 'original_parent_identity'}, 'Exact invented-bank/experiment descriptor required')
-    # The original experiment, not a changeable synthetic bank hash, scopes the
-    # twelve-call authority. A replacement bank cannot obtain twelve more calls.
-    c.identity(descriptor['original_parent_identity'], descriptor['original_parent_identity'])
+    c.need(set(descriptor) == {'bank', 'original_inspection'}, 'Exact invented-bank/inspection descriptor required')
+    parent_id, origin_proofs, _ = _qualification_origin(descriptor['original_inspection'])
     anchor = descriptor['bank']; bank = c.read(anchor); base = Path(anchor['path']).parent
     c.need(bank['kind'] == 'tether_evidence_first_qualification_bank_v1' and type(bank['schema_version']) is int and
            bank['schema_version'] == 1 and bank['purpose'] == 'fictional_qualification' and
@@ -57,7 +81,7 @@ def _bank(descriptor):
     cases, origins = actors['cases'], ancestry['cases']
     c.need(tuple(row['query']['id'] for row in cases) == ids and tuple(row['id'] for row in origins) == ids,
            'Invented ordered case coverage differs')
-    proofs = [anchor, roles['contexts']['proof'], roles['ancestry']['proof']]
+    proofs = [*origin_proofs, anchor, roles['contexts']['proof'], roles['ancestry']['proof']]
     rows = []; cutoff = None
     c.need(len(bank['slots']) == 12, 'Twelve actor files required')
     for index, (case, origin) in enumerate(zip(cases, origins)):
@@ -67,8 +91,12 @@ def _bank(descriptor):
                'Explicit invented context fields required')
         time = origin['cutoff_utc']; current = datetime.fromisoformat(time)
         c.need(current.utcoffset() is not None, 'Aware invented cutoff required')
-        for key in ('critique_created_at_utc', 'current_source_available_at_utc'):
-            observed = datetime.fromisoformat(origin[key])
+        times = origin['current_source_available_at_utc']
+        c.need(isinstance(times, Mapping) and set(times) == {source['source_id'] for source in case['sources']},
+               'Exact current source-ID availability mapping required')
+        for timestamp in (origin['critique_created_at_utc'], *times.values()):
+            c.need(isinstance(timestamp, str), 'Aware source/critique timestamp required')
+            observed = datetime.fromisoformat(timestamp)
             c.need(observed.utcoffset() is not None and observed <= current, 'Invented input after fixed cutoff')
         c.need(cutoff is None or cutoff == time, 'Bank cutoffs differ'); cutoff = time
         for phase in c.PHASES:
@@ -83,8 +111,10 @@ def _bank(descriptor):
             proofs.append(slot['proof'])
         rows.append(dict(query=case['query'], prior=case['candidate_context'], critic=case['critique_context'],
                          sources=case['sources'], context=dict(kind='invented_evidence_first_context_v1', cutoff=time,
+                         control_sha256=c.fingerprint(dict(query=case['query'], candidate=case['candidate_context'],
+                                                         critique=case['critique_context'])),
                          source_scope='invented', source_ancestry=origin, scientific_support='unevaluated')))
-    return ids, rows, cutoff, freeze(dict(proofs=proofs, inventories=())), descriptor['original_parent_identity']
+    return ids, rows, cutoff, freeze(dict(proofs=proofs, inventories=())), parent_id
 
 
 def prepare(parent, output, *, qualification_model=None):
@@ -92,8 +122,9 @@ def prepare(parent, output, *, qualification_model=None):
     root = c.path(output)
     c.need(root != c.ROOT / 'data' and root.is_relative_to(c.ROOT / 'data'),
            'Preparation output must be a fresh project data directory')
-    if set(parent) == {'bank', 'original_parent_identity'}:
-        protected = [c.path(parent['bank']['path']).parent]
+    if set(parent) == {'bank', 'original_inspection'}:
+        _, _, protected = _qualification_origin(parent['original_inspection'])
+        protected = [*protected, c.path(parent['bank']['path']).parent]
     else:
         c.need(set(parent) == {'inspection', 'source_archive', 'baseline_acceptance'}, 'Exact production parent required')
         inspection = c.read(parent['inspection']); report = c.read(inspection['files']['RESULT.json'])
@@ -111,7 +142,7 @@ def prepare(parent, output, *, qualification_model=None):
         c.write(root / 'REQUEST.json', dict(parent=parent, created_at_utc=datetime.now(timezone.utc).isoformat(),
             model_or_http_execution_performed=False, reference_keys_available=False))
         pins = code_files(); method = c.write(root / 'METHOD.json', model.method_descriptor())
-        if set(parent) == {'bank', 'original_parent_identity'}:
+        if set(parent) == {'bank', 'original_inspection'}:
             purpose = 'fictional_qualification'
             c.need(qualification_model is not None and set(qualification_model) == MODEL_FIELDS,
                    'Explicit pinned qualification model required')
@@ -164,6 +195,12 @@ def prepare(parent, output, *, qualification_model=None):
 
 
 def read(anchor, *, verify_sources=True, verify_code=True):
+    base = c.path(anchor['path']).parent
+    c.need(not any((base / name).exists() for name in ('FAILURE.json', 'DEADLINE.json', 'FINALIZATION-FAILED.json')),
+           'Failed preparation cannot authorize execution')
+    terminal = c.read(c.capture(base / 'COMPLETE.json')[0])
+    c.need(canonical(terminal) == canonical(dict(status='paired_inputs_sealed', plan=anchor,
+        native_calls=0, source_http_requests=0, authority_reserved=False)), 'Successful preparation terminal differs')
     value = c.read(anchor)
     c.need(set(value) == FIELDS and type(value['schema_version']) is int and value['schema_version'] == 1 and
            value['kind'] == KIND, 'Evidence-first plan schema')
@@ -178,7 +215,6 @@ def read(anchor, *, verify_sources=True, verify_code=True):
     if verify_code: c.need(value['code_files'] == code_files(), 'Frozen implementation changed')
     if verify_sources: original.verify_snapshot(c.read(value['source_closure']))
     c.need(len(value['prepared']) == len(value['schedule']), 'Every scheduled pair required')
-    base = Path(anchor['path']).parent
     c.need(Path(anchor['path']).name == 'PLAN.json' and Path(value['method']['path']) == base / 'METHOD.json' and
            Path(value['source_closure']['path']) == base / 'SOURCE-CLOSURE.json', 'Exact sealed plan locations')
     for index, entry in enumerate(value['prepared']):

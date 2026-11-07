@@ -28,10 +28,14 @@ def validate_ci(value):
     c.need(type(run['id']) is int and run['id'] > 0 and
            run['url'] == f'https://api.github.com/repos/rzzli/TETHER/actions/runs/{run["id"]}',
            'Captured CI repository/run identity differs')
+    c.need(run.get('path') == '.github/workflows/validate.yml' and run.get('head_branch') == 'main' and
+           run.get('event') == 'push' and type(run.get('run_attempt')) is int and run['run_attempt'] > 0,
+           'Required main/push workflow and exact run attempt differ')
     c.need(len(jobs) == 4 and {job['name'] for job in jobs} == REQUIRED_JOBS and
            value['jobs']['total_count'] == 4, 'All four distinct required jobs must be present')
     for job in jobs:
         c.need(job['head_sha'] == commit and job['run_id'] == run['id'] and
+               type(job.get('run_attempt')) is int and job['run_attempt'] == run['run_attempt'] and
                job['status'] == 'completed' and job['conclusion'] == 'success',
                'A required exact-commit CI job did not pass')
     return commit

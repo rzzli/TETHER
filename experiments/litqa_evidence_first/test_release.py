@@ -13,9 +13,11 @@ from . import contracts as c, release
 
 def ci():
     run = dict(head_sha='a' * 40, status='completed', conclusion='success', id=42,
-               url='https://api.github.com/repos/rzzli/TETHER/actions/runs/42')
+               url='https://api.github.com/repos/rzzli/TETHER/actions/runs/42',
+               path='.github/workflows/validate.yml', head_branch='main', event='push', run_attempt=1)
     jobs = [dict(name=name, head_sha=run['head_sha'], run_id=42, status='completed', conclusion='success')
             for name in sorted(release.REQUIRED_JOBS)]
+    for job in jobs: job['run_attempt'] = run['run_attempt']
     return dict(run=run, jobs=dict(total_count=4, jobs=jobs))
 
 
@@ -51,6 +53,22 @@ class ReleaseTests(unittest.TestCase):
         for key, changed in [('head_sha', 'a' * 7), ('url', 'https://example.org/run/42'), ('id', True)]:
             value = ci(); value['run'][key] = changed
             with self.subTest(key=key), self.assertRaises(ValueError): release.validate_ci(value)
+
+    def test_workflow_branch_event_and_attempt_identity_are_required(self):
+        for key, changed in (('path', '.github/workflows/unrelated.yml'), ('head_branch', 'other'),
+                             ('event', 'pull_request'), ('run_attempt', True), ('run_attempt', 0)):
+            value = ci(); value['run'][key] = changed
+            with self.subTest(key=key, changed=changed), self.assertRaises(ValueError): release.validate_ci(value)
+        for key in ('path', 'head_branch', 'event', 'run_attempt'):
+            value = ci(); del value['run'][key]
+            with self.subTest(missing=key), self.assertRaises(ValueError): release.validate_ci(value)
+
+    def test_every_job_must_come_from_the_same_exact_attempt(self):
+        for changed in (2, True, None):
+            value = ci(); value['jobs']['jobs'][0]['run_attempt'] = changed
+            with self.subTest(attempt=changed), self.assertRaises(ValueError): release.validate_ci(value)
+        value = ci(); del value['jobs']['jobs'][0]['run_attempt']
+        with self.assertRaises(ValueError): release.validate_ci(value)
 
     def test_uncommitted_source_bytes_are_rejected_despite_green_ci(self):
         with tempfile.TemporaryDirectory() as name:
