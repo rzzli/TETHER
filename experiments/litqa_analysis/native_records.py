@@ -44,12 +44,13 @@ def safe_path(path):
 
 
 def read(path,limit=32*1024**2):
+    need(type(limit) is int and limit>=0,'Read ceiling must be a nonnegative integer')
     path=safe_path(path);before=path.stat()
     need(stat.S_ISREG(before.st_mode) and before.st_size<=limit,'Missing/nonregular/oversized analysis input')
     def identity(s):return s.st_dev,s.st_ino,s.st_size,s.st_mtime_ns,s.st_ctime_ns
     with path.open('rb') as stream:
         need(identity(os.fstat(stream.fileno()))==identity(before),'Analysis input identity changed before read')
-        raw=stream.read(limit+1)
+        raw=stream.read(before.st_size+1)
         need(identity(os.fstat(stream.fileno()))==identity(before),'Analysis input changed during read')
     need(len(raw)==before.st_size and len(raw)<=limit and identity(safe_path(path).stat())==identity(before),
          'Analysis input changed after read');return raw

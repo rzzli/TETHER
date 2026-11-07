@@ -23,6 +23,7 @@ inputs or dependencies beyond the default offline demo.
 | [litqa_recovery](litqa_recovery/) | Explicit continuation plans, source adoption and full-schedule answering after an audited interruption |
 | [litqa_analysis](litqa_analysis/) | Independent reconstruction and analysis of retained LitQA runs |
 | [litqa_refinement](litqa_refinement/) | Typed critique, paired answer repair/raw-passage removal and isolated source projections; integration in development |
+| [litqa_refinement_recovery](litqa_refinement_recovery/) | Exclusive continuation of untouched refinement calls, preserved failures and independent recovery verification; integration in development |
 
 Pinned protocols are execution contracts and retain their exact bytes. Their
 historical context does not authorize a new run or transfer prior qualification
