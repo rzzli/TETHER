@@ -53,7 +53,7 @@ def graph_groups(ids, hints):
     return groups
 
 
-def verify(path, external_sha, *, answer_started_at=None):
+def verify(path, external_sha, *, answer_started_at=None, native_scorer_archive=None):
     raw=read(path);need(digest(raw)==external_sha, 'External frozen analysis input anchor'); manifest=decode(raw)
     need(manifest['kind']=='sc04_analysis_inputs_v1' and manifest['role']=='evaluation_only' and
          manifest['primary_answers_existed_at_freeze'] is False, 'Frozen evaluator-only input contract')
@@ -62,7 +62,29 @@ def verify(path, external_sha, *, answer_started_at=None):
     frozen=datetime.fromisoformat(manifest['created_at_utc']);need(frozen.tzinfo is not None,'Aware analysis freeze')
     if answer_started_at is not None:
         started=datetime.fromisoformat(answer_started_at);need(started.tzinfo is not None and frozen<started,'Analysis frozen before answering')
-    for key in ('specification','addendum','grouping_code','freeze_helper','native_scorer'): verify_proof(manifest[key])
+    for key in ('specification','addendum','grouping_code','freeze_helper'): verify_proof(manifest[key])
+    scorer_binding = None
+    if native_scorer_archive is None:
+        verify_proof(manifest['native_scorer'])
+    else:
+        # This verifies historical bytes only. The caller must separately qualify
+        # the current scorer before executing it; archived code is never imported.
+        from .source_archive import SourceArchive, load_archive
+        need(isinstance(native_scorer_archive, SourceArchive), 'Explicit validated source archive required')
+        archive_anchor = native_scorer_archive.manifest_proof
+        native_scorer_archive = load_archive(archive_anchor['path'], archive_anchor['sha256'],
+            {name: native_scorer_archive.proof(name)['sha256'] for name in native_scorer_archive.logical_names},
+            native_scorer_archive.original_repository_root)
+        logical = 'experiments/labbench/evaluate.py'
+        original = manifest['native_scorer']
+        expected_path = Path(native_scorer_archive.original_repository_root) / logical
+        need(set(original) == {'path', 'bytes', 'sha256'} and original['path'] == str(expected_path),
+             'Original native scorer locator differs from archive')
+        scorer_raw = native_scorer_archive.read(logical)
+        need(type(original['bytes']) is int and len(scorer_raw) == original['bytes'] and
+             digest(scorer_raw) == original['sha256'], 'Archived native scorer differs from evaluator freeze')
+        scorer_binding = dict(original=original, archived=native_scorer_archive.proof(logical),
+                              archive=native_scorer_archive.manifest_proof)
     projected=decode(verify_proof(manifest['annotation_projection']))
     need(projected['role']=='diagnostic_selection_only' and projected['ordinary_retrieval_permitted'] is False and
          projected['answerer_may_read'] is False and projected['correct_answers_included'] is False and projected['key_passages_included'] is False,
@@ -81,5 +103,8 @@ def verify(path, external_sha, *, answer_started_at=None):
     need(manifest['primary_metrics']==['raw_accuracy','correct_and_admitted_yield'] and
          manifest['primary_contrasts']==['expansion_at_lexical','ranking_at_lexical','combined_vs_lexical','interaction',
                                        'marginal_expansion','marginal_ranking'], 'Complete frozen analysis family')
-    return dict(manifest=manifest,queries=rebuilt['queries'],references=rebuilt['references'],hints=rebuilt['hints'],
-                doi_schedule=rebuilt['doi_schedule'],groups=expected,annotations={h['id']:h['dois'] for h in rebuilt['hints']})
+    result = dict(manifest=manifest,queries=rebuilt['queries'],references=rebuilt['references'],hints=rebuilt['hints'],
+                  doi_schedule=rebuilt['doi_schedule'],groups=expected,annotations={h['id']:h['dois'] for h in rebuilt['hints']})
+    if scorer_binding is not None:
+        result['native_scorer_binding'] = scorer_binding
+    return result

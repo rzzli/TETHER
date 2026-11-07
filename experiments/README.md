@@ -19,6 +19,7 @@ inputs or dependencies beyond the default offline demo.
 | [labbench](labbench/) | LAB-Bench task contracts, source preparation and native scoring |
 | [litqa_comparison](litqa_comparison/) | Declared LitQA retrieval/answering conditions and source-inclusive reconstruction |
 | [litqa_supplied](litqa_supplied/) | Separately labelled supplied-source diagnostics |
+| [litqa_recovery](litqa_recovery/) | Explicit continuation plans, source adoption and full-schedule answering after an audited interruption |
 | [litqa_analysis](litqa_analysis/) | Independent reconstruction and analysis of retained LitQA runs |
 
 Pinned protocols are execution contracts and retain their exact bytes. Their
@@ -47,3 +48,16 @@ Its externally anchored manifest must supply every original producer file with
 the exact executed hash. Archived Python is read as data, never imported. Run,
 input and receipt paths still retain their original identities; this option
 does not relocate a run or authorize repeating an interrupted call.
+
+The evaluator-input verifier also accepts a validated `native_scorer_archive`
+when the frozen scorer source has moved. It checks the archive again when used
+and preserves the original scorer proof. This verifies bytes; executing a changed
+scorer additionally requires a separate equivalence check and behavior tests.
+
+Recovery uses new version-two artifacts. Completed sources keep their original
+receipts, uncertain transfers stay unknown, and only untouched source slots may
+dispatch. A permanent parent reservation prevents a second output directory from
+silently repeating collection. Answer contexts are checked for the entire schedule
+before generation begins; failed and unexecuted slots remain in the denominator.
+Component tests use fictional data. Production additionally requires a qualified
+supervisor, model and source transition, frozen limits and independent replay.
