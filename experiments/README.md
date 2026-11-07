@@ -16,11 +16,13 @@ inputs or dependencies beyond the default offline demo.
 | [scifact_multivers_transport](scifact_multivers_transport/) | Bounded, receipt-producing acquisition helper |
 | [scifact_multivers_supervision](scifact_multivers_supervision/) | Owned-child supervision with deadlines and retained outcomes |
 | [scifact_comparison](scifact_comparison/) | Fixed-retrieval full-context comparison; [protocol](scifact_comparison/PROTOCOL.md) |
+| [scifact_calibration](scifact_calibration/) | Reserved-claim retrieval, bounded inference and fixed selective-answering calibration; integration in development |
 | [labbench](labbench/) | LAB-Bench task contracts, source preparation and native scoring |
 | [litqa_comparison](litqa_comparison/) | Declared LitQA retrieval/answering conditions and source-inclusive reconstruction |
 | [litqa_supplied](litqa_supplied/) | Separately labelled supplied-source diagnostics |
 | [litqa_recovery](litqa_recovery/) | Explicit continuation plans, source adoption and full-schedule answering after an audited interruption |
 | [litqa_analysis](litqa_analysis/) | Independent reconstruction and analysis of retained LitQA runs |
+| [litqa_refinement](litqa_refinement/) | Typed critique, paired answer repair/raw-passage removal and isolated source projections; integration in development |
 
 Pinned protocols are execution contracts and retain their exact bytes. Their
 historical context does not authorize a new run or transfer prior qualification
