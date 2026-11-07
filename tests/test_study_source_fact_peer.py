@@ -518,7 +518,7 @@ class SourceFactPeerBoundaryTests(unittest.TestCase):
     def test_posix_fixture_replay_preserves_native_fail_closed_boundary(self):
         original = source_module.stable_files
         with tempfile.TemporaryDirectory() as temporary:
-            root = Path(temporary)
+            root = Path(temporary).resolve()
             posix = SimpleNamespace(name="posix", fstat=os.fstat)
             with patch(__name__ + ".os", posix), patch.object(stable_module, "os", posix):
                 with _fixture_lock_boundary(root):
@@ -532,7 +532,7 @@ class SourceFactPeerBoundaryTests(unittest.TestCase):
 
     def test_fictional_lock_scope_rejects_files_outside_its_fixture(self):
         with tempfile.TemporaryDirectory() as temporary:
-            root = Path(temporary) / "fixture"
+            root = Path(temporary).resolve() / "fixture"
             root.mkdir()
             inside, outside = root / "invented.json", Path(temporary) / "outside.json"
             inside.write_bytes(b"{}")

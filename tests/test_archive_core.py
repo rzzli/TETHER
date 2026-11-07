@@ -24,7 +24,7 @@ class ArchiveCoreTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
-        self.base = Path(self.temp.name)
+        self.base = Path(self.temp.name).resolve()
         self.original = self.base / 'original'
         self.sources = self.original / 'inputs'
         shutil.copytree(ROOT / 'src/tether_engine/demo/v2', self.sources)

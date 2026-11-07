@@ -20,7 +20,7 @@ ROOT=Path(__file__).resolve().parents[1]
 class ArchiveInterpretationTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)
-        self.root=Path(self.temp.name);self.original=self.root/'original'
+        self.root=Path(self.temp.name).resolve();self.original=self.root/'original'
         self.inputs=self.original/'inputs';shutil.copytree(ROOT/'src/tether_engine/demo/v2',self.inputs)
         case=replace(decode(Case,read_json(self.inputs/'case.json')),task='T6',endpoint=None)
         write_json(self.inputs/'case.json',encode(case))

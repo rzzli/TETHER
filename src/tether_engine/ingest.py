@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import csv
+import errno
 import hashlib
 import math
 import os
@@ -300,6 +301,21 @@ def inspect_sources(manifest_path: Path, catalog_path: Path):
     return _inspect(manifest_path, catalog_path)[2]
 
 
+def _read_archived_receipt(path):
+    """Bound Windows EACCES contention during read-only receipt verification.
+
+    Publication is never retried here. Persistent denial and all other failures
+    propagate; callers still require exact inspected bytes before updating a node.
+    """
+    for attempt in range(8):
+        try:
+            return path.read_bytes()
+        except PermissionError as error:
+            if os.name != "nt" or error.errno != errno.EACCES or attempt == 7:
+                raise
+            time.sleep(0.01)
+
+
 def _archive_receipts(root, files):
     """Preserve the exact inspected bytes, independent of mutable transport receipts."""
     for item in files:
@@ -312,7 +328,7 @@ def _archive_receipts(root, files):
                 publish_bytes(destination, payload, prefix=".receipt-")
             except FileExistsError:
                 pass
-        if destination.read_bytes() != payload:
+        if _read_archived_receipt(destination) != payload:
             raise ContractError("Content-addressed receipt archive has conflicting bytes")
         item["node"] = replace(node, receipt_path=relative)
 

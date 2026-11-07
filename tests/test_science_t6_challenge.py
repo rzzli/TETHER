@@ -24,7 +24,7 @@ ROOT=Path(__file__).resolve().parents[1]
 class TopOneTaskTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory(); self.addCleanup(self.temp.cleanup)
-        self.root=Path(self.temp.name); folder=self.root/'source'
+        self.root=Path(self.temp.name).resolve(); folder=self.root/'source'
         shutil.copytree(ROOT/'src/tether_engine/demo/v2',folder)
         packet=read_json(folder/'evidence.json')
         original=packet['observations'][0]

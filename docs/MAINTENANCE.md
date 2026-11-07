@@ -86,3 +86,11 @@ private root maps, generated reports and personal working notes outside the publ
 tracked tree. Preserve receipt-bound originals rather than editing them in place.
 Use fresh output directories and inspect incomplete attempts before considering a
 separate new execution; inspection must never restart a potentially billed call.
+
+Receipt archive verification uses up to eight read attempts, separated by 10 ms,
+only when Windows reports `EACCES`. This handles transient read contention without
+repeating publication. Persistent denial, other errors and conflicting bytes still
+fail; an input node is updated only after exact-byte verification. Source hashes
+distinguish this development implementation from earlier builds. Preserve original
+code and sealed outputs and qualify changed source before a new execution; this
+change does not migrate or reseal an existing run.
