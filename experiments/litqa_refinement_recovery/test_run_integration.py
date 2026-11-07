@@ -9,6 +9,7 @@ from types import SimpleNamespace
 from contextlib import contextmanager
 import sys
 import os
+import tempfile
 import time
 import traceback
 import unittest
@@ -17,6 +18,27 @@ from tether_engine.serde import canonical,encode,parse_json
 from experiments.litqa_refinement import test_envelopes as envelope_fixtures
 from . import original,run as r,contracts as c
 from . import test_original as parent_fixtures
+
+
+def _set_up_fixture(fixture):
+    """Author receipt paths below a canonical root, independent of TEMP aliases."""
+    cache=(r.ROOT/'data/cache').resolve();cache.mkdir(parents=True,exist_ok=True)
+    with patch.object(tempfile,'tempdir',str(cache)):fixture.setUp()
+
+
+class FixtureLocationTests(unittest.TestCase):
+    def test_fixture_scope_overrides_ambient_temp_and_restores_it(self):
+        cache=(r.ROOT/'data/cache').resolve();seen=[]
+        class Probe:
+            def setUp(inner):
+                seen.append(tempfile.gettempdir())
+                with tempfile.TemporaryDirectory() as directory:
+                    seen.append(str(Path(directory).parent))
+        ambient=str(cache/'unusable-alias'/'..')
+        with patch.object(tempfile,'tempdir',ambient):
+            _set_up_fixture(Probe())
+            self.assertEqual(tempfile.tempdir,ambient)
+        self.assertEqual(seen,[str(cache),str(cache)])
 
 
 def author_complete_recovery(failed_fixture,output):
@@ -98,7 +120,7 @@ class RecoveryNativeIntegrationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         fixture_type=type('RecoveryOriginalFixture',(parent_fixtures.FailedFixture,envelope_fixtures.EnvelopeTests),{})
-        cls.f=fixture_type('runTest');cls.addClassCleanup(cls.f.doCleanups);cls.f.setUp()
+        cls.f=fixture_type('runTest');cls.addClassCleanup(cls.f.doCleanups);_set_up_fixture(cls.f)
         cls.parent=cls.f.verify_parent()
         cls.snapshot=r.inventory(cls.f.root,omit=())
 
@@ -159,7 +181,7 @@ class RecoveryNativeIntegrationTests(unittest.TestCase):
 class CompleteRecoveryControllerTests(unittest.TestCase):
     def test_complete_invented_controller_uses_separate_admission_and_role_audits(self):
         fixture_type=type('CompleteRecoveryOriginalFixture',(parent_fixtures.FailedFixture,envelope_fixtures.EnvelopeTests),{'repair_stage_seconds':500})
-        fixture=fixture_type('runTest');self.addCleanup(fixture.doCleanups);fixture.setUp()
+        fixture=fixture_type('runTest');self.addCleanup(fixture.doCleanups);_set_up_fixture(fixture)
         result=author_complete_recovery(fixture,fixture.base/'recovered-controller')
         root=Path(result['root']);receipt=parse_json((root/'ROOT-RECEIPT.json').read_bytes())
         self.assertEqual(r.proof(root/'ROOT-RECEIPT.json')['sha256'],result['receipt_sha256'])
