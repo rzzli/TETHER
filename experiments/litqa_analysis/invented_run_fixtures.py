@@ -86,7 +86,8 @@ class InventedRuns:
                     model_license=e.proof(license_path))
 
     def _base_frame(self, phases):
-        names = ('experiments/litqa_comparison/codecs.py', 'experiments/labbench/tether_adapter.py')
+        names = ('experiments/litqa_comparison/codecs.py', 'experiments/labbench/tether_adapter.py',
+                 'experiments/litqa_comparison/admission.py', 'experiments/litqa_supplied/admission.py')
         return dict(purpose='fictional_qualification', automatic_retry=False,
                     fixture_kind='invented_no_inference_no_network_v1', real_model_calls=0, real_http_requests=0,
                     python=e.proof(sys.executable), generation_configuration=encode(pipeline.codecs.CONFIG),

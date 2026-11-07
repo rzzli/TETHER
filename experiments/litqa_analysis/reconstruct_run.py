@@ -4,6 +4,7 @@ Requires a completed run and an external root receipt hash. Scientific keys and
 scores are deliberately absent: the scoring layer consumes the reconstructed
 records only after this complete cross-stage audit succeeds.
 """
+import ast
 from pathlib import Path
 
 from . import collection, supplied_collection, envelopes, native_records, lineage
@@ -13,10 +14,37 @@ REPO=Path(__file__).resolve().parents[2]
 ARMS=('L/O','E/O','L/R','E/R')
 
 
-def code_proof(frame,name):
-    value=envelopes.proof(REPO/name)
-    need(value['sha256']==frame['code_pins'][name],'Independent reader source differs from execution pin')
+def code_proof(envelope,name):
+    frame=envelope['frame'];expected=envelope['executed_source_proofs']
+    need(name in frame['code_pins'] and name in expected,'Missing executed source binding')
+    archive=envelope.get('executed_source_archive')
+    if archive is None:
+        value=envelopes.proof(envelopes.child(REPO,name))
+    else:
+        from .source_archive import load_archive
+        resolver=load_archive(archive['path'],archive['sha256'],frame['code_pins'],str(REPO))
+        need(dict(resolver.manifest_proof,original_repository_root=str(REPO))==archive,
+             'Archived producer manifest proof changed')
+        value=resolver.proof(name)
+    need(value==expected[name] and value['sha256']==frame['code_pins'][name],
+         'Independent reader source differs from execution pin')
     return value
+
+
+def catalog_code_proof(envelope):
+    """Read the catalog import from pinned producer code without importing it."""
+    need(envelope['kind'] in ('primary','supplied'),'Known producer kind required for catalog')
+    module='litqa_comparison' if envelope['kind']=='primary' else 'litqa_supplied'
+    source=code_proof(envelope,'experiments/'+module+'/admission.py')
+    tree=ast.parse(native_records.verify_proof(source).decode('utf-8'))
+    imports=[node for node in tree.body if isinstance(node,ast.ImportFrom) and
+             any(alias.name=='DEFAULT_CATALOG' for alias in node.names)]
+    need(len(imports)==1,'One pinned catalog import required')
+    node=imports[0]
+    need(node.level==0 and node.module is not None and node.module.startswith('experiments.labbench.') and
+         len(node.module.split('.'))==3 and node.names[0].name=='DEFAULT_CATALOG' and
+         len(node.names)==1 and node.names[0].asname is None,'Unsupported pinned catalog import')
+    return code_proof(envelope,node.module.replace('.','/')+'.py')
 
 
 def stage_map(stage):
@@ -32,11 +60,12 @@ def matching(row,*,status,reason,product):
          'Independent cross-stage product mismatch: '+row['id']+' '+row['branch'])
 
 
-def native_arguments(frame,stage):
+def native_arguments(envelope,stage):
+    frame=envelope['frame']
     info=stage['model_info'];need(info is not None,'Missing phase model identity')
     spec=info['spec']
     return dict(model_provenance=info['provenance'],alias=info['alias'],owner_pid=stage['worker']['server_terminal']['pid'],
-        configuration=frame['generation_configuration'],code_proof=code_proof(frame,'experiments/litqa_comparison/codecs.py'),
+        configuration=frame['generation_configuration'],code_proof=code_proof(envelope,'experiments/litqa_comparison/codecs.py'),
         expected_endpoint=f'http://{spec["host"]}:{spec["port"]}')
 
 
@@ -80,7 +109,7 @@ def primary_verified(envelope):
     q_by={q['id']:q for q in queries};s_by={q['id']:q for q in source_queries}
     expansion_rows=stage_map(phases['expand']);collection_rows=stage_map(phases['collect']);ranking_rows=stage_map(phases['rank'])
     expansion_calls={};rank_calls={};collected={}
-    expansion_args=native_arguments(frame,phases['expand'])
+    expansion_args=native_arguments(envelope,phases['expand'])
     for row in phases['expand']['rows']:
         root=product_root(phases['expand'],row);query=s_by[row['id']]
         native=auxiliary_native.reconstruct(root,query,task='expand',**expansion_args)
@@ -99,7 +128,7 @@ def primary_verified(envelope):
         matching(row,status='completed',reason=None,product=dict(root=str(root),receipt=receipt,plan=plan,
             manifest=envelopes.proof(root/'MANIFEST.json'),expansion_available=good,query_branch=row['branch'],expansion_parent_sha256=digest(canonical(parent))))
         collected[(row['id'],row['branch'])]=result
-    rank_args=native_arguments(frame,phases['rank'])
+    rank_args=native_arguments(envelope,phases['rank'])
     for row in phases['rank']['rows']:
         key=(row['id'],row['branch']);result=collected[key];parent=collection_rows[key];pool=result['manifest']['pool']['pool']
         root=product_root(phases['rank'],row)
@@ -114,7 +143,7 @@ def primary_verified(envelope):
             matching(row,status='completed' if good else 'fallback',reason=None if good else native['summary']['status'],
                 product=dict(order=native['prediction'] if good else [p['rank_id'] for p in pool],call=call,**common));rank_calls[key]=native
     records={arm:[] for arm in ARMS};evidence_ids={arm:{} for arm in ARMS};cases={arm:[] for arm in ARMS}
-    answer_args=native_arguments(frame,phases['answer']);catalog=code_proof(frame,'experiments/labbench/tether_adapter.py')
+    answer_args=native_arguments(envelope,phases['answer']);catalog=catalog_code_proof(envelope)
     for row in phases['answer']['rows']:
         key=(row['id'],row['branch'][0]);query=q_by[row['id']];result=collected[key];parent=collection_rows[key];ranking=ranking_rows[key]
         root=product_root(phases['answer'],row);pool=result['manifest']['pool']['pool']
@@ -152,8 +181,8 @@ def supplied_verified(envelope):
         receipt=envelopes.proof(root/'RECEIPT.json');result=supplied_collection.reconstruct(root,receipt['sha256'],plan)
         matching(row,status='completed',reason=None,product=dict(root=str(root),receipt=receipt,plan=plan,manifest=envelopes.proof(root/'MANIFEST.json')))
         collected[row['id']]=result;descriptors[row['id']]=dict(root=str(root),receipt_sha256=receipt['sha256'],plan=plan)
-    records=[];evidence_ids={};cases=[];answer_args=native_arguments(frame,phases['answer'])
-    catalog=code_proof(frame,'experiments/labbench/tether_adapter.py')
+    records=[];evidence_ids={};cases=[];answer_args=native_arguments(envelope,phases['answer'])
+    catalog=catalog_code_proof(envelope)
     for row in phases['answer']['rows']:
         root=product_root(phases['answer'],row);query=q_by[row['id']];hint=h_by[row['id']]
         selected_desc={d:descriptors[d] for d in hint['dois']};selected_results={d:collected[d] for d in hint['dois']}
@@ -174,11 +203,12 @@ def supplied_verified(envelope):
         scope='All privileged source resolutions, raw passages, eligibility and answer products independently reconstructed; ordinary retrieval and scientific correctness are not established.')
 
 
-def reconstruct(root,expected_root_sha256):
-    envelope=envelopes.verify_run(root,expected_root_sha256)
+def reconstruct(root,expected_root_sha256,*,source_archive=None):
+    envelope=envelopes.verify_run(root,expected_root_sha256,source_archive=source_archive)
     primary=envelope['frame']['kind']=='sc04_primary_execution_v1'
     result=primary_verified(envelope) if primary else supplied_verified(envelope)
     return dict(status='independently_reconstructed',root=envelope['root'],root_sha256=expected_root_sha256,
         frame_sha256=envelope['frame_sha256'],purpose=envelope['frame']['purpose'],resources=envelope['resources'],**result,
+        executed_source_proofs=envelope['executed_source_proofs'],executed_source_archive=envelope['executed_source_archive'],
         source_lineage_checked=True,native_calls_checked=True,cross_stage_products_checked=True,scientific_correctness_scored=False,
         model_weight_bytes_rehashed=False,model_identity_scope='Pinned receipt/runtime/model identities and owned request echoes; assets were verified before inference, not rehashed by this analysis.')

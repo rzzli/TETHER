@@ -463,11 +463,31 @@ def _product_bijection(stage_root, rows, phase):
          'Product directory / scheduled slot bijection')
 
 
-def verify_run(root, expected_root_sha256, *, kind=None):
+def executed_sources(frame, archive=None):
+    """Bind exact producer bytes separately from retained execution paths."""
+    if archive is None:
+        proofs = {}
+        for name, sha in frame['code_pins'].items():
+            value = proof(child(REPO, name))
+            need(value['sha256'] == sha, 'Frozen executed code changed: ' + name)
+            proofs[name] = value
+        return proofs, None
+    from .source_archive import load_archive
+    need(isinstance(archive, dict) and set(archive) == {'path', 'sha256'},
+         'Explicit source archive path and external hash required')
+    resolver = load_archive(archive['path'], archive['sha256'], frame['code_pins'], str(REPO))
+    proofs = {name: resolver.proof(name) for name in resolver.logical_names}
+    record = dict(resolver.manifest_proof, original_repository_root=resolver.original_repository_root)
+    return proofs, record
+
+
+def verify_run(root, expected_root_sha256, *, kind=None, source_archive=None):
     """Verify one completed run. Caller must retain the external root hash.
 
     Original absolute proof paths are required; relocation is intentionally not
-    accepted. Large model assets are not rehashed here: the bound execution
+    accepted. An explicit source archive can supply exact historical producer
+    bytes; it does not relocate records or permit historical code execution.
+    Large model assets are not rehashed here: the bound execution
     frame/model receipt and native records are checked, not hardware attestation.
     """
     root = Path(root).absolute()
@@ -521,8 +541,7 @@ def verify_run(root, expected_root_sha256, *, kind=None):
              sum(len(h['dois']) for h in hints) == frame['question_doi_pairs'] == (205 if expected_count == 199 else 2),
              'Diagnostic complete paper schedule mismatch')
     need(len(ids) == len(set(ids)) == expected_count, 'Missing/duplicate question schedule')
-    for name, sha in frame['code_pins'].items():
-        need(proof(child(REPO, name))['sha256'] == sha, 'Frozen executed code changed: ' + name)
+    source_proofs, archive_record = executed_sources(frame, source_archive)
     need(proof(frame['python']['path']) == frame['python'], 'Frozen interpreter changed')
     model_frame = frame if primary else frame['model']
     external(model_frame['model_receipt'])
@@ -625,6 +644,7 @@ def verify_run(root, expected_root_sha256, *, kind=None):
                             'HTTP response bodies exclude wire overhead. Shared physical calls must not be summed once per arm.')
     return dict(root=str(root), root_sha256=expected_root_sha256, kind=actual_kind, frame=frame,
                 frame_sha256=frame_sha, complete=complete, phases=result_phases, resources=resources,
+                executed_source_proofs=source_proofs, executed_source_archive=archive_record,
                 source_eligibility_reconstructed=False, semantic_predictions_reconstructed=False,
                 scope='Independent externally anchored envelopes, full schedules and physical accounting; '
                       'requires separate source/native/scientific evaluation. Model weight bytes are not rehashed by this layer.')

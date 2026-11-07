@@ -40,3 +40,10 @@ Keep evaluation references out of candidate generation and report operational
 failures separately from substantive answers. Scientific performance requires
 complete declared schedules, matching native metrics and source-inclusive checks.
 Passing invented regression fixtures alone does not establish performance.
+
+For an older LitQA run whose producer sources have moved, the independent
+reconstruction API accepts an explicit `source_archive={"path": ..., "sha256": ...}`.
+Its externally anchored manifest must supply every original producer file with
+the exact executed hash. Archived Python is read as data, never imported. Run,
+input and receipt paths still retain their original identities; this option
+does not relocate a run or authorize repeating an interrupted call.
