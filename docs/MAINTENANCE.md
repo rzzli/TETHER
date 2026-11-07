@@ -48,15 +48,17 @@ $localCatalog = Join-Path $localRoot.FullName 'catalog.json'
 [System.IO.File]::Copy((Resolve-Path data/catalog/sources.json).Path, $localCatalog, $false)
 ```
 
-The writer requires an explicit local acquisition report and the independently
-checked hash of the deployment catalog being updated. Prepare the report at the
-path shown below, or substitute its actual local path:
+The writer requires a sanitized acquisition report under `data/manifests/public/`
+and the independently checked hash of the deployment catalog being updated.
+Here, `public` is the sanitizer's directory convention: the whole `data/manifests/`
+tree remains Git-ignored. Prepare the report at the path shown below, or use
+another sanitized report within that directory:
 
 ```powershell
 $localCatalog = (Resolve-Path data/manifests/private/catalog.json).Path
 $catalogHash = (Get-FileHash $localCatalog -Algorithm SHA256).Hash.ToLowerInvariant()
 uv run --no-sync python -m tether_engine.maintenance update-catalog `
-  --catalog $localCatalog --report data/manifests/private/acquisition-report.json `
+  --catalog $localCatalog --report data/manifests/public/acquisition-report.json `
   --expected-sha256 $catalogHash
 ```
 
