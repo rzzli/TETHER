@@ -1,7 +1,8 @@
 # Development and maintenance
 
-Use Python 3.11 or later and `uv`. Full validation also requires PowerShell 7 and
-the optional ingestion dependency. Run commands from the repository root.
+Use Python 3.11 or later and `uv`. Full validation also requires Windows,
+PowerShell 7 and the optional ingestion dependency. Run commands from the
+repository root.
 
 ## Install for validation
 
@@ -27,6 +28,11 @@ repository tests, required framework probes, and an offline wheel build plus an
 isolated dependency-free demo and verification. `--report <fresh-path>` retains
 its result; `--failfast` stops after the first failed test. Core mode allows only
 its explicitly named platform/optional-dependency skips.
+
+Native tokenizer fixtures and their composition tests require Windows sharing
+locks and skip before setup on other platforms. Core validation still runs the
+portable parser, subprocess-boundary and fail-closed platform checks. Full mode
+rejects these skips; a Linux core pass does not qualify Windows locking behavior.
 
 Some compatibility fixtures read exact bytes from a pinned Git checkpoint through
 [tools/history.py](../tools/history.py). A full clone contains that history; shallow

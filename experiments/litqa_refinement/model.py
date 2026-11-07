@@ -43,11 +43,15 @@ def critic_payload(query, prior, sources):
         'Otherwise supported means the passages entail that selected answer; contradicted means they explicitly oppose that '
         'selected answer; insufficient means neither relation can be established, including when no passages are supplied. '
         'Supported or contradicted requires one or two unique offered passage IDs. Otherwise cite zero to two. '
-        'Criticism is at most 160 UTF-8 bytes with no control characters. Queries are exactly two lists of one or two safe '
-        'search terms, each at most 48 ASCII letters/digits/spaces/hyphens. Every term string must differ from every other '
-        'term string across BOTH lists. Use a specific first query and a differently phrased broader second query. '
-        'Term strings must not contain the words AND, OR, NOT, DOI, PMID or PMCID in any letter case, even as ordinary words. '
-        'Do not repeat terms or use search operators, URLs or article identifiers. First list uses AND; second OR. '
+        'Criticism is at most 160 UTF-8 bytes with no control characters. Queries contains exactly two lists of literal topic '
+        'phrases, not complete search expressions. The application adds all search syntax. Each list has one or two phrases; '
+        'prefer one informative multiword phrase when sufficient. Make the first list focused and the second a differently '
+        'phrased, broader concept or synonym. Every complete phrase must be distinct, ignoring case, across both lists. '
+        'Related words may recur inside different longer phrases, but never repeat a complete phrase. Format-only example '
+        'for an unrelated topic: [["mitochondrial calcium uptake"],["organelle ion transport"]]. Generate relevant phrases '
+        'for the current question rather than copying that example. Each phrase starts with a letter or digit and uses at '
+        'most 48 ASCII letters, digits, spaces or hyphens. Never include whole-word AND, OR, NOT, DOI, PMID or PMCID, '
+        'numeric PMC identifiers, URLs or search field syntax. Check phrase uniqueness before returning. '
         'Return no replacement answer or confidence. The terms may be informed by the options and prior.',
         dict(task=query,indexed_options=[dict(answer_index=i,text=t) for i,t in enumerate(query['choices'])],
              candidate_answer=answer,candidate_context=prior,

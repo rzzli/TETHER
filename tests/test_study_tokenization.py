@@ -7,12 +7,14 @@ import os
 import shutil
 import tempfile
 import time
+from types import SimpleNamespace
 import unittest
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 from tether_engine.serde import ContractError, canonical, encode, fingerprint
 from tether_engine.journal import RunJournal
 from tether_engine.study import tokenization as tok
+from tether_engine.study import stable_read
 from tether_engine.study.stable_read import checked_path, deadline_check, hash_file, stable_files
 from tether_engine.study.tokenization import parse_token_trace, prepare_tokenizer_spec
 
@@ -77,9 +79,35 @@ class FakeChild:
         return 0
 
 
+class TokenFixturePlatformTests(unittest.TestCase):
+    def test_non_windows_fixture_skips_before_allocating_or_preparing(self):
+        with patch.dict(globals(), os=SimpleNamespace(name='posix')), \
+             patch.object(tempfile, 'TemporaryDirectory', side_effect=AssertionError('must not allocate')) as allocate, \
+             patch.dict(globals(), prepare_tokenizer_spec=Mock(side_effect=AssertionError('must not prepare'))):
+            with self.assertRaisesRegex(unittest.SkipTest, '^native held-handle test requires Windows$'):
+                TokenizationArtifactTests.setUpClass()
+        allocate.assert_not_called()
+
+    def test_windows_fixture_errors_are_not_reclassified_as_skips(self):
+        with patch.dict(globals(), os=SimpleNamespace(name='nt')), \
+             patch.object(tempfile, 'TemporaryDirectory', side_effect=OSError('invented allocation failure')):
+            with self.assertRaisesRegex(OSError, 'invented allocation failure'):
+                TokenizationArtifactTests.setUpClass()
+
+    def test_runtime_still_fails_closed_on_non_windows(self):
+        with patch.object(stable_read, 'os', SimpleNamespace(name='posix')):
+            with self.assertRaisesRegex(ContractError, 'require Windows sharing locks'):
+                with stable_files([object()], deadline=time.monotonic()+10):
+                    self.fail('Unsupported locking must never become a test skip')
+
+
 class TokenizationArtifactTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        # Callers also invoke this shared fixture directly, so a class decorator
+        # would not protect their setup. Portable tests remain outside this gate.
+        if os.name != 'nt':
+            raise unittest.SkipTest('native held-handle test requires Windows')
         cls.tmp = tempfile.TemporaryDirectory(dir=TEMP_ROOT)
         cls.root = Path(cls.tmp.name)
         cls.model = cls.root/'model'
