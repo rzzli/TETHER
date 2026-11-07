@@ -1,5 +1,6 @@
 """Invented continuation accounting and independently bound envelope controls."""
 from copy import deepcopy
+import os
 from pathlib import Path
 import tempfile
 import unittest
@@ -183,6 +184,7 @@ class PreflightBoundaryTests(unittest.TestCase):
             with self.subTest(purpose=purpose,seconds=seconds),self.assertRaises(ValueError):r._admission_limit(purpose,seconds)
 
 
+@unittest.skipUnless(os.name == 'nt', 'native held-handle test requires Windows')
 class ReconstructionIntegrationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

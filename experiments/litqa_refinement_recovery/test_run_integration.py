@@ -93,6 +93,7 @@ def author_complete_recovery(failed_fixture,output):
     return encode(result)
 
 
+@unittest.skipUnless(os.name=='nt','native held-handle test requires Windows')
 class RecoveryNativeIntegrationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -154,6 +155,7 @@ class RecoveryNativeIntegrationTests(unittest.TestCase):
         self.assertEqual(r.inventory(self.f.root,omit=()),self.snapshot)
 
 
+@unittest.skipUnless(os.name=='nt','native held-handle test requires Windows')
 class CompleteRecoveryControllerTests(unittest.TestCase):
     def test_complete_invented_controller_uses_separate_admission_and_role_audits(self):
         fixture_type=type('CompleteRecoveryOriginalFixture',(parent_fixtures.FailedFixture,envelope_fixtures.EnvelopeTests),{'repair_stage_seconds':500})

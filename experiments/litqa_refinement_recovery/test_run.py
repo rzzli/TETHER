@@ -1,6 +1,7 @@
 """Invented no-retry scheduling, stage sealing and process boundaries."""
 from pathlib import Path
 from types import SimpleNamespace
+import os
 import sys
 import tempfile
 import time
@@ -147,11 +148,22 @@ class RecoveryStageTests(unittest.TestCase):
         authority=c.write(planning/'AUTHORITY.json',{})
         frame=dict(schema_version=2,kind=r.KIND,purpose='fictional_qualification',parent=parent,plan=pp,authority=authority,code_files=[],qualification=None,output=str(out))
         fp=c.write(planning/'FRAME.json',frame);capture=self.root/'process';capture.mkdir()
-        script='import sys,time;from pathlib import Path;sys.path.insert(0,sys.argv[1]);from experiments.litqa_refinement_recovery import run as r;r.ROOT=Path(sys.argv[2]);r.load_frame=lambda *a,**kw:time.sleep(30);r.execute(sys.argv[3],sys.argv[4],output=sys.argv[5])'
+        script='import sys,time;from pathlib import Path;sys.path.insert(0,sys.argv[1]);from experiments.litqa_refinement_recovery import run as r;'
+        # Keep the actual subprocess/watchdog/retained timeout test portable.
+        # Windows also exercises the real Job Object; other platforms mock only
+        # that explicitly unsupported containment capability, never the timer.
+        if os.name!='nt':script+='r.contain_process_tree=lambda:None;'
+        script+='r.ROOT=Path(sys.argv[2]);r.load_frame=lambda *a,**kw:time.sleep(30);r.execute(sys.argv[3],sys.argv[4],output=sys.argv[5])'
         result=r.previous.supervised([sys.executable,'-I','-B','-c',script,str(r.ROOT),str(self.root),fp['path'],fp['sha256'],str(out)],r.ProcessLimits(10,4096),capture)
-        self.assertEqual(result.returncode,124);self.assertTrue((out/'REQUEST.json').is_file());self.assertTrue((out/'repair-DEADLINE.json').is_file())
+        self.assertEqual(result.returncode,124,result.stderr.decode('utf-8','replace'));self.assertTrue((out/'REQUEST.json').is_file());self.assertTrue((out/'repair-DEADLINE.json').is_file())
         self.assertFalse((out/'COMPLETE.json').exists());self.assertFalse((out/'ROOT-RECEIPT.json').exists())
         self.assertEqual(r.read_chain(out/'journal.jsonl')[1]['event'],'recovery_preflight_started')
+
+    def test_unsupported_runtime_containment_still_fails_closed(self):
+        from experiments.labbench import runtime
+        with patch.object(runtime,'os',SimpleNamespace(name='posix')):
+            with self.assertRaisesRegex(ValueError,'Native process containment requires Windows'):
+                r.contain_process_tree()
 
     def test_early_reservation_never_writes_under_original_or_authority(self):
         data=self.root/'data';data.mkdir();original=data/'original';original.mkdir();registry=data/'registry';registry.mkdir()

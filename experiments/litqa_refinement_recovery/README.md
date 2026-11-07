@@ -30,6 +30,9 @@ python -B -m unittest tests.test_refinement_recovery -v
 ```
 
 These tests are also discovered by the repository core/full validation gates.
+Tests that exercise Windows sharing locks and process jobs require Windows;
+the portable contract, accounting and parser tests also run on Ubuntu. Windows
+full validation requires every discovered test to run without skips.
 Their success does not qualify a model, a real continuation or scientific claims.
 An actual continuation additionally requires externally anchored source/input
 proofs, a qualified frame, native controls and the exact-commit validation gates.

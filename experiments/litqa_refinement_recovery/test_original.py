@@ -107,6 +107,7 @@ class FailedFixture:
         return o.reconstruct(inspection or self.inspection,self.archive,baseline_acceptance=self.acceptance)
 
 
+@unittest.skipUnless(os.name == 'nt', 'native held-handle test requires Windows')
 class OriginalTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
