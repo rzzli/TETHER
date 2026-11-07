@@ -14,6 +14,7 @@ The components currently implemented are:
 - `native_evaluation.py`: independent reconstruction of requests, native bytes, token counts and call journals.
 - `stage.py`: durable six-case qualification or full 199-case stages with explicit failed and unexecuted slots.
 - `plan.py`: source-inclusive preparation and a permanent authority keyed by original parent and new method identity.
+- `release.py`: offline checks of all four CI jobs and runtime source bytes against the exact committed revision.
 
 The whole-run controller, independent process/source reconciliation and evaluation
 integration are not yet qualified. These modules alone do not authorize native
@@ -27,6 +28,10 @@ Component tests use invented data and captured fictional HTTP responses:
 ```powershell
 python -B -m unittest discover -s experiments/litqa_evidence_first -t . -v
 ```
+
+Six stage-replay tests require native Windows sharing locks. Portable core CI
+skips those explicitly; the required Windows full gate runs them without skips.
+Stage writing, codec and planning tests also run in portable core CI.
 
 Preparation and permanent reservations never dispatch a model. A moved output
 directory does not release an existing authority. Unknown native failures stop

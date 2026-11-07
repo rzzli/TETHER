@@ -1,6 +1,7 @@
 """Durable six-case/full199 barriers; invented outcomes and no inference."""
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
+import os
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -34,6 +35,7 @@ class StageTests(unittest.TestCase):
         for _ in IDS: stage.call(self.operation)
         return stage.finish()
 
+    @unittest.skipUnless(os.name == 'nt', 'native held-handle test requires Windows')
     def test_complete_all_scheduled_and_independent_byte_journal_agreement(self):
         report = self.complete()
         self.assertEqual(report, self.verify()['report'])
@@ -41,6 +43,7 @@ class StageTests(unittest.TestCase):
         self.assertEqual(report['accounting']['known_totals']['generation_calls'], 0)
         with self.assertRaises(FileExistsError): self.stage()
 
+    @unittest.skipUnless(os.name == 'nt', 'native held-handle test requires Windows')
     def test_unknown_failure_stops_and_keeps_five_unexecuted(self):
         stage = self.stage()
         with self.assertRaises(TimeoutError):
@@ -52,6 +55,7 @@ class StageTests(unittest.TestCase):
         self.assertEqual(report['accounting']['uncertain_cells'], (IDS[0],))
         self.assertFalse(report['accounting']['measurements_complete'])
 
+    @unittest.skipUnless(os.name == 'nt', 'native held-handle test requires Windows')
     def test_interruption_cannot_be_promoted_to_capacity(self):
         stage = self.stage()
         with self.assertRaises(KeyboardInterrupt):
@@ -59,6 +63,7 @@ class StageTests(unittest.TestCase):
         self.assertEqual(stage.finish()['rows'][0]['status'], 'interrupted')
         self.assertEqual(self.verify()['report']['status'], 'incomplete')
 
+    @unittest.skipUnless(os.name == 'nt', 'native held-handle test requires Windows')
     def test_completed_generation_cannot_claim_zero_generation_usage(self):
         stage = self.stage()
         with self.assertRaises(ValueError):
@@ -77,6 +82,7 @@ class StageTests(unittest.TestCase):
         winners = [x for x in results if x is not None]
         self.assertEqual(len(winners), 1); winners[0].finish()
 
+    @unittest.skipUnless(os.name == 'nt', 'native held-handle test requires Windows')
     def test_semantic_accounting_tampering_even_after_receipt_reseal(self):
         self.complete()
         report = encode(self.verify()['report']); report['accounting']['known_totals']['generation_calls'] = 4
@@ -86,6 +92,7 @@ class StageTests(unittest.TestCase):
         (self.root / 'STAGE-RECEIPT.json').write_bytes(canonical(receipt))
         with self.assertRaises(ValueError): self.verify()
 
+    @unittest.skipUnless(os.name == 'nt', 'native held-handle test requires Windows')
     def test_write_failure_retains_uncertain_slot(self):
         stage = self.stage(); real = s.publish_bytes; fired = False
         def failing(path, raw):
@@ -102,6 +109,14 @@ class StageTests(unittest.TestCase):
         tick[0] = 71.0
         with self.assertRaises(ValueError): stage.call(self.operation)
         self.assertEqual(stage.finish()['status'], 'incomplete')
+
+    def test_portable_writer_keeps_every_case_without_claiming_locked_replay(self):
+        report = self.complete()
+        self.assertEqual(report['scheduled'], 6)
+        self.assertEqual([row['id'] for row in report['rows']], list(IDS))
+        self.assertEqual([row['status'] for row in report['rows']], ['capacity'] * 6)
+        self.assertEqual(len(list((self.root / 'slots').glob('*.json'))), 6)
+        self.assertTrue((self.root / 'STAGE-RECEIPT.json').is_file())
 
 
 if __name__ == '__main__': unittest.main()
