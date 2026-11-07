@@ -323,6 +323,35 @@ class ControllerTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "inventory"):
             r.replay(self.output, result["receipt"]["sha256"])
 
+    def test_worker_serializes_real_immutable_server_terminal_without_redispatch(self):
+        # Construct the real owner solely to exercise its immutable record API;
+        # its process/HTTP entry point is never called by this fixture.
+        terminals = []
+        make_owner = r.model.owned_server
+        @contextmanager
+        def immutable_owner(spec, bindings, *, output, journal, parent_deadline):
+            owner = make_owner(spec, bindings, output=output, journal=journal,
+                               parent_deadline=parent_deadline)
+            owner._record.update(started=True, pid=12345, server_stopped=False)
+            journal.append("server_started", pid=12345)
+            journal.append("server_ready", pid=12345)
+            try:
+                yield owner
+            finally:
+                owner._record.update(server_stopped=True, exit_code=0)
+                terminals.append(owner.terminal_record)
+                journal.append("server_terminal", **encode(owner.terminal_record))
+        with patch.object(self, "owner", side_effect=immutable_owner):
+            result = self.execute()
+        self.assertEqual(len(terminals), 1)
+        with self.assertRaises(TypeError): terminals[0]["server_stopped"] = False
+        complete = json.loads((self.output / "answer/worker/COMPLETE.json").read_bytes())
+        self.assertEqual(complete["server_terminal"], encode(terminals[0]))
+        self.assertEqual(complete["accounting"]["generation_calls"], 3)
+        self.assertEqual(len(self.n.f.calls), 3)
+        with patch.object(r, "supervise_command", side_effect=AssertionError("Replay cannot dispatch")):
+            self.assertEqual(r.replay(self.output, result["receipt"]["sha256"])["status"], "verified")
+
 
 class NativeSupervisorTests(unittest.TestCase):
     """Real bounded Python children, with no model assets or network access."""
@@ -339,6 +368,27 @@ class NativeSupervisorTests(unittest.TestCase):
         self.assertTrue(result.supervision["process_reaped"])
         self.assertIn(b"fictional child", (self.root / "execution-stdout.txt").read_bytes())
         self.assertIn(b"diagnostic", (self.root / "execution-stderr.txt").read_bytes())
+
+    def test_failure_retains_deeply_immutable_native_terminal(self):
+        fixture = model_fixture.ModelTests("runTest")
+        fixture.setUp()
+        self.addCleanup(fixture.doCleanups)
+        # No __enter__: construction cannot launch a server or read model bytes.
+        owner = r.model.owned_server(fixture.spec, fixture.bindings, output=self.root / "server",
+                                    journal=None, parent_deadline=None)
+        owner._record.update(started=True, pid=12345, server_stopped=True)
+        owner._record["secondary_failures"].append(dict(stage="fictional_cleanup", error_class="OSError"))
+        terminal = owner.terminal_record
+        with self.assertRaises(TypeError): terminal["secondary_failures"][0]["stage"] = "changed"
+        journal = r.c.Journal(self.root)
+        self.addCleanup(journal.close)
+        error = RuntimeError("Fictional failure after native cleanup")
+        r._failure(self.root, journal, error, phase="answer", server_terminal=terminal)
+        failure = json.loads((self.root / "FAILURE.json").read_bytes())
+        self.assertEqual(failure["server_terminal"], encode(terminal))
+        self.assertEqual(failure["error_type"], "RuntimeError")
+        self.assertFalse(failure["automatic_retry"])
+        self.assertFalse(getattr(error, "__notes__", []))
 
     def test_full_source_closure_matches_selected_installed_packages(self):
         pins = r.source_pins()

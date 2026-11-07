@@ -263,7 +263,7 @@ def _command(frame_proof, job_proof, output, cache, mode):
 def _failure(root, journal, error, **details):
     try:
         journal.append("execution_failed", error_type=type(error).__name__, automatic_retry=False)
-        c.publish(root / "FAILURE.json", dict(error_type=type(error).__name__, automatic_retry=False, **details))
+        c.publish(root / "FAILURE.json", encode(dict(error_type=type(error).__name__, automatic_retry=False, **details)))
     except BaseException as secondary:
         error.add_note("Failure retention: " + type(secondary).__name__)
 
@@ -586,10 +586,12 @@ def worker(frame_path, frame_sha, job_path, job_sha, *, output):
         need(time.monotonic() < end and source_pins() == frame["code_pins"], "Worker deadline or code freeze changed")
         audit.flush()
         need(audit.denials == 0, "Worker undeclared file access")
-        complete = c.publish(root / "COMPLETE.json", dict(status="complete", phase=phase, frame=proof, job=job_proof,
+        # OwnedServer exposes a deeply immutable terminal snapshot. Convert at
+        # the artifact boundary without changing the accepted in-memory state.
+        complete = c.publish(root / "COMPLETE.json", encode(dict(status="complete", phase=phase, frame=proof, job=job_proof,
             stage_receipt=stage_receipt, accounting=usage, wall_seconds=time.monotonic()-started,
             worker_memory=process_sample(os.getpid()), server_terminal=owner.terminal_record if owner else None,
-            audit_denials=0, provider_cost_usd=0))
+            audit_denials=0, provider_cost_usd=0)))
         journal.append("worker_completed", complete=complete)
     except BaseException as error:
         _failure(root, journal, error, phase=phase, wall_seconds=time.monotonic()-started,
