@@ -51,6 +51,7 @@ class PublicTreeValidationTests(unittest.TestCase):
             "experiments/example/results/summary.json", "tools/tmp/session.json",
             "tests/temp/session.log", "packages/tether/logs/worker.txt",
             "experiments/example/scratch/notes.md",
+            "experiments/example/private/session.json",
         ):
             with self.subTest(path=name), self.assertRaises(ContractError):
                 validate.validate_public_path(name)

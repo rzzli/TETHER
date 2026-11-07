@@ -191,7 +191,7 @@ def structural_checks():
                  'data/manifests/private/probe.json','.venv/probe','.env','data/benchmark/labels/probe.json',
                  'memory/probe.md','planning/probe.md','reports/probe.json','paper/probe.pdf',
                  'research_notes/probe.md','tmp/probe.json','TODO.md','results/probe.json',
-                 'experiments/probe/cache/receipt.json','tools/tmp/probe.json',
+                 'experiments/probe/cache/receipt.json','experiments/probe/private/receipt.json','tools/tmp/probe.json',
                  'data/catalog/acquisition-report.json','docs/session-notes.md',
                  'config/cloud-credentials.json','config/secrets.yaml','tools/signed_urls.txt',
                  'experiments/memory/session.md','packages/tether/planning/notes.md',
