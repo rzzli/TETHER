@@ -16,12 +16,13 @@ from experiments.scifact_comparison.worker import Writer, process_requests
 
 
 class InventedSolver:
-    def __init__(self,calibration):self.calibration=calibration
+    def __init__(self,calibration,dev_evidence=False):self.calibration=calibration;self.dev_evidence=dev_evidence
     def predict(self,claims,corpus,*,pair_deadline_seconds,event):
         cid=claims[0]['id'];doc=corpus[0];did=doc['doc_id']
         if self.calibration:event(event='pair_attempt_reserved',claim_id=cid,abstract_id=did,seconds=pair_deadline_seconds)
         event(event='pair_started',claim_id=cid,abstract_id=did)
         label=('SUPPORT' if cid%2 else 'CONTRADICT') if self.calibration and cid==did else 'NEI'
+        if not self.calibration and self.dev_evidence:label='SUPPORT'
         index=('CONTRADICT','NEI','SUPPORT').index(label);ps=[.1,.1,.1];ps[index]=.8
         selected=[0] if label!='NEI' else []
         prediction=dict(claim_id=cid,abstract_id=did,predicted_label=label,predicted_rationale=selected,
@@ -53,7 +54,7 @@ def reseal_calibration(root):
     receipt['files']={k:v for k,v in inventory(root).items() if k!='RECEIPT.json'};return write(root/'RECEIPT.json',receipt)
 
 
-def producer_fixture(root,requests,request_proof,partition):
+def producer_fixture(root,requests,request_proof,partition,*,dev_evidence=False):
     calibration=partition=='calibration';condition='calibration' if calibration else 'primary'
     recipe=dict(schema_version=1,kind='sc05_calibration_worker_v1' if calibration else 'sc03_condition_worker',
         purpose='calibrate',mode='qualification',condition=condition,schedule=[r['id'] for r in requests],
@@ -72,7 +73,7 @@ def producer_fixture(root,requests,request_proof,partition):
         writer.event('model_load_started')
     writer.publish('MODEL.json',dict(metadata=dict(hparams=dict(label_threshold=None,rationale_threshold=.5,num_labels=3))))
     if calibration:writer.event('model_load_completed')
-    counts=process_requests(requests,InventedSolver(calibration),writer,condition)
+    counts=process_requests(requests,InventedSolver(calibration,dev_evidence),writer,condition)
     if calibration:
         writer.publish('RESOURCES.json',dict(counts=counts));writer.event('calibration_completed',counts=counts);writer.close()
         (root/'io-audit.jsonl').write_bytes(canonical(dict(event='open',allowed=True,basis='declared_file_or_runtime'))+b'\n')
@@ -90,7 +91,7 @@ def producer_fixture(root,requests,request_proof,partition):
     return dict(root=str(root),receipt=proof(root/'RECEIPT.json'),recipe=proof(recipe_path),requests=request_proof)
 
 
-def fixture(root,partition='calibration'):
+def fixture(root,partition='calibration',*,dev_evidence=False):
     transition,source,prepared=preparation_fixture(root)
     manifest=parse_json((prepared/'manifest.json').read_bytes())
     queries=[parse_json(x) for x in (prepared/f'views/queries_{partition}.jsonl').read_bytes().splitlines()]
@@ -99,11 +100,12 @@ def fixture(root,partition='calibration'):
     for query in queries:
         docs=([query['id']] if query['id'] in byid else [])+[d for d in byid if d!=query['id']]
         docs=docs[:5]
+        if partition=='dev' and dev_evidence:docs.reverse()
         requests.append(dict(id=query['id'],claim=query['claim'],documents=[byid[d] for d in docs]))
         retrieval.append(dict(id=query['id'],retrieved=[dict(doc_id=d,rank=i+1,score=1.-.1*i,
             document_sha256=o.digest(canonical(byid[d]))) for i,d in enumerate(docs)]))
     requests_path=root/'requests.jsonl';requests_path.write_bytes(b''.join(canonical(r)+b'\n' for r in requests))
-    producer=producer_fixture(root/'producer',requests,proof(requests_path),partition)
+    producer=producer_fixture(root/'producer',requests,proof(requests_path),partition,dev_evidence=dev_evidence)
     retrieved_path=root/'retrieval.jsonl'
     if partition=='calibration':
         write(retrieved_path,dict(kind='sc05_calibration_retrieval_v1',purpose='calibrate',schedule=[q['id'] for q in queries],
@@ -135,8 +137,10 @@ def fixture(root,partition='calibration'):
             resources=dict(wall_seconds=claim['wall_seconds'],cpu_seconds=claim['cpu_seconds'],input_bytes=len(canonical(request)),
                 output_bytes=len(canonical(claim)),examples=1,provider_cost_usd=0,token_usage_reason='not_applicable_non_llm',
                 model_input_tokens=None,model_output_tokens=None,tokenizer_identity=None,provider_usage=None)
+            bindings=[dict(doc_id=int(did),sentence_id=i,text_sha256=o.digest(byid[int(did)]['abstract'][i].encode()))
+                      for did,evidence in pred['evidence'].items() for i in evidence['sentences']]
             envelope=dict(prediction_sha256=o.digest(canonical(pred)),request_sha256=o.digest(canonical(native_request)),
-                retrieved=retrieved['retrieved'],source_bindings=[],producer_code_sha256='a'*64,resources=resources)
+                retrieved=retrieved['retrieved'],source_bindings=bindings,producer_code_sha256='a'*64,resources=resources)
             measured=dict(input_tokens=50,generated_output_tokens=0,tokenizer_assets_receipt_sha256='b'*64,
                 mode='non_autoregressive_sequence_and_sentence_classification',pair_observations=[dict(token_count=10)]*5)
             checks.append(dict(candidate=dict(kind='accepted_candidate',scientific_validation='not_performed',prediction=pred,
@@ -183,6 +187,34 @@ class ReaderTests(unittest.TestCase):
         self.path,self.frame,self.prepared=fixture(self.root)
     def read(self):return o.reconstruct_partition(self.path,proof(self.path)['sha256'])
     def reframe(self):write(self.path,self.frame)
+    def test_retained_binding_order_follows_canonical_claim_not_retrieval(self):
+        root=self.root/'source-order';root.mkdir()
+        path,frame,_=fixture(root,'dev',dev_evidence=True)
+        checks=parse_json(Path(frame['producer']['admission']['checks']['path']).read_bytes())
+        bound=[r['doc_id'] for r in checks[0]['candidate']['envelope']['source_bindings']]
+        requests=[parse_json(x) for x in Path(frame['producer']['requests']['path']).read_bytes().splitlines()]
+        self.assertEqual(bound,sorted(bound))
+        self.assertNotEqual(bound,[d['doc_id'] for d in requests[0]['documents']])
+        result=o.reconstruct_partition(path,proof(path)['sha256'])
+        self.assertEqual(result.coverage['admitted'],1)
+        self.assertTrue(result.cases[0]['native_assembly_agreement'])
+    def test_binding_order_compatibility_rejects_duplicate_missing_extra_and_wrong_hash(self):
+        root=self.root/'source-guards';root.mkdir()
+        path,frame,_=fixture(root,'dev',dev_evidence=True)
+        admission=frame['producer']['admission'];check_path=Path(admission['checks']['path'])
+        original=parse_json(check_path.read_bytes());receipt_path=Path(admission['receipt']['path'])
+        receipt=parse_json(receipt_path.read_bytes())
+        for change in ('duplicate','missing','extra','hash','boolean','field'):
+            changed=copy.deepcopy(original);bindings=changed[0]['candidate']['envelope']['source_bindings']
+            if change=='duplicate':bindings.append(dict(bindings[0]))
+            if change=='missing':bindings.pop()
+            if change=='extra':bindings.append(dict(bindings[0],sentence_id=1))
+            if change=='hash':bindings[0]['text_sha256']='0'*64
+            if change=='boolean':bindings[0]['sentence_id']=False
+            if change=='field':bindings[0]['additional']='not authorized'
+            admission['checks']=write(check_path,changed);receipt['files']['CHECKS.json']=admission['checks']
+            admission['receipt']=write(receipt_path,receipt);write(path,frame)
+            with self.subTest(change=change),self.assertRaises(ValueError):o.reconstruct_partition(path,proof(path)['sha256'])
     def test_full_fictional_partition_native_agreement_and_immutable_rows(self):
         result=self.read();self.assertEqual(result.ids,tuple(self.frame['expected_ids']))
         self.assertEqual(result.coverage['scheduled'],len(result.ids));self.assertTrue(all(r.strict_success==1 for r in result.rows))

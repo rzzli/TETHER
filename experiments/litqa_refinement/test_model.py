@@ -10,6 +10,21 @@ MODEL=dict(weights_sha256={'fictional.gguf':'a'*64},runtime_sha256='b'*64)
 
 
 class ModelTests(unittest.TestCase):
+    def test_critic_names_the_selected_answer_and_absent_candidate_explicitly(self):
+        query=f.query()
+        for index in (0,1,None):
+            prior=m.contracts.candidate(query,dict(answer_index=index,evidence_ids=[]) if index is not None else None,
+                producer_status='produced' if index is not None else 'input_unavailable',
+                original_admission_status='rejected' if index is not None else 'not_run',
+                native_call_sha256='a'*64 if index is not None else None,generated_at_utc=None,offered_ids=())
+            _,payload=m.make_critic_request(query,prior,(),MODEL)
+            body=payload['prompt'].split('<|im_start|>user\n')[1].split('<|im_end|>')[0]
+            value=json.loads(body)
+            self.assertEqual(value['candidate_answer'],None if index is None else
+                dict(answer_index=index,text=query['choices'][index]))
+            self.assertEqual(value['indexed_options'],[dict(answer_index=i,text=t) for i,t in enumerate(query['choices'])])
+            self.assertEqual(value['candidate_context'],encode(prior))
+
     def test_critic_roundtrip_strict_binding(self):
         r,p=m.make_critic_request(f.query(),f.prior(),f.sources(),MODEL)
         m.validate_binding(r,p)

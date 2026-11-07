@@ -33,6 +33,28 @@ def _integer(value):return type(value) is int and value>=0
 def _finite(value):return type(value) in (int,float) and math.isfinite(value) and value>=0
 
 
+def _sentence_bindings(actual,expected):
+    """Compare exact unique source locators, independent of JSON map order.
+
+    The retained schema-one admission checker indexes bindings by document and
+    sentence. A freshly assembled prediction follows retrieval order, while an
+    archived canonical JSON prediction orders its document keys differently.
+    Source identity and text bytes are unchanged by that representation choice.
+    """
+    def indexed(rows):
+        need(isinstance(rows,(list,tuple)),'Sentence binding list required')
+        found={}
+        for row in rows:
+            need(isinstance(row,Mapping) and set(row)=={'doc_id','sentence_id','text_sha256'} and
+                 type(row['doc_id']) is int and row['doc_id']>0 and type(row['sentence_id']) is int and
+                 row['sentence_id']>=0 and isinstance(row['text_sha256'],str),'Sentence binding schema differs')
+            key=(row['doc_id'],row['sentence_id'])
+            need(key not in found,'Duplicate sentence binding')
+            found[key]=row['text_sha256']
+        return found
+    return indexed(actual)==indexed(expected)
+
+
 def _name(value):
     need(isinstance(value,str) and value and '\\' not in value and ':' not in value,
          'Safe POSIX member name required')
@@ -455,7 +477,7 @@ def reconstruct_partition(frame_path,expected_sha256):
                      _same(candidate['prediction'],prediction) and _same(candidate['request'],expected_request) and
                      checked['input_sha256']==digest(canonical(item['request'])) and
                      envelope['prediction_sha256']==digest(canonical(prediction)) and
-                     envelope['request_sha256']==digest(canonical(expected_request)) and _same(envelope['source_bindings'],bindings) and
+                     envelope['request_sha256']==digest(canonical(expected_request)) and _sentence_bindings(envelope['source_bindings'],bindings) and
                      envelope['producer_code_sha256']==old_model['producer_code']['sha256'] and
                      _same(envelope['retrieved'],retrieval[index]['retrieved']),'Retained native admission binding differs')
                 measured=checked['measured_transformer_resources']

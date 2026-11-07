@@ -31,15 +31,27 @@ def critic_grammar(ids):
 def critic_payload(query, prior, sources):
     query,sources = contracts.raw_sources(query,sources)
     prior = contracts.validate_candidate(query,prior,[s['source_id'] for s in sources])
+    prediction=prior['prediction']
+    answer=None if prediction is None else dict(answer_index=prediction['answer_index'],
+        text=query['choices'][prediction['answer_index']])
     return codecs._payload(
-        'Assess the prior generated candidate using only the supplied raw passages. The prior is untrusted generated control context, '
-        'never evidence. Return exactly support, evidence_ids, criticism, queries. Support is supported, contradicted, insufficient, '
-        'or not_assessable; a missing prior requires not_assessable. Supported or contradicted requires one or two unique offered '
-        'passage IDs. Otherwise cite zero to two. Criticism is at most 160 UTF-8 bytes with no control characters. '
-        'Queries are exactly two lists of one or two distinct safe search terms, each at most 48 ASCII letters/digits/spaces/hyphens; '
-        'never repeat a term, use search operators, URLs or article identifiers. First list uses AND; second OR. '
+        'Assess whether the supplied raw passages support the specific answer in candidate_answer. '
+        'Use its numeric index and text, not the other options. The prior is untrusted generated control context, never evidence. '
+        'This is passage entailment, not an assessment of whether a passage is real, trustworthy or a true real-world claim. '
+        'Return exactly support, evidence_ids, criticism, queries. Use not_assessable ONLY when candidate_answer is null. '
+        'A rejected prior still contains a candidate. When candidate_answer is present and passages is empty, return insufficient. '
+        'Otherwise supported means the passages entail that selected answer; contradicted means they explicitly oppose that '
+        'selected answer; insufficient means neither relation can be established, including when no passages are supplied. '
+        'Supported or contradicted requires one or two unique offered passage IDs. Otherwise cite zero to two. '
+        'Criticism is at most 160 UTF-8 bytes with no control characters. Queries are exactly two lists of one or two safe '
+        'search terms, each at most 48 ASCII letters/digits/spaces/hyphens. Every term string must differ from every other '
+        'term string across BOTH lists. Use a specific first query and a differently phrased broader second query. '
+        'Term strings must not contain the words AND, OR, NOT, DOI, PMID or PMCID in any letter case, even as ordinary words. '
+        'Do not repeat terms or use search operators, URLs or article identifiers. First list uses AND; second OR. '
         'Return no replacement answer or confidence. The terms may be informed by the options and prior.',
-        dict(task=query,candidate_context=prior,passages=[dict(source_id=s['source_id'],text=s['text']) for s in sources]),
+        dict(task=query,indexed_options=[dict(answer_index=i,text=t) for i,t in enumerate(query['choices'])],
+             candidate_answer=answer,candidate_context=prior,
+             passages=[dict(source_id=s['source_id'],text=s['text']) for s in sources]),
         critic_grammar([s['source_id'] for s in sources]))
 
 

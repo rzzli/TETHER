@@ -8,6 +8,7 @@ from unittest.mock import patch
 from tether_engine.serde import canonical, encode
 from experiments.labbench.tests import test_model as fixtures
 from experiments.litqa_refinement import contracts, model, transport as t
+from experiments.litqa_refinement import pipeline, schedule
 
 
 class RefinementTransportTests(unittest.TestCase):
@@ -51,6 +52,35 @@ class RefinementTransportTests(unittest.TestCase):
             alias='fictional-mcq',server_spec=self.f.spec,bindings=self.f.bindings)
         self.assertEqual(replay['decoded'],result['decoded'])
         with self.assertRaises(TypeError): result['decoded']['queries'][0][0]='changed'
+
+    def test_scheduled_id_reaches_real_cell_and_native_transport_for_every_task(self):
+        ids=[self.q['id'],'00000000-0000-0000-0000-000000000002']
+        critic=contracts.critique(self.q,self.prior,self.f.sources,self.answer,
+            native_status='completed',native_call_sha256='b'*64)
+        pair=model.make_repair_pair(self.q,self.prior,critic,self.f.sources,self.f.model)
+        for task in ('critic','repair','removal'):
+            slot=schedule.slots(ids,task,purpose='fictional_qualification',
+                execution_namespace='00000000-0000-0000-0000-000000000003')[0]
+            descriptor=dict(task=task,query=self.q,prior=self.prior,
+                sources=self.f.sources if task!='removal' else [],model_provenance=self.f.model,
+                execution_id=slot['execution_id'])
+            if task!='critic':
+                descriptor.update(critic=critic,prepared_member=pair[task],control_sha256=pair['control_sha256'])
+                self.r,self.p=pair[task]['request'],pair[task]['payload']
+            self.f.request,self.f.payload=self.r,self.p
+            decoded=self.answer if task=='critic' else dict(answer_index=0,
+                evidence_ids=['fixture:p0001'] if task=='repair' else [])
+            raw=self.f.native_body(content=canonical(decoded).decode())
+            output=self.f.root/('scheduled-'+task);deadline=time.monotonic()+20
+            with patch.object(t.native,'_check_owner',return_value=12345), \
+                 patch.object(t.native,'_watchdog',return_value=fixtures.Timer()), \
+                 patch.object(t.mcq,'tokenize_once',return_value=self.f.quote()), \
+                 self.f.transport(fixtures.Response(raw)):
+                result=pipeline.NativeCaller(self.f.owner,'fictional-mcq')(descriptor,output,deadline)
+            checked,usage,_=pipeline._model_result(result,descriptor,output,deadline)
+            self.assertEqual(checked['summary']['execution_id'],slot['execution_id'])
+            self.assertEqual(usage['generation_calls'],1)
+        self.assertEqual(len(self.f.calls),3)
 
     def test_repair_and_removed_raw_input_have_distinct_bound_requests(self):
         critic=contracts.critique(self.q,self.prior,self.f.sources,self.answer,
