@@ -52,8 +52,27 @@ ARCHIVED_INVALID_PYTHON = {
 # Working records stay local. Public validation must not require or publish them.
 PRIVATE_ROOTS = frozenset({
     'memory', 'planning', 'reports', 'paper', 'research_notes', 'tmp', 'temp',
-    'cache', 'scratch', 'logs',
+    'cache', 'results', 'scratch', 'logs',
 })
+PRIVATE_COMPONENTS = frozenset({
+    '.venv', '__pycache__', 'build', 'dist', 'runs', 'private', 'cache', 'results',
+    'tmp', 'temp', 'scratch', 'logs', 'credentials', 'secrets', 'signed_urls',
+    'memory', 'planning', 'reports', 'paper', 'research_notes',
+})
+PUBLIC_DOC_FILES = frozenset({
+    'docs/ARCHIVE.md', 'docs/FRAMEWORK.md', 'docs/MAINTENANCE.md',
+    'docs/TETHER-CATALOG-POLICY.md', 'docs/TETHER-VERIFICATION-SCOPE.md',
+})
+PUBLIC_DATA_FILES = frozenset({
+    'data/.gitignore', 'data/README.md', 'data/catalog/README.md',
+    'data/catalog/sources.json', 'data/catalog/policy-v2.json',
+})
+PRIVATE_CONFIG_SUFFIXES = frozenset({
+    '.json', '.jsonl', '.yaml', '.yml', '.toml', '.ini', '.cfg', '.conf',
+    '.txt', '.csv', '.tsv', '.log',
+})
+# Construct the retired identifier without reintroducing it into public files.
+LEGACY_PROJECT_TOKEN = bytes((97, 115, 111, 102))
 PRIVATE_FILES = frozenset({
     'todo.md', 'memory.md', 'data/data_plan.md',
     'packages/tether/migration-validation.json',
@@ -70,14 +89,30 @@ def validate_public_path(name):
         raise ContractError('Noncanonical public repository path: '+name)
     folded = name.casefold()
     parts = folded.split('/')
+    if LEGACY_PROJECT_TOKEN in folded.encode('utf-8'):
+        raise ContractError('Legacy project identifier in public path: '+name)
     if parts[0] in PRIVATE_ROOTS or folded in PRIVATE_FILES:
         raise ContractError('Internal working record entered public tracking scope: '+name)
-    if any(key in parts for key in ('.venv', 'runs', 'private')):
+    if any(key in parts for key in PRIVATE_COMPONENTS):
         raise ContractError('Private or generated file entered tracking scope: '+name)
-    if folded.startswith(('data/raw/', 'data/reference/', 'data/derived/',
-                          'data/cache/', 'data/benchmark/', 'data/manifests/',
-                          'data/catalog/history/')):
-        raise ContractError('Bulk/benchmark payload entered tracking scope: '+name)
+    if parts[0] == 'docs' and name not in PUBLIC_DOC_FILES:
+        raise ContractError('Unapproved documentation entered tracking scope: '+name)
+    if parts[0] == 'data' and name not in PUBLIC_DATA_FILES:
+        raise ContractError('Unapproved data artifact entered tracking scope: '+name)
+    leaf = parts[-1]
+    if leaf in {'memory.md', 'todo.md'}:
+        raise ContractError('Internal working record entered public tracking scope: '+name)
+    if leaf != '.env.example' and (leaf == '.env' or leaf.startswith('.env.')):
+        raise ContractError('Local environment configuration entered tracking scope: '+name)
+    if Path(leaf).suffix in PRIVATE_CONFIG_SUFFIXES and any(
+            token in leaf for token in ('credentials', 'secrets', 'signed_urls')):
+        raise ContractError('Credential artifact entered tracking scope: '+name)
+
+
+def validate_public_bytes(name, raw):
+    """Scan every public payload, including non-Python fixtures and documents."""
+    if LEGACY_PROJECT_TOKEN in raw.lower():
+        raise ContractError('Legacy project identifier in public content: '+name)
 
 
 def validate_public_catalog_template(catalog):
@@ -147,13 +182,22 @@ def structural_checks():
     archived_invalid = []
     for name in files:
         validate_public_path(name)
+        raw = (ROOT/name).read_bytes()
+        validate_public_bytes(name, raw)
         if name.endswith('.py'):
-            if validate_python_artifact(name, (ROOT/name).read_bytes()) == 'archived_invalid_source':
+            if validate_python_artifact(name, raw) == 'archived_invalid_source':
                 archived_invalid.append(name)
     for name in ('runs/probe.json','data/derived/probe.json','data/raw/probe.parquet',
                  'data/manifests/private/probe.json','.venv/probe','.env','data/benchmark/labels/probe.json',
                  'memory/probe.md','planning/probe.md','reports/probe.json','paper/probe.pdf',
-                 'research_notes/probe.md','tmp/probe.json','TODO.md'):
+                 'research_notes/probe.md','tmp/probe.json','TODO.md','results/probe.json',
+                 'experiments/probe/cache/receipt.json','tools/tmp/probe.json',
+                 'data/catalog/acquisition-report.json','docs/session-notes.md',
+                 'config/cloud-credentials.json','config/secrets.yaml','tools/signed_urls.txt',
+                 'experiments/memory/session.md','packages/tether/planning/notes.md',
+                 'experiments/example/reports/run.json','experiments/paper/results.json',
+                 'packages/research_notes/session.md','experiments/TODO.md',
+                 'packages/tether/memory.md'):
         if subprocess.run(['git','check-ignore','-q',name],cwd=ROOT).returncode:
             raise ContractError('Required ignore missing: '+name)
     catalog = read_json(ROOT/'data/catalog/sources.json')

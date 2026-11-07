@@ -45,6 +45,68 @@ class PublicTreeValidationTests(unittest.TestCase):
             with self.subTest(path=name), self.assertRaises(ContractError):
                 validate.validate_public_path(name)
 
+    def test_nested_generated_output_directories_are_not_public(self):
+        for name in (
+            "results/RESULTS.json", "experiments/litqa_analysis/cache/RECEIPT.json",
+            "experiments/example/results/summary.json", "tools/tmp/session.json",
+            "tests/temp/session.log", "packages/tether/logs/worker.txt",
+            "experiments/example/scratch/notes.md",
+        ):
+            with self.subTest(path=name), self.assertRaises(ContractError):
+                validate.validate_public_path(name)
+
+    def test_nested_working_records_are_not_public(self):
+        for name in (
+            "experiments/memory/session.md", "packages/tether/planning/notes.md",
+            "experiments/example/reports/run.json", "experiments/paper/results.json",
+            "packages/research_notes/session.md", "experiments/TODO.md",
+            "packages/tether/memory.md", "experiments/MEMORY.md",
+        ):
+            with self.subTest(path=name), \
+                    patch.object(validate.subprocess, "check_output", return_value=name.encode()+b"\0"), \
+                    patch.object(Path, "read_bytes", side_effect=AssertionError("Working record opened")):
+                with self.assertRaises(ContractError):
+                    validate.structural_checks()
+
+    def test_force_added_docs_data_and_credentials_fail_before_content_reads(self):
+        for name in (
+            "docs/session-notes.md", "docs/review/notes.md",
+            "data/catalog/acquisition-report.json", "data/collection-state.json",
+            "data/STORAGE_AND_DOWNLOAD_REPORT.md", "src/.env", "config/.env.local",
+            "config/cloud-credentials.json", "config/SECRETS.yaml", "tools/signed_urls.txt",
+        ):
+            with self.subTest(path=name), \
+                    patch.object(validate.subprocess, "check_output", return_value=name.encode()+b"\0"), \
+                    patch.object(Path, "read_bytes", side_effect=AssertionError("Payload opened before boundary rejection")):
+                with self.assertRaises(ContractError):
+                    validate.structural_checks()
+
+    def test_public_examples_source_and_exact_documentation_allowlists(self):
+        for name in (
+            ".env.example", "examples/.env.example", "tests/test_credentials.py",
+            "tests/fixtures/metadata.json", "src/tether_engine/study/process.py",
+            "docs/ARCHIVE.md", "docs/FRAMEWORK.md", "docs/MAINTENANCE.md",
+            "docs/TETHER-CATALOG-POLICY.md", "docs/TETHER-VERIFICATION-SCOPE.md",
+            "data/.gitignore", "data/README.md", "data/catalog/README.md",
+            "data/catalog/sources.json", "data/catalog/policy-v2.json",
+        ):
+            with self.subTest(path=name):
+                validate.validate_public_path(name)
+
+    def test_former_project_identity_is_rejected_in_paths_and_all_content(self):
+        token = bytes((97, 115, 111, 102))
+        for variant in (token, token.upper(), token.title()):
+            name = "src/"+variant.decode()+"/module.py"
+            with self.subTest(path=name), self.assertRaises(ContractError):
+                validate.validate_public_path(name)
+            for name in ("README.md", "tests/fixtures/names.bin", "src/example.py"):
+                with self.subTest(path=name, variant=variant), \
+                        patch.object(validate.subprocess, "check_output", return_value=name.encode()+b"\0"), \
+                        patch.object(Path, "read_bytes", return_value=b"prefix "+variant+b" suffix"), \
+                        patch.object(validate, "read_json", side_effect=AssertionError("Catalog checked before branding")):
+                    with self.assertRaisesRegex(ContractError, "Legacy project identifier"):
+                        validate.structural_checks()
+
     def catalog_checkout(self, folder):
         root = Path(folder)
         catalog = root / "data/catalog"

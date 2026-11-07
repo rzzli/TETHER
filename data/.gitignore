@@ -1,22 +1,10 @@
-# Only reusable catalog definitions and documentation belong in the public tree.
-# Ignore whole directory roots: nested ignore files must not reintroduce payloads.
-/raw/
-/reference/
-/derived/
-/benchmark/
-/cache/
-/manifests/
-/catalog/history/
-/DATA_PLAN.md
-/STORAGE_AND_DOWNLOAD_REPORT.md
-
-# Local access configuration and incomplete transfers.
-**/.env
-**/.env.*
-**/*credentials*
-**/*secrets*
-**/*signed_urls*
-**/*.tmp
-**/*.partial
-**/__pycache__/
-**/.DS_Store
+# Only these reusable definitions and guides belong in the public data tree.
+# Ignored parent directories cannot be reopened by a nested ignore file.
+/*
+!/.gitignore
+!/README.md
+!/catalog/
+/catalog/*
+!/catalog/README.md
+!/catalog/sources.json
+!/catalog/policy-v2.json

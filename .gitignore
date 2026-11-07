@@ -10,19 +10,61 @@ runs/
 !.env.example
 
 # Local research workspace: never publish working notes, private state or outputs.
-/memory/
-/planning/
-/reports/
-/paper/
-/research_notes/
-/tmp/
-/temp/
-/cache/
-/scratch/
-/logs/
-/TODO.md
-/memory.md
-/MEMORY.md
+memory/
+planning/
+reports/
+paper/
+research_notes/
+# Generated work can also live beneath an experiment or package.
+tmp/
+temp/
+cache/
+results/
+scratch/
+logs/
+[Tt][Oo][Dd][Oo].md
+[Mm][Ee][Mm][Oo][Rr][Yy].md
+
+# Deployment credentials are local artifacts; source tests keep normal names.
+credentials/
+secrets/
+signed_urls/
+**/*credentials*.json
+**/*credentials*.jsonl
+**/*credentials*.yaml
+**/*credentials*.yml
+**/*credentials*.toml
+**/*credentials*.ini
+**/*credentials*.cfg
+**/*credentials*.conf
+**/*credentials*.txt
+**/*credentials*.csv
+**/*credentials*.tsv
+**/*credentials*.log
+**/*secrets*.json
+**/*secrets*.jsonl
+**/*secrets*.yaml
+**/*secrets*.yml
+**/*secrets*.toml
+**/*secrets*.ini
+**/*secrets*.cfg
+**/*secrets*.conf
+**/*secrets*.txt
+**/*secrets*.csv
+**/*secrets*.tsv
+**/*secrets*.log
+**/*signed_urls*.json
+**/*signed_urls*.jsonl
+**/*signed_urls*.yaml
+**/*signed_urls*.yml
+**/*signed_urls*.toml
+**/*signed_urls*.ini
+**/*signed_urls*.cfg
+**/*signed_urls*.conf
+**/*signed_urls*.txt
+**/*signed_urls*.csv
+**/*signed_urls*.tsv
+**/*signed_urls*.log
 
 # Public documentation is deliberately limited to maintained usage guides.
 /docs/*
