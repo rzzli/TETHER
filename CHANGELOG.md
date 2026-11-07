@@ -15,6 +15,9 @@
   rejection of an exact 300-second limit through subtraction roundoff. The cap
   remains unchanged; expired and nonfinite endpoints stay rejected, and remaining
   time helpers explicitly reject booleans.
+- Accept the immutable task sequence when validating a production refinement
+  frame. The former list comparison rejected qualified frames before dispatch;
+  regression coverage now exercises the actual JSON-to-immutable loading path.
 
 ## Interface 0.6.0 / engine 0.4.0
 

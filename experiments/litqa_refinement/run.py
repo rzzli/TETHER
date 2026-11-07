@@ -94,7 +94,7 @@ def load_frame(path,expected,output):
         contracts.need(qualification['kind']=='sc05_refinement_native_qualification_v1' and qualification['status']=='passed'
             and canonical(qualification['code_files'])==canonical(frame['code_files'])
             and canonical(qualification['model_provenance'])==canonical(frame['model_provenance'])
-            and qualification['native_tasks']==['critic','repair','removal'] and qualification['automatic_retry'] is False,
+            and qualification['native_tasks']==('critic','repair','removal') and qualification['automatic_retry'] is False,
             'Current full native qualification required before production')
     else:contracts.need(frame['qualification'] is None,'Fictional qualification cannot inherit production claims')
     return frame,spec,root
