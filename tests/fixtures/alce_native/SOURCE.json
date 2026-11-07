@@ -1,0 +1,19 @@
+{
+  "files": {
+    "LICENSE": {
+      "bytes": 1094,
+      "sha256": "8872dbf8660b00890b5e07ce1ea1f7a44fa7ae4e1857da56caba172b51dab3cb"
+    },
+    "eval.py": {
+      "bytes": 18961,
+      "sha256": "e0f63bf865cacc64d7390fc62669c82b2653b1628f40051de0efdf5518064091"
+    },
+    "utils.py": {
+      "bytes": 4499,
+      "sha256": "92e6900b5350f7da4dc179f3d9f498f73d976377a412e8c244db8339ad7976b9"
+    }
+  },
+  "purpose": "Exact MIT-licensed upstream source fixtures for selected-function conformance with invented inputs only. No full upstream module is imported.",
+  "repository": "https://github.com/princeton-nlp/ALCE",
+  "revision": "246c476a4edfc564266b7346b6e29ef4861ae937"
+}
