@@ -1,6 +1,6 @@
-# Bounded SC02 public acquisition
+# Bounded public acquisition
 
-This new, standard-library-only helper downloads the root-approved manifest into one fresh attempt. It neither invokes the old downloader nor installs packages or deserializes model weights. Root launches the actual CLI after qualification and review. There is no retry or resume mode. Existing attempts, partials, receipts and errors remain unchanged.
+This standard-library-only helper downloads an explicitly approved manifest into a fresh attempt. It does not install packages or deserialize model weights. There is no retry or resume mode. Existing attempts, partials, receipts and errors remain unchanged.
 
 Use a qualified Python with `-I -B`, an explicitly fresh workspace pycache prefix and workspace `TEMP`/`TMP`. The CLI requires the exact manifest and helper source SHA-256:
 
@@ -28,4 +28,4 @@ Root `RECEIPT.json` exists only after the worker's success receipt, successful p
 
 The worker retains `STARTED.json`, the exact `INPUT-MANIFEST.json`, `journal.jsonl`, and either `WORKER-RECEIPT.json` or `FAILED.json`. The supervisor adds `SUPERVISOR-FAILED.json` on failure, including interruption or watchdog termination; a killed worker need not have had a chance to write its own failure receipt. The journal binds sequence number, previous event hash and canonical event bytes. A truncated/corrupt journal is preserved and reported, not rewritten. `KeyboardInterrupt` is retained where caught. Sudden host power loss or forced termination of the supervisor itself cannot be guaranteed a terminal record; absence of the root PASS receipt means the attempt is not usable as completed acquisition.
 
-`qualify.py --output <fresh-review-directory>` runs the invented tests, retains a three-file fake acquisition, and checks the actual 30-asset manifest against `dependency-lock.json` and `requirements.lock.txt` without contacting any endpoint. The first test run preceded implementation and its expected red import failure is retained under `acquisition/qualification-red01/TEST-FIRST.json`.
+`qualify.py --output <fresh-review-directory>` runs the invented tests, retains a three-file fake acquisition, and checks the actual 30-asset manifest against `dependency-lock.json` and `requirements.lock.txt` without contacting any endpoint. Required acquisition manifests and dependency locks must be supplied explicitly; they are not bundled data.

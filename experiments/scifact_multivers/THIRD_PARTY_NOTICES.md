@@ -12,10 +12,10 @@ The installed Longformer implementation is pinned separately to Transformers
 4.57.1. This adaptation changes runtime/framework integration and preserves
 the original inference mathematics for numerical comparison.
 
-Upstream files are retained with hashes under
-`planning/review-assets/tether-semantic-20261106/solver-feasibility/source/`.
-`source-receipt.json` and `source-reference-addendum.json` bind those files.
+Reference checks require a separately supplied upstream source bundle with
+`source-receipt.json` and `source-reference-addendum.json` binding its files.
 `reference.py` verifies both receipts and every source before extracting code.
+The bundle is not included in the current public source tree.
 
 The public fever_sci checkpoint is distributed by the MultiVerS authors at a
 version-pinned S3 URL. A checkpoint-specific license was not found; this package

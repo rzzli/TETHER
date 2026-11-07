@@ -9,35 +9,45 @@ runs/
 .env.*
 !.env.example
 
-# Regenerable page renders used to check manuscript PDF layout.
-/tmp/pdfs/
-/tmp/p09-*/
-
-/research_notes/IL6R dossier scientific audit/
-/reports/IL6R dossier scientific audit.md
-
-/research_notes/IL6R primary evidence qualification/
-/reports/IL6R primary evidence qualification.md
-
-# Returned scientific reviews are evaluator-only originals, not agent inputs.
-/docs/expert-response10312026/
-/docs/expert-review-genetics-20261026/responses/
-
-# Frozen pre-migration evidence is retained at the tagged historical checkpoint.
-# Local originals stay available, but are not part of the current published tree.
-/planning/review-assets/*
-!/planning/review-assets/README.md
-/planning/protocols/
+# Local research workspace: never publish working notes, private state or outputs.
+/memory/
+/planning/
+/reports/
+/paper/
 /research_notes/
-/docs/history/
-/docs/expert-review-*/
+/tmp/
+/temp/
+/cache/
+/scratch/
+/logs/
+/TODO.md
+/memory.md
+/MEMORY.md
+
+# Public documentation is deliberately limited to maintained usage guides.
+/docs/*
+!/docs/ARCHIVE.md
+!/docs/FRAMEWORK.md
+!/docs/MAINTENANCE.md
+!/docs/TETHER-CATALOG-POLICY.md
+!/docs/TETHER-VERIFICATION-SCOPE.md
+/packages/tether/MIGRATION-VALIDATION.json
+
+# Local one-off presentation, review and development-workspace helpers.
+/tools/science/build_preprint_manuscript.py
+/tools/science/archive_bibliography.py
+/tools/review/prepare_expert_review.py
+/tools/review/build_review_workbook.py
+/tools/review/check_review_workbook.cjs
+/tools/review/review_workbook.html
+/tools/framework/prepare_local_model.py
+/tools/framework/run_local_pilot.py
+
+# Historical fixtures are read through the pinned compatibility helper.
 /tests/fixtures/legacy-v1/
 
 # Original sealed release recipes belong to the historical checkpoint.
-/tools/presentation/build_tether_manuscript.py
-/tools/presentation/build_tether_manuscript_v2.py
-/tools/presentation/package_tether_review.py
-/tools/presentation/package_tether_review_v2.py
+/tools/presentation/
 /tools/science/prepare_p09_relocated_inputs.py
 /tools/science/prepare_p05_public_bridge.py
 /tools/science/package_p09_release.py

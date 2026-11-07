@@ -6,7 +6,7 @@ TETHER is an **agent execution and evaluation harness** for drug-target research
 
 *Target Evidence Tracking Harness for Evaluation and Reproducibility*
 
-[Try it](#quick-start) · [Status & results](#current-results) · [Docs](#explore)
+[Try it](#quick-start) · [Components](#components) · [Docs](#explore)
 
 <a id="how-it-works"></a>
 
@@ -61,16 +61,17 @@ For stronger integrity checking, save the printed receipt hash separately and pa
 <a id="what-works-today"></a>
 <a id="current-results"></a>
 
-## Status & results
+## Components
 
-- **Built:** offline execution and verifiable runs; [historical 10-case pilot](planning/run-registry.json).
-- **Measured:** [SciFact](<planning/TETHER SciFact Full Context Results 2026-11-06.md>) and [initial LitQA2](<planning/TETHER LitQA2 Native Evaluation Results 2026-11-06.md>) results, including failures and limitations.
-- **Under development:** stronger retrieval and scientific answering. [Roadmap →](TODO.md)
+- [Engine](src/tether_engine/): evidence admission, specialists, budgets, journals and verification.
+- [Public interface](packages/tether/): the `tether` CLI, supervised execution and artifact permissions.
+- [Experiments](experiments/README.md): benchmark adapters, native metrics and reconstruction tools.
+- [Tests](tests/) and [utilities](tools/): regression checks, source preparation and maintenance.
 
 **A verified run is not a validated scientific conclusion.** Clinical probabilities and therapeutic benefit remain unvalidated.
 
 ## Explore
 
-[CLI guide](packages/tether/README.md) · [Architecture](docs/FRAMEWORK.md) · [Verification limits](docs/TETHER-VERIFICATION-SCOPE.md) · [Data](data/README.md) · [Experiments](experiments/) · [Working paper](paper/README.md) · [History](docs/ARCHIVE.md)
+[CLI guide](packages/tether/README.md) · [Architecture](docs/FRAMEWORK.md) · [Verification limits](docs/TETHER-VERIFICATION-SCOPE.md) · [Data](data/README.md) · [Development](docs/MAINTENANCE.md)
 
 [Apache-2.0](LICENSE). Data has separate terms; bulk datasets and model weights are excluded. The evidence engine lives in `src/tether_engine/`.

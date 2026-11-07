@@ -1,12 +1,12 @@
 # Frozen SciFact baseline diagnostics
 
-This separate package describes retained public-development errors. It does not change the sealed BG03 baseline, acquire data, run a model, tune a threshold, modify a prediction, or replace the official metrics. Its output does not establish biological or clinical truth.
+This package reconstructs descriptive errors from a sealed SciFact development run. It reads retained predictions and evaluation records; it does not generate new predictions or replace the native metrics. Its output does not establish biological or clinical truth.
 
 `analyze.py` reuses the unchanged native contract validators and `experiments.scifact.evaluate.strict_correct`. Each recomputed raw and checked strict result must equal its retained evaluation case result. A complete schedule is required; actual mode requires all 300 claims, including NEI and operational failures. The command verifies a caller-supplied manifest hash and explicit hashes and byte counts for every input and the complete local imported source closure, then rechecks them before publishing. An existing output directory is rejected. JSON and Markdown outputs are UTF-8 with LF endings.
 
 ## Manifest and command
 
-The root creates and freezes the actual manifest only after qualification and independent review. Fields are `schema_version: 1`, `kind: "scifact_descriptive_decomposition_inputs"`, `mode: "actual"`, `expected_claim_count: 300`, `inputs`, `source_pins`, `authority_pins`, and `baseline_identity`. Every input/source/authority pin has exactly `path` (absolute), `sha256`, and `bytes`. The root's authority preflight must bind these pins to the original stage receipt and preparation/source authorities; checking fresh file hashes alone does not establish the historical baseline identity. That preflight and original authorities belong in `authority_pins` and their identities in `baseline_identity`.
+The caller freezes the actual manifest after qualifying its inputs and runtime. Fields are `schema_version: 1`, `kind: "scifact_descriptive_decomposition_inputs"`, `mode: "actual"`, `expected_claim_count: 300`, `inputs`, `source_pins`, `authority_pins`, and `baseline_identity`. Every input/source/authority pin has exactly `path` (absolute), `sha256`, and `bytes`. The caller's authority preflight must bind these pins to the original stage receipt and preparation/source authorities; checking fresh file hashes alone does not establish the historical baseline identity. That preflight and original authorities belong in `authority_pins` and their identities in `baseline_identity`.
 
 The six input keys are:
 
@@ -19,7 +19,7 @@ The six input keys are:
 | `candidates` | Stage `check-inputs/candidates.json`, using each completed candidate's unchanged prediction and ordered retrieved records |
 | `evaluation` | Stage `evaluation.json`, using every retained native case result |
 
-`SOURCE_CLOSURE` in the analyzer lists its eight required local Python files, including the unchanged native scorer/contract and their TETHER dependencies. Standard-library interpreter identity is recorded by root qualification. The CLI is designed for a qualified fresh interpreter with `-I -B`, a fresh workspace `-X pycache_prefix=...`, and workspace `TEMP` and `TMP`:
+`SOURCE_CLOSURE` in the analyzer lists its eight required local Python files, including the unchanged native scorer/contract and their TETHER dependencies. The qualification record binds the standard-library interpreter identity. The CLI is designed for a qualified fresh interpreter with `-I -B`, a fresh workspace `-X pycache_prefix=...`, and workspace `TEMP` and `TMP`:
 
 ```text
 python -I -B -X pycache_prefix=<fresh-workspace-path> experiments/scifact_diagnostics/analyze.py --manifest <absolute-manifest> --manifest-sha256 <frozen-sha256> --output <fresh-absolute-output-directory>
@@ -39,4 +39,4 @@ NEI is split into produced-empty correct, produced-nonempty false positive, and 
 
 ## Invented qualification
 
-Tests were written and first run before the analyzer existed; the retained red-phase record identifies the expected import failure. Tests cover alternative rationales, longer rationale caps, sentence order, extra selected documents, concurrent errors, NEI, operational failures, checker rejection, native bounds, duplicate/overlapping inputs, explicit pin mismatches, duplicate JSON keys, and no-clobber output. `qualify.py --output <fresh-directory>` runs the suite and retains a two-claim fictional end-to-end manifest/output. It does not read the actual development artifacts.
+Tests cover alternative rationales, longer rationale caps, sentence order, extra selected documents, concurrent errors, NEI, operational failures, checker rejection, native bounds, duplicate/overlapping inputs, explicit pin mismatches, duplicate JSON keys, and no-clobber output. `qualify.py --output <fresh-directory>` runs the suite and retains a two-claim fictional end-to-end manifest/output. It does not read the actual development artifacts.

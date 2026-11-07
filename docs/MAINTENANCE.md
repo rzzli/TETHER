@@ -1,103 +1,80 @@
-# TETHER — Repository maintenance
+# Development and maintenance
 
-The current interface is `tether-target-agents` **0.6.0**, with the `tether` CLI
-and public namespace over `tether-target-engine` **0.4.0** (`tether_engine`). See
-[installation](../README.md#quick-start) and the [namespace migration
-boundary](../packages/tether/MIGRATION.md). Public aliases share the new engine's
-module and class identities; they do not certify earlier execution fingerprints.
+Use Python 3.11 or later and `uv`. Full validation also requires PowerShell 7 and
+the optional ingestion dependency. Run commands from the repository root.
 
-The component history below retains earlier versioned observations and test
-counts. Those qualifications belong to their original code and dates, preserved
-in the [historical checkpoint](ARCHIVE.md). Names and example paths here use the
-current namespace for readability; exact original identifiers and reproduction
-commands are in that checkpoint. The naming migration is not a scientific rerun
-or a transfer of historical qualification to the new release. The semantic
-experiment remains **paused**; this guide does not reactivate it or retired
-study and expert-review branches.
-
-The single catalog writer is `python -m tether_engine.maintenance update-catalog`. Input
-preparation is read-only. Reports and manifests use explicit fresh destinations;
-existing outputs fail rather than being replaced. Policy, licensing, dependencies,
-roles, parsing and scientific status are outside a transport report's write scope.
-
-Run from the project root in PowerShell 7, with the environment already synced:
+## Install for validation
 
 ```powershell
-uv run --no-sync python tools/framework/prepare_v02_inputs.py `
-  --raw-root E:/projects_data/drug_target_agents_data --queue <explicit-queue.json> `
-  --catalog data/catalog/sources.json --output data/manifests/private/new-inputs.json
+uv sync --locked --python 3.11 --extra ingest --no-install-project
+uv pip install --no-deps . packages/tether --build-constraints tools/build-constraints.txt
+uv pip check
+```
 
-pwsh -File tools/data/Sync-DownloadCatalog.ps1 `
-  -DataRoot E:/projects_data/drug_target_agents_data -QueuePath <explicit-queue.json> `
-  -OutputPath data/manifests/public/<new-timestamp>-acquisition.json
+Install noneditable packages for tests that qualify installed module identities.
+The runtime is dependency-free; PyArrow 21.0.0 is used only by optional ingestion.
+Pinned build constraints live in [tools/build-constraints.txt](../tools/build-constraints.txt).
 
-$catalogHash = (Get-FileHash data/catalog/sources.json -Algorithm SHA256).Hash.ToLowerInvariant()
+## Validate changes
+
+```powershell
+uv run --no-sync python tools/validate.py --mode full --package
+uv run --no-sync python -B -m unittest discover -s packages/tether/tests -v
+```
+
+The full gate runs structural/catalog checks, Python and PowerShell syntax checks,
+repository tests, required framework probes, and an offline wheel build plus an
+isolated dependency-free demo and verification. `--report <fresh-path>` retains
+its result; `--failfast` stops after the first failed test. Core mode allows only
+its explicitly named platform/optional-dependency skips.
+
+Some compatibility fixtures read exact bytes from a pinned Git checkpoint through
+[tools/history.py](../tools/history.py). A full clone contains that history; shallow
+clones may need `git fetch --unshallow --tags` before running the tests. Public CI
+fetches full history. Optional [experiment suites](../experiments/README.md) require
+their own dependencies and prepared inputs; a core test pass does not qualify a
+model or scientific benchmark.
+
+## Catalog updates
+
+Keep shared source requirements in the tracked template. Acquisition observations,
+receipts and use grants belong in ignored local deployment files. First copy the
+template to a new local catalog; the copy below refuses to overwrite an existing
+catalog. Keep an existing deployment catalog when applying later reports.
+
+```powershell
+$localRoot = New-Item -ItemType Directory -Path data/manifests/private -Force
+$localCatalog = Join-Path $localRoot.FullName 'catalog.json'
+[System.IO.File]::Copy((Resolve-Path data/catalog/sources.json).Path, $localCatalog, $false)
+```
+
+The writer requires an explicit local acquisition report and the independently
+checked hash of the deployment catalog being updated. Prepare the report at the
+path shown below, or substitute its actual local path:
+
+```powershell
+$localCatalog = (Resolve-Path data/manifests/private/catalog.json).Path
+$catalogHash = (Get-FileHash $localCatalog -Algorithm SHA256).Hash.ToLowerInvariant()
 uv run --no-sync python -m tether_engine.maintenance update-catalog `
-  --catalog data/catalog/sources.json --report data/manifests/public/<new-timestamp>-acquisition.json `
+  --catalog $localCatalog --report data/manifests/private/acquisition-report.json `
   --expected-sha256 $catalogHash
 ```
 
-Replace angle-bracket arguments with actual paths. Repeat `--queue` for multiple
-queues in Python; supply a PowerShell array for `-QueuePath`. Transport inspection
-hashes completed originals and checks receipt identity. It does not parse biological
-content or establish historical eligibility. Selected queues define collection scope.
-Review a report before applying it. Sanitized public manifests must not contain
-credentials, signed URLs, private paths or benchmark answers.
+The updater validates references and allowed fields, takes an exclusive lock and
+checks the old hash before replacement. A stale lock requires checking its recorded
+process before manual recovery; it is not automatically discarded. Transport
+observations cannot promote scientific validation. Bind a separate local
+[artifact policy](TETHER-CATALOG-POLICY.md) to the exact deployment catalog and
+keep that policy and its root map ignored. The shipped inventory-only policy is
+bound to the public template and cannot authorize a changed local catalog.
+Public requirement edits must keep the public deployment state empty and rebind
+the public inventory policy without adding acquisition results or grants.
 
-The updater takes an exclusive lock, validates the previous catalog hash, checks
-references and allowed fields, then atomically replaces the catalog and records the
-proposal hash. Competing/stale updates fail. A lock left by process termination
-requires inspecting its PID/time and confirming no writer remains; it is never
-automatically discarded. Manual editors must honor the same lock; this is local
-coordination, not a distributed transaction service.
+## Repository boundaries
 
-Normalization updates require retained build/pilot/audit report hashes, ten unique
-cases, at least 20 distinct audited rows, and matching sealed output bytes. Their
-scientific validation remains `not_run`. A retained verification report is evidence
-of that check; applying a catalog proposal does not rerun biological adjudication.
-
-The monitor now requires an explicit queue and reads its batch identity. The safe
-preflight is `pwsh -File tools/data/Watch-DownloadBatch.ps1 -QueuePath <queue>
--DataRoot <root> -ValidateOnly`; this does not start monitoring. The user's monitor
-remains stopped. `Start-DownloadBatch.ps1` and transport receipts remain unchanged.
-
-Demo generators require `--output <fresh-directory>`. The v2 generator also accepts
-`--input <preserved-v1-directory>`, defaults to shipped v1 fixtures and checks all
-required inputs before creating output. Never point either generator at preserved
-fixtures. The portable legacy receipt fixture under `tests/fixtures/legacy-v1/`
-is a retained compatibility artifact, not generated by current v2 code.
-
-Use `uv run --no-sync python tools/validate.py --mode full --package` for the full
-gate (pyarrow 21.0.0 and PowerShell 7 required). Core mode permits explicitly named
-optional-dependency skips. Both run required probes, catalog/index checks, syntax
-checks and, with `--package`, an isolated dependency-free installed-wheel demo.
-An optional `--report <fresh-path>` retains the validation summary.
-
-To prepare unanswered expert development forms from the canonical retained audit:
-`uv run --no-sync python tools/review/prepare_expert_review.py --output
-data/benchmark/gold_evidence/<fresh-review-directory>`. The tool checks registry and
-sealed claim hashes, binds physical row locators, and requires evaluator-only output
-placement. It leaves scientific judgments null. Review forms and completed answers
-must never be added to an agent manifest. This purposive, unblinded development sample
-does not establish a representative benchmark or whole-dossier error rate.
-
-For reviewers, prefer the guided offline workbook over raw JSON forms:
-
-```powershell
-uv run --no-sync python tools/review/build_review_workbook.py `
-  --source data/benchmark/gold_evidence/t6-development-review-20261012 `
-  --output data/benchmark/gold_evidence/<fresh-workbook-directory>
-```
-
-This produces `Review.html`, `START_HERE.txt` and a small portable ZIP. The workbook
-checks input hashes, keeps assessments blank, hides machine-specific source paths,
-and retains claim/row provenance. Reviewers use dropdowns and notes; drafts save locally
-when browser storage is available. JSON export/import moves drafts between machines;
-a readable Markdown export and print layout support review outside the form. No
-answers are uploaded. Completed forms remain single-reviewer assessments pending
-adjudication, never automatically promoted to scientific gold.
-
-The optional `check_review_workbook.cjs <Review.html> <fresh-QA-directory>` browser
-check uses Playwright with isolated profiles. Set `NODE_PATH` to an installed
-Playwright package and optionally `REVIEW_BROWSER_CHANNEL` (default `msedge`). Its
-synthetic answers belong in ignored cache storage, not the gold review package.
+Track source, package resources, test fixtures, reusable tools, experiment code and
+public usage documentation. Keep raw data, model weights, caches, run outputs,
+private root maps, generated reports and personal working notes outside the public
+tracked tree. Preserve receipt-bound originals rather than editing them in place.
+Use fresh output directories and inspect incomplete attempts before considering a
+separate new execution; inspection must never restart a potentially billed call.

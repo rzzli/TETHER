@@ -1,10 +1,16 @@
 from pathlib import Path
+import hashlib
+import tempfile
 import unittest
+from tools.history import read_checkpoint
 
 from experiments.scifact_comparison.statistics import case_counts, metrics, total, paired_bootstrap, percentile
-from experiments.scifact.evaluate import official_metrics, strict_correct
+from experiments.scifact.evaluate import EVALUATOR_SHA256, official_metrics, strict_correct
 
-SCORER = Path(__file__).resolve().parents[3]/'data/reference/scifact-evaluator-66feffc5/evaluator/eval.py'
+SCORER_ARCHIVE = (
+    'planning/review-assets/tether-scifact-20261105/scoring/qualification-attempt01/'
+    'source_snapshots/data/reference/scifact-evaluator-66feffc5/evaluator/eval.py'
+)
 
 
 def gold(evidence):
@@ -12,6 +18,14 @@ def gold(evidence):
 
 
 class StatisticsTests(unittest.TestCase):
+    def setUp(self):
+        self.temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temporary.cleanup)
+        self.scorer = Path(self.temporary.name) / 'eval.py'
+        raw = read_checkpoint(SCORER_ARCHIVE)
+        self.assertEqual(hashlib.sha256(raw).hexdigest(), EVALUATOR_SHA256)
+        self.scorer.write_bytes(raw)
+
     def test_native_boundary_parity(self):
         cases = [
             ({},{}),
@@ -31,7 +45,7 @@ class StatisticsTests(unittest.TestCase):
             with self.subTest(reference=reference,predicted=predicted):
                 g,p = gold(reference),gold(predicted)
                 observed = metrics(case_counts(g,p))
-                native = official_metrics([g],[p],evaluator_path=SCORER)
+                native = official_metrics([g],[p],evaluator_path=self.scorer)
                 for key,value in native.items():
                     self.assertAlmostEqual(observed[key],value,places=14)
                 self.assertEqual(bool(observed['strict_correct_per_scheduled']),strict_correct(g,p))

@@ -7,6 +7,7 @@ import unittest
 from unittest.mock import patch
 
 from tether_engine.serde import ContractError, fingerprint, sha256_file, write_json
+from tools.history import materialize_checkpoint
 from tools.science import outcome_extract
 from tools.science.outcome_results import (
     RESULT_FIELDS, STUDY_FIELDS, regenerate_results, results_query, validate_result_rows,
@@ -19,6 +20,16 @@ class ReportedResultsPeerTests(unittest.TestCase):
         self.schema = {'studies': list(STUDY_FIELDS),
                        **{table: list(fields) for table, fields in RESULT_FIELDS.items()}}
         self.request = results_query(self.ids, '2026-04-01', self.schema)
+
+    def historical_policy(self):
+        relative = 'planning/protocols/clinical-label-readiness-v0.1.json'
+        temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        restored = materialize_checkpoint(relative, Path(temporary.name) / 'policy.json')
+        # The bound reader below is mocked. Keep its original approved logical
+        # path while deriving fixture values/hash from exact temporary bytes.
+        approved = Path(outcome_extract.__file__).resolve().parents[2] / relative
+        return approved, json.loads(restored.read_text(encoding='utf-8')), sha256_file(restored)
 
     def record(self):
         study = {field: None for field in STUDY_FIELDS}
@@ -136,16 +147,14 @@ class ReportedResultsPeerTests(unittest.TestCase):
             self.assertTrue((root / 'output' / 'failure.json').is_file())
 
     def test_exact_original_membership_binding_cannot_be_replaced_by_another_twelve(self):
-        project = Path(outcome_extract.__file__).resolve().parents[2]
-        policy_path = project / 'planning/protocols/clinical-label-readiness-v0.1.json'
-        policy = json.loads(policy_path.read_text(encoding='utf-8'))
+        policy_path, policy, policy_sha256 = self.historical_policy()
         pack = {'clinical_labels_assigned': 0, 'selected_distinct_trials': 12,
                 'files': [{'path': f'packets/{index}.json', 'sha256': 'a'*64}
                           for index in range(12)]}
         plan = {'phase': 'selected_results', 'review_policy': {'path': 'review.json', 'sha256': outcome_extract.POLICY_SHA256},
                 'selection': {'path': 'pack.json', 'sha256': outcome_extract.PACK_SHA256},
-                'results_policy': {'path': str(policy_path), 'sha256': sha256_file(policy_path)},
-                'parents': [{'path': str(policy_path), 'sha256': sha256_file(policy_path)}],
+                'results_policy': {'path': str(policy_path), 'sha256': policy_sha256},
+                'parents': [{'path': str(policy_path), 'sha256': policy_sha256}],
                 'jobs': [{'snapshot_date': '2026-01-01'}, {'snapshot_date': '2026-04-01'}],
                 'nct_ids': self.ids[:-1] + ['NCT99999999'],
                 **{key: policy[key] for key in ('origin_at', 'horizon_at', 'ascertainment_at')}}
@@ -164,15 +173,13 @@ class ReportedResultsPeerTests(unittest.TestCase):
             process.assert_not_called()
 
     def test_policy_semantics_cannot_contradict_original_review_or_executing_bounds(self):
-        project = Path(outcome_extract.__file__).resolve().parents[2]
-        policy_path = project / 'planning/protocols/clinical-label-readiness-v0.1.json'
-        policy = json.loads(policy_path.read_text(encoding='utf-8'))
+        policy_path, policy, policy_sha256 = self.historical_policy()
         pack = {'clinical_labels_assigned': 0, 'selected_distinct_trials': 12, 'files': []}
         plan = {'phase': 'selected_results',
                 'review_policy': {'path': 'review.json', 'sha256': outcome_extract.POLICY_SHA256},
                 'selection': {'path': 'pack.json', 'sha256': outcome_extract.PACK_SHA256},
-                'results_policy': {'path': str(policy_path), 'sha256': sha256_file(policy_path)},
-                'parents': [{'path': str(policy_path), 'sha256': sha256_file(policy_path)}],
+                'results_policy': {'path': str(policy_path), 'sha256': policy_sha256},
+                'parents': [{'path': str(policy_path), 'sha256': policy_sha256}],
                 'jobs': [{'snapshot_date': '2026-01-01'}, {'snapshot_date': '2026-04-01'}],
                 'nct_ids': self.ids,
                 **{key: policy[key] for key in ('origin_at', 'horizon_at', 'ascertainment_at')}}

@@ -227,7 +227,7 @@ class Stage:
         self.schedule = [row["id"] for row in load_product(self.preparation_root, self.manifest, "queries_dev", "predict")]
         self.runtime = capture_runtime(self.environment)
         self.evaluator_proof = file_proof(self.evaluator)
-        self.protocol_proof=file_proof(Path(__file__).resolve().parents[2]/"planning/TETHER SciFact Execution Protocol 2026-11-05.md")
+        self.protocol_proof=file_proof(Path(__file__).with_name("PROTOCOL.md"))
         self.freeze = {"schema_version": 1, "created_at_utc": now(), "preparation_root": str(self.preparation_root),
                        "preparation_manifest_sha256": self.preparation_manifest_sha256, "dev_schedule": self.schedule,
                        "grid": GRID, "selection_criterion":SELECTION_CRITERION,"protocol":self.protocol_proof,"limits": self.limits, "cutoff": self.cutoff,

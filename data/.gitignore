@@ -1,27 +1,16 @@
-# Keep originals, reference payloads, generated outputs, evaluation records and caches out of version control.
-/raw/**
-!/raw/**/
-!/raw/**/.gitkeep
-/reference/**
-!/reference/**/
-!/reference/**/.gitkeep
-/derived/**
-!/derived/**/
-!/derived/**/.gitkeep
-/benchmark/**
-!/benchmark/**/
-!/benchmark/**/.gitkeep
-/cache/**
-!/cache/**/
-!/cache/**/.gitkeep
-
-# Historical manifests remain local and in the tagged checkpoint.
-/manifests/**
-!/manifests/.gitkeep
-!/manifests/README.md
+# Only reusable catalog definitions and documentation belong in the public tree.
+# Ignore whole directory roots: nested ignore files must not reintroduce payloads.
+/raw/
+/reference/
+/derived/
+/benchmark/
+/cache/
+/manifests/
 /catalog/history/
+/DATA_PLAN.md
+/STORAGE_AND_DOWNLOAD_REPORT.md
 
-# Never track local credentials, signed-link files or editor/runtime residue.
+# Local access configuration and incomplete transfers.
 **/.env
 **/.env.*
 **/*credentials*
@@ -31,14 +20,3 @@
 **/*.partial
 **/__pycache__/
 **/.DS_Store
-
-# An actual restore clone contains a nested Git repository; do not traverse it.
-/cache/remote-recovery-restore-test/
-
-# Checkpoints/restored repositories contain nested ignore files and placeholders.
-# Exclude their roots so nested rules cannot reintroduce archived payloads.
-/reference/recovery-checkpoint-*/
-/reference/recovery-restored-*/
-/cache/recovery-restore-*/
-/cache/tether-namespace-migration-20261106/
-/cache/original-reproduction/

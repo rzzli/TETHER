@@ -55,7 +55,7 @@ class FakeServer:
 
 class PilotControllerTests(unittest.TestCase):
     def setUp(self):
-        self.temp = tempfile.TemporaryDirectory(prefix="fictional-controller-", dir=pilot.ROOT / "data/cache")
+        self.temp = tempfile.TemporaryDirectory(prefix="fictional-controller-")
         self.addCleanup(self.temp.cleanup)
         self.directory = Path(self.temp.name)
         self.output_parent = self.directory / "runs"
@@ -66,6 +66,22 @@ class PilotControllerTests(unittest.TestCase):
         self.stack.enter_context(patch.object(pilot, "capture_environment", return_value={
             "fictional_environment": True, "dependencies": {"pyarrow": "21.0.0"}}))
         self.protocol = parse_json(read_checkpoint((Path(pilot.ASSETS) / "EXECUTION-PROTOCOL-DRAFT-v1.json").as_posix()))
+        # checked_path runs before the mocked stable reader. Supply every code
+        # input in an isolated workspace instead of relying on private files in
+        # the repository. Archived preparation code is data here, never executed.
+        workspace = self.directory / "fixture-workspace"
+        for name in pilot.code_inventory():
+            raw = (read_checkpoint(name) if name.startswith(pilot.ASSETS)
+                   else (pilot.ROOT / name).read_bytes())
+            destination = workspace / name
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_bytes(raw)
+        # Acquisition verification is mocked below; only an explicit fictional
+        # locator is needed for the unmodified path/existence safety checks.
+        acquisition = workspace / self.protocol["model"]["acquisition"]["path"].replace("\\", "/")
+        acquisition.parent.mkdir(parents=True, exist_ok=True)
+        acquisition.write_bytes(b"fictional acquisition")
+        self.stack.enter_context(patch.object(pilot, "ROOT", workspace))
         # Construct a current, explicitly invented controller fixture from the
         # historical shape. Original protocol/proof bytes remain untouched.
         previous_arms = {row['arm'] for row in self.protocol['scheduled_cells']}
@@ -174,6 +190,7 @@ class PilotControllerTests(unittest.TestCase):
         self.assertEqual(result["status"], "partial_or_failed")
         self.assertEqual(result["terminal_counts"]["unexecuted"], 12)
         self.assertEqual(result["errors"][0]["stage"], "code_environment")
+        self.assertIn("Pinned input bytes differ", result["errors"][0]["error"])
         self.admit.assert_not_called()
         self.assertEqual(FakeServer.entered, [])
 

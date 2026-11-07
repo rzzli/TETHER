@@ -110,7 +110,7 @@ def main():
         sources = [pin(Path(__file__)), pin(Path(__file__).with_name('inputs.py'))]
         sources += [pin(ROOT/p) for p in ('experiments/scifact/data_views.py', 'experiments/scifact/split.py',
                     'experiments/scifact/tether_adapter.py', 'src/tether_engine/serde.py')]
-        protocol = ROOT/'planning/TETHER SciFact Full Context Protocol 2026-11-06.md'
+        protocol = Path(__file__).with_name('PROTOCOL.md')
         with (output/'PROTOCOL.md').open('xb') as stream:
             stream.write(protocol.read_bytes())
         result = dict(schema_version=1, kind='sc03_prepared_inputs', status='prepared', schedule=schedule,

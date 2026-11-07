@@ -49,6 +49,77 @@ ARCHIVED_INVALID_PYTHON = {
         '5aa964d861635aaf01c50ec05f83618d5bfb7307f6e591630991f34070d05253',
 }
 
+# Working records stay local. Public validation must not require or publish them.
+PRIVATE_ROOTS = frozenset({
+    'memory', 'planning', 'reports', 'paper', 'research_notes', 'tmp', 'temp',
+    'cache', 'scratch', 'logs',
+})
+PRIVATE_FILES = frozenset({
+    'todo.md', 'memory.md', 'data/data_plan.md',
+    'packages/tether/migration-validation.json',
+    'docs/tether-namespace-migration.md', 'docs/tether-namespace-validation.json',
+    'docs/expert review coordinator guide 2026-10-26.md',
+    'docs/independent project review 2026-10-26.md',
+    'docs/opus_20261026t050236z_review.md',
+})
+
+
+def validate_public_path(name):
+    """Reject internal records and generated payloads before opening their bytes."""
+    if not name or '\\' in name or name.startswith('/') or '..' in name.split('/'):
+        raise ContractError('Noncanonical public repository path: '+name)
+    folded = name.casefold()
+    parts = folded.split('/')
+    if parts[0] in PRIVATE_ROOTS or folded in PRIVATE_FILES:
+        raise ContractError('Internal working record entered public tracking scope: '+name)
+    if any(key in parts for key in ('.venv', 'runs', 'private')):
+        raise ContractError('Private or generated file entered tracking scope: '+name)
+    if folded.startswith(('data/raw/', 'data/reference/', 'data/derived/',
+                          'data/cache/', 'data/benchmark/', 'data/manifests/',
+                          'data/catalog/history/')):
+        raise ContractError('Bulk/benchmark payload entered tracking scope: '+name)
+
+
+def validate_public_catalog_template(catalog):
+    """Keep the published source inventory separate from local acquisition state."""
+    if catalog.get('catalog_mode') != 'requirements_template' or not isinstance(
+            catalog.get('status_scope'), str) or not catalog['status_scope'].strip():
+        raise ContractError('Public catalog must declare its requirements-template status scope')
+    for row in catalog['datasets']:
+        if (row.get('collection_status') != 'planned' or row.get('parse_status') != 'not_run'
+                or row.get('validation_status') != 'not_run'):
+            raise ContractError('Public catalog contains local acquisition status: '+row['dataset_id'])
+        proof = row.get('verification', {})
+        if (proof.get('level') != 'not_checked' or proof.get('checked_at') is not None
+                or proof.get('evidence') != []):
+            raise ContractError('Public catalog contains local verification evidence: '+row['dataset_id'])
+    private_keys = {'acquisition_snapshot', 'last_maintenance_update', 'metadata_artifact_path',
+                    'workspace_path', 'state_path'}
+    # The preceding-letter guard avoids confusing the end of https:// with a
+    # Windows drive. Provider URLs remain valid public source references.
+    local_drive = re.compile(r'(?i)(?<![a-z0-9])[a-z]:[\\/]')
+    local_unix = re.compile(r'(?<![\w:/])/(?:home|Users|tmp|var|mnt|media|workspace|'
+                            r'workspaces|projects|private|Volumes|scratch)(?:/|$)')
+    def check(value):
+        if isinstance(value, dict):
+            if any(key.casefold() in private_keys for key in value):
+                raise ContractError('Public catalog contains local working-state metadata')
+            for child in value.values():
+                check(child)
+        elif isinstance(value, list):
+            for child in value:
+                check(child)
+        elif isinstance(value, str) and (local_drive.search(value) or local_unix.search(value)
+                                        or value.startswith(('/', '\\\\'))):
+            raise ContractError('Public catalog contains an absolute local path')
+    check(catalog)
+
+
+def validate_public_policy_template(policy):
+    """A published template cannot grant access to deployment-specific artifacts."""
+    if policy['artifacts'] or policy['uses']:
+        raise ContractError('Public catalog policy must have zero artifact and use grants')
+
 
 def validate_python_artifact(name, raw):
     """Parse active code while preserving sealed intentionally invalid originals."""
@@ -75,20 +146,19 @@ def structural_checks():
     files = sorted(set(name for name in files if name))
     archived_invalid = []
     for name in files:
-        parts = Path(name).parts
-        if any(key in parts for key in ('.venv','runs','private')):
-            raise ContractError('Private or generated file entered tracking scope: '+name)
-        if name.startswith(('data/raw/','data/reference/','data/derived/','data/cache/','data/benchmark/')) and Path(name).name != '.gitkeep':
-            raise ContractError('Bulk/benchmark payload entered tracking scope: '+name)
+        validate_public_path(name)
         if name.endswith('.py'):
             if validate_python_artifact(name, (ROOT/name).read_bytes()) == 'archived_invalid_source':
                 archived_invalid.append(name)
     for name in ('runs/probe.json','data/derived/probe.json','data/raw/probe.parquet',
-                 'data/manifests/private/probe.json','.venv/probe','.env','data/benchmark/labels/probe.json'):
+                 'data/manifests/private/probe.json','.venv/probe','.env','data/benchmark/labels/probe.json',
+                 'memory/probe.md','planning/probe.md','reports/probe.json','paper/probe.pdf',
+                 'research_notes/probe.md','tmp/probe.json','TODO.md'):
         if subprocess.run(['git','check-ignore','-q',name],cwd=ROOT).returncode:
             raise ContractError('Required ignore missing: '+name)
     catalog = read_json(ROOT/'data/catalog/sources.json')
     validate_catalog(catalog)
+    validate_public_catalog_template(catalog)
     artifact_policy = ROOT/'data/catalog/policy-v2.json'
     if artifact_policy.exists():
         # The frozen engine remains schema-one. Validate the additive canonical
@@ -99,19 +169,11 @@ def structural_checks():
         from tether._catalog_policy import strict_json, validate_policy, validate_source_catalog
         policy = strict_json(artifact_policy.read_bytes())
         validate_policy(policy)
+        validate_public_policy_template(policy)
         validate_source_catalog(policy, (ROOT/'data/catalog/sources.json').read_bytes())
-    index = set(re.findall(r'^\| `([^`]+)` \|',(ROOT/'data/DATA_PLAN.md').read_text(encoding='utf-8'),re.M))
-    if not {row['dataset_id'] for row in catalog['datasets']}.issubset(index):
-        raise ContractError('Catalog products missing from documentation index')
-    registry = read_json(ROOT/'planning/run-registry.json')
-    entries = registry['entries']
-    selected = [row for row in entries if row['id']==registry['canonical_pilot_id']]
-    if len(selected)!=1 or selected[0]['state']!='canonical' or len(selected[0]['cases'])!=10:
-        raise ContractError('Invalid canonical registry')
-    # Local production assets may be absent in a clean checkout.
-    from tether_engine.serde import safe_child
-    for row in entries:
-        safe_child(ROOT,row['path'])
+    # Catalog records and the optional source-bound policy are the public input
+    # interfaces. A private planning index or historical pilot registry is not a
+    # prerequisite for installing or validating a clean source checkout.
     return {'tracked_scope_files':len(files),'providers':len(catalog['providers']),'datasets':len(catalog['datasets']),
             'preserved_invalid_python_archives':archived_invalid}
 

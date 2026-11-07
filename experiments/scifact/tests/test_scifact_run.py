@@ -13,18 +13,23 @@ import tempfile
 from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
+from tools.history import read_checkpoint
 
 from tether_engine.journal import read_chain
 from tether_engine.serde import ContractError, canonical, fingerprint, freeze
 from tether._process import EngineResult, EngineDeadlineExceeded, supervise_command
 from experiments.scifact.data_views import prepare_release, load_product
+from experiments.scifact.evaluate import EVALUATOR_SHA256
 from experiments.scifact.tether_adapter import NativeSession, make_request
 from experiments.scifact.run import (Stage, GRID, DEFAULT_LIMITS, failure_dispositions,
                                     select_configuration, session_cells, file_proof, read, write, capture_runtime)
 from test_scifact_data_views import write_tar, acquisition
 
 ROOT = Path(__file__).resolve().parents[3]
-EVALUATOR = ROOT / "data/reference/scifact-evaluator-66feffc5/evaluator/eval.py"
+EVALUATOR_ARCHIVE = (
+    "planning/review-assets/tether-scifact-20261105/scoring/qualification-attempt01/"
+    "source_snapshots/data/reference/scifact-evaluator-66feffc5/evaluator/eval.py"
+)
 
 
 def resources(**changes):
@@ -69,9 +74,14 @@ class RunnerTests(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup)
         self.root=Path(self.tmp.name)
+        # Exact upstream code only; no local acquisition, dataset or model is used.
+        raw = read_checkpoint(EVALUATOR_ARCHIVE)
+        self.assertEqual(hashlib.sha256(raw).hexdigest(), EVALUATOR_SHA256)
+        self.evaluator = self.root / "eval.py"
+        self.evaluator.write_bytes(raw)
 
     def stage(self, **kwargs):
-        return Stage(self.root/"unused-prep","0"*64,self.root/"stage",sys.executable,EVALUATOR,self.root/"environment.json",**kwargs)
+        return Stage(self.root/"unused-prep","0"*64,self.root/"stage",sys.executable,self.evaluator,self.root/"environment.json",**kwargs)
 
     def test_tuning_ties_follow_both_metrics_and_then_size_threshold(self):
         rows=[{"configuration":dict(c),"status":"completed","metrics":{"abstract_rationalized_f1":.2,"sentence_label_f1":.1}} for c in GRID]
@@ -125,7 +135,7 @@ class RunnerTests(unittest.TestCase):
         for value in (float("inf"),float("nan"),-1):
             with self.assertRaises(ContractError):self.stage(limits=DEFAULT_LIMITS|{"stage_seconds":value})
         with self.assertRaises(ContractError):
-            Stage("a","0"*64,self.root/"no-output",self.root/"wrong-python",EVALUATOR,"q")
+            Stage("a","0"*64,self.root/"no-output",self.root/"wrong-python",self.evaluator,"q")
         self.assertFalse((self.root/"stage").exists())
 
     def test_code_change_fails_before_worker_dispatch(self):
@@ -170,7 +180,7 @@ class RunnerTests(unittest.TestCase):
                     write(job/"COMPLETE.json",{"status":"completed","session_receipt_sha256":receipt["sha256"]})
                     (job/"io-audit.jsonl").write_bytes(canonical({"allowed":True,"path":str(query_path)})+b"\n")
                     return EngineResult(0,b"",b"",supervision(limits))
-                stage=Stage("unused","0"*64,root/"stage",sys.executable,EVALUATOR,"unused",launcher=launch)
+                stage=Stage("unused","0"*64,root/"stage",sys.executable,self.evaluator,"unused",launcher=launch)
                 try:
                     with self.assertRaises(ContractError):stage.dispatch("altered",recipe)
                 finally:stage.journal.close()
@@ -200,7 +210,7 @@ class RunnerTests(unittest.TestCase):
     def test_full_controller_uses_sanitized_recipes_and_freezes_before_dev(self):
         preparation,anchor=fictional_preparation(self.root)
         calls=[];recipes=[]
-        stage=Stage(preparation,anchor,self.root/"stage",sys.executable,EVALUATOR,self.root/"environment.json")
+        stage=Stage(preparation,anchor,self.root/"stage",sys.executable,self.evaluator,self.root/"environment.json")
         def launch(command,*,limits):
             recipe=read(command[command.index("--recipe")+1]);job=Path(command[command.index("--output")+1])
             if "score_worker.py" in command[3]:return supervise_command(command,limits=limits)

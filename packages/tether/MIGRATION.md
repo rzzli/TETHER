@@ -1,48 +1,35 @@
-# TETHER engine namespace migration
+# Package and version compatibility
 
-This release separates the public `tether-target-agents` 0.6.0 interface from
-`tether-target-engine` 0.4.0. The engine's import path is `tether_engine`; its
-console command is `tether-engine`. The facade retains `tether` as its command
-and public import path. Public aliases share the executing engine's class and
-module identities; no former namespace alias is installed.
+The public interface is `tether-target-agents` 0.6.0, with command and import path
+`tether`. It pins `tether-target-engine` 0.4.0, imported as `tether_engine` and
+invoked directly as `tether-engine`. Public aliases share the engine's class and
+module identities; no former namespace shim is installed.
 
-The original implementation is preserved at source checkpoint `b492a8f`, tagged
-`tether-pre-namespace-migration-20261106`. Original data, model captures and run
-receipts remain original evidence. This migration does not rerun experiments,
-re-seal historical results, or certify them under new source fingerprints.
+## Current identities
 
-## New identities
+| Contract | Identifier |
+|---|---|
+| Feature schema | `tether-features-v2` |
+| Shared scientific wire format | `tether-shared-scientific-fields-v1` |
+| Normalized product / method | `tether_normalized_packets` / `tether.opentargets.normalize` |
+| Installed engine proof | `installed_tether_engine_package` |
+| Study arm / stage key | `tether_interpretation` / `tether_stages` |
+| Outer presentation / launcher proof | `tether.engine_presentation.v2` / `tether.launcher_code.v2` |
+| Dossier projection | `identity_dossier_v2` (exact byte copy) |
 
-- Distribution/runtime pins: engine 0.4.0 and interface 0.6.0.
-- Feature schema: `tether-features-v2`; scientific wire format:
-  `tether-shared-scientific-fields-v1`. Field structures retain their existing
-  versions; the renamed identifiers denote distinct contracts.
-- Normalized product: `tether_normalized_packets`; method:
-  `tether.opentargets.normalize`.
-- Installed package proof: `installed_tether_engine_package`, with code/resource
-  logical IDs rooted at `tether_engine/`.
-- Study arm/key names: `tether_interpretation` and `tether_stages`. The packaged
-  study plan is re-pinned to its changed bytes; its original source checkpoint
-  remains the authority for historical plan hashes.
-- Outer presentation: `tether.engine_presentation.v2`, launcher proof
-  `tether.launcher_code.v2`, and exact dossier copy `identity_dossier_v2`.
-- Archive executing-dependency policy: `tether-engine-0.4.0-20261106`, with a new
-  explicit module-hash inventory. This does not reinterpret old code proofs.
+## Upgrading
 
-## Verification and upgrading
+Install both distributions into a clean environment using the current lockfiles.
+Editing import paths does not update installed wheel metadata or entry points.
+Use public `tether` aliases or the `tether_engine` namespace in consumers.
 
-Reinstall both distributions into a clean environment using the updated lockfiles.
-Changing import paths in a virtual environment does not migrate already-installed
-wheel metadata or scripts. Update consumers to the new engine import path, or use
-the public `tether` aliases. New artifacts must carry the new identities and
-source proofs. A source-backed migration, if needed, is a new derived artifact,
-not an in-place rewrite of a sealed original.
+New artifacts must bind the current identities and code proofs. If a source-backed
+conversion is required, create a new derived artifact with complete lineage;
+never edit the bytes or receipt of a sealed original in place. Renamed catalog
+products require new artifact grants.
 
-Version-two semantic verification rejects a different engine software version;
-use that run's original checkpoint. Generic version-one byte-integrity checks
-remain supported, with semantic consistency explicitly unavailable. None of
-these checks establishes scientific validity. The semantic experiment remains
-paused after this naming migration; resumption requires a new owner instruction.
-
-See the [repository migration report](../../docs/TETHER-NAMESPACE-MIGRATION.md)
-for preserved evidence, package qualification and regression results.
+Version-two semantic verification rejects different engine software identities;
+use the original run's matching checkout and dependencies. Generic version-one
+byte verification remains supported, with semantic consistency unavailable.
+See [historical compatibility](../../docs/ARCHIVE.md) and
+[verification limits](../../docs/TETHER-VERIFICATION-SCOPE.md).

@@ -34,9 +34,9 @@ source under modern PyTorch; it is not historical binary parity with torch 1.7.1
 or tokenizers 0.9.4. Observed correctness on invented claims is diagnostic and is
 never used to select cases or pass the architecture gate.
 
-The runtime is an isolated Python 3.11/torch 2.7.1+cu128/Transformers 4.57.1
-environment. Its wheel lock and 8,571,393,927-byte acquisition manifest reside in
-`planning/review-assets/tether-semantic-20261106/solver-feasibility/`. Retained
-upstream code and license receipts are in the same preparation directory.
-Do not infer qualification or benchmark success from the presence of this code;
-accepted execution receipts are required.
+The runtime requires separately pinned Python, PyTorch and Transformers
+installations, tokenizer assets, a completed acquisition receipt and source
+references. Dependency manifests and model weights are not bundled here. See
+[third-party notices](THIRD_PARTY_NOTICES.md) for upstream code and licensing.
+A new deployment needs matching source and environment qualification; code
+presence does not establish benchmark success.

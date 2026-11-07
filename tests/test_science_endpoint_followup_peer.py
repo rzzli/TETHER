@@ -1,10 +1,12 @@
 """Independent mixed follow-up probes; synthetic rows only, no database reads."""
 import copy
+import hashlib
 import json
 from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
+from tools.history import read_checkpoint
 
 from tether_engine.serde import ContractError, sha256_file, write_json
 from tether_engine.journal import RunJournal, read_chain
@@ -226,8 +228,11 @@ class EndpointFollowupPeerTests(unittest.TestCase):
         from tools.science import endpoint_followup as module
         from tools.science.outcome_extract import APPROVED_BASE, APPROVED_RESTORES
         plan = self.plan(root)
-        policy = json.loads(module.POLICY.read_text(encoding='utf-8'))
-        policy_pin = {'path': str(module.POLICY), 'sha256': sha256_file(module.POLICY)}
+        # The mocked reader keeps the original approved path and exact policy
+        # bytes; a clean checkout need not publish private working records.
+        raw_policy = read_checkpoint('planning/protocols/endpoint-followup-feasibility-v0.1.json')
+        policy = json.loads(raw_policy)
+        policy_pin = {'path': str(module.POLICY), 'sha256': hashlib.sha256(raw_policy).hexdigest()}
         seal_pin = {'path': str(root / 'pack-freeze.json'), 'sha256': module.PACK_SHA}
         readiness_pin = {'path': str(root / 'readiness.json'), 'sha256': module.READINESS_SHA}
         documents = {str(module.POLICY.resolve()): policy}
