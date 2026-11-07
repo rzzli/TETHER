@@ -7,7 +7,7 @@
 - [x] Migrate the engine/public interface and qualify installation, namespace and demo behavior.
 - [x] Rebuild the current paper presentation without changing reported outcomes.
 - [x] Finish repository-wide regression checks, archived-link checks and branding audit.
-- [ ] Commit and push the completed namespace migration.
+- [x] Commit and push the completed namespace migration.
 
 The semantic-capability goal below is **paused by the owner**. The unfinished
 supplied-source diagnostic was stopped, with its partial outputs preserved and

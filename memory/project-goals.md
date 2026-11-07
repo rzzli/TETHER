@@ -13,8 +13,9 @@ GitHub repository migration. See [[research-log-2026-11-06-namespace-migration]]
 The remote is rzzli/TETHER. Current interface0.6.0 and engine0.4.0 have new names
 and source identities; historical evidence stays in the approved tagged archive.
 Migration validation is complete: 2,112 full-suite tests, 905 experiment tests,
-143 facade tests, required probes and offline packaging pass. Finish publication,
-then stop. Do not resume scientific execution without a new owner instruction.
+143 facade tests, required probes and offline packaging pass. Migration commit
+17dc59d is published on main. The naming task is complete; do not resume scientific
+execution without a new owner instruction.
 
 SC01–SC03 were completed with their original code. The SC04 primary199-question,
 four-arm execution sealed796 answers and passed maintained replay. Its separate

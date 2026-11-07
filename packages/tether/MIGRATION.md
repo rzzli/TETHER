@@ -42,7 +42,7 @@ Version-two semantic verification rejects a different engine software version;
 use that run's original checkpoint. Generic version-one byte-integrity checks
 remain supported, with semantic consistency explicitly unavailable. None of
 these checks establishes scientific validity. The semantic experiment remains
-paused while this naming migration is implemented and qualified.
+paused after this naming migration; resumption requires a new owner instruction.
 
 See the [repository migration report](../../docs/TETHER-NAMESPACE-MIGRATION.md)
 for preserved evidence, package qualification and regression results.

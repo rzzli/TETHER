@@ -32,5 +32,7 @@ deterministic no-error unit case from actual filesystem behavior. Failed and
 interrupted validation attempts remain retained.
 
 See docs/TETHER-NAMESPACE-MIGRATION.md and the exact final report at
-docs/TETHER-NAMESPACE-VALIDATION.json. Commit and push remain to be completed;
-the scientific goal remains paused.
+docs/TETHER-NAMESPACE-VALIDATION.json. Migration commit
+17dc59d3c6a0672caf2b5c653b9a81df58f0e57f is published on main at rzzli/TETHER.
+The scientific goal remains paused; no further execution is authorized by this
+naming task.

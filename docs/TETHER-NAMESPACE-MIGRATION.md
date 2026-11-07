@@ -5,6 +5,8 @@ The current interface is `tether-target-agents` 0.6.0 (`tether`); the engine is
 `tether-target-engine` 0.4.0 (`tether_engine`, command `tether-engine`).
 Imports, entry points, wire identifiers, package metadata, tools, tests,
 documentation and the current paper presentation use these identities.
+The migration was published in
+[commit 17dc59d](https://github.com/rzzli/TETHER/commit/17dc59d3c6a0672caf2b5c653b9a81df58f0e57f).
 
 ## Preservation boundary
 
