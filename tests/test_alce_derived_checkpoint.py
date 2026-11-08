@@ -80,7 +80,9 @@ def completed_fixture(root,end):
     for name in ('checkpoint','audits','scratch'):(out/name).mkdir()
     local=put(out/'PLAN.json',plan);sources=converter.source_pins(end)
     placeholder=put(parent['inputs']/'INVENTED-RUNTIME.json',dict(invented=True,no_optional_import=True))
-    runtime=put(parent['inputs']/'RUNTIME.json',dict(interpreter=proof(Path(__import__('sys').executable).resolve()),
+    # Authored historical metadata only; no converter process executes this file.
+    interpreter=put(parent['inputs']/'INVENTED-INTERPRETER.json',dict(invented=True,executed=False))
+    runtime=put(parent['inputs']/'RUNTIME.json',dict(interpreter=interpreter,
         sources=sources,records={'invented':placeholder},torch_sources={k:placeholder for k in ('torch','torch.serialization','torch._utils')},
         psutil_source=placeholder))
     put(out/'REQUEST.json',dict(kind='alce_true_fp32_conversion_request_v1',at_utc='2026-11-07T00:00:00Z',plan=parent['plan_proof'],
@@ -122,6 +124,20 @@ class CheckpointControls(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup);self.root=Path(self.tmp.name).resolve()
         self.end=time.monotonic()+120
+
+    def test_invented_conversion_history_does_not_depend_on_host_interpreter_size(self):
+        import sys
+        host=self.root/'large-host-python'
+        with host.open('wb') as stream:stream.truncate(16*d.MIB+1)
+        fixture_root=self.root/'fixture';fixture_root.mkdir()
+        with patch.object(sys,'executable',str(host)),\
+             patch.object(d,'stable_files',side_effect=lambda *a,**kw:nullcontext()):
+            fixture=completed_fixture(fixture_root,self.end)
+            d.verify_cache(fixture['plan'],fixture['receipt'],deadline=self.end)
+        request=json.loads((fixture['root']/'REQUEST.json').read_bytes())
+        runtime=json.loads(Path(request['runtime']['path']).read_bytes())
+        self.assertNotEqual(runtime['interpreter']['path'],str(host))
+        self.assertLess(runtime['interpreter']['bytes'],16*d.MIB)
 
     def test_restricted_stock_metadata_preserves_key_order_alias_layout(self):
         plan,source,bits=minimal_plan(self.root,self.end);got=d.checkpoint_metadata(source,deadline=self.end)
@@ -260,6 +276,7 @@ class NativeV2Controls(unittest.TestCase):
             cache=completed_fixture(fixture_root,end)
             self.job.update(schema_version=2,kind='alce_native_job_v2',derived_checkpoint=cache['receipt'],
                             acquisition_receipt=cache['parent']['acquisition'])
+            self.assertEqual(self.job['interpreter'],proof(Path(__import__('sys').executable).resolve()))
             self.job['limits']['seconds']=60;jp=put(self.root/'V2.json',self.job)
             modules=invented_modules(self.fixture.module);original=Mock(side_effect=AssertionError('Original weights route entered'))
             result=w.execute(jp,module_loader=lambda **kw:modules,asset_loader=original,resource_sampler=sample)
