@@ -160,11 +160,19 @@ class PlanTests(unittest.TestCase):
 
     def test_concurrent_registry_claim_has_one_winner(self):
         anchor = self.prepare()
+        # Race the exclusive identity claim, after serial shared-registry setup.
+        registry = c.authority_registry('fictional_qualification')
+        registry.mkdir(parents=True)
+        self.assertEqual(list(registry.iterdir()), [])
+        value = plan.read(anchor)
+        claim = registry / c.identity(value['parent_identity'], value['method_identity'])
+        self.assertFalse(claim.exists())
         def reserve(_):
             try: return plan.reserve(anchor)
             except FileExistsError: return None
         with ThreadPoolExecutor(max_workers=2) as pool: values = list(pool.map(reserve, range(2)))
         self.assertEqual(sum(v is not None for v in values), 1)
+        self.assertTrue((claim / 'AUTHORITY.json').is_file())
 
     def test_replacement_bank_does_not_create_another_twelve_call_allowance(self):
         first = self.prepare(); plan.reserve(first)

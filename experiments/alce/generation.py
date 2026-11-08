@@ -23,6 +23,8 @@ ROOT=Path(__file__).resolve().parents[2]
 if __package__ in (None,''):
     for directory in (ROOT/'packages/tether/src',ROOT/'src',ROOT):sys.path.insert(0,str(directory))
 from tether import _process as processes
+import tether
+import tether_engine
 from tether_engine.atomic import publish_bytes
 from tether_engine.journal import RunJournal,read_chain
 from tether_engine.serde import canonical,encode,fingerprint,freeze,parse_json,ContractError
@@ -31,8 +33,28 @@ from experiments.labbench import runtime
 
 FAMILIES=prompts.FAMILIES
 COUNTS={'asqa':948,'qampari':1000,'eli5':1000}
-KIND='alce_generation_plan_v1'
+KIND='alce_generation_plan_v2'
 need=producer.need
+PACKAGES={'tether_engine':'src/tether_engine','tether':'packages/tether/src/tether'}
+SOURCE_FIELDS=('code_files','source_identities','package_origins')
+# Fresh isolated child only: admit package initializers before loading either
+# package, then retain their normal package search paths for every dependency.
+WORKER_BOOTSTRAP="""import hashlib,importlib.util,json,sys
+from pathlib import Path
+root=Path(sys.argv[1]);origins=json.loads(sys.argv[2])
+if set(origins)!={'tether_engine','tether'}:raise ValueError('Exact package origins required')
+sys.path.insert(0,str(root))
+for name in ('tether_engine','tether'):
+    if name in sys.modules:raise ValueError('Package already loaded before admitted bootstrap')
+    proof=origins[name];path=Path(proof['path']);raw=path.read_bytes()
+    if set(proof)!={'path','bytes','sha256'} or path!=path.resolve() or path.name!='__init__.py' or len(raw)!=proof['bytes'] or hashlib.sha256(raw).hexdigest()!=proof['sha256']:
+        raise ValueError('Package initializer differs from admitted origin')
+    spec=importlib.util.spec_from_file_location(name,str(path),submodule_search_locations=[str(path.parent)])
+    module=importlib.util.module_from_spec(spec);sys.modules[name]=module;spec.loader.exec_module(module)
+sys.argv=[str(root/'experiments/alce/generation.py'),*sys.argv[3:]]
+from experiments.alce.generation import main
+main()
+"""
 
 
 @dataclass(frozen=True)
@@ -59,14 +81,56 @@ def _write(path,value):publish_bytes(path,canonical(value));return data._hash(pa
 def _proof(path,end):return data._hash(path,end)
 
 
-def source_pins(end):
+def source_context(end):
+    """Logical identities plus actual immutable origins; no path-only acceptance."""
     paths={Path(__file__).resolve()}
     for name in ('src/tether_engine','packages/tether/src/tether','experiments/labbench'):
         paths.update(p for p in (ROOT/name).rglob('*.py') if not p.name.startswith('test_') and 'tests' not in p.parts)
     paths.update(ROOT/'experiments/alce'/name for name in ('__init__.py','producer.py','prompts.py','data_views.py'))
-    need(all(Path(proof['path']) in paths for proof in producer._sources(end)),
-         'Loaded producer dependencies must come from the declared source closure')
-    return [_proof(p,end) for p in sorted(paths)]
+    declared={p.relative_to(ROOT).as_posix():_proof(p,end) for p in sorted(paths)}
+    proofs={p['path']:p for p in declared.values()};origins={};package_roots={}
+    for name,relative in PACKAGES.items():
+        module=sys.modules[name];initializer=data._path(module.__file__)
+        need(initializer.name=='__init__.py' and module.__spec__.origin==str(initializer)
+             and list(module.__path__)==[str(initializer.parent)],'Canonical loaded package origin required')
+        origins[name]=_proof(initializer,end);package_roots[name]=initializer.parent
+        expected={key[len(relative)+1:]:p for key,p in declared.items() if key.startswith(relative+'/')}
+        observed={p.relative_to(initializer.parent).as_posix():p for p in initializer.parent.rglob('*.py')
+                  if not p.name.startswith('test_') and 'tests' not in p.relative_to(initializer.parent).parts}
+        need(set(observed)==set(expected),'Installed package source membership differs')
+        for key,path in observed.items():
+            p=_proof(path,end)
+            need(all(p[k]==expected[key][k] for k in ('bytes','sha256')),'Loaded dependency bytes differ: '+name+'/'+key)
+            proofs[p['path']]=p
+    for alias,module in tuple(sys.modules.items()):
+        prefix=next((p for p in PACKAGES if alias==p or alias.startswith(p+'.')),None)
+        if prefix is None:continue
+        name=getattr(module,'__name__',None)
+        need(name==alias or (prefix=='tether' and name=='tether_engine'+alias[len('tether'):]),
+             'Undeclared loaded module alias')
+        actual_prefix=name.split('.')[0];suffix=name.split('.')[1:]
+        actual=data._path(module.__file__)
+        relative=Path(*suffix)/'__init__.py' if actual.name=='__init__.py' else Path(*suffix).with_suffix('.py')
+        expected=package_roots[actual_prefix]/relative
+        need(actual==expected and module.__spec__.origin==str(expected) and str(actual) in proofs,
+             'Loaded module origin differs from admitted package')
+    need(all(p==proofs.get(p['path']) for p in producer._sources(end)),
+         'Loaded producer dependencies differ from the declared source closure')
+    return dict(code_files=[proofs[p] for p in sorted(proofs)],package_origins=origins,
+        source_identities={key:{k:p[k] for k in ('bytes','sha256')} for key,p in declared.items()})
+
+
+def source_pins(end):return source_context(end)['code_files']
+
+
+def _check_sources(value,end):
+    current=source_context(end)
+    need(all(value[k]==current[k] for k in SOURCE_FIELDS),'Current code/source origins differ')
+
+
+def _command(value,job_proof):
+    return [value['interpreter']['path'],'-I','-B','-c',WORKER_BOOTSTRAP,str(ROOT),
+        canonical(value['package_origins']).decode(),'--worker','--job',job_proof['path'],'--job-sha256',job_proof['sha256']]
 
 
 def _same(proofs,end):
@@ -120,20 +184,21 @@ def prepare_plan(preparation,output,*,configurations,model_receipt,port,alias,li
     spec,bindings,model=producer.shared.make_server_spec(model_receipt['path'],model_receipt['sha256'],port=port,
         alias=alias,context_tokens=limits.context_tokens)
     protected=[preparation['root'],str(Path(model_receipt['path']).parent),*(p['path'] for p in gate_receipts.values())]
+    sources=source_context(end)
     root=_fresh(output,protected);root.mkdir()
-    value=dict(schema_version=1,kind=KIND,purpose=purpose,preparation=encode(preparation),
+    value=dict(schema_version=2,kind=KIND,purpose=purpose,preparation=encode(preparation),
         preparation_receipt=meta['receipt'],generation_files=meta['files'],ordered_ids=meta['ids'],expected_counts=meta['counts'],
         configurations=encode(configurations),model_receipt=encode(model_receipt),model_provenance=encode(model),
         port=port,alias=alias,limits=asdict(limits),gate_receipts=encode(gate_receipts),
-        code_files=source_pins(end),interpreter=_proof(Path(sys.executable).resolve(),end),automatic_retries=0,provider_cost_usd=0)
+        **sources,interpreter=_proof(Path(sys.executable).resolve(),end),automatic_retries=0,provider_cost_usd=0)
     return _write(root/'PLAN.json',value)
 
 
 def load_plan(proof,end):
     plan=_read(proof,end)
     need(set(plan)=={'schema_version','kind','purpose','preparation','preparation_receipt','generation_files','ordered_ids','expected_counts',
-        'configurations','model_receipt','model_provenance','port','alias','limits','gate_receipts','code_files','interpreter',
-        'automatic_retries','provider_cost_usd'} and plan['schema_version']==1 and plan['kind']==KIND,'Exact generation plan required')
+        'configurations','model_receipt','model_provenance','port','alias','limits','gate_receipts','code_files','source_identities','package_origins','interpreter',
+        'automatic_retries','provider_cost_usd'} and plan['schema_version']==2 and plan['kind']==KIND,'Exact v2 generation plan required')
     limits=Limits(**plan['limits']);need(plan['automatic_retries']==plan['provider_cost_usd']==0,'No retry/provider contract')
     need(plan['purpose'] in ('production','invented_qualification'),'Schedule purpose required')
     need(set(plan['ordered_ids'])==set(plan['generation_files'])==set(plan['expected_counts'])==set(plan['configurations'])==set(FAMILIES),
@@ -145,7 +210,8 @@ def load_plan(proof,end):
         config=prompts._configuration(plan['configurations'][family],family)
         need(config['max_new_tokens']==300 and config['temperature']==0 and config['top_p']==1 and config['seed']==20261107,'Generation method differs')
     need(plan['expected_counts']==COUNTS if plan['purpose']=='production' else all(1<=n<=8 for n in plan['expected_counts'].values()),'Full declared population required')
-    need(plan['code_files']==source_pins(end) and _proof(Path(sys.executable).resolve(),end)==plan['interpreter'],'Current code/interpreter differs')
+    _check_sources(plan,end)
+    need(_proof(Path(sys.executable).resolve(),end)==plan['interpreter'],'Current interpreter differs')
     spec,bindings,model=producer.shared.make_server_spec(plan['model_receipt']['path'],plan['model_receipt']['sha256'],
         port=plan['port'],alias=plan['alias'],context_tokens=limits.context_tokens)
     need(canonical(model)==canonical(plan['model_provenance']),'Model identity differs')
@@ -356,15 +422,22 @@ def _schedule(job):
         disposition='unexecuted',descriptor=None,evidence=None,output=None) for f in FAMILIES for i,identifier in enumerate(job['ordered_ids'][f])]
 
 
+def _job_schema(job):
+    need(isinstance(job,Mapping) and set(job)=={'kind','generation_files','ordered_ids','expected_counts','configurations',
+         'model_receipt','model_provenance','port','alias','limits','code_files','source_identities','package_origins',
+         'interpreter','output','deadline_monotonic','plan_sha256'} and job['kind']=='alce_generation_actor_job_v2',
+         'Exact v2 actor job required')
+
+
 def worker(job_proof):
-    started=time.monotonic();job=_read(job_proof,started+60);limits=Limits(**job['limits']);end=job['deadline_monotonic']
-    need(set(job)=={'kind','generation_files','ordered_ids','expected_counts','configurations','model_receipt','model_provenance',
-         'port','alias','limits','code_files','interpreter','output','deadline_monotonic','plan_sha256'} and
-         job['kind']=='alce_generation_actor_job_v1' and type(end) in (int,float) and math.isfinite(end)
+    started=time.monotonic();job=_read(job_proof,started+60);_job_schema(job)
+    limits=Limits(**job['limits']);end=job['deadline_monotonic']
+    need(type(end) in (int,float) and math.isfinite(end)
          and 0<end-started<=limits.whole_seconds,'Bounded actor job required')
     need(set(job['generation_files'])==set(job['ordered_ids'])==set(job['expected_counts'])==set(job['configurations'])==set(FAMILIES),
          'Actor requires all three source families')
-    need(job['code_files']==source_pins(end) and _proof(Path(sys.executable).resolve(),end)==job['interpreter'],'Actor code/interpreter differs')
+    _check_sources(job,end)
+    need(_proof(Path(sys.executable).resolve(),end)==job['interpreter'],'Actor interpreter differs')
     root=_fresh(job['output'],[job_proof['path'],*(p['path'] for p in job['generation_files'].values()),job['model_receipt']['path']])
     journal=RunJournal(root,kind='build');guard=None;owner=None;samples=None;stage='admission';rows=_schedule(job);known=dict(input_tokens=0,output_tokens=0,cost_usd=0.0)
     handle=None
@@ -413,7 +486,7 @@ def worker(job_proof):
                 observed=_proof(bindings[asset['logical_id']],end)
                 need(observed['bytes']==asset['bytes'] and observed['sha256']==asset['sha256'],'Model/runtime bytes changed')
             for value in (*job['generation_files'].values(),job['model_receipt']):data._read(value,256*1024**2,end)
-            _same(job['code_files'],end)
+            _check_sources(job,end)
             report=dict(kind='alce_generation_actor_report_v1',status='completed',expected_counts=job['expected_counts'],attempts=rows,
                 owners={'resident':dict(owner_pid=terminal['pid'],alias=job['alias'],server_spec=encode(spec),bindings={k:str(v) for k,v in bindings.items()})},
                 generation=dict(configurations=job['configurations'],input_byte_limit=limits.input_byte_limit,model_provenance=encode(model),
@@ -476,10 +549,10 @@ def launch(plan_proof,release_proof,output):
             _write(root/'ADMISSION.json',dict(status='source_projection_verified',receipt=encode(admitted['receipt']),counts=encode(admitted['counts']),
                 generation_files=encode(admitted['generation_files']),worker_reference_grants=False))
             job={key:plan[key] for key in ('generation_files','ordered_ids','expected_counts','configurations','model_receipt','model_provenance',
-                'port','alias','limits','code_files','interpreter')}
-            job.update(kind='alce_generation_actor_job_v1',output=str(root/'worker'),deadline_monotonic=end-limits.finalization_seconds,plan_sha256=plan_proof['sha256'])
+                'port','alias','limits','code_files','source_identities','package_origins','interpreter')}
+            job.update(kind='alce_generation_actor_job_v2',output=str(root/'worker'),deadline_monotonic=end-limits.finalization_seconds,plan_sha256=plan_proof['sha256'])
             jp=_write(root/'JOB.json',job)
-            command=[plan['interpreter']['path'],'-I','-B',str(Path(__file__).resolve()),'--worker','--job',jp['path'],'--job-sha256',jp['sha256']]
+            command=_command(plan,jp)
             _write(root/'COMMAND.json',command)
             child_limits=processes.ProcessLimits(end-limits.finalization_seconds-time.monotonic(),4*1024**2);_write(root/'LIMITS.json',child_limits.payload())
             stage='actor';result=None;primary=None
@@ -493,7 +566,7 @@ def launch(plan_proof,release_proof,output):
             report=verify_worker(root/'worker',worker_receipt,job,end)
             wr=_read(worker_receipt,end)
             need(report['wall_seconds']<=wr['seal_elapsed_seconds']<=result.supervision['execution_elapsed_seconds'],'Actor clock mismatch')
-            _same(plan['code_files'],end);_release(release_proof,plan_proof,plan,end,output=root);data._read(plan_proof,32*1024**2,end)
+            _check_sources(plan,end);_release(release_proof,plan_proof,plan,end,output=root);data._read(plan_proof,32*1024**2,end)
             summary=dict(report,preparation=plan['preparation'],plan=plan_proof,worker_receipt=worker_receipt,
                 status='completed',outer_wall_seconds=time.monotonic()-started,post_candidate_evaluator_gate_required=True,
                 reference_access_scope='actor only; coordinator source projection validation reads complete originals',
@@ -512,6 +585,7 @@ def launch(plan_proof,release_proof,output):
 
 
 def verify_worker(root,receipt_proof,job,end):
+    _job_schema(job)
     root=data._path(root)
     need(not any((root/n).exists() for n in ('FAILURE.json','DEADLINE.json','OUTPUT-LIMIT.json','PARTIAL.json','FINALIZATION-FAILED.json')),'Actor failure dominates success')
     receipt=_read(receipt_proof,end)
@@ -606,7 +680,7 @@ def verify_worker(root,receipt_proof,job,end):
     need(spawns==1,'Exactly one resident server process must be declared')
     need(events[-1]['event']=='generation_completed' and events[-1]['details']==dict(report_sha256=fingerprint(report)),'Actor terminal journal differs')
     for proof in job['generation_files'].values():data._read(proof,256*1024**2,end)
-    _same(job['code_files'],end)
+    _check_sources(job,end)
     need(receipt['files']==_inventory(root,end,omit=('RECEIPT.json',)),'Late actor mutation')
     return report
 
@@ -630,15 +704,14 @@ def verify_generation(descriptor):
         'Retained source admission differs from reconstruction')
     jp=receipt['files']['JOB.json'];job=_read(jp,end);wrp=receipt['files']['worker/RECEIPT.json']
     need(job['plan_sha256']==request['plan']['sha256'] and job['output']==str(root/'worker'),'Actor job ancestry differs')
-    for key in ('generation_files','ordered_ids','expected_counts','configurations','model_receipt','model_provenance','port','alias','limits','code_files','interpreter'):
+    for key in ('generation_files','ordered_ids','expected_counts','configurations','model_receipt','model_provenance','port','alias','limits','code_files','source_identities','package_origins','interpreter'):
         need(job[key]==plan[key],'Actor field differs from frozen plan: '+key)
     wr=_read(wrp,end);need(wr['job']==jp,'Actor external job proof differs')
     report=verify_worker(root/'worker',wrp,job,end)
     process=_read(receipt['files']['PROCESS.json'],end);process_limits=processes.ProcessLimits(**_read(receipt['files']['LIMITS.json'],end))
     need(process_limits.timeout_seconds<=limits.whole_seconds-limits.finalization_seconds and process_limits.max_output_bytes==4*1024**2,
          'Actor must preserve the declared parent finalization allowance')
-    need(_read(receipt['files']['COMMAND.json'],end)==[plan['interpreter']['path'],'-I','-B',str(Path(__file__).resolve()),
-        '--worker','--job',jp['path'],'--job-sha256',jp['sha256']],'Pinned actor command differs')
+    need(_read(receipt['files']['COMMAND.json'],end)==_command(plan,jp),'Pinned actor command differs')
     need(_read(receipt['files']['stdout.bin'],end)=={'receipt':wrp},'Actor terminal stdout receipt differs')
     need(process['returncode']==0,'Actor process failed')
     processes.validate_success_report(process['supervision'],process_limits,receipt['files']['stdout.bin']['bytes'],receipt['files']['stderr.bin']['bytes'])

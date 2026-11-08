@@ -312,7 +312,7 @@ def _references(row, family):
     if family == 'qampari':
         answers = row.get('answers')
         need(isinstance(answers, list) and answers and all(isinstance(a, list) and a and
-             all(_text(x) for x in a) for a in answers), 'Native QAMPARI answer groups required')
+             all(_text(x, empty=True) for x in a) for a in answers), 'Native QAMPARI answer groups required')
         return
     need(_text(row.get('answer')), 'Native family reference answer required')
     if family == 'eli5':

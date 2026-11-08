@@ -1,8 +1,12 @@
 """Invented schedules/HTTP/ownership only; no ALCE payloads or real model calls."""
 from contextlib import contextmanager
 import copy
+import json
 from pathlib import Path
+import shutil
+import subprocess
 import sys
+import tempfile
 import time
 import unittest
 from unittest.mock import patch
@@ -37,8 +41,8 @@ class GenerationTests(unittest.TestCase):
 
     def job(self,name='worker'):
         value={k:self.plan[k] for k in ('generation_files','ordered_ids','expected_counts','configurations','model_receipt',
-            'model_provenance','port','alias','limits','code_files','interpreter')}
-        value.update(kind='alce_generation_actor_job_v1',output=str(self.root/name),deadline_monotonic=time.monotonic()+800,plan_sha256=self.pp['sha256'])
+            'model_provenance','port','alias','limits','code_files','source_identities','package_origins','interpreter')}
+        value.update(kind='alce_generation_actor_job_v2',output=str(self.root/name),deadline_monotonic=time.monotonic()+800,plan_sha256=self.pp['sha256'])
         return put(self.root/(name+'-JOB.json'),value),value
 
     @contextmanager
@@ -79,6 +83,24 @@ class GenerationTests(unittest.TestCase):
         with self.assertRaises(g.ContractError):g._release(put(self.root/'BAD-RELEASE.json',release),self.pp,self.plan,time.monotonic()+30,output=self.root/'parent')
         with self.assertRaises(g.ContractError):g.launch(self.pp,self.release,self.root/'different-output')
         self.assertFalse((self.root/'different-output').exists())
+        legacy=dict(self.plan,schema_version=1,kind='alce_generation_plan_v1')
+        for key in ('source_identities','package_origins'):legacy.pop(key)
+        with self.assertRaisesRegex(g.ContractError,'Exact v2 generation plan'):
+            g.load_plan(put(self.root/'LEGACY.json',legacy),time.monotonic()+30)
+
+    def test_actual_worker_bootstrap_preserves_parent_import_origins_before_reservation(self):
+        jp,job=self.job('already-present');Path(job['output']).mkdir()
+        command=g._command(job,jp)
+        result=subprocess.run(command,capture_output=True,timeout=60)
+        self.assertNotEqual(result.returncode,0)
+        self.assertIn(b'Fresh output under an existing parent required',result.stderr)
+        self.assertNotIn(b'Current code/source origins differ',result.stderr)
+        self.assertEqual(list(Path(job['output']).iterdir()),[])
+        changed=copy.deepcopy(job);changed['package_origins']['tether_engine']['sha256']='0'*64
+        rejected=subprocess.run(g._command(changed,jp),capture_output=True,timeout=60)
+        self.assertNotEqual(rejected.returncode,0)
+        self.assertIn(b'Package initializer differs',rejected.stderr)
+        self.assertEqual(list(Path(job['output']).iterdir()),[])
 
     def test_resealed_source_projection_is_reconstructed_before_child(self):
         generation=Path(self.plan['generation_files']['asqa']['path']);rows=g.parse_json(generation.read_bytes())
@@ -111,6 +133,14 @@ class GenerationTests(unittest.TestCase):
         self.assertEqual(report['io_denials'],0)
         root=Path(job['output']);audit=root/'io-audit.jsonl';original_audit=audit.read_bytes()
         original_receipt=(root/'RECEIPT.json').read_bytes()
+        job_path=Path(jp['path']);original_job=job_path.read_bytes()
+        for bad_job in (dict(job,kind='alce_generation_actor_job_v1'),dict(job,undeclared_field=False)):
+            changed_job=put(job_path,bad_job);changed_receipt=g.parse_json(original_receipt)
+            changed_receipt['job']=changed_job
+            resealed=put(root/'RECEIPT.json',changed_receipt)
+            with self.subTest(job_kind=bad_job['kind'],fields=len(bad_job)),self.assertRaisesRegex(g.ContractError,'Exact v2 actor job'):
+                g.verify_worker(root,resealed,bad_job,time.monotonic()+60)
+        job_path.write_bytes(original_job);(root/'RECEIPT.json').write_bytes(original_receipt)
         def reseal():
             value=g.parse_json(original_receipt);value['files']=g._inventory(root,time.monotonic()+30,omit=('RECEIPT.json',))
             return put(root/'RECEIPT.json',value)
@@ -224,6 +254,48 @@ class GenerationTests(unittest.TestCase):
         result=g.resource_summary(rows)
         self.assertEqual(result['observed_cpu_delta_seconds']['server'],3)
         self.assertEqual(result['server_observed_lifetime_cpu_seconds'],5)
+
+
+class SourceOriginsTests(unittest.TestCase):
+    """Real isolated imports; copies are invented install layouts, never models."""
+    def setUp(self):
+        directory=(g.ROOT/'data/cache').resolve();directory.mkdir(parents=True,exist_ok=True)
+        self.tmp=tempfile.TemporaryDirectory(dir=directory,prefix='alce-generation-origins-')
+        self.addCleanup(self.tmp.cleanup);self.root=Path(self.tmp.name).resolve()
+        self.packages=self.root/'installed';self.packages.mkdir()
+        for name,relative in g.PACKAGES.items():
+            shutil.copytree(g.ROOT/relative,self.packages/name,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
+
+    def invoke(self,body):
+        code='import sys,json,time\nfrom pathlib import Path\n'
+        code+=f'sys.path[:0]=[{str(self.packages)!r},{str(g.ROOT)!r}]\n'
+        code+='from experiments.alce import generation as g\n'+body
+        return subprocess.run([sys.executable,'-I','-B','-c',code],capture_output=True,timeout=60)
+
+    def test_noneditable_copies_have_equal_logical_identity_and_retained_distinct_origins(self):
+        result=self.invoke("print(json.dumps(g.source_context(time.monotonic()+30)))")
+        self.assertEqual(result.returncode,0,result.stderr.decode())
+        observed=json.loads(result.stdout);current=g.source_context(time.monotonic()+30)
+        self.assertEqual(observed['source_identities'],current['source_identities'])
+        for name in g.PACKAGES:
+            self.assertEqual(observed['package_origins'][name],proof(self.packages/name/'__init__.py'))
+        self.assertIn(proof(self.packages/'tether_engine/agents.py'),observed['code_files'])
+
+    def test_changed_installed_dependency_is_rejected(self):
+        path=self.packages/'tether_engine/atomic.py';path.write_bytes(path.read_bytes()+b'\n# invented byte drift\n')
+        result=self.invoke('g.source_context(time.monotonic()+30)')
+        self.assertNotEqual(result.returncode,0);self.assertIn(b'Loaded dependency bytes differ',result.stderr)
+
+    def test_undeclared_installed_source_member_is_rejected(self):
+        (self.packages/'tether_engine/unlisted_invented.py').write_text('VALUE = 1\n')
+        result=self.invoke('g.source_context(time.monotonic()+30)')
+        self.assertNotEqual(result.returncode,0);self.assertIn(b'Installed package source membership differs',result.stderr)
+
+    def test_same_byte_loaded_module_outside_admitted_package_is_rejected(self):
+        result=self.invoke("g.producer.serde.__file__=str(g.ROOT/'src/tether_engine/serde.py')\n"
+            "g.producer.serde.__spec__.origin=g.producer.serde.__file__\n"
+            'g.source_context(time.monotonic()+30)')
+        self.assertNotEqual(result.returncode,0);self.assertIn(b'Loaded module origin differs',result.stderr)
 
 
 if __name__=='__main__':unittest.main()

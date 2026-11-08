@@ -52,6 +52,17 @@ The default TETHER runtime does not install the model dependencies.
 - Complete source joins are required before scoring. A failed generation has no
   fabricated answer. Partial work retains its full scheduled denominator.
 
+Generation plans and actor jobs use the v2 source-origin contract. They bind stable
+repository-relative source identities, exact observed package files and the engine
+and facade package origins. Installed packages must have the same complete Python
+source tree and bytes as the checkout. The isolated worker loads the parent-admitted
+origins; it never silently substitutes checkout packages for installed packages.
+This verifies trusted package execution, not hostile Python import attestation.
+Legacy v1 plans must be rebuilt and separately released under qualified v2 code;
+existing plans, helper qualifications and failed outputs are not rewritten or
+retroactively promoted. Model prompts, case ordering and scientific limits are
+unchanged by this source-admission migration.
+
 `evaluation.assemble()` requires an externally anchored join plan.
 `metric_plan()` lists required family operations; `evaluate_group()` performs one
 group with caller-supplied qualified runtimes. These in-process APIs do not provide

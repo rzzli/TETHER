@@ -102,6 +102,45 @@ class ViewsTests(unittest.TestCase):
             self.assertEqual((self.root/'prepared'/f'evaluation/{family}.json').read_bytes(),self.raw[family])
             with self.assertRaises(TypeError):rows[0]['question']='mutated'
 
+    def test_empty_qampari_alias_preserves_original_groups_and_native_denominator(self):
+        rows=[invented('qampari',i) for i in range(2)]
+        rows[0]['answers']=[[''],['REF_SECRET_A']]
+        self.raw['qampari']=canonical(rows);self.tar();self.bind()
+        value=self.prepare();verified=d.verify_preparation(value['root'],value['receipt_sha256'])
+        self.assertEqual(verified['counts']['qampari'],2)
+        original=self.root/'prepared/evaluation/qampari.json'
+        self.assertEqual(original.read_bytes(),self.raw['qampari'])
+        retained=json.loads(original.read_bytes())
+        self.assertEqual(retained[0]['answers'],[[''],['REF_SECRET_A']])
+        actor=self.root/'prepared/generation/qampari.json'
+        self.assertNotIn(b'REF_SECRET',actor.read_bytes())
+        self.assertTrue(all(set(row)=={'id','question','docs'} for row in d.load_generation(proof(actor))))
+        # Exact pinned native arithmetic with an explicitly invented mean binding.
+        # Empty aliases remain in the denominator; no pretrained runtime is used.
+        from tests.test_alce_native_metrics import NativeMetricsTests
+        native=NativeMetricsTests();native.setUp();self.addCleanup(native.doCleanups)
+        scored=dict(retained[0],output='REF_SECRET_A')
+        metric=native.bridge().metric('qampari',[scored])['native_value']
+        self.assertEqual(metric['qampari_prec'],100)
+        self.assertEqual(metric['qampari_rec'],50)
+        self.assertEqual(metric['qampari_rec_top5'],50)
+        self.assertAlmostEqual(metric['qampari_f1'],200/3)
+        self.assertEqual(scored['answers'],[[''],['REF_SECRET_A']])
+
+    def test_qampari_null_nonstrings_and_empty_containers_still_reject(self):
+        for answers in (None,{},'alias',[],[[]],[[''],[]],[[None]],[[False]],[[1]],[[{}]],[[['nested']]]):
+            row=invented('qampari',0);row['answers']=answers
+            with self.subTest(answers=answers),self.assertRaisesRegex(ContractError,'QAMPARI answer groups'):
+                d.project(canonical([row]),family='qampari',member=d.MEMBERS['qampari'],archive_sha256='a'*64,identity_field='id')
+
+    def test_other_families_still_require_nonempty_reference_text(self):
+        for family,key,value in (('asqa','answer',''),('eli5','claims',['']),
+            ('asqa','qa_pairs',[dict(question='Invented?',short_answers=[''])]),
+            ('asqa','annotations',[dict(long_answer=''),dict(long_answer='Invented answer')])):
+            row=invented(family,0);row[key]=value
+            with self.subTest(family=family,key=key),self.assertRaises(ContractError):
+                d.project(canonical([row]),family=family,member=d.MEMBERS[family],archive_sha256='a'*64,identity_field='id')
+
     def test_generation_reader_opens_no_evaluator_archive_or_coordinator_file(self):
         self.prepare();allowed=self.root/'prepared/generation/asqa.json';p=proof(allowed)
         original=Path.open;opened=[]
