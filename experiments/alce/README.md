@@ -29,6 +29,8 @@ flowchart LR
 | `native_metrics.py` | Execute exact pinned scoring functions with explicitly supplied dependencies. |
 | `native_runtime.py` | Load the pinned TRUE, RoBERTa QA and GPT2-large evaluator assets offline. |
 | `native_worker.py` | Supervise flat native qualification jobs and individual QA/MAUVE/TRUE operations. |
+| `derived_converter.py` | Explicitly repack verified FP32 TRUE weights into smaller stock PyTorch files, without inference or dtype conversion. |
+| `derived_checkpoint.py` | Independently audit tensor layout, aliases and raw bits; validate the cache and its original acquisition lineage. |
 | `offline.py` | Deny undeclared Python network activity during evaluator work. |
 
 Asset acquisition is a separate [receipt-producing transport](../alce_transport/README.md).
@@ -70,15 +72,18 @@ process ownership or certify the caller's model. `evaluation_worker.py --help`
 describes the full-family group supervisor, including resident branching citation
 work. `native_worker.py --help` describes the flat qualification-job supervisor.
 Schedule jobs sequentially; neither supervisor provides a cross-job GPU lock.
-Metric worker jobs use schema version 2 and kind `alce_evaluation_worker_job_v2`.
+Metric worker jobs retain schema version 2 and kind `alce_evaluation_worker_job_v2`
+for original acquired checkpoints. Version 3 (`alce_evaluation_worker_job_v3`)
+adds a required `derived_checkpoint` receipt proof or explicit `null`.
 Their `package_context` comes from `evaluation_worker.package_context(deadline)`:
 it binds complete package membership, logical source bytes and the parent's
 actual package origins. The isolated evaluator imports those exact admitted
 origins before opening its job, preserving strict generation-capture source
 equality in both installed and checkout environments. Execution and independent
-replay reject legacy or extended job schemas. Rebuild and release old jobs with
+replay reject unknown or extended job schemas. Rebuild and release old jobs with
 the new source contract; do not rewrite prior jobs or completed records. The
-separate flat `native_worker` qualification contract is unchanged.
+flat `native_worker` retains v1 for original checkpoints; v2 adds the same explicit
+`derived_checkpoint` field. A non-null cache is permitted only for TRUE.
 Each evaluator job must declare positive integral `limits.finalization_seconds`
 separately from `limits.seconds`; neither has a production default. The latter
 bounds the worker, with 30 seconds for process startup and exit. Final verification
@@ -86,6 +91,17 @@ has its declared reserve after child return, and all preflight, process and
 verification time counts against the combined limit. Size that reserve from the
 full retained evidence inventory before dispatch. Native progress logs are retained
 in full; the final nonempty UTF-8 stdout line must be the exact terminal receipt.
+
+The optional TRUE cache preserves FP32 storage bits, original key order, alias
+groups and model metadata. It changes file boundaries; the native model still
+uses the original `.bin` loading and BF16 casting path. Construction reads one
+SHA256-verified original into an owned temporary spool, writes bounded shards,
+and independently compares each tensor layout and raw storage. Only an audited
+spool is removed; failed partial outputs remain. Cache admission rehashes every
+derived file and retains complete original-parent proofs. Receipt replay checks
+the current metadata and model provenance; it does not claim to reread original
+weight bytes. An externally anchored successful derivation and fresh native
+behavior qualification are required before using this cache for scoring.
 
 The current native execution path targets Windows with CUDA. Portable tests use
 invented dependencies and do not establish Linux GPU execution. Pin and qualify

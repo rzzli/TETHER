@@ -7,6 +7,7 @@ inputs. No acquisition, generation, automatic retry or singleton-QA repair.
 from __future__ import annotations
 
 import argparse
+from contextlib import ExitStack
 import hashlib
 import importlib
 import importlib.metadata
@@ -22,12 +23,13 @@ if __package__ in (None,''):
 
 from tether_engine.serde import canonical,encode,fingerprint,parse_json
 from experiments.alce import evaluation as join,native_metrics as metrics,native_runtime as runtime,native_worker as base
+from experiments.alce import derived_checkpoint as derived
 from experiments.alce.data_views import _path,_hash,_read,_tick,need
 
 MAX_JOB=16*1024**2
 PUNKT={'abbrev_types.txt','collocations.tab','ortho_context.tab','sent_starters.txt'}
 VERSIONS={'np':'2.3.5','nltk':'3.9.2','rouge_scorer':'0.1.2','scoring':'0.1.2'}
-KIND='alce_evaluation_worker_job_v2'
+KINDS={2:'alce_evaluation_worker_job_v2',3:'alce_evaluation_worker_job_v3'}
 # Fresh isolated child only, with the parent's byte-admitted package origins.
 # This fixed entrypoint cannot select an arbitrary module or callable.
 WORKER_BOOTSTRAP="""import hashlib,importlib.util,json,sys
@@ -78,11 +80,26 @@ def _command(job,job_proof):
 
 
 def _job_identity(job):
-    need(type(job)is dict and set(job)=={'schema_version','kind','family','group','join_plan','generation','output','interpreter',
-         'offline','limits','placement','acquisition_receipt','runtime_sources','lexical_sources','punkt','rng_seed','code_pins','package_context'},
+    need(type(job)is dict and type(job.get('schema_version'))is int and job['schema_version'] in KINDS,
+         'Metric job version')
+    version=job['schema_version']
+    keys={'schema_version','kind','family','group','join_plan','generation','output','interpreter',
+         'offline','limits','placement','acquisition_receipt','runtime_sources','lexical_sources','punkt','rng_seed','code_pins','package_context'}
+    need(set(job)==keys|({'derived_checkpoint'} if version==3 else set()),
          'Exact metric worker job schema')
-    need(type(job['schema_version'])is int and job['schema_version']==2 and job['kind']==KIND
+    need(job['kind']==KINDS[version]
          and job['family'] in join.FAMILIES and job['group'] in join.GROUPS,'Metric job identity')
+    if job.get('derived_checkpoint') is not None:
+        need(job['group']=='true','Derived checkpoint is restricted to TRUE metrics')
+        derived._proof(job['derived_checkpoint'])
+
+
+def _assets(job,end,original_loader):
+    product=dict(true='true_nli',qa='qa_roberta',mauve='gpt2_large')[job['group']]
+    proof=job.get('derived_checkpoint')
+    if proof is not None:
+        return derived.DerivedModelAssets(job['acquisition_receipt'],product,derived_checkpoint=proof,deadline=end)
+    return original_loader(job['acquisition_receipt'],product,deadline=end)
 
 
 def _fresh(output,protected,*,fresh=True):
@@ -126,6 +143,9 @@ def load_job(proof,*,fresh=True):
         *(p['path'] for p in job['package_context']['code_files']),
         *(Path(p['path']).parent for p in job['package_context']['package_origins'].values())]
     if job['acquisition_receipt'] is not None:protected.append(_path(job['acquisition_receipt']['path']).parent)
+    if job.get('derived_checkpoint') is not None:
+        admission=derived.derived_admission(job['acquisition_receipt'],job['derived_checkpoint'],deadline=end)
+        protected.extend(admission['protected_roots'])
     protected.extend(e['descriptor']['root'] for e in plan['attempts'] if e['descriptor'] is not None)
     output=_fresh(job['output'],protected,fresh=fresh)
     return job,plan,selected,output,protected
@@ -211,7 +231,7 @@ def execute(job_proof,*,module_loader=runtime.dependencies,lexical_loader=lexica
     try:
         budget.write(output/'REQUEST.json',dict(job=job_proof,code_pins=job['code_pins'],automatic_retries=0))
         emit('evaluation_reserved',dict(family=job['family'],group=job['group'],metrics=selected))
-        with base.DeadlineWatchdog(end,output/'DEADLINE.json'),base.ResourceWatchdog(output,job['limits'],sample=resource_sampler) as watch:
+        with base.DeadlineWatchdog(end,output/'DEADLINE.json'),base.ResourceWatchdog(output,job['limits'],sample=resource_sampler) as watch,ExitStack() as asset_scope:
             guard=base.OfflineNetworkGuard(job['offline']['record'],job['offline']['connection']).install()
             for name in ('HF_HUB_OFFLINE','TRANSFORMERS_OFFLINE','HF_DATASETS_OFFLINE','HF_HUB_DISABLE_TELEMETRY'):os.environ[name]='1'
             for name in ('OMP_NUM_THREADS','MKL_NUM_THREADS','OPENBLAS_NUM_THREADS'):os.environ[name]=str(job['limits']['cpu_threads'])
@@ -232,7 +252,10 @@ def execute(job_proof,*,module_loader=runtime.dependencies,lexical_loader=lexica
                 torch.set_num_threads(job['limits']['cpu_threads']);total=torch.cuda.get_device_properties(0).total_memory
                 need(job['limits']['gpu_bytes']<=total,'GPU allocation ceiling exceeds hardware')
                 torch.cuda.set_per_process_memory_fraction(job['limits']['gpu_bytes']/total,0)
-                assets=asset_loader(job['acquisition_receipt'],dict(true='true_nli',qa='qa_roberta',mauve='gpt2_large')[job['group']],deadline=end)
+                assets=_assets(job,end,asset_loader)
+                if job.get('derived_checkpoint') is not None:
+                    asset_scope.enter_context(derived.stable_files([Path(p['path']) for p in assets.files.values()],deadline=end))
+                    assets.revalidate(end)
                 common=dict(deadline=end,emit=emit)
                 if job['group']=='true':adapter=runtime.TrueRuntime(assets,modules,max_memory=job['placement'],offload_root=output/'offload',**common)
                 elif job['group']=='qa':adapter=runtime.QARuntime(assets,modules,**common)
@@ -351,6 +374,8 @@ def verify_worker(root,job_proof,job,selected,end):
     else:
         need(native['failed'] is False and native['automatic_retries']==0 and native['runtime_sources']==job['runtime_sources']
              and len(native['calls'])==len(calls),'Native model accounting differs')
+        if job.get('derived_checkpoint') is not None:
+            derived.verify_asset_provenance(job['acquisition_receipt'],job['derived_checkpoint'],native['model'],deadline=end)
         for i,(record,value) in enumerate(zip(native['calls'],call_values)):
             need(record['ordinal']==value['ordinal']==i and record['status']=='completed' and record['error_type'] is None
                  and record['request_sha256']==value['request_sha256'],'Native call request/result binding')

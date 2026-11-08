@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+from contextlib import ExitStack
 import ctypes
 import hashlib
 import math
@@ -22,6 +23,7 @@ from experiments.scifact_multivers_transport.download import Journal, utc, write
 from experiments.alce.data_views import _path, _hash, _read, _tick, need
 from experiments.alce.offline import OfflineNetworkGuard
 from experiments.alce import native_runtime as runtime
+from experiments.alce import derived_checkpoint as derived
 
 MAX_JOB=16*1024**2
 
@@ -86,17 +88,28 @@ def source_pins():
         ROOT/'experiments/alce/data_views.py',ROOT/'experiments/alce/native_metrics.py',
         ROOT/'experiments/labbench/runtime.py',ROOT/'experiments/scifact_multivers_transport/download.py',
         ROOT/'src/tether_engine/serde.py',ROOT/'packages/tether/src/tether/_process.py']
+    paths.extend([Path(derived.__file__).resolve(),ROOT/'src/tether_engine/study/stable_read.py',
+                  ROOT/'src/tether_engine/study/proofs.py'])
     end=time.monotonic()+60
     return {p.relative_to(ROOT).as_posix():_hash(p,end) for p in paths}
 
 
+def job_identity(value):
+    keys={'schema_version','kind','operation','purpose','acquisition_receipt','inputs','output',
+          'interpreter','offline','limits','placement','native_sources','code_pins','runtime_sources'}
+    version=value.get('schema_version')
+    need(type(version)is int and version in (1,2) and value.get('kind')==f'alce_native_job_v{version}'
+         and set(value)==keys|({'derived_checkpoint'} if version==2 else set()),'Exact native job schema')
+    need(value['kind']==f'alce_native_job_v{version}'
+         and value['operation'] in ('true','qa','mauve') and value['purpose'] in ('qualification','evaluation'),'Native job identity')
+    if version==2 and value['derived_checkpoint'] is not None:
+        need(value['operation']=='true','Derived checkpoint is restricted to TRUE')
+        derived._proof(value['derived_checkpoint'])
+
+
 def load_job(proof):
     end=time.monotonic()+60
-    value=parse_json(_read(proof,MAX_JOB,end))
-    need(set(value)=={'schema_version','kind','operation','purpose','acquisition_receipt','inputs','output',
-         'interpreter','offline','limits','placement','native_sources','code_pins','runtime_sources'},'Exact native job schema')
-    need(type(value['schema_version'])is int and value['schema_version']==1 and value['kind']=='alce_native_job_v1'
-         and value['operation'] in ('true','qa','mauve') and value['purpose'] in ('qualification','evaluation'),'Native job identity')
+    value=parse_json(_read(proof,MAX_JOB,end));job_identity(value)
     need(value['code_pins']==source_pins(),'Executing native worker source closure differs')
     limits=value['limits']
     keys={'seconds','process_bytes','minimum_available_host_bytes','gpu_bytes','offload_bytes','max_calls','input_bytes','output_bytes','cpu_threads'}
@@ -111,6 +124,9 @@ def load_job(proof):
     root=_path(value['acquisition_receipt']['path']).parent
     protected=[root,_path(proof['path']),input_path,*(Path(p['path']) for p in value['runtime_sources'].values()),
                *(Path(p['path']) for p in value['offline'].values()),*(Path(p['path']) for p in value['native_sources'].values())]
+    if value.get('derived_checkpoint') is not None:
+        admission=derived.derived_admission(value['acquisition_receipt'],value['derived_checkpoint'],deadline=end)
+        protected.extend(_path(p) for p in admission['protected_roots'])
     need(output.parent.is_dir() and not output.exists() and all(output!=p and output not in p.parents and p not in output.parents for p in protected),
          'Fresh native output must not overlap inputs, assets or runtime')
     rows=parse_json(_read(value['inputs'],limits['input_bytes'],end))
@@ -198,7 +214,7 @@ def execute(job_proof,*,module_loader=runtime.dependencies,asset_loader=runtime.
     try:
         budget.write(output/'REQUEST.json',dict(job=job_proof,code_pins=job['code_pins'],scope='one native worker; no automatic retry'))
         emit('native_worker_reserved',dict(operation=job['operation'],purpose=job['purpose'],ids=[r['id'] for r in rows]))
-        with DeadlineWatchdog(deadline,output/'DEADLINE.json'), ResourceWatchdog(output,job['limits'],sample=resource_sampler) as watch:
+        with DeadlineWatchdog(deadline,output/'DEADLINE.json'), ResourceWatchdog(output,job['limits'],sample=resource_sampler) as watch, ExitStack() as asset_scope:
             guard=OfflineNetworkGuard(job['offline']['record'],job['offline']['connection']).install()
             for key in ('HF_HUB_OFFLINE','TRANSFORMERS_OFFLINE','HF_DATASETS_OFFLINE','HF_HUB_DISABLE_TELEMETRY'):
                 os.environ[key]='1'
@@ -212,7 +228,12 @@ def execute(job_proof,*,module_loader=runtime.dependencies,asset_loader=runtime.
             available=modules['torch'].cuda.get_device_properties(0).total_memory
             need(job['limits']['gpu_bytes']<=available,'GPU allocator ceiling exceeds hardware')
             modules['torch'].cuda.set_per_process_memory_fraction(job['limits']['gpu_bytes']/available,0)
-            assets=asset_loader(job['acquisition_receipt'],dict(true='true_nli',qa='qa_roberta',mauve='gpt2_large')[job['operation']],deadline=deadline)
+            if job.get('derived_checkpoint') is not None:
+                assets=derived.DerivedModelAssets(job['acquisition_receipt'],'true_nli',derived_checkpoint=job['derived_checkpoint'],deadline=deadline)
+                asset_scope.enter_context(derived.stable_files([Path(p['path']) for p in assets.files.values()],deadline=deadline))
+                assets.revalidate(deadline)
+            else:
+                assets=asset_loader(job['acquisition_receipt'],dict(true='true_nli',qa='qa_roberta',mauve='gpt2_large')[job['operation']],deadline=deadline)
             common=dict(deadline=deadline,emit=emit)
             if job['operation']=='true':adapter=runtime.TrueRuntime(assets,modules,max_memory=job['placement'],offload_root=output/'offload',**common)
             elif job['operation']=='qa':adapter=runtime.QARuntime(assets,modules,**common)
@@ -259,6 +280,8 @@ def execute(job_proof,*,module_loader=runtime.dependencies,asset_loader=runtime.
 
 
 def verify_worker(worker,job_proof,job,rows,deadline):
+    job_identity(job)
+    need(parse_json(_read(job_proof,MAX_JOB,deadline))==job,'Exact external native job differs')
     for name in ('FAILURE.json','DEADLINE.json','RESOURCE-LIMIT.json'):
         need(not (worker/name).exists(),'Worker terminal contradiction')
     rp=_hash(worker/'WORKER-RECEIPT.json',deadline)
@@ -292,6 +315,8 @@ def verify_worker(worker,job_proof,job,rows,deadline):
         if job['operation']=='true':need(type(row['result'])is int and row['result'] in (0,1),'Typed native TRUE verdict required')
         result_values.append(row['result'])
     native=complete['native'];calls=native['calls']
+    if job.get('derived_checkpoint') is not None:
+        derived.verify_asset_provenance(job['acquisition_receipt'],job['derived_checkpoint'],native['model'],deadline=deadline)
     need(native['failed'] is False and native['automatic_retries']==0 and native['runtime_sources']==job['runtime_sources']
          and len(calls)==count,'Complete native runtime accounting')
     expected_requests=[rows] if job['operation']=='mauve' else [row['request'] for row in rows]
@@ -342,6 +367,9 @@ def supervise(job_proof,output):
     start=time.monotonic();job,rows=load_job(job_proof);root=_path(output);worker=_path(job['output'])
     protected=[worker,_path(job_proof['path']),_path(job['acquisition_receipt']['path']).parent,
                _path(job['inputs']['path']),*(Path(p['path']) for p in job['runtime_sources'].values())]
+    if job.get('derived_checkpoint') is not None:
+        admission=derived.derived_admission(job['acquisition_receipt'],job['derived_checkpoint'],deadline=start+60)
+        protected.extend(_path(p) for p in admission['protected_roots'])
     need(root.parent.is_dir() and not root.exists() and all(root!=p and root not in p.parents and p not in root.parents for p in protected),
          'Separate fresh native supervisor output required')
     containment=contain_process_tree()

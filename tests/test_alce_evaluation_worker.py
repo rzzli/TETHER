@@ -4,7 +4,7 @@ Generation ownership verification is explicitly substituted by invented metadata
 here; source/capture assembly and selected native metric bodies remain genuine.
 """
 import copy
-from contextlib import nullcontext
+from contextlib import contextmanager,nullcontext
 import json
 import os
 from pathlib import Path
@@ -163,6 +163,88 @@ class EvaluationWorkerTests(unittest.TestCase):
         self.assertEqual(complete['metrics'],['citations']);self.assertEqual(len(complete['call_files']),6)
         self.assertEqual(len(complete['bridge_calls']),6);self.assertEqual(len(complete['native']['calls']),6)
         self.assertIsNone(complete['rng']);self.assertEqual(complete['offline']['denied_network_attempts'],0)
+
+    def test_v3_null_derived_checkpoint_keeps_original_route(self):
+        self.job.update(schema_version=3,kind='alce_evaluation_worker_job_v3',derived_checkpoint=None);self.write()
+        with patch.object(w.derived,'DerivedModelAssets',side_effect=AssertionError('Derived assets entered')):
+            rp=self.execute();self.assertEqual(self.replay(),rp)
+
+    def test_v3_requires_explicit_derived_scope_and_proof(self):
+        original=copy.deepcopy(self.job)
+        invalid=[dict(schema_version=3,kind='alce_evaluation_worker_job_v3'),
+            dict(schema_version=2,kind='alce_evaluation_worker_job_v2',derived_checkpoint=None),
+            dict(schema_version=3,kind='alce_evaluation_worker_job_v2',derived_checkpoint=None),
+            dict(schema_version=3,kind='alce_evaluation_worker_job_v3',derived_checkpoint={}),
+            dict(schema_version=3,kind='alce_evaluation_worker_job_v3',group='qa',derived_checkpoint=self.jp),
+            dict(schema_version=3,kind='alce_evaluation_worker_job_v3',group='mauve',derived_checkpoint=self.jp),
+            dict(schema_version=3,kind='alce_evaluation_worker_job_v3',group='lexical',derived_checkpoint=self.jp)]
+        for updates in invalid:
+            self.job=dict(original,**updates);self.write()
+            with self.subTest(updates=updates),patch.object(w.base.processes,'supervise_command') as child:
+                with self.assertRaises(ContractError):w.supervise(self.jp,self.root/'invalid-v3')
+                child.assert_not_called()
+            self.assertFalse(Path(self.job['output']).exists());self.assertFalse((self.root/'invalid-v3').exists())
+
+    def test_v3_routes_explicit_cache_to_derived_assets_only(self):
+        receipt=put(self.root/'DERIVED.json',{'invented':True})
+        self.job.update(schema_version=3,kind='alce_evaluation_worker_job_v3',derived_checkpoint=receipt)
+        original=Mock(side_effect=AssertionError('Original asset loader entered'));end=time.monotonic()+30
+        with patch.object(w.derived,'DerivedModelAssets',return_value='invented-derived-assets') as derived:
+            self.assertEqual(w._assets(self.job,end,original),'invented-derived-assets')
+            derived.assert_called_once_with(self.job['acquisition_receipt'],'true_nli',derived_checkpoint=receipt,deadline=end)
+        original.assert_not_called()
+
+    def test_v3_admits_lineage_and_protects_cache_before_dispatch(self):
+        cache=self.root/'derived';cache.mkdir();receipt=put(cache/'RECEIPT.json',{'invented':True})
+        self.job.update(schema_version=3,kind='alce_evaluation_worker_job_v3',derived_checkpoint=receipt);self.write()
+        with patch.object(w.derived,'derived_admission',side_effect=ContractError('Invented invalid lineage')) as admit,\
+             patch.object(w.base.processes,'supervise_command') as child:
+            with self.assertRaisesRegex(ContractError,'invalid lineage'):w.supervise(self.jp,self.root/'outer')
+            child.assert_not_called();admit.assert_called_once()
+        self.assertFalse(Path(self.job['output']).exists());self.assertFalse((self.root/'outer').exists())
+        self.job['output']=str(cache/'nested-output');self.write()
+        with patch.object(w.derived,'derived_admission',return_value={'protected_roots':[str(cache)]}),\
+             patch.object(w.base.processes,'supervise_command') as child:
+            with self.assertRaisesRegex(ContractError,'overlaps protected'):w.supervise(self.jp,self.root/'outer')
+            child.assert_not_called()
+        self.assertFalse(Path(self.job['output']).exists());self.assertFalse((self.root/'outer').exists())
+
+    def test_v3_replay_requires_explicit_model_authority_join(self):
+        # Run the original invented model, then reseal its job as a derived v3
+        # request. The new gate must be reached and reject a mismatched authority.
+        self.execute();root=Path(self.job['output'])
+        receipt=put(self.root/'DERIVED.json',{'invented':True})
+        self.job.update(schema_version=3,kind='alce_evaluation_worker_job_v3',derived_checkpoint=receipt);self.write()
+        request=json.loads((root/'REQUEST.json').read_bytes());request['job']=self.jp;put(root/'REQUEST.json',request)
+        complete=json.loads((root/'COMPLETE.json').read_bytes());complete['job']=self.jp;self.reseal(complete)
+        with patch.object(w.derived,'verify_asset_provenance',side_effect=ContractError('Invented model authority mismatch')) as verify:
+            with self.assertRaisesRegex(ContractError,'authority mismatch'):self.replay()
+            verify.assert_called_once()
+            self.assertEqual(verify.call_args.args,(self.job['acquisition_receipt'],receipt,complete['native']['model']))
+
+    def test_v3_asset_handles_cover_model_work_and_close_on_error(self):
+        cache=self.root/'derived';cache.mkdir();receipt=put(cache/'RECEIPT.json',{'invented':True})
+        self.job.update(schema_version=3,kind='alce_evaluation_worker_job_v3',derived_checkpoint=receipt)
+        state={'locked':False};checks=[]
+        @contextmanager
+        def locks(paths,*,deadline):
+            self.assertEqual(paths,[self.base.module]);self.assertFalse(state['locked']);state['locked']=True
+            try:yield
+            finally:state['locked']=False
+        def revalidate(*args,**kw):
+            self.assertTrue(state['locked'],'Derived files must stay locked through runtime work and final revalidation')
+            checks.append(kw.get('full',False))
+        assets=NS(product='true_nli',root=cache,files={'invented':proof(self.base.module)},
+            revalidate=revalidate,provenance=lambda:dict(product='true_nli',invented=True))
+        for fail in (False,True):
+            self.job['output']=str(self.root/('derived-failed' if fail else 'derived-success'));self.write();checks.clear()
+            with self.subTest(fail=fail),patch.object(w.derived,'derived_admission',return_value={'protected_roots':[str(cache)]}),\
+                 patch.object(w.derived,'DerivedModelAssets',return_value=assets),patch.object(w.derived,'stable_files',side_effect=locks):
+                if fail:
+                    with self.assertRaises(RuntimeError):self.execute(fail=True)
+                    self.assertTrue((Path(self.job['output'])/'FAILURE.json').is_file())
+                else:self.execute();self.assertIn(True,checks)
+            self.assertTrue(checks);self.assertFalse(state['locked'])
 
     def test_lexical_worker_never_loads_model_and_reports_explicit_rng(self):
         self.job.update(family='qampari',group='lexical',runtime_sources={},acquisition_receipt=None,placement={},
@@ -329,7 +411,9 @@ class EvaluationWorkerTests(unittest.TestCase):
     def test_replay_reserve_is_separate_from_exhausted_child_budget(self):
         # Invented process clocks and a stubbed worker replay isolate supervisor
         # accounting; this is not a native/source acceptance capability.
-        current=[time.monotonic()];start=current[0];worker=Path(self.job['output']);worker.mkdir()
+        # An integral synthetic origin keeps the declared 5/64/5-second phases
+        # exact; host-specific fractional clocks must not perturb this fixture.
+        current=[float(int(time.monotonic())+1)];start=current[0];worker=Path(self.job['output']);worker.mkdir()
         put(worker/'COMPLETE.json',{'wall_seconds':35})
         rp=put(worker/'WORKER-RECEIPT.json',{'invented_clock_only':True})
         self.job['limits']['finalization_seconds']=120
