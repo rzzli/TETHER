@@ -70,6 +70,15 @@ process ownership or certify the caller's model. `evaluation_worker.py --help`
 describes the full-family group supervisor, including resident branching citation
 work. `native_worker.py --help` describes the flat qualification-job supervisor.
 Schedule jobs sequentially; neither supervisor provides a cross-job GPU lock.
+Metric worker jobs use schema version 2 and kind `alce_evaluation_worker_job_v2`.
+Their `package_context` comes from `evaluation_worker.package_context(deadline)`:
+it binds complete package membership, logical source bytes and the parent's
+actual package origins. The isolated evaluator imports those exact admitted
+origins before opening its job, preserving strict generation-capture source
+equality in both installed and checkout environments. Execution and independent
+replay reject legacy or extended job schemas. Rebuild and release old jobs with
+the new source contract; do not rewrite prior jobs or completed records. The
+separate flat `native_worker` qualification contract is unchanged.
 Each evaluator job must declare positive integral `limits.finalization_seconds`
 separately from `limits.seconds`; neither has a production default. The latter
 bounds the worker, with 30 seconds for process startup and exit. Final verification

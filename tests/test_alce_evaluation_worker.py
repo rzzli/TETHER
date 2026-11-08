@@ -71,16 +71,68 @@ class EvaluationWorkerTests(unittest.TestCase):
         self.root=self.base.root;gen=self.root/'generation';gen.mkdir()
         report=put(gen/'REPORT.json',{'invented_process_capture':True})
         rp=put(gen/'RECEIPT.json',{'files':{'REPORT.json':report}})
-        self.job=dict(schema_version=1,kind='alce_evaluation_worker_job_v1',family='asqa',group='true',
+        self.job=dict(schema_version=2,kind='alce_evaluation_worker_job_v2',family='asqa',group='true',
             join_plan=self.join.pp,generation=dict(root=str(gen),receipt_sha256=rp['sha256']),output=str(self.root/'metric-worker'),
             interpreter=self.base.job['interpreter'],offline=self.base.job['offline'],limits=dict(self.base.job['limits'],
                 seconds=40,finalization_seconds=120,max_calls=20,input_bytes=16*1024**2,output_bytes=16*1024**2),placement=self.base.job['placement'],
             acquisition_receipt=self.base.job['acquisition_receipt'],runtime_sources=self.base.job['runtime_sources'],
-            lexical_sources={n:proof(self.base.module) for n in ('np','sent_tokenize')},punkt={},rng_seed=None,code_pins=w.source_pins())
+            lexical_sources={n:proof(self.base.module) for n in ('np','sent_tokenize')},punkt={},rng_seed=None,code_pins=w.source_pins(),
+            package_context=w.package_context(time.monotonic()+30))
         for name in w.PUNKT:self.job['punkt'][name]=put(self.root/name,{'invented_table':name})
         self.jp=put(self.root/'METRIC-JOB.json',self.job)
 
     def write(self):self.jp=put(self.root/'METRIC-JOB.json',self.job)
+
+    def test_legacy_job_rejected_before_dispatch_or_output(self):
+        self.job.update(schema_version=1,kind='alce_evaluation_worker_job_v1')
+        self.job.pop('package_context',None);self.write()
+        with patch.object(w.base.processes,'supervise_command',side_effect=AssertionError('Legacy job dispatched')) as child:
+            with self.assertRaises(ContractError):w.load_job(self.jp)
+            with self.assertRaises(ContractError):w.supervise(self.jp,self.root/'legacy-outer')
+            child.assert_not_called()
+        self.assertFalse(Path(self.job['output']).exists());self.assertFalse((self.root/'legacy-outer').exists())
+
+    def test_package_origin_and_source_context_tamper_rejects_before_dispatch(self):
+        original=copy.deepcopy(self.job);context=original['package_context'];key=next(iter(context['source_identities']))
+        copied=self.root/'copied-package';copied.mkdir();initializer=copied/'__init__.py'
+        initializer.write_bytes(Path(context['package_origins']['tether_engine']['path']).read_bytes())
+        changes=(lambda c:c['package_origins']['tether_engine'].update(sha256='0'*64),
+            lambda c:c['package_origins'].update(tether_engine=proof(initializer)),
+            lambda c:c['package_origins'].pop('tether'),
+            lambda c:c['source_identities'][key].update(sha256='0'*64),
+            lambda c:c['code_files'].pop(),lambda c:c.update(extra=True))
+        for change in changes:
+            self.job=copy.deepcopy(original);change(self.job['package_context']);self.write()
+            with self.subTest(change=change),patch.object(w.base.processes,'supervise_command',side_effect=AssertionError('Invalid origins dispatched')) as child:
+                with self.assertRaises(ContractError):w.supervise(self.jp,self.root/'bad-origin')
+                child.assert_not_called()
+            self.assertFalse((self.root/'bad-origin').exists());self.assertFalse(Path(self.job['output']).exists())
+
+    def test_actual_production_bootstrap_uses_origins_then_stops_at_invented_admission(self):
+        # The real fixed command, without a replacement worker/main, must pass
+        # origin admission and then fail at the deliberately wrong generation
+        # receipt before any asset loader, model import or scoring.
+        self.job['generation']['receipt_sha256']='0'*64
+        self.job['limits'].update(process_bytes=512*1024**2,minimum_available_host_bytes=1);self.write()
+        command=w._command(self.job,self.jp)
+        self.assertEqual(command[1:5],['-I','-B','-c',w.WORKER_BOOTSTRAP])
+        self.assertEqual(json.loads(command[6]),self.job['package_context']['package_origins'])
+        result=w.base.processes.supervise_command(command,limits=w.base.processes.ProcessLimits(30,1024**2))
+        self.assertNotEqual(result.returncode,0,result.stderr.decode(errors='replace'))
+        self.assertTrue(result.supervision['process_reaped'])
+        output=Path(self.job['output']);self.assertTrue((output/'REQUEST.json').is_file(),result.stderr.decode(errors='replace'))
+        failure=json.loads((output/'FAILURE.json').read_bytes())
+        self.assertEqual(failure['stage'],'admission');self.assertIn('External generation receipt required',failure['reason'])
+        self.assertFalse((output/'WORKER-RECEIPT.json').exists());self.assertFalse((output/'results').exists())
+
+    def test_actual_bootstrap_rejects_changed_initializer_before_worker_output(self):
+        changed=copy.deepcopy(self.job);changed['package_context']['package_origins']['tether_engine']['sha256']='0'*64
+        command=w._command(changed,self.jp)
+        result=w.base.processes.supervise_command(command,limits=w.base.processes.ProcessLimits(30,1024**2))
+        self.assertNotEqual(result.returncode,0);self.assertTrue(result.supervision['process_reaped'])
+        self.assertIn(b'Package initializer differs from admitted origin',result.stderr)
+        self.assertFalse(Path(self.job['output']).exists())
+
     def execute(self,**kw):return invented_execute(self.jp,**kw)
     def replay(self):return w.verify_worker(Path(self.job['output']),self.jp,self.job,
         tuple(n for n in w.join.RECIPES[self.job['family']] if n in w.join.GROUPS[self.job['group']]),time.monotonic()+30)
@@ -89,6 +141,14 @@ class EvaluationWorkerTests(unittest.TestCase):
         if complete is not None:put(root/'COMPLETE.json',complete)
         receipt={'kind':'alce_metric_worker_receipt_v1','status':'completed','files':w._inventory(root,time.monotonic()+30)}
         return put(root/'WORKER-RECEIPT.json',receipt)
+
+    def test_resealed_legacy_or_extended_job_rejected_by_independent_replay(self):
+        self.execute();root=Path(self.job['output']);original=copy.deepcopy(self.job)
+        request=json.loads((root/'REQUEST.json').read_bytes());complete=json.loads((root/'COMPLETE.json').read_bytes())
+        for change in (lambda j:j.update(kind='alce_evaluation_worker_job_v1',schema_version=1),lambda j:j.update(extra=True)):
+            self.job=copy.deepcopy(original);change(self.job);self.write()
+            request['job']=self.jp;complete['job']=self.jp;put(root/'REQUEST.json',request);self.reseal(complete)
+            with self.subTest(change=change),self.assertRaises(ContractError):self.replay()
 
     def test_resident_true_full_family_branching_and_durable_native_calls(self):
         rp=self.execute();self.assertEqual(self.replay(),rp)
@@ -207,14 +267,22 @@ class EvaluationWorkerTests(unittest.TestCase):
             with self.assertRaises(ContractError):self.replay()
 
     def test_real_model_free_child_supervision_and_read_only_replay(self):
-        script=self.root/'invented-child.py'
-        script.write_text('import sys,json\nfrom pathlib import Path\nsys.path[:0]='+
-            repr([str(w.ROOT),str(w.ROOT/'src'),str(w.ROOT/'packages/tether/src')])+"\nfrom tests.test_alce_evaluation_worker import invented_execute,proof\n"+
-            "p=invented_execute(proof(Path(sys.argv[1])))\nprint('Invented native feature timing: 0.1s')\nprint(json.dumps(dict(status='completed',receipt=p)),flush=True)\nprint('  ')\n")
+        # Keep the actual initializer bootstrap and replace only the final main
+        # with an explicitly invented native dependency boundary.
+        tail='from experiments.alce.evaluation_worker import main\nmain()\n'
+        self.assertTrue(w.WORKER_BOOTSTRAP.endswith(tail))
+        code=w.WORKER_BOOTSTRAP[:-len(tail)]+"from tests.test_alce_evaluation_worker import invented_execute,proof\n"+\
+            "p=invented_execute(proof(Path(sys.argv[3])))\nprint('Invented native feature timing: 0.1s')\nprint(json.dumps(dict(status='completed',receipt=p)),flush=True)\nprint('  ')\n"
         original=w.base.processes.supervise_command
-        def launch(command,*,limits):return original([sys.executable,'-I','-B',str(script),self.jp['path']],limits=limits)
+        def launch(command,*,limits):
+            self.assertEqual(command,w._command(self.job,self.jp));command=list(command);command[4]=code
+            return original(command,limits=limits)
         with patch.object(w.base,'contain_process_tree',return_value=object()),patch.object(w.base.processes,'supervise_command',side_effect=launch):
-            p=w.supervise(self.jp,self.root/'outer')
+            try:p=w.supervise(self.jp,self.root/'outer')
+            except BaseException as error:
+                stderr=self.root/'outer/stderr.bin'
+                if stderr.is_file():error.add_note('Retained invented child stderr: '+stderr.read_text(errors='replace')[:8000])
+                raise
         value=w.verify_execution(dict(root=str(self.root/'outer'),receipt_sha256=p['sha256']))
         self.assertEqual(value['worker_receipt'],self.replay())
         self.assertFalse(value['scientific_metric_truth_independently_recomputed'])

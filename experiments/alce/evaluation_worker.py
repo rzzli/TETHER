@@ -17,8 +17,8 @@ import sys
 import time
 
 ROOT=Path(__file__).resolve().parents[2]
-for directory in (ROOT/'packages/tether/src',ROOT/'src',ROOT):
-    if str(directory) not in sys.path:sys.path.insert(0,str(directory))
+if __package__ in (None,''):
+    for directory in (ROOT/'packages/tether/src',ROOT/'src',ROOT):sys.path.insert(0,str(directory))
 
 from tether_engine.serde import canonical,encode,fingerprint,parse_json
 from experiments.alce import evaluation as join,native_metrics as metrics,native_runtime as runtime,native_worker as base
@@ -27,6 +27,25 @@ from experiments.alce.data_views import _path,_hash,_read,_tick,need
 MAX_JOB=16*1024**2
 PUNKT={'abbrev_types.txt','collocations.tab','ortho_context.tab','sent_starters.txt'}
 VERSIONS={'np':'2.3.5','nltk':'3.9.2','rouge_scorer':'0.1.2','scoring':'0.1.2'}
+KIND='alce_evaluation_worker_job_v2'
+# Fresh isolated child only, with the parent's byte-admitted package origins.
+# This fixed entrypoint cannot select an arbitrary module or callable.
+WORKER_BOOTSTRAP="""import hashlib,importlib.util,json,sys
+from pathlib import Path
+root=Path(sys.argv[1]);origins=json.loads(sys.argv[2])
+if set(origins)!={'tether_engine','tether'}:raise ValueError('Exact package origins required')
+sys.path.insert(0,str(root))
+for name in ('tether_engine','tether'):
+    if name in sys.modules:raise ValueError('Package already loaded before admitted bootstrap')
+    proof=origins[name];path=Path(proof['path']);raw=path.read_bytes()
+    if set(proof)!={'path','bytes','sha256'} or path!=path.resolve() or path.name!='__init__.py' or len(raw)!=proof['bytes'] or hashlib.sha256(raw).hexdigest()!=proof['sha256']:
+        raise ValueError('Package initializer differs from admitted origin')
+    spec=importlib.util.spec_from_file_location(name,str(path),submodule_search_locations=[str(path.parent)])
+    module=importlib.util.module_from_spec(spec);sys.modules[name]=module;spec.loader.exec_module(module)
+sys.argv=[str(root/'experiments/alce/evaluation_worker.py'),*sys.argv[3:]]
+from experiments.alce.evaluation_worker import main
+main()
+"""
 
 
 def source_pins():
@@ -36,6 +55,34 @@ def source_pins():
     for module in (join,metrics,generation,sys.modules[__name__]):
         path=Path(module.__file__).resolve();values[path.relative_to(ROOT).as_posix()]=_hash(path,end)
     return values
+
+
+def package_context(end):
+    """Reuse complete package membership, logical bytes and actual-origin checks."""
+    from experiments.alce.generation import source_context
+    return source_context(end)
+
+
+def _check_sources(job,end):
+    _job_identity(job)
+    need(job['code_pins']==source_pins(),'Executing evaluator source closure differs')
+    context=job['package_context']
+    need(type(context)is dict and set(context)=={'code_files','source_identities','package_origins'}
+         and context==package_context(end),'Evaluator package bytes/origins differ')
+
+
+def _command(job,job_proof):
+    return [job['interpreter']['path'],'-I','-B','-c',WORKER_BOOTSTRAP,str(ROOT),
+        canonical(job['package_context']['package_origins']).decode(),'--worker','--job',job_proof['path'],
+        '--job-sha256',job_proof['sha256']]
+
+
+def _job_identity(job):
+    need(type(job)is dict and set(job)=={'schema_version','kind','family','group','join_plan','generation','output','interpreter',
+         'offline','limits','placement','acquisition_receipt','runtime_sources','lexical_sources','punkt','rng_seed','code_pins','package_context'},
+         'Exact metric worker job schema')
+    need(type(job['schema_version'])is int and job['schema_version']==2 and job['kind']==KIND
+         and job['family'] in join.FAMILIES and job['group'] in join.GROUPS,'Metric job identity')
 
 
 def _fresh(output,protected,*,fresh=True):
@@ -48,14 +95,10 @@ def _fresh(output,protected,*,fresh=True):
 
 def load_job(proof,*,fresh=True):
     end=time.monotonic()+60;job=parse_json(_read(proof,MAX_JOB,end))
-    need(set(job)=={'schema_version','kind','family','group','join_plan','generation','output','interpreter',
-         'offline','limits','placement','acquisition_receipt','runtime_sources','lexical_sources','punkt','rng_seed','code_pins'},
-         'Exact metric worker job schema')
-    need(type(job['schema_version'])is int and job['schema_version']==1 and job['kind']=='alce_evaluation_worker_job_v1'
-         and job['family'] in join.FAMILIES and job['group'] in join.GROUPS,'Metric job identity')
+    _job_identity(job)
     selected=tuple(n for n in join.RECIPES[job['family']] if n in join.GROUPS[job['group']])
     need(selected,'Family has no metric in requested group')
-    need(job['code_pins']==source_pins(),'Executing evaluator source closure differs')
+    _check_sources(job,end)
     limits=job['limits'];keys={'seconds','finalization_seconds','process_bytes','minimum_available_host_bytes','gpu_bytes','offload_bytes',
         'max_calls','input_bytes','output_bytes','cpu_threads'}
     need(type(limits)is dict and set(limits)==keys and all(type(x)is int for x in limits.values()),'Exact integral evaluator limits')
@@ -79,7 +122,9 @@ def load_job(proof,*,fresh=True):
     need(set(job['generation'])=={'root','receipt_sha256'},'External completed generation descriptor required')
     protected=[proof['path'],job['join_plan']['path'],job['generation']['root'],plan['preparation']['root'],
         *(p['path'] for p in sources),*(p['path'] for p in plan['native_sources'].values()),
-        *(p['path'] for p in job['code_pins'].values())]
+        *(p['path'] for p in job['code_pins'].values()),
+        *(p['path'] for p in job['package_context']['code_files']),
+        *(Path(p['path']).parent for p in job['package_context']['package_origins'].values())]
     if job['acquisition_receipt'] is not None:protected.append(_path(job['acquisition_receipt']['path']).parent)
     protected.extend(e['descriptor']['root'] for e in plan['attempts'] if e['descriptor'] is not None)
     output=_fresh(job['output'],protected,fresh=fresh)
@@ -216,7 +261,7 @@ def execute(job_proof,*,module_loader=runtime.dependencies,lexical_loader=lexica
             if adapter is not None:assets.revalidate(end,full=True)
             join.revalidate(value,deadline=end)
             _preserved_generation(job['generation'],end)
-            need(job['code_pins']==source_pins(),'Evaluator code changed before completion')
+            _check_sources(job,end)
             _read(job_proof,MAX_JOB,end);_read(job['join_plan'],job['limits']['input_bytes'],end)
             snapshot=guard.snapshot();need(snapshot['denied_network_attempts']==snapshot['dropped_event_records']==0,'Forbidden evaluator network attempt')
             emit('evaluation_completed',dict(metrics=selected,physical_calls=len(call_files)))
@@ -245,6 +290,8 @@ def _inventory(root,end):
 
 
 def verify_worker(root,job_proof,job,selected,end):
+    _check_sources(job,end)
+    need(parse_json(_read(job_proof,MAX_JOB,end))==job,'Verified metric job differs from external proof')
     root=_path(root)
     need(not any((root/name).exists() for name in ('FAILURE.json','DEADLINE.json','RESOURCE-LIMIT.json')),'Metric worker failure dominates completion')
     rp=_hash(root/'WORKER-RECEIPT.json',end);receipt=parse_json(_read(rp,MAX_JOB,end))
@@ -356,7 +403,7 @@ def verify_worker(root,job_proof,job,selected,end):
          and admissions==1 and rng_events==(1 if job['group']=='lexical' else 0),
          'Full metric/native journal completion required')
     need(receipt['files']==_inventory(root,end),'Late metric output drift')
-    _read(job_proof,MAX_JOB,end);_read(job['join_plan'],job['limits']['input_bytes'],end)
+    _read(job_proof,MAX_JOB,end);_read(job['join_plan'],job['limits']['input_bytes'],end);_check_sources(job,end)
     return rp
 
 
@@ -393,7 +440,7 @@ def supervise(job_proof,output):
     start=time.monotonic();job,plan,selected,worker,protected=load_job(job_proof)
     root=_fresh(output,[worker,*protected]);handle=base.contain_process_tree();root.mkdir()
     budget=_clock_limits(job);end=start+budget['total_seconds']
-    command=[job['interpreter']['path'],'-I','-B',str(Path(__file__).resolve()),'--worker','--job',job_proof['path'],'--job-sha256',job_proof['sha256']]
+    command=_command(job,job_proof)
     try:
         base.write_new(root/'REQUEST.json',dict(job=job_proof,command=command,worker=str(worker),clock_limits=budget,automatic_retries=0))
         with base.DeadlineWatchdog(end,root/'DEADLINE.json'):
@@ -416,7 +463,7 @@ def supervise(job_proof,output):
                 terminal=_terminal(result.stdout)
                 need(terminal==dict(status='completed',receipt=receipt),'Metric child stdout differs from closed worker receipt')
                 complete=parse_json(_read(_hash(worker/'COMPLETE.json',replay_end),job['limits']['output_bytes'],replay_end))
-                need(job['code_pins']==source_pins(),'Metric supervisor code drift')
+                _check_sources(job,replay_end)
                 wall=time.monotonic()-start
                 retained=dict(status='verified',job=job_proof,worker_receipt=receipt,wall_seconds=wall,
                     timing=dict(predispatch_seconds=pre,child_return_seconds=returned,finalization_seconds=wall-returned))
@@ -441,7 +488,7 @@ def verify_execution(descriptor):
     for name,p in receipt['files'].items():need(_path(p['path'])==root/name and _hash(root/name,end)==p,'Metric supervisor bytes differ')
     def read(name,maximum=MAX_JOB):return parse_json(_read(receipt['files'][name],maximum,end))
     request=read('REQUEST.json');job,plan,selected,worker,_=load_job(request['job'],fresh=False)
-    command=[job['interpreter']['path'],'-I','-B',str(Path(__file__).resolve()),'--worker','--job',request['job']['path'],'--job-sha256',request['job']['sha256']]
+    command=_command(job,request['job'])
     need(request==dict(job=request['job'],command=command,worker=str(worker),clock_limits=_clock_limits(job),automatic_retries=0),'Exact supervised metric command required')
     limits=base.processes.ProcessLimits(**read('LIMITS.json'));process=read('PROCESS.json')
     need(0<limits.timeout_seconds<=job['limits']['seconds']+30 and limits.max_output_bytes==4*1024**2 and process['returncode']==0,
