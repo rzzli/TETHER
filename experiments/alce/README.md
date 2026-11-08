@@ -90,7 +90,9 @@ bounds the worker, with 30 seconds for process startup and exit. Final verificat
 has its declared reserve after child return, and all preflight, process and
 verification time counts against the combined limit. Size that reserve from the
 full retained evidence inventory before dispatch. Native progress logs are retained
-in full; the final nonempty UTF-8 stdout line must be the exact terminal receipt.
+in full, including delayed native logs after completion. Exactly one structured
+UTF-8 stdout record must match the terminal receipt; malformed, duplicate or
+conflicting structured records are rejected.
 
 The optional TRUE cache preserves FP32 storage bits, original key order, alias
 groups and model metadata. It changes file boundaries; the native model still

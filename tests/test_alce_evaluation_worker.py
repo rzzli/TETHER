@@ -65,6 +65,30 @@ def invented_execute(p,*,fail=False,wrong_import=False,deny=False):
         return w.execute(p,module_loader=lambda **kw:modules,lexical_loader=lexical,asset_loader=assets,resource_sampler=workers.sample)
 
 
+class TerminalParserTests(unittest.TestCase):
+    def test_unique_terminal_can_precede_delayed_native_log(self):
+        terminal=dict(status='completed',receipt={'invented':'proof'})
+        for raw in (b'Native feature extraction\n'+canonical(terminal)+b'\n \t\n',
+                    b'kmeans time: 0.54 s\n'+canonical(terminal)+b'\n\nObjective improved: keep new clusters\n'):
+            with self.subTest(raw=raw):self.assertEqual(w._terminal(raw),terminal)
+
+    def test_duplicate_conflicting_or_malformed_structured_records_reject(self):
+        terminal=canonical(dict(status='completed',receipt={'invented':'proof'}))
+        for tail in (terminal,canonical(dict(status='completed',receipt={'invented':'different'})),
+                     canonical(dict(status='failed',receipt={'invented':'proof'})),
+                     b'{',b'[',b'[]',b'{"status":"completed"}'):
+            for suffix in (b'',b'\nObjective improved: keep new clusters\n'):
+                with self.subTest(tail=tail,suffix=suffix),self.assertRaises((ContractError,ValueError)):
+                    w._terminal(terminal+b'\n'+tail+suffix)
+
+    def test_missing_invalid_utf8_and_nonterminal_structured_values_reject(self):
+        terminal=canonical(dict(status='completed',receipt={'invented':'proof'}))
+        for raw in (b'',b' \n\t',b'Objective improved: keep new clusters\n',b'\xff\n'+terminal,
+                    b'[]',b'{}',b'{"status":"failed","receipt":{}}',
+                    b'{"status":"completed","receipt":{},"extra":true}'):
+            with self.subTest(raw=raw),self.assertRaises((ContractError,ValueError)):w._terminal(raw)
+
+
 class EvaluationWorkerTests(unittest.TestCase):
     def setUp(self):
         self.join=joins.EvaluationTests();self.join.setUp();self.addCleanup(self.join.doCleanups)
@@ -361,7 +385,7 @@ class EvaluationWorkerTests(unittest.TestCase):
         tail='from experiments.alce.evaluation_worker import main\nmain()\n'
         self.assertTrue(w.WORKER_BOOTSTRAP.endswith(tail))
         code=w.WORKER_BOOTSTRAP[:-len(tail)]+"from tests.test_alce_evaluation_worker import invented_execute,proof\n"+\
-            "p=invented_execute(proof(Path(sys.argv[3])))\nprint('Invented native feature timing: 0.1s')\nprint(json.dumps(dict(status='completed',receipt=p)),flush=True)\nprint('  ')\n"
+            "p=invented_execute(proof(Path(sys.argv[3])))\nprint('Invented native feature timing: 0.1s')\nprint(json.dumps(dict(status='completed',receipt=p)),flush=True)\nprint('  ')\nprint('Objective improved: keep new clusters')\n"
         original=w.base.processes.supervise_command
         def launch(command,*,limits):
             self.assertEqual(command,w._command(self.job,self.jp));command=list(command);command[4]=code
@@ -377,8 +401,10 @@ class EvaluationWorkerTests(unittest.TestCase):
         self.assertFalse(value['scientific_metric_truth_independently_recomputed'])
         root=self.root/'outer';terminal=(root/'stdout.bin').read_bytes()
         self.assertIn(b'Invented native feature timing',terminal)
+        self.assertTrue(terminal.rstrip().endswith(b'Objective improved: keep new clusters'))
         original_complete=json.loads((root/'COMPLETE.json').read_bytes())
-        for changed in (terminal+b'not-json\n',terminal+canonical(dict(status='completed',receipt={'sha256':'0'*64}))+b'\n'):
+        for changed in (terminal+b'{\n',terminal+canonical(dict(status='completed',receipt=value['worker_receipt']))+b'\n',
+                        terminal+canonical(dict(status='completed',receipt={'sha256':'0'*64}))+b'\n'):
             (root/'stdout.bin').write_bytes(changed)
             process=json.loads((root/'PROCESS.json').read_bytes())
             process['supervision']['retained_stdout_bytes']=len(changed);process['supervision']['observed_stdout_bytes']=len(changed)
@@ -461,13 +487,6 @@ class EvaluationWorkerTests(unittest.TestCase):
         with self.assertRaises(ContractError):w._check_timing(self.job,limits,process,c,35)
         c['wall_seconds']=188.5;c['timing']['finalization_seconds']=119.5
         w._check_timing(self.job,limits,process,c,35)
-
-    def test_terminal_parser_uses_only_final_nonempty_utf8_line(self):
-        terminal=dict(status='completed',receipt={'invented':'proof'})
-        self.assertEqual(w._terminal(b'Native feature extraction\n'+canonical(terminal)+b'\n \t\n'),terminal)
-        for raw in (b'',b' \n\t',canonical(terminal)+b'\nNative unfinished log',
-                    canonical(terminal)+b'\n{',b'\xff\n'+canonical(terminal)):
-            with self.subTest(raw=raw),self.assertRaises((ContractError,ValueError)):w._terminal(raw)
 
     def test_real_child_timeout_is_reaped_and_retained_without_retry(self):
         original=w.base.processes.supervise_command

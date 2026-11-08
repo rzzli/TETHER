@@ -439,12 +439,19 @@ def _clock_limits(job):
 
 
 def _terminal(stdout):
-    """Retain native logs externally; only the final nonempty UTF-8 line is terminal."""
+    """Extract one structured terminal amid retained native logs, including late logs."""
     need(type(stdout)is bytes,'Metric stdout must be retained bytes')
-    try:lines=[line for line in stdout.decode('utf-8').splitlines() if line.strip()]
+    try:lines=[line.strip() for line in stdout.decode('utf-8').splitlines() if line.strip()]
     except UnicodeDecodeError as error:raise ValueError('Metric stdout must be UTF-8') from error
-    need(lines,'Metric child terminal line missing')
-    return parse_json(lines[-1])
+    terminals=[]
+    for line in lines:
+        if line.startswith(('{','[')):
+            value=parse_json(line)
+            need(type(value)is dict and set(value)=={'status','receipt'} and value['status']=='completed'
+                 and type(value['receipt'])is dict,'Metric child structured terminal differs')
+            terminals.append(value)
+    need(len(terminals)==1,'Exactly one metric child terminal required')
+    return terminals[0]
 
 
 def _check_timing(job,limits,process,complete,worker_wall):
