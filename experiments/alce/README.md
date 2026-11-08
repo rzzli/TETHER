@@ -1,0 +1,70 @@
+# ALCE evaluation components
+
+Generate cited answers from five supplied passages, then measure their correctness
+and citation support with pinned [ALCE](https://github.com/princeton-nlp/ALCE)
+scoring code. These components keep source access, execution records and scoring
+inputs separate.
+
+```mermaid
+flowchart LR
+    A[Verified ALCE archive] --> B[Question + first five passages]
+    A --> C[Evaluator-only references]
+    B --> D[Local answer model]
+    D --> E[Raw responses + usage + journal]
+    E --> F[Verified case and source joins]
+    C --> F
+    F --> G[Native family metrics]
+```
+
+## Components
+
+| Module | Purpose |
+|---|---|
+| `data_views.py` | Check archive receipts; preserve full original records and produce minimal generation inputs. |
+| `prompts.py` | Build deterministic family prompts and retain raw output beside citation-syntax diagnostics. |
+| `producer.py` | Make one local generation attempt; verify its original response, token counts and settings. |
+| `generation.py` | Run the complete frozen schedule with one owned local server and explicit completed, failed and unexecuted cases. |
+| `evaluation.py` | Reconstruct case/source/output joins and select full-family lexical, QA, MAUVE or TRUE metric groups. |
+| `native_metrics.py` | Execute exact pinned scoring functions with explicitly supplied dependencies. |
+| `native_runtime.py` | Load the pinned TRUE, RoBERTa QA and GPT2-large evaluator assets offline. |
+| `native_worker.py` | Supervise flat native qualification jobs and individual QA/MAUVE/TRUE operations. |
+| `offline.py` | Deny undeclared Python network activity during evaluator work. |
+
+Asset acquisition is a separate [receipt-producing transport](../alce_transport/README.md).
+The default TETHER runtime does not install the model dependencies.
+
+## Execution rules
+
+- Freeze the data, model, prompts, limits and qualification receipts before a run.
+  Every output directory must be new. Failed or interrupted calls are retained
+  and never automatically repeated.
+- The answer model receives questions and offered passage text. Reference answers,
+  QA pairs, reference claims and answer-containing markers stay evaluator-only.
+- Citation scoring receives the **same five passages** offered to the model.
+  Other passages in the archived retrieval pool cannot rescue an invalid citation.
+- Keep the original response. ALCE's first-line and citation-removal preprocessing
+  runs once for each applicable metric input; no answer repair is hidden in scoring.
+- Run lexical, QA, MAUVE and TRUE work in separate bounded process lifetimes.
+  TRUE stays resident within its citation/claim group because later NLI calls
+  depend on earlier verdicts. MAUVE operates on a complete family distribution;
+  averaging scores from smaller batches is invalid.
+- Complete source joins are required before scoring. A failed generation has no
+  fabricated answer. Partial work retains its full scheduled denominator.
+
+`evaluation.assemble()` requires an externally anchored join plan.
+`metric_plan()` lists required family operations; `evaluate_group()` performs one
+group with caller-supplied qualified runtimes. These in-process APIs do not provide
+process ownership or certify the caller's model. `native_worker.py --help` describes
+the separate flat-job supervisor; it is not a resident branching citation runner.
+
+## Interpreting results
+
+File integrity, runtime qualification and scientific accuracy are distinct checks.
+Passing invented controls does not establish benchmark performance or biological
+validity. Preserve native undefined values and edge cases alongside explicit
+missingness and citation-validity diagnostics. Report the actual data/model
+conditions; a different answer model does not reproduce the authors' published
+scores.
+
+Dataset text, model weights, private runs and working notes stay outside the public
+repository. Reuse and redistribution terms must be checked for each acquired product.
