@@ -25,6 +25,7 @@ flowchart LR
 | `producer.py` | Make one local generation attempt; verify its original response, token counts and settings. |
 | `generation.py` | Run the complete frozen schedule with one owned local server and explicit completed, failed and unexecuted cases. |
 | `evaluation.py` | Reconstruct case/source/output joins and select full-family lexical, QA, MAUVE or TRUE metric groups. |
+| `evaluation_worker.py` | Own one metric group's process, offline runtime, resource limits and retained results; verify its execution records. |
 | `native_metrics.py` | Execute exact pinned scoring functions with explicitly supplied dependencies. |
 | `native_runtime.py` | Load the pinned TRUE, RoBERTa QA and GPT2-large evaluator assets offline. |
 | `native_worker.py` | Supervise flat native qualification jobs and individual QA/MAUVE/TRUE operations. |
@@ -54,8 +55,14 @@ The default TETHER runtime does not install the model dependencies.
 `evaluation.assemble()` requires an externally anchored join plan.
 `metric_plan()` lists required family operations; `evaluate_group()` performs one
 group with caller-supplied qualified runtimes. These in-process APIs do not provide
-process ownership or certify the caller's model. `native_worker.py --help` describes
-the separate flat-job supervisor; it is not a resident branching citation runner.
+process ownership or certify the caller's model. `evaluation_worker.py --help`
+describes the full-family group supervisor, including resident branching citation
+work. `native_worker.py --help` describes the flat qualification-job supervisor.
+Schedule jobs sequentially; neither supervisor provides a cross-job GPU lock.
+
+The current native execution path targets Windows with CUDA. Portable tests use
+invented dependencies and do not establish Linux GPU execution. Pin and qualify
+the complete model environment separately before scoring actual answers.
 
 ## Interpreting results
 

@@ -261,5 +261,34 @@ class WorkerTests(unittest.TestCase):
         self.assertTrue(proc['supervision']['process_reaped']);self.assertEqual(proc['supervision']['termination_reason'],'deadline_exceeded')
         self.assertFalse((self.root/'supervisor/RECEIPT.json').exists())
 
+    def test_process_capture_attempts_all_members_despite_each_write_failure(self):
+        result=NS(returncode=17,stdout=b'partial stdout',stderr=b'partial stderr',supervision={'invented':True})
+        original=Path.open
+        for index,failed in enumerate(('stdout.bin','stderr.bin','PROCESS.json')):
+            root=self.root/f'capture-{index}';root.mkdir()
+            def fail(path,*args,**kwargs):
+                if path==root/failed:raise OSError('invented capture failure: '+failed)
+                return original(path,*args,**kwargs)
+            with self.subTest(failed=failed),patch.object(Path,'open',fail),self.assertRaises(OSError):
+                w._process_files(root,result)
+            for name in {'stdout.bin','stderr.bin','PROCESS.json'}-{failed}:
+                self.assertTrue((root/name).is_file(),name+' was skipped after '+failed)
+
+    def test_child_primary_error_survives_process_capture_failure(self):
+        primary=TimeoutError('invented primary child timeout')
+        primary.tether_engine_result=NS(returncode=17,stdout=b'partial stdout',stderr=b'partial stderr',supervision={'invented':True})
+        root=self.root/'supervisor-capture-error';original=Path.open
+        def fail(path,*args,**kwargs):
+            if path==root/'stdout.bin':raise OSError('invented stdout retention failure')
+            return original(path,*args,**kwargs)
+        with patch.object(w,'contain_process_tree',return_value=object()),patch.object(w.processes,'supervise_command',side_effect=primary),patch.object(Path,'open',fail):
+            with self.assertRaises(TimeoutError) as caught:w.supervise(self.jp,root)
+        self.assertIs(caught.exception,primary)
+        self.assertEqual((root/'stderr.bin').read_bytes(),b'partial stderr')
+        self.assertEqual(json.loads((root/'PROCESS.json').read_bytes())['returncode'],17)
+        self.assertIn('stdout.bin',' '.join(primary.__notes__))
+        self.assertEqual(json.loads((root/'FAILURE.json').read_bytes())['error_type'],'TimeoutError')
+        self.assertFalse((root/'RECEIPT.json').exists())
+
 
 if __name__=='__main__':unittest.main()

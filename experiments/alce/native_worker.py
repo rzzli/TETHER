@@ -354,7 +354,7 @@ def supervise(job_proof,output):
             try:result=processes.supervise_command(command,limits=limits)
             except BaseException as error:
                 result=getattr(error,'tether_engine_result',getattr(error,'result',None))
-                if result is not None:_process_files(root,result)
+                if result is not None:_process_files(root,result,primary=error)
                 raise
             _process_files(root,result)
             need(result.returncode==0,'Native worker unsuccessful')
@@ -371,10 +371,19 @@ def supervise(job_proof,output):
         raise
 
 
-def _process_files(root,result):
+def _process_files(root,result,primary=None):
+    """Retain each capture independently without replacing a child exception."""
+    failures=[]
     for name,raw in (('stdout.bin',result.stdout),('stderr.bin',result.stderr)):
-        with (root/name).open('xb') as stream:stream.write(raw);stream.flush();os.fsync(stream.fileno())
-    write_new(root/'PROCESS.json',dict(returncode=result.returncode,supervision=result.supervision))
+        try:
+            with (root/name).open('xb') as stream:stream.write(raw);stream.flush();os.fsync(stream.fileno())
+        except BaseException as error:failures.append((name,error))
+    try:write_new(root/'PROCESS.json',dict(returncode=result.returncode,supervision=result.supervision))
+    except BaseException as error:failures.append(('PROCESS.json',error))
+    if failures:
+        target=primary if primary is not None else failures[0][1]
+        for name,error in failures:target.add_note('Process capture failed for '+name+': '+type(error).__name__)
+        if primary is None:raise target
 
 
 def main():
