@@ -4,6 +4,7 @@ Generation ownership verification is explicitly substituted by invented metadata
 here; source/capture assembly and selected native metric bodies remain genuine.
 """
 import copy
+from contextlib import nullcontext
 import json
 from pathlib import Path
 import sys
@@ -73,7 +74,7 @@ class EvaluationWorkerTests(unittest.TestCase):
         self.job=dict(schema_version=1,kind='alce_evaluation_worker_job_v1',family='asqa',group='true',
             join_plan=self.join.pp,generation=dict(root=str(gen),receipt_sha256=rp['sha256']),output=str(self.root/'metric-worker'),
             interpreter=self.base.job['interpreter'],offline=self.base.job['offline'],limits=dict(self.base.job['limits'],
-                seconds=40,max_calls=20,input_bytes=16*1024**2,output_bytes=16*1024**2),placement=self.base.job['placement'],
+                seconds=40,finalization_seconds=120,max_calls=20,input_bytes=16*1024**2,output_bytes=16*1024**2),placement=self.base.job['placement'],
             acquisition_receipt=self.base.job['acquisition_receipt'],runtime_sources=self.base.job['runtime_sources'],
             lexical_sources={n:proof(self.base.module) for n in ('np','sent_tokenize')},punkt={},rng_seed=None,code_pins=w.source_pins())
         for name in w.PUNKT:self.job['punkt'][name]=put(self.root/name,{'invented_table':name})
@@ -209,7 +210,7 @@ class EvaluationWorkerTests(unittest.TestCase):
         script=self.root/'invented-child.py'
         script.write_text('import sys,json\nfrom pathlib import Path\nsys.path[:0]='+
             repr([str(w.ROOT),str(w.ROOT/'src'),str(w.ROOT/'packages/tether/src')])+"\nfrom tests.test_alce_evaluation_worker import invented_execute,proof\n"+
-            "p=invented_execute(proof(Path(sys.argv[1])))\nprint(json.dumps(dict(status='completed',receipt=p)),flush=True)\n")
+            "p=invented_execute(proof(Path(sys.argv[1])))\nprint('Invented native feature timing: 0.1s')\nprint(json.dumps(dict(status='completed',receipt=p)),flush=True)\nprint('  ')\n")
         original=w.base.processes.supervise_command
         def launch(command,*,limits):return original([sys.executable,'-I','-B',str(script),self.jp['path']],limits=limits)
         with patch.object(w.base,'contain_process_tree',return_value=object()),patch.object(w.base.processes,'supervise_command',side_effect=launch):
@@ -217,6 +218,95 @@ class EvaluationWorkerTests(unittest.TestCase):
         value=w.verify_execution(dict(root=str(self.root/'outer'),receipt_sha256=p['sha256']))
         self.assertEqual(value['worker_receipt'],self.replay())
         self.assertFalse(value['scientific_metric_truth_independently_recomputed'])
+        root=self.root/'outer';terminal=(root/'stdout.bin').read_bytes()
+        self.assertIn(b'Invented native feature timing',terminal)
+        original_complete=json.loads((root/'COMPLETE.json').read_bytes())
+        for changed in (terminal+b'not-json\n',terminal+canonical(dict(status='completed',receipt={'sha256':'0'*64}))+b'\n'):
+            (root/'stdout.bin').write_bytes(changed)
+            process=json.loads((root/'PROCESS.json').read_bytes())
+            process['supervision']['retained_stdout_bytes']=len(changed);process['supervision']['observed_stdout_bytes']=len(changed)
+            put(root/'PROCESS.json',process)
+            r=put(root/'RECEIPT.json',dict(kind='alce_metric_execution_receipt_v1',status='verified',
+                files={x.name:proof(x) for x in root.iterdir() if x.name!='RECEIPT.json'}))
+            with self.assertRaises(ContractError):w.verify_execution(dict(root=str(root),receipt_sha256=r['sha256']))
+        (root/'stdout.bin').write_bytes(terminal)
+        process['supervision']['retained_stdout_bytes']=len(terminal);process['supervision']['observed_stdout_bytes']=len(terminal)
+        put(root/'PROCESS.json',process)
+        original_complete['timing']['finalization_seconds']+=1;put(root/'COMPLETE.json',original_complete)
+        r=put(root/'RECEIPT.json',dict(kind='alce_metric_execution_receipt_v1',status='verified',
+            files={x.name:proof(x) for x in root.iterdir() if x.name!='RECEIPT.json'}))
+        with self.assertRaises(ContractError):w.verify_execution(dict(root=str(root),receipt_sha256=r['sha256']))
+
+    def test_finalization_limit_required_and_strict_before_child_dispatch(self):
+        baseline=copy.deepcopy(self.job)
+        for value in (None,0,True,-1,1.5,86401):
+            self.job=copy.deepcopy(baseline)
+            if value is None:self.job['limits'].pop('finalization_seconds',None)
+            else:self.job['limits']['finalization_seconds']=value
+            self.write()
+            with self.subTest(value=value),patch.object(w.base.processes,'supervise_command',side_effect=AssertionError('Invalid job dispatched')) as child:
+                with self.assertRaises(ContractError):w.supervise(self.jp,self.root/'invalid-finalization')
+                child.assert_not_called()
+            self.assertFalse((self.root/'invalid-finalization').exists())
+        self.job=copy.deepcopy(baseline);self.job['limits']['finalization_seconds']=120;self.write()
+        self.assertEqual(w.load_job(self.jp)[0]['limits']['finalization_seconds'],120)
+
+    def test_replay_reserve_is_separate_from_exhausted_child_budget(self):
+        # Invented process clocks and a stubbed worker replay isolate supervisor
+        # accounting; this is not a native/source acceptance capability.
+        current=[time.monotonic()];start=current[0];worker=Path(self.job['output']);worker.mkdir()
+        put(worker/'COMPLETE.json',{'wall_seconds':35})
+        rp=put(worker/'WORKER-RECEIPT.json',{'invented_clock_only':True})
+        self.job['limits']['finalization_seconds']=120
+        def load(*args,**kw):current[0]+=5;return self.job,{},('citations',),worker,[]
+        def child(command,*,limits):
+            current[0]+=64
+            stdout=canonical(dict(status='completed',receipt=rp))+b'\n'
+            report=dict(schema_version=1,method='tether.process_envelope.v1',limits=limits.payload(),termination_reason='exited',
+                execution_elapsed_seconds=63,total_elapsed_seconds=64,retained_stdout_bytes=len(stdout),retained_stderr_bytes=0,
+                observed_stdout_bytes=len(stdout),observed_stderr_bytes=0,observed_counts_are_lower_bounds=False,
+                pipe_eof=dict(stdout=True,stderr=True),process_started=True,process_reaped=True,cleanup_errors=[])
+            return NS(returncode=0,stdout=stdout,stderr=b'',supervision=report)
+        def replay(*args):
+            current[0]+=5
+            self.assertGreater(args[-1],current[0],'Post-child replay must have its declared independent reserve')
+            return rp
+        with patch.object(w,'time',NS(monotonic=lambda:current[0])),patch.object(w,'load_job',side_effect=load),\
+             patch.object(w.base,'contain_process_tree',return_value=object()),patch.object(w.base,'DeadlineWatchdog',return_value=nullcontext()),\
+             patch.object(w.base.processes,'supervise_command',side_effect=child),patch.object(w,'verify_worker',side_effect=replay):
+            p=w.supervise(self.jp,self.root/'reserved-replay')
+        self.assertEqual(current[0]-start,74)
+        c=json.loads((self.root/'reserved-replay/COMPLETE.json').read_bytes())
+        self.assertEqual(c['timing'],dict(predispatch_seconds=5,child_return_seconds=69,finalization_seconds=5))
+        self.assertTrue(Path(p['path']).is_file())
+
+    def test_finalization_clock_exhaustion_and_tampering_reject(self):
+        limits=w.base.processes.ProcessLimits(65,4*1024**2)
+        process=dict(execution_elapsed_seconds=63,total_elapsed_seconds=64)
+        c=dict(wall_seconds=74,timing=dict(predispatch_seconds=5,child_return_seconds=69,finalization_seconds=5))
+        w._check_timing(self.job,limits,process,c,35)
+        changes=(lambda c:c.update(wall_seconds=189),lambda c:c['timing'].update(finalization_seconds=120),
+            lambda c:c['timing'].update(predispatch_seconds=True),lambda c:c['timing'].update(predispatch_seconds=6),
+            lambda c:c['timing'].update(child_return_seconds=70),lambda c:c['timing'].update(child_return_seconds=68),
+            lambda c:c['timing'].update(finalization_seconds=float('nan')))
+        for change in changes:
+            changed=copy.deepcopy(c);change(changed)
+            with self.subTest(change=change),self.assertRaises(ContractError):w._check_timing(self.job,limits,process,changed,35)
+        for process in (dict(execution_elapsed_seconds=64.5,total_elapsed_seconds=65),
+                        dict(execution_elapsed_seconds=34,total_elapsed_seconds=64)):
+            with self.assertRaises(ContractError):w._check_timing(self.job,limits,process,c,35)
+        process=dict(execution_elapsed_seconds=63,total_elapsed_seconds=64)
+        c['wall_seconds']=189;c['timing']['finalization_seconds']=120
+        with self.assertRaises(ContractError):w._check_timing(self.job,limits,process,c,35)
+        c['wall_seconds']=188.5;c['timing']['finalization_seconds']=119.5
+        w._check_timing(self.job,limits,process,c,35)
+
+    def test_terminal_parser_uses_only_final_nonempty_utf8_line(self):
+        terminal=dict(status='completed',receipt={'invented':'proof'})
+        self.assertEqual(w._terminal(b'Native feature extraction\n'+canonical(terminal)+b'\n \t\n'),terminal)
+        for raw in (b'',b' \n\t',canonical(terminal)+b'\nNative unfinished log',
+                    canonical(terminal)+b'\n{',b'\xff\n'+canonical(terminal)):
+            with self.subTest(raw=raw),self.assertRaises((ContractError,ValueError)):w._terminal(raw)
 
     def test_real_child_timeout_is_reaped_and_retained_without_retry(self):
         original=w.base.processes.supervise_command

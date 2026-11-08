@@ -56,12 +56,12 @@ def load_job(proof,*,fresh=True):
     selected=tuple(n for n in join.RECIPES[job['family']] if n in join.GROUPS[job['group']])
     need(selected,'Family has no metric in requested group')
     need(job['code_pins']==source_pins(),'Executing evaluator source closure differs')
-    limits=job['limits'];keys={'seconds','process_bytes','minimum_available_host_bytes','gpu_bytes','offload_bytes',
+    limits=job['limits'];keys={'seconds','finalization_seconds','process_bytes','minimum_available_host_bytes','gpu_bytes','offload_bytes',
         'max_calls','input_bytes','output_bytes','cpu_threads'}
     need(type(limits)is dict and set(limits)==keys and all(type(x)is int for x in limits.values()),'Exact integral evaluator limits')
     need(all(limits[k]>0 for k in keys-{'gpu_bytes'}) and (limits['gpu_bytes']==0 if job['group']=='lexical' else limits['gpu_bytes']>0),
          'Positive evaluator limits and explicit GPU scope')
-    need(limits['seconds']<=86400 and limits['max_calls']<=1_000_000 and limits['input_bytes']<=256*1024**2
+    need(limits['seconds']<=86400 and limits['finalization_seconds']<=86400 and limits['max_calls']<=1_000_000 and limits['input_bytes']<=256*1024**2
          and limits['output_bytes']<=1024**3 and limits['cpu_threads']<=64,'Evaluator hard configuration ceilings')
     need(set(job['offline'])=={'record','connection'} and type(job['runtime_sources'])is dict and type(job['lexical_sources'])is dict,
          'Explicit runtime source controls')
@@ -360,33 +360,71 @@ def verify_worker(root,job_proof,job,selected,end):
     return rp
 
 
+def _clock_limits(job):
+    limits=job['limits']
+    return dict(worker_seconds=limits['seconds'],startup_exit_seconds=30,
+        finalization_seconds=limits['finalization_seconds'],total_seconds=limits['seconds']+30+limits['finalization_seconds'])
+
+
+def _terminal(stdout):
+    """Retain native logs externally; only the final nonempty UTF-8 line is terminal."""
+    need(type(stdout)is bytes,'Metric stdout must be retained bytes')
+    try:lines=[line for line in stdout.decode('utf-8').splitlines() if line.strip()]
+    except UnicodeDecodeError as error:raise ValueError('Metric stdout must be UTF-8') from error
+    need(lines,'Metric child terminal line missing')
+    return parse_json(lines[-1])
+
+
+def _check_timing(job,limits,process,complete,worker_wall):
+    budget=_clock_limits(job);timing=complete['timing']
+    need(type(timing)is dict and set(timing)=={'predispatch_seconds','child_return_seconds','finalization_seconds'},
+         'Exact metric phase clocks required')
+    values=[*timing.values(),complete['wall_seconds'],worker_wall]
+    need(all(type(x)in(int,float) and math.isfinite(x) and x>=0 for x in values),'Finite nonnegative metric clocks required')
+    pre=timing['predispatch_seconds'];returned=timing['child_return_seconds'];wall=complete['wall_seconds']
+    child_bound=budget['worker_seconds']+budget['startup_exit_seconds']
+    need(pre<=returned<child_bound and limits.timeout_seconds==child_bound-pre
+         and worker_wall<=process['execution_elapsed_seconds']<=process['total_elapsed_seconds']<=returned-pre
+         and timing['finalization_seconds']==wall-returned and 0<=timing['finalization_seconds']<budget['finalization_seconds']
+         and wall<budget['total_seconds'],'Carried metric process/finalization clocks differ')
+
+
 def supervise(job_proof,output):
     start=time.monotonic();job,plan,selected,worker,protected=load_job(job_proof)
     root=_fresh(output,[worker,*protected]);handle=base.contain_process_tree();root.mkdir()
-    end=start+job['limits']['seconds']+30
+    budget=_clock_limits(job);end=start+budget['total_seconds']
     command=[job['interpreter']['path'],'-I','-B',str(Path(__file__).resolve()),'--worker','--job',job_proof['path'],'--job-sha256',job_proof['sha256']]
     try:
-        base.write_new(root/'REQUEST.json',dict(job=job_proof,command=command,worker=str(worker),automatic_retries=0))
-        with base.DeadlineWatchdog(end+10,root/'DEADLINE.json'):
-            limits=base.processes.ProcessLimits(end-time.monotonic(),4*1024**2)
+        base.write_new(root/'REQUEST.json',dict(job=job_proof,command=command,worker=str(worker),clock_limits=budget,automatic_retries=0))
+        with base.DeadlineWatchdog(end,root/'DEADLINE.json'):
+            pre=time.monotonic()-start
+            limits=base.processes.ProcessLimits(budget['worker_seconds']+budget['startup_exit_seconds']-pre,4*1024**2)
+            limits.validate()
             base.write_new(root/'LIMITS.json',dict(timeout_seconds=limits.timeout_seconds,max_output_bytes=limits.max_output_bytes))
             try:result=base.processes.supervise_command(command,limits=limits)
             except BaseException as error:
                 result=getattr(error,'tether_engine_result',getattr(error,'result',None))
                 if result is not None:base._process_files(root,result,primary=error)
                 raise
-            base._process_files(root,result);need(result.returncode==0,'Metric child failed; no automatic repeat')
-            base.processes.validate_success_report(result.supervision,limits,len(result.stdout),len(result.stderr))
-            receipt=verify_worker(worker,job_proof,job,selected,end)
-            terminal=parse_json(result.stdout)
-            need(terminal==dict(status='completed',receipt=receipt),'Metric child stdout differs from closed worker receipt')
-            complete=parse_json(_read(_hash(worker/'COMPLETE.json',end),job['limits']['output_bytes'],end))
-            need(complete['wall_seconds']<=result.supervision['execution_elapsed_seconds'],'Metric child/process clock differs')
-            need(job['code_pins']==source_pins(),'Metric supervisor code drift')
-            base.write_new(root/'COMPLETE.json',dict(status='verified',job=job_proof,worker_receipt=receipt,wall_seconds=time.monotonic()-start))
-            files={p.name:_hash(p,end) for p in root.iterdir() if p.is_file()}
-            base.write_new(root/'RECEIPT.json',dict(kind='alce_metric_execution_receipt_v1',status='verified',files=files))
-            return _hash(root/'RECEIPT.json',end)
+            returned=time.monotonic()-start
+            replay_end=min(end,start+returned+budget['finalization_seconds'])
+            with base.DeadlineWatchdog(replay_end,root/'FINALIZATION-DEADLINE.json'):
+                base._process_files(root,result);need(result.returncode==0,'Metric child failed; no automatic repeat')
+                base.processes.validate_success_report(result.supervision,limits,len(result.stdout),len(result.stderr))
+                need(returned<budget['worker_seconds']+budget['startup_exit_seconds'],'Metric child exhausted startup/exit allowance')
+                receipt=verify_worker(worker,job_proof,job,selected,replay_end)
+                terminal=_terminal(result.stdout)
+                need(terminal==dict(status='completed',receipt=receipt),'Metric child stdout differs from closed worker receipt')
+                complete=parse_json(_read(_hash(worker/'COMPLETE.json',replay_end),job['limits']['output_bytes'],replay_end))
+                need(job['code_pins']==source_pins(),'Metric supervisor code drift')
+                wall=time.monotonic()-start
+                retained=dict(status='verified',job=job_proof,worker_receipt=receipt,wall_seconds=wall,
+                    timing=dict(predispatch_seconds=pre,child_return_seconds=returned,finalization_seconds=wall-returned))
+                _check_timing(job,limits,result.supervision,retained,complete['wall_seconds'])
+                _tick(replay_end);base.write_new(root/'COMPLETE.json',retained)
+                files={p.name:_hash(p,replay_end) for p in root.iterdir() if p.is_file()}
+                base.write_new(root/'RECEIPT.json',dict(kind='alce_metric_execution_receipt_v1',status='verified',files=files))
+                return _hash(root/'RECEIPT.json',replay_end)
     except BaseException as error:
         try:base.write_new(root/'FAILURE.json',dict(status='failed',error_type=type(error).__name__,reason=str(error)[:2000],automatic_retries=0))
         except BaseException as persistence:error.add_note('Metric supervisor failure retention failed: '+type(persistence).__name__)
@@ -404,18 +442,16 @@ def verify_execution(descriptor):
     def read(name,maximum=MAX_JOB):return parse_json(_read(receipt['files'][name],maximum,end))
     request=read('REQUEST.json');job,plan,selected,worker,_=load_job(request['job'],fresh=False)
     command=[job['interpreter']['path'],'-I','-B',str(Path(__file__).resolve()),'--worker','--job',request['job']['path'],'--job-sha256',request['job']['sha256']]
-    need(request==dict(job=request['job'],command=command,worker=str(worker),automatic_retries=0),'Exact supervised metric command required')
+    need(request==dict(job=request['job'],command=command,worker=str(worker),clock_limits=_clock_limits(job),automatic_retries=0),'Exact supervised metric command required')
     limits=base.processes.ProcessLimits(**read('LIMITS.json'));process=read('PROCESS.json')
     need(0<limits.timeout_seconds<=job['limits']['seconds']+30 and limits.max_output_bytes==4*1024**2 and process['returncode']==0,
          'Metric process limit/terminal differs')
     base.processes.validate_success_report(process['supervision'],limits,receipt['files']['stdout.bin']['bytes'],receipt['files']['stderr.bin']['bytes'])
     wr=verify_worker(worker,request['job'],job,selected,end);complete=read('COMPLETE.json')
-    need(read('stdout.bin')==dict(status='completed',receipt=wr) and complete['status']=='verified' and complete['job']==request['job']
+    need(_terminal(_read(receipt['files']['stdout.bin'],4*1024**2,end))==dict(status='completed',receipt=wr) and complete['status']=='verified' and complete['job']==request['job']
          and complete['worker_receipt']==wr,'Metric process/worker completion differs')
     wc=parse_json(_read(_hash(worker/'COMPLETE.json',end),job['limits']['output_bytes'],end))
-    need(type(complete['wall_seconds'])in(int,float) and math.isfinite(complete['wall_seconds'])
-         and wc['wall_seconds']<=process['supervision']['execution_elapsed_seconds']<=complete['wall_seconds']<job['limits']['seconds']+30,
-         'Carried metric process clocks differ')
+    _check_timing(job,limits,process['supervision'],complete,wc['wall_seconds'])
     for p in receipt['files'].values():need(_hash(p['path'],end)==p,'Late metric supervisor mutation')
     need(_hash(root/'RECEIPT.json',end)==rp,'Late metric receipt mutation')
     return dict(root=str(root),receipt_sha256=rp['sha256'],worker_receipt=wr,process=process,complete=wc,

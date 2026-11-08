@@ -59,6 +59,13 @@ process ownership or certify the caller's model. `evaluation_worker.py --help`
 describes the full-family group supervisor, including resident branching citation
 work. `native_worker.py --help` describes the flat qualification-job supervisor.
 Schedule jobs sequentially; neither supervisor provides a cross-job GPU lock.
+Each evaluator job must declare positive integral `limits.finalization_seconds`
+separately from `limits.seconds`; neither has a production default. The latter
+bounds the worker, with 30 seconds for process startup and exit. Final verification
+has its declared reserve after child return, and all preflight, process and
+verification time counts against the combined limit. Size that reserve from the
+full retained evidence inventory before dispatch. Native progress logs are retained
+in full; the final nonempty UTF-8 stdout line must be the exact terminal receipt.
 
 The current native execution path targets Windows with CUDA. Portable tests use
 invented dependencies and do not establish Linux GPU execution. Pin and qualify
