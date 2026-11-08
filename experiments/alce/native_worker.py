@@ -186,7 +186,10 @@ class ResourceWatchdog:
 
 def execute(job_proof,*,module_loader=runtime.dependencies,asset_loader=runtime.ModelAssets,resource_sampler=None):
     started=time.monotonic();job,rows=load_job(job_proof)
-    need(_path(sys.executable)==_path(job['interpreter']['path']),'Worker interpreter differs from qualified environment')
+    # The running interpreter may be a venv symlink. Only this process-reported
+    # identity is resolved; supplied interpreter proofs still require regular paths.
+    need(_path(Path(sys.executable).resolve(strict=True))==_path(job['interpreter']['path']),
+         'Worker interpreter differs from qualified environment')
     output=_path(job['output']);output.mkdir()
     budget=OutputBudget(job['limits']['output_bytes'])
     journal=NativeJournal(output/'journal.jsonl',budget);deadline=started+job['limits']['seconds']

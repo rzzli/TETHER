@@ -4,6 +4,7 @@ from contextlib import contextmanager
 import copy
 import hashlib
 import http.client
+import json
 from pathlib import Path
 import tempfile
 import time
@@ -128,6 +129,39 @@ class ProducerTests(unittest.TestCase):
         body=parse_json(self.body());body.pop('stop_type')
         with self.wire(generation=Response(canonical(body))):value=self.execute()
         self.assertEqual(self.replay(value)['result']['verified']['finish_reason'],'eos')
+
+    def test_native_float_sampling_echo_matches_exact_integer_request(self):
+        before=(fingerprint(self.call),fingerprint(self.payload))
+        settings=dict(encode(self.payload),temperature=0.0,top_p=1.0)
+        with self.wire(generation=Response(self.body(generation_settings=settings))):value=self.execute()
+        checked=self.replay(value)['result']['verified']
+        self.assertEqual(checked['usage']['input_tokens'],50)
+        self.assertEqual((fingerprint(self.call),fingerprint(self.payload)),before)
+        self.assertIs(type(self.payload['temperature']),int)
+        self.assertIs(type(self.payload['top_p']),int)
+        self.assertEqual([x['path'] for x in self.calls],['/tokenize','/completion'])
+
+    def test_numeric_sampling_echo_rejects_bool_nonfinite_and_changed_values(self):
+        variants=[('temperature',False),('top_p',True),('temperature','0'),('top_p','1'),
+            ('temperature',1e-15),('top_p',1-1e-15)]
+        variants += [(key,value) for key in ('temperature','top_p') for value in (float('nan'),float('inf'),float('-inf'))]
+        for ordinal,(key,value) in enumerate(variants):
+            body=parse_json(self.body());body['generation_settings'][key]=value
+            # Intentionally emit invalid JSON nonfinite values as hostile native
+            # wire bytes, bypassing the fixture's strict canonical serializer.
+            raw=json.dumps(body,allow_nan=True).encode()
+            root=self.root/f'numeric-invalid-{ordinal}'
+            with self.subTest(key=key,value=value),self.wire(generation=Response(raw)):
+                with self.assertRaises(ContractError):self.execute(root)
+            self.assertFalse((root/'RECEIPT.json').exists())
+
+    def test_other_generation_settings_keep_exact_canonical_types(self):
+        for ordinal,(key,value) in enumerate((('seed',47.0),('n_predict',768.0),('stream',0),('stop','<|im_end|>'))):
+            settings=dict(encode(self.payload));settings[key]=value
+            root=self.root/f'other-setting-{ordinal}'
+            with self.subTest(key=key),self.wire(generation=Response(self.body(generation_settings=settings))):
+                with self.assertRaises(ContractError):self.execute(root)
+            self.assertFalse((root/'RECEIPT.json').exists())
 
     def test_input_truncation_unknown_conflicting_stops_usage_and_settings_fail(self):
         variants=[dict(truncated=True),dict(stop_type='unknown'),dict(stopped_word=True),dict(stop=False),

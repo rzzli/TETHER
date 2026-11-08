@@ -153,8 +153,13 @@ def verify_response(call,payload,tokenization,raw,*,alias,server_spec,bindings,o
          'Original native prompt/model echo differs')
     settings=response.get('generation_settings')
     required=('seed','temperature','top_p','n_predict','stop','stream')
+    numeric=('temperature','top_p')
+    exact=tuple(k for k in required if k not in numeric)
     need(isinstance(settings,Mapping) and all(k in settings for k in required) and
-         canonical({k:settings[k] for k in required})==canonical({k:payload[k] for k in required}),
+         all(type(settings[k]) in (int,float) and math.isfinite(settings[k]) and
+             type(payload[k]) in (int,float) and math.isfinite(payload[k]) and settings[k]==payload[k]
+             for k in numeric) and
+         canonical({k:settings[k] for k in exact})==canonical({k:payload[k] for k in exact}),
          'Native free-text generation settings differ')
     need('cache_prompt' not in settings or settings['cache_prompt'] is False,'Native prompt cache setting differs')
     need(settings.get('grammar') in (None,'') and settings.get('json_schema') in (None,''),'Unexpected constrained-output codec')

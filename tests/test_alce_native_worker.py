@@ -74,6 +74,49 @@ class WorkerTests(unittest.TestCase):
         self.assertEqual(c['offline']['denied_network_attempts'],0)
         self.assertEqual(len(c['native']['calls']),2)
 
+    def test_process_interpreter_alias_uses_pinned_canonical_target(self):
+        target=Path(sys.executable).resolve();alias=self.root/'process-python.exe'
+        try:
+            alias.symlink_to(target)
+        except OSError:
+            # Windows without symlink privilege: reproduce the same path API
+            # contract. Portable CI exercises the real filesystem alias.
+            original_resolve=Path.resolve;original_path=w._path
+            def resolve(path,*args,**kwargs):
+                return target if path==alias else original_resolve(path,*args,**kwargs)
+            def guarded(value):
+                if Path(value)==alias:raise ContractError('Linked/reparse path')
+                return original_path(value)
+            with patch.object(Path,'resolve',resolve),patch.object(w,'_path',side_effect=guarded),patch.object(w.sys,'executable',str(alias)):
+                rp=invented_execute(self.jp)
+        else:
+            self.assertTrue(alias.is_symlink())
+            with patch.object(w.sys,'executable',str(alias)):rp=invented_execute(self.jp)
+        self.assertTrue(Path(rp['path']).is_file())
+
+    def test_different_process_interpreter_target_rejects_before_reservation(self):
+        other=self.root/'other-python.exe';other.write_bytes(b'invented different executable')
+        loader=Mock()
+        with patch.object(w.sys,'executable',str(other)),self.assertRaisesRegex(ContractError,'Worker interpreter differs'):
+            w.execute(self.jp,module_loader=loader)
+        loader.assert_not_called();self.assertFalse(Path(self.job['output']).exists())
+
+    def test_external_interpreter_alias_is_not_canonicalized(self):
+        alias=self.root/'supplied-python.exe';target=Path(sys.executable).resolve()
+        self.job['interpreter']=dict(proof(target),path=str(alias));self.jp=put(self.root/'JOB.json',self.job)
+        try:alias.symlink_to(target)
+        except OSError:
+            alias.write_bytes(b'invented alias target')
+            from experiments.alce import data_views
+            original=data_views._path
+            def reject_alias(value):
+                if Path(value)==alias:raise ContractError('Linked/reparse path')
+                return original(value)
+            with patch.object(data_views,'_path',side_effect=reject_alias),self.assertRaises(ContractError):w.load_job(self.jp)
+        else:
+            with self.assertRaisesRegex(ContractError,'Linked/reparse path'):w.load_job(self.jp)
+        self.assertFalse(Path(self.job['output']).exists())
+
     def test_worker_native_failure_keeps_one_failed_call_and_no_success(self):
         with self.assertRaises(RuntimeError):invented_execute(self.jp,True)
         root=Path(self.job['output']);failure=json.loads((root/'FAILURE.json').read_bytes())
