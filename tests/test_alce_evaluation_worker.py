@@ -350,9 +350,11 @@ class EvaluationWorkerTests(unittest.TestCase):
              patch.object(w.base,'contain_process_tree',return_value=object()),patch.object(w.base,'DeadlineWatchdog',return_value=nullcontext()),\
              patch.object(w.base.processes,'supervise_command',side_effect=child),patch.object(w,'verify_worker',side_effect=replay):
             p=w.supervise(self.jp,self.root/'reserved-replay')
-        self.assertEqual(current[0]-start,74)
+        self.assertAlmostEqual(current[0]-start,74,delta=1e-9)
         c=json.loads((self.root/'reserved-replay/COMPLETE.json').read_bytes())
-        self.assertEqual(c['timing'],dict(predispatch_seconds=5,child_return_seconds=69,finalization_seconds=5))
+        expected=dict(predispatch_seconds=5,child_return_seconds=69,finalization_seconds=5)
+        self.assertEqual(set(c['timing']),set(expected))
+        for key,value in expected.items():self.assertAlmostEqual(c['timing'][key],value,delta=1e-9)
         self.assertTrue(Path(p['path']).is_file())
 
     def test_finalization_clock_exhaustion_and_tampering_reject(self):
