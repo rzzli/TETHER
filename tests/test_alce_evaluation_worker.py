@@ -6,6 +6,7 @@ here; source/capture assembly and selected native metric bodies remain genuine.
 import copy
 from contextlib import nullcontext
 import json
+import os
 from pathlib import Path
 import sys
 import time
@@ -110,8 +111,9 @@ class EvaluationWorkerTests(unittest.TestCase):
 
     def test_actual_production_bootstrap_uses_origins_then_stops_at_invented_admission(self):
         # The real fixed command, without a replacement worker/main, must pass
-        # origin admission and then fail at the deliberately wrong generation
-        # receipt before any asset loader, model import or scoring.
+        # origin admission and stop before asset loading or scoring. Windows
+        # reaches the wrong generation receipt; other platforms stop earlier
+        # because mandatory native resource observations are unavailable.
         self.job['generation']['receipt_sha256']='0'*64
         self.job['limits'].update(process_bytes=512*1024**2,minimum_available_host_bytes=1);self.write()
         command=w._command(self.job,self.jp)
@@ -122,7 +124,12 @@ class EvaluationWorkerTests(unittest.TestCase):
         self.assertTrue(result.supervision['process_reaped'])
         output=Path(self.job['output']);self.assertTrue((output/'REQUEST.json').is_file(),result.stderr.decode(errors='replace'))
         failure=json.loads((output/'FAILURE.json').read_bytes())
-        self.assertEqual(failure['stage'],'admission');self.assertIn('External generation receipt required',failure['reason'])
+        self.assertEqual(failure['stage'],'admission')
+        # Real mandatory resource observations are available only on Windows.
+        # Other platforms must stop at that earlier guard, without a sampler mock.
+        expected=('External generation receipt required' if os.name=='nt'
+                  else 'Required resource observation unavailable: process_bytes')
+        self.assertEqual(failure['reason'],expected)
         self.assertFalse((output/'WORKER-RECEIPT.json').exists());self.assertFalse((output/'results').exists())
 
     def test_actual_bootstrap_rejects_changed_initializer_before_worker_output(self):
