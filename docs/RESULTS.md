@@ -79,6 +79,29 @@ matched. Stored log2 fold change differed on 294 of those IDs and percentile
 rank differed on 144. The comparisons measure release sensitivity under
 literal keys. They leave the reasons for individual differences unresolved.
 
+### Development-only source endpoint audit
+
+The complete OT25.09 ChEMBL scan selected 20,831 records for the sealed 6,550
+development pairs. Independent reduction reproduced every unit disposition.
+Original-row replay checked all 338 rows supporting the 100 prespecified
+sampled trails. The other 20,493 selected records were replayed at the
+projection level. Later trial or drug links triggered a prespecified reserve
+quarantine for 2,336 development pairs in 11 linked components.
+
+| Finite-source disposition | 36 months | 60 months |
+|---|---:|---:|
+| Recorded phase-3 candidate | 141 | 255 |
+| No qualifying record in the audited source | 3,547 | 3,433 |
+| Unresolved | 2,677 | 2,677 |
+| Prior higher-phase origin exclusion | 185 | 185 |
+| Total development pairs | 6,550 | 6,550 |
+
+The finite-source candidate fraction varies from 2.22% to 44.27% at 36 months
+and from 4.01% to 46.06% at 60 months under the two extreme classifications
+of unresolved units, after 185 origin exclusions. These are classification
+sensitivity ranges for this development frame. Registry corroboration,
+clinical labels and an independent test cohort remain unqualified.
+
 ## SciFact development measurements
 
 | ID | Method and exposure | Result and uncertainty | Limit |
@@ -188,6 +211,8 @@ digest alone. Original artifacts and failures remain unchanged.
 | Temporal feasibility | Provisional entry designation | `57a597c54bed1b239089ef4748394ab2a51220f64c1af158901d39b611d64404` |
 | Temporal feasibility | Gene burden and UniProt archive comparison | `1084537e695a4b32742b6754cabcd4623d7b59d02c81c889c72b99cada3f2261` |
 | Temporal feasibility | Expression Atlas archive comparison | `cde383919e50268323f82994b67cb7e99d3eeaa925d6ec1b2ab6c68160d0d08d` |
+| Endpoint feasibility | Development source-trail scan | `31554139b11a9bc72f344954dd38ce3b2e3eac9d09b407ec78ea433e319112a3` |
+| Endpoint feasibility | Independent selected original-row replay | `a120b0dd26a9fe9b3bb1f1f5f39ee98d867240af36a4ecefb4db9d9ab11a6ea5` |
 | S1 | SciFact decomposition | `f22ad12b46f6ccb182bd09d0cf6a4b08d3db9de8b22535b117040b67f7084a83` |
 | S2 | MultiVerS qualification | `bb21dfe9c08f01796457dcf634dcc9a9bc9082c9aec711e765d1b71b5a974ef4` |
 | S3 | SciFact comparison | `26fd14ed0cc4aea25f0f4b73be4297b4875d9fa0c2fd8826da3dad39ac4dc229` |
