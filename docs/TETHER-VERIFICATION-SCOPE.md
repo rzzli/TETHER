@@ -58,10 +58,10 @@ configuration, run and receipt. Known engine 0.4.0 version-two receipts and gene
 version-one receipts retain read-only byte checks with semantic/derivation checking
 explicitly unavailable. Declared source bytes may be verified, but this does not
 replay the completeness of their inventory. Exact older semantic replay requires
-the original software checkpoint. New-policy relocated semantic replay is not
-yet implemented; it is rejected explicitly rather than inferred from old pins.
-See [upgrade guidance](../packages/tether/MIGRATION.md) and
-[historical compatibility](ARCHIVE.md).
+the original software checkpoint. Native current-policy runs retain their source
+path bindings. The versioned bundle format provides a separate relocation path
+for supported offline runs with its own manifest and verification tiers.
+[Upgrade guidance](../packages/tether/MIGRATION.md) · [Historical compatibility](ARCHIVE.md) · [Portable verification](PORTABLE-BUNDLE.md)
 
 ## Process and filesystem limits
 

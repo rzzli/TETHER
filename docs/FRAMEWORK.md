@@ -46,10 +46,10 @@ remain separate from the agent-visible evidence path.
 | Native model studies | Additional model weights, exact environments, protocols and source archives; many execution paths require Windows file locks. |
 | Frozen study reproduction | Matching original code, protocol and retained outputs; a clone alone cannot reproduce the reported private runs. |
 
-The public interface currently imports file/proof helpers from `study/`; the
-package separation is not a clean architectural boundary. Simplification and
-portable offline bundles support bounded source-inclusive replay after relocation. See [the bundle guide](PORTABLE-BUNDLE.md) and [results](RESULTS.md) for completed
-development measurements, failed conditions and the frozen benchmark branches.
+The public interface currently imports file and proof helpers from `study/`.
+Portable offline bundles support bounded source-inclusive replay after relocation.
+The benchmark adapters retain their original dependencies and execution scope.
+[Bundle guide](PORTABLE-BUNDLE.md) · [Results](RESULTS.md)
 
 ## Inputs and outputs
 
