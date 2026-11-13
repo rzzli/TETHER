@@ -99,8 +99,8 @@ quarantine for 2,336 development pairs in 11 linked components.
 The finite-source candidate fraction varies from 2.22% to 44.27% at 36 months
 and from 4.01% to 46.06% at 60 months under the two extreme classifications
 of unresolved units, after 185 origin exclusions. These are classification
-sensitivity ranges for this development frame. Registry corroboration,
-clinical labels and an independent test cohort remain unqualified.
+sensitivity ranges for this development frame. Clinical labels and an
+independent test cohort remain unqualified.
 
 Grouping the same development projections by exact drug, target and disease
 yielded 7,720 triples with a reported phase-2 entry in 2016–2019. With a
@@ -116,6 +116,27 @@ remaining audit candidates across all indications, one trial links 51 of
 141 pairs at 36 months and 51 of 255 pairs at 60 months. These counts show
 dependence among the recorded candidates. The diagnostic uses contemporary
 disease categories.
+
+### Selected registry corroboration
+
+Three pinned AACT snapshots were checked for 226 exact trial IDs linked to
+82 of the 100 audited development trails. The prespecified reserve-bridge rule
+withheld 18 trails from registry lookup. Each snapshot retains 299 original
+row-to-trial link dispositions, including missing lookups.
+
+| Measure | January 2023 | January 2025 | April 2026 |
+|---|---:|---:|---:|
+| Exact trial IDs found, of 226 | 209 | 226 | 225 |
+| Coherent registry-reported actual start, among IDs found | 173 | 193 | 192 |
+| Found row-to-trial links, of 299 | 270 | 299 | 298 |
+| Joint actual start, study type, phase and interval agreement, of 299 links | 185 | 221 | 218 |
+| Exact normalized product and condition names observed, of 299 links | 118 | 130 | 129 |
+
+One requested ID was present in January 2025 and absent in April 2026. These
+counts measure selected record coverage and concordance. A trial can appear in
+several links. Registry start reporting and modern name agreement leave
+programme identity, dosing, clinical negative ascertainment and historical
+evidence availability unresolved. The audit released zero training labels.
 
 ## SciFact development measurements
 
@@ -230,6 +251,8 @@ digest alone. Original artifacts and failures remain unchanged.
 | Endpoint feasibility | Independent selected original-row replay | `a120b0dd26a9fe9b3bb1f1f5f39ee98d867240af36a4ecefb4db9d9ab11a6ea5` |
 | Endpoint feasibility | Exact-drug source sensitivity | `77f4c389087e7e5f4f46db1d466820622b40a7b41add084bbf51d158118b4198` |
 | Endpoint feasibility | Trial concentration and contemporary disease categories | `4726b5a032038129eb64bd879730cd4ed573f3c183f2563ab2256ee82f1973c7` |
+| Endpoint feasibility | Selected registry reconciliation | `70b479bcab70debdd7bc546fdaf11a276d932cb585af610f262a7d66fb2fc31f` |
+| Endpoint feasibility | Independent aggregate reconciliation check | `c5520757b37f46ce582cd4a3ea547bae3522b605d0b6b40956216acd0b95058e` |
 | S1 | SciFact decomposition | `f22ad12b46f6ccb182bd09d0cf6a4b08d3db9de8b22535b117040b67f7084a83` |
 | S2 | MultiVerS qualification | `bb21dfe9c08f01796457dcf634dcc9a9bc9082c9aec711e765d1b71b5a974ef4` |
 | S3 | SciFact comparison | `26fd14ed0cc4aea25f0f4b73be4297b4875d9fa0c2fd8826da3dad39ac4dc229` |
