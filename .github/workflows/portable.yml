@@ -29,7 +29,7 @@ jobs:
               export = base / 'source'
               export.mkdir()
               ignore = shutil.ignore_patterns('.git', '.venv', '__pycache__', '*.egg-info', 'build', 'dist')
-              for name in ('src', 'tests', 'tools', 'packages'):
+              for name in ('src', 'tests', 'tools', 'packages', 'experiments/temporal_audit'):
                   shutil.copytree(source / name, export / name, ignore=ignore)
               shutil.copytree(source / 'data/catalog', export / 'data/catalog', ignore=ignore)
               for name in ('pyproject.toml', 'LICENSE'):

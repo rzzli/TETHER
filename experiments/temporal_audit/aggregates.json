@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "kind": "tether_descriptive_audit_aggregates_v1",
+  "source_report_sha256": {
+    "designation": "57a597c54bed1b239089ef4748394ab2a51220f64c1af158901d39b611d64404",
+    "archive": "628df1148fa9175aeb515c28b77521f5e8e69e4abf54971e203fef8852fc1cf7",
+    "expression_full": "b035e2896fbdace1ced48fd67902487405fed1cf8f180334d8855b5170d84696",
+    "registry": "70b479bcab70debdd7bc546fdaf11a276d932cb585af610f262a7d66fb2fc31f",
+    "endpoint": "91bfcae04b3f6401aab30de7427aa1e4a89889cbfbbb1d2e01c14129dcb6e924",
+    "literal_drug": "77f4c389087e7e5f4f46db1d466820622b40a7b41add084bbf51d158118b4198",
+    "dependence": "eca368e5294a9e9b8c93743018f76217e9b853c53f67cb2dcf5ee39a3687d4ed"
+  },
+  "archive_inventory": {
+    "bytes_verified": 129179976,
+    "files_selected": 1500,
+    "physical_footer_rows": 815991
+  },
+  "archive": [
+    {
+      "source": "gene_burden",
+      "archive": "22.11",
+      "cutoff": "2022-11-25",
+      "field": "evidenceDate",
+      "archive_pairs": 5461,
+      "modern_pairs": 7110,
+      "shared": 3984,
+      "date_counts": {
+        "at_or_after": 1878,
+        "crossing": 0,
+        "empty": 0,
+        "entirely_before": 36303,
+        "malformed": 0,
+        "missing_column": 0,
+        "null": 0,
+        "unsupported": 0
+      },
+      "modern_rows": 38181,
+      "archive_rows": 27271
+    },
+    {
+      "source": "gene_burden",
+      "archive": "22.11",
+      "cutoff": "2022-11-25",
+      "field": "publicationDate",
+      "archive_pairs": 5461,
+      "modern_pairs": 7110,
+      "shared": 3984,
+      "date_counts": {
+        "at_or_after": 1878,
+        "crossing": 0,
+        "empty": 0,
+        "entirely_before": 36303,
+        "malformed": 0,
+        "missing_column": 0,
+        "null": 0,
+        "unsupported": 0
+      },
+      "modern_rows": 38181,
+      "archive_rows": 27271
+    },
+    {
+      "source": "gene_burden",
+      "archive": "24.09",
+      "cutoff": "2024-09-19",
+      "field": "evidenceDate",
+      "archive_pairs": 7469,
+      "modern_pairs": 7834,
+      "shared": 6355,
+      "date_counts": {
+        "at_or_after": 0,
+        "crossing": 0,
+        "empty": 0,
+        "entirely_before": 38181,
+        "malformed": 0,
+        "missing_column": 0,
+        "null": 0,
+        "unsupported": 0
+      },
+      "modern_rows": 38181,
+      "archive_rows": 36740
+    },
+    {
+      "source": "gene_burden",
+      "archive": "24.09",
+      "cutoff": "2024-09-19",
+      "field": "publicationDate",
+      "archive_pairs": 7469,
+      "modern_pairs": 7834,
+      "shared": 6355,
+      "date_counts": {
+        "at_or_after": 0,
+        "crossing": 0,
+        "empty": 0,
+        "entirely_before": 38181,
+        "malformed": 0,
+        "missing_column": 0,
+        "null": 0,
+        "unsupported": 0
+      },
+      "modern_rows": 38181,
+      "archive_rows": 36740
+    },
+    {
+      "source": "uniprot_literature",
+      "archive": "22.11",
+      "cutoff": "2022-11-25",
+      "field": "evidenceDate",
+      "archive_pairs": 4023,
+      "modern_pairs": 6524,
+      "shared": 2953,
+      "date_counts": {
+        "at_or_after": 50,
+        "crossing": 0,
+        "empty": 0,
+        "entirely_before": 6626,
+        "malformed": 0,
+        "missing_column": 0,
+        "null": 68,
+        "unsupported": 0
+      },
+      "modern_rows": 6744,
+      "archive_rows": 4143
+    },
+    {
+      "source": "uniprot_literature",
+      "archive": "22.11",
+      "cutoff": "2022-11-25",
+      "field": "publicationDate",
+      "archive_pairs": 4023,
+      "modern_pairs": 6524,
+      "shared": 2953,
+      "date_counts": {
+        "at_or_after": 50,
+        "crossing": 0,
+        "empty": 0,
+        "entirely_before": 6626,
+        "malformed": 0,
+        "missing_column": 0,
+        "null": 68,
+        "unsupported": 0
+      },
+      "modern_rows": 6744,
+      "archive_rows": 4143
+    },
+    {
+      "source": "uniprot_literature",
+      "archive": "24.09",
+      "cutoff": "2024-09-19",
+      "field": "evidenceDate",
+      "archive_pairs": 4497,
+      "modern_pairs": 6574,
+      "shared": 3754,
+      "date_counts": {
+        "at_or_after": 0,
+        "crossing": 0,
+        "empty": 0,
+        "entirely_before": 6676,
+        "malformed": 0,
+        "missing_column": 0,
+        "null": 68,
+        "unsupported": 0
+      },
+      "modern_rows": 6744,
+      "archive_rows": 4602
+    },
+    {
+      "source": "uniprot_literature",
+      "archive": "24.09",
+      "cutoff": "2024-09-19",
+      "field": "publicationDate",
+      "archive_pairs": 4497,
+      "modern_pairs": 6574,
+      "shared": 3754,
+      "date_counts": {
+        "at_or_after": 0,
+        "crossing": 0,
+        "empty": 0,
+        "entirely_before": 6676,
+        "malformed": 0,
+        "missing_column": 0,
+        "null": 68,
+        "unsupported": 0
+      },
+      "modern_rows": 6744,
+      "archive_rows": 4602
+    },
+    {
+      "source": "expression_atlas",
+      "archive": "22.11",
+      "cutoff": "2022-11-25",
+      "field": "evidenceDate",
+      "archive_pairs": 161439,
+      "modern_pairs": 138482,
+      "shared": 127626,
+      "date_counts": {
+        "at_or_after": 0,
+        "crossing": 0,
+        "empty": 0,
+        "entirely_before": 193083,
+        "malformed": 0,
+        "missing_column": 0,
+        "null": 44246,
+        "unsupported": 0
+      },
+      "modern_rows": 237329,
+      "archive_rows": 230903
+    },
+    {
+      "source": "expression_atlas",
+      "archive": "22.11",
+      "cutoff": "2022-11-25",
+      "field": "publicationDate",
+      "archive_pairs": 161439,
+      "modern_pairs": 138482,
+      "shared": 127626,
+      "date_counts": {
+        "at_or_after": 0,
+        "crossing": 0,
+        "empty": 0,
+        "entirely_before": 193083,
+        "malformed": 0,
+        "missing_column": 0,
+        "null": 44246,
+        "unsupported": 0
+      },
+      "modern_rows": 237329,
+      "archive_rows": 230903
+    },
+    {
+      "source": "expression_atlas",
+      "archive": "24.09",
+      "cutoff": "2024-09-19",
+      "field": "evidenceDate",
+      "archive_pairs": 160627,
+      "modern_pairs": 138482,
+      "shared": 133039,
+      "date_counts": {
+        "at_or_after": 0,
+        "crossing": 0,
+        "empty": 0,
+        "entirely_before": 193083,
+        "malformed": 0,
+        "missing_column": 0,
+        "null": 44246,
+        "unsupported": 0
+      },
+      "modern_rows": 237329,
+      "archive_rows": 230078
+    },
+    {
+      "source": "expression_atlas",
+      "archive": "24.09",
+      "cutoff": "2024-09-19",
+      "field": "publicationDate",
+      "archive_pairs": 160627,
+      "modern_pairs": 138482,
+      "shared": 133039,
+      "date_counts": {
+        "at_or_after": 0,
+        "crossing": 0,
+        "empty": 0,
+        "entirely_before": 193083,
+        "malformed": 0,
+        "missing_column": 0,
+        "null": 44246,
+        "unsupported": 0
+      },
+      "modern_rows": 237329,
+      "archive_rows": 230078
+    }
+  ],
+  "flow": {
+    "sizing": 6649,
+    "development": 6550,
+    "reserve": 99,
+    "selected_trails": 100,
+    "withheld_trails": 18,
+    "linked_trails": 82,
+    "requested_ids": 226,
+    "row_trial_links": 299
+  },
+  "endpoint": [
+    {
+      "unit": "pair",
+      "months": 36,
+      "mature": 6550,
+      "excluded": 185,
+      "candidate": 141,
+      "no_record": 3547,
+      "unresolved": 2677
+    },
+    {
+      "unit": "pair",
+      "months": 60,
+      "mature": 6550,
+      "excluded": 185,
+      "candidate": 255,
+      "no_record": 3433,
+      "unresolved": 2677
+    },
+    {
+      "unit": "literal_drug_target_disease",
+      "months": 36,
+      "mature": 7720,
+      "excluded": 108,
+      "candidate": 166,
+      "no_record": 4422,
+      "unresolved": 3024
+    },
+    {
+      "unit": "literal_drug_target_disease",
+      "months": 60,
+      "mature": 7720,
+      "excluded": 108,
+      "candidate": 283,
+      "no_record": 4305,
+      "unresolved": 3024
+    }
+  ],
+  "registry": [
+    {
+      "snapshot": "2023-01-01",
+      "found_ids": 209,
+      "coherent_actual_ids": 173,
+      "unknown_start_type": 16,
+      "found_links": 270,
+      "exact_phase": 240,
+      "mixed_phase": 29,
+      "different_phase": 0,
+      "unknown_phase": 1,
+      "equal_date": 222,
+      "overlap_date": 26,
+      "disjoint_date": 22,
+      "joint_start": 185,
+      "exact_names": 118,
+      "names_nonmatch": 152,
+      "names_missing": 29
+    },
+    {
+      "snapshot": "2025-01-01",
+      "found_ids": 226,
+      "coherent_actual_ids": 193,
+      "unknown_start_type": 32,
+      "found_links": 299,
+      "exact_phase": 267,
+      "mixed_phase": 31,
+      "different_phase": 0,
+      "unknown_phase": 1,
+      "equal_date": 269,
+      "overlap_date": 26,
+      "disjoint_date": 4,
+      "joint_start": 221,
+      "exact_names": 130,
+      "names_nonmatch": 169,
+      "names_missing": 0
+    },
+    {
+      "snapshot": "2026-04-01",
+      "found_ids": 225,
+      "coherent_actual_ids": 192,
+      "unknown_start_type": 32,
+      "found_links": 298,
+      "exact_phase": 264,
+      "mixed_phase": 31,
+      "different_phase": 2,
+      "unknown_phase": 1,
+      "equal_date": 268,
+      "overlap_date": 26,
+      "disjoint_date": 4,
+      "joint_start": 218,
+      "exact_names": 129,
+      "names_nonmatch": 169,
+      "names_missing": 1
+    }
+  ],
+  "qualification": {
+    "clinical_labels": 0,
+    "independent_test_pool": false,
+    "historical_actor_inputs": false
+  },
+  "dependence": {
+    "bridge_quarantined": 2336,
+    "linked_components": 11,
+    "entry_components": 683,
+    "largest_entry_component": 2278,
+    "max_pairs_per_trial_36": 51,
+    "max_pairs_per_trial_60": 51
+  },
+  "expression_full_modern": [
+    {
+      "archive": "22.11",
+      "archive_pairs": 161439,
+      "modern_pairs": 166503,
+      "shared": 151531
+    },
+    {
+      "archive": "24.09",
+      "archive_pairs": 160627,
+      "modern_pairs": 166503,
+      "shared": 157251
+    }
+  ]
+}

@@ -165,9 +165,10 @@ release-level clocks. Historical row availability and clinical validity remain
 unqualified. These are product-level census counts.
 
 The research gate released a **limited descriptive study** covering release
-sensitivity and registry ascertainment. Qualified historical actor inputs,
-clinical labels and an independent test population remain unavailable, so the
-clinical model comparison remains unreleased.
+sensitivity and registry ascertainment. The public reproduction recomputes the
+tables from aggregate counts and can separately replay the nine exact Open
+Targets partitions. Qualified historical actor inputs, clinical labels and an
+independent test population remain unavailable. [Reproduction](../experiments/temporal_audit/README.md)
 
 ### Published baseline preparation
 
@@ -289,9 +290,10 @@ deferred. Historical clinical training and locked clinical evaluation remain
 unqualified.
 
 Computed derivation and fixed-horizon evaluation passed their scoped
-engineering checks. Current work qualifies source history, endpoint
-ascertainment and the published baseline before model evaluation. Owner-supplied
-paper declarations remain pending.
+engineering checks. The descriptive release covers evidence-release sensitivity,
+selected endpoint ascertainment and bounded published-baseline preparation.
+Clinical model assessment and locked evaluation remain deferred. Owner-supplied
+paper declarations remain pending. [Reproduction](../experiments/temporal_audit/README.md)
 
 ## Retained artifact identifiers
 

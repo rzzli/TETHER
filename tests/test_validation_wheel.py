@@ -17,6 +17,7 @@ class WheelNamespaceTests(unittest.TestCase):
         self.path = Path(self.temp.name)/'invented.whl'
         self.metadata = 'tether_target_engine-'+__version__+'.dist-info'
         self.names = ['tether_engine/demo/v2/case.json', 'tether_engine/demo/case.json',
+                      'tether_engine/schemas/portable-bundle-v1.json',
                       self.metadata+'/METADATA', self.metadata+'/WHEEL', self.metadata+'/RECORD']
 
     def write(self, names):
@@ -30,7 +31,7 @@ class WheelNamespaceTests(unittest.TestCase):
 
     def test_only_current_runtime_and_matching_metadata_are_accepted(self):
         self.write(self.names+['tether_engine/__init__.py'])
-        self.assertEqual(validate_engine_wheel(self.path)['members'], 6)
+        self.assertEqual(validate_engine_wheel(self.path)['members'], len(self.names) + 1)
 
     def test_unexpected_namespace_and_stale_metadata_are_rejected(self):
         for name in ('old_engine/__init__.py', 'tests/test_secret.py', 'tether/__init__.py',
@@ -48,7 +49,7 @@ class WheelNamespaceTests(unittest.TestCase):
                 with self.assertRaises(ContractError):
                     validate_engine_wheel(self.path)
 
-    def test_missing_demo_or_distribution_metadata_is_rejected(self):
+    def test_missing_required_package_members_are_rejected(self):
         for name in self.names:
             with self.subTest(name=name):
                 self.write([member for member in self.names if member != name])

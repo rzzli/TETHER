@@ -35,6 +35,7 @@ TEST_MODULES = (
     "tests.test_bundle_output_paths",
     "tests.test_dossier_rendering",
     "tests.test_portable_validation",
+    "tests.test_temporal_audit_replay",
     "packages.tether.tests.test_namespace",
     "packages.tether.tests.test_semantics",
 )
