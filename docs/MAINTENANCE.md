@@ -137,6 +137,31 @@ Output directories cannot be reused. A technical pass does not qualify date
 semantics, historical availability, biological claims or clinical labels, and
 does not authorize agent access to evaluator-only data.
 
+The companion [date profiler](../tools/science/temporal_dates.py) reads exactly
+eight date/source columns from a qualified OT 25.09 inventory and emits aggregate
+counts. It supports the complete ChEMBL, GWAS credible-set, gene-burden and UniProt
+literature partitions. Its fixed research policy compares reported calendar
+intervals with January 1, 2024 and January 1, 2025; these are descriptive
+reference dates, not historical prediction origins. Use the reviewed report hash
+and an absolute inventory path:
+
+```powershell
+$inventoryPath = (Resolve-Path data/derived/partition-inspection-01).Path
+uv run --no-sync python -m tools.science.temporal_dates `
+  --inventory $inventoryPath --report-sha256 $reviewedInventoryReportSha256 `
+  --output data/derived/partition-date-profile-01
+```
+
+The profiler rechecks the report/journal, original and captured metadata proofs,
+and each file's hash before decoding selected columns through the same handle.
+It preserves nulls, missing columns, malformed values, precision and comparison
+denominators; it emits no original row values, trial identifiers, clinical phase,
+status or scores. Publication, study and evidence dates stay separate and
+semantically unqualified. Decoded Arrow bytes are reported separately from
+original file bytes. Output and failure rules match the inventory utility; the
+profile cannot be placed inside its input inventory. A passing profile does not
+establish historical availability, labels or an unexposed evaluation population.
+
 ## Repository boundaries
 
 Track source, package resources, test fixtures, reusable tools, experiment code and
