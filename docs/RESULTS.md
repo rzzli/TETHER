@@ -138,6 +138,37 @@ several links. Registry start reporting and modern name agreement leave
 programme identity, dosing, clinical negative ascertainment and historical
 evidence availability unresolved. The audit released zero training labels.
 
+### Release-aligned archive comparison
+
+The later comparison used exclusive calendar cutoffs of 2022-11-25 and
+2024-09-19, aligned to the retained provider notices for releases 22.11 and
+24.09. It verified 1,500 files, 815,991 physical rows and 129,179,976 bytes.
+Each cell compares literal target–disease pairs in one archive with OT25.09
+records whose complete reported `evidenceDate` interval precedes its cutoff.
+
+| Source | Archive | Archive pairs | Selected modern pairs | Shared | Union | Jaccard |
+|---|---|---:|---:|---:|---:|---:|
+| Gene burden | 22.11 | 5,461 | 7,110 | 3,984 | 8,587 | 0.4640 |
+| Gene burden | 24.09 | 7,469 | 7,834 | 6,355 | 8,948 | 0.7102 |
+| UniProt literature | 22.11 | 4,023 | 6,524 | 2,953 | 7,594 | 0.3889 |
+| UniProt literature | 24.09 | 4,497 | 6,574 | 3,754 | 7,317 | 0.5131 |
+| Expression Atlas | 22.11 | 161,439 | 138,482 | 127,626 | 172,295 | 0.7407 |
+| Expression Atlas | 24.09 | 160,627 | 138,482 | 133,039 | 166,070 | 0.8011 |
+
+The `publicationDate` sensitivity reproduced the pair and date-disposition
+counts. Both Expression Atlas thresholds excluded the same 44,246 null-dated
+records. Neither threshold classified an Expression Atlas row as later or
+crossing. For this source, full-current Jaccard was 0.8590 and 0.9257 before
+the date requirement. The changed archive contents, mapping and missing-date
+coverage limit interpretation. The two retained notices establish conservative
+release-level clocks. Historical row availability and clinical validity remain
+unqualified. These are product-level census counts.
+
+The research gate released a **limited descriptive study** covering release
+sensitivity and registry ascertainment. Qualified historical actor inputs,
+clinical labels and an independent test population remain unavailable, so the
+clinical model comparison remains unreleased.
+
 ### Published baseline preparation
 
 The five-object probe for the Czech et al. recipe verified publisher hashes and
@@ -282,6 +313,9 @@ digest alone. Original artifacts and failures remain unchanged.
 | Temporal feasibility | Provisional entry designation | `57a597c54bed1b239089ef4748394ab2a51220f64c1af158901d39b611d64404` |
 | Temporal feasibility | Gene burden and UniProt archive comparison | `1084537e695a4b32742b6754cabcd4623d7b59d02c81c889c72b99cada3f2261` |
 | Temporal feasibility | Expression Atlas archive comparison | `cde383919e50268323f82994b67cb7e99d3eeaa925d6ec1b2ab6c68160d0d08d` |
+| Temporal feasibility | Release-aligned gene burden and UniProt comparison | `ae579cb0341e438ff3fe0feb3646250dbd14125350119f3c49e5c065f79431a0` |
+| Temporal feasibility | Release-aligned Expression Atlas comparison | `b035e2896fbdace1ced48fd67902487405fed1cf8f180334d8855b5170d84696` |
+| Temporal feasibility | Release-aligned aggregate reconciliation | `628df1148fa9175aeb515c28b77521f5e8e69e4abf54971e203fef8852fc1cf7` |
 | Endpoint feasibility | Development source-trail scan | `31554139b11a9bc72f344954dd38ce3b2e3eac9d09b407ec78ea433e319112a3` |
 | Endpoint feasibility | Independent selected original-row replay | `a120b0dd26a9fe9b3bb1f1f5f39ee98d867240af36a4ecefb4db9d9ab11a6ea5` |
 | Endpoint feasibility | Exact-drug source sensitivity | `77f4c389087e7e5f4f46db1d466820622b40a7b41add084bbf51d158118b4198` |
