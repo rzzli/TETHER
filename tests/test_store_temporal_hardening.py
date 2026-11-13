@@ -1,6 +1,7 @@
 """Regressions for publication precision and execution-base preflight."""
 import tempfile
 import os
+import shutil
 import unittest
 from dataclasses import replace
 from datetime import date, datetime, timezone
@@ -13,6 +14,7 @@ from tether_engine.contracts import Case, Category
 from tether_engine.provenance import InputGraph
 from tether_engine.serde import ContractError, decode, read_json
 from tether_engine.workflow import run_workflow
+from tests.derivation_fixtures import qualify_projection
 
 FIXTURE = Path(__file__).resolve().parents[1] / 'src/tether_engine/demo/v2'
 
@@ -115,11 +117,13 @@ class StoreTemporalHardeningTests(unittest.TestCase):
         self.assertIsNone(self.publication(publication_year=None, publication_date=None))
 
     def test_new_computation_can_use_older_eligible_information(self):
-        unknown = replace(self.records[0].observation.availability, first_public_at=None,
-                          release_public_at=None, record_public_at=None, annotation_public_at=None,
-                          known_public_by=None, evidence_ref=None)
-        self.assertIsNone(self.publication(source_kind='computed', computed_at=datetime(2090, 1, 1, tzinfo=timezone.utc),
-                                          availability=unknown, publication_date=None, publication_year=None))
+        with tempfile.TemporaryDirectory() as temporary:
+            fixture = Path(temporary) / 'fixture'
+            shutil.copytree(FIXTURE, fixture)
+            computed = qualify_projection(fixture)
+            store = load_snapshot(fixture / 'snapshot.json', self.case)
+            self.assertGreater(computed.computed_at, self.case.cutoff)
+            self.assertEqual(store.lookup(computed.observation_id).observation, computed)
 
 
 if __name__ == '__main__':

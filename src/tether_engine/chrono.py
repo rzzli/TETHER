@@ -12,6 +12,7 @@ from .contracts import (Case, Category, Citation, EvidencePacket, GroundedObserv
                         Profile, Snapshot, TemporalClass, validate_observation)
 from .serde import ContractError, Frozen, decode, freeze, fingerprint, parse_json, read_json, safe_child
 from .provenance import InputGraph, catalog_index, check_role
+from .derivations import validate_descriptor, verify_observation
 
 
 @dataclass(frozen=True)
@@ -72,6 +73,56 @@ class EvidenceStore:
         except KeyError as error:
             raise ContractError(f"Observation is outside approved snapshot: {observation_id}") from error
 
+    def validate_execution(self, case: Case) -> InputGraph:
+        """Re-admit the live inputs before an actor can see this store.
+
+        This also checks explicitly constructed stores, whose recorded admission
+        fingerprints alone cannot prove that the records came from their packet.
+        The fresh graph is reused for ledger checks within this execution pass.
+        """
+        base = self.execution_base()
+        fresh = admit_snapshot(self.snapshot, case, base, self.catalog_policy)
+        if (fingerprint(self._records) != fingerprint(fresh._records) or
+                fingerprint(self.admitted_fingerprints) != fingerprint(fresh.admitted_fingerprints)):
+            raise ContractError("Execution store differs from freshly admitted source records")
+        if (set(self._query_index) != set(fresh._query_index) or
+                any(fingerprint(self._query_index[key]) != fingerprint(records)
+                    for key, records in fresh._query_index.items())):
+            raise ContractError("Execution query cache differs from freshly admitted source records")
+        if fingerprint(self.exclusions) != fingerprint(fresh.exclusions):
+            raise ContractError("Execution store exclusions differ from source admission")
+
+        def inventory(proofs):
+            result = {item["artifact_id"]: item for item in proofs}
+            if len(result) != len(proofs):
+                raise ContractError("Execution store contains duplicate source proofs")
+            return result
+
+        if fingerprint(inventory(self.source_proofs)) != fingerprint(inventory(fresh.source_proofs)):
+            raise ContractError("Execution store source proofs differ from live inputs")
+        self._execution_graph = fresh._execution_graph
+        self._execution_case_fingerprint = fingerprint(case)
+        return self._execution_graph
+
+    def validate_record(self, case: Case, record: GroundedObservation) -> None:
+        """Check a ledger candidate against the current source-validation pass."""
+        graph = getattr(self, "_execution_graph", None)
+        if (graph is None or graph.snapshot is not self.snapshot or
+                getattr(self, "_execution_case_fingerprint", None) != fingerprint(case)):
+            graph = self.validate_execution(case)
+        observation, citation = record.observation, record.citation
+        if fingerprint(record) != self.admitted_fingerprints.get(observation.observation_id):
+            raise ContractError("Record no longer matches its admitted source fingerprint")
+        artifact = next((item for item in self.snapshot.artifacts
+                         if item.artifact_id == citation.artifact_id), None)
+        if (artifact is None or citation.artifact_sha256 != artifact.sha256 or
+                citation.dataset_id != artifact.dataset_id or citation.release_id != artifact.release_id or
+                citation.source_url != artifact.source_url):
+            raise ContractError("Record citation differs from the admitted artifact")
+        reason = observation_exclusion(observation, artifact, graph, case)
+        if reason:
+            raise ContractError(f"Record contains ineligible information: {reason}")
+
 
 def publication_exclusion(observation, case: Case) -> str | None:
     """Publication precision never substitutes for eligible information lineage.
@@ -94,9 +145,12 @@ def publication_exclusion(observation, case: Case) -> str | None:
     return None
 
 
-def observation_exclusion(observation, artifact, graph: InputGraph, case: Case, artifact_inputs=None) -> str | None:
+def observation_exclusion(observation, artifact, graph: InputGraph, case: Case, artifact_inputs=None,
+                          *, verify_derivations: bool = True) -> str | None:
     """The same observation gate is used for admission and semantic verification."""
     validate_observation(observation)
+    if observation.source_kind != "computed" and observation.derivation is not None:
+        raise ContractError("An observation derivation requires computed source kind")
     if observation.program_id is not None and case.program is not None and case.program.mapping_confidence == 0:
         return "unresolved_program_mapping"
     if artifact_inputs is None:
@@ -104,10 +158,28 @@ def observation_exclusion(observation, artifact, graph: InputGraph, case: Case, 
     if not set(graph.closure(observation.input_refs)).issubset(artifact_inputs):
         raise ContractError("Observation lineage escapes its artifact's declared inputs")
     reason = graph.exclusion(observation.input_refs, case)
-    if not reason and observation.source_kind != "computed":
+    if not reason and observation.source_kind == "computed":
+        if observation.derivation is None:
+            raise ContractError("Computed observation requires a registered derivation")
+        validate_descriptor(observation.derivation, observation.input_refs, graph.nodes, case.cutoff)
+        if observation.derivation.output_schema != "observation.v2":
+            raise ContractError("Computed observation requires the observation output schema")
+    if not reason:
+        # A registered projection retains its source information availability;
+        # computed_at alone is a later execution clock and is never gated here.
         reason = observation.availability.exclusion(case.cutoff)
     if not reason:
         reason = publication_exclusion(observation, case)
+    if not reason and verify_derivations:
+        if observation.source_kind == "computed":
+            verify_observation(observation, observation.derivation,
+                               graph.payloads(observation.input_refs, case),
+                               eligible_refs=graph.closure(observation.input_refs))
+        elif any(graph.nodes[key].computed_at is not None
+                 for key in graph.closure(observation.input_refs)):
+            # Integrated/primary observations cannot conceal an unverified
+            # computed ancestor behind an ordinary observation source kind.
+            graph.verify(observation.input_refs, {}, case=case)
     return reason
 
 
@@ -214,9 +286,11 @@ def admit_snapshot(snapshot: Snapshot, case: Case, root: Path, policy=None) -> E
                 exclusions.append(Exclusion(observation.observation_id, "observation", reason))
                 continue
             records.append(GroundedObservation(observation, citation))
-            graph.verify(observation.input_refs, input_proofs)
-        graph.verify(artifact.input_refs, input_proofs)
+            graph.verify(observation.input_refs, input_proofs, case=case)
+        graph.verify(artifact.input_refs, input_proofs, case=case)
     result = EvidenceStore(snapshot, tuple(records), tuple(exclusions),
                            tuple(proofs) + tuple(input_proofs.values()), policy, snapshot_base=root)
+    result._execution_graph = graph
+    result._execution_case_fingerprint = fingerprint(case)
     return result
 

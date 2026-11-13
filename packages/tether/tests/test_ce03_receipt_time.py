@@ -50,6 +50,7 @@ def add_raw(fixture, *, used=False, completed="2022-01-01T00:00:00+00:00",
     fixture["policy"]["uses"][0]["grants"].append(dict(artifact_id=record["artifact_id"], role=node["role"]))
     if used:
         fixture["snapshot"]["sources"][1]["parents"].append(node["source_id"])
+        fixture["snapshot"]["sources"][1]["derivation"]["assets"][node["source_id"]] = node["sha256"]
         fixture["policy"]["artifacts"][1]["parents"].append(record["artifact_id"])
     fixture["policy"]["uses"][0]["snapshot_fingerprint"] = fingerprint(fixture["snapshot"])
     write(fixture["paths"]["policy"], fixture["policy"])

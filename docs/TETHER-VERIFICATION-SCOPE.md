@@ -2,13 +2,14 @@
 
 TETHER reports byte integrity, semantic consistency, source binding and scientific
 validation separately. A verified execution is not a validated scientific conclusion.
-The current interface is `tether-target-agents` 0.6.0 over
-`tether-target-engine` 0.4.0.
+The current interface is `tether-target-agents` 0.7.0 over
+`tether-target-engine` 0.5.0.
 
-**Known correctness limits (12 November 2026):** computed records can bypass
-availability checks without proof that their contents were derived from eligible
-parents. Current semantic replay verifies aggregation, not arbitrary scientific
-computations. The descriptive clinical evaluator can retain early positives while
+**Current scope (12 November 2026):** new execution requires the registered
+computed-evidence policy described in [the architecture](FRAMEWORK.md#registered-computation).
+Source-inclusive replay rederives supported complete outputs; unknown computations
+are rejected. This does not validate arbitrary scientific methods. The descriptive
+clinical evaluator can still retain early positives while
 excluding immature follow-up and accepts predictions without run receipts. These
 paths must not support historical clinical-performance claims until corrected.
 See [results and current scope](RESULTS.md).
@@ -17,7 +18,7 @@ See [results and current scope](RESULTS.md).
 |---|---|---|
 | Receipt and inventory | Listed files match their recorded hashes | Authenticity of an untrusted receipt or replacement of the entire tree without an external anchor |
 | Source-inclusive verification | Current originals, receipts, declared lineage and accepted claims agree | Publisher authenticity or undeclared real-world ancestry |
-| Semantic replay | Declared requests, selections, deterministic features, scorer contributions, accounting and traces agree | Correct biological interpretation or predictive usefulness |
+| Semantic replay | Declared requests, selections, registered derivations, deterministic features, scorer contributions, accounting and traces agree | Correct biological interpretation, trusted historical metadata or predictive usefulness |
 | Canonical CLI verification | Coverage states, reviewed selections, request membership, terminal dispositions and dossier rendering agree | A stronger guarantee for callers that use only a lower-level API |
 | Outer-run verification | Exact engine dossier copy, complete inventory, launcher identity, journal and receipts agree | Compatibility with a different launcher or engine version |
 | Artifact-policy verification | Exact registered artifacts, parents, use, frame and controls agree | Scientific validity or automatic eligibility of every row in an allowed artifact |
@@ -31,7 +32,9 @@ replacement of the entire output tree can evade hash checks against that same tr
 
 The direct engine's `--outputs-only` mode uses archived fingerprints instead of
 rereading current originals. Its result must not be described as fresh source
-verification. The public wrapper rejects that mode for outer runs.
+verification. Computed content reports `derivation_verification: not_checked_outputs_only`
+and does not receive a full semantic-verification claim. The public wrapper rejects
+that mode for outer runs.
 
 Replay verification checks consumed responses against source-reconstructed
 requests, response order, selected IDs, usage and feedback. Unused entries do not
@@ -42,9 +45,14 @@ original whitespace or prove that undeclared inputs were absent.
 
 Current `tether` module aliases share the new engine's classes and modules; direct
 aliases do not acquire the wrapper's additional checks or artifact authorization.
-Version-two proofs require the matching original software identities. Generic
-version-one receipt checks remain available, with semantic verification explicitly
-unavailable. See [upgrade guidance](../packages/tether/MIGRATION.md) and
+Current version-two execution seals policy `tether.derivation.v1` consistently in
+configuration, run and receipt. Known engine 0.4.0 version-two receipts and generic
+version-one receipts retain read-only byte checks with semantic/derivation checking
+explicitly unavailable. Declared source bytes may be verified, but this does not
+replay the completeness of their inventory. Exact older semantic replay requires
+the original software checkpoint. New-policy relocated semantic replay is not
+yet implemented; it is rejected explicitly rather than inferred from old pins.
+See [upgrade guidance](../packages/tether/MIGRATION.md) and
 [historical compatibility](ARCHIVE.md).
 
 ## Process and filesystem limits

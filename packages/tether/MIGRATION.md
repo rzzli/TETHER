@@ -1,7 +1,7 @@
 # Package and version compatibility
 
-The public interface is `tether-target-agents` 0.6.0, with command and import path
-`tether`. It pins `tether-target-engine` 0.4.0, imported as `tether_engine` and
+The public interface is `tether-target-agents` 0.7.0, with command and import path
+`tether`. It pins `tether-target-engine` 0.5.0, imported as `tether_engine` and
 invoked directly as `tether-engine`. Public aliases share the engine's class and
 module identities; no former namespace shim is installed.
 
@@ -28,15 +28,45 @@ conversion is required, create a new derived artifact with complete lineage;
 never edit the bytes or receipt of a sealed original in place. Renamed catalog
 products require new artifact grants.
 
-Version-two semantic verification rejects different engine software identities;
-use the original run's matching checkout and dependencies. Generic version-one
-byte verification remains supported, with semantic consistency unavailable.
+New version-two runs require policy `tether.derivation.v1`. Known engine 0.4.0
+version-two receipts retain limited byte verification; semantic consistency and
+derivation are unavailable in that route. Use the original matching checkout for
+its exact semantic replay. Generic version-one byte verification remains supported.
 See [historical compatibility](../../docs/ARCHIVE.md) and
 [verification limits](../../docs/TETHER-VERIFICATION-SCOPE.md).
 
+## Computed evidence policy, November 2026
+
+The case/snapshot/packet wire version remains 2. New optional `derivation` fields
+on observations and source nodes are omitted when absent; all older fields keep
+their existing encoding. Original v2 fixture bytes and canonical fingerprints
+remain unchanged. New execution always enforces the strict policy, including for
+directly constructed stores; there is no legacy execution option.
+
+A computed record needs a supported immutable descriptor binding exact input
+and asset hashes, registered method/version and implementation, parameters and
+their digest, output schema, method date and timing mode. The first method is
+`tether.json_projection` v1 with parameters `input` and `pointer`. Output schemas
+are `observation.v2` and `canonical_json.v1`. Projection preserves the complete
+source information; it cannot replace prose or numerical fields. Keep information
+availability dates from the source and put the later execution time in `computed_at`.
+The method date is local registration evidence, not a trusted public timestamp.
+
+Previously arbitrary computed fixtures must be rebuilt as new derived artifacts
+from complete eligible inputs; they cannot be upgraded by filling in a method
+name or copying the claimed output's hash. Do not alter sealed originals.
+See [the worked fixture builder](../../tests/derivation_fixtures.py) and
+[execution tests](../../tests/test_derivation_execution.py).
+
+Receipt policy, run policy and configuration must match. Dropping the policy
+from a current-engine receipt does not make it a legacy run. Legacy verification
+checks only its declared byte inventory and cannot qualify a new run. The old
+archive semantic dependency resource is unchanged; new-policy relocated replay
+is a later supported-workflow task, not implied compatibility.
+
 ## Receipt-read build correction, 7 November 2026
 
-The engine 0.4.0 development build now bounds Windows `EACCES` retries while
+The historical engine 0.4.0 development build bounded Windows `EACCES` retries while
 reading an archived receipt. It does not retry publication, change receipt bytes,
 or alter lineage, temporal eligibility, claims, features or scoring semantics.
 The exact ingestion module pin is updated in the archive dependency declaration;

@@ -16,7 +16,7 @@ import sys
 import time
 
 import tether_engine
-from tether_engine.artifacts import verify_run
+from tether_engine.artifacts import verify_run, ADMISSION_POLICY, receipt_policy
 from tether_engine.atomic import publish_bytes
 from tether_engine.journal import RunJournal
 from tether_engine.serde import (ContractError, MAX_LEDGER_JSON_BYTES, MAX_NORMALIZED_JSON_BYTES,
@@ -166,9 +166,9 @@ def code_proof():
             versions[name] = metadata.version(name)
         except metadata.PackageNotFoundError:
             versions[name] = None
-    need(tether_engine.__version__ == "0.4.0" and __version__ == "0.6.0", "Unsupported TETHER/core version")
-    need(versions["tether-target-engine"] in (None, "0.4.0")
-         and versions["tether-target-agents"] in (None, "0.6.0"), "Installed distribution version differs")
+    need(tether_engine.__version__ == "0.5.0" and __version__ == "0.7.0", "Unsupported TETHER/core version")
+    need(versions["tether-target-engine"] in (None, "0.5.0")
+         and versions["tether-target-agents"] in (None, "0.7.0"), "Installed distribution version differs")
     return dict(schema_version=1, method="tether.launcher_code.v2", facade_version=__version__,
                 core_version=tether_engine.__version__, installed_distributions=versions, code=proof)
 
@@ -201,7 +201,9 @@ def preflight_run_journals(output, *, verify=False):
 def _core_check(root, receipt_hash):
     result = verify_engine(root / "engine", receipt_hash, True)
     need(result.get("code_matches_current") is True and result.get("semantic_consistency") == "verified"
-         and result.get("source_binding") == "current_originals", "Engine source/code verification is incomplete")
+         and result.get("source_binding") == "current_originals"
+         and result.get("derivation_verification") == "verified"
+         and result.get("admission_policy") == ADMISSION_POLICY, "Engine source/code verification is incomplete")
     need(_json(root / "engine/run.json").get("status") == "completed", "Engine run did not complete")
     return result
 
@@ -211,7 +213,7 @@ def verify_engine(output, receipt_hash=None, verify_sources=True):
     output = Path(output)
     preflight_run_journals(output, verify=True)
     result = verify_run(output, receipt_hash, verify_sources)
-    if _json(output / "receipt.json")["schema_version"] == 2:
+    if receipt_policy(_json(output / "receipt.json")) == "current":
         from ._semantics import check_engine_semantics
         result["tether_semantics"] = check_engine_semantics(
             output, _json, _read, _journal_events, MAX_DOSSIER_BYTES)
@@ -387,7 +389,19 @@ def verify_outer(output, expected_receipt_sha256=None):
     limits.validate()
     need(manifest["command"] in ("demo", "run") and manifest["engine"] == dict(path="engine", receipt_sha256=receipt["engine_receipt_sha256"]),
          "TETHER engine binding differs")
-    need(canonical(manifest["launcher"]) == canonical(code_proof()), "TETHER current launcher code/version differs")
+    engine_policy = receipt_policy(_json(output / "engine/receipt.json"))
+    legacy = engine_policy != "current"
+    if legacy:
+        launcher = manifest["launcher"]
+        need(isinstance(launcher, dict) and launcher.get("schema_version") == 1
+             and launcher.get("method") == "tether.launcher_code.v2"
+             and launcher.get("core_version") == "0.4.0"
+             and launcher.get("facade_version") == "0.6.0"
+             and isinstance(launcher.get("code"), dict) and launcher["code"],
+             "Unsupported legacy TETHER launcher declaration")
+        need(engine_policy == "legacy_v2", "Unsupported legacy presentation engine")
+    else:
+        need(canonical(manifest["launcher"]) == canonical(code_proof()), "TETHER current launcher code/version differs")
     need(type(manifest["invocation_sha256"]) is str and re.fullmatch(r"[0-9a-f]{64}", manifest["invocation_sha256"]),
          "TETHER invocation binding differs")
     need(manifest["projection"] == dict(source="engine/dossier.md", target="dossier.md", transform="identity_dossier_v2"),
@@ -424,16 +438,21 @@ def verify_outer(output, expected_receipt_sha256=None):
     need(not any(e["event"] in ("run_failed", "run_interrupted") for e in events), "TETHER failure journal cannot qualify")
     need(_read(output / "dossier.md", max_bytes=MAX_DOSSIER_BYTES)
          == project_dossier(_read(output / "engine/dossier.md", max_bytes=MAX_DOSSIER_BYTES)), "TETHER dossier projection differs")
-    engine_result = _core_check(output, receipt["engine_receipt_sha256"])
-    if policy_binding is not None:
+    engine_result = (verify_engine(output / "engine", receipt["engine_receipt_sha256"], True)
+                     if legacy else _core_check(output, receipt["engine_receipt_sha256"]))
+    if policy_binding is not None and not legacy:
         need(canonical(events[2]["details"]) == canonical(dict(binding=policy_binding)), "Policy journal binding differs")
         from ._catalog_binding import verify_policy_run
         policy_result = verify_policy_run(output, policy_binding)
-    else:
+    elif policy_binding is None:
         need(not (output / "catalog-policy").exists(), "Unbound artifact-policy controls")
         policy_result = dict(status="unavailable_schema1_compatibility", scientific_validation="not_established")
+    else:
+        need(canonical(events[2]["details"]) == canonical(dict(binding=policy_binding)), "Policy journal binding differs")
+        policy_result = dict(status="unavailable_legacy_v2_derivation", scientific_validation="not_established")
     return dict(brand="TETHER", status="integrity_verified", receipt_sha256=digest(raw),
-                external_anchor_checked=expected_receipt_sha256 is not None, launcher_code_verified=True,
+                external_anchor_checked=expected_receipt_sha256 is not None, launcher_code_verified=not legacy,
+                launcher_proof_status="recorded_legacy_declaration" if legacy else "matches_current",
                 presentation_projection="identity_dossier_v2", engine=engine_result,
                 artifact_policy=policy_result,
                 scientific_validation="not_established")

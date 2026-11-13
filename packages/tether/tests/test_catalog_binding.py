@@ -14,6 +14,7 @@ from unittest.mock import patch
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "packages/tether/src"))
 from tether_engine.serde import ContractError, canonical, fingerprint
+from tether_engine.derivations import registry_entry
 from tether_engine.journal import read_chain
 from tether import _catalog_policy as policy, _catalog_binding as binding, _presentation as layer, _cli as cli
 
@@ -45,13 +46,24 @@ def make_fixture(root):
     receipt_bytes = canonical(receipt) + b"\n"
     node.update(receipt_path="receipt-archive/original.json", receipt_sha256=hashlib.sha256(receipt_bytes).hexdigest())
     write(raw_root / node["receipt_path"], receipt_bytes)
+    # A registered identity projection keeps the derived-reference fixture
+    # complete without introducing unverified normalization behavior.
+    mapping_bytes = canonical(json.loads(raw)) + b"\n"
+    registered = registry_entry()
+    parameters = dict(input=node["source_id"], pointer="")
+    derivation = dict(schema_version=1, method_id=registered["method_id"],
+        method_version=registered["method_version"], implementation_sha256=registered["implementation_sha256"],
+        parameters_sha256=fingerprint(parameters), parameters=parameters, inputs={node["source_id"]: node["sha256"]},
+        assets={}, output_schema="canonical_json.v1", method_available_at=registered["method_available_at"],
+        mode="contemporary_method_retrospective")
     mapping = dict(source_id="fictional-mapping", dataset_id="synthetic_reference", release_id="fixture-v1",
-        path="references/mapping.json", sha256=hashlib.sha256(b'{"fictional":true}\n').hexdigest(), role="reference",
+        path="references/mapping.json", sha256=hashlib.sha256(mapping_bytes).hexdigest(), role="reference",
         availability=copy.deepcopy(node["availability"]), temporal_classification=node["temporal_classification"],
         source_url="https://example.invalid/mapping", parents=[node["source_id"]],
-        computed_at="2026-01-01T00:00:00+00:00", method_id="fictional-normalization", method_version="1")
+        computed_at="2030-01-01T00:00:00+00:00", method_id=registered["method_id"],
+        method_version=registered["method_version"], derivation=derivation)
     snapshot["sources"].append(mapping)
-    write(normalized / mapping["path"], b'{"fictional":true}\n')
+    write(normalized / mapping["path"], mapping_bytes)
     artifact = snapshot["artifacts"][0]
     artifact.update(path="packets/evidence.json", input_refs=[mapping["source_id"]])
     write(normalized / artifact["path"], (base / "evidence.json").read_bytes())

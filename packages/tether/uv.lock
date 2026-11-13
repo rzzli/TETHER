@@ -40,7 +40,7 @@ wheels = [
 
 [[package]]
 name = "tether-target-agents"
-version = "0.6.0"
+version = "0.7.0"
 source = { editable = "." }
 dependencies = [
     { name = "tether-target-engine" },
@@ -60,7 +60,7 @@ provides-extras = ["ingest"]
 
 [[package]]
 name = "tether-target-engine"
-version = "0.4.0"
+version = "0.5.0"
 source = { directory = "../../" }
 
 [package.metadata]

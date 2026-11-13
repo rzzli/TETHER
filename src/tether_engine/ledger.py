@@ -28,7 +28,8 @@ class EvidenceLedger:
         digest = fingerprint(evidence)
         if digest != self.store.admitted_fingerprints.get(observation_id):
             raise ContractError("Claim no longer matches admitted source fingerprint")
-        if observation.source_kind != "computed" and observation.availability.exclusion(self.case.cutoff):
+        self.store.validate_record(self.case, evidence)
+        if observation.availability.exclusion(self.case.cutoff):
             raise ContractError("Claim failed the write-time availability gate")
         if observation.status != EvidenceStatus.OBSERVED:
             raise ContractError("Unavailable evidence must be reported as coverage, not a factual claim")

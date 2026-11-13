@@ -76,17 +76,15 @@ class ArchiveInterpretationTests(unittest.TestCase):
         # Original fixture root is unavailable during every archive verification.
         self.original.rename(self.root/'original-unavailable')
 
-    def test_recorded_question_restores_and_replays_admission(self):
-        self.generate();result=verify_interpretation_archive(str(self.output),self.resolver,self.anchor)
-        self.assertEqual(result['mechanical_consistency'],'verified')
-        self.assertFalse(result['archived_code_executed'])
-        self.assertEqual(result['scientific_validation'],'not_performed')
+    def test_recorded_question_requires_original_semantic_checkpoint(self):
+        self.generate()
+        with self.assertRaisesRegex(ContractError, 'Unsupported executing semantic dependencies'):
+            verify_interpretation_archive(str(self.output),self.resolver,self.anchor)
 
-    def test_bounded_recorded_restores_without_tools_import_at_verification(self):
+    def test_bounded_recorded_requires_original_semantic_checkpoint(self):
         self.generate(legacy=True)
-        result=verify_interpretation_archive(str(self.output),self.resolver,self.anchor)
-        self.assertEqual(result['status'],'interpretation_integrity_and_structure_verified')
-        self.assertFalse(result['archived_code_executed'])
+        with self.assertRaisesRegex(ContractError, 'Unsupported executing semantic dependencies'):
+            verify_interpretation_archive(str(self.output),self.resolver,self.anchor)
 
     def test_wrong_external_receipt_anchor_fails(self):
         self.generate()
@@ -101,9 +99,11 @@ class ArchiveInterpretationTests(unittest.TestCase):
         with self.assertRaises(ContractError):verify_interpretation_archive(str(self.output),resolver,self.anchor)
 
     def test_failed_run_is_inspected_not_promoted_or_repeated(self):
-        self.generate(malformed=True);result=inspect_failed_interpretation_archive(str(self.output),self.resolver)
-        self.assertEqual(result['status'],'terminal_failure_inspected_not_success')
-        self.assertEqual(result['calls'],1);self.assertFalse(result['receipt_present'])
+        self.generate(malformed=True)
+        # This inspector reconstructs admission, so it must not reinterpret an
+        # old failure with the current derivation policy or redispatch a call.
+        with self.assertRaisesRegex(ContractError, 'Unsupported executing semantic dependencies'):
+            inspect_failed_interpretation_archive(str(self.output),self.resolver)
         with self.assertRaises(ContractError):verify_interpretation_archive(str(self.output),self.resolver)
 
     def test_response_identity_and_state_mismatch_fail(self):

@@ -17,6 +17,7 @@ from tether_engine.journal import RunJournal, inspect_run
 from tether_engine.scorer import ScorerArtifact
 from tether_engine.serde import ContractError, decode, encode, fingerprint, read_json, sha256_file, write_json
 from tether_engine.workflow import Budget, run_workflow
+from tests.derivation_fixtures import qualify_projection
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -83,12 +84,7 @@ class HardeningTests(unittest.TestCase):
         self.assertFalse(store.query(other, __import__("tether_engine.contracts", fromlist=["Category"]).Category.CLINICAL))
 
     def test_new_computed_result_uses_old_input_eligibility(self):
-        def modify(packet):
-            observation = packet["observations"][0]
-            observation["source_kind"] = "computed"
-            observation["computed_at"] = "2026-10-10T00:00:00+00:00"
-            observation["availability"]["record_public_at"] = "2026-10-10"
-        self.edit(lambda _: None, modify)
+        qualify_projection(self.fixture)
         result = run_workflow(self.case, self.store(), ExtractiveBackend(), self.model)
         self.assertEqual(result.features.values["genetic_support"].value, 0.8)
 

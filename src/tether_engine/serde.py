@@ -185,7 +185,8 @@ def decode(kind: Any, value: Any, location: str = "input") -> Any:
 
 def encode(value: Any) -> Any:
     if is_dataclass(value):
-        return {field.name: encode(getattr(value, field.name)) for field in fields(value)}
+        return {field.name: encode(getattr(value, field.name)) for field in fields(value)
+                if not (field.metadata.get("omit_if_none") is True and getattr(value, field.name) is None)}
     if isinstance(value, Enum):
         return value.value
     if isinstance(value, datetime):

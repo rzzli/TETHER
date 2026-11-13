@@ -27,7 +27,7 @@ class NamespaceTests(unittest.TestCase):
         root = PACKAGE_ROOT.parents[1]
         project = tomllib.loads((root / "pyproject.toml").read_text())
         self.assertEqual(project["project"]["name"], "tether-target-engine")
-        self.assertEqual(project["project"]["version"], "0.4.0")
+        self.assertEqual(project["project"]["version"], "0.5.0")
         self.assertEqual(project["project"]["scripts"], {"tether-engine": "tether_engine.cli:main"})
         self.assertEqual(project["tool"]["setuptools"]["packages"]["find"]["include"],
                          ["tether_engine", "tether_engine.*"])
@@ -44,9 +44,9 @@ class NamespaceTests(unittest.TestCase):
     def test_public_and_engine_versions_are_separate(self):
         import tether
         import tether_engine
-        self.assertEqual(tether.__version__, "0.6.0")
-        self.assertEqual(tether.__core_version__, "0.4.0")
-        self.assertEqual(tether_engine.__version__, "0.4.0")
+        self.assertEqual(tether.__version__, "0.7.0")
+        self.assertEqual(tether.__core_version__, "0.5.0")
+        self.assertEqual(tether_engine.__version__, "0.5.0")
 
     def test_import_orders_preserve_modules_classes_and_metadata(self):
         script = r'''

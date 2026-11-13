@@ -1,8 +1,17 @@
 # Historical compatibility
 
 Current code and documentation use TETHER. Exact earlier software and proof
-identities remain in Git history. Version-two receipts must be verified with the
-matching code and dependencies; renaming a package does not migrate a sealed run.
+identities remain in Git history. The current engine provides limited read-only
+byte verification for known older receipts. Exact older semantic replay requires
+the matching code and dependencies; renaming a package does not migrate a sealed run.
+
+Engine 0.5.0 introduces policy `tether.derivation.v1`. Engine 0.4.0 version-two
+receipts retain output, journal, anchor and declared-source byte checks, with
+semantic/derivation verification explicitly unavailable. Missing undeclared
+ancestors are not certified by those checks. The original semantic dependency
+resource is preserved and refuses replay under changed executing code. Current
+policy relocation is explicitly unsupported until its separate portable workflow
+is qualified. Use ordinary source-inclusive verification for current runs.
 
 The pre-namespace implementation is pinned at commit
 `b492a8fca9bb1aa500d2939b3e2d19242a55cb96`, tag

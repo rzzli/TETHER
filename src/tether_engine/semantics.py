@@ -6,6 +6,7 @@ from pathlib import Path
 from .agents import Usage
 from .chrono import eligible_artifacts, observation_exclusion
 from .contracts import Case, Category, Claim, EvidenceStatus, Profile, Snapshot
+from .derivations import POLICY as ADMISSION_POLICY
 from .features import build_features
 from .provenance import InputGraph, catalog_index
 from .scorer import abstain, score
@@ -90,8 +91,10 @@ def check_execution(run, case, snapshot, configuration, claims, trace):
 
 
 def check_semantics(case, snapshot, claims, features, prediction, coverage, configuration,
-                    status, model, admitted, catalog_policy, root, trace):
+                    status, model, admitted, catalog_policy, root, trace, *, verify_derivations=True):
     case.validate()
+    if configuration.get("admission_policy") != ADMISSION_POLICY:
+        raise ContractError("Unsupported current admission policy; legacy verification is read-only")
     if snapshot.schema_version != 2 or snapshot.origin_at != case.origin_at or snapshot.origin != case.origin:
         raise ContractError("Semantic case/snapshot origin mismatch")
     if snapshot.profile != Profile.DEMO and not catalog_policy:
@@ -117,7 +120,8 @@ def check_semantics(case, snapshot, claims, features, prediction, coverage, conf
                 citation.dataset_id != artifact.dataset_id or citation.release_id != artifact.release_id or
                 citation.source_url != artifact.source_url):
             raise ContractError("Semantic citation mismatch")
-        if (observation_exclusion(observation, artifact, graph, case, artifact_inputs[artifact.artifact_id]) or
+        if (observation_exclusion(observation, artifact, graph, case, artifact_inputs[artifact.artifact_id],
+                                  verify_derivations=verify_derivations) or
                 observation.status != EvidenceStatus.OBSERVED):
             raise ContractError("Semantic claim contains ineligible information")
         expected_id = "claim-" + fingerprint({"case": case.case_id, "evidence": claim.evidence})[:20]

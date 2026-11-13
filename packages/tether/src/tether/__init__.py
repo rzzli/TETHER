@@ -7,10 +7,10 @@ from __future__ import annotations
 
 from tether_engine import __version__ as __core_version__
 
-__version__ = "0.6.0"
+__version__ = "0.7.0"
 
-if __core_version__ != "0.4.0":
-    raise ImportError("TETHER 0.6.0 requires the pinned engine 0.4.0")
+if __core_version__ != "0.5.0":
+    raise ImportError("TETHER 0.7.0 requires the pinned engine 0.5.0")
 
 from ._aliases import install as _install_aliases, public_roots as _public_roots
 

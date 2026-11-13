@@ -7,6 +7,7 @@ from dataclasses import dataclass, replace
 from .agents import Backend, Selection, Usage, critique, make_request
 from .chrono import EvidenceStore
 from .contracts import Case, Category, Claim, EvidenceStatus, Profile
+from .derivations import POLICY as ADMISSION_POLICY
 from .features import FeatureVector, build_features
 from .journal import RunJournal
 from .ledger import EvidenceLedger
@@ -108,7 +109,7 @@ def run_workflow(case: Case, store: EvidenceStore, backend: Backend,
     case.validate()
     budget = budget or Budget()
     budget.validate()
-    store.execution_base()  # Before request preparation, quotes or potentially billed calls.
+    store.validate_execution(case)  # Re-admit direct stores before any backend hook.
     if store.snapshot.origin != case.origin or store.snapshot.origin_at != case.origin_at:
         raise ContractError("Case/store origin mismatch")
     preflight_reason = preflight_scorer(case, store.snapshot.profile, model)
@@ -116,7 +117,8 @@ def run_workflow(case: Case, store: EvidenceStore, backend: Backend,
     trace = list(journal.events) if journal else []
     configuration = {"budget": budget, "disabled": disabled, "review_enabled": review_enabled,
                      "backend_id": backend.backend_id, "backend_provenance": getattr(backend, "provenance", None),
-                     "hypothesis_key": case.hypothesis.key, "scorer_preflight": preflight_reason}
+                     "hypothesis_key": case.hypothesis.key, "scorer_preflight": preflight_reason,
+                     "admission_policy": ADMISSION_POLICY}
 
     def event(kind, **details):
         if journal:

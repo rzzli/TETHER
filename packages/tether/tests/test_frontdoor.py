@@ -80,14 +80,14 @@ class FrontDoorTests(unittest.TestCase):
     def test_distribution_and_license_are_separate_from_legacy_core(self):
         project = tomllib.loads((PROJECT / "pyproject.toml").read_text())
         self.assertEqual(project["project"]["name"], "tether-target-agents")
-        self.assertEqual(project["project"]["version"], "0.6.0")
-        self.assertEqual(project["project"]["dependencies"], ["tether-target-engine==0.4.0"])
+        self.assertEqual(project["project"]["version"], "0.7.0")
+        self.assertEqual(project["project"]["dependencies"], ["tether-target-engine==0.5.0"])
         self.assertEqual(project["project"]["optional-dependencies"]["ingest"], ["pyarrow==21.0.0"])
         self.assertEqual(project["tool"]["setuptools"]["packages"]["find"]["include"], ["tether", "tether.*"])
         self.assertEqual((PROJECT / "LICENSE").read_bytes(), (ROOT / "LICENSE").read_bytes())
 
     def test_help_version_and_legacy_parser_are_independent(self):
-        for argv, expected in [(["--help"], "usage: tether"), (["--version"], "TETHER 0.6.0"),
+        for argv, expected in [(["--help"], "usage: tether"), (["--version"], "TETHER 0.7.0"),
                                (["run", "--help"], "usage: tether run")]:
             stream = io.StringIO()
             with redirect_stdout(stream), self.assertRaises(SystemExit) as stop:
@@ -107,6 +107,46 @@ class FrontDoorTests(unittest.TestCase):
     def test_output_rewrite_removes_both_legacy_argument_forms(self):
         result = layer._engine_args(["demo", "--output=first", "--output", "second"], self.root / "engine")
         self.assertEqual(result, ["demo", "--output", str(self.root / "engine")])
+
+    def test_readonly_legacy_outer_keeps_byte_only_scope(self):
+        self.complete()
+        # Construct a synthetic old-format envelope; it is not an assertion
+        # that this run was actually produced by the old checkout.
+        receipt_path = self.output / 'engine/receipt.json'
+        core_receipt = json.loads(receipt_path.read_bytes())
+        core_receipt['software_version'] = '0.4.0'
+        core_receipt.pop('admission_policy')
+        receipt_path.write_bytes(canonical(core_receipt) + b'\n')
+        engine_hash = layer.digest(receipt_path.read_bytes())
+        launcher = None
+
+        def old_manifest(manifest):
+            nonlocal launcher
+            manifest['engine']['receipt_sha256'] = engine_hash
+            manifest['launcher']['core_version'] = '0.4.0'
+            manifest['launcher']['facade_version'] = '0.6.0'
+            launcher = manifest['launcher']
+
+        def old_events(events):
+            events[1]['details'] = dict(events[1]['details'], launcher_proof_sha256=layer.digest(canonical(launcher)))
+            events[-1]['details'] = dict(events[-1]['details'], engine_receipt_sha256=engine_hash)
+
+        self.reseal(old_manifest, old_events)
+        outer_path = self.output / layer.RECEIPT
+        outer_receipt = json.loads(outer_path.read_bytes())
+        outer_receipt['engine_receipt_sha256'] = engine_hash
+        outer_path.write_bytes(canonical(outer_receipt) + b'\n')
+        anchor = layer.digest(outer_path.read_bytes())
+        with (patch.object(layer, 'code_proof', side_effect=AssertionError('current launcher replay')),
+              patch('tether._semantics.check_engine_semantics', side_effect=AssertionError('current semantics')),
+              patch.object(layer, 'invoke_engine', side_effect=AssertionError('no dispatch'))):
+            result = layer.verify_outer(self.output, anchor)
+        self.assertFalse(result['launcher_code_verified'])
+        self.assertEqual(result['launcher_proof_status'], 'recorded_legacy_declaration')
+        self.assertEqual(result['engine']['semantic_consistency'], 'unavailable_legacy_v2_derivation')
+        self.assertNotIn('tether_semantics', result['engine'])
+        with self.assertRaisesRegex(ContractError, 'incomplete'):
+            layer._core_check(self.output, engine_hash)
 
     def test_metadata_oversize_is_rejected_before_open_without_large_allocation(self):
         for name in (layer.RECEIPT, layer.MANIFEST, layer.FAILURE):
@@ -246,7 +286,7 @@ class FrontDoorTests(unittest.TestCase):
         receipt = json.loads(path.read_text())
         receipt["software_version"] = "0.0.0"
         path.write_bytes(canonical(receipt))
-        with self.assertRaisesRegex(ContractError, "original engine checkout"):
+        with self.assertRaisesRegex(ContractError, "original checkout"):
             verify_run(self.output / "engine", verify_sources=False)
 
     def test_identity_projection_rejects_unrecognized_engine_header(self):

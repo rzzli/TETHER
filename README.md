@@ -71,8 +71,9 @@ For stronger integrity checking, save the printed receipt hash separately and pa
 
 The clinical cohort feasibility work produced **no qualified training labels**.
 ALCE execution is frozen incomplete; Scholar/R2E comparisons are deferred.
-Known computed-lineage and fixed-horizon evaluation defects must be corrected
-before historical clinical claims. See the [results and limitations](docs/RESULTS.md).
+Computed evidence requires a registered, replayable derivation. Fixed-horizon
+evaluation and clinical-data qualification remain unfinished before historical
+clinical claims. See the [results and limitations](docs/RESULTS.md).
 
 ## Components
 

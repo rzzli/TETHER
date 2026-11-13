@@ -2,8 +2,8 @@
 
 **Auditable evidence workflows, with source-linked dossiers and bounded execution.**
 
-The public package is `tether-target-agents` **0.6.0**, command and namespace
-`tether`. It pins `tether-target-engine==0.4.0`, whose namespace is `tether_engine`
+The public package is `tether-target-agents` **0.7.0**, command and namespace
+`tether`. It pins `tether-target-engine==0.5.0`, whose namespace is `tether_engine`
 and direct command is `tether-engine`. The runtime has no third-party library
 dependencies; optional ingestion pins `pyarrow==21.0.0`.
 

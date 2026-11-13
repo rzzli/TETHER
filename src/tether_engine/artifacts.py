@@ -24,6 +24,21 @@ from .workflow import RunResult
 LEGACY_RUN_FILES = ("run.json", "inputs.json", "ledger.json", "features.json", "prediction.json",
              "trace.jsonl", "dossier.md")
 RUN_FILES = LEGACY_RUN_FILES + ("journal.jsonl",)
+ADMISSION_POLICY = "tether.derivation.v1"
+
+
+def receipt_policy(receipt):
+    """Classify sealed formats; a current producer cannot opt into legacy trust."""
+    if not isinstance(receipt, dict) or type(receipt.get("schema_version")) is not int:
+        raise ContractError("Invalid run receipt")
+    version, producer = receipt["schema_version"], receipt.get("software_version")
+    if version == 1 and producer == "0.1.0" and "admission_policy" not in receipt:
+        return "legacy_v1"
+    if version == 2 and producer == "0.4.0" and "admission_policy" not in receipt:
+        return "legacy_v2"
+    if version == 2 and producer == __version__ and receipt.get("admission_policy") == ADMISSION_POLICY:
+        return "current"
+    raise ContractError("Unsupported receipt producer/admission policy; use its original checkout for legacy semantics")
 
 
 def _check_source_inventory(snapshot, case, root, policy, proofs):
@@ -118,7 +133,9 @@ def dossier(result: RunResult, store: EvidenceStore) -> str:
 def write_run(output: Path, result: RunResult, store: EvidenceStore,
               model: ScorerArtifact | None, journal: RunJournal | None = None) -> str:
     # Do not overwrite existing predictions or accidentally write into a data tree.
-    store.execution_base()  # Also guards callers that bypass run_workflow.
+    store.validate_execution(result.case)  # Also guards callers that bypass run_workflow.
+    if result.configuration.get("admission_policy") != ADMISSION_POLICY:
+        raise ContractError("New runs require the current derivation admission policy")
     check_semantics(result.case, store.snapshot, result.claims, result.features, result.prediction,
                     result.coverage, result.configuration, result.status, model, store.admitted_fingerprints,
                     store.catalog_policy, store.snapshot_base, result.trace)
@@ -148,7 +165,7 @@ def write_run(output: Path, result: RunResult, store: EvidenceStore,
     inputs = {"case": result.case, "snapshot": store.snapshot, "scorer": model,
               "catalog_policy": store.catalog_policy, "configuration": result.configuration,
               "snapshot_base": str(store.snapshot_base), "environment": environment}
-    run = {"schema_version": 2, "software_version": __version__,
+    run = {"schema_version": 2, "software_version": __version__, "admission_policy": ADMISSION_POLICY,
            "created_at_utc": datetime.now(timezone.utc).isoformat(),
            "case_id": result.case.case_id, "status": result.status, "profile": result.profile,
            "snapshot_id": result.snapshot_id, "backend_id": result.backend_id,
@@ -169,7 +186,7 @@ def write_run(output: Path, result: RunResult, store: EvidenceStore,
         (output / "journal.jsonl").write_bytes((output / "trace.jsonl").read_bytes())
     (output / "dossier.md").write_text(dossier(result, store), encoding="utf-8")
     code_root = Path(__file__).parent
-    receipt = {"schema_version": 2, "software_version": __version__,
+    receipt = {"schema_version": 2, "software_version": __version__, "admission_policy": ADMISSION_POLICY,
                "input_fingerprint": fingerprint(inputs),
                "outputs": {name: sha256_file(output / name) for name in RUN_FILES},
                "sources": store.source_proofs,
@@ -190,11 +207,11 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
     if expected_receipt_sha256 and sha256_file(receipt_path) != expected_receipt_sha256:
         raise ContractError("Externally anchored receipt hash mismatch")
     receipt = read_json(receipt_path)
-    legacy = receipt.get("schema_version") == 1
-    if not legacy and receipt.get("software_version") != __version__:
-        raise ContractError("Semantic verification requires the original engine checkout; this engine verifies version " + __version__)
+    policy = receipt_policy(receipt)
+    legacy = policy != "current"
+    v1 = policy == "legacy_v1"
     replay_binding = None
-    if receipt.get("schema_version") not in (1, 2) or set(receipt.get("outputs", {})) != set(LEGACY_RUN_FILES if legacy else RUN_FILES):
+    if set(receipt.get("outputs", {})) != set(LEGACY_RUN_FILES if v1 else RUN_FILES):
         raise ContractError("Invalid run receipt or incomplete output set")
     for relative, expected in receipt["outputs"].items():
         path = safe_child(output, relative)
@@ -212,10 +229,14 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
         raise ContractError("Input fingerprint mismatch")
     trace = read_chain(output / "trace.jsonl")
     count = len(trace)
-    if not legacy and (output / "journal.jsonl").read_bytes() != (output / "trace.jsonl").read_bytes():
+    if not v1 and (output / "journal.jsonl").read_bytes() != (output / "trace.jsonl").read_bytes():
         raise ContractError("Semantic durable journal/trace mismatch")
     if verify_sources and legacy:
+        if not isinstance(receipt.get("sources"), list):
+            raise ContractError("Invalid legacy declared source inventory")
         for proof in receipt["sources"]:
+            if not isinstance(proof, dict) or not isinstance(proof.get("path"), str):
+                raise ContractError("Invalid legacy source proof")
             path = Path(proof["path"])
             if not path.is_absolute():
                 path = safe_child(output, proof["path"])
@@ -224,6 +245,8 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
             if proof.get("receipt_path") and sha256_file(Path(proof["receipt_path"])) != proof["receipt_sha256"]:
                 raise ContractError("Source receipt integrity failure")
     if not legacy:
+        if inputs.get("configuration", {}).get("admission_policy") != ADMISSION_POLICY:
+            raise ContractError("Input admission policy differs from receipt")
         case = decode(Case, inputs["case"])
         snapshot = decode(Snapshot, inputs["snapshot"])
         model = decode(ScorerArtifact, inputs["scorer"]) if inputs["scorer"] else None
@@ -232,7 +255,7 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
             raise ContractError("Semantic ledger schema mismatch")
         claims = decode(tuple[Claim, ...], ledger["claims"])
         run = read_json(output / "run.json")
-        if run.get("software_version") != __version__:
+        if run.get("software_version") != __version__ or run.get("admission_policy") != ADMISSION_POLICY:
             raise ContractError("Run and executing engine versions differ")
         if run['backend_id'] == 'local-structured-selection-v1':
             from .local_model import verify_backend_execution
@@ -271,22 +294,30 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
         check_semantics(case, snapshot, claims, decode(FeatureVector, read_json(output / "features.json")),
                         decode(Prediction, read_json(output / "prediction.json")), run["coverage"],
                         inputs["configuration"], run["status"], model, admitted, inputs["catalog_policy"],
-                        inputs["snapshot_base"], trace)
+                        inputs["snapshot_base"], trace, verify_derivations=verify_sources)
         if run['backend_id'] == 'recorded-selection-replay-v1':
             from .replay_validation import verify_replay_archive
             replay_binding = verify_replay_archive(case, inputs['configuration'], trace, restored)
     code_root = Path(__file__).parent
     current_code = {path.relative_to(code_root).as_posix(): sha256_file(path)
-                    for path in sorted(code_root.glob("*.py") if legacy else code_root.rglob("*.py"))}
-    result = {"status": "integrity_verified", "outputs": len(LEGACY_RUN_FILES if legacy else RUN_FILES),
+                    for path in sorted(code_root.glob("*.py") if v1 else code_root.rglob("*.py"))}
+    scope = "unavailable_legacy_v1" if v1 else "unavailable_legacy_v2_derivation"
+    computed_unchecked = (not legacy and not verify_sources and
+                          (any(node.computed_at is not None for node in snapshot.sources) or
+                           any(claim.evidence.observation.source_kind == "computed" for claim in claims)))
+    result = {"status": "integrity_verified", "byte_integrity": "verified",
+            "outputs": len(LEGACY_RUN_FILES if v1 else RUN_FILES),
             "source_artifacts_checked": len(receipt["sources"]) if verify_sources else 0,
             "trace_events": count, "receipt_sha256": sha256_file(receipt_path),
             "external_anchor_checked": expected_receipt_sha256 is not None,
             "auxiliary_outputs_checked": len(auxiliary),
             "unsealed_auxiliary_outputs": ["request.json"] if (output / "request.json").is_file() and not auxiliary else [],
             "code_matches_current": receipt.get("code") == current_code,
-            "semantic_consistency": "unavailable_legacy_v1" if legacy else "verified",
-            "source_binding": "current_originals" if verify_sources else "archived_fingerprints_only",
+            "semantic_consistency": scope if legacy else ("outputs_consistent_derivation_unchecked" if computed_unchecked else "verified"),
+            "derivation_verification": scope if legacy else ("verified" if verify_sources else "not_checked_outputs_only"),
+            "source_binding": ("declared_original_bytes_verified" if legacy else "current_originals") if verify_sources else "archived_fingerprints_only",
+            "source_inventory_completeness": "not_replayed" if legacy else "verified",
+            "admission_policy": receipt.get("admission_policy"),
             "scientific_validity": "not_established"}
     if replay_binding is not None:
         result['replay_binding'] = replay_binding

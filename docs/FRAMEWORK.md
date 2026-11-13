@@ -1,8 +1,8 @@
 # TETHER architecture
 
 TETHER separates evidence admission, bounded execution and verification. The
-public package is `tether-target-agents` 0.6.0 (`tether`); its engine is
-`tether-target-engine` 0.4.0 (`tether_engine`). Start with the
+public package is `tether-target-agents` 0.7.0 (`tether`); its engine is
+`tether-target-engine` 0.5.0 (`tether_engine`). Start with the
 [offline demo](../README.md#quick-start) or the [CLI guide](../packages/tether/README.md).
 
 ```mermaid
@@ -22,6 +22,7 @@ flowchart LR
 |---|---|---|
 | Contracts | Typed cases, evidence, claims and immutable nested values | [contracts.py](../src/tether_engine/contracts.py), [serde.py](../src/tether_engine/serde.py) |
 | Admission | Identifier, cutoff, publication, role and complete-lineage checks | [chrono.py](../src/tether_engine/chrono.py), [provenance.py](../src/tether_engine/provenance.py) |
+| Computed evidence | Registered deterministic projection and complete-output rederivation | [derivations.py](../src/tether_engine/derivations.py) |
 | Execution | Category routing, grounding review, budgets and terminal coverage | [workflow.py](../src/tether_engine/workflow.py), [agents.py](../src/tether_engine/agents.py) |
 | Claims | Fingerprint-bound admission and immutable ledger commits | [ledger.py](../src/tether_engine/ledger.py) |
 | Features and scoring | Hypothesis-bound derivations, configured contributions and explicit abstention | [features.py](../src/tether_engine/features.py), [scorer.py](../src/tether_engine/scorer.py) |
@@ -58,13 +59,47 @@ See the shipped [case](../src/tether_engine/demo/v2/case.json) and
 [snapshot](../src/tether_engine/demo/v2/snapshot.json) for fictional examples.
 
 Input references distinguish information availability from computation time.
-The current computed-record path skips availability checks without independently
-rederiving the submitted result from its parents. It therefore does not yet
-establish historical eligibility of arbitrary computed content. Fixing that gap
-must preserve legitimate new deterministic calculations on eligible old inputs.
+Computed observations and source nodes require a registered derivation. The
+runtime rederives their information from exact eligible parent bytes, including
+text, context, identifiers, quantities and feature scope. Unsupported computed
+content is rejected before backend preparation, even when its features are empty.
+New deterministic computation on eligible old information is allowed; a later
+execution timestamp does not backdate new information.
 Missing lineage and declared evaluator-only ancestors are rejected.
 Program availability is checked before dispatch. Numerical features also require
 a derivation scope matching the case's action, modality and context.
+
+### Registered computation
+
+New runs seal admission policy `tether.derivation.v1`. The initial registry has
+one method, `tether.json_projection` version `1`: select a complete JSON value
+from a hashed input using an RFC 6901 pointer. Parameters contain only `input`
+and `pointer`; replacement text, supplied code and arbitrary expressions are
+unsupported. This is a narrow projection primitive, not a scientific feature
+derivation library.
+
+The immutable descriptor binds method/version, implementation and parameter
+digests, input/asset hashes, output schema and method timing mode. The whole
+observation is compared with its projected source, except the computation and
+lineage envelope. Before replacing that envelope, the source observation must
+pass its original type restrictions and reference only qualified ancestors;
+embedded computed observations cannot acquire trust through projection.
+Parent computations are recursively checked. Each JSON input
+is capped at 64 MiB; aggregate cached derivation bytes are capped at 256 MiB per
+validation pass. Ordinary large raw-source checks remain streaming.
+
+`contemporary_method_retrospective` permits a present-day method over eligible
+older information. `historical_method_simulation` additionally checks its
+registered method date. That date records local implementation registration,
+**not authenticated public release**. Neither mode proves provider metadata or
+hidden model knowledge. The registered implementation currently supports no
+learned-model or causal-genetics computation.
+
+Execution freshly re-admits the store before backend hooks; finalization and
+source-inclusive verification check current source bytes again. Ledger checks
+reuse a bounded validation pass. See the [migration guide](../packages/tether/MIGRATION.md)
+for legacy guarantees and the [test fixture builder](../tests/derivation_fixtures.py)
+for a complete fictional projection example that preserves the old demo files.
 
 The default backend performs deterministic extraction. Replay responses bind to
 request fingerprints. A local model is opt-in and requires an explicit configuration;

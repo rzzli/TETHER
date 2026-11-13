@@ -1,10 +1,11 @@
-"""Source-inclusive verification of relocated receipts for the current engine.
+"""Byte verification of relocated legacy receipts without policy reinterpretation.
 
 Only caller-approved archive files are read. Original JSON, logical path strings,
 and receipt fingerprints are never rewritten. Archived Python is hashed as data.
-Version-one byte checking does not acquire semantic guarantees. Other engine
-versions require their original checkpoint. This module never executes archived
-Python or attests scientific validity.
+Legacy v1/v2 byte checks do not acquire current derivation guarantees. Frozen
+semantic rebuilds require their original dependency checkpoint. New-policy
+relocated semantic replay is explicitly unsupported. This module never executes
+archived Python or attests scientific validity.
 """
 from __future__ import annotations
 
@@ -15,7 +16,6 @@ from dataclasses import replace
 from datetime import datetime
 from pathlib import Path, PurePosixPath, PureWindowsPath
 
-from tether_engine import __version__
 from tether_engine.chrono import EvidenceStore, Exclusion
 from tether_engine.contracts import (Availability, Case, Category, Citation, Claim, EvidencePacket, EvidenceStatus,
                             GroundedObservation, Profile, Snapshot, validate_observation)
@@ -264,17 +264,21 @@ def rebuild_store(source, resolver):
 
 
 def verify_core_archive(logical_run, resolver, expected_receipt_sha256, *, code_root):
-    """Verify this engine version's immutable receipts with mapped sources."""
-    ensure_supported_semantics()
+    """Check legacy declared bytes without applying a newer admission policy.
+
+    Original-checkout semantic replay remains guarded below. Relocated replay
+    of the new derivation policy is a separate, not-yet-supported format path.
+    """
     receipt_payload = resolver.read_bytes(child(logical_run, 'receipt.json'), maximum_bytes=MAX_NORMALIZED_JSON_BYTES)
     need(hashlib.sha256(receipt_payload).hexdigest() == expected_receipt_sha256,
          'External receipt anchor mismatch')
     receipt = parse_json(receipt_payload)
-    legacy = receipt.get('schema_version') == 1
-    need(legacy or receipt.get('software_version') == __version__,
-         'Semantic verification requires the original engine checkout; this engine verifies version ' + __version__)
+    from tether_engine.artifacts import receipt_policy
+    policy = receipt_policy(receipt)
+    need(policy != 'current', 'Relocated derivation-policy semantic replay is unavailable; use original-path verification')
+    v1 = policy == 'legacy_v1'
     need(type(receipt.get('schema_version')) is int and receipt['schema_version'] in (1, 2), 'Invalid receipt version')
-    required = LEGACY_FILES if legacy else V2_FILES
+    required = LEGACY_FILES if v1 else V2_FILES
     need(set(receipt.get('outputs', {})) == set(required), 'Incomplete receipt output set')
     for name, expected in receipt['outputs'].items():
         pinned(resolver, child(logical_run, name), expected)
@@ -286,64 +290,30 @@ def verify_core_archive(logical_run, resolver, expected_receipt_sha256, *, code_
     need(fingerprint(inputs) == receipt['input_fingerprint'], 'Input fingerprint mismatch')
     trace_payload = resolver.read_bytes(child(logical_run, 'trace.jsonl'))
     trace = chain_bytes(trace_payload)
-    if not legacy:
+    if not v1:
         need(resolver.read_bytes(child(logical_run, 'journal.jsonl')) == trace_payload, 'Durable journal/trace mismatch')
     code = receipt.get('code')
     minimum = {'__init__.py', '__main__.py', 'agents.py', 'artifacts.py', 'chrono.py', 'cli.py',
                'contracts.py', 'evaluation.py', 'features.py', 'ledger.py', 'scorer.py', 'serde.py', 'workflow.py'}
-    if not legacy:
+    if not v1:
         minimum.update({'journal.py', 'provenance.py', 'semantics.py'})
     need(isinstance(code, dict) and minimum <= set(code), 'Missing original code inventory')
     for name, expected in code.items():
         pinned(resolver, child(code_root, name), expected)
-    if legacy:
-        for proof in receipt['sources']:
-            path = proof['path'] if logical(proof['path']).is_absolute() else child(logical_run, proof['path'])
-            pinned(resolver, path, proof['sha256'])
-            if proof.get('receipt_path'):
-                pinned(resolver, proof['receipt_path'], proof['receipt_sha256'])
-    else:
-        case, snapshot = decode(Case, inputs['case']), decode(Snapshot, inputs['snapshot'])
-        policy = inputs['catalog_policy']
-        store = rebuild_values(case, snapshot, inputs['snapshot_base'], policy, resolver)
-        actual, expected = ({p['artifact_id']: p for p in values} for values in (receipt['sources'], store.source_proofs))
-        need(len(actual) == len(receipt['sources']) and fingerprint(actual) == fingerprint(expected),
-             'Eligible artifact/ancestor proof inventory differs')
-        need(fingerprint(store.admitted_fingerprints) == fingerprint(receipt['admitted_fingerprints']),
-             'Source-to-admission fingerprints differ')
-        run = read_json(resolver, child(logical_run, 'run.json'))
-        need(run.get('software_version') == __version__, 'Run and executing engine versions differ')
-        ledger = read_json(resolver, child(logical_run, 'ledger.json'), MAX_LEDGER_JSON_BYTES)
-        need(ledger.get('schema_version') == 2 and run['input_fingerprint'] == receipt['input_fingerprint'],
-             'Run/ledger schema or input fingerprint mismatch')
-        claims = decode(tuple[Claim, ...], ledger['claims'])
-        need(fingerprint(store.exclusions) == fingerprint(run['exclusions']), 'Source exclusions differ')
-        for category, coverage in run['coverage'].items():
-            records = store.query(case, Category(category))
-            nonobserved = [dict(observation_id=r.observation.observation_id, status=r.observation.status.value,
-                                reason=r.observation.statement) for r in records if r.observation.status != EvidenceStatus.OBSERVED]
-            need(coverage['available_observations'] == sum(r.observation.status == EvidenceStatus.OBSERVED for r in records)
-                 and fingerprint(nonobserved) == fingerprint(coverage['nonobserved'])
-                 and fingerprint(snapshot.coverage) == fingerprint(coverage['source_coverage']), 'Source coverage differs')
-        if run['backend_id'] == 'local-structured-selection-v1':
-            from tether_engine.local_model import verify_backend_execution
-            from tether_engine.retrieval import RetrievalPolicy, verify_retrieval_trace
-            need('backend-execution.json' in auxiliary, 'Missing sealed backend archive')
-            verify_backend_execution(read_json(resolver, child(logical_run, 'backend-execution.json')),
-                                     trace, inputs['configuration'])
-            verify_retrieval_trace(case, store, trace, RetrievalPolicy(**inputs['configuration']['backend_provenance']['config']['retrieval']))
-        model = decode(ScorerArtifact, inputs['scorer']) if inputs['scorer'] else None
-        check_execution(run, case, snapshot, inputs['configuration'], claims, trace)
-        _check_semantics(case, snapshot, claims,
-                         decode(FeatureVector, read_json(resolver, child(logical_run, 'features.json'))),
-                         decode(Prediction, read_json(resolver, child(logical_run, 'prediction.json'))),
-                         run['coverage'], inputs['configuration'], run['status'], model,
-                         receipt['admitted_fingerprints'], policy, store.archive_graph, trace)
+    need(isinstance(receipt.get('sources'), list), 'Invalid declared source inventory')
+    for proof in receipt['sources']:
+        need(isinstance(proof, dict) and isinstance(proof.get('path'), str), 'Invalid declared source proof')
+        path = proof['path'] if logical(proof['path']).is_absolute() else child(logical_run, proof['path'])
+        pinned(resolver, path, proof['sha256'])
+        if proof.get('receipt_path'):
+            pinned(resolver, proof['receipt_path'], proof['receipt_sha256'])
     return dict(status='relocated_receipt_verified', byte_integrity='verified',
-                semantic_consistency='unavailable_legacy_v1' if legacy else 'verified',
-                source_binding='relocated_verified_original_bytes', source_artifacts_checked=len(receipt['sources']),
+                semantic_consistency='unavailable_legacy_v1' if v1 else 'unavailable_legacy_v2_derivation',
+                derivation_verification='unavailable_legacy_v1' if v1 else 'unavailable_legacy_v2_derivation',
+                source_binding='relocated_declared_original_bytes_verified', source_artifacts_checked=len(receipt['sources']),
+                source_inventory_completeness='not_replayed',
                 code_archive_integrity='verified_original_pins', code_files_checked=len(receipt.get('code', {})),
-                executing_policy=POLICY, executing_dependency_resource_sha256=_DEPENDENCY_RESOURCE_SHA256,
+                executing_policy='legacy_declared_bytes_v1', executing_dependency_resource_sha256=None,
                 archived_code_executed=False, external_anchor_checked=True,
                 scientific_validity='not_established', trace_events=len(trace))
 

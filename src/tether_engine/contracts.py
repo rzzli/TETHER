@@ -202,6 +202,23 @@ class Artifact(Frozen):
 
 
 @dataclass(frozen=True)
+class Derivation(Frozen):
+    """Closed, versioned transformation bound to exact information inputs."""
+
+    schema_version: int
+    method_id: str
+    method_version: str
+    implementation_sha256: str
+    parameters_sha256: str
+    parameters: Mapping[str, Any]
+    inputs: Mapping[str, str]
+    assets: Mapping[str, str]
+    output_schema: str
+    method_available_at: datetime
+    mode: str
+
+
+@dataclass(frozen=True)
 class SourceNode(Frozen):
     source_id: str
     dataset_id: str
@@ -218,6 +235,7 @@ class SourceNode(Frozen):
     method_version: str | None = None
     receipt_path: str | None = None
     receipt_sha256: str | None = None
+    derivation: Derivation | None = field(default=None, metadata={"omit_if_none": True})
 
 
 @dataclass(frozen=True)
@@ -297,6 +315,7 @@ class Observation(Frozen):
     missingness: Mapping[str, str] = field(default_factory=dict)
     publication_date: date | None = None
     publication_year: int | None = None
+    derivation: Derivation | None = field(default=None, metadata={"omit_if_none": True})
 
     def __post_init__(self) -> None:
         for name in ("source_locator", "source_metrics", "missingness"):

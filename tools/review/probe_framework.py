@@ -18,7 +18,8 @@ from tools.history import materialize_checkpoint
 from tether_engine.agents import ExtractiveBackend
 from tether_engine.artifacts import verify_run, write_run
 from tether_engine.chrono import load_snapshot
-from tether_engine.contracts import Case, Category
+from tether_engine.contracts import Case, Category, Derivation
+from tether_engine.derivations import registry_entry
 from tether_engine.journal import RunJournal, inspect_run
 from tether_engine.scorer import ScorerArtifact
 from tether_engine.serde import ContractError, decode, fingerprint, read_json, sha256_file, write_json
@@ -223,20 +224,55 @@ def new_computation_old_inputs(root):
     fixture, case, _, _ = inputs(root)
     packet = read_json(fixture / "evidence.json")
     observation = packet["observations"][0]
-    observation["source_kind"] = "computed"
-    observation["computed_at"] = "2026-10-10T00:00:00+00:00"
-    observation["availability"]["record_public_at"] = "2026-10-10"
-    write_json(fixture / "evidence.json", packet)
     snapshot = read_json(fixture / "snapshot.json")
+    source = snapshot["sources"][0]
+    # Preserve complete fictional information, including its original envelope,
+    # in this temporary source. The registered projection may not invent fields
+    # or replace old information availability with its later execution time.
+    write_json(fixture / source["path"], {"observations": [observation]})
+    source["sha256"] = sha256_file(fixture / source["path"])
+    parameters = {"input": source["source_id"], "pointer": "/observations/0"}
+    registered = registry_entry()
+    derivation = Derivation(
+        schema_version=1,
+        method_id=registered["method_id"],
+        method_version=registered["method_version"],
+        implementation_sha256=registered["implementation_sha256"],
+        parameters_sha256=fingerprint(parameters), parameters=parameters,
+        inputs={source["source_id"]: source["sha256"]}, assets={},
+        output_schema="observation.v2",
+        method_available_at=registered["method_available_at"],
+        mode="contemporary_method_retrospective",
+    )
+    observation["source_kind"] = "computed"
+    observation["computed_at"] = datetime.now(timezone.utc)
+    observation["derivation"] = derivation
+    write_json(fixture / "evidence.json", packet)
     snapshot["artifacts"][0]["sha256"] = sha256_file(fixture / "evidence.json")
     write_json(fixture / "snapshot.json", snapshot)
     store = load_snapshot(fixture / "snapshot.json", case)
     result = run_workflow(case, store, CaptureBackend())
     value = result.features.values["genetic_support"].value
-    return report("Permit later computation on completely referenced eligible old information",
-                  value == 0.8, computed_at=observation["computed_at"],
+    output = root / "qualified-computation"
+    anchor = write_run(output, result, store, None)
+    checked = verify_run(output, anchor)
+
+    # A valid transform cannot make a future annotation historically eligible.
+    source["availability"]["annotation_public_at"] = date(case.origin.year + 1, 1, 1)
+    write_json(fixture / "snapshot.json", snapshot)
+    future_store = load_snapshot(fixture / "snapshot.json", case)
+    backend = CaptureBackend()
+    future_result = run_workflow(case, future_store, backend)
+    future_excluded = not future_store.query(case, Category.GENETICS)
+    return report("Permit qualified late computation on old inputs; reject future input information",
+                  value == 0.8 and checked["derivation_verification"] == "verified" and
+                  future_excluded and backend.calls == 0 and
+                  future_result.features.values["genetic_support"].value is None,
+                  computed_at=observation["computed_at"], derivation_method=derivation.method_id,
+                  derivation_verification=checked["derivation_verification"],
                   origin_at=case.origin_at, eligible_records=len(store.query(case, Category.GENETICS)),
-                  feature_value=value)
+                  feature_value=value, future_parent_excluded=future_excluded,
+                  future_parent_calls=backend.calls)
 
 
 def legacy_verification(root):

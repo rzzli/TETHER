@@ -10,7 +10,7 @@ from unittest.mock import patch
 from tether_engine.agents import ExtractiveBackend
 from tether_engine.archive.core import verify_core_archive
 from tether_engine.archive.paths import ArchiveResolver
-from tether_engine.artifacts import write_run
+from tether_engine.artifacts import write_run, verify_run
 from tether_engine.chrono import load_snapshot
 from tether_engine.contracts import Case
 from tether_engine.journal import RunJournal
@@ -38,12 +38,17 @@ class ArchiveCoreTests(unittest.TestCase):
         finally:
             journal.close()
 
-    def relocate(self, legacy=False):
+    def relocate(self, legacy=False, current_policy=False):
         receipt = read_json(self.output / 'receipt.json')
+        # Synthetic format conversion exercises byte-only legacy compatibility;
+        # it is never represented as a historical producer execution.
+        if not current_policy:
+            receipt.pop('admission_policy', None)
+            receipt['software_version'] = '0.1.0' if legacy else '0.4.0'
         if legacy:
             receipt['schema_version'] = 1
             del receipt['outputs']['journal.jsonl']
-            write_json(self.output / 'receipt.json', receipt)
+        write_json(self.output / 'receipt.json', receipt)
         self.anchor = hashlib.sha256((self.output / 'receipt.json').read_bytes()).hexdigest()
         physical = self.base / 'restored'
         project = physical / 'project'
@@ -78,13 +83,16 @@ class ArchiveCoreTests(unittest.TestCase):
         self.original.rename(self.base / 'unavailable-original')
 
     def verify(self, resolver=None, anchor=None):
+        if not hasattr(self, 'resolver'):
+            return verify_run(self.output, anchor)
         return verify_core_archive(str(self.output), resolver or self.resolver,
                                    self.anchor if anchor is None else anchor, code_root=str(ROOT / 'src/tether_engine'))
 
-    def test_v2_replays_sources_features_accounting_after_relocation(self):
+    def test_legacy_v2_checks_declared_bytes_after_relocation(self):
         self.relocate()
         result = self.verify()
-        self.assertEqual(result['semantic_consistency'], 'verified')
+        self.assertEqual(result['semantic_consistency'], 'unavailable_legacy_v2_derivation')
+        self.assertEqual(result['source_inventory_completeness'], 'not_replayed')
         self.assertEqual(result['code_archive_integrity'], 'verified_original_pins')
         self.assertFalse(result['archived_code_executed'])
         self.assertEqual(result['scientific_validity'], 'not_established')
@@ -110,33 +118,23 @@ class ArchiveCoreTests(unittest.TestCase):
             with self.assertRaises(ContractError):
                 self.verify(ArchiveResolver(self.bindings, files))
 
-    def test_envelope_resealed_features_still_fail_semantics(self):
-        self.relocate()
-        path = self.resolver.resolve(str(self.output / 'features.json'))
+    def test_current_resealed_features_still_fail_semantics(self):
+        path = self.output / 'features.json'
         feature = read_json(path)
         feature['values']['genetic_support']['value'] = 0.2
         write_json(path, feature)
-        receipt_path = self.resolver.resolve(str(self.output / 'receipt.json'))
+        receipt_path = self.output / 'receipt.json'
         receipt = read_json(receipt_path)
         receipt['outputs']['features.json'] = hashlib.sha256(path.read_bytes()).hexdigest()
         write_json(receipt_path, receipt)
-        files = copy.deepcopy(self.files)
-        for entry in files:
-            if self.resolver.logical_key(entry['logical_path']) in {
-                    self.resolver.logical_key(str(self.output / 'features.json')),
-                    self.resolver.logical_key(str(self.output / 'receipt.json'))}:
-                physical = self.resolver.resolve(entry['logical_path'])
-                entry.update(sha256=hashlib.sha256(physical.read_bytes()).hexdigest(), bytes=physical.stat().st_size)
         self.anchor = hashlib.sha256(receipt_path.read_bytes()).hexdigest()
         with self.assertRaisesRegex(ContractError, 'feature'):
-            self.verify(ArchiveResolver(self.bindings, files))
+            verify_run(self.output, self.anchor)
 
-    def test_unsupported_live_semantic_drift_fails_explicitly(self):
-        from tether_engine.provenance import InputGraph
-        self.relocate()
-        with patch.object(InputGraph, 'exclusion', lambda *_: 'different_policy'):
-            with self.assertRaisesRegex(ContractError, 'semantic dependency'):
-                self.verify()
+    def test_current_relocated_semantics_are_explicitly_unsupported(self):
+        self.relocate(current_policy=True)
+        with self.assertRaisesRegex(ContractError, 'Relocated derivation-policy semantic replay is unavailable'):
+            self.verify()
 
     def test_original_files_are_not_opened_by_verifier(self):
         self.relocate()
@@ -148,7 +146,7 @@ class ArchiveCoreTests(unittest.TestCase):
             return actual_open(path, *args, **kwargs)
 
         with patch.object(Path, 'open', guarded):
-            self.assertEqual(self.verify()['semantic_consistency'], 'verified')
+            self.assertEqual(self.verify()['semantic_consistency'], 'unavailable_legacy_v2_derivation')
 
 
 if __name__ == '__main__':
