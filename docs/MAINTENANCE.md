@@ -104,6 +104,39 @@ bound to the public template and cannot authorize a changed local catalog.
 Public requirement edits must keep the public deployment state empty and rebind
 the public inventory policy without adding acquisition results or grants.
 
+## Inspect a local Open Targets partition
+
+The research utility [temporal_inventory.py](../tools/science/temporal_inventory.py)
+checks an explicitly selected local partition without downloading data or decoding
+row payloads. It requires the ingestion extra. Its manifest pins the release,
+evaluator-only role, approved roots, transport queue, publisher checksum listing
+and each original file's receipt, size and SHA-256. Use a manifest hash from the
+reviewed selection; computing a new pin after an unexplained change does not
+validate that change. The exact manifest fields and synthetic example are in
+[the utility tests](../tests/test_science_temporal_inventory.py).
+
+```powershell
+uv run --no-sync python -m tools.science.temporal_inventory `
+  --manifest data/manifests/private/selected-partition.json `
+  --manifest-sha256 $reviewedManifestSha256 `
+  --output data/derived/partition-inspection-01
+```
+
+The manifest, queue, publisher listing and local directory must name the same
+files. Extra partial files and missing files fail inspection. Original receipts
+are copied byte-for-byte into the new report directory; originals are unchanged.
+File hashes and Parquet footers are checked through the same open stream. The
+report records schemas, footer row counts, bytes, resource use and duplicate
+content, with explicit limits on concurrent-writer and publisher authentication
+guarantees. It reads no row-group statistics or scientific values.
+
+Unsafe or unpinned inputs fail before output reservation. Later failures leave a
+journal and, when writable, `failure.json`. Completion requires `report.json`
+and the matching terminal journal hash; a lone terminal event is insufficient.
+Output directories cannot be reused. A technical pass does not qualify date
+semantics, historical availability, biological claims or clinical labels, and
+does not authorize agent access to evaluator-only data.
+
 ## Repository boundaries
 
 Track source, package resources, test fixtures, reusable tools, experiment code and
