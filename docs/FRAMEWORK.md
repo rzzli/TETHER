@@ -34,6 +34,21 @@ flowchart LR
 contracts, metrics and isolated workers. Their inputs and evaluation references
 remain separate from the agent-visible evidence path.
 
+## Supported and study-specific paths
+
+| Layer | Dependencies and present scope |
+|---|---|
+| Offline runtime and public CLI | Python plus the two TETHER distributions; fictional fixtures are bundled. Ordinary verification binds producer code and external source paths. |
+| Contemporary ingestion | Optional PyArrow 21.0.0, explicit local download receipts and pinned OT 25.09/HGNC inputs; bulk inputs are not bundled. |
+| Feasibility utilities | Registry restores, source manifests and optional scientific dependencies; study-specific contracts, not qualified clinical labels. |
+| Native model studies | Additional model weights, exact environments, protocols and source archives; many execution paths require Windows file locks. |
+| Frozen study reproduction | Matching original code, protocol and retained outputs; a clone alone cannot reproduce the reported private runs. |
+
+The public interface currently imports file/proof helpers from `study/`; the
+package separation is not a clean architectural boundary. Simplification and
+portable versioned bundles are planned. See [results](RESULTS.md) for completed
+development measurements, failed conditions and the frozen benchmark branches.
+
 ## Inputs and outputs
 
 A case supplies target and indication identifiers, namespace versions, intended
@@ -42,9 +57,12 @@ packets and source lineage. New execution requires version-two contracts.
 See the shipped [case](../src/tether_engine/demo/v2/case.json) and
 [snapshot](../src/tether_engine/demo/v2/snapshot.json) for fictional examples.
 
-Input references preserve information availability separately from computation
-time. A new computation can use eligible older information, but later annotations,
-missing lineage and evaluator-only ancestors cannot become eligible inputs.
+Input references distinguish information availability from computation time.
+The current computed-record path skips availability checks without independently
+rederiving the submitted result from its parents. It therefore does not yet
+establish historical eligibility of arbitrary computed content. Fixing that gap
+must preserve legitimate new deterministic calculations on eligible old inputs.
+Missing lineage and declared evaluator-only ancestors are rejected.
 Program availability is checked before dispatch. Numerical features also require
 a derivation scope matching the case's action, modality and context.
 
@@ -69,6 +87,10 @@ The `ingest` extra pins PyArrow 21.0.0. `inspect-source` validates an explicit
 manifest, receipts, paths, hashes and schemas. `build-snapshot` reads selected
 columns from approved local Open Targets and HGNC inputs, preserving row locators,
 lineage and coverage. It reserves a fresh output directory and journals build stages.
+
+The existing recipe is contemporary T6 source reporting for OT 25.09 and its
+pinned HGNC reference. It does not reconstruct historical releases or derive
+validated clinical features; its real-data probabilities remain null.
 
 Each sealed packet is limited to 64 MiB. The default `single` layout fails for an
 oversized case; `--packet-layout bounded` explicitly permits multiple complete

@@ -60,7 +60,7 @@ PRIVATE_COMPONENTS = frozenset({
     'memory', 'planning', 'reports', 'paper', 'research_notes',
 })
 PUBLIC_DOC_FILES = frozenset({
-    'docs/ARCHIVE.md', 'docs/FRAMEWORK.md', 'docs/MAINTENANCE.md',
+    'docs/ARCHIVE.md', 'docs/FRAMEWORK.md', 'docs/MAINTENANCE.md', 'docs/RESULTS.md',
     'docs/TETHER-CATALOG-POLICY.md', 'docs/TETHER-VERIFICATION-SCOPE.md',
 })
 PUBLIC_DATA_FILES = frozenset({

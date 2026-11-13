@@ -5,6 +5,14 @@ validation separately. A verified execution is not a validated scientific conclu
 The current interface is `tether-target-agents` 0.6.0 over
 `tether-target-engine` 0.4.0.
 
+**Known correctness limits (12 November 2026):** computed records can bypass
+availability checks without proof that their contents were derived from eligible
+parents. Current semantic replay verifies aggregation, not arbitrary scientific
+computations. The descriptive clinical evaluator can retain early positives while
+excluding immature follow-up and accepts predictions without run receipts. These
+paths must not support historical clinical-performance claims until corrected.
+See [results and current scope](RESULTS.md).
+
 | Check | What it establishes | What it cannot establish |
 |---|---|---|
 | Receipt and inventory | Listed files match their recorded hashes | Authenticity of an untrusted receipt or replacement of the entire tree without an external anchor |

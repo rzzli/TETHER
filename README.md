@@ -12,7 +12,7 @@ TETHER is an **agent execution and evaluation harness** for drug-target research
 
 ## How it works
 
-> **Illustrative input:** Evaluate IL6R inhibition by an antibody for rheumatoid arthritis, using evidence available by a specified date.
+> **Current real-data workflow:** collect source-linked Open Targets annotations for IL6R and rheumatoid arthritis, with coverage and missingness. Historical forecasting remains under development.
 
 ```mermaid
 flowchart LR
@@ -61,6 +61,19 @@ For stronger integrity checking, save the printed receipt hash separately and pa
 <a id="what-works-today"></a>
 <a id="current-results"></a>
 
+## What works today
+
+| Available | Still unvalidated |
+|---|---|
+| Offline fictional demo and source-linked execution records | Historical real-data forecasting and clinical probabilities |
+| Contemporary Open Targets/HGNC normalization and ten development dossiers | Biological interpretation, therapeutic benefit and causal genetics |
+| Retained SciFact/LitQA development measurements | Held-out evidence that the harness improves scientific answers |
+
+The clinical cohort feasibility work produced **no qualified training labels**.
+ALCE execution is frozen incomplete; Scholar/R2E comparisons are deferred.
+Known computed-lineage and fixed-horizon evaluation defects must be corrected
+before historical clinical claims. See the [results and limitations](docs/RESULTS.md).
+
 ## Components
 
 - [Engine](src/tether_engine/): evidence admission, specialists, budgets, journals and verification.
@@ -72,6 +85,6 @@ For stronger integrity checking, save the printed receipt hash separately and pa
 
 ## Explore
 
-[CLI guide](packages/tether/README.md) · [Architecture](docs/FRAMEWORK.md) · [Verification limits](docs/TETHER-VERIFICATION-SCOPE.md) · [Data](data/README.md) · [Development](docs/MAINTENANCE.md)
+[CLI guide](packages/tether/README.md) · [Architecture](docs/FRAMEWORK.md) · [Results](docs/RESULTS.md) · [Verification limits](docs/TETHER-VERIFICATION-SCOPE.md) · [Data](data/README.md) · [Development](docs/MAINTENANCE.md)
 
 [Apache-2.0](LICENSE). Data has separate terms; bulk datasets and model weights are excluded. The evidence engine lives in `src/tether_engine/`.

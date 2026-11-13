@@ -20,13 +20,12 @@ The components currently implemented are:
 - `qualification.py`: comparison against a prospectively sealed six-case control bank after complete execution verification.
 - `evaluation.py` and `arithmetic.py`: original fixed endpoints, native-score agreement and separate arithmetic checks.
 
-The complete engineering integration is tested with invented data, native HTTP
-responses and process records. It does not establish actual model performance.
-Actual native controls and the production comparison remain pending. A complete
-run requires all twelve
-prospectively frozen invented controls to pass before the 398-opportunity
-production comparison, along with its source, process and exact-commit CI gates.
-The failed original condition remains separate negative evidence.
+The development comparison completed after twelve native controls. Its 199 repair
+and 199 removal opportunities produced a negative repair result: 4/199 correct
+versus 7/199 in the fixed baseline. The repeated public question set is exposed;
+these results do not establish general biomedical or held-out performance. See
+the [result register](../../docs/RESULTS.md). Original failures and evaluator
+failures remain separate retained evidence; the experiment is frozen.
 
 Component tests use invented data and captured fictional HTTP responses:
 

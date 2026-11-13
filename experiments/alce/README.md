@@ -5,6 +5,12 @@ and citation support with pinned [ALCE](https://github.com/princeton-nlp/ALCE)
 scoring code. These components keep source access, execution records and scoring
 inputs separate.
 
+**Status, 12 November 2026: frozen incomplete.** Native evaluator controls passed,
+but coordinator qualification failed during server ownership inspection. All
+five generation slots in that attempt remained unexecuted; full benchmark
+generations and scores are zero. This branch is not the current next research
+step. See [results and scope](../../docs/RESULTS.md).
+
 ```mermaid
 flowchart LR
     A[Verified ALCE archive] --> B[Question + first five passages]

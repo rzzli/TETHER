@@ -86,7 +86,7 @@ class PublicTreeValidationTests(unittest.TestCase):
         for name in (
             ".env.example", "examples/.env.example", "tests/test_credentials.py",
             "tests/fixtures/metadata.json", "src/tether_engine/study/process.py",
-            "docs/ARCHIVE.md", "docs/FRAMEWORK.md", "docs/MAINTENANCE.md",
+            "docs/ARCHIVE.md", "docs/FRAMEWORK.md", "docs/MAINTENANCE.md", "docs/RESULTS.md",
             "docs/TETHER-CATALOG-POLICY.md", "docs/TETHER-VERIFICATION-SCOPE.md",
             "data/.gitignore", "data/README.md", "data/catalog/README.md",
             "data/catalog/sources.json", "data/catalog/policy-v2.json",

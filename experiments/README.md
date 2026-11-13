@@ -2,8 +2,13 @@
 
 These modules separate benchmark preparation, candidate generation, policy
 checking and scoring. They are reusable experimental code, not bundled datasets,
-model weights or claims of benchmark completion. Most require additional pinned
+model weights or turnkey reproduction packages. Most require additional pinned
 inputs or dependencies beyond the default offline demo.
+
+**Status, 12 November 2026:** SciFact and LitQA measurements are completed,
+repeatedly exposed development studies with mixed/negative results. ALCE is
+frozen incomplete; Scholar/R2E expansion is deferred. No benchmark expansion
+is the current next step. See the [result register](../docs/RESULTS.md).
 
 | Module | Purpose |
 |---|---|
@@ -16,30 +21,24 @@ inputs or dependencies beyond the default offline demo.
 | [scifact_multivers_transport](scifact_multivers_transport/) | Bounded, receipt-producing acquisition helper |
 | [scifact_multivers_supervision](scifact_multivers_supervision/) | Owned-child supervision with deadlines and retained outcomes |
 | [scifact_comparison](scifact_comparison/) | Fixed-retrieval full-context comparison; [protocol](scifact_comparison/PROTOCOL.md) |
-| [scifact_calibration](scifact_calibration/) | Reserved-claim retrieval, bounded inference and fixed selective-answering calibration; integration in development |
+| [scifact_calibration](scifact_calibration/) | Reserved-claim retrieval, bounded inference and fixed selective-answering calibration; development result retained |
 | [labbench](labbench/) | LAB-Bench task contracts, source preparation and native scoring |
 | [litqa_comparison](litqa_comparison/) | Declared LitQA retrieval/answering conditions and source-inclusive reconstruction |
 | [litqa_supplied](litqa_supplied/) | Separately labelled supplied-source diagnostics |
 | [litqa_recovery](litqa_recovery/) | Explicit continuation plans, source adoption and full-schedule answering after an audited interruption |
 | [litqa_analysis](litqa_analysis/) | Independent reconstruction and analysis of retained LitQA runs |
-| [litqa_refinement](litqa_refinement/) | Typed critique, paired answer repair/raw-passage removal and isolated source projections; integration in development |
-| [litqa_refinement_recovery](litqa_refinement_recovery/) | Exclusive continuation of untouched refinement calls, preserved failures and independent recovery verification; integration in development |
-| [litqa_evidence_first](litqa_evidence_first/) | Separate evidence-first repair method, paired source removal, immutable input plans and permanent attempt authorities; controller integration pending |
+| [litqa_refinement](litqa_refinement/) | Typed critique and repair; failed original condition preserved |
+| [litqa_refinement_recovery](litqa_refinement_recovery/) | Historical recovery and accounting of completed, failed and untouched calls |
+| [litqa_evidence_first](litqa_evidence_first/) | Completed separate development comparison; repair did not improve accuracy |
+| [alce](alce/) and [alce_transport](alce_transport/) | Native metric controls and data/model preparation; full benchmark generation/scoring incomplete |
 
 Pinned protocols are execution contracts and retain their exact bytes. Their
 historical context does not authorize a new run or transfer prior qualification
-to changed code. Relative links inside the original SciFact protocol retain its
-original planning-directory context; use its
-[original source location](https://github.com/rzzli/TETHER/blob/ea0222dfac7675c6388e336516f82bbcd828fff4/planning/TETHER%20SciFact%20Execution%20Protocol%202026-11-05.md)
-when following those historical references. Read each module's CLI and tests before preparing a fresh input
+to changed code. Use the maintained [SciFact navigation](scifact/PROTOCOL.md)
+for its preserved protocol and current result scope.
+Read each module's CLI and tests before preparing a fresh input
 manifest. Preserve every original, failed attempt and receipt; never silently
 repeat an uncertain model call.
-
-For direct navigation from the byte-pinned SciFact protocol, use the
-[original benchmark plan](https://github.com/rzzli/TETHER/blob/ea0222dfac7675c6388e336516f82bbcd828fff4/planning/TETHER%20Benchmark%20Execution%20Plan%202026-11-02.md)
-and [current session implementation](../src/tether_engine/study/session.py).
-These replace its two historical relative cross-references for browsing; the
-protocol bytes remain an unchanged execution input.
 
 Keep evaluation references out of candidate generation and report operational
 failures separately from substantive answers. Scientific performance requires
