@@ -156,8 +156,10 @@ row tables. The comparison passed after correcting a fixture expectation from
 integer `0` to float `0.0` for declared float columns. Separate numeric controls
 covered imputation, feature selection, fixed scoring vectors and relative risk.
 The supervised run took 51 seconds, used 3.06 GB of peak Windows Job committed
-memory, read zero real rows and fitted zero models. Full author export, the pip
-layer, full input release and baseline metrics remain pending.
+memory, read zero real rows and fitted zero models. The separate Linux route
+verified 477 conda package records and their 1.09 GB of archives. Linux runtime
+qualification, full author export, the pip layer, full input release and
+baseline metrics remain pending.
 
 ## SciFact development measurements
 
@@ -277,6 +279,9 @@ digest alone. Original artifacts and failures remain unchanged.
 | Baseline preparation | Five-object source footer verification | `0d9a480208b15d8676762182e80db35a219415b909358a1900156022ead923af` |
 | Baseline preparation | Installed conda package identity verification | `a922e3d2bcb36fa8aa0351e9f1fd462459acb91d51c51b086e5a55f7622b4b3a` |
 | Baseline preparation | Fictional Windows Spark read and Arrow transfer | `72332f995032c07384cad03de6129d593f801e56c39d2575a347fcc34ce93e2d` |
+| Baseline preparation | Selected author fixture comparison | `24fa1ab8e7566f0bbebe06e095aa46e9801e25e85cb1fbe7c3ae0099ab84be7e` |
+| Baseline preparation | Independently checked Linux conda lock | `c0847ec8b0cc44949445a52a42e3eb1d7a4378af4d5b1c94eb033269b6f6e510` |
+| Baseline preparation | Linux conda archive capture | `6c04214ea4dcd0b05c93508e05636d7bfd21de4095853d823777056db2766f41` |
 | S1 | SciFact decomposition | `f22ad12b46f6ccb182bd09d0cf6a4b08d3db9de8b22535b117040b67f7084a83` |
 | S2 | MultiVerS qualification | `bb21dfe9c08f01796457dcf634dcc9a9bc9082c9aec711e765d1b71b5a974ef4` |
 | S3 | SciFact comparison | `26fd14ed0cc4aea25f0f4b73be4297b4875d9fa0c2fd8826da3dad39ac4dc229` |
