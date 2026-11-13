@@ -102,6 +102,13 @@ of unresolved units, after 185 origin exclusions. These are classification
 sensitivity ranges for this development frame. Registry corroboration,
 clinical labels and an independent test cohort remain unqualified.
 
+Grouping the same development projections by exact drug, target and disease
+yielded 7,720 triples with a reported phase-2 entry in 2016–2019. With a
+separately derived origin per triple, 166 and 283 met the finite-source
+candidate rules at 36 and 60 months, respectively. At both horizons 3,024
+triples remained unresolved. Literal drug identity leaves programme
+equivalence open.
+
 ## SciFact development measurements
 
 | ID | Method and exposure | Result and uncertainty | Limit |
@@ -213,6 +220,7 @@ digest alone. Original artifacts and failures remain unchanged.
 | Temporal feasibility | Expression Atlas archive comparison | `cde383919e50268323f82994b67cb7e99d3eeaa925d6ec1b2ab6c68160d0d08d` |
 | Endpoint feasibility | Development source-trail scan | `31554139b11a9bc72f344954dd38ce3b2e3eac9d09b407ec78ea433e319112a3` |
 | Endpoint feasibility | Independent selected original-row replay | `a120b0dd26a9fe9b3bb1f1f5f39ee98d867240af36a4ecefb4db9d9ab11a6ea5` |
+| Endpoint feasibility | Exact-drug source sensitivity | `77f4c389087e7e5f4f46db1d466820622b40a7b41add084bbf51d158118b4198` |
 | S1 | SciFact decomposition | `f22ad12b46f6ccb182bd09d0cf6a4b08d3db9de8b22535b117040b67f7084a83` |
 | S2 | MultiVerS qualification | `bb21dfe9c08f01796457dcf634dcc9a9bc9082c9aec711e765d1b71b5a974ef4` |
 | S3 | SciFact comparison | `26fd14ed0cc4aea25f0f4b73be4297b4875d9fa0c2fd8826da3dad39ac4dc229` |
