@@ -43,13 +43,13 @@ class FixturePathIdentityTests(unittest.TestCase):
         self.assertEqual(result.errors, [], result.errors)
         self.assertEqual(result.failures, [], result.failures)
 
-    def test_core_archive_replays_with_aliased_temp_root(self):
+    def test_core_archive_checks_legacy_bytes_with_aliased_temp_root(self):
         self.run_with_aliased_temp(core.ArchiveCoreTests(
-            'test_v2_replays_sources_features_accounting_after_relocation'))
+            'test_legacy_v2_checks_declared_bytes_after_relocation'))
 
-    def test_interpretation_archive_replays_with_aliased_temp_root(self):
+    def test_interpretation_checkpoint_gate_with_aliased_temp_root(self):
         self.run_with_aliased_temp(interpretation.ArchiveInterpretationTests(
-            'test_recorded_question_restores_and_replays_admission'))
+            'test_recorded_question_requires_original_semantic_checkpoint'))
 
     def test_challenge_reference_gate_uses_canonical_fixture_root(self):
         self.run_with_aliased_temp(challenge.TopOneTaskTests(
