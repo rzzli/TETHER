@@ -109,6 +109,14 @@ candidate rules at 36 and 60 months, respectively. At both horizons 3,024
 triples remained unresolved. Literal drug identity leaves programme
 equivalence open.
 
+An exploratory diagnostic using the OT25.09 disease hierarchy found 51
+2016-entry infertility pairs linked to the same candidate trial and drug.
+All 51 were excluded or unresolved under the frozen audit rules. Among the
+remaining audit candidates across all indications, one trial links 51 of
+141 pairs at 36 months and 51 of 255 pairs at 60 months. These counts show
+dependence among the recorded candidates. The diagnostic uses contemporary
+disease categories.
+
 ## SciFact development measurements
 
 | ID | Method and exposure | Result and uncertainty | Limit |
@@ -221,6 +229,7 @@ digest alone. Original artifacts and failures remain unchanged.
 | Endpoint feasibility | Development source-trail scan | `31554139b11a9bc72f344954dd38ce3b2e3eac9d09b407ec78ea433e319112a3` |
 | Endpoint feasibility | Independent selected original-row replay | `a120b0dd26a9fe9b3bb1f1f5f39ee98d867240af36a4ecefb4db9d9ab11a6ea5` |
 | Endpoint feasibility | Exact-drug source sensitivity | `77f4c389087e7e5f4f46db1d466820622b40a7b41add084bbf51d158118b4198` |
+| Endpoint feasibility | Trial concentration and contemporary disease categories | `4726b5a032038129eb64bd879730cd4ed573f3c183f2563ab2256ee82f1973c7` |
 | S1 | SciFact decomposition | `f22ad12b46f6ccb182bd09d0cf6a4b08d3db9de8b22535b117040b67f7084a83` |
 | S2 | MultiVerS qualification | `bb21dfe9c08f01796457dcf634dcc9a9bc9082c9aec711e765d1b71b5a974ef4` |
 | S3 | SciFact comparison | `26fd14ed0cc4aea25f0f4b73be4297b4875d9fa0c2fd8826da3dad39ac4dc229` |
