@@ -156,6 +156,7 @@ def _journal(payload, report_sha, files):
 
 def _prepare(inventory_dir, expected_report_sha256, output_dir):
     root, pins = inventory._absolute(str(inventory_dir)), {}
+    _need(not os.path.lexists(root / "failure.json"), "inventory_failure_marker")
     report_path = root / "report.json"
     report_bytes = inventory._read(report_path, expected_report_sha256, pins)
     report = parse_json(report_bytes)
@@ -411,6 +412,7 @@ def profile_dates(inventory_dir, expected_report_sha256, output_dir):
         for path, pin in prepared["pins"].items():
             _no_links(path)
             _need(_identity(path.stat()) == pin["identity"], "input_changed_before_profile_finalization")
+        _need(not os.path.lexists(prepared["root"] / "failure.json"), "inventory_failure_marker")
         report = {"schema_version": 1, "status": "aggregate_date_profile_completed", "role": "evaluation_only", "agent_visible": False,
                   "source": prepared["source"], "release_id": POLICY["release"], "complete_partition": True,
                   "policy": dict(POLICY), "policy_sha256": POLICY_SHA256, "inventory_report_sha256": expected_report_sha256,

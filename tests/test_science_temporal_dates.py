@@ -193,6 +193,22 @@ class DateProfileTests(unittest.TestCase):
         self.failure("checksum")
         self.assertFalse(self.output.exists())
 
+    def test_inventory_failure_marker_rejects_before_output_or_rows(self):
+        (self.inventory_dir / "failure.json").write_bytes(b"{}")
+        self.failure("inventory_failure_marker")
+        self.assertFalse(self.output.exists())
+        self.assertFalse(self.requests)
+
+    def test_late_inventory_failure_marker_prevents_passed_profile(self):
+        original = self.fake_file.iter_batches
+        def add_failure(file, **kwargs):
+            (self.inventory_dir / "failure.json").write_bytes(b"{}")
+            yield from original(file, **kwargs)
+        with patch.object(self.fake_file, "iter_batches", new=add_failure):
+            self.failure("inventory_failure_marker")
+        failure = parse_json((self.output / "failure.json").read_bytes())
+        self.assertEqual(failure["rows_decoded"], 4)
+
     def test_changed_journal_fails_before_rows(self):
         with (self.inventory_dir / "journal.jsonl").open("ab") as stream:
             stream.write(b"{}\n")
