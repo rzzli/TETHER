@@ -1,5 +1,10 @@
-"""Current admission must reject the frozen SC04 transform before answer dispatch."""
+"""Frozen SC04 admission fails before answers at the applicable platform boundary.
+
+Windows reaches the registered-derivation gate. Other platforms fail earlier at
+the unsupported stable-read gate; that rejection is not a derivation check.
+"""
 from datetime import datetime, timezone
+import os
 from pathlib import Path
 import tempfile
 import time
@@ -18,10 +23,19 @@ class RecoveryPolicyBoundaryTests(unittest.TestCase):
             output = Path(directory).resolve() / 'invented-acquisition'
             with patch.object(acquisition.legacy, 'fetch_http', side_effect=qualification_fixtures.fetch):
                 acquisition.acquire(plan, output, deadline=time.monotonic() + 30)
-            with patch.object(admission.transport, 'make_answer_request') as answer:
-                with self.assertRaisesRegex(ContractError, 'Computed lineage requires a registered derivation'):
+            if os.name == 'nt':
+                expected = '^Computed lineage requires a registered derivation$'
+            else:
+                expected = '^Stable original-path reads require Windows sharing locks$'
+            with patch.object(admission.transport, 'make_answer_request') as answer, \
+                    patch.object(admission, 'InputGraph', wraps=admission.InputGraph) as graph:
+                with self.assertRaisesRegex(ContractError, expected):
                     admission.capture(query, output, sha256_file(output/'RECEIPT.json'), plan,
                                       datetime.now(timezone.utc), {})
+                if os.name == 'nt':
+                    graph.assert_called_once()
+                else:
+                    graph.assert_not_called()
             answer.assert_not_called()
 
     def test_partition_preserves_every_method_and_exact_legacy_group(self):
