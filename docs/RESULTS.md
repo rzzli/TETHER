@@ -70,6 +70,15 @@ comparison used the selected 24.09 archives. The archive snapshots precede
 their cutoffs. The filtered modern records carry modern mappings, and the
 literal differences do not establish historical biological availability.
 
+The 500-file Expression Atlas comparison covered 698,310 rows. Both modern
+date fields selected the same 193,083 rows at both cutoffs. The January 2024
+comparison yielded 127,626 shared pairs, 33,813 archive-only pairs and 10,856
+filtered-modern-only pairs. In January 2025 the counts were 133,039, 27,588
+and 5,443. Across the full 24.09 and 25.09 releases, 226,352 provider IDs
+matched. Stored log2 fold change differed on 294 of those IDs and percentile
+rank differed on 144. The comparisons measure release sensitivity under
+literal keys. They leave the reasons for individual differences unresolved.
+
 ## SciFact development measurements
 
 | ID | Method and exposure | Result and uncertainty | Limit |
@@ -178,6 +187,7 @@ digest alone. Original artifacts and failures remain unchanged.
 | Temporal feasibility | ChEMBL sizing with annual horizons | `db73fb16ed7511930589779e674147d56e2852e6171ef6a8a03483a3e2cc301a` |
 | Temporal feasibility | Provisional entry designation | `57a597c54bed1b239089ef4748394ab2a51220f64c1af158901d39b611d64404` |
 | Temporal feasibility | Gene burden and UniProt archive comparison | `1084537e695a4b32742b6754cabcd4623d7b59d02c81c889c72b99cada3f2261` |
+| Temporal feasibility | Expression Atlas archive comparison | `cde383919e50268323f82994b67cb7e99d3eeaa925d6ec1b2ab6c68160d0d08d` |
 | S1 | SciFact decomposition | `f22ad12b46f6ccb182bd09d0cf6a4b08d3db9de8b22535b117040b67f7084a83` |
 | S2 | MultiVerS qualification | `bb21dfe9c08f01796457dcf634dcc9a9bc9082c9aec711e765d1b71b5a974ef4` |
 | S3 | SciFact comparison | `26fd14ed0cc4aea25f0f4b73be4297b4875d9fa0c2fd8826da3dad39ac4dc229` |
