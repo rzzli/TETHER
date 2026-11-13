@@ -350,7 +350,7 @@ class TemporalInventoryTests(unittest.TestCase):
         with patch.object(inventory, "publish_bytes", side_effect=fail_report):
             self.failure("injected publication")
 
-    @unittest.skipUnless(importlib.util.find_spec("pyarrow"), "Optional real-format ingestion dependency")
+    @unittest.skipUnless(importlib.util.find_spec("pyarrow"), "install the ingest extra for source-audit tests")
     def test_actual_parquet_footer_nested_types_without_row_readers(self):
         import pyarrow as pa
         import pyarrow.parquet as pq

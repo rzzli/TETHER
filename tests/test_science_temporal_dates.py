@@ -244,7 +244,7 @@ class DateProfileTests(unittest.TestCase):
         with patch.object(self.fake_file, "iter_batches", new=unsafe):
             self.failure()
 
-    @unittest.skipUnless(importlib.util.find_spec("pyarrow"), "Optional real-format ingestion dependency")
+    @unittest.skipUnless(importlib.util.find_spec("pyarrow"), "install the ingest extra for source-audit tests")
     def test_actual_parquet_projection_keeps_clinical_canaries_out(self):
         import pyarrow as pa
         import pyarrow.parquet as pq
