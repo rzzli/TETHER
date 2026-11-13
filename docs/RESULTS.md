@@ -138,6 +138,19 @@ several links. Registry start reporting and modern name agreement leave
 programme identity, dosing, clinical negative ascertainment and historical
 evidence availability unresolved. The audit released zero training labels.
 
+### Published baseline preparation
+
+The five-object probe for the Czech et al. recipe verified publisher hashes and
+Parquet footer compatibility for four Open Targets 23.12 products and the
+pinned publication-year lookup. It verified 68,677,868 bytes and decoded zero
+data rows. This covers the five sampled files.
+
+The isolated Windows runtime reproduced the declared conda versions, including
+Python 3.10.8, Java 11.0.15, Spark 3.3.1 and Arrow 7.0.1. It read two fictional
+Parquet rows and returned both through Arrow. A separate Spark write check
+stopped at Hadoop's missing Windows native permission utility. The pip layer,
+full input release, author feature parity and baseline metrics remain pending.
+
 ## SciFact development measurements
 
 | ID | Method and exposure | Result and uncertainty | Limit |
@@ -253,6 +266,9 @@ digest alone. Original artifacts and failures remain unchanged.
 | Endpoint feasibility | Trial concentration and contemporary disease categories | `4726b5a032038129eb64bd879730cd4ed573f3c183f2563ab2256ee82f1973c7` |
 | Endpoint feasibility | Selected registry reconciliation | `70b479bcab70debdd7bc546fdaf11a276d932cb585af610f262a7d66fb2fc31f` |
 | Endpoint feasibility | Independent aggregate reconciliation check | `c5520757b37f46ce582cd4a3ea547bae3522b605d0b6b40956216acd0b95058e` |
+| Baseline preparation | Five-object source footer verification | `0d9a480208b15d8676762182e80db35a219415b909358a1900156022ead923af` |
+| Baseline preparation | Installed conda package identity verification | `a922e3d2bcb36fa8aa0351e9f1fd462459acb91d51c51b086e5a55f7622b4b3a` |
+| Baseline preparation | Fictional Windows Spark read and Arrow transfer | `72332f995032c07384cad03de6129d593f801e56c39d2575a347fcc34ce93e2d` |
 | S1 | SciFact decomposition | `f22ad12b46f6ccb182bd09d0cf6a4b08d3db9de8b22535b117040b67f7084a83` |
 | S2 | MultiVerS qualification | `bb21dfe9c08f01796457dcf634dcc9a9bc9082c9aec711e765d1b71b5a974ef4` |
 | S3 | SciFact comparison | `26fd14ed0cc4aea25f0f4b73be4297b4875d9fa0c2fd8826da3dad39ac4dc229` |
