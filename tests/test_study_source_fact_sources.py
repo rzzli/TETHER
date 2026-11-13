@@ -11,7 +11,8 @@ import time
 import unittest
 from unittest.mock import patch
 
-from tether_engine.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
+from tether_engine.contracts import Availability, Derivation, Profile, Snapshot, SourceNode, TemporalClass
+from tether_engine.derivations import registry_entry
 from tether_engine.serde import ContractError, canonical, encode, fingerprint
 from tether_engine.study import source_fact_sources as sources
 from tether_engine.study.stable_read import stable_files as platform_stable_files
@@ -55,6 +56,26 @@ class SourceFactSourceTests(unittest.TestCase):
     def snapshot(self, *nodes):
         return Snapshot(2, "fictional", Profile.DEMO, self.cutoff.date(), False, (), nodes,
                         str(self.root), origin_at=self.cutoff)
+
+    def projection_recipe(self, parent):
+        parameters = {"input": parent.source_id, "pointer": ""}
+        registered = registry_entry()
+        return Derivation(
+            schema_version=1, method_id=registered["method_id"],
+            method_version=registered["method_version"],
+            implementation_sha256=registered["implementation_sha256"],
+            parameters_sha256=fingerprint(parameters), parameters=parameters,
+            inputs={parent.source_id: parent.sha256}, assets={},
+            output_schema="canonical_json.v1",
+            method_available_at=registered["method_available_at"],
+            mode="contemporary_method_retrospective",
+        )
+
+    def projected_source(self, key, parent, row):
+        recipe = self.projection_recipe(parent)
+        node = self.source(key, row, parents=(parent.source_id,), computed=True)
+        return replace(node, method_id=recipe.method_id, method_version=recipe.method_version,
+                       computed_at=datetime.now(timezone.utc), derivation=recipe)
 
     def record(self, key="r", source="s", identity=None, pointer=""):
         return {"record_key": key, "source_id": source,
@@ -179,8 +200,9 @@ class SourceFactSourceTests(unittest.TestCase):
                 self.compile(self.task(), self.snapshot(self.source("s", row)))
 
     def test_entire_graph_roles_dates_and_denies_precede_byte_access(self):
-        parent = self.source("p", {"mapping": "fictional"})
-        node = self.source("s", {"targetId": "T", "diseaseId": "D", "beta": 1.0}, parents=("p",), computed=True)
+        row = {"targetId": "T", "diseaseId": "D", "beta": 1.0}
+        parent = self.source("p", row)
+        node = self.projected_source("s", parent, row)
         for kwargs in ({"denied_source_ids": ("p",)}, {"denied_dataset_ids": ("fictional",)},
                        {"denied_sha256": (parent.sha256,)}):
             with self.subTest(kwargs=kwargs), patch.object(sources, "stable_files", side_effect=AssertionError("bytes accessed")):
@@ -196,12 +218,26 @@ class SourceFactSourceTests(unittest.TestCase):
         # Later computation from earlier eligible sources is permitted.
         self.assertEqual(self.compile(self.task(), self.snapshot(node, parent)).document["facts"][0]["value"], 1.0)
 
+    def test_resealed_computed_source_must_equal_the_registered_parent_projection(self):
+        row = {"targetId": "T", "diseaseId": "D", "beta": 1.0}
+        parent = self.source("p", row)
+        node = self.projected_source("s", parent, row)
+        (self.root / node.path).write_bytes(canonical({**row, "beta": 99.0}))
+        node = replace(node, sha256=hashlib.sha256((self.root / node.path).read_bytes()).hexdigest())
+        with self.assertRaisesRegex(ContractError, "differs from its registered derivation"):
+            self.compile(self.task(), self.snapshot(node, parent))
+
     def test_missing_ancestors_cycles_profile_and_cutoff_mismatch(self):
         p = self.source("p", {}, parents=("s",), computed=True)
         s = self.source("s", {"targetId": "T", "diseaseId": "D", "beta": 1.0}, parents=("p",), computed=True)
-        with self.assertRaises(ContractError):
+        p_recipe, s_recipe = self.projection_recipe(s), self.projection_recipe(p)
+        p = replace(p, method_id=p_recipe.method_id, method_version=p_recipe.method_version,
+                    derivation=p_recipe)
+        s = replace(s, method_id=s_recipe.method_id, method_version=s_recipe.method_version,
+                    derivation=s_recipe)
+        with self.assertRaisesRegex(ContractError, "Input-lineage cycle"):
             self.compile(self.task(), self.snapshot(s, p))
-        with self.assertRaises(ContractError):
+        with self.assertRaisesRegex(ContractError, "Missing input-lineage reference"):
             self.compile(self.task(), self.snapshot(s))
         node = self.source("s", {"targetId": "T", "diseaseId": "D"})
         with self.assertRaises(ContractError):

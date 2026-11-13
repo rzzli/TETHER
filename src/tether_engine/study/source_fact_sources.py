@@ -402,7 +402,7 @@ def compile_reference(task, snapshot, root, catalog, *, deadline,
         all_paths = tuple(paths.values()) + tuple(receipts.values())
         with stable_files(all_paths, deadline=deadline):
             deadline_check(deadline)
-            verified = graph.verify(refs, {})
+            verified = graph.verify(refs, {}, case=SimpleNamespace(cutoff=cutoff))
             deadline_check(deadline)
             for proof in verified:
                 key = proof["artifact_id"]
