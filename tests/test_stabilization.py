@@ -77,7 +77,8 @@ class PortableLegacyTests(unittest.TestCase):
             anchor = (target / 'receipt.sha256').read_text().strip()
             result = verify_run(target, anchor)
             self.assertEqual(result['semantic_consistency'], 'unavailable_legacy_v1')
-            self.assertEqual(result['source_binding'], 'current_originals')
+            self.assertEqual(result['source_binding'], 'declared_original_bytes_verified')
+            self.assertEqual(result['source_inventory_completeness'], 'not_replayed')
             (target / 'source.json').write_text('{}')
             with self.assertRaises(ContractError):
                 verify_run(target, anchor)

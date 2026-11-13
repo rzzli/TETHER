@@ -29,7 +29,16 @@ Run invented-data regressions from the repository root:
 python -B -m unittest tests.test_refinement_recovery -v
 ```
 
-These tests are also discovered by the repository core/full validation gates.
+The repository core/full gates run the current-policy recovery tests. Sixteen
+integration methods in `OriginalTests`, `ReconstructionIntegrationTests`,
+`RecoveryNativeIntegrationTests`, and `CompleteRecoveryControllerTests` remain a
+separate historical group: the frozen SC04 producer has no registered derivation
+and engine 0.5.0 deliberately rejects it before answer preparation. The current
+gate reports their exact IDs without counting them as passes or ordinary skips.
+Run these original methods against their matching pre-RP02 source checkpoint,
+engine 0.4.0 and wrapper 0.6.0, using the command in
+[maintenance guidance](../../docs/MAINTENANCE.md). Do not mix a current source
+inventory with an older installed engine or retrofit the frozen producer.
 Tests that exercise Windows sharing locks and process jobs require Windows;
 the portable contract, accounting and parser tests also run on Ubuntu. Windows
 full validation requires every discovered test to run without skips.

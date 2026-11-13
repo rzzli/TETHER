@@ -41,6 +41,32 @@ fetches full history. Optional [experiment suites](../experiments/README.md) req
 their own dependencies and prepared inputs; a core test pass does not qualify a
 model or scientific benchmark.
 
+The current-policy gate separately lists 16 frozen SC04/SC05 integration methods
+in `legacy_compatibility_group`; it does not count them as passed or skipped.
+Their producer creates an unregistered computed manifest, which engine 0.5.0
+must reject. Current tests exercise that rejection before answer preparation and
+assert that the explicit partition retains every original test method. Portable
+recovery/accounting tests continue to run in the current gate.
+
+Run the 16 historical integrations with engine 0.4.0 and wrapper 0.6.0 from their
+matching source checkpoint (pre-RP02 checkpoint `3fc1050`), retaining a separate
+result. Use an isolated checkout and verify its installed runtime against that
+checkpoint. An old installed engine mixed with the current source tree would
+record the wrong producer source inventory. From that historical checkout:
+
+```powershell
+& $legacyPython -B -m unittest `
+  experiments.litqa_refinement_recovery.test_original.OriginalTests `
+  experiments.litqa_refinement_recovery.test_reconstruct.ReconstructionIntegrationTests `
+  experiments.litqa_refinement_recovery.test_run_integration.RecoveryNativeIntegrationTests `
+  experiments.litqa_refinement_recovery.test_run_integration.CompleteRecoveryControllerTests -v
+```
+
+`$legacyPython` denotes the independently checked historical interpreter. The
+maintained loader also exposes `tests.test_refinement_recovery.legacy_suite` to
+identify the original methods; selecting that suite does not qualify an unmatched
+runtime. A current gate pass alone does not establish historical compatibility.
+
 ## Catalog updates
 
 Keep shared source requirements in the tracked template. Acquisition observations,

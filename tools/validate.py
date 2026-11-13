@@ -29,6 +29,17 @@ EXPECTED_CORE_SKIPS = {'install the ingest extra for adapter tests',
     'native held-handle test requires Windows'}
 
 
+def legacy_compatibility_scope():
+    """Keep historical integration coverage visible outside the current-policy gate."""
+    from tests.test_refinement_recovery import legacy_test_inventory
+    ids = legacy_test_inventory()
+    return {'status': 'not_executed_by_current_policy_gate', 'tests': len(ids), 'test_ids': ids,
+            'required_engine_version': '0.4.0', 'required_wrapper_version': '0.6.0',
+            'current_policy_qualified': False,
+            'reason': 'Frozen SC04 producer has no registered derivation; current policy must reject it.',
+            'validation': 'Run original methods separately with matching source checkpoint and runtime; retain that result.'}
+
+
 class LiveErrorResult(unittest.TextTestResult):
     """Retain unittest accounting while printing diagnostic tracebacks promptly."""
 
@@ -296,6 +307,7 @@ def main(argv=None):
         report['powershell_syntax'] = powershell_check()
         report['stage'] = 'tests'
         suite = unittest.defaultTestLoader.discover(str(ROOT/'tests'),top_level_dir=str(ROOT))
+        report['legacy_compatibility_group'] = legacy_compatibility_scope()
         result = unittest.TextTestRunner(verbosity=2, failfast=args.failfast, resultclass=LiveErrorResult).run(suite)
         report['tests']={'run':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),
                          'skipped':[{'test':t.id(),'reason':reason} for t,reason in result.skipped]}
