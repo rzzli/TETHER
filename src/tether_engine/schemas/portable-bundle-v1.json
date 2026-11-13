@@ -1,0 +1,2363 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:tether:portable-bundle:v1",
+  "title": "TETHER portable bundle v1 shapes",
+  "description": "The root validates bundle.json. Other JSON objects use the named $defs (portable_inputs, case_v2, evidence_v2, derivation_v1, run, ledger, FeatureVector, Prediction, trace_event). This source-only schema adds no runtime dependency. Shape validation is not execution, temporal/source proof, scientific validation, archival authenticity or certification of arbitrary prose. Enable format assertion for calendar and date-time checks; runtime remains authoritative. JSON Schema integer accepts mathematically integral numbers; strict runtime decoding also checks original parsed numeric types.",
+  "allOf": [
+    {
+      "$ref": "#/$defs/manifest"
+    }
+  ],
+  "$defs": {
+    "json_value": {
+      "description": "Ordinary JSON only. Runtime also rejects duplicate keys and non-finite numbers; these cannot be proven by a post-parse shape schema.",
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/json_value"
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/json_value"
+          }
+        }
+      ]
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "aware_datetime": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\\.[0-9]+)?(?:Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "nonempty_string": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "logical_path": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "pattern": "^(?:[^\\\\/:<>\"|?*\\u0000-\\u001f\\u007f\\ud800-\\udfff]{0,119}[^\\\\/:<>\"|?*\\u0000-\\u0020\\u007f\\ud800-\\udfff.]/)*[^\\\\/:<>\"|?*\\u0000-\\u001f\\u007f\\ud800-\\udfff]{0,119}[^\\\\/:<>\"|?*\\u0000-\\u0020\\u007f\\ud800-\\udfff.]$",
+      "description": "Relative slash-separated path with 1–120-character components. Runtime additionally enforces NFC, Windows reserved-device rejection, casefold uniqueness, file/link safety and actual confinement."
+    },
+    "Availability": {
+      "type": "object",
+      "properties": {
+        "first_public_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "release_public_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "record_public_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "annotation_public_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "retrieved_at": {
+          "$ref": "#/$defs/date"
+        },
+        "basis": {
+          "type": "string"
+        },
+        "uncertainty": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "known_public_by": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/aware_datetime"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidence_ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "first_public_at",
+        "release_public_at",
+        "record_public_at",
+        "annotation_public_at",
+        "retrieved_at",
+        "basis",
+        "uncertainty"
+      ],
+      "additionalProperties": false
+    },
+    "Hypothesis": {
+      "type": "object",
+      "properties": {
+        "target_id": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "indication_id": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "target_namespace_version": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "indication_namespace_version": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "intended_action": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "modality": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "tissue": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "availability": {
+          "$ref": "#/$defs/Availability"
+        }
+      },
+      "required": [
+        "target_id",
+        "indication_id",
+        "target_namespace_version",
+        "indication_namespace_version",
+        "intended_action",
+        "modality",
+        "tissue",
+        "availability"
+      ],
+      "additionalProperties": false
+    },
+    "Program": {
+      "type": "object",
+      "properties": {
+        "program_id": {
+          "type": "string"
+        },
+        "molecule_id": {
+          "type": "string"
+        },
+        "sponsor": {
+          "type": "string"
+        },
+        "phase_at_origin": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "status_at_origin": {
+          "type": "string"
+        },
+        "eligible_since": {
+          "$ref": "#/$defs/date"
+        },
+        "mapping_confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "trial_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "availability": {
+          "$ref": "#/$defs/Availability"
+        }
+      },
+      "required": [
+        "program_id",
+        "molecule_id",
+        "sponsor",
+        "phase_at_origin",
+        "status_at_origin",
+        "eligible_since",
+        "mapping_confidence",
+        "trial_ids",
+        "availability"
+      ],
+      "additionalProperties": false
+    },
+    "Endpoint": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "horizon_months": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "name",
+        "horizon_months"
+      ],
+      "additionalProperties": false
+    },
+    "Case": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": 2
+        },
+        "case_id": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "task": {
+          "enum": [
+            "T1",
+            "T6"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/date"
+        },
+        "hypothesis": {
+          "$ref": "#/$defs/Hypothesis"
+        },
+        "program": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Program"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "endpoint": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Endpoint"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "origin_at": {
+          "$ref": "#/$defs/aware_datetime"
+        }
+      },
+      "required": [
+        "schema_version",
+        "case_id",
+        "task",
+        "origin",
+        "hypothesis",
+        "program",
+        "endpoint",
+        "origin_at"
+      ],
+      "additionalProperties": false
+    },
+    "Artifact": {
+      "type": "object",
+      "properties": {
+        "artifact_id": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "dataset_id": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "release_id": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "path": {
+          "$ref": "#/$defs/logical_path"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "role": {
+          "const": "agent_evidence"
+        },
+        "access_approved": {
+          "type": "boolean"
+        },
+        "temporal_classification": {
+          "enum": [
+            "verified_historical",
+            "reconstructed",
+            "contemporary_only",
+            "unverified"
+          ]
+        },
+        "availability": {
+          "$ref": "#/$defs/Availability"
+        },
+        "source_url": {
+          "type": "string"
+        },
+        "input_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "artifact_id",
+        "dataset_id",
+        "release_id",
+        "path",
+        "sha256",
+        "role",
+        "access_approved",
+        "temporal_classification",
+        "availability",
+        "source_url"
+      ],
+      "additionalProperties": false
+    },
+    "Derivation": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "method_id": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "method_version": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "implementation_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "parameters_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/json_value"
+          }
+        },
+        "inputs": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/sha256"
+          }
+        },
+        "assets": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/sha256"
+          }
+        },
+        "output_schema": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "method_available_at": {
+          "$ref": "#/$defs/aware_datetime"
+        },
+        "mode": {
+          "enum": [
+            "contemporary_method_retrospective",
+            "historical_method_simulation"
+          ]
+        }
+      },
+      "required": [
+        "schema_version",
+        "method_id",
+        "method_version",
+        "implementation_sha256",
+        "parameters_sha256",
+        "parameters",
+        "inputs",
+        "assets",
+        "output_schema",
+        "method_available_at",
+        "mode"
+      ],
+      "additionalProperties": false,
+      "description": "Descriptor shape only. Registry support, exact implementation and parameter pins, input closure, output equality and method chronology require the runtime. Unknown methods may remain inspectable without replay."
+    },
+    "SourceNode": {
+      "type": "object",
+      "properties": {
+        "source_id": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "dataset_id": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "release_id": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "path": {
+          "$ref": "#/$defs/logical_path"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "role": {
+          "enum": [
+            "agent_evidence",
+            "reference"
+          ]
+        },
+        "availability": {
+          "$ref": "#/$defs/Availability"
+        },
+        "temporal_classification": {
+          "enum": [
+            "verified_historical",
+            "reconstructed",
+            "contemporary_only",
+            "unverified"
+          ]
+        },
+        "source_url": {
+          "type": "string"
+        },
+        "parents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "computed_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/aware_datetime"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "method_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "method_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "receipt_path": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/logical_path"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "receipt_sha256": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/sha256"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "derivation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Derivation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "source_id",
+        "dataset_id",
+        "release_id",
+        "path",
+        "sha256",
+        "role",
+        "availability",
+        "temporal_classification",
+        "source_url"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "computed_at": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "computed_at"
+            ]
+          },
+          "then": {
+            "properties": {
+              "parents": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/nonempty_string"
+                },
+                "minItems": 1
+              },
+              "method_id": {
+                "$ref": "#/$defs/nonempty_string"
+              },
+              "method_version": {
+                "$ref": "#/$defs/nonempty_string"
+              },
+              "derivation": {
+                "$ref": "#/$defs/Derivation"
+              }
+            },
+            "required": [
+              "parents",
+              "method_id",
+              "method_version",
+              "derivation"
+            ]
+          },
+          "else": {
+            "properties": {
+              "parents": {
+                "type": "array",
+                "maxItems": 0
+              },
+              "derivation": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Snapshot": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": 2
+        },
+        "snapshot_id": {
+          "type": "string"
+        },
+        "profile": {
+          "enum": [
+            "synthetic_demo",
+            "contemporary_assessment"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/date"
+        },
+        "allow_reconstructed": {
+          "const": false
+        },
+        "artifacts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Artifact"
+          },
+          "maxItems": 256
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SourceNode"
+          },
+          "minItems": 1,
+          "maxItems": 256
+        },
+        "raw_root": {
+          "type": "null"
+        },
+        "coverage": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/json_value"
+          }
+        },
+        "origin_at": {
+          "$ref": "#/$defs/aware_datetime"
+        }
+      },
+      "required": [
+        "schema_version",
+        "snapshot_id",
+        "profile",
+        "origin",
+        "allow_reconstructed",
+        "artifacts",
+        "origin_at"
+      ],
+      "additionalProperties": false,
+      "description": "Portable snapshot: no machine-specific raw root. Runtime verifies combined source/artifact bounds, complete eligible closure, matching origins, role policy and receipt availability."
+    },
+    "ScientificContext": {
+      "type": "object",
+      "properties": {
+        "species": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ancestry": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "tissue": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "disease_state": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "intervention": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "comparator": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "cohort_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "species",
+        "ancestry",
+        "tissue",
+        "disease_state",
+        "intervention",
+        "comparator",
+        "cohort_ids"
+      ],
+      "additionalProperties": false
+    },
+    "QuantitativeResult": {
+      "type": "object",
+      "properties": {
+        "effect": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "scale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "standard_error": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ci_lower": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ci_upper": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sample_size": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "adjusted_p_value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "effect",
+        "scale",
+        "standard_error",
+        "ci_lower",
+        "ci_upper",
+        "sample_size",
+        "adjusted_p_value"
+      ],
+      "additionalProperties": false
+    },
+    "Method": {
+      "type": "object",
+      "properties": {
+        "code_id": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "version": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/json_value"
+          }
+        },
+        "qc_status": {
+          "enum": [
+            "passed",
+            "failed",
+            "not_run"
+          ]
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "code_id",
+        "version",
+        "parameters",
+        "qc_status",
+        "limitations"
+      ],
+      "additionalProperties": false
+    },
+    "Observation": {
+      "type": "object",
+      "properties": {
+        "observation_id": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "target_id": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "indication_id": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "program_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "category": {
+          "enum": [
+            "genetics",
+            "perturbation",
+            "expression",
+            "modality",
+            "literature",
+            "clinical",
+            "safety",
+            "pathway"
+          ]
+        },
+        "source_kind": {
+          "enum": [
+            "primary",
+            "integrated",
+            "computed",
+            "clinical"
+          ]
+        },
+        "statement": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "status": {
+          "enum": [
+            "observed",
+            "absent",
+            "not_measured",
+            "failed_qc",
+            "access_denied",
+            "outside_applicability"
+          ]
+        },
+        "polarity": {
+          "enum": [
+            "supports",
+            "refutes",
+            "uncertain"
+          ]
+        },
+        "mechanism_direction": {
+          "enum": [
+            "inhibit",
+            "activate",
+            "degrade",
+            "uncertain",
+            "not_applicable"
+          ]
+        },
+        "study_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "dependency_group": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "context": {
+          "$ref": "#/$defs/ScientificContext"
+        },
+        "quantitative": {
+          "$ref": "#/$defs/QuantitativeResult"
+        },
+        "method": {
+          "$ref": "#/$defs/Method"
+        },
+        "availability": {
+          "$ref": "#/$defs/Availability"
+        },
+        "features": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          },
+          "propertyNames": {
+            "enum": [
+              "genetic_support",
+              "direction_alignment",
+              "perturbation_support",
+              "expression_relevance",
+              "modality_feasibility",
+              "literature_support",
+              "safety_liability",
+              "pathway_support"
+            ]
+          }
+        },
+        "feature_scope": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/sha256"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "input_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonempty_string"
+          },
+          "minItems": 1
+        },
+        "computed_at": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/aware_datetime"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_locator": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/json_value"
+          }
+        },
+        "source_metrics": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/json_value"
+          }
+        },
+        "missingness": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "publication_date": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "publication_year": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "derivation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Derivation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "observation_id",
+        "target_id",
+        "indication_id",
+        "program_id",
+        "category",
+        "source_kind",
+        "statement",
+        "status",
+        "polarity",
+        "mechanism_direction",
+        "study_id",
+        "dependency_group",
+        "context",
+        "quantitative",
+        "method",
+        "availability",
+        "features"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "source_kind": {
+                "const": "computed"
+              }
+            },
+            "required": [
+              "source_kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "computed_at": {
+                "$ref": "#/$defs/aware_datetime"
+              },
+              "derivation": {
+                "$ref": "#/$defs/Derivation"
+              }
+            },
+            "required": [
+              "computed_at",
+              "derivation"
+            ]
+          }
+        }
+      ]
+    },
+    "EvidencePacket": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": 2
+        },
+        "observations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Observation"
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "observations"
+      ],
+      "additionalProperties": false
+    },
+    "Citation": {
+      "type": "object",
+      "properties": {
+        "artifact_id": {
+          "type": "string"
+        },
+        "dataset_id": {
+          "type": "string"
+        },
+        "release_id": {
+          "type": "string"
+        },
+        "artifact_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "source_url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "artifact_id",
+        "dataset_id",
+        "release_id",
+        "artifact_sha256",
+        "source_url"
+      ],
+      "additionalProperties": false
+    },
+    "GroundedObservation": {
+      "type": "object",
+      "properties": {
+        "observation": {
+          "$ref": "#/$defs/Observation"
+        },
+        "citation": {
+          "$ref": "#/$defs/Citation"
+        }
+      },
+      "required": [
+        "observation",
+        "citation"
+      ],
+      "additionalProperties": false
+    },
+    "Claim": {
+      "type": "object",
+      "properties": {
+        "claim_id": {
+          "type": "string"
+        },
+        "specialist": {
+          "enum": [
+            "genetics",
+            "perturbation",
+            "expression",
+            "modality",
+            "literature",
+            "clinical",
+            "safety",
+            "pathway"
+          ]
+        },
+        "evidence": {
+          "$ref": "#/$defs/GroundedObservation"
+        },
+        "extraction_mode": {
+          "type": "string"
+        },
+        "admitted_fingerprint": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "claim_id",
+        "specialist",
+        "evidence",
+        "extraction_mode"
+      ],
+      "additionalProperties": false
+    },
+    "Usage": {
+      "type": "object",
+      "properties": {
+        "input_tokens": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "output_tokens": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "cost_usd": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "input_tokens",
+        "output_tokens",
+        "cost_usd"
+      ],
+      "additionalProperties": false
+    },
+    "Budget": {
+      "type": "object",
+      "properties": {
+        "max_calls": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max_input_tokens": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max_output_tokens": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max_cost_usd": {
+          "type": "number",
+          "minimum": 0
+        },
+        "max_seconds": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "max_retries": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "PlanStep": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "enum": [
+            "genetics",
+            "perturbation",
+            "expression",
+            "modality",
+            "literature",
+            "clinical",
+            "safety",
+            "pathway"
+          ]
+        },
+        "observed_records": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "initial_status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "category",
+        "observed_records",
+        "initial_status"
+      ],
+      "additionalProperties": false
+    },
+    "Feature": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "type": "string"
+        },
+        "dependency_groups": {
+          "type": "integer"
+        },
+        "observation_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "excluded_groups": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "missing_reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "value",
+        "status",
+        "dependency_groups",
+        "observation_ids",
+        "excluded_groups"
+      ],
+      "additionalProperties": false
+    },
+    "FeatureVector": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "tether-features-v2"
+        },
+        "aggregation": {
+          "const": "mean_of_unique_dependency_groups_v2"
+        },
+        "values": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/Feature"
+          },
+          "propertyNames": {
+            "enum": [
+              "genetic_support",
+              "direction_alignment",
+              "perturbation_support",
+              "expression_relevance",
+              "modality_feasibility",
+              "literature_support",
+              "safety_liability",
+              "pathway_support"
+            ]
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "aggregation",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "ScorerArtifact": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": 2
+        },
+        "model_id": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "synthetic_demo",
+            "frozen_model"
+          ]
+        },
+        "feature_schema": {
+          "const": "tether-features-v2"
+        },
+        "aggregation": {
+          "const": "mean_of_unique_dependency_groups_v2"
+        },
+        "endpoint": {
+          "type": "string"
+        },
+        "horizon_months": {
+          "type": "integer"
+        },
+        "phases": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "modalities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "intended_actions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "target_namespace_versions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "indication_namespace_versions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "training_origin_max": {
+          "$ref": "#/$defs/date"
+        },
+        "training_label_available_max": {
+          "$ref": "#/$defs/date"
+        },
+        "calibration_label_available_max": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "training_manifest_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "calibration": {
+          "enum": [
+            "none",
+            "held_out_logistic"
+          ]
+        },
+        "intercept": {
+          "type": "number"
+        },
+        "coefficients": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          },
+          "propertyNames": {
+            "enum": [
+              "genetic_support",
+              "direction_alignment",
+              "perturbation_support",
+              "expression_relevance",
+              "modality_feasibility",
+              "literature_support",
+              "safety_liability",
+              "pathway_support"
+            ]
+          }
+        },
+        "required_features": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "missing_values": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          },
+          "propertyNames": {
+            "enum": [
+              "genetic_support",
+              "direction_alignment",
+              "perturbation_support",
+              "expression_relevance",
+              "modality_feasibility",
+              "literature_support",
+              "safety_liability",
+              "pathway_support"
+            ]
+          }
+        },
+        "minimum_coverage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "schema_version",
+        "model_id",
+        "kind",
+        "feature_schema",
+        "aggregation",
+        "endpoint",
+        "horizon_months",
+        "phases",
+        "modalities",
+        "intended_actions",
+        "target_namespace_versions",
+        "indication_namespace_versions",
+        "training_origin_max",
+        "training_label_available_max",
+        "calibration_label_available_max",
+        "training_manifest_sha256",
+        "calibration",
+        "intercept",
+        "coefficients",
+        "required_features",
+        "missing_values",
+        "minimum_coverage"
+      ],
+      "additionalProperties": false
+    },
+    "Contribution": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "coefficient": {
+          "type": "number"
+        },
+        "log_odds": {
+          "type": "number"
+        },
+        "imputed": {
+          "type": "boolean"
+        },
+        "observation_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "value",
+        "coefficient",
+        "log_odds",
+        "imputed",
+        "observation_ids"
+      ],
+      "additionalProperties": false
+    },
+    "Prediction": {
+      "type": "object",
+      "properties": {
+        "case_id": {
+          "type": "string"
+        },
+        "origin": {
+          "$ref": "#/$defs/date"
+        },
+        "endpoint": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "horizon_months": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "type": "string"
+        },
+        "probability": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "scorer_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "synthetic": {
+          "type": "boolean"
+        },
+        "calibration": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "feature_coverage": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "intercept": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "contributions": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/Contribution"
+          },
+          "propertyNames": {
+            "enum": [
+              "genetic_support",
+              "direction_alignment",
+              "perturbation_support",
+              "expression_relevance",
+              "modality_feasibility",
+              "literature_support",
+              "safety_liability",
+              "pathway_support"
+            ]
+          }
+        }
+      },
+      "required": [
+        "case_id",
+        "origin",
+        "endpoint",
+        "horizon_months",
+        "status",
+        "probability",
+        "reason",
+        "scorer_id",
+        "synthetic",
+        "calibration",
+        "feature_coverage",
+        "intercept",
+        "contributions"
+      ],
+      "additionalProperties": false
+    },
+    "case_v2": {
+      "$ref": "#/$defs/Case"
+    },
+    "evidence_v2": {
+      "$ref": "#/$defs/EvidencePacket"
+    },
+    "derivation_v1": {
+      "$ref": "#/$defs/Derivation"
+    },
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "budget": {
+          "$ref": "#/$defs/Budget"
+        },
+        "disabled": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "genetics",
+              "perturbation",
+              "expression",
+              "modality",
+              "literature",
+              "clinical",
+              "safety",
+              "pathway"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "review_enabled": {
+          "type": "boolean"
+        },
+        "backend_id": {
+          "const": "offline-extractive-v1"
+        },
+        "backend_provenance": {
+          "type": "null"
+        },
+        "hypothesis_key": {
+          "$ref": "#/$defs/sha256"
+        },
+        "scorer_preflight": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "admission_policy": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        }
+      },
+      "required": [
+        "budget",
+        "disabled",
+        "review_enabled",
+        "backend_id",
+        "backend_provenance",
+        "hypothesis_key",
+        "scorer_preflight",
+        "admission_policy"
+      ],
+      "additionalProperties": false
+    },
+    "catalog_policy": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "datasets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "dataset_id": {
+                "$ref": "#/$defs/nonempty_string"
+              },
+              "roles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "dataset_id",
+              "roles"
+            ],
+            "additionalProperties": {
+              "$ref": "#/$defs/json_value"
+            }
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "datasets"
+      ],
+      "additionalProperties": {
+        "$ref": "#/$defs/json_value"
+      },
+      "description": "Retained catalog metadata is intentionally extensible; runtime checks exact allowed dataset roles and denies evaluator-only dependencies."
+    },
+    "portable_inputs": {
+      "type": "object",
+      "properties": {
+        "case": {
+          "$ref": "#/$defs/case_v2"
+        },
+        "snapshot": {
+          "$ref": "#/$defs/Snapshot"
+        },
+        "scorer": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ScorerArtifact"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "catalog_policy": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/catalog_policy"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "configuration": {
+          "$ref": "#/$defs/configuration"
+        }
+      },
+      "required": [
+        "case",
+        "snapshot",
+        "scorer",
+        "catalog_policy",
+        "configuration"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "snapshot": {
+                "properties": {
+                  "profile": {
+                    "const": "contemporary_assessment"
+                  }
+                },
+                "required": [
+                  "profile"
+                ]
+              }
+            },
+            "required": [
+              "snapshot"
+            ]
+          },
+          "then": {
+            "properties": {
+              "case": {
+                "properties": {
+                  "task": {
+                    "const": "T6"
+                  },
+                  "program": {
+                    "type": "null"
+                  },
+                  "endpoint": {
+                    "type": "null"
+                  }
+                }
+              },
+              "scorer": {
+                "type": "null"
+              },
+              "catalog_policy": {
+                "$ref": "#/$defs/catalog_policy"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "object_pin": {
+      "type": "object",
+      "properties": {
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 67108864
+        }
+      },
+      "required": [
+        "sha256",
+        "bytes"
+      ],
+      "additionalProperties": false
+    },
+    "manifest": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "const": "tether.portable_bundle.v1"
+        },
+        "admission_policy": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "source_tier": {
+          "enum": [
+            "included",
+            "receipts_only"
+          ]
+        },
+        "producer": {
+          "type": "object",
+          "properties": {
+            "software_version": {
+              "type": "string"
+            },
+            "receipt_sha256": {
+              "$ref": "#/$defs/sha256"
+            },
+            "input_fingerprint": {
+              "$ref": "#/$defs/sha256"
+            },
+            "code": {
+              "type": "object",
+              "minProperties": 1,
+              "maxProperties": 512,
+              "propertyNames": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/logical_path"
+                  },
+                  {
+                    "pattern": "\\.py$"
+                  }
+                ]
+              },
+              "additionalProperties": {
+                "$ref": "#/$defs/sha256"
+              }
+            },
+            "environment": {
+              "type": "object",
+              "properties": {
+                "python": {
+                  "type": "string"
+                },
+                "platform": {
+                  "type": "string"
+                },
+                "runtime_dependencies": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "python",
+                "platform",
+                "runtime_dependencies"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "software_version",
+            "receipt_sha256",
+            "input_fingerprint",
+            "code",
+            "environment"
+          ],
+          "additionalProperties": false
+        },
+        "objects": {
+          "type": "object",
+          "required": [
+            "dossier.md",
+            "features.json",
+            "inputs.json",
+            "ledger.json",
+            "prediction.json",
+            "run.json",
+            "trace.jsonl"
+          ],
+          "maxProperties": 256,
+          "propertyNames": {
+            "allOf": [
+              {
+                "$ref": "#/$defs/logical_path"
+              },
+              {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "dossier.md",
+                      "features.json",
+                      "inputs.json",
+                      "ledger.json",
+                      "prediction.json",
+                      "run.json",
+                      "trace.jsonl"
+                    ]
+                  },
+                  {
+                    "pattern": "^(?:packets|lineage|originals)/"
+                  }
+                ]
+              }
+            ]
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/object_pin"
+          }
+        }
+      },
+      "required": [
+        "format",
+        "admission_policy",
+        "source_tier",
+        "producer",
+        "objects"
+      ],
+      "additionalProperties": false,
+      "description": "bundle.json. Runtime additionally checks the 1 MiB encoded manifest cap, logical total <=256 MiB, same-digest size equality, casefold path aliases, exact source closure, source-tier policy, content hashes and semantic replay. A supplied digest is not independent authenticity or a trusted timestamp."
+    },
+    "nonobserved": {
+      "type": "object",
+      "properties": {
+        "observation_id": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "observed",
+            "absent",
+            "not_measured",
+            "failed_qc",
+            "access_denied",
+            "outside_applicability"
+          ]
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "observation_id",
+        "status",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "coverage_row": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "available_observations": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "selected_observations": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "nonobserved": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonobserved"
+          }
+        },
+        "source_coverage": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/json_value"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "available_observations",
+        "selected_observations",
+        "nonobserved",
+        "source_coverage"
+      ],
+      "additionalProperties": false
+    },
+    "exclusion": {
+      "type": "object",
+      "properties": {
+        "item_id": {
+          "type": "string"
+        },
+        "level": {
+          "enum": [
+            "artifact",
+            "observation"
+          ]
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "item_id",
+        "level",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "run": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": 2
+        },
+        "software_version": {
+          "type": "string"
+        },
+        "admission_policy": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "dossier_format": {
+          "const": "tether.dossier.safe_markdown.v1"
+        },
+        "created_at_utc": {
+          "$ref": "#/$defs/aware_datetime"
+        },
+        "case_id": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "status": {
+          "enum": [
+            "completed",
+            "partial",
+            "failed",
+            "budget_exhausted",
+            "interrupted"
+          ]
+        },
+        "profile": {
+          "enum": [
+            "synthetic_demo",
+            "contemporary_assessment"
+          ]
+        },
+        "snapshot_id": {
+          "$ref": "#/$defs/nonempty_string"
+        },
+        "backend_id": {
+          "const": "offline-extractive-v1"
+        },
+        "input_fingerprint": {
+          "$ref": "#/$defs/sha256"
+        },
+        "budget": {
+          "$ref": "#/$defs/Budget"
+        },
+        "calls": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "usage": {
+          "$ref": "#/$defs/Usage"
+        },
+        "plan": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PlanStep"
+          },
+          "minItems": 8,
+          "maxItems": 8
+        },
+        "coverage": {
+          "type": "object",
+          "properties": {
+            "genetics": {
+              "$ref": "#/$defs/coverage_row"
+            },
+            "perturbation": {
+              "$ref": "#/$defs/coverage_row"
+            },
+            "expression": {
+              "$ref": "#/$defs/coverage_row"
+            },
+            "modality": {
+              "$ref": "#/$defs/coverage_row"
+            },
+            "literature": {
+              "$ref": "#/$defs/coverage_row"
+            },
+            "clinical": {
+              "$ref": "#/$defs/coverage_row"
+            },
+            "safety": {
+              "$ref": "#/$defs/coverage_row"
+            },
+            "pathway": {
+              "$ref": "#/$defs/coverage_row"
+            }
+          },
+          "required": [
+            "genetics",
+            "perturbation",
+            "expression",
+            "modality",
+            "literature",
+            "clinical",
+            "safety",
+            "pathway"
+          ],
+          "additionalProperties": false
+        },
+        "exclusions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/exclusion"
+          }
+        },
+        "measured_usage": {
+          "$ref": "#/$defs/Usage"
+        },
+        "estimated_usage": {
+          "$ref": "#/$defs/Usage"
+        }
+      },
+      "required": [
+        "schema_version",
+        "software_version",
+        "admission_policy",
+        "dossier_format",
+        "created_at_utc",
+        "case_id",
+        "status",
+        "profile",
+        "snapshot_id",
+        "backend_id",
+        "input_fingerprint",
+        "budget",
+        "calls",
+        "usage",
+        "plan",
+        "coverage",
+        "exclusions",
+        "measured_usage",
+        "estimated_usage"
+      ],
+      "additionalProperties": false,
+      "description": "Portable run.json shape. Runtime checks the journal, category ordering, usage sums, cases/snapshot/configuration identity, source-derived coverage and recomputed deterministic features/scorer contributions."
+    },
+    "ledger": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": 2
+        },
+        "claims": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Claim"
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "claims"
+      ],
+      "additionalProperties": false
+    },
+    "trace_event": {
+      "type": "object",
+      "properties": {
+        "sequence": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "event": {
+          "type": "string"
+        },
+        "details": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/json_value"
+          }
+        },
+        "previous_sha256": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/sha256"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "sequence",
+        "event",
+        "details",
+        "previous_sha256",
+        "sha256"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

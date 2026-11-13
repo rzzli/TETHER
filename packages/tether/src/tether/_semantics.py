@@ -4,7 +4,7 @@ This is a deterministic consistency check, not source authenticity, therapeutic
 validation or an operating-system boundary. The frozen engine stays unchanged.
 """
 from types import SimpleNamespace
-from tether_engine.artifacts import dossier
+from tether_engine.artifacts import dossier_for_format
 from tether_engine.chrono import Exclusion
 from tether_engine.agents import Usage
 from tether_engine.contracts import Case, Claim, Snapshot
@@ -234,7 +234,7 @@ def check_engine_semantics(root, load_json, read_bytes, journal_events, ledger_l
     result = RunResult(**fields)
     store = SimpleNamespace(snapshot=decode(Snapshot, inputs["snapshot"]),
                             exclusions=decode(tuple[Exclusion, ...], run["exclusions"]))
-    expected = dossier(result, store).encode("utf-8")
+    expected = dossier_for_format(result, store, run.get("dossier_format")).encode("utf-8")
     actual = read_bytes(root / "dossier.md", max_bytes=ledger_limit)
     need(actual in (expected, expected.replace(b"\n", b"\r\n")), "dossier prose differs from deterministic rendering")
     return {"method": "tether.execution_semantics.v1", "coverage_state_machine": "verified",

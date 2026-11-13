@@ -48,7 +48,7 @@ remain separate from the agent-visible evidence path.
 
 The public interface currently imports file/proof helpers from `study/`; the
 package separation is not a clean architectural boundary. Simplification and
-portable versioned bundles are planned. See [results](RESULTS.md) for completed
+portable offline bundles support bounded source-inclusive replay after relocation. See [the bundle guide](PORTABLE-BUNDLE.md) and [results](RESULTS.md) for completed
 development measurements, failed conditions and the frozen benchmark branches.
 
 ## Inputs and outputs

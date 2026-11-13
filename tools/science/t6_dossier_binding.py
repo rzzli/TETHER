@@ -9,11 +9,12 @@ import re
 import time
 from types import SimpleNamespace
 
-from tether_engine.artifacts import verify_run
+from tether_engine.artifacts import DOSSIER_FORMAT, verify_run
 from tether_engine.chrono import required_source_proofs
 from tether_engine.contracts import Case, Snapshot
 from tether_engine.journal import RunJournal
 from tether_engine.provenance import InputGraph, catalog_index
+from tether_engine.rendering import markdown_quote, markdown_text
 from tether_engine.serde import (ContractError, canonical, decode, fingerprint, read_json, read_ledger_json,
                         safe_child, sha256_file, write_json)
 from tools.framework.run_pilot import SourceAudit
@@ -72,6 +73,9 @@ def _collect(receipt_proof, approved_roots):
     require(dossier_path.stat().st_size <= MAX_SOURCE_BYTES, 'Dossier exceeds bounded audit input size')
     dossier = _dossier_bytes(dossier_path)
     require(hashlib.sha256(dossier).hexdigest() == receipt['outputs']['dossier.md'], 'Dossier changed during read')
+    format_id = read_json(run / 'run.json').get('dossier_format')
+    require(format_id in (None, DOSSIER_FORMAT), 'Unsupported dossier rendering format')
+    display = markdown_text if format_id == DOSSIER_FORMAT else str
     headers = list(re.finditer(rb'(?m)^##(?:#)? [^\r\n]+', dossier))
     sections = {}
     for index, match in enumerate(headers):
@@ -100,8 +104,10 @@ def _collect(receipt_proof, approved_roots):
         key = (original['source']['sha256'], location['row_group'], location['row'])
         require(key not in physical, 'Duplicate physical original row in selected source inventory')
         physical.add(key)
-        quote = ('> ' + observation['statement'].replace('\n', '\n> ')).encode('utf-8')
-        header = ('### ' + claim['claim_id'] + ' (' + claim['specialist'] + ')').encode('utf-8')
+        statement = observation['statement']
+        quote = (markdown_quote(statement) if format_id == DOSSIER_FORMAT else
+                 '> ' + statement.replace('\n', '\n> ')).encode('utf-8')
+        header = f"### {display(claim['claim_id'])} ({display(claim['specialist'])})".encode('utf-8')
         require(len(sections.get(header, [])) == 1, 'Selected ledger claim has no unique dossier section')
         start, section_end = sections[header][0]
         # Native write_text can serialize LF or Windows CRLF; compare exact
@@ -114,8 +120,8 @@ def _collect(receipt_proof, approved_roots):
         require(dossier.find(quote, quote_start + len(quote), section_end) < 0,
                 'Repeated source quote in one claim section is ambiguous')
         citation = claim['evidence']['citation']
-        source_line = (f"Source: {citation['dataset_id']}/{citation['release_id']}; "
-            f"artifact {citation['artifact_id']}; observation {observation['observation_id']}.").encode('utf-8')
+        source_line = (f"Source: {display(citation['dataset_id'])}/{display(citation['release_id'])}; "
+            f"artifact {display(citation['artifact_id'])}; observation {display(observation['observation_id'])}.").encode('utf-8')
         section_lines = dossier[start:section_end].splitlines()
         require([line for line in section_lines if line.startswith(b'Source: ')] == [source_line] and
                 [line for line in section_lines if line.startswith(b'SHA-256: ')] ==
@@ -125,6 +131,8 @@ def _collect(receipt_proof, approved_roots):
             statement=observation['statement'], quoted_span=dict(start=quote_start, end=quote_start + len(quote)),
             section_span=dict(start=start, end=section_end),
             source_audit=original))
+        if format_id == DOSSIER_FORMAT:
+            units[-1]['quote_format'] = DOSSIER_FORMAT
     for proof in source_proofs.values():
         require(sha256_file(audit.source(proof, proof['raw_root'])) == proof['sha256'],
                 'Original source changed during dossier binding')
@@ -201,7 +209,18 @@ def bind_manifest(manifest, binding):
             except UnicodeError as error:
                 raise ContractError('Dossier span cuts a UTF-8 character') from error
             last = span['end']
-        require(''.join(pieces) == claim['statement'], 'Inventoried claim text is absent from dossier spans')
+        # The safe renderer escapes exact source quotes. Admit the original
+        # statement for that one complete, independently bound quote range.
+        # All other spans retain their existing exact-byte contract.
+        rendered = ''.join(pieces)
+        span = spans[0]
+        source_quote = any(unit.get('quote_format') == DOSSIER_FORMAT and
+                           unit['statement'] == claim['statement'] and
+                           span['start'] == unit['quoted_span']['start'] + 2 and
+                           span['end'] == unit['quoted_span']['end'] and
+                           rendered.replace('\r\n', '\n') == markdown_quote(unit['statement'])[2:]
+                           for unit in binding['source_units'])
+        require(rendered == claim['statement'] or source_quote, 'Inventoried claim text is absent from dossier spans')
         require(not set(claim['cited_source_ids']) - available, 'Claim cites an unselected dossier source')
         cited_here = {u['observation_id'] for u in binding['source_units'] if
                       u['section_span']['start'] <= spans[0]['start'] < spans[0]['end'] <= u['section_span']['end']}

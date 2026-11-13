@@ -44,6 +44,18 @@ def parser() -> argparse.ArgumentParser:
     verify.add_argument("--outputs-only", action="store_true")
     inspect = commands.add_parser("inspect-run", help="Read durable run attempts or build stages; never restart work")
     inspect.add_argument("--run-dir", type=Path, required=True)
+    bundle_export = commands.add_parser("bundle-export", help="Copy a sealed offline run into a fresh portable bundle")
+    bundle_export.add_argument("--run-dir", type=Path, required=True)
+    bundle_export.add_argument("--output", type=Path, help="Fresh output directory; default is a UTC-named directory")
+    bundle_export.add_argument("--source-root", type=Path, action="append", required=True)
+    bundle_export.add_argument("--receipt-sha256")
+    bundle_export.add_argument("--omit-originals", action="store_true", help="Exclude raw originals and skip source replay")
+    for name in ("bundle-inspect", "bundle-verify"):
+        bundle_reader = commands.add_parser(name, help="Inspect the manifest or verify a relocated bundle")
+        bundle_reader.add_argument("--bundle-dir", type=Path, required=True)
+        bundle_reader.add_argument("--manifest-sha256")
+        if name == "bundle-verify":
+            bundle_reader.add_argument("--bytes-only", action="store_true", help="Verify content hashes without semantic replay")
     source = commands.add_parser("inspect-source", help="Validate explicit receipt-verified source inputs")
     source.add_argument("--manifest", type=Path, required=True)
     source.add_argument("--catalog", type=Path, required=True)
@@ -81,6 +93,15 @@ def main(argv: list[str] | None = None) -> int:
             answer = verify_run(args.run_dir, args.receipt_sha256, not args.outputs_only)
         elif args.command == "inspect-run":
             answer = inspect_run(args.run_dir)
+        elif args.command in ("bundle-export", "bundle-inspect", "bundle-verify"):
+            from .bundle import automatic_output, export_bundle, inspect_bundle, verify_bundle
+            if args.command == "bundle-export":
+                answer = export_bundle(args.run_dir, args.output or automatic_output(), source_roots=args.source_root,
+                                       receipt_sha256=args.receipt_sha256, include_originals=not args.omit_originals)
+            elif args.command == "bundle-inspect":
+                answer = inspect_bundle(args.bundle_dir, args.manifest_sha256)
+            else:
+                answer = verify_bundle(args.bundle_dir, args.manifest_sha256, replay=not args.bytes_only)
         elif args.command in ("inspect-source", "build-snapshot"):
             from .ingest import inspect_sources, build_snapshot
             if args.command == "inspect-source":

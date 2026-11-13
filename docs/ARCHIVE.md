@@ -9,9 +9,10 @@ Engine 0.5.0 introduces policy `tether.derivation.v1`. Engine 0.4.0 version-two
 receipts retain output, journal, anchor and declared-source byte checks, with
 semantic/derivation verification explicitly unavailable. Missing undeclared
 ancestors are not certified by those checks. The original semantic dependency
-resource is preserved and refuses replay under changed executing code. Current
-policy relocation is explicitly unsupported until its separate portable workflow
-is qualified. Use ordinary source-inclusive verification for current runs.
+resource is preserved and refuses replay under changed executing code. Native
+current-policy receipts retain their original path bindings. New safe-format
+offline runs can be exported through the [portable bundle workflow](PORTABLE-BUNDLE.md),
+which issues a separate manifest with relative paths and scoped verification.
 
 The pre-namespace implementation is pinned at commit
 `b492a8fca9bb1aa500d2939b3e2d19242a55cb96`, tag

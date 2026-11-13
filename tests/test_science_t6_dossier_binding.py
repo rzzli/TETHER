@@ -212,7 +212,7 @@ class DossierSourceBindingTests(unittest.TestCase):
         self.prepare()
         receipt = read_json(self.run / 'receipt.json')
         original = (self.run / 'dossier.md').read_bytes()
-        for before, after in [(b'Open Targets', b'Invented!!!'), (b' observation ot25:', b' observation fake:')]:
+        for before, after in [(b'Open Targets', b'Invented!!!'), (b' observation ot25\\:', b' observation fake\\:')]:
             changed = original.replace(before, after, 1)
             self.assertNotEqual(changed, original)
             (self.run / 'dossier.md').write_bytes(changed)

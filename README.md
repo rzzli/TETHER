@@ -58,6 +58,8 @@ uv run --project packages/tether --no-sync tether verify --run-dir runs/my-first
 
 For stronger integrity checking, save the printed receipt hash separately and pass `--receipt-sha256 <saved-hash>` to verification.
 
+[Package and verify an offline run on another machine](docs/PORTABLE-BUNDLE.md).
+
 <a id="what-works-today"></a>
 <a id="current-results"></a>
 

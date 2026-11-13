@@ -71,7 +71,7 @@ PRIVATE_COMPONENTS = frozenset({
     'memory', 'planning', 'reports', 'paper', 'research_notes',
 })
 PUBLIC_DOC_FILES = frozenset({
-    'docs/ARCHIVE.md', 'docs/FRAMEWORK.md', 'docs/MAINTENANCE.md', 'docs/RESULTS.md',
+    'docs/ARCHIVE.md', 'docs/FRAMEWORK.md', 'docs/MAINTENANCE.md', 'docs/PORTABLE-BUNDLE.md', 'docs/RESULTS.md',
     'docs/TETHER-CATALOG-POLICY.md', 'docs/TETHER-VERIFICATION-SCOPE.md',
 })
 PUBLIC_DATA_FILES = frozenset({
@@ -256,6 +256,7 @@ def validate_engine_wheel(wheel):
                     or len(parts) < 2):
                 raise ContractError('Unexpected wheel namespace/member: '+name)
         required = {'tether_engine/demo/v2/case.json', 'tether_engine/demo/case.json',
+                    'tether_engine/schemas/portable-bundle-v1.json',
                     metadata_root+'/METADATA', metadata_root+'/WHEEL', metadata_root+'/RECORD'}
         if not required.issubset(names):
             raise ContractError('Packaged runtime/demo metadata missing')

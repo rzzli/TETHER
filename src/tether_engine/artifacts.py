@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 import sys
 import platform
@@ -19,12 +19,15 @@ from .scorer import Prediction
 from .semantics import check_execution, check_semantics
 from .journal import RunJournal, read_chain
 from .workflow import RunResult
+from .rendering import (count, json_code_span, mapping, markdown_code,
+                        markdown_quote, markdown_text, number, sequence)
 
 
 LEGACY_RUN_FILES = ("run.json", "inputs.json", "ledger.json", "features.json", "prediction.json",
              "trace.jsonl", "dossier.md")
 RUN_FILES = LEGACY_RUN_FILES + ("journal.jsonl",)
 ADMISSION_POLICY = "tether.derivation.v1"
+DOSSIER_FORMAT = "tether.dossier.safe_markdown.v1"
 
 
 def receipt_policy(receipt):
@@ -49,7 +52,7 @@ def _check_source_inventory(snapshot, case, root, policy, proofs):
         raise ContractError("Semantic source proof inventory differs from eligible artifact/ancestor closure")
 
 
-def dossier(result: RunResult, store: EvidenceStore) -> str:
+def _legacy_dossier(result: RunResult, store: EvidenceStore) -> str:
     case, prediction = result.case, result.prediction
     lines = [f"# TETHER dossier: {case.case_id}", "",
              f"Target: {case.hypothesis.target_id}; indication: {case.hypothesis.indication_id}.",
@@ -130,6 +133,130 @@ def dossier(result: RunResult, store: EvidenceStore) -> str:
     return "\n".join(lines)
 
 
+def _safe_dossier(result: RunResult, store: EvidenceStore) -> str:
+    case, prediction = result.case, result.prediction
+    text = markdown_text
+    coverage = mapping(result.coverage)
+    source_coverage = mapping(store.snapshot.coverage)
+    # Validate the complete JSON-shaped coverage even when no optional section
+    # would otherwise inspect a malformed nested value.
+    source_coverage_code = json_code_span(source_coverage)
+    if type(case.origin) is not date:
+        raise ContractError("Dossier origin requires a date")
+    lines = [f"# TETHER dossier: {text(case.case_id)}", "",
+             f"Target: {text(case.hypothesis.target_id)}; indication: {text(case.hypothesis.indication_id)}.",
+             f"Intended action: {text(case.hypothesis.intended_action)}; modality: {text(case.hypothesis.modality)}; "
+             f"tissue: {text(case.hypothesis.tissue) if case.hypothesis.tissue is not None else 'unspecified'}.",
+             f"Origin: {case.origin}; profile: {text(result.profile)}; task: {text(case.task)}.",
+             f"Workflow: {text(result.status)}; backend: {text(result.backend_id)}.", ""]
+    if source_coverage.get("interpretation_scope") == "resource_annotation_only":
+        lines += ["## Evidence relevance and hypothesis limits", "",
+                  "Resource annotation support: source-linked target/disease records are reproduced. "
+                  "Therapeutic relevance: not assessed for the intended action, modality, population or regimen. "
+                  "A literature mention, genetic association or provider score does not establish intervention efficacy.", "",
+                  "Clinical outcomes and reviewer judgments remain evaluator-only. No disease subtype was inferred "
+                  "and this hypothesis has not been refined.", "",
+                  "| Unresolved qualification | Value |", "| --- | --- |"]
+        for name, qualification in mapping(source_coverage.get("hypothesis_qualification", {})).items():
+            value = mapping(qualification)["value"]
+            lines.append(f"| {text(name.replace('_', ' '))} | {text(value) if value is not None else 'unspecified'} |")
+        lines.append("")
+    if type(prediction.synthetic) is not bool:
+        raise ContractError("Dossier synthetic flag requires a boolean")
+    if prediction.synthetic:
+        lines += ["**Synthetic demonstration: the weights and observations are fixtures. "
+                  "This number is not a scientific prediction.**", ""]
+    if prediction.probability is None:
+        lines += [f"Probability withheld: {text(prediction.reason)}.", ""]
+    else:
+        lines += [f"Probability of {text(prediction.endpoint)} within {count(prediction.horizon_months)} months: "
+                  f"{number(prediction.probability):.4f}.",
+                  f"Scorer: {text(prediction.scorer_id)}; calibration: {text(prediction.calibration)}; "
+                  f"model-feature coverage: {number(prediction.feature_coverage):.1%}.", ""]
+    contributions = mapping(prediction.contributions)
+    if contributions:
+        lines += ["## Frozen scorer contributions", "",
+                  "Contributions are in log odds and describe the predictor, not biological causality.", "",
+                  "| Feature | Value | Coefficient | Contribution | Imputed |",
+                  "| --- | ---: | ---: | ---: | --- |"]
+        for name, item in contributions.items():
+            if type(item.imputed) is not bool:
+                raise ContractError("Dossier imputation flag requires a boolean")
+            lines.append(f"| {text(name)} | {number(item.value):.4g} | {number(item.coefficient):.4g} | "
+                         f"{number(item.log_odds):.4g} | {item.imputed} |")
+        lines += [f"\nIntercept: {number(prediction.intercept):.4g}.", ""]
+    lines += ["## Grounded claims", "",
+              "Statements below are copied from the approved normalized records. Citation "
+              "grounding does not establish that a source interpretation or method is scientifically correct.", ""]
+    for claim in sequence(result.claims):
+        record, citation = claim.evidence.observation, claim.evidence.citation
+        dependency = text(record.dependency_group) if record.dependency_group is not None else 'None'
+        lines += [f"### {text(claim.claim_id)} ({text(claim.specialist.value)})", "",
+                  markdown_quote(record.statement), "",
+                  f"Interpretation: {text(record.polarity.value)}; direction: {text(record.mechanism_direction)}. "
+                  f"Dependency group: {dependency}; declared QC: {text(record.method.qc_status)}.",
+                  f"Source: {text(citation.dataset_id)}/{text(citation.release_id)}; "
+                  f"artifact {text(citation.artifact_id)}; observation {text(record.observation_id)}.",
+                  f"SHA-256: {markdown_code(citation.artifact_sha256)}.", ""]
+        limitations = sequence(record.method.limitations)
+        if limitations:
+            lines += ["Limitations: " + "; ".join(text(value) for value in limitations) + ".", ""]
+        metrics = mapping(record.source_metrics)
+        metrics_code = json_code_span(metrics)
+        if metrics:
+            lines += ["Provider metrics (descriptive): " + metrics_code + ".", ""]
+        missingness = mapping(record.missingness)
+        if missingness:
+            lines += ["Unknown fields: " + "; ".join(f"{text(key)}: {text(value)}" for key, value in missingness.items()) + ".", ""]
+    if not result.claims:
+        lines += ["No approved observed claims were selected.", ""]
+    lines += ["## Coverage and exclusions", "",
+              "| Specialist | Run status | Available | Selected |",
+              "| --- | --- | ---: | ---: |"]
+    for category, item in coverage.items():
+        mapping(item)
+        lines.append(f"| {text(category)} | {text(item['status'])} | {count(item['available_observations'])} | "
+                     f"{count(item['selected_observations'])} |")
+    for category, item in coverage.items():
+        for record in sequence(item["nonobserved"]):
+            mapping(record)
+            lines.append(f"\n{text(category)}: {text(record['status'])} ({text(record['observation_id'])}): {text(record['reason'])}")
+    for exclusion in sequence(store.exclusions):
+        lines.append(f"\nExcluded {text(exclusion.level)} {text(exclusion.item_id)}: {text(exclusion.reason)}.")
+    if source_coverage:
+        lines += ["", "Source coverage: " + source_coverage_code + "."]
+    lines += ["", f"Calls: {count(result.calls)}; accounted cost: ${number(result.usage.cost_usd):.4f}; "
+              f"input/output tokens: {count(result.usage.input_tokens)}/{count(result.usage.output_tokens)}.", "",
+              f"Measured cost: ${number(result.measured_usage.cost_usd):.4f}; conservatively estimated upper cost: "
+              f"${number(result.estimated_usage.cost_usd):.4f}.", "",
+              "No live model provider or scientific computation is invoked by the default backend. "
+              "Historical retrieval controls do not certify a model's training cutoff or knowledge. "
+              "OS-level isolation is required before running arbitrary agents on locked benchmarks.", ""]
+    return "\n".join(lines)
+
+
+def dossier(result: RunResult, store: EvidenceStore) -> str:
+    """Render new dossiers with literal source text, without modifying evidence."""
+    try:
+        return _safe_dossier(result, store)
+    except ContractError:
+        raise
+    except (AttributeError, KeyError, TypeError, ValueError, OverflowError, RecursionError) as error:
+        raise ContractError("Malformed dossier rendering input") from error
+
+
+def dossier_for_format(result: RunResult, store: EvidenceStore, format_id) -> str:
+    """Verification dispatch only; absent policy preserves original archived bytes.
+
+    Legacy text is not safe shared rendering. New production uses dossier().
+    """
+    if format_id is None:
+        return _legacy_dossier(result, store)
+    if type(format_id) is str and format_id == DOSSIER_FORMAT:
+        return dossier(result, store)
+    raise ContractError("Unsupported dossier rendering format")
+
+
 def write_run(output: Path, result: RunResult, store: EvidenceStore,
               model: ScorerArtifact | None, journal: RunJournal | None = None) -> str:
     # Do not overwrite existing predictions or accidentally write into a data tree.
@@ -149,6 +276,7 @@ def write_run(output: Path, result: RunResult, store: EvidenceStore,
     elif result.backend_id == 'recorded-selection-replay-v1':
         from .replay_validation import verify_replay_archive
         verify_replay_archive(result.case, result.configuration, result.trace, store)
+    rendered_dossier = dossier(result, store)
     if journal is None:
         output.mkdir(parents=True, exist_ok=False)
     elif output.resolve() != journal.output or fingerprint(journal.events) != fingerprint(result.trace):
@@ -166,6 +294,7 @@ def write_run(output: Path, result: RunResult, store: EvidenceStore,
               "catalog_policy": store.catalog_policy, "configuration": result.configuration,
               "snapshot_base": str(store.snapshot_base), "environment": environment}
     run = {"schema_version": 2, "software_version": __version__, "admission_policy": ADMISSION_POLICY,
+           "dossier_format": DOSSIER_FORMAT,
            "created_at_utc": datetime.now(timezone.utc).isoformat(),
            "case_id": result.case.case_id, "status": result.status, "profile": result.profile,
            "snapshot_id": result.snapshot_id, "backend_id": result.backend_id,
@@ -184,7 +313,7 @@ def write_run(output: Path, result: RunResult, store: EvidenceStore,
     (output / "trace.jsonl").write_bytes(b"".join(canonical(event) + b"\n" for event in result.trace))
     if journal is None:
         (output / "journal.jsonl").write_bytes((output / "trace.jsonl").read_bytes())
-    (output / "dossier.md").write_text(dossier(result, store), encoding="utf-8")
+    (output / "dossier.md").write_text(rendered_dossier, encoding="utf-8")
     code_root = Path(__file__).parent
     receipt = {"schema_version": 2, "software_version": __version__, "admission_policy": ADMISSION_POLICY,
                "input_fingerprint": fingerprint(inputs),
@@ -255,6 +384,8 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
             raise ContractError("Semantic ledger schema mismatch")
         claims = decode(tuple[Claim, ...], ledger["claims"])
         run = read_json(output / "run.json")
+        if "dossier_format" in run and run["dossier_format"] != DOSSIER_FORMAT:
+            raise ContractError("Unsupported dossier rendering format")
         if run.get("software_version") != __version__ or run.get("admission_policy") != ADMISSION_POLICY:
             raise ContractError("Run and executing engine versions differ")
         if run['backend_id'] == 'local-structured-selection-v1':

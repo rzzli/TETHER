@@ -1,0 +1,55 @@
+name: Portable source export
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  portable:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+      - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9
+        with:
+          version: '0.11.2'
+          python-version: '3.11'
+      - name: Validate an export without Git metadata or installed project
+        shell: python
+        run: |
+          import os, pathlib, shutil, subprocess, tempfile
+          source = pathlib.Path(os.environ['GITHUB_WORKSPACE'])
+          with tempfile.TemporaryDirectory(prefix='tether-export-', dir=os.environ['RUNNER_TEMP']) as temporary:
+              base = pathlib.Path(temporary)
+              export = base / 'source'
+              export.mkdir()
+              ignore = shutil.ignore_patterns('.git', '.venv', '__pycache__', '*.egg-info', 'build', 'dist')
+              for name in ('src', 'tests', 'tools', 'packages'):
+                  shutil.copytree(source / name, export / name, ignore=ignore)
+              shutil.copytree(source / 'data/catalog', export / 'data/catalog', ignore=ignore)
+              for name in ('pyproject.toml', 'LICENSE'):
+                  shutil.copyfile(source / name, export / name)
+              assert not (export / '.git').exists()
+              environment = dict(os.environ)
+              for name in ('PYTHONPATH', 'PYTHONHOME', 'GIT_DIR', 'GIT_WORK_TREE'):
+                  environment.pop(name, None)
+              environment['GIT_CEILING_DIRECTORIES'] = str(base)
+              runtime = base / 'python'
+              subprocess.run(['uv', 'run', '--no-project', '--no-config', '--python', '3.11',
+                  'python', '-m', 'venv', '--without-pip', str(runtime)], cwd=export, env=environment, check=True)
+              interpreter = runtime / ('Scripts/python.exe' if os.name == 'nt' else 'bin/python')
+              result = subprocess.run([str(interpreter), '-I', '-B', str(export / 'tools/portable_validate.py'),
+                  '--output', str(base / 'validation')], cwd=export, env=environment, check=False)
+              report = base / 'validation/report.json'
+              if report.exists():
+                  print(report.read_text(encoding='utf-8'))
+              if result.returncode:
+                  log = base / 'validation/tests.log'
+                  if log.exists():
+                      print(log.read_text(encoding='utf-8'))
+                  raise SystemExit(result.returncode)

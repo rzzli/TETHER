@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "kind": "invented_tether_canonical_json_vectors",
+  "algorithm": "sha256(UTF-8(json.dumps(value,sort_keys=True,ensure_ascii=False,separators=(comma,colon),allow_nan=False)))",
+  "scope": "Python standard-library JSON representation used by tether_engine.serde.canonical; not RFC 8785/JCS. No trailing newline. Integer/float distinction, negative zero, exact large integers and unnormalized Unicode are intentional. NaN, Infinity, duplicate keys and unpaired surrogates are outside the valid canonical input contract. All values are invented.",
+  "vectors": [
+    {
+      "name": "empty_object",
+      "input": {},
+      "canonical_json": "{}",
+      "utf8_hex": "7b7d",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "name": "nested_sorted_keys",
+      "input": {
+        "z": {
+          "b": 2,
+          "a": 1
+        },
+        "a": [
+          true,
+          null,
+          false
+        ]
+      },
+      "canonical_json": "{\"a\":[true,null,false],\"z\":{\"a\":1,\"b\":2}}",
+      "utf8_hex": "7b2261223a5b747275652c6e756c6c2c66616c73655d2c227a223a7b2261223a312c2262223a327d7d",
+      "sha256": "ad8fe457bbb6cdb660ef9036c3c1dbec493015f7853287517ebf37f3c4c5a283"
+    },
+    {
+      "name": "utf8_without_ascii_escaping",
+      "input": {
+        "β": "café",
+        "a": "🧬"
+      },
+      "canonical_json": "{\"a\":\"🧬\",\"β\":\"café\"}",
+      "utf8_hex": "7b2261223a22f09fa7ac222c22ceb2223a22636166c3a9227d",
+      "sha256": "e1aeca3c668848a24f0506e36764271f0d4bbddbcd4acf8b1bbcbda64d4a4fbf"
+    },
+    {
+      "name": "json_escapes",
+      "input": {
+        "line": "first\nsecond",
+        "quote": "\"\\\t"
+      },
+      "canonical_json": "{\"line\":\"first\\nsecond\",\"quote\":\"\\\"\\\\\\t\"}",
+      "utf8_hex": "7b226c696e65223a2266697273745c6e7365636f6e64222c2271756f7465223a225c225c5c5c74227d",
+      "sha256": "f3b23c17a0fee77dfccfd63f2e947a92e6abd8dc4975cf803a3cb955a719ca16"
+    },
+    {
+      "name": "numeric_types",
+      "input": {
+        "integer": 1,
+        "float": 1.0,
+        "exponent": 1e-07
+      },
+      "canonical_json": "{\"exponent\":1e-07,\"float\":1.0,\"integer\":1}",
+      "utf8_hex": "7b226578706f6e656e74223a31652d30372c22666c6f6174223a312e302c22696e7465676572223a317d",
+      "sha256": "137be75a8fb8d66373c374811490f24afdebf17e1d51f2a98ed46a6072f6751f"
+    },
+    {
+      "name": "negative_zero",
+      "input": {
+        "positive": 0.0,
+        "negative": -0.0
+      },
+      "canonical_json": "{\"negative\":-0.0,\"positive\":0.0}",
+      "utf8_hex": "7b226e65676174697665223a2d302e302c22706f736974697665223a302e307d",
+      "sha256": "151f43d7d5fc1e0e3914e4e43854e40146e79b5d0fdd93289ba825d3f6adcee0"
+    },
+    {
+      "name": "large_integer_exact",
+      "input": {
+        "integer": 9007199254740993
+      },
+      "canonical_json": "{\"integer\":9007199254740993}",
+      "utf8_hex": "7b22696e7465676572223a393030373139393235343734303939337d",
+      "sha256": "19164e0b2a6f68a33de9eece27a3dcdde641e42c06325f516022c4e5166162b4"
+    },
+    {
+      "name": "unicode_not_normalized",
+      "input": {
+        "composed": "é",
+        "decomposed": "é"
+      },
+      "canonical_json": "{\"composed\":\"é\",\"decomposed\":\"é\"}",
+      "utf8_hex": "7b22636f6d706f736564223a22c3a9222c226465636f6d706f736564223a2265cc81227d",
+      "sha256": "7f04a9b0f36600f4b530afbb2601cb43068497f57b6ac5e07b2c173534c523ab"
+    }
+  ]
+}
