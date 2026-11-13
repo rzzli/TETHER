@@ -1,6 +1,6 @@
 # Results and current scope
 
-**Updated 12 November 2026.** TETHER has working evidence/accounting machinery,
+**Updated 13 November 2026.** TETHER has working evidence/accounting machinery,
 contemporary source-reporting examples and completed development measurements.
 It has **no qualified historical clinical forecaster, validated clinical
 probabilities or held-out demonstration of scientific agent superiority**.
@@ -36,6 +36,39 @@ coverage is 108/132 facts and measurement coverage 40/48. Its nominal 80% and
 100% thresholds are equivalent for the small groups, not evidence of robustness.
 R4/R5 together retain 38 outputs and 90 decisions: 36 returned, two deliberately
 malformed, 57 admissions and 33 rejections.
+
+## Temporal data feasibility
+
+Five complete OT25.09 evidence partitions passed source integrity and aggregate
+date profiling, covering 500 files and 2,609,207 rows. The two ChEMBL sizing
+passes used all 573,103 rows in 100 files and yielded 74,187 distinct stored
+target–disease pairs. The second pass added annual horizon counts after the
+first aggregate results were viewed. Its existing global counts reproduced.
+
+Under the frozen descriptive rules, 6,649 pairs have reported phase 2 entry in
+2016–2019. Among 5,746 calendar-mature pairs without a declared source-history
+hold, 231 have a phase 3 candidate within 36 months and 412 within 60 months.
+The supplied review reported 344 and 544. Its incomplete at-risk definition and
+unavailable implementation prevent exact reconciliation. Registry-reported
+actual initiation, prior approvals, complete follow-up and labels still require
+qualification. The source-observed counts yield zero qualified clinical labels.
+
+An outcome-independent provisional designation groups the same 6,649 pairs
+into 683 components based on possible earliest-entry drug and trial links.
+Development contains 6,550 pairs. The exploratory reserve contains 99 pairs
+in 49 components with incomplete exposure information. The largest component
+has 2,278 pairs. Nominal pair counts therefore provide no independent-sample or
+power estimate.
+
+An archive comparison across 1,000 gene-burden and UniProt files compared
+literal provider IDs, target–disease pairs and stored fields. At the January
+2024 cutoff the modern gene-burden view filtered by `evidenceDate` shared 3,994
+pairs with the selected 22.11 archive, with 1,467 pairs unique to the archive
+and 3,489 unique to the filtered modern view. The analogous UniProt counts
+were 2,953 shared, 1,070 archive-only and 3,617 modern-only. The January 2025
+comparison used the selected 24.09 archives. The archive snapshots precede
+their cutoffs. The filtered modern records carry modern mappings, and the
+literal differences do not establish historical biological availability.
 
 ## SciFact development measurements
 
@@ -121,11 +154,10 @@ generations and scores remain zero. ALCE is frozen incomplete; Scholar/R2E are
 deferred. Historical clinical training and locked clinical evaluation remain
 unqualified.
 
-Current priorities are computed-derivation correctness and evaluation
-population/provenance, followed by dates, endpoints and published-baseline
-feasibility. Source hashes do not establish biological truth or eliminate model
-memory. No external human-expert dependency is assumed; AI agreement is not
-biological gold. Owner-supplied paper declarations remain pending.
+Computed derivation and fixed-horizon evaluation passed their scoped
+engineering checks. Current work qualifies source history, endpoint
+ascertainment and the published baseline before model evaluation. Owner-supplied
+paper declarations remain pending.
 
 ## Retained artifact identifiers
 
@@ -143,6 +175,9 @@ digest alone. Original artifacts and failures remain unchanged.
 | R4/R5 | Source-reporting analysis | `ee9f02ea3c3692bbd8b7d63d2d2cd545cfd769ccee9ee7454b4ed00c7ac87312` |
 | R6 | Model-attempt audit | `daae41b26d29f9a2e830d5fa524ec24f7d4f9c248081b4911ca7a7aa9ea66314` |
 | R7 | Conformance audit | `dc3f5574878278c0844dc8f1192f121e8fbd3dc9fb7b4ab4e87fd0e7f979a026` |
+| Temporal feasibility | ChEMBL sizing with annual horizons | `db73fb16ed7511930589779e674147d56e2852e6171ef6a8a03483a3e2cc301a` |
+| Temporal feasibility | Provisional entry designation | `57a597c54bed1b239089ef4748394ab2a51220f64c1af158901d39b611d64404` |
+| Temporal feasibility | Gene burden and UniProt archive comparison | `1084537e695a4b32742b6754cabcd4623d7b59d02c81c889c72b99cada3f2261` |
 | S1 | SciFact decomposition | `f22ad12b46f6ccb182bd09d0cf6a4b08d3db9de8b22535b117040b67f7084a83` |
 | S2 | MultiVerS qualification | `bb21dfe9c08f01796457dcf634dcc9a9bc9082c9aec711e765d1b71b5a974ef4` |
 | S3 | SciFact comparison | `26fd14ed0cc4aea25f0f4b73be4297b4875d9fa0c2fd8826da3dad39ac4dc229` |
