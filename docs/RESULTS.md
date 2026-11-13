@@ -148,8 +148,16 @@ data rows. This covers the five sampled files.
 The isolated Windows runtime reproduced the declared conda versions, including
 Python 3.10.8, Java 11.0.15, Spark 3.3.1 and Arrow 7.0.1. It read two fictional
 Parquet rows and returned both through Arrow. A separate Spark write check
-stopped at Hadoop's missing Windows native permission utility. The pip layer,
-full input release, author feature parity and baseline metrics remain pending.
+stopped at Hadoop's missing Windows native permission utility.
+
+The selected author functions matched 15 stage checks in each of two fictional
+variants, including temporal and static features and the training and evaluation
+row tables. The comparison passed after correcting a fixture expectation from
+integer `0` to float `0.0` for declared float columns. Separate numeric controls
+covered imputation, feature selection, fixed scoring vectors and relative risk.
+The supervised run took 51 seconds, used 3.06 GB of peak Windows Job committed
+memory, read zero real rows and fitted zero models. Full author export, the pip
+layer, full input release and baseline metrics remain pending.
 
 ## SciFact development measurements
 
