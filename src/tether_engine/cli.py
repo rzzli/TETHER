@@ -56,11 +56,20 @@ def parser() -> argparse.ArgumentParser:
     build.add_argument("--cases-sha256", help="Optional SHA-256 anchor for the frozen case-pack bytes")
     build.add_argument("--packet-layout", choices=("single", "bounded"), default="single",
                        help="Explicitly permit multiple complete packets per case; each stays within 64 MiB")
-    evaluation = commands.add_parser("evaluate", help="Evaluator-only descriptive T1 metrics")
-    evaluation.add_argument("--predictions", type=Path, nargs="+", required=True)
-    evaluation.add_argument("--labels", type=Path, required=True)
-    evaluation.add_argument("--output", type=Path, required=True)
-    evaluation.add_argument("--allow-synthetic", action="store_true")
+    for name, help_text in (("evaluate", "Receipt-bound fixed-horizon T1 evaluation"),
+                            ("evaluate-baseline", "Declared external-baseline fixed-horizon evaluation")):
+        evaluation = commands.add_parser(name, help=help_text)
+        for source_name in ("cohort", "producer", "labels"):
+            evaluation.add_argument("--" + source_name, type=Path, required=True)
+            evaluation.add_argument("--" + source_name + "-sha256", required=True)
+        evaluation.add_argument("--output", type=Path, required=True)
+        evaluation.add_argument("--allow-synthetic", action="store_true")
+    raw = commands.add_parser("evaluate-raw", help="Unverified prediction diagnostics; no producer checks")
+    raw.add_argument("--predictions", type=Path, nargs="+", required=True)
+    raw.add_argument("--labels", type=Path, required=True)
+    raw.add_argument("--policy", type=Path, help="Explicit fixed-horizon policy; otherwise infer one horizon with zero lag")
+    raw.add_argument("--output", type=Path, required=True)
+    raw.add_argument("--allow-synthetic", action="store_true")
     return result
 
 
@@ -84,17 +93,27 @@ def main(argv: list[str] | None = None) -> int:
             else:
                 answer = build_snapshot(args.manifest, args.catalog, args.output, packet_layout=args.packet_layout,
                                         cases_path=args.cases, cases_sha256=args.cases_sha256)
-        elif args.command == "evaluate":
+        elif args.command in ("evaluate", "evaluate-baseline", "evaluate-raw"):
             # Deliberately imported only in the separate evaluator command.
-            from .evaluation import Outcomes, evaluate
-            labels = decode(Outcomes, read_json(args.labels), "outcomes")
-            predictions = tuple(decode(Prediction, read_json(path), "prediction")
-                                for path in args.predictions)
-            answer = evaluate(predictions, labels, args.allow_synthetic)
-            if args.output.exists():
+            from .maintenance import write_new_json
+            if args.output.exists() or args.output.is_symlink():
                 raise ContractError("Refusing to overwrite an evaluation result")
-            args.output.parent.mkdir(parents=True, exist_ok=True)
-            write_json(args.output, answer)
+            if args.command == "evaluate-raw":
+                from .evaluation import EvaluationPolicy, Outcomes, evaluate
+                labels = decode(Outcomes, read_json(args.labels), "outcomes")
+                predictions = tuple(decode(Prediction, read_json(path), "prediction")
+                                    for path in args.predictions)
+                policy = decode(EvaluationPolicy, read_json(args.policy), "policy") if args.policy else None
+                answer = evaluate(predictions, labels, args.allow_synthetic, policy=policy)
+            else:
+                from .evaluation_binding import evaluate_bound
+                answer = evaluate_bound(args.cohort, args.cohort_sha256,
+                                        args.producer, args.producer_sha256,
+                                        args.labels, args.labels_sha256,
+                                        allow_synthetic=args.allow_synthetic,
+                                        expected_producer_kind=("tether_run_predictions" if args.command == "evaluate"
+                                                                else "external_baseline_predictions"))
+            write_new_json(args.output, answer)
         else:
             journal = RunJournal(args.output)
             if args.command == "demo":

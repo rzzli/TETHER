@@ -473,7 +473,24 @@ class EvaluationTests(unittest.TestCase):
         self.assertEqual(add_months(date(2024, 1, 31), 1), date(2024, 2, 29))
         self.assertEqual(add_months(date(2024, 2, 29), 12), date(2025, 2, 28))
 
-    def test_cli_evaluator_round_trip(self):
+    def test_cli_raw_evaluator_round_trip_is_explicitly_unverified(self):
+        from tether_engine.cli import main
+        predictions, labels = self.pair()
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for i, prediction in enumerate(predictions):
+                write_json(root / f"prediction-{i}.json", prediction)
+            write_json(root / "outcomes.json", labels)
+            arguments = ["evaluate-raw", "--predictions", str(root / "prediction-0.json"),
+                         str(root / "prediction-1.json"), "--labels", str(root / "outcomes.json"),
+                         "--output", str(root / "metrics.json"), "--allow-synthetic"]
+            with patch("sys.stdout", io.StringIO()):
+                self.assertEqual(main(arguments), 0)
+            self.assertEqual(read_json(root / "metrics.json")["auroc"], 1)
+            self.assertEqual(read_json(root / "metrics.json")["prediction_provenance"],
+                             "not_checked_by_metrics_function")
+
+    def test_production_evaluator_rejects_bare_unbound_predictions(self):
         from tether_engine.cli import main
         predictions, labels = self.pair()
         with tempfile.TemporaryDirectory() as directory:
@@ -484,9 +501,11 @@ class EvaluationTests(unittest.TestCase):
             arguments = ["evaluate", "--predictions", str(root / "prediction-0.json"),
                          str(root / "prediction-1.json"), "--labels", str(root / "outcomes.json"),
                          "--output", str(root / "metrics.json"), "--allow-synthetic"]
-            with patch("sys.stdout", io.StringIO()):
-                self.assertEqual(main(arguments), 0)
-            self.assertEqual(read_json(root / "metrics.json")["auroc"], 1)
+            with patch("sys.stdout", io.StringIO()), patch("sys.stderr", io.StringIO()):
+                with self.assertRaises(SystemExit) as rejected:
+                    main(arguments)
+            self.assertEqual(rejected.exception.code, 2)
+            self.assertFalse((root / "metrics.json").exists())
 
 
 if __name__ == "__main__":

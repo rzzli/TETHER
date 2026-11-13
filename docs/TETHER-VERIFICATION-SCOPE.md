@@ -5,13 +5,14 @@ validation separately. A verified execution is not a validated scientific conclu
 The current interface is `tether-target-agents` 0.7.0 over
 `tether-target-engine` 0.5.0.
 
-**Current scope (12 November 2026):** new execution requires the registered
+**Current scope (13 November 2026):** new execution requires the registered
 computed-evidence policy described in [the architecture](FRAMEWORK.md#registered-computation).
 Source-inclusive replay rederives supported complete outputs; unknown computations
-are rejected. This does not validate arbitrary scientific methods. The descriptive
-clinical evaluator can still retain early positives while
-excluding immature follow-up and accepts predictions without run receipts. These
-paths must not support historical clinical-performance claims until corrected.
+are rejected. This does not validate arbitrary scientific methods. Fixed-horizon
+evaluation uses outcome-independent calendar maturity and full-cohort accounting.
+Production evaluation binds run receipts or an explicit external producer
+declaration; unverified diagnostics have a separate raw interface. These repairs
+do not qualify the clinical endpoint, historical data, model chronology or scorer.
 See [results and current scope](RESULTS.md).
 
 | Check | What it establishes | What it cannot establish |
@@ -23,6 +24,7 @@ See [results and current scope](RESULTS.md).
 | Outer-run verification | Exact engine dossier copy, complete inventory, launcher identity, journal and receipts agree | Compatibility with a different launcher or engine version |
 | Artifact-policy verification | Exact registered artifacts, parents, use, frame and controls agree | Scientific validity or automatic eligibility of every row in an allowed artifact |
 | `inspect-run` | Retained attempts, terminal state and declared accounting can be read | Completion of an interrupted run or permission to retry it |
+| Bound evaluation | Cohort, policy, labels, exact prediction bytes and stated producer checks agree; incomplete mature populations withhold primary metrics | Independent producer authentication, pre-label registration, valid clinical labels or a causal missingness/censoring model |
 
 ## Source and receipt anchors
 
@@ -40,6 +42,12 @@ Replay verification checks consumed responses against source-reconstructed
 requests, response order, selected IDs, usage and feedback. Unused entries do not
 become consumed evidence. A raw replay-file digest does not reconstruct that file's
 original whitespace or prove that undeclared inputs were absent.
+
+Evaluation's source checks occur within each source-inclusive run verification.
+Final rereads cover captured evaluation inputs and run artifacts; they do not
+lock or atomically verify all external sources across the cohort. External
+baseline references are declarations, not automatically verified files.
+See [evaluation contracts and missingness](FRAMEWORK.md#fixed-horizon-evaluation).
 
 ## Version compatibility
 

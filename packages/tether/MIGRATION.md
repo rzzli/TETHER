@@ -35,6 +35,28 @@ its exact semantic replay. Generic version-one byte verification remains support
 See [historical compatibility](../../docs/ARCHIVE.md) and
 [verification limits](../../docs/TETHER-VERIFICATION-SCOPE.md).
 
+## Evaluation migration
+
+The former `evaluate --predictions ...` command is now `evaluate-raw`. Its Python
+counterpart remains `tether_engine.evaluation.evaluate`; both report unverified
+prediction provenance. Their corrected report uses schema version 2. Existing
+prediction and outcome wire formats are unchanged; archived metric files retain
+their original semantics and must not be relabelled as corrected evaluations.
+
+`evaluate` now requires explicit cohort, producer and outcome manifests with
+their expected SHA-256 hashes. `evaluate-baseline` uses a separate external
+producer declaration. Both require an explicit fixed-horizon policy, including
+reporting lag. See [evaluation contracts](../../docs/FRAMEWORK.md#fixed-horizon-evaluation).
+
+These changes remain in the unreleased engine 0.5.0 / wrapper 0.7.0 development
+series. Retain the exact Git checkpoint and wheel hashes: a version string alone
+does not identify a development build. Source-inclusive engine verification can
+report `code_matches_current: false` for a same-policy run from an earlier build;
+the evaluation binding retains that fact. Exact outer/launcher verification
+still needs the original build and is not relaxed by this evaluation interface.
+Keep accepted environments and originals; use a separate installation for the
+new evaluation code. Portable cross-version verification remains future work.
+
 ## Computed evidence policy, November 2026
 
 The case/snapshot/packet wire version remains 2. New optional `derivation` fields

@@ -28,6 +28,7 @@ flowchart LR
 | Features and scoring | Hypothesis-bound derivations, configured contributions and explicit abstention | [features.py](../src/tether_engine/features.py), [scorer.py](../src/tether_engine/scorer.py) |
 | Persistence | Reserved output directories, attempts, usage and failures | [journal.py](../src/tether_engine/journal.py), [atomic.py](../src/tether_engine/atomic.py) |
 | Verification | Source, claim, feature, trace, accounting and replay consistency | [artifacts.py](../src/tether_engine/artifacts.py), [semantics.py](../src/tether_engine/semantics.py) |
+| Evaluation | Common fixed-horizon population, missingness and producer-bound predictions | [evaluation.py](../src/tether_engine/evaluation.py), [evaluation_binding.py](../src/tether_engine/evaluation_binding.py) |
 | Public interface | Process supervision, outer receipts and explicit artifact policy | [tether package](../packages/tether/src/tether/) |
 
 `study/` contains separate experimental execution and interpretation interfaces.
@@ -131,6 +132,81 @@ Each sealed packet is limited to 64 MiB. The default `single` layout fails for a
 oversized case; `--packet-layout bounded` explicitly permits multiple complete
 packets. A single oversized observation fails. Raw originals stay unchanged.
 See the [data layout](../data/README.md) and [artifact policy](TETHER-CATALOG-POLICY.md).
+
+## Fixed-horizon evaluation
+
+The evaluator is separate from evidence admission and agent execution. It does
+not create clinical labels or a validated scorer. Current clinical feasibility
+limits still apply.
+
+**Eligibility is independent of the observed outcome:** origin plus horizon plus
+the policy's reporting lag must be on or before the common label freeze. An early
+positive remains in the record but cannot make an immature origin eligible.
+Calendar maturity alone does not certify a negative; complete follow-up and
+eligible label availability are still required. Mixed endpoints or horizons are
+rejected rather than pooled.
+
+The schema-2 metrics report distinguishes registered, mature, label-resolved,
+prediction-available and scored cases, with case IDs and exclusion reasons.
+Primary Brier/AUROC/AP are withheld when the mature population has unresolved
+labels or missing predictions. Available-case diagnostics are explicitly
+conditional and must not be used to compare arms with different selected
+subsets. The population fingerprint excludes outcome values and prediction
+success. It does not establish that registration preceded label inspection.
+
+A missingness sensitivity report bounds possible mean Brier loss over the common
+mature population: known outcomes and predictions contribute their observed
+loss; unknown outcomes with probability `p` contribute a range between `p²` and
+`(1-p)²`; missing predictions contribute `[0, 1]`. These are mathematical
+completion bounds, not imputed outcomes, confidence intervals or a censoring
+model. Cluster IDs are retained; clustered inference remains unimplemented here.
+
+### Production input contracts
+
+All manifests use strict JSON; unknown fields, duplicate identities, conflicting
+dates and invalid numeric types are rejected. Three expected file hashes anchor
+the cohort, producer and outcomes. Those hashes establish byte identity, not
+independent provenance or a trusted preregistration timestamp.
+
+| Input | Required content |
+|---|---|
+| Cohort | Schema 1, kind `fixed_horizon_binary_cohort`, `cohort_id`, `label_freeze`, explicit `policy` and every registered member. |
+| Policy | Schema 1, one `endpoint`, positive `horizon_months`, nonnegative integer `reporting_lag_days`. |
+| Member | `case_id`, canonical full `case_fingerprint`, `origin`, `endpoint`, `horizon_months`, `cluster_id`. |
+| TETHER producer | Schema 1, kind `tether_run_predictions`, `arm_id`, exact `cohort_sha256` and one record per member. |
+| Sealed-run record | `case_id`, state `sealed_run`, `run_dir`, UUID `run_id`, exact `receipt_sha256` and `prediction_sha256`. |
+| Missing record | `case_id`, state `declared_missing`, and a reason; no fabricated probability or verified-execution claim. |
+| Outcomes | Existing schema-1 `Outcomes` contract; exact same membership, endpoint, horizon, origins, dependence clusters and common freeze. |
+
+The bound evaluator verifies each sealed run with its original sources, requires
+current admission/derivation checks, and matches its full case, reservation UUID
+and captured prediction bytes. Direct API archives without a run reservation
+remain available to raw diagnostics but cannot qualify this production route.
+Finalized failures and abstentions stay in the cohort. Final rereads detect changes
+to captured evaluation inputs and run artifacts. Original sources are checked
+during each source-inclusive run verification; they are not locked or rehashed
+as one cross-run transaction. Reports state these separate checking scopes.
+Results are published atomically to a fresh path.
+
+External baseline manifests use kind `external_baseline_predictions`, exact
+prediction-file hashes and explicit method/version, code/configuration/model
+references and chronology declarations. Code, configuration and model each need
+a reference declaration; unknown or inapplicable references require an explicit
+reason. Reference declarations are retained but their referenced files are not
+automatically opened or authenticated. Their guarantee is **binding to a
+producer declaration**, not verified TETHER execution or independently
+authenticated provenance. Unsupported provenance stays unknown. Neither route
+proves that predictions were produced before the author could access outcomes.
+
+`evaluate` selects the TETHER producer route, `evaluate-baseline` the external
+route, and `evaluate-raw` the unverified numerical diagnostic. The bound report
+keeps its provenance envelope separate from the metrics function's narrower
+scope. The raw API can infer a single endpoint/horizon with zero reporting lag
+for compatibility; it declares that inferred policy. Production requires the
+explicit cohort policy. All routes require opt-in for synthetic predictions.
+
+See the [CLI guide](../packages/tether/README.md#fixed-horizon-evaluation) and
+[migration notes](../packages/tether/MIGRATION.md#evaluation-migration).
 
 ## Trust boundary
 

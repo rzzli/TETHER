@@ -34,6 +34,28 @@ and deterministic execution consistency. Outer `--outputs-only` is rejected.
 Scientific correctness and clinical validity are not established by verification.
 See [verification limits](../../docs/TETHER-VERIFICATION-SCOPE.md).
 
+## Fixed-horizon evaluation
+
+Evaluation reads labels separately from agent execution. Provide a registered
+cohort, a producer manifest, labels and independently retained hashes:
+
+```text
+tether evaluate --cohort <cohort.json> --cohort-sha256 <hash> \
+  --producer <producer.json> --producer-sha256 <hash> \
+  --labels <outcomes.json> --labels-sha256 <hash> --output <fresh-report.json>
+```
+
+TETHER records bind exact engine run receipts and prediction bytes. For a wrapper
+run, the producer points to its `engine/` directory. External baselines use
+`evaluate-baseline` and a distinct producer declaration. `evaluate-raw` accepts
+unverified prediction files for diagnostics only. Fictional predictions require
+`--allow-synthetic` in every route.
+
+All registered cases remain accounted for. The full horizon plus reporting lag
+must elapse before a case enters the binary population; early positives do not
+bypass this rule. Missing labels or predictions withhold full-population metrics.
+See [contracts and report interpretation](../../docs/FRAMEWORK.md#fixed-horizon-evaluation).
+
 Failures preserve `tether-failure.json` and available journals. `inspect-run`
 reads them without restarting calls. A later attempt requires a new output path.
 This is trusted local execution, not an operating-system sandbox.
