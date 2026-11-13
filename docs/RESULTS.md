@@ -156,13 +156,22 @@ row tables. The comparison passed after correcting a fixture expectation from
 integer `0` to float `0.0` for declared float columns. Separate numeric controls
 covered imputation, feature selection, fixed scoring vectors and relative risk.
 The supervised run took 51 seconds, used 3.06 GB of peak Windows Job committed
-memory, read zero real rows and fitted zero models. The separate Linux route
-verified and installed 477 conda packages from 1.09 GB of archives. Its first
-fictional write smoke stopped at a Java build-label mismatch. An import-only
-diagnostic also reproduced intermittent Arrow shutdown failure. The installed
-cloud storage dependency conflicts with the author's pinned protobuf version.
-Linux write qualification, full author export, the pip layer, full input
-release and baseline metrics remain pending.
+memory, read zero real rows and fitted zero models.
+
+The separate Linux route verified and installed 477 conda packages from 1.09 GB
+of archives. It passed a two-row Spark Parquet write/read and Arrow conversion
+after recording the installed Java build label and explicitly shutting down
+Arrow's S3 runtime. On the same five verified source files, Arrow and Spark each
+decoded 13,544,471 projected rows and all 2,771 bounded prefix rows matched after
+a Spark write/read. The publication-year lookup accounts for 13,540,572 decoded
+rows. The 8.97-second check used 962 MB of sampled summed session RSS. It tested
+file formats and projections, including a regression for inherited Spark schema
+metadata in a narrower projection.
+
+Full Czech et al. reproduction remains incomplete. The installed cloud storage
+dependency conflicts with the author's pinned protobuf version. The local
+transport used the conda runtime and local files. The full source release,
+author exporter and fitted metrics were outside the completed checks.
 
 ## SciFact development measurements
 
@@ -287,6 +296,8 @@ digest alone. Original artifacts and failures remain unchanged.
 | Baseline preparation | Linux conda archive capture | `6c04214ea4dcd0b05c93508e05636d7bfd21de4095853d823777056db2766f41` |
 | Baseline preparation | Installed Linux conda package identity verification | `e307cdbf4a7fe3991849259a4a0e858b6c844c6736d3423567fa9791e38b163f` |
 | Baseline preparation | Installed Python dependency audit | `0be6a9aff4524cad749d1fab45fae56659af7694efa1d0f3dc7f080ae619dfe6` |
+| Baseline preparation | Linux two-row Spark write and Arrow conversion | `6070fd4997a2c4d1b8bae339d983beb601e05b1dfe0ba847ea4086e301533b73` |
+| Baseline preparation | Selected original-file transport qualification | `f772543aeaae1b91e825aafe93e1b17dfc5886340ab16239dee1bfdd964be1f1` |
 | S1 | SciFact decomposition | `f22ad12b46f6ccb182bd09d0cf6a4b08d3db9de8b22535b117040b67f7084a83` |
 | S2 | MultiVerS qualification | `bb21dfe9c08f01796457dcf634dcc9a9bc9082c9aec711e765d1b71b5a974ef4` |
 | S3 | SciFact comparison | `26fd14ed0cc4aea25f0f4b73be4297b4875d9fa0c2fd8826da3dad39ac4dc229` |
