@@ -8,6 +8,7 @@ from itertools import product
 import json
 from pathlib import Path
 import re
+import subprocess
 import sys
 
 
@@ -187,9 +188,20 @@ def replay(output):
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True, help="Fresh directory for CSV tables and summary")
+    parser.add_argument("--figures", action="store_true", help="Also render both figures with optional matplotlib")
     args = parser.parse_args(argv)
     try:
-        print(json.dumps(replay(args.output), indent=2, allow_nan=False))
+        summary = replay(args.output)
+        if args.figures:
+            plot_script = Path(__file__).with_name("plot.py")
+            figure_dir = args.output / "figures"
+            subprocess.run([sys.executable, "-I", "-B", str(plot_script), "--input", str(args.output),
+                            "--output", str(figure_dir)], check=True, stdout=subprocess.DEVNULL)
+            summary["figure_manifest"] = str(figure_dir / "plot-manifest.json")
+        print(json.dumps(summary, indent=2, allow_nan=False))
+    except subprocess.CalledProcessError as error:
+        print(f"temporal audit: tables written; figure generation exited with status {error.returncode}", file=sys.stderr)
+        return 2
     except (OSError, ValueError) as error:
         print(f"temporal audit: {error}", file=sys.stderr)
         return 2

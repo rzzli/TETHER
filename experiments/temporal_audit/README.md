@@ -12,11 +12,13 @@ python -I -B experiments/temporal_audit/replay.py --output temporal-tables
 
 The output directory must be fresh. `archive.csv` contains twelve release/source/date-field cells and their denominators. `endpoint.csv` contains four finite-source states by horizon and the extreme-assignment fractions for unresolved units. `registry.csv` distinguishes requested trial IDs from repeated row-to-trial links. `flow.csv` holds the denominators for the cohort figure. `summary.json` binds all four CSVs to the released aggregate and retained report digests. These checks establish arithmetic reproducibility from supplied counts.
 
-To regenerate both figures, use an environment with matplotlib (tested 3.6.2).
+To regenerate all tables and both figures in one command, use an environment with matplotlib (tested 3.6.2). The figures and their manifest appear under `temporal-study/figures/`.
 
 ```text
-python -I -B experiments/temporal_audit/plot.py --input temporal-tables --output temporal-figures
+python -I -B experiments/temporal_audit/replay.py --output temporal-study --figures
 ```
+
+The source-export suite passed on Windows and Ubuntu with Python 3.11. The figure build and four-column source replay were verified on Windows. The exact public-roster replay took 13.469 seconds using 129,179,976 bytes of local compressed input. The replay emits aggregate counts and uses separate working memory for decoded Arrow batches and pair sets.
 
 ## Replay the nine Open Targets partitions
 
@@ -28,7 +30,13 @@ With PyArrow 21.0.0 from TETHER's optional `ingest` extra, supply the directory 
 python -I -B experiments/temporal_audit/replay_open_targets.py --manifest experiments/temporal_audit/open-targets-roster.json --manifest-sha256 efe9b7eae38f62164b0577e11d4bcc9dd49c48b771eb2c8f8d85f2ccb19dc2c8 --root LOCAL_OT_ROOT --output temporal-source-check.json
 ```
 
-The replay hashes each source and reads only `targetId`, `diseaseId`, `evidenceDate` and `publicationDate`. Check the 12 filtered cells against `archive.csv`. The report also includes all nine full comparisons. Compare the counts and pair sets' cardinalities. Execution time and machine-specific manifest and code hashes can vary. The same 1,500 pinned files reproduced 815,991 rows and all 21 pair comparisons in a local 7.125-second source pass. Publisher completeness outside the roster and the causes of release differences remain unresolved.
+The replay hashes each source and reads only `targetId`, `diseaseId`, `evidenceDate` and `publicationDate`. Check the 12 filtered cells against `archive.csv`. The report also includes all nine full comparisons. Compare the counts and pair sets' cardinalities. Execution time and machine-specific manifest and code hashes can vary. The exact public roster reproduced 815,991 rows and all 21 pair comparisons. Publisher completeness outside the roster and the causes of release differences remain unresolved.
+
+## Study protocol
+
+For each source, compare complete literal target and disease IDs without remapping. Filter the 25.09 records separately on `evidenceDate` and `publicationDate`. The exclusive calendar cutoffs are November 25, 2022 for release 22.11 and September 19, 2024 for release 24.09. A row is selected only when its full reported calendar interval precedes the cutoff. The 12 cells retain their date disposition counts and the six `evidenceDate` cells form the primary descriptive comparison.
+
+The endpoint frame uses the earliest resolvable exact phase-2 entry per target–disease pair in 2016–2019. The published counts cover the 6,550 development pairs, with separate 36- and 60-month windows measured from each entry. The dispositions distinguish prior higher-phase origin exclusions, a recorded phase-3 candidate, no qualifying record in the finite source and unresolved cases. Literal drug–target–disease triples use separately reconstructed origins in the development projection. The 99 exploratory reserve pairs supply no outcome counts. The selected registry audit retains all 100 trails, including 18 withheld from registry expansion by the bridge rule. Joint registry start agreement requires a coherent reported actual start, interventional type, exact phase and equal or overlapping start intervals. Exact product and condition names are counted separately.
 
 ## Registry scope
 

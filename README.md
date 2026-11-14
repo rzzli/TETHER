@@ -12,7 +12,7 @@ TETHER is an **agent execution and evaluation harness** for drug-target research
 
 ## How it works
 
-> **Current real-data workflow:** collect source-linked Open Targets annotations for IL6R and rheumatoid arthritis, with coverage and missingness. Historical forecasting remains under development.
+> **Current real-data workflow:** collect source-linked Open Targets annotations for IL6R and rheumatoid arthritis, with coverage and missingness. Historical forecasting remains unqualified and deferred.
 
 ```mermaid
 flowchart LR

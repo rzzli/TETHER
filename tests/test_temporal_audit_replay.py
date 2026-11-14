@@ -1,6 +1,8 @@
 """Published-count conservation and dependency-free arithmetic replay."""
+from contextlib import redirect_stdout
 import copy
 import hashlib
+import io
 import json
 from pathlib import Path
 import tempfile
@@ -63,3 +65,15 @@ class TemporalAuditReplayTests(unittest.TestCase):
             with patch.object(replay, "SOURCE", wrong), self.assertRaisesRegex(ValueError, "digest mismatch"):
                 replay.replay(output)
             self.assertFalse(output.exists())
+
+    def test_combined_cli_routes_the_generated_tables_to_the_figure_script(self):
+        with tempfile.TemporaryDirectory() as folder, redirect_stdout(io.StringIO()) as stdout:
+            output = Path(folder) / "paper-outputs"
+            with patch.object(replay.subprocess, "run") as render:
+                self.assertEqual(replay.main(["--output", str(output), "--figures"]), 0)
+            self.assertTrue((output / "archive.csv").is_file())
+            command = render.call_args.args[0]
+            self.assertEqual(command[2:], ["-B", str(replay.SOURCE.with_name("plot.py")), "--input",
+                                           str(output), "--output", str(output / "figures")])
+            self.assertEqual(render.call_args.kwargs, {"check": True, "stdout": replay.subprocess.DEVNULL})
+            self.assertEqual(json.loads(stdout.getvalue())["figure_manifest"], str(output / "figures/plot-manifest.json"))
