@@ -18,7 +18,7 @@ import stat
 import time
 
 from tether_engine.serde import ContractError, freeze
-from .proofs import _identity, _no_links, _relative
+from .proofs import _handle_identity, _identity, _no_links, _relative
 
 
 def deadline_check(deadline):
@@ -53,7 +53,8 @@ def hash_file(path, deadline):
         raise ContractError("Stable input is not a regular file")
     digest, size = hashlib.sha256(), 0
     with path.open("rb") as stream:
-        if _identity(os.fstat(stream.fileno())) != _identity(before):
+        opened = os.fstat(stream.fileno())
+        if _identity(opened) != _identity(before):
             raise ContractError("Stable input changed before hashing")
         while True:
             deadline_check(deadline)
@@ -69,6 +70,7 @@ def hash_file(path, deadline):
     _no_links(path)
     if (
         _identity(before) != _identity(after)
+        or _handle_identity(opened) != _handle_identity(after)
         or _identity(after) != _identity(path.stat())
         or size != before.st_size
     ):
@@ -87,7 +89,8 @@ def read_file(path, deadline, max_bytes):
         raise ContractError("Stable input exceeds its read bound")
     chunks, size = [], 0
     with path.open("rb") as stream:
-        if _identity(os.fstat(stream.fileno())) != _identity(before):
+        opened = os.fstat(stream.fileno())
+        if _identity(opened) != _identity(before):
             raise ContractError("Stable input changed before read")
         while True:
             deadline_check(deadline)
@@ -103,6 +106,7 @@ def read_file(path, deadline, max_bytes):
     _no_links(path)
     if (
         _identity(before) != _identity(after)
+        or _handle_identity(opened) != _handle_identity(after)
         or _identity(after) != _identity(path.stat())
         or size != before.st_size
     ):

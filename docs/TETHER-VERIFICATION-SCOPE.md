@@ -137,6 +137,13 @@ preempt operating-system process creation or bound later outer verification.
 Windows-specific handle and path controls require Windows tests; portable checks
 do not imply identical platform guarantees.
 
+Study input readers use the Windows creation clock for path/descriptor identity
+and independently compare the descriptor change clock before and after reading.
+This avoids comparing different clock meanings on Python 3.14 while retaining
+replacement and in-read change checks. The focused reader suite passed on Windows
+Python 3.11 and 3.14; the installed public wrapper passed 146 tests on each. These
+results do not qualify other operating systems or arbitrary filesystem races.
+
 Wrapper metadata and journal reads are capped at 64 MiB; dossiers at 256 MiB. Bounded file
 reads reject links, reparse points and nonregular files and check file identity.
 These controls do not guarantee exclusive ownership of external files or survive

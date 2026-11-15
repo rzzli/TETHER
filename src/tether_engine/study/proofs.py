@@ -14,6 +14,9 @@ import stat
 from tether_engine.serde import ContractError, fingerprint, freeze
 
 
+_WINDOWS_IDENTITY = os.name == 'nt'
+
+
 def _need(condition, message):
     if not condition:
         raise ContractError(message)
@@ -57,7 +60,17 @@ def _no_links(path):
 
 
 def _identity(info):
-    return info.st_dev, info.st_ino, info.st_size, info.st_mtime_ns, info.st_ctime_ns
+    # On Windows Python 3.12+, use the explicit creation clock. Some builds
+    # expose creation time through path.stat().ctime but change time through
+    # fstat().ctime; those are different quantities even for an unchanged file.
+    # https://docs.python.org/3.14/library/os.html#os.stat_result
+    clock = getattr(info, 'st_birthtime_ns', info.st_ctime_ns) if _WINDOWS_IDENTITY else info.st_ctime_ns
+    return info.st_dev, info.st_ino, info.st_size, info.st_mtime_ns, clock
+
+
+def _handle_identity(info):
+    # Still compare the descriptor's change clock with itself before/after I/O.
+    return _identity(info) + (info.st_ctime_ns,)
 
 
 def capture_file(path: Path, logical_id: str) -> Mapping:
@@ -79,6 +92,7 @@ def capture_file(path: Path, logical_id: str) -> Mapping:
     _no_links(path)
     _need(
         _identity(before) == _identity(after) == _identity(path.stat())
+        and _handle_identity(opened) == _handle_identity(after)
         and total == before.st_size,
         "Proof file changed during read",
     )

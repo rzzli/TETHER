@@ -3,12 +3,14 @@
 import hashlib
 from pathlib import Path
 import tempfile
+import time
 from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
 from tether_engine.serde import ContractError, encode
 from tether_engine.study import proofs
+from tether_engine.study.stable_read import hash_file, read_file
 
 
 class StudyProofTests(unittest.TestCase):
@@ -142,11 +144,58 @@ class StudyProofTests(unittest.TestCase):
             }
             if calls == 2:
                 values["st_ino"] += 1
+            if hasattr(result, 'st_birthtime_ns'):
+                values['st_birthtime_ns'] = result.st_birthtime_ns
             return SimpleNamespace(**values)
 
         with patch.object(proofs.os, "fstat", side_effect=changing):
             with self.assertRaisesRegex(ContractError, "changed during"):
                 proofs.capture_file(self.root / "template.json", "template.json")
+
+    def windows_clocks(self, *, change_handle=False):
+        """Reproduce the distinct path/handle ctime meanings without OS mutation."""
+        original_stat, original_fstat = Path.stat, proofs.os.fstat
+        calls = 0
+        def fields(info, changed):
+            values = {name: getattr(info, name) for name in dir(info) if name.startswith('st_')}
+            values.update(st_birthtime_ns=100, st_ctime_ns=changed)
+            return SimpleNamespace(**values)
+        def path_stat(path, **kwargs):
+            return fields(original_stat(path, **kwargs), 100)
+        def handle_stat(descriptor):
+            nonlocal calls
+            calls += 1
+            return fields(original_fstat(descriptor), 201 if change_handle and calls > 1 else 200)
+        return path_stat, handle_stat
+
+    def test_windows_creation_and_handle_change_clocks_are_not_cross_compared(self):
+        path = self.root / 'template.json'
+        path_stat, handle_stat = self.windows_clocks()
+        with patch.object(proofs, '_WINDOWS_IDENTITY', True, create=True), \
+                patch.object(Path, 'stat', new=path_stat), patch.object(proofs.os, 'fstat', new=handle_stat):
+            self.assertGreater(proofs.capture_file(path, 'template.json')['bytes'], 0)
+            self.assertGreater(hash_file(path, time.monotonic() + 10)['bytes'], 0)
+            self.assertEqual(read_file(path, time.monotonic() + 10, 1024), path.read_bytes())
+
+    def test_changed_handle_clock_still_fails_windows_readers(self):
+        path = self.root / 'template.json'
+        for operation, reason in (
+            (lambda: proofs.capture_file(path, 'template.json'), 'changed during read'),
+            (lambda: hash_file(path, time.monotonic() + 10), 'changed while hashing'),
+            (lambda: read_file(path, time.monotonic() + 10, 1024), 'changed while reading'),
+        ):
+            path_stat, handle_stat = self.windows_clocks(change_handle=True)
+            with self.subTest(operation=reason), \
+                    patch.object(proofs, '_WINDOWS_IDENTITY', True, create=True), \
+                    patch.object(Path, 'stat', new=path_stat), patch.object(proofs.os, 'fstat', new=handle_stat):
+                with self.assertRaisesRegex(ContractError, reason):
+                    operation()
+
+    def test_posix_change_clock_remains_part_of_file_identity(self):
+        fields = dict(st_dev=1, st_ino=2, st_size=3, st_mtime_ns=4, st_birthtime_ns=5)
+        with patch.object(proofs, '_WINDOWS_IDENTITY', False, create=True):
+            self.assertNotEqual(proofs._identity(SimpleNamespace(**fields, st_ctime_ns=6)),
+                                proofs._identity(SimpleNamespace(**fields, st_ctime_ns=7)))
 
     def test_reparse_component_rejected_without_opening_file(self):
         original = Path.lstat
