@@ -9,7 +9,7 @@ from .serde import ContractError
 
 _CALENDAR = re.compile(r"([0-9]{4})(?:-([0-9]{2})(?:-([0-9]{2}))?)?")
 _INSTANT = re.compile(r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}"
-                      r"(?:\.[0-9]{1,6})?(?:Z|[+-][0-9]{2}:[0-9]{2})")
+                      r"(?:\.[0-9]{1,6})?(?:Z|[+-](?:[01][0-9]|2[0-3]):[0-5][0-9])")
 
 
 def utc_instant(value: datetime | str) -> datetime:
@@ -66,3 +66,23 @@ def calendar_bounds(value: date | str | int) -> CalendarBounds:
     return CalendarBounds('day' if day is not None else 'month' if month is not None else 'year',
                           datetime.combine(lower, time.min, timezone.utc),
                           datetime.combine(latest, time.max, timezone.utc))
+
+
+def publication_bounds_exclusion(published: date | None, year: int | None,
+                                 cutoff: datetime) -> str | None:
+    """Use the most precise consistent publication interval, without imputation."""
+    if year is not None and (type(year) is not int or not 1 <= year <= 9999):
+        raise ContractError('Invalid publication year')
+    if published is not None and type(published) is not date:
+        raise ContractError('Invalid publication date')
+    if published is not None and year is not None and published.year != year:
+        return 'publication_metadata_inconsistent'
+    if published is None and year is None:
+        return None
+    bounds = calendar_bounds(published if published is not None else year)
+    cutoff = utc_instant(cutoff)
+    if bounds.lower > cutoff:
+        return 'publication_after_origin'
+    if bounds.latest > cutoff:
+        return 'publication_timing_unresolved'
+    return None

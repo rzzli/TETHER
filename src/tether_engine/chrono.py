@@ -13,6 +13,7 @@ from .contracts import (Case, Category, Citation, EvidencePacket, GroundedObserv
 from .serde import ContractError, Frozen, decode, freeze, fingerprint, parse_json, read_json, safe_child
 from .provenance import InputGraph, catalog_index, check_role
 from .derivations import validate_descriptor, verify_observation
+from .temporal import publication_bounds_exclusion
 
 
 @dataclass(frozen=True)
@@ -125,24 +126,13 @@ class EvidenceStore:
 
 
 def publication_exclusion(observation, case: Case) -> str | None:
-    """Publication precision never substitutes for eligible information lineage.
+    """Check the reported publication interval without inventing a precise date.
 
-    A year overlapping origin is not a known exact publication date. It remains
-    usable only through the caller's complete availability/lineage admission;
-    no January/December date is imputed. Exact future dates/years and conflicting
-    date/year metadata remain ineligible. Computation dates are a separate clock.
+    A partially elapsed publication period is unresolved, not known future.
+    Missing publication metadata still relies on complete information lineage.
+    Computation dates are a separate clock and are not used here.
     """
-    published, year = observation.publication_date, observation.publication_year
-    if year is not None and (type(year) is not int or not 1 <= year <= 9999):
-        raise ContractError('Invalid publication year')
-    if published is not None and type(published) is not date:
-        raise ContractError('Invalid publication date')
-    if published is not None and year is not None and published.year != year:
-        return 'publication_metadata_inconsistent'
-    if (published is not None and published > case.origin or
-            year is not None and year > case.origin.year):
-        return 'publication_after_origin'
-    return None
+    return publication_bounds_exclusion(observation.publication_date, observation.publication_year, case.cutoff)
 
 
 def observation_exclusion(observation, artifact, graph: InputGraph, case: Case, artifact_inputs=None,

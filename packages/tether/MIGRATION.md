@@ -66,6 +66,20 @@ overlapping its cutoff no longer passes by padding the first month/day. Original
 dated qualification reports are unchanged and should be read under their recorded
 rules. These changes do not qualify scientific labels or authorize fitting.
 
+Publication eligibility is also stricter: a same-day publication without a time
+does not establish eligibility before that day's end, and a year-only publication
+overlapping the cutoff is `publication_timing_unresolved`. Previously, the latter
+passed with otherwise eligible information lineage. A consistent full date is
+used instead of its coarse year. Preserve old packets and qualification results;
+do not rewrite their dates to satisfy current checks. New source packets should
+retain supported precision and explicitly report unresolved publication timing.
+
+Normalization `2.3` applies that gate before writing new packets, rejects malformed
+supplied dates and reports partial `publicationDate` values that the day-only
+contract cannot represent. It retains `publicationYear` support. Existing `2.2`
+products and their original source-review results stay unchanged; a new build is
+a distinct product, and current revalidation may exclude formerly accepted rows.
+
 The former `evaluate --predictions ...` command is now `evaluate-raw`. Its Python
 counterpart remains `tether_engine.evaluation.evaluate`; both report unverified
 prediction provenance. Their corrected report uses schema version 2. Existing

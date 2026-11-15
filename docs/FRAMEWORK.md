@@ -83,6 +83,24 @@ panel checker uses the end of a reported publication period rather than inventin
 publication on its first day. Training-before-test ordering is a separate strict
 sequence constraint and is not relaxed by inclusive information availability.
 
+Reported publication dates receive a separate precision check. An exact day
+takes precedence over its consistent year; a day/year interval extending beyond
+the cutoff is withheld as `publication_timing_unresolved`. An interval entirely
+after the cutoff is `publication_after_origin`. This conservative rule does not
+invent a publication instant or label uncertainty as proven leakage. Missing
+publication metadata still requires complete eligible information lineage.
+Neither exclusion means biological absence. Original dated runs keep their
+recorded semantics; rechecking them under this stricter rule may change eligibility.
+
+The contemporary adapter uses normalization version `2.3` for the same check
+before packet construction. Invalid supplied dates are explicit rejections,
+not silently missing dates. A partial `publicationDate` that the existing day-only
+field cannot represent is rejected as `publication_precision_not_representable`;
+the raw source remains available for a future versioned representation. The
+separate `publicationYear` field remains supported. Publication timestamps are
+reduced conservatively to UTC day precision, while evidence/release timestamps
+are checked as independent source-row clocks. No existing packet is rewritten.
+
 ### Registered computation
 
 New runs seal admission policy `tether.derivation.v1`. The initial registry has

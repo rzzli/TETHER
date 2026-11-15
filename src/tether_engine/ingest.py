@@ -21,12 +21,13 @@ from .contracts import (Artifact, Availability, Case, Category, EvidencePacket, 
                         ScientificContext, Snapshot, SourceNode, TemporalClass)
 from .provenance import catalog_index, check_role
 from .journal import RunJournal
+from .temporal import calendar_bounds, publication_bounds_exclusion, utc_instant
 from .serde import (ContractError, Frozen, canonical, decode, encode, fingerprint, read_json,
                     parse_json, safe_child, sha256_file, write_json, MAX_NORMALIZED_JSON_BYTES)
 
 
 DATASETS = {"ot_target", "ot_disease", "ot_evidence", "hgnc_symbols"}
-NORMALIZATION_VERSION = "2.2"
+NORMALIZATION_VERSION = "2.3"
 REVIEW_CONTEXT_COLUMNS = ("textMiningSentences", "pmcIds", "studyOverview", "clinicalSignificances")
 TYPE_CATEGORIES = {"genetic_association": Category.GENETICS, "somatic_mutation": Category.GENETICS,
                    "rna_expression": Category.EXPRESSION, "animal_model": Category.PERTURBATION,
@@ -383,39 +384,51 @@ def _json_value(value):
 
 
 def _publication(row, cutoff):
+    """Keep source clocks distinct and agree with normalized publication admission."""
+    cutoff = utc_instant(cutoff)
     published, year, unknown = None, None, {}
     raw_year = row.get("publicationYear")
     if raw_year is not None:
-        if type(raw_year) is int or isinstance(raw_year, str) and raw_year.isdigit():
+        if type(raw_year) is int or type(raw_year) is str and re.fullmatch(r"[0-9]{4}", raw_year):
             year = int(raw_year)
-            if year > cutoff.year:
-                return None, year, unknown, "publication_after_origin"
+            if not 1 <= year <= 9999:
+                unknown['publication_year'] = 'unparseable_provider_value'
+                return None, None, unknown, 'publication_time_invalid'
         else:
             unknown["publication_year"] = "unparseable_provider_value"
+            return None, None, unknown, 'publication_time_invalid'
     for name in ("publicationDate", "evidenceDate", "releaseDate"):
         raw = row.get(name)
         if raw is None:
             continue
         try:
-            if isinstance(raw, datetime):
-                if raw.tzinfo is not None and raw > cutoff:
+            if isinstance(raw, datetime) or type(raw) is str and 'T' in raw:
+                exact = utc_instant(raw)
+                if exact > cutoff:
                     return None, year, unknown, "publication_after_origin"
-                value = raw.date()
-            elif isinstance(raw, date):
-                value = raw
+                value = exact.date()
+                # Only publication is stored as a day in the current contract.
+                # Evidence/release timestamps are independent source-row guards.
+                if name != 'publicationDate':
+                    continue
             else:
-                value = date.fromisoformat(str(raw)[:10])
-                if "T" in str(raw):
-                    exact = datetime.fromisoformat(str(raw).replace("Z", "+00:00"))
-                    if exact.tzinfo and exact > cutoff:
-                        return None, year, unknown, "publication_after_origin"
-            if value > cutoff.date():
-                return value, year, unknown, "publication_after_origin"
+                bounds = calendar_bounds(raw)
+                if name == 'publicationDate' and bounds.precision != 'day':
+                    unknown[name] = 'source_precision_not_representable_in_publication_date'
+                    return None, year, unknown, 'publication_precision_not_representable'
+                if name != 'publicationDate':
+                    if bounds.lower > cutoff:
+                        return published, year, unknown, 'publication_after_origin'
+                    if bounds.latest > cutoff:
+                        return published, year, unknown, 'publication_timing_unresolved'
+                    continue
+                value = bounds.lower.date()
             if name == "publicationDate":
                 published = value
-        except ValueError:
+        except ContractError:
             unknown[name] = "unparseable_provider_value"
-    return published, year, unknown, None
+            return published, year, unknown, 'publication_time_invalid'
+    return published, year, unknown, publication_bounds_exclusion(published, year, cutoff)
 
 
 def _packet_groups(observations, layout):

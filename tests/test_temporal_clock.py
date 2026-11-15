@@ -5,6 +5,7 @@ import unittest
 from tether_engine.contracts import Availability
 from tether_engine.serde import ContractError
 from tether_engine.temporal import available_by, calendar_bounds, utc_instant
+from tether_engine.ingest import _publication
 from tools.science.qualification import validate_feature_chronology
 
 
@@ -62,6 +63,28 @@ class TemporalClockRegressions(unittest.TestCase):
         for value in ('2024-02-30', '2024-00', '2024-01-00', True, None, '2024-W01'):
             with self.subTest(calendar=value), self.assertRaisesRegex(ContractError, '[Cc]alendar time'):
                 calendar_bounds(value)
+
+    def test_invalid_offset_minutes_are_not_normalized_into_another_offset(self):
+        with self.assertRaisesRegex(ContractError, 'explicit timezone-aware ISO instant'):
+            utc_instant('2024-01-01T00:00:00+00:99')
+
+    def test_ingestion_publication_clock_agrees_with_admission(self):
+        cutoff = utc_instant('2023-01-01T12:00:00Z')
+        for row, reason in (
+            ({'publicationDate': '2023-01-01'}, 'publication_timing_unresolved'),
+            ({'publicationYear': 2023}, 'publication_timing_unresolved'),
+            ({'publicationYear': 2024}, 'publication_after_origin'),
+            ({'publicationDate': '2022-12-31', 'publicationYear': 2022}, None),
+            ({'publicationDate': '2022-12-31', 'publicationYear': 2021}, 'publication_metadata_inconsistent'),
+            ({'publicationDate': '2023-01'}, 'publication_precision_not_representable'),
+            ({'publicationDate': '2022-12-31junk'}, 'publication_time_invalid'),
+            ({'publicationYear': True}, 'publication_time_invalid'),
+            ({'publicationDate': '2023-01-01T00:00:00+00:99'}, 'publication_time_invalid'),
+            ({'evidenceDate': '2023-01-01'}, 'publication_timing_unresolved'),
+            ({'releaseDate': '2023-01-01'}, 'publication_timing_unresolved'),
+        ):
+            with self.subTest(row=row):
+                self.assertEqual(_publication(row, cutoff)[3], reason)
 
 
 if __name__ == '__main__':
