@@ -212,7 +212,9 @@ def prepare_policy_run(output, request):
     seal_descriptor = _publish(output, POLICY_DIR + "/binding.json", canonical(seal) + b"\n", deadline)
     # Repeat admission against the actual copied controls; this parses eligible
     # packets and publication dates before dispatch, without constructing a backend.
-    verify_policy_run(output, seal_descriptor, check_engine=False)
+    # This root map was explicitly selected by the caller's PolicyRequest.
+    # Verification of an archived binding never recovers grants from its copy.
+    verify_policy_run(output, seal_descriptor, check_engine=False, source_roots=tuple(roots.values()))
     return seal_descriptor
 
 
@@ -236,7 +238,7 @@ def policy_engine_args(output, argv, descriptor):
     return result
 
 
-def verify_policy_run(output, descriptor, *, check_engine=True):
+def verify_policy_run(output, descriptor, *, check_engine=True, source_roots=(), preflight_only=False):
     """Reconstruct from copied controls; originals remain required for raw proof."""
     output = Path(output).absolute()
     deadline = time.monotonic() + PREPARATION_SECONDS
@@ -269,6 +271,19 @@ def verify_policy_run(output, descriptor, *, check_engine=True):
          seal["original_control_paths"]["source_catalog"], "original source catalog location differs")
     decision = _decision(controls["policy"], controls["snapshot"], controls["case"], roots,
                          seal["use_id"], seal["frame_sha256"])
+    from tether_engine.source_access import SourceAccess, source_child
+    from tether_engine.chrono import admit_snapshot
+    use = _selected_use(controls['policy'], seal['use_id'])
+    source_paths = []
+    for entry in decision['binding']['inventory']:
+        base = output / POLICY_DIR / 'inputs' if entry['root_alias'] == use['snapshot_root_alias'] else Path(roots[entry['root_alias']])
+        source_paths.append(source_child(base, entry['relative_path']))
+        if entry['receipt'] is not None:
+            ref = entry['receipt']
+            source_paths.append(source_child(Path(roots[ref['root_alias']]), ref['relative_path']))
+    source_files = SourceAccess.for_run(output, source_roots).prepare(source_paths, deadline=deadline)
+    if preflight_only:
+        return dict(status='source_paths_authorized', semantic_consistency='not_checked')
     source_nodes = {node["source_id"]: node for node in controls["snapshot"]["sources"]}
     need(canonical(decision["binding"]) == canonical(controls["decision"]), "policy decision differs")
     need(canonical(decision["projection"]) == canonical(controls["projection"]), "policy projection differs")
@@ -285,14 +300,15 @@ def verify_policy_run(output, descriptor, *, check_engine=True):
             _check_hash(checked_path(output, relative), entry, deadline)
             expected_copies.append(proof)
         else:
-            path = checked_path(Path(roots[entry["root_alias"]]), entry["relative_path"])
-            _check_hash(path, entry, deadline)
+            path = source_child(Path(roots[entry["root_alias"]]), entry["relative_path"])
+            observed_hash, observed_size = source_files.digest_size(path, deadline=deadline)
+            need(observed_hash == entry['sha256'] and observed_size == entry['bytes'], 'source hash/size differs: ' + str(path))
             expected_external.append(dict(source_id=entry["source_id"], path=str(path),
                                           sha256=entry["sha256"], bytes=entry["bytes"]))
         if entry["receipt"] is not None:
             ref = entry["receipt"]
-            path = checked_path(Path(roots[ref["root_alias"]]), ref["relative_path"])
-            original = _read(path, deadline)
+            path = source_child(Path(roots[ref["root_alias"]]), ref["relative_path"])
+            original = source_files.read(path, CONTROL_LIMIT, deadline=deadline)
             relative = POLICY_DIR + "/receipts/" + ref["sha256"] + ".json"
             archived = _read(checked_path(output, relative), deadline)
             need(original == archived and _descriptor("", archived)["sha256"] == ref["sha256"],
@@ -307,8 +323,8 @@ def verify_policy_run(output, descriptor, *, check_engine=True):
                               catalog=POLICY_DIR + "/projection.json")
     need(seal["execution"] == expected_execution, "execution controls differ")
     case = decode(Case, controls["case"])
-    store = load_snapshot(checked_path(output, expected_execution["snapshot"]), case,
-                          checked_path(output, expected_execution["catalog"]))
+    store = admit_snapshot(decode(Snapshot, controls['execution_snapshot']), case, output / POLICY_DIR / 'inputs',
+                           controls['projection'], source_files=source_files)
     if check_engine:
         inputs = parse_json(_read(output / "engine/inputs.json", deadline))
         run = parse_json(_read(output / "engine/run.json", deadline))

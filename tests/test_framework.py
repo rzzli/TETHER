@@ -387,28 +387,28 @@ class FrameworkTests(unittest.TestCase):
         result = run_workflow(self.case, store, ExtractiveBackend(), self.model)
         output = self.root / "run"
         digest = write_run(output, result, store, self.model)
-        check = verify_run(output, digest)
+        check = verify_run(output, digest, source_roots=(self.root,))
         self.assertEqual(check["outputs"], 8)
         self.assertTrue(check["external_anchor_checked"])
         with self.assertRaises(FileExistsError):
             write_run(output, result, store, self.model)
         (output / "prediction.json").write_text("{}", encoding="utf-8")
         with self.assertRaisesRegex(ContractError, "integrity failure"):
-            verify_run(output, digest)
+            verify_run(output, digest, source_roots=(self.root,))
 
     def test_receipt_anchor_requires_exact_hex_and_accepts_uppercase(self):
         store = self.store()
         output = self.root / "anchored-run"
         digest = write_run(output, run_workflow(self.case, store, ExtractiveBackend(), self.model), store, self.model)
-        self.assertFalse(verify_run(output)["external_anchor_checked"])
-        self.assertTrue(verify_run(output, digest)["external_anchor_checked"])
-        self.assertTrue(verify_run(output, digest.upper())["external_anchor_checked"])
+        self.assertFalse(verify_run(output, source_roots=(self.root,))["external_anchor_checked"])
+        self.assertTrue(verify_run(output, digest, source_roots=(self.root,))["external_anchor_checked"])
+        self.assertTrue(verify_run(output, digest.upper(), source_roots=(self.root,))["external_anchor_checked"])
         for invalid in ("", " ", "0" * 63, "0" * 65, "g" * 64, digest + "\n", 0, False):
             with self.subTest(anchor=repr(invalid)):
                 with self.assertRaisesRegex(ContractError, "64 hexadecimal"):
-                    verify_run(output, invalid)
+                    verify_run(output, invalid, source_roots=(self.root,))
         with self.assertRaisesRegex(ContractError, "anchored receipt hash mismatch"):
-            verify_run(output, "0" * 64)
+            verify_run(output, "0" * 64, source_roots=(self.root,))
 
     def test_source_tampering_is_detected_and_outputs_only_is_explicit(self):
         store = self.store()
@@ -416,8 +416,8 @@ class FrameworkTests(unittest.TestCase):
         write_run(output, run_workflow(self.case, store, ExtractiveBackend(), self.model), store, self.model)
         (self.fixture / "evidence.json").write_text("{}", encoding="utf-8")
         with self.assertRaisesRegex(ContractError, "Source integrity"):
-            verify_run(output)
-        self.assertEqual(verify_run(output, verify_sources=False)["source_artifacts_checked"], 0)
+            verify_run(output, source_roots=(self.root,))
+        self.assertEqual(verify_run(output, verify_sources=False, source_roots=(self.root,))["source_artifacts_checked"], 0)
 
 
 class EvaluationTests(unittest.TestCase):

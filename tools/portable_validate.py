@@ -29,6 +29,7 @@ TEST_MODULES = (
     "tests.test_derivation_source_envelope",
     "tests.test_store_temporal_hardening",
     "tests.test_temporal_clock",
+    "tests.test_source_authority",
     "tests.test_run_sealing",
     "tests.test_journal_read_bounds",
     "tests.test_journal_seal_boundary",

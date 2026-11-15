@@ -25,9 +25,9 @@ class BoundedReplay(ReplayBackend):
         return bounded_request(request, self.policy)
 
 
-def replay(source, output, expected_receipt):
+def replay(source, output, expected_receipt, *, source_roots=()):
     # Verify the supplied source run first; never dispatch or recover uncertain attempts.
-    verify_run(source, expected_receipt)
+    verify_run(source, expected_receipt, source_roots=source_roots)
     inputs = read_json(source / 'inputs.json'); run = read_json(source / 'run.json')
     if run['status'] != 'completed' or run['backend_id'] != 'local-structured-selection-v1':
         raise ContractError('Replay requires a completed explicit local-model run')
@@ -56,7 +56,7 @@ def replay(source, output, expected_receipt):
             disabled=tuple(Category(x) for x in inputs['configuration']['disabled']),
             review_enabled=inputs['configuration']['review_enabled'], journal=journal)
         receipt = write_run(output, result, store, None, journal)
-        verified = verify_run(output, receipt)
+        verified = verify_run(output, receipt, source_roots=source_roots)
         for name in ['ledger.json', 'features.json', 'prediction.json']:
             if fingerprint(read_json(output / name)) != fingerprint(read_json(source / name)):
                 raise ContractError('Replay differs from original derived output: ' + name)
@@ -74,7 +74,8 @@ if __name__ == '__main__':
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--receipt-sha256', required=True)
     parser.add_argument('--report', type=Path, required=True)
+    parser.add_argument('--source-root', type=Path, action='append', default=[])
     args = parser.parse_args()
     if args.report.exists():
         raise ContractError('Replay report already exists')
-    write_json(args.report, replay(args.source, args.output, args.receipt_sha256))
+    write_json(args.report, replay(args.source, args.output, args.receipt_sha256, source_roots=args.source_root))

@@ -90,7 +90,7 @@ def immutable_evidence(root):
             rejected += 1
     output = root / "run"
     anchor = write_run(output, result, store, model)
-    checked = verify_run(output, anchor)
+    checked = verify_run(output, anchor, source_roots=(root,))
     return report("Nested store, claim and finalized state remain immutable",
                   rejected == len(values) and checked["semantic_consistency"] == "verified",
                   mutation_attempts=len(values), mutations_rejected=rejected,
@@ -128,7 +128,7 @@ def provider_failures(root):
         finally:
             journal.close()
         inspection = inspect_run(output)
-        checked = verify_run(output)
+        checked = verify_run(output, source_roots=(root,))
         results.append({"exception": kind.__name__, "calls": result.calls,
                         "status": result.status, "probability": result.prediction.probability,
                         "durable_events": inspection["durable_events"],
@@ -159,7 +159,7 @@ def semantic_output_binding(root):
     receipt = read_json(output / "receipt.json")
     receipt["outputs"]["features.json"] = sha256_file(output / "features.json")
     write_json(output / "receipt.json", receipt)
-    error = rejection(lambda: verify_run(output))
+    error = rejection(lambda: verify_run(output, source_roots=(root,)))
     return report("Reject feature/ledger inconsistency despite matching local byte hashes",
                   error is not None, error=error)
 
@@ -189,7 +189,7 @@ def archived_catalog_policy(root):
     anchor = write_run(output, result, store, None)
     write_json(catalog, {"schema_version": 1, "datasets": [
         {"dataset_id": "synthetic_fixture", "roles": ["evaluation_only"]}]})
-    checked = verify_run(output, anchor)
+    checked = verify_run(output, anchor, source_roots=(root,))
     archived = read_json(output / "inputs.json")["catalog_policy"]
     return report("Verify against the effective archived admission policy",
                   fingerprint(archived) == fingerprint(policy) and
@@ -255,7 +255,7 @@ def new_computation_old_inputs(root):
     value = result.features.values["genetic_support"].value
     output = root / "qualified-computation"
     anchor = write_run(output, result, store, None)
-    checked = verify_run(output, anchor)
+    checked = verify_run(output, anchor, source_roots=(root,))
 
     # A valid transform cannot make a future annotation historically eligible.
     source["availability"]["annotation_public_at"] = date(case.origin.year + 1, 1, 1)

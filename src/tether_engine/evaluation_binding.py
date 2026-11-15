@@ -18,6 +18,7 @@ from .artifacts import ADMISSION_POLICY, receipt_policy, verify_run
 from .contracts import Case
 from .evaluation import EvaluationPolicy, Outcomes, evaluate
 from .scorer import Prediction
+from .source_access import SourceAccess, local_path, source_child
 from .serde import (ContractError, Frozen, MAX_NORMALIZED_JSON_BYTES,
                     decode, encode, fingerprint, parse_json, safe_child, sha256_file)
 
@@ -112,22 +113,32 @@ def _version(value):
 
 def _path(base, value):
     path = Path(_text(value, 'Artifact path'))
-    return path.resolve() if path.is_absolute() else safe_child(base, value)
+    return local_path(path) if path.is_absolute() else source_child(base, value)
 
 
 class _PinnedInputs:
     """Bounded captured JSON bytes plus final rereads, not a hostile-user sandbox."""
-    def __init__(self):
+    def __init__(self, *, source_access=None, controls=()):
         self.pins = {}
+        self.source_access = source_access
+        self.controls = frozenset(local_path(Path(path).absolute()) for path in controls)
 
     def pin(self, path, expected):
-        path, expected = Path(path).resolve(), _hash(expected)
+        path, expected = local_path(Path(path).absolute()), _hash(expected)
+        if self.source_access is not None and path not in self.controls:
+            self.source_access.authorize(path)
         _need(path not in self.pins or self.pins[path] == expected, 'Conflicting evaluation input hashes')
         self.pins[path] = expected
         return path
 
     def read(self, path, expected, maximum=MAX_NORMALIZED_JSON_BYTES):
         path = self.pin(path, expected)
+        if self.source_access is not None:
+            authority = SourceAccess.for_run(path.parent) if path in self.controls else self.source_access
+            files = authority.prepare([path])
+            payload = files.read(path, maximum)
+            _need(hashlib.sha256(payload).hexdigest() == expected, 'Evaluation input SHA-256 differs: ' + str(path))
+            return payload
         try:
             before = path.stat()
             _need(stat.S_ISREG(before.st_mode) and before.st_size <= maximum,
@@ -149,7 +160,11 @@ class _PinnedInputs:
     def recheck(self):
         for path, expected in self.pins.items():
             try:
-                actual = sha256_file(path)
+                if self.source_access is None:
+                    actual = sha256_file(path)
+                else:
+                    authority = SourceAccess.for_run(path.parent) if path in self.controls else self.source_access
+                    actual = authority.prepare([path]).digest_size(path)[0]
             except OSError as error:
                 raise ContractError('Evaluation input became unavailable: ' + str(path)) from error
             _need(actual == expected, 'Evaluation input changed after verification: ' + str(path))
@@ -196,7 +211,7 @@ def _null_prediction(member, reason, *, synthetic=False):
                       'abstained', None, reason, None, synthetic, None, None, None, {})
 
 
-def _tether_predictions(document, base, members, pins):
+def _tether_predictions(document, base, members, pins, *, source_roots=()):
     _object(document, ('schema_version', 'kind', 'arm_id', 'cohort_sha256', 'records'), 'TETHER producer manifest')
     records = _membership(document['records'], members)
     predictions, bindings, run_ids = [], [], set()
@@ -227,11 +242,11 @@ def _tether_predictions(document, base, members, pins):
         _need(receipt['outputs'].get('prediction.json') == row['prediction_sha256'],
               'Prediction bytes differ from producer or run receipt')
         for name, digest in receipt['outputs'].items():
-            pins.pin(safe_child(output, name), digest)
+            pins.pin(source_child(output, name), digest)
         auxiliary = receipt.get('auxiliary_outputs', {})
         _need(type(auxiliary) is dict, 'Invalid auxiliary output inventory')
         for name, digest in auxiliary.items():
-            pins.pin(safe_child(output, name), digest)
+            pins.pin(source_child(output, name), digest)
         required = ('inputs.json', 'run.json', 'journal.jsonl')
         _need(all(name in receipt['outputs'] for name in required), 'Incomplete production output inventory')
         inputs = pins.json(output/'inputs.json', receipt['outputs']['inputs.json'])
@@ -253,7 +268,7 @@ def _tether_predictions(document, base, members, pins):
               'Run case origin, endpoint or horizon differs from cohort')
         _forecast_identity(prediction, member)
         try:
-            verified = verify_run(output, row['receipt_sha256'], verify_sources=True)
+            verified = verify_run(output, row['receipt_sha256'], verify_sources=True, source_roots=source_roots)
         except OSError as error:
             raise ContractError('Source-inclusive producer verification failed') from error
         _need(verified.get('byte_integrity') == 'verified'
@@ -339,7 +354,7 @@ def _external_predictions(document, base, members, pins):
 
 
 def evaluate_bound(cohort_path, cohort_sha256, producer_path, producer_sha256, labels_path, labels_sha256,
-                   *, allow_synthetic=False, expected_producer_kind='tether_run_predictions'):
+                   *, allow_synthetic=False, expected_producer_kind='tether_run_predictions', source_roots=()):
     """Verify selected producer bytes before reading labels; never dispatch or repair.
 
     Engine source-inclusive semantics and external producer declarations are
@@ -352,17 +367,21 @@ def evaluate_bound(cohort_path, cohort_sha256, producer_path, producer_sha256, l
           'Unsupported evaluation producer kind')
     for digest in (cohort_sha256, producer_sha256, labels_sha256):
         _hash(digest)
-    pins = _PinnedInputs()
+    producer_path = local_path(Path(producer_path).absolute())
+    authority = SourceAccess.for_run(producer_path.parent, source_roots)
+    pins = _PinnedInputs(source_access=authority, controls=(cohort_path, producer_path, labels_path))
     cohort, members = _cohort(pins.json(Path(cohort_path), cohort_sha256))
-    producer_path = Path(producer_path).resolve()
     producer = pins.json(producer_path, producer_sha256)
     _need(type(producer) is dict, 'Producer manifest must be an object')
     _version(producer.get('schema_version'))
     _need(producer.get('kind') == expected_producer_kind, 'Producer kind differs from selected evaluation route')
     _need(producer.get('cohort_sha256') == cohort_sha256, 'Producer cohort SHA-256 differs')
     _text(producer.get('arm_id'), 'Producer arm ID')
-    loader = _tether_predictions if expected_producer_kind == 'tether_run_predictions' else _external_predictions
-    predictions, cases, declaration = loader(producer, producer_path.parent, members, pins)
+    if expected_producer_kind == 'tether_run_predictions':
+        predictions, cases, declaration = _tether_predictions(producer, producer_path.parent, members, pins,
+                                                             source_roots=source_roots)
+    else:
+        predictions, cases, declaration = _external_predictions(producer, producer_path.parent, members, pins)
     # Check the exact captured versions before opening any outcome values.
     pins.recheck()
     labels = decode(Outcomes, pins.json(Path(labels_path), labels_sha256), 'outcomes')

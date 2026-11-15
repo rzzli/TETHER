@@ -2,6 +2,7 @@
 import copy
 import importlib.util
 import unittest
+from unittest.mock import patch
 
 from tether_engine.agents import ExtractiveBackend
 from tether_engine.artifacts import write_run
@@ -45,6 +46,17 @@ class PilotAuditTests(unittest.TestCase):
         run_dir = self.fixture.root / ("run-" + case_id)
         write_run(run_dir, result, store, None)
         return run_dir, case_dir
+
+    def test_missing_original_root_stops_before_pilot_dispatch(self):
+        from tools.framework.run_pilot import main
+        output = self.fixture.root / 'denied-pilot'
+        argv = ['run_pilot', '--bundle', str(self.bundle), '--catalog', str(self.fixture.catalog),
+                '--output', str(output)]
+        with patch('sys.argv', argv), patch('tools.framework.run_pilot.subprocess.run') as dispatch:
+            with self.assertRaisesRegex(ContractError, 'source-root'):
+                main()
+        dispatch.assert_not_called()
+        self.assertFalse(output.exists())
 
     def test_all_ten_cases_audit_twenty_distinct_original_rows_and_mappings(self):
         audit = SourceAudit()

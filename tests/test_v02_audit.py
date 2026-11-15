@@ -58,7 +58,7 @@ class AuditVerificationTests(unittest.TestCase):
                 write_json(self.output / "run.json", {**original, key: value})
                 self.rehash_outputs()
                 with self.assertRaisesRegex(ContractError, "Semantic"):
-                    verify_run(self.output)
+                    verify_run(self.output, source_roots=(self.root,))
 
     def test_rehashed_journal_claim_different_from_ledger_is_rejected(self):
         events = [__import__("json").loads(line) for line in (self.output / "trace.jsonl").read_text().splitlines()]
@@ -73,10 +73,10 @@ class AuditVerificationTests(unittest.TestCase):
             (self.output / name).write_bytes(b"".join(canonical(item) + b"\n" for item in events))
         self.rehash_outputs()
         with self.assertRaisesRegex(ContractError, "Semantic"):
-            verify_run(self.output)
+            verify_run(self.output, source_roots=(self.root,))
 
     def test_resealed_claim_not_selected_by_review_is_rejected(self):
-        self.assertEqual(verify_run(self.output)["semantic_consistency"], "verified")
+        self.assertEqual(verify_run(self.output, source_roots=(self.root,))["semantic_consistency"], "verified")
         events = [__import__("json").loads(line) for line in (self.output / "trace.jsonl").read_text().splitlines()]
         review = next(item for item in events if item["event"] == "review" and item["details"]["selected"])
         review["details"]["selected"] = []
@@ -89,15 +89,15 @@ class AuditVerificationTests(unittest.TestCase):
             (self.output / name).write_bytes(b"".join(canonical(item) + b"\n" for item in events))
         self.rehash_outputs()
         with self.assertRaisesRegex(ContractError, "claim was not selected by its review"):
-            verify_run(self.output)
+            verify_run(self.output, source_roots=(self.root,))
 
     def test_resealed_dossier_requires_source_derived_rendering(self):
-        self.assertEqual(verify_run(self.output)["semantic_consistency"], "verified")
+        self.assertEqual(verify_run(self.output, source_roots=(self.root,))["semantic_consistency"], "verified")
         with (self.output / "dossier.md").open("ab") as stream:
             stream.write(b"\nInvented therapeutic conclusion.\n")
         self.rehash_outputs()
         with self.assertRaisesRegex(ContractError, "dossier prose differs"):
-            verify_run(self.output)
+            verify_run(self.output, source_roots=(self.root,))
 
     def test_omitted_raw_parent_proof_is_rejected_even_without_source_reads(self):
         receipt = read_json(self.output / "receipt.json")
@@ -107,10 +107,10 @@ class AuditVerificationTests(unittest.TestCase):
         for verify_sources in (True, False):
             with self.subTest(verify_sources=verify_sources):
                 with self.assertRaisesRegex(ContractError, "Semantic"):
-                    verify_run(self.output, verify_sources=verify_sources)
+                    verify_run(self.output, verify_sources=verify_sources, source_roots=(self.root,))
 
     def test_new_request_is_sealed_and_legacy_v2_without_auxiliary_remains_valid(self):
-        self.assertEqual(verify_run(self.output)["semantic_consistency"], "verified")
+        self.assertEqual(verify_run(self.output, source_roots=(self.root,))["semantic_consistency"], "verified")
         output = self.root / "with-request"
         journal = RunJournal(output)
         try:
@@ -119,10 +119,10 @@ class AuditVerificationTests(unittest.TestCase):
             write_run(output, result, self.store, self.model, journal)
         finally:
             journal.close()
-        self.assertEqual(verify_run(output)["auxiliary_outputs_checked"], 1)
+        self.assertEqual(verify_run(output, source_roots=(self.root,))["auxiliary_outputs_checked"], 1)
         write_json(output / "request.json", {"case": "changed"})
         with self.assertRaisesRegex(ContractError, "auxiliary output integrity"):
-            verify_run(output)
+            verify_run(output, source_roots=(self.root,))
 
     def test_indexed_ledger_lookup_retains_capability_gates(self):
         ledger = EvidenceLedger(self.case, self.store)
@@ -149,7 +149,7 @@ class AuditVerificationTests(unittest.TestCase):
         self.assertIsNone(result.prediction.probability)
         output = self.root / "budget-run"
         write_run(output, result, self.store, self.model)
-        self.assertEqual(verify_run(output)["semantic_consistency"], "verified")
+        self.assertEqual(verify_run(output, source_roots=(self.root,))["semantic_consistency"], "verified")
 
     def test_verification_reuses_publication_eligibility_gate(self):
         claim = self.result.claims[0]
@@ -177,7 +177,7 @@ class AuditVerificationTests(unittest.TestCase):
             while stream.tell() <= 64 * 1024 * 1024:
                 stream.write(chunk)
         self.rehash_outputs()
-        self.assertEqual(verify_run(self.output)["semantic_consistency"], "verified")
+        self.assertEqual(verify_run(self.output, source_roots=(self.root,))["semantic_consistency"], "verified")
         with self.assertRaisesRegex(ContractError, "64 MiB"):
             read_json(path)
 

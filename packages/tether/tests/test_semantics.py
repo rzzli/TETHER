@@ -59,7 +59,7 @@ class SemanticBoundaryTests(unittest.TestCase):
 
     def test_real_completed_run_is_reconstructed(self):
         target, digest = self.write()
-        result = layer.verify_engine(target, digest)
+        result = layer.verify_engine(target, digest, source_roots=(self.root,))
         self.assertEqual(result["tether_semantics"]["dossier_reconstruction"], "verified")
         self.assertTrue(result["external_anchor_checked"])
 
@@ -70,30 +70,30 @@ class SemanticBoundaryTests(unittest.TestCase):
                 coverage["genetics"]["status"] = status
                 target, digest = self.forge(replace(self.result, coverage=coverage), status)
                 with self.assertRaisesRegex(ContractError, "coverage status"):
-                    verify_run(target, digest)
+                    verify_run(target, digest, source_roots=(self.root,))
                 with self.assertRaisesRegex(ContractError, "coverage status"):
-                    layer.verify_engine(target, digest)
+                    layer.verify_engine(target, digest, source_roots=(self.root,))
 
     def test_review_selection_cannot_differ_from_committed_claims(self):
         events = encode(self.result.trace)
         next(e for e in events if e["event"] == "review")["details"]["selected"] = []
         target, digest = self.forge(replace(self.result, trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "claim was not selected"):
-            layer.verify_engine(target, digest)
+            layer.verify_engine(target, digest, source_roots=(self.root,))
 
     def test_claims_cannot_follow_rejected_review(self):
         events = encode(self.result.trace)
         next(e for e in events if e["event"] == "review")["details"]["problems"] = ["fictional rejection"]
         target, digest = self.forge(replace(self.result, trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "accepted active review"):
-            layer.verify_engine(target, digest)
+            layer.verify_engine(target, digest, source_roots=(self.root,))
 
     def test_review_usage_must_match_accounted_usage(self):
         events = encode(self.result.trace)
         next(e for e in events if e["event"] == "review")["details"]["usage"]["output_tokens"] = 1
         target, digest = self.forge(replace(self.result, trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "review/accounted usage"):
-            layer.verify_engine(target, digest)
+            layer.verify_engine(target, digest, source_roots=(self.root,))
 
     def test_resealed_unbound_dossier_prose_rejects(self):
         target, original = self.write()
@@ -103,9 +103,9 @@ class SemanticBoundaryTests(unittest.TestCase):
         receipt["outputs"]["dossier.md"] = sha256_file(target / "dossier.md")
         write_json(target / "receipt.json", receipt)
         with self.assertRaisesRegex(ContractError, "dossier prose"):
-            layer.verify_engine(target, sha256_file(target / "receipt.json"))
+            layer.verify_engine(target, sha256_file(target / "receipt.json"), source_roots=(self.root,))
         with self.assertRaisesRegex(ContractError, "anchored receipt"):
-            layer.verify_engine(target, original)
+            layer.verify_engine(target, original, source_roots=(self.root,))
 
     def test_valid_partial_fatal_and_interrupted_runs_remain_verifiable(self):
         for error, status in ((TimeoutError, "partial"), (RecursionError, "partial"),
@@ -116,7 +116,7 @@ class SemanticBoundaryTests(unittest.TestCase):
             result = self.run_case(Failing())
             self.assertEqual(result.status, status)
             target, digest = self.write(result, error.__name__)
-            self.assertIn("tether_semantics", layer.verify_engine(target, digest))
+            self.assertIn("tether_semantics", layer.verify_engine(target, digest, source_roots=(self.root,)))
 
     def test_fatal_failure_cannot_continue_to_later_specialists(self):
         class Failing(ExtractiveBackend):
@@ -130,22 +130,22 @@ class SemanticBoundaryTests(unittest.TestCase):
         events[-1]["details"]["status"] = "failed"
         target, digest = self.forge(replace(result, status="failed", trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "terminal failure"):
-            layer.verify_engine(target, digest)
+            layer.verify_engine(target, digest, source_roots=(self.root,))
 
     def test_no_observed_and_disabled_categories_remain_valid(self):
         result = self.run_case(disabled=tuple(Category))
         target, digest = self.write(result)
-        self.assertIn("tether_semantics", layer.verify_engine(target, digest))
+        self.assertIn("tether_semantics", layer.verify_engine(target, digest, source_roots=(self.root,)))
 
     def test_request_denial_and_usage_overage_remain_valid(self):
         denied = self.run_case(budget=Budget(max_calls=0))
         target, digest = self.write(denied, "denied")
-        self.assertIn("tether_semantics", layer.verify_engine(target, digest))
+        self.assertIn("tether_semantics", layer.verify_engine(target, digest, source_roots=(self.root,)))
         class Overage(ExtractiveBackend):
             def select(self, request):
                 return Selection((), Usage(1, 0, 0))
         target, digest = self.write(self.run_case(Overage()), "overage")
-        self.assertIn("tether_semantics", layer.verify_engine(target, digest))
+        self.assertIn("tether_semantics", layer.verify_engine(target, digest, source_roots=(self.root,)))
 
     def test_deadline_during_claim_commit_preserves_partial_prefix(self):
         clock = [0.0]
@@ -158,7 +158,7 @@ class SemanticBoundaryTests(unittest.TestCase):
             result = self.run_case(budget=Budget(max_seconds=1))
         target, digest = self.write(result)
         self.assertEqual(len(result.claims), 1)
-        self.assertIn("tether_semantics", layer.verify_engine(target, digest))
+        self.assertIn("tether_semantics", layer.verify_engine(target, digest, source_roots=(self.root,)))
 
     def test_deadline_after_response_preserves_failed_category(self):
         clock = [0.0]
@@ -169,7 +169,7 @@ class SemanticBoundaryTests(unittest.TestCase):
         with patch("tether_engine.workflow.time.monotonic", side_effect=lambda: clock[0]):
             result = self.run_case(Slow(), budget=Budget(max_seconds=1))
         target, digest = self.write(result)
-        self.assertIn("tether_semantics", layer.verify_engine(target, digest))
+        self.assertIn("tether_semantics", layer.verify_engine(target, digest, source_roots=(self.root,)))
 
     def test_quote_failures_and_empty_retrieval_remain_valid(self):
         class BadQuote(ExtractiveBackend):
@@ -180,7 +180,7 @@ class SemanticBoundaryTests(unittest.TestCase):
                 return replace(request, evidence=()), {"selected_ids": [], "reason": "fictional empty retrieval"}
         for name, backend in (("quote", BadQuote()), ("retrieval", Empty())):
             target, digest = self.write(self.run_case(backend), name)
-            self.assertIn("tether_semantics", layer.verify_engine(target, digest))
+            self.assertIn("tether_semantics", layer.verify_engine(target, digest, source_roots=(self.root,)))
 
     def test_rejected_review_retry_and_valid_empty_selection(self):
         class Retry(ExtractiveBackend):
@@ -196,7 +196,7 @@ class SemanticBoundaryTests(unittest.TestCase):
                 return Selection((), Usage(0, 0, 0))
         for name, backend in (("retry", Retry()), ("empty", Empty())):
             target, digest = self.write(self.run_case(backend), name)
-            self.assertIn("tether_semantics", layer.verify_engine(target, digest))
+            self.assertIn("tether_semantics", layer.verify_engine(target, digest, source_roots=(self.root,)))
 
     def test_current_cli_rejects_bad_legacy_run_without_dispatch(self):
         coverage = encode(self.result.coverage)
@@ -216,7 +216,7 @@ class SemanticBoundaryTests(unittest.TestCase):
             return layer.EngineResult(0)
         target = self.root / "outer"
         with self.assertRaisesRegex(ContractError, "coverage status"):
-            layer.create_outer(target, ["demo", "--output", str(target)], engine=producer)
+            layer.create_outer(target, ["demo", "--output", str(target)], engine=producer, source_roots=(self.root,))
         self.assertEqual(len(calls), 1)
         self.assertTrue((target / layer.FAILURE).is_file())
         self.assertFalse((target / layer.RECEIPT).exists())
@@ -233,7 +233,7 @@ class SemanticBoundaryTests(unittest.TestCase):
         coverage[first["details"]["category"]]["retrieval"]["selected_ids"] = first["details"]["selected_ids"]
         target, digest = self.forge(replace(result, trace=self.rechain(events), coverage=coverage))
         with self.assertRaisesRegex(ContractError, "outside the bounded request"):
-            layer.verify_engine(target, digest)
+            layer.verify_engine(target, digest, source_roots=(self.root,))
 
     def test_terminal_status_requires_matching_execution_evidence(self):
         prediction = abstain(self.case, "run_incomplete", self.model)
@@ -243,7 +243,7 @@ class SemanticBoundaryTests(unittest.TestCase):
             target, digest = self.forge(replace(self.result, status=status, prediction=prediction,
                                                trace=self.rechain(events)), status)
             with self.assertRaisesRegex(ContractError, "terminal status|lacks|partial run"):
-                layer.verify_engine(target, digest)
+                layer.verify_engine(target, digest, source_roots=(self.root,))
 
     def test_backend_failure_is_terminal_for_its_category(self):
         events = encode(self.result.trace)
@@ -252,7 +252,7 @@ class SemanticBoundaryTests(unittest.TestCase):
             "category": events[index]["details"]["category"], "error_class": "TimeoutError"}})
         target, digest = self.forge(replace(self.result, trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "terminal backend failure"):
-            layer.verify_engine(target, digest)
+            layer.verify_engine(target, digest, source_roots=(self.root,))
 
     def test_quote_failure_is_terminal_for_its_category(self):
         events = encode(self.result.trace)
@@ -261,7 +261,7 @@ class SemanticBoundaryTests(unittest.TestCase):
             "category": events[index]["details"]["category"], "error_class": "ValueError"}})
         target, digest = self.forge(replace(self.result, trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "terminal backend failure"):
-            layer.verify_engine(target, digest)
+            layer.verify_engine(target, digest, source_roots=(self.root,))
 
     def test_accounted_attempt_requires_review_or_terminal_disposition(self):
         events = encode(self.result.trace)
@@ -270,7 +270,7 @@ class SemanticBoundaryTests(unittest.TestCase):
         # No accepted review can license the immediately following claims.
         target, digest = self.forge(replace(self.result, trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "accepted active review|disposition"):
-            layer.verify_engine(target, digest)
+            layer.verify_engine(target, digest, source_roots=(self.root,))
 
     def test_attempt_numbers_cannot_skip_first_attempt(self):
         events = encode(self.result.trace)
@@ -283,7 +283,7 @@ class SemanticBoundaryTests(unittest.TestCase):
                 event["details"]["attempt_id"] = new
         target, digest = self.forge(replace(self.result, trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "attempt sequence"):
-            layer.verify_engine(target, digest)
+            layer.verify_engine(target, digest, source_roots=(self.root,))
 
     def test_disabled_review_retries_cannot_be_forged(self):
         class Retry(ExtractiveBackend):
@@ -300,7 +300,7 @@ class SemanticBoundaryTests(unittest.TestCase):
         next(e for e in events if e["event"] == "plan")["details"]["configuration"] = config
         target, digest = self.forge(replace(result, configuration=config, trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "terminal backend failure"):
-            layer.verify_engine(target, digest)
+            layer.verify_engine(target, digest, source_roots=(self.root,))
 
     def test_known_timeout_cannot_be_reported_as_interruption(self):
         class Timeout(ExtractiveBackend):
@@ -311,4 +311,4 @@ class SemanticBoundaryTests(unittest.TestCase):
         events[-1]["details"]["status"] = "interrupted"
         target, digest = self.forge(replace(result, status="interrupted", trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "possible interruption"):
-            layer.verify_engine(target, digest)
+            layer.verify_engine(target, digest, source_roots=(self.root,))

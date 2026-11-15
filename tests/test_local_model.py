@@ -154,7 +154,7 @@ class LocalModelTests(unittest.TestCase):
         b, result, out, receipt, store = self.workflow()
         self.assertEqual(result.status, 'completed')
         self.assertIsNone(result.prediction.probability)
-        self.assertEqual(verify_run(out, receipt)['semantic_consistency'], 'verified')
+        self.assertEqual(verify_run(out, receipt, source_roots=(self.root,))['semantic_consistency'], 'verified')
         doc = read_json(out / 'backend-execution.json')
         doc['attempts'][0]['response']['content'] = '{"observation_ids":[]}'
         with self.assertRaises(ContractError): verify_backend_execution(doc, encode(result.trace), encode(result.configuration))
@@ -162,14 +162,14 @@ class LocalModelTests(unittest.TestCase):
         next(e for e in trace if e['event'] == 'bounded_retrieval')['details']['selected_ids'] = []
         with self.assertRaises(ContractError): verify_retrieval_trace(result.case, store, trace, RetrievalPolicy())
         write_json(out / 'backend-execution.json', doc)
-        with self.assertRaises(ContractError): verify_run(out, receipt)
+        with self.assertRaises(ContractError): verify_run(out, receipt, source_roots=(self.root,))
 
     def test_shared_wire_model_execution_is_source_verified_without_rewriting_evidence(self):
         self.config['retrieval']['wire_format'] = FORMAT
         write_json(self.path, self.config)
         _, result, out, receipt, _ = self.workflow()
         self.assertEqual(result.status, 'completed')
-        self.assertEqual(verify_run(out, receipt)['semantic_consistency'], 'verified')
+        self.assertEqual(verify_run(out, receipt, source_roots=(self.root,))['semantic_consistency'], 'verified')
         data = read_json(out / 'backend-execution.json')
         self.assertIn(FORMAT, data['attempts'][0]['payload']['prompt'])
 
@@ -179,7 +179,7 @@ class LocalModelTests(unittest.TestCase):
         self.assertEqual(result.calls, len(b.opener.calls))
         self.assertGreater(result.estimated_usage.input_tokens, 0)
         self.assertEqual(result.measured_usage.input_tokens, 0)
-        self.assertEqual(verify_run(out, receipt)['semantic_consistency'], 'verified')
+        self.assertEqual(verify_run(out, receipt, source_roots=(self.root,))['semantic_consistency'], 'verified')
 
     def test_preparer_cannot_rewrite_admitted_content_or_hypothesis(self):
         fixture = self.root / 'fixture'; shutil.copytree(FIXTURES, fixture)

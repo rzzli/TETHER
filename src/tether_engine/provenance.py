@@ -9,6 +9,7 @@ from datetime import datetime
 
 from .contracts import Case, Profile, Snapshot, SourceNode, TemporalClass
 from .derivations import project, validate_descriptor
+from .source_access import local_path, source_child
 from .serde import (ContractError, MAX_NORMALIZED_JSON_BYTES, canonical, decode, freeze,
                     parse_json, read_json, safe_child, sha256_file)
 
@@ -54,8 +55,9 @@ def check_receipt_availability(node: SourceNode, receipt: Mapping) -> None:
 
 
 class InputGraph:
-    def __init__(self, snapshot: Snapshot, root: Path, catalog: Mapping | None):
-        self.snapshot, self.root, self.catalog = snapshot, root.resolve(), catalog
+    def __init__(self, snapshot: Snapshot, root: Path, catalog: Mapping | None, *, source_files=None, lexical=False):
+        self.source_files, self.lexical = source_files, lexical or source_files is not None
+        self.snapshot, self.root, self.catalog = snapshot, local_path(root) if self.lexical else root.resolve(), catalog
         self.nodes = freeze({item.source_id: item for item in snapshot.sources})
         # These caches live only for this validation pass. Finalization and
         # verification construct a new graph and reopen the original bytes.
@@ -98,7 +100,10 @@ class InputGraph:
 
     def path(self, node: SourceNode) -> Path:
         base = self.root if node.computed_at is not None else Path(self.snapshot.raw_root or self.root)
-        return safe_child(base, node.path)
+        return self.child(base, node.path)
+
+    def child(self, base, relative):
+        return source_child(base, relative) if self.lexical else safe_child(base, relative)
 
     def closure(self, refs: tuple[str, ...]) -> tuple[str, ...]:
         if not refs:
@@ -157,12 +162,16 @@ class InputGraph:
             return self._payloads[key]
         node = self.nodes[key]
         path = self.path(node)
-        if not path.is_file() or path.stat().st_size > MAX_NORMALIZED_JSON_BYTES:
-            raise ContractError("Derivation input is missing or exceeds the 64 MiB limit")
-        if self._payload_cache_bytes + path.stat().st_size > MAX_DERIVATION_CACHE_BYTES:
-            raise ContractError("Aggregate derivation input cache exceeds the 256 MiB limit")
-        with path.open("rb") as stream:
-            payload = stream.read(MAX_NORMALIZED_JSON_BYTES + 1)
+        if self.source_files is not None:
+            payload = self.source_files.read(path, min(MAX_NORMALIZED_JSON_BYTES,
+                                                      MAX_DERIVATION_CACHE_BYTES - self._payload_cache_bytes))
+        else:
+            if not path.is_file() or path.stat().st_size > MAX_NORMALIZED_JSON_BYTES:
+                raise ContractError("Derivation input is missing or exceeds the 64 MiB limit")
+            if self._payload_cache_bytes + path.stat().st_size > MAX_DERIVATION_CACHE_BYTES:
+                raise ContractError("Aggregate derivation input cache exceeds the 256 MiB limit")
+            with path.open("rb") as stream:
+                payload = stream.read(MAX_NORMALIZED_JSON_BYTES + 1)
         if (len(payload) > MAX_NORMALIZED_JSON_BYTES or
                 hashlib.sha256(payload).hexdigest() != node.sha256):
             raise ContractError(f"Derivation input checksum/size mismatch: {key}")
@@ -208,20 +217,27 @@ class InputGraph:
                 continue
             node = self.nodes[key]
             path = self.path(node)
-            if not path.is_file() or sha256_file(path) != node.sha256:
+            if self.source_files is not None:
+                digest, size = self.source_files.digest_size(path)
+            else:
+                digest, size = (sha256_file(path), path.stat().st_size) if path.is_file() else (None, None)
+            if digest != node.sha256:
                 raise ContractError(f"Input source checksum mismatch: {key}")
             proof = {"artifact_id": key, "dataset_id": node.dataset_id,
                      "release_id": node.release_id, "path": str(path), "sha256": node.sha256,
                      "role": node.role, "parents": node.parents}
             if node.receipt_path:
-                receipt_path = safe_child(Path(self.snapshot.raw_root or self.root), node.receipt_path)
-                if not node.receipt_sha256 or sha256_file(receipt_path) != node.receipt_sha256:
+                receipt_path = self.child(Path(self.snapshot.raw_root or self.root), node.receipt_path)
+                payload = (self.source_files.read(receipt_path, MAX_NORMALIZED_JSON_BYTES)
+                           if self.source_files is not None else None)
+                receipt_digest = hashlib.sha256(payload).hexdigest() if payload is not None else sha256_file(receipt_path)
+                if not node.receipt_sha256 or receipt_digest != node.receipt_sha256:
                     raise ContractError("Input receipt checksum mismatch")
-                receipt = read_json(receipt_path)
+                receipt = parse_json(payload) if payload is not None else read_json(receipt_path)
                 if (receipt.get("status") != "completed" or receipt.get("sha256") != node.sha256 or
                         receipt.get("dataset_id") != node.dataset_id or receipt.get("release_id") != node.release_id or
-                        safe_child(Path(self.snapshot.raw_root or self.root), receipt.get("relative_path", "")) != path or
-                        receipt.get("bytes") != path.stat().st_size):
+                        self.child(Path(self.snapshot.raw_root or self.root), receipt.get("relative_path", "")) != path or
+                        receipt.get("bytes") != size):
                     raise ContractError("Input receipt identity/status mismatch")
                 check_receipt_availability(node, receipt)
                 proof["receipt_path"], proof["receipt_sha256"] = str(receipt_path), node.receipt_sha256

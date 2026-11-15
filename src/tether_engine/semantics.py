@@ -93,7 +93,7 @@ def check_execution(run, case, snapshot, configuration, claims, trace):
 
 
 def check_semantics(case, snapshot, claims, features, prediction, coverage, configuration,
-                    status, model, admitted, catalog_policy, root, trace, *, verify_derivations=True):
+                    status, model, admitted, catalog_policy, root, trace, *, verify_derivations=True, source_files=None):
     case.validate()
     if configuration.get("admission_policy") != ADMISSION_POLICY:
         raise ContractError("Unsupported current admission policy; legacy verification is read-only")
@@ -101,7 +101,8 @@ def check_semantics(case, snapshot, claims, features, prediction, coverage, conf
         raise ContractError("Semantic case/snapshot origin mismatch")
     if snapshot.profile != Profile.DEMO and not catalog_policy:
         raise ContractError("Semantic real-data snapshot requires archived catalog policy")
-    graph = InputGraph(snapshot, Path(root), catalog_index(catalog_policy) if catalog_policy else None)
+    graph = InputGraph(snapshot, Path(root), catalog_index(catalog_policy) if catalog_policy else None,
+                       source_files=source_files, lexical=True)
     seen = set()
     artifacts = {item.artifact_id: item for item, reason in eligible_artifacts(snapshot, graph, case) if reason is None}
     artifact_inputs = {key: frozenset(graph.closure(item.input_refs)) for key, item in artifacts.items()}

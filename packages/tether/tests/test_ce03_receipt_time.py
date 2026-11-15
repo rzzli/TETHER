@@ -106,7 +106,7 @@ class ReceiptAvailabilityTests(unittest.TestCase):
     def assert_preflight_rejects(self, fixture, output, pattern):
         with patch.object(layer, "invoke_engine", side_effect=ContractError("unexpected dispatch reached")) as child, \
                 self.assertRaisesRegex(ContractError, pattern):
-            layer.create_outer(output, argv(fixture, output), policy_request=fixture["request"])
+            layer.create_outer(output, argv(fixture, output), policy_request=fixture["request"], source_roots=(self.root,))
         child.assert_not_called()
         events = read_chain(output / layer.JOURNAL)
         self.assertNotIn("engine_dispatch", [row["event"] for row in events])
@@ -149,7 +149,7 @@ class ReceiptAvailabilityTests(unittest.TestCase):
                 fixture, output = self.fixture(str(index), used=used, known=known)
                 output.mkdir()
                 descriptor = binding.prepare_policy_run(output, fixture["request"])
-                verified = binding.verify_policy_run(output, descriptor, check_engine=False)
+                verified = binding.verify_policy_run(output, descriptor, check_engine=False, source_roots=(self.root,))
                 self.assertEqual(verified["checked_inputs"], 4)
                 seal = json.loads((output / descriptor["path"]).read_bytes())
                 self.assertEqual(len(seal["receipts"]), 2)
@@ -165,7 +165,7 @@ class ReceiptAvailabilityTests(unittest.TestCase):
                     evidence_ref="fictional-release-evidence")
                 output.mkdir()
                 descriptor = binding.prepare_policy_run(output, fixture["request"])
-                self.assertEqual(binding.verify_policy_run(output, descriptor, check_engine=False)["checked_inputs"], 4)
+                self.assertEqual(binding.verify_policy_run(output, descriptor, check_engine=False, source_roots=(self.root,))["checked_inputs"], 4)
 
     def test_verification_rejects_resealed_used_and_unused_time_contradictions(self):
         for used in (False, True):
@@ -175,7 +175,7 @@ class ReceiptAvailabilityTests(unittest.TestCase):
                 descriptor = binding.prepare_policy_run(output, fixture["request"])
                 descriptor = reseal_extra_availability(output, descriptor, dict(known_public_by="2021-01-01T00:00:00+00:00"))
                 with self.assertRaisesRegex(ContractError, "availability bound.*receipt"):
-                    binding.verify_policy_run(output, descriptor, check_engine=False)
+                    binding.verify_policy_run(output, descriptor, check_engine=False, source_roots=(self.root,))
 
     def test_verification_rejects_resealed_unused_evidence_ref(self):
         fixture, output = self.fixture("wrong-ref")
@@ -183,7 +183,7 @@ class ReceiptAvailabilityTests(unittest.TestCase):
         descriptor = binding.prepare_policy_run(output, fixture["request"])
         descriptor = reseal_extra_availability(output, descriptor, dict(evidence_ref="0" * 64))
         with self.assertRaisesRegex(ContractError, "availability bound.*receipt"):
-            binding.verify_policy_run(output, descriptor, check_engine=False)
+            binding.verify_policy_run(output, descriptor, check_engine=False, source_roots=(self.root,))
 
 
 if __name__ == "__main__":

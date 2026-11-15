@@ -67,7 +67,7 @@ class LegacyDerivationVerificationTests(unittest.TestCase):
         with (patch('tether_engine.artifacts.admit_snapshot', side_effect=AssertionError('current admission')),
              patch('tether_engine.artifacts.check_semantics', side_effect=AssertionError('current semantics')),
              patch('tether_engine.artifacts.decode', side_effect=AssertionError('current decoder'))):
-            result = verify_run(self.output, self.anchor, allow_legacy=True)
+            result = verify_run(self.output, self.anchor, allow_legacy=True, source_roots=(self.root,))
         self.assertEqual(result['semantic_consistency'], 'unavailable_legacy_v2_derivation')
         self.assertEqual(result['derivation_verification'], 'unavailable_legacy_v2_derivation')
         self.assertEqual(result['source_inventory_completeness'], 'not_replayed')
@@ -76,7 +76,7 @@ class LegacyDerivationVerificationTests(unittest.TestCase):
 
     def test_legacy_cannot_satisfy_default_semantic_request(self):
         with self.assertRaisesRegex(ContractError, 'Semantic verification requires.*allow_legacy'):
-            verify_run(self.output)
+            verify_run(self.output, source_roots=(self.root,))
 
     def test_legacy_cli_requires_opt_in_for_v1_and_v2(self):
         for version, producer in ((2, '0.4.0'), (1, '0.1.0')):
@@ -89,7 +89,7 @@ class LegacyDerivationVerificationTests(unittest.TestCase):
                 self.assertEqual(cli.main(arguments), 2)
                 self.assertIn('Semantic verification requires', errors.getvalue())
             with redirect_stdout(io.StringIO()) as output:
-                self.assertEqual(cli.main(arguments + ['--allow-legacy']), 0)
+                self.assertEqual(cli.main(arguments + ['--allow-legacy', '--source-root', str(self.root)]), 0)
             result = json.loads(output.getvalue())
             self.assertEqual(result['status'], 'byte_integrity_verified')
             self.assertEqual(result['assurance'], 'byte_integrity')
@@ -98,14 +98,14 @@ class LegacyDerivationVerificationTests(unittest.TestCase):
     def test_legacy_declared_source_and_output_tampering_fail(self):
         self.raw.write_bytes(b'changed')
         with self.assertRaisesRegex(ContractError, 'Source integrity'):
-            verify_run(self.output, self.anchor, allow_legacy=True)
+            verify_run(self.output, self.anchor, allow_legacy=True, source_roots=(self.root,))
         (self.output / 'prediction.json').write_bytes(b'changed')
         with self.assertRaisesRegex(ContractError, 'output integrity'):
-            verify_run(self.output, self.anchor, verify_sources=False, allow_legacy=True)
+            verify_run(self.output, self.anchor, verify_sources=False, allow_legacy=True, source_roots=(self.root,))
 
     def test_receipt_anchor_and_unknown_policy_fail(self):
         with self.assertRaisesRegex(ContractError, 'anchored receipt'):
-            verify_run(self.output, '0' * 64)
+            verify_run(self.output, '0' * 64, source_roots=(self.root,))
         for patch_fields in ({'software_version': '0.5.0'}, {'admission_policy': 'tether.derivation.v1'},
                              {'software_version': '99.0.0'}, {'schema_version': 3}):
             with self.subTest(fields=patch_fields), self.assertRaises(ContractError):
@@ -114,7 +114,7 @@ class LegacyDerivationVerificationTests(unittest.TestCase):
     def test_missing_declared_parent_does_not_claim_complete_inventory(self):
         self.receipt['sources'] = []
         self.seal()
-        result = verify_run(self.output, self.anchor, allow_legacy=True)
+        result = verify_run(self.output, self.anchor, allow_legacy=True, source_roots=(self.root,))
         self.assertEqual(result['source_artifacts_checked'], 0)
         self.assertEqual(result['source_inventory_completeness'], 'not_replayed')
         self.assertNotEqual(result['semantic_consistency'], 'verified')

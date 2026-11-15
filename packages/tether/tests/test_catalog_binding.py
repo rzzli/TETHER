@@ -115,7 +115,8 @@ def argv(fixture, output):
     p = fixture["paths"]
     return ["run", "--output", str(output), "--case", str(p["case"]), "--snapshot", str(p["snapshot"]),
             "--catalog", str(p["source_catalog"]), "--catalog-policy", str(p["policy"]),
-            "--policy-roots", str(p["roots"]), "--policy-use", "fictional-use", "--policy-frame-sha256", "f" * 64]
+            "--policy-roots", str(p["roots"]), "--policy-use", "fictional-use", "--policy-frame-sha256", "f" * 64,
+            '--source-root', str(p['case'].parent)]
 
 
 class CatalogBindingTests(unittest.TestCase):
@@ -128,12 +129,20 @@ class CatalogBindingTests(unittest.TestCase):
         self.f = make_fixture(self.root)
         self.output = self.root / "outer"
 
+    def test_archived_policy_roots_cannot_grant_external_access(self):
+        self.output.mkdir()
+        descriptor = binding.prepare_policy_run(self.output, self.f['request'])
+        with self.assertRaisesRegex(ContractError, 'source-root'):
+            binding.verify_policy_run(self.output, descriptor, check_engine=False)
+        answer = binding.verify_policy_run(self.output, descriptor, check_engine=False, source_roots=(self.root,))
+        self.assertEqual(answer['status'], 'artifact_policy_consistency_verified')
+
     def test_real_policy_run_preserves_nested_inputs_and_verifies(self):
         stream = io.StringIO()
         with redirect_stdout(stream), redirect_stderr(io.StringIO()):
             self.assertEqual(cli.main(argv(self.f, self.output)), 0)
         receipt = json.loads(stream.getvalue())
-        verified = layer.verify_outer(self.output, receipt["receipt_sha256"])
+        verified = layer.verify_outer(self.output, receipt["receipt_sha256"], source_roots=(self.root,))
         self.assertEqual(verified["artifact_policy"]["checked_inputs"], 3)
         self.assertEqual(verified["artifact_policy"]["status"], "artifact_policy_consistency_verified")
         self.assertTrue((self.output / "catalog-policy/inputs/references/mapping.json").is_file())
@@ -151,8 +160,8 @@ class CatalogBindingTests(unittest.TestCase):
                          self.f["normalized"] / "references/mapping.json"):
                 path.write_bytes(b'{"changed":true}')
             return layer.invoke_engine(arguments)
-        result = layer.create_outer(self.output, argv(self.f, self.output), engine=engine, policy_request=self.f["request"])
-        verified = layer.verify_outer(self.output, result["receipt_sha256"])
+        result = layer.create_outer(self.output, argv(self.f, self.output), engine=engine, policy_request=self.f["request"], source_roots=(self.root,))
+        verified = layer.verify_outer(self.output, result["receipt_sha256"], source_roots=(self.root,))
         self.assertEqual(verified["artifact_policy"]["status"], "artifact_policy_consistency_verified")
 
     def test_invalid_policy_source_catalog_and_frame_fail_before_dispatch(self):
@@ -172,7 +181,7 @@ class CatalogBindingTests(unittest.TestCase):
                     request = replace(request, frame_sha256="0" * 64)
                 output = self.root / ("outer-" + kind)
                 with patch.object(layer, "invoke_engine") as child, self.assertRaises(ContractError):
-                    layer.create_outer(output, argv(f, output), policy_request=request)
+                    layer.create_outer(output, argv(f, output), policy_request=request, source_roots=(self.root,))
                 child.assert_not_called()
                 self.assertNotIn("engine_dispatch", [e["event"] for e in read_chain(output / layer.JOURNAL)])
                 self.assertEqual(layer.inspect_outer(output)["failure"]["stage"], "artifact_policy_preflight")
@@ -185,7 +194,7 @@ class CatalogBindingTests(unittest.TestCase):
             original.write_bytes(before + b"\n")
             return layer.invoke_engine(arguments)
         with self.assertRaises(layer.EngineFailure):
-            layer.create_outer(self.output, argv(self.f, self.output), engine=engine, policy_request=self.f["request"])
+            layer.create_outer(self.output, argv(self.f, self.output), engine=engine, policy_request=self.f["request"], source_roots=(self.root,))
         events = read_chain(self.output / "engine/journal.jsonl")
         self.assertNotIn("dispatch", [e["event"] for e in events])
         self.assertEqual(next((self.output / "catalog-policy/receipts").iterdir()).read_bytes(), before)
@@ -200,7 +209,7 @@ class CatalogBindingTests(unittest.TestCase):
         # The packet is deliberately invalid: metadata rejection must come first.
         (self.f["normalized"] / "packets/evidence.json").write_bytes(b"not JSON")
         with patch.object(layer, "invoke_engine") as child, self.assertRaisesRegex(ContractError, "undeclared"):
-            layer.create_outer(self.output, argv(self.f, self.output), policy_request=self.f["request"])
+            layer.create_outer(self.output, argv(self.f, self.output), policy_request=self.f["request"], source_roots=(self.root,))
         child.assert_not_called()
 
     def test_projection_mutation_rejected_independently_of_engine(self):
@@ -215,7 +224,7 @@ class CatalogBindingTests(unittest.TestCase):
         write(seal_path, seal)
         descriptor = binding._descriptor(descriptor["path"], seal_path.read_bytes())
         with self.assertRaisesRegex(ContractError, "projection differs"):
-            binding.verify_policy_run(self.output, descriptor, check_engine=False)
+            binding.verify_policy_run(self.output, descriptor, check_engine=False, source_roots=(self.root,))
 
     def test_wrong_receipt_identity_fails_even_with_updated_receipt_hash(self):
         node = self.f["snapshot"]["sources"][0]
@@ -228,7 +237,7 @@ class CatalogBindingTests(unittest.TestCase):
         document["uses"][0]["snapshot_fingerprint"] = fingerprint(self.f["snapshot"])
         write(self.f["paths"]["snapshot"], self.f["snapshot"]); write(self.f["paths"]["policy"], document)
         with patch.object(layer, "invoke_engine") as child, self.assertRaisesRegex(ContractError, "receipt receipt_id"):
-            layer.create_outer(self.output, argv(self.f, self.output), policy_request=self.f["request"])
+            layer.create_outer(self.output, argv(self.f, self.output), policy_request=self.f["request"], source_roots=(self.root,))
         child.assert_not_called()
 
     def test_unsupported_policy_combinations_never_dispatch(self):
@@ -253,7 +262,7 @@ class CatalogBindingTests(unittest.TestCase):
     def test_provenance_bytes_must_be_checked_and_copied(self):
         (self.root / "reports/fictional.json").write_bytes(b"changed provenance")
         with patch.object(layer, "invoke_engine") as child, self.assertRaisesRegex(ContractError, "provenance hash"):
-            layer.create_outer(self.output, argv(self.f, self.output), policy_request=self.f["request"])
+            layer.create_outer(self.output, argv(self.f, self.output), policy_request=self.f["request"], source_roots=(self.root,))
         child.assert_not_called()
 
     def test_synthetic_demo_profile_cannot_silently_bypass_projection(self):
@@ -262,7 +271,7 @@ class CatalogBindingTests(unittest.TestCase):
         self.f["policy"]["uses"][0].update(profile="synthetic_demo", snapshot_fingerprint=fingerprint(snapshot))
         write(self.f["paths"]["snapshot"], snapshot); write(self.f["paths"]["policy"], self.f["policy"])
         with patch.object(layer, "invoke_engine") as child, self.assertRaisesRegex(ContractError, "Synthetic demo profile"):
-            layer.create_outer(self.output, argv(self.f, self.output), policy_request=self.f["request"])
+            layer.create_outer(self.output, argv(self.f, self.output), policy_request=self.f["request"], source_roots=(self.root,))
         child.assert_not_called()
 
     def test_policy_output_reservation_is_exclusive_under_concurrency(self):
@@ -272,7 +281,7 @@ class CatalogBindingTests(unittest.TestCase):
             return layer.EngineResult(3)
         def attempt(_):
             try:
-                layer.create_outer(self.output, argv(self.f, self.output), engine=child, policy_request=self.f["request"])
+                layer.create_outer(self.output, argv(self.f, self.output), engine=child, policy_request=self.f["request"], source_roots=(self.root,))
             except Exception as error:
                 return type(error)
         with ThreadPoolExecutor(max_workers=2) as pool:
@@ -284,7 +293,7 @@ class CatalogBindingTests(unittest.TestCase):
     def test_policy_copy_write_failure_is_retained_without_dispatch(self):
         with patch.object(binding, "publish_bytes", side_effect=OSError("fictional write failure")), \
              patch.object(layer, "invoke_engine") as child, self.assertRaises(OSError):
-            layer.create_outer(self.output, argv(self.f, self.output), policy_request=self.f["request"])
+            layer.create_outer(self.output, argv(self.f, self.output), policy_request=self.f["request"], source_roots=(self.root,))
         child.assert_not_called()
         self.assertEqual(layer.inspect_outer(self.output)["failure"]["stage"], "artifact_policy_preflight")
         self.assertFalse((self.output / layer.RECEIPT).exists())

@@ -199,8 +199,8 @@ def preflight_run_journals(output, *, verify=False):
             _read(path)
 
 
-def _core_check(root, receipt_hash):
-    result = verify_engine(root / "engine", receipt_hash, True)
+def _core_check(root, receipt_hash, *, source_roots=()):
+    result = verify_engine(root / "engine", receipt_hash, True, source_roots=(root, *source_roots))
     need(result.get("code_matches_current") is True and result.get("semantic_consistency") == "verified"
          and result.get("source_binding") == "current_originals"
          and result.get("derivation_verification") == "verified"
@@ -209,11 +209,12 @@ def _core_check(root, receipt_hash):
     return result
 
 
-def verify_engine(output, receipt_hash=None, verify_sources=True, *, allow_legacy=False):
+def verify_engine(output, receipt_hash=None, verify_sources=True, *, allow_legacy=False, source_roots=()):
     """Current semantic verification; legacy bytes require an explicit caller opt-in."""
-    output = Path(output)
+    from tether_engine.source_access import selected_root
+    output = selected_root(output)[1]
     preflight_run_journals(output, verify=True)
-    result = verify_run(output, receipt_hash, verify_sources, allow_legacy=allow_legacy)
+    result = verify_run(output, receipt_hash, verify_sources, allow_legacy=allow_legacy, source_roots=source_roots)
     if receipt_policy(_json(output / "receipt.json")) == "current":
         from ._semantics import check_engine_semantics
         result["tether_semantics"] = check_engine_semantics(
@@ -240,7 +241,7 @@ def _retain_streams(root, result):
         _save(root / name, payload)
 
 
-def create_outer(output, argv, *, engine=None, limits=ProcessLimits(), policy_request=None):
+def create_outer(output, argv, *, engine=None, limits=ProcessLimits(), policy_request=None, source_roots=()):
     """Reserve a fresh leaf, run once, close journal, then publish the final receipt."""
     limits.validate()
     output = Path(output).absolute()
@@ -263,7 +264,22 @@ def create_outer(output, argv, *, engine=None, limits=ProcessLimits(), policy_re
             policy_binding = prepare_policy_run(output, policy_request)
             engine_argv = policy_engine_args(output, engine_argv, policy_binding)
             journal.append("artifact_policy_prepared", binding=policy_binding)
-            verify_policy_run(output, policy_binding, check_engine=False)
+            verify_policy_run(output, policy_binding, check_engine=False, source_roots=source_roots)
+        if argv[0] == 'run':
+            # The launcher's final verifier must have authority before a call can
+            # be billed. Only caller arguments grant roots, never run metadata.
+            from tether_engine.cli import parser as engine_parser
+            from tether_engine.chrono import required_source_proofs
+            from tether_engine.contracts import Case, Snapshot
+            from tether_engine.serde import decode, read_json
+            from tether_engine.source_access import SourceAccess
+            selected = engine_parser().parse_args(engine_argv)
+            case = decode(Case, read_json(selected.case))
+            snapshot = decode(Snapshot, read_json(selected.snapshot))
+            policy = read_json(selected.catalog) if selected.catalog else None
+            proofs = required_source_proofs(snapshot, case, selected.snapshot.absolute().parent, policy, lexical=True)
+            paths = [proof[key] for proof in proofs for key in ('path', 'receipt_path') if key in proof]
+            SourceAccess.for_run(output, source_roots).prepare(paths)
         stage = "engine_dispatch"
         journal.append("engine_dispatch", argv_sha256=digest(canonical(argv)), output="engine",
                        process_limits=limits.payload())
@@ -276,9 +292,9 @@ def create_outer(output, argv, *, engine=None, limits=ProcessLimits(), policy_re
             raise EngineFailure(result.returncode)
         stage = "source_verification"
         engine_receipt = digest(_read(output / "engine/receipt.json"))
-        _core_check(output, engine_receipt)
+        _core_check(output, engine_receipt, source_roots=source_roots)
         if policy_binding is not None:
-            verify_policy_run(output, policy_binding)
+            verify_policy_run(output, policy_binding, source_roots=source_roots)
         validate_success_report(result.supervision, limits, len(result.stdout), len(result.stderr))
         stage = "presentation"
         _save(output / "dossier.md", project_dossier(_read(output / "engine/dossier.md", max_bytes=MAX_DOSSIER_BYTES)))
@@ -369,9 +385,10 @@ def _envelope(doc, keys):
          and doc["agent_visible"] is False and doc["scientific_validation"] == "not_established", "Invalid TETHER envelope")
 
 
-def verify_outer(output, expected_receipt_sha256=None, *, allow_legacy=False):
+def verify_outer(output, expected_receipt_sha256=None, *, allow_legacy=False, source_roots=()):
     expected_receipt_sha256 = normalize_anchor(expected_receipt_sha256)
-    output = _no_links(Path(output).absolute())
+    from tether_engine.source_access import selected_root
+    output = selected_root(output)[1]
     need(not (output / FAILURE).exists(), "TETHER attempt has a retained failure")
     raw = _read(output / RECEIPT)
     if expected_receipt_sha256 is not None:
@@ -440,15 +457,19 @@ def verify_outer(output, expected_receipt_sha256=None, *, allow_legacy=False):
     need(not any(e["event"] in ("run_failed", "run_interrupted") for e in events), "TETHER failure journal cannot qualify")
     need(_read(output / "dossier.md", max_bytes=MAX_DOSSIER_BYTES)
          == project_dossier(_read(output / "engine/dossier.md", max_bytes=MAX_DOSSIER_BYTES)), "TETHER dossier projection differs")
-    engine_result = (verify_engine(output / "engine", receipt["engine_receipt_sha256"], True, allow_legacy=allow_legacy)
-                     if legacy else _core_check(output, receipt["engine_receipt_sha256"]))
+    if policy_binding is not None and not legacy:
+        from ._catalog_binding import verify_policy_run
+        verify_policy_run(output, policy_binding, source_roots=source_roots, preflight_only=True)
+    engine_result = (verify_engine(output / "engine", receipt["engine_receipt_sha256"], True,
+                                   allow_legacy=allow_legacy, source_roots=(output, *source_roots))
+                     if legacy else _core_check(output, receipt["engine_receipt_sha256"], source_roots=source_roots))
     # The inner digest comes from the parent receipt, not an independent caller anchor.
     engine_result = engine_result | dict(external_anchor_checked=False, receipt_anchor_checked=True,
                                          anchor_scope="parent_receipt")
     if policy_binding is not None and not legacy:
         need(canonical(events[2]["details"]) == canonical(dict(binding=policy_binding)), "Policy journal binding differs")
         from ._catalog_binding import verify_policy_run
-        policy_result = verify_policy_run(output, policy_binding)
+        policy_result = verify_policy_run(output, policy_binding, source_roots=source_roots)
     elif policy_binding is None:
         need(not (output / "catalog-policy").exists(), "Unbound artifact-policy controls")
         policy_result = dict(status="unavailable_schema1_compatibility", scientific_validation="not_established")

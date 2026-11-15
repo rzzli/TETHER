@@ -97,16 +97,18 @@ def main(argv=None):
                 policy_request = PolicyRequest(args.catalog_policy, args.policy_roots, args.case,
                     args.snapshot, args.catalog, args.policy_use, args.policy_frame_sha256)
                 policy_request.validate()
-            _print(presentation.create_outer(args.output, argv, limits=limits, policy_request=policy_request))
+            _print(presentation.create_outer(args.output, argv, limits=limits, policy_request=policy_request,
+                                             source_roots=getattr(args, 'source_root', ())))
             return 0
         if args.command == "verify" and _is_outer(args.run_dir):
             if args.outputs_only:
                 raise ContractError("TETHER outer verification requires source-inclusive engine verification")
-            _print(presentation.verify_outer(args.run_dir, args.receipt_sha256, allow_legacy=args.allow_legacy))
+            _print(presentation.verify_outer(args.run_dir, args.receipt_sha256, allow_legacy=args.allow_legacy,
+                                            source_roots=args.source_root))
             return 0
         if args.command == "verify":
             answer = presentation.verify_engine(args.run_dir, args.receipt_sha256, not args.outputs_only,
-                                                 allow_legacy=args.allow_legacy)
+                                                 allow_legacy=args.allow_legacy, source_roots=args.source_root)
             if answer.get("admission_policy") == presentation.ADMISSION_POLICY and not answer.get("code_matches_current"):
                 raise ContractError("Engine source/code verification is incomplete; use a compatible producer checkout")
             _print(answer)

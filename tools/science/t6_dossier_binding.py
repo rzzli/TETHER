@@ -62,7 +62,7 @@ def _collect(receipt_proof, approved_roots):
         _approved(proof['path'], approved_roots)
         if proof.get('receipt_path'):
             _approved(proof['receipt_path'], approved_roots)
-    verification = verify_run(run, receipt_proof['sha256'], verify_sources=True)
+    verification = verify_run(run, receipt_proof['sha256'], verify_sources=True, source_roots=approved_roots)
     require(verification['semantic_consistency'] == 'verified' and
             verification['source_binding'] == 'current_originals', 'Run/source semantics not verified')
     prediction, features = read_json(run / 'prediction.json'), read_json(run / 'features.json')

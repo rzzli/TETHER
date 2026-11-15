@@ -125,7 +125,7 @@ class HardeningTests(unittest.TestCase):
         receipt["outputs"]["features.json"] = sha256_file(output / "features.json")
         write_json(output / "receipt.json", receipt)
         with self.assertRaisesRegex(ContractError, "Semantic"):
-            verify_run(output)
+            verify_run(output, source_roots=(self.root,))
 
     def test_usage_reservation_survives_keyboard_interrupt_and_inspection_never_retries(self):
         class Interrupted(ExtractiveBackend):

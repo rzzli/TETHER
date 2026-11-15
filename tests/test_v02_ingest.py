@@ -100,7 +100,7 @@ class IngestTests(unittest.TestCase):
             self.assertTrue(all(feature.value is None for feature in result.features.values.values()))
             run = self.root / ("run-" + case.case_id)
             digest = write_run(run, result, store, None)
-            self.assertEqual(verify_run(run, digest)["semantic_consistency"], "verified")
+            self.assertEqual(verify_run(run, digest, source_roots=(self.root,))["semantic_consistency"], "verified")
 
     def test_clinical_columns_do_not_enter_packets_and_unknowns_stay_null(self):
         output, report = self.build()
@@ -148,11 +148,11 @@ class IngestTests(unittest.TestCase):
         result = run_workflow(case, store, ExtractiveBackend())
         run = self.root / "bounded-run"
         anchor = write_run(run, result, store, None)
-        self.assertEqual(verify_run(run, anchor)["semantic_consistency"], "verified")
+        self.assertEqual(verify_run(run, anchor, source_roots=(self.root,))["semantic_consistency"], "verified")
         second = read_json(directory / "snapshot.json")["artifacts"][1]
         (directory / second["path"]).write_text("{}", encoding="utf-8")
         with self.assertRaises(ContractError):
-            verify_run(run, anchor)
+            verify_run(run, anchor, source_roots=(self.root,))
 
     def test_oversized_single_record_still_fails_with_bounded_layout(self):
         with patch("tether_engine.ingest.MAX_NORMALIZED_JSON_BYTES", 100):

@@ -75,10 +75,10 @@ class PortableLegacyTests(unittest.TestCase):
             target = Path(directory) / 'archived'
             materialize_checkpoint('tests/fixtures/legacy-v1', target)
             anchor = (target / 'receipt.sha256').read_text().strip()
-            result = verify_run(target, anchor)
+            result = verify_run(target, anchor, allow_legacy=True, source_roots=(Path(directory),))
             self.assertEqual(result['semantic_consistency'], 'unavailable_legacy_v1')
             self.assertEqual(result['source_binding'], 'declared_original_bytes_verified')
             self.assertEqual(result['source_inventory_completeness'], 'not_replayed')
             (target / 'source.json').write_text('{}')
             with self.assertRaises(ContractError):
-                verify_run(target, anchor)
+                verify_run(target, anchor, allow_legacy=True, source_roots=(Path(directory),))

@@ -122,8 +122,15 @@ class RunJournal:
 
 
 def read_chain(path: Path, allow_incomplete_tail=False, *, expected_sha256=None):
-    events, previous = [], None
     payload = read_bounded_bytes(path, MAX_JOURNAL_BYTES, 'Journal exceeds byte limit')
+    return parse_chain(payload, allow_incomplete_tail, expected_sha256=expected_sha256)
+
+
+def parse_chain(payload: bytes, allow_incomplete_tail=False, *, expected_sha256=None):
+    """Verify already captured journal bytes, including the normal size limit."""
+    if not isinstance(payload, bytes) or len(payload) > MAX_JOURNAL_BYTES:
+        raise ContractError('Journal exceeds byte limit')
+    events, previous = [], None
     if expected_sha256 is not None and hashlib.sha256(payload).hexdigest() != expected_sha256:
         raise ContractError('Journal hash differs from expected bytes')
     lines = payload.splitlines()

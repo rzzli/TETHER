@@ -286,7 +286,7 @@ class StoreTemporalHardeningTests(unittest.TestCase):
                     self.assertNotIn(marker, canonical(result))
                     for filename in ('journal.jsonl', 'trace.jsonl', 'ledger.json', 'features.json', 'dossier.md'):
                         self.assertNotIn(marker, (root / 'run' / filename).read_bytes())
-                self.assertEqual(verify_run(root / 'run', anchor)['assurance'], 'source_inclusive_semantics')
+                self.assertEqual(verify_run(root / 'run', anchor, source_roots=((root / 'run').parent,))['assurance'], 'source_inclusive_semantics')
 
 
 if __name__ == '__main__':

@@ -102,7 +102,7 @@ def _windows_member_allowed(attributes, directory, links, size, maximum):
             (directory or (links == 1 and size <= maximum)))
 
 
-def _read_posix(path, maximum):
+def _read_posix(path, maximum, reader=None, allow_hardlinks=False, allow_writers=False):
     if not hasattr(os, "O_NOFOLLOW") or os.open not in os.supports_dir_fd:
         raise ContractError("Bundle verification requires no-follow local file handles")
     with ExitStack() as stack:
@@ -114,17 +114,17 @@ def _read_posix(path, maximum):
             stack.callback(os.close, child)
             parent = child
         before = os.stat(path.name, dir_fd=parent, follow_symlinks=False)
-        if not stat.S_ISREG(before.st_mode) or before.st_nlink != 1 or before.st_size > maximum:
+        if not stat.S_ISREG(before.st_mode) or (not allow_hardlinks and before.st_nlink != 1) or before.st_size > maximum:
             raise ContractError("Bundle member must be a bounded, single-link regular file")
         descriptor = os.open(path.name, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK, dir_fd=parent)
         with os.fdopen(descriptor, "rb") as stream:
-            payload = _bounded(stream, before, maximum)
+            payload = (_bounded(stream, before, maximum) if reader is None else reader(stream, before))
         if _identity(before) != _identity(os.stat(path.name, dir_fd=parent, follow_symlinks=False)):
             raise ContractError("Bundle member was replaced during read")
         return payload
 
 
-def _read_windows(path, maximum):
+def _read_windows(path, maximum, reader=None, allow_hardlinks=False, allow_writers=False):
     import ctypes
     from ctypes import wintypes
     import msvcrt
@@ -151,9 +151,10 @@ def _read_windows(path, maximum):
 
     def open_checked(member, directory):
         # Open the reparse point itself, and deny deletion while traversing.
-        # Files also deny writers while their held descriptor is consumed.
+        # Files normally deny writers. Sealed journals may retain their own
+        # writer handle; that explicit mode checks identity and exact hashes.
         flags = 0x00200000 | (0x02000000 if directory else 0)
-        handle = create(str(member), 0x80000000, 3 if directory else 1, None, 3, flags, None)
+        handle = create(str(member), 0x80000000, 3 if directory or allow_writers else 1, None, 3, flags, None)
         if handle == ctypes.c_void_p(-1).value:
             raise ctypes.WinError(ctypes.get_last_error())
         info = FileInfo()
@@ -161,7 +162,7 @@ def _read_windows(path, maximum):
             error = ctypes.WinError(ctypes.get_last_error())
             close(handle)
             raise error
-        if not _windows_member_allowed(info.attributes, directory, info.links,
+        if not _windows_member_allowed(info.attributes, directory, 1 if allow_hardlinks else info.links,
                                        info.size_high << 32 | info.size_low, maximum):
             close(handle)
             raise ContractError("Bundle member is linked, nonregular or exceeds its read bound")
@@ -177,15 +178,19 @@ def _read_windows(path, maximum):
             close(handle)
             raise
         with os.fdopen(descriptor, "rb") as stream:
-            return _bounded(stream, os.fstat(stream.fileno()), maximum)
+            before = os.fstat(stream.fileno())
+            return _bounded(stream, before, maximum) if reader is None else reader(stream, before)
 
 
-def read_local(path: Path, maximum: int) -> bytes:
+def read_local(path: Path, maximum: int, *, reader=None, allow_hardlinks=False, allow_writers=False):
     """Read a local regular file through no-follow handles; never resolve links."""
     path = Path(path).absolute()
     if path.anchor.startswith(("\\\\", "//")) or ".." in path.parts or not path.name:
         raise ContractError("Bundle members require explicit local paths")
     try:
-        return _read_windows(path, maximum) if os.name == "nt" else _read_posix(path, maximum)
+        implementation = _read_windows if os.name == "nt" else _read_posix
+        if reader is None and not allow_hardlinks and not allow_writers:
+            return implementation(path, maximum)
+        return implementation(path, maximum, reader, allow_hardlinks, allow_writers)
     except OSError as error:
         raise ContractError(f"Cannot read bundle member {path.name!r}: {error.strerror or error}") from error

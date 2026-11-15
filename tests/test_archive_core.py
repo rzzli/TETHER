@@ -84,7 +84,7 @@ class ArchiveCoreTests(unittest.TestCase):
 
     def verify(self, resolver=None, anchor=None):
         if not hasattr(self, 'resolver'):
-            return verify_run(self.output, anchor)
+            return verify_run(self.output, anchor, source_roots=(self.base,))
         return verify_core_archive(str(self.output), resolver or self.resolver,
                                    self.anchor if anchor is None else anchor, code_root=str(ROOT / 'src/tether_engine'))
 
@@ -129,7 +129,7 @@ class ArchiveCoreTests(unittest.TestCase):
         write_json(receipt_path, receipt)
         self.anchor = hashlib.sha256(receipt_path.read_bytes()).hexdigest()
         with self.assertRaisesRegex(ContractError, 'feature'):
-            verify_run(self.output, self.anchor)
+            verify_run(self.output, self.anchor, source_roots=(self.base,))
 
     def test_current_relocated_semantics_are_explicitly_unsupported(self):
         self.relocate(current_policy=True)

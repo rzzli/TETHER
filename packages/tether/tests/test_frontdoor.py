@@ -38,7 +38,7 @@ class FrontDoorTests(unittest.TestCase):
 
     def complete(self, argv=None):
         argv = argv or ["demo", "--output", str(self.output)]
-        return layer.create_outer(self.output, argv)
+        return layer.create_outer(self.output, argv, source_roots=(self.root,))
 
     def changed_stat(self, path, **changes):
         original = Path.stat
@@ -104,6 +104,20 @@ class FrontDoorTests(unittest.TestCase):
         self.assertFalse(self.output.exists())
         self.assertIn("tether run: error:", stream.getvalue())
 
+    def test_copied_source_requires_grant_before_child_dispatch(self):
+        import tether_engine
+        source = self.root / "copied-demo"
+        shutil.copytree(Path(tether_engine.__file__).parent / "demo" / "v2", source)
+        argv = ["run", "--case", str(source / "case.json"),
+                "--snapshot", str(source / "snapshot.json"), "--output", str(self.output)]
+        engine = Mock(side_effect=AssertionError("dispatch before source authorization"))
+        with self.assertRaisesRegex(ContractError, "source-root"):
+            layer.create_outer(self.output, argv, engine=engine)
+        engine.assert_not_called()
+        events = read_chain(self.output / layer.JOURNAL)
+        self.assertFalse(any(event['event'] == 'engine_dispatch' for event in events))
+        self.assertEqual(events[-1]['event'], 'run_failed')
+
     def test_output_rewrite_removes_both_legacy_argument_forms(self):
         result = layer._engine_args(["demo", "--output=first", "--output", "second"], self.root / "engine")
         self.assertEqual(result, ["demo", "--output", str(self.root / "engine")])
@@ -138,11 +152,11 @@ class FrontDoorTests(unittest.TestCase):
         outer_path.write_bytes(canonical(outer_receipt) + b'\n')
         anchor = layer.digest(outer_path.read_bytes())
         with self.assertRaisesRegex(ContractError, 'Semantic verification requires'):
-            layer.verify_outer(self.output, anchor)
+            layer.verify_outer(self.output, anchor, source_roots=(self.root,))
         with (patch.object(layer, 'code_proof', side_effect=AssertionError('current launcher replay')),
               patch('tether._semantics.check_engine_semantics', side_effect=AssertionError('current semantics')),
               patch.object(layer, 'invoke_engine', side_effect=AssertionError('no dispatch'))):
-            result = layer.verify_outer(self.output, anchor, allow_legacy=True)
+            result = layer.verify_outer(self.output, anchor, allow_legacy=True, source_roots=(self.root,))
         self.assertEqual(result['status'], 'byte_integrity_verified')
         self.assertEqual(result['assurance'], 'byte_integrity')
         self.assertFalse(result['launcher_code_verified'])
@@ -283,11 +297,11 @@ class FrontDoorTests(unittest.TestCase):
         expected = layer.project_dossier(engine_before["dossier.md"])
         self.assertEqual((self.output / "dossier.md").read_bytes(), expected)
         self.assertEqual(expected, engine_before["dossier.md"])
-        answer = layer.verify_outer(self.output, result["receipt_sha256"])
+        answer = layer.verify_outer(self.output, result["receipt_sha256"], source_roots=(self.root,))
         self.assertTrue(answer["external_anchor_checked"])
         self.assertEqual(answer["engine"]["source_binding"], "current_originals")
         self.assertEqual(engine_before, {p.name: p.read_bytes() for p in (self.output / "engine").iterdir()})
-        self.assertFalse(layer.verify_outer(self.output)["external_anchor_checked"])
+        self.assertFalse(layer.verify_outer(self.output, source_roots=(self.root,))["external_anchor_checked"])
         self.assertEqual(answer["presentation_projection"], "identity_dossier_v2")
 
     def test_engine_receipt_from_another_release_requires_original_checkout(self):
@@ -298,20 +312,20 @@ class FrontDoorTests(unittest.TestCase):
         receipt["software_version"] = "0.0.0"
         path.write_bytes(canonical(receipt))
         with self.assertRaisesRegex(ContractError, "original checkout"):
-            verify_run(self.output / "engine", verify_sources=False)
+            verify_run(self.output / "engine", verify_sources=False, source_roots=(self.root,))
 
     def test_caller_anchor_normalization_and_nested_binding_scope(self):
         result = self.complete()
-        anchored = layer.verify_outer(self.output, result["receipt_sha256"].upper())
+        anchored = layer.verify_outer(self.output, result["receipt_sha256"].upper(), source_roots=(self.root,))
         self.assertTrue(anchored["external_anchor_checked"])
         self.assertEqual(anchored["anchor_scope"], "caller_outer_receipt")
-        for answer in (anchored, layer.verify_outer(self.output)):
+        for answer in (anchored, layer.verify_outer(self.output, source_roots=(self.root,))):
             self.assertFalse(answer["engine"]["external_anchor_checked"])
             self.assertTrue(answer["engine"]["receipt_anchor_checked"])
             self.assertEqual(answer["engine"]["anchor_scope"], "parent_receipt")
         for invalid in ("", " ", "0" * 63, "g" * 64, result["receipt_sha256"] + "\n", False, 0):
             with self.subTest(anchor=invalid), self.assertRaisesRegex(ContractError, "64 hexadecimal"):
-                layer.verify_outer(self.output, invalid)
+                layer.verify_outer(self.output, invalid, source_roots=(self.root,))
 
     def test_bare_engine_verify_applies_wrapper_code_policy_without_dispatch(self):
         self.complete()
@@ -348,7 +362,7 @@ class FrontDoorTests(unittest.TestCase):
         dossier.write_bytes(dossier.read_bytes().replace(b"# TETHER dossier:", b"# FALSE dossier:", 1))
         self.reseal()
         with self.assertRaisesRegex(ContractError, "projection differs"):
-            layer.verify_outer(self.output)
+            layer.verify_outer(self.output, source_roots=(self.root,))
 
     def test_outer_body_tamper_rejected_even_after_rehash(self):
         self.complete()
@@ -356,18 +370,18 @@ class FrontDoorTests(unittest.TestCase):
         dossier.write_bytes(dossier.read_bytes() + b"\nFabricated claim.\n")
         self.reseal()
         with self.assertRaisesRegex(ContractError, "projection differs"):
-            layer.verify_outer(self.output)
+            layer.verify_outer(self.output, source_roots=(self.root,))
 
     def test_receipt_and_external_anchor_tamper_reject(self):
         result = self.complete()
         with self.assertRaisesRegex(ContractError, "external receipt"):
-            layer.verify_outer(self.output, "0" * 64)
+            layer.verify_outer(self.output, "0" * 64, source_roots=(self.root,))
         path = self.output / layer.RECEIPT
         receipt = json.loads(path.read_text())
         receipt["role"] = "agent_evidence"
         path.write_bytes(canonical(receipt) + b"\n")
         with self.assertRaisesRegex(ContractError, "envelope"):
-            layer.verify_outer(self.output)
+            layer.verify_outer(self.output, source_roots=(self.root,))
         self.assertNotEqual(result["receipt_sha256"], layer.digest(path.read_bytes()))
 
     def test_boolean_byte_metadata_does_not_alias_integer_zero(self):
@@ -377,7 +391,7 @@ class FrontDoorTests(unittest.TestCase):
             manifest["artifacts"]["engine-stderr.txt"]["bytes"] = False
         self.reseal(change)
         with self.assertRaisesRegex(ContractError, "hash/bytes/path"):
-            layer.verify_outer(self.output)
+            layer.verify_outer(self.output, source_roots=(self.root,))
 
     def test_rechained_journal_cannot_contradict_launcher_proof(self):
         self.complete()
@@ -385,7 +399,7 @@ class FrontDoorTests(unittest.TestCase):
             events[1]["details"] = dict(events[1]["details"], launcher_proof_sha256="0" * 64)
         self.reseal(event_change=change)
         with self.assertRaisesRegex(ContractError, "dispatch/proof binding"):
-            layer.verify_outer(self.output)
+            layer.verify_outer(self.output, source_roots=(self.root,))
 
     def test_source_tamper_uses_only_copied_synthetic_json(self):
         sources = self.root / "fictional-sources"
@@ -396,14 +410,14 @@ class FrontDoorTests(unittest.TestCase):
         source = sources / "evidence.json"
         source.write_bytes(source.read_bytes() + b"\n")
         with self.assertRaisesRegex(ContractError, "Source integrity|Source hash"):
-            layer.verify_outer(self.output)
+            layer.verify_outer(self.output, source_roots=(self.root,))
 
     def test_engine_receipt_tamper_rejects(self):
         self.complete()
         path = self.output / "engine/receipt.json"
         path.write_bytes(path.read_bytes() + b"\n")
         with self.assertRaises(ContractError):
-            layer.verify_outer(self.output)
+            layer.verify_outer(self.output, source_roots=(self.root,))
 
     def test_wrapper_file_tamper_rejects_without_editing_executing_source(self):
         copied = self.root / "fictional-package"
@@ -413,18 +427,18 @@ class FrontDoorTests(unittest.TestCase):
             target = copied / "_cli.py"
             target.write_bytes(target.read_bytes() + b"\n# fictional changed launcher\n")
             with self.assertRaisesRegex(ContractError, "launcher code/version"):
-                layer.verify_outer(self.output)
+                layer.verify_outer(self.output, source_roots=(self.root,))
 
     def test_unlisted_artifact_and_directory_reject(self):
         self.complete()
         extra = self.output / "unlisted.txt"
         extra.write_text("fictional")
         with self.assertRaisesRegex(ContractError, "whole artifact inventory"):
-            layer.verify_outer(self.output)
+            layer.verify_outer(self.output, source_roots=(self.root,))
         extra.unlink()
         (self.output / "empty-extra").mkdir()
         with self.assertRaisesRegex(ContractError, "directory inventory"):
-            layer.verify_outer(self.output)
+            layer.verify_outer(self.output, source_roots=(self.root,))
 
     def test_existing_output_is_never_changed(self):
         self.output.mkdir()
@@ -443,7 +457,7 @@ class FrontDoorTests(unittest.TestCase):
             return layer.EngineResult(3)
         def run():
             try:
-                layer.create_outer(self.output, ["demo", "--output", str(self.output)], engine=engine)
+                layer.create_outer(self.output, ["demo", "--output", str(self.output)], engine=engine, source_roots=(self.root,))
             except Exception as error:
                 return type(error)
         with ThreadPoolExecutor(max_workers=2) as pool:
@@ -456,17 +470,17 @@ class FrontDoorTests(unittest.TestCase):
     def test_nonzero_engine_retains_attempt_and_has_no_success_receipt(self):
         with self.assertRaises(layer.EngineFailure):
             layer.create_outer(self.output, ["demo", "--output", str(self.output)],
-                               engine=lambda argv: layer.EngineResult(3, b"out", b"tether-engine: failure\n"))
+                               engine=lambda argv: layer.EngineResult(3, b"out", b"tether-engine: failure\n"), source_roots=(self.root,))
         self.assertEqual((self.output / "engine-stdout.txt").read_bytes(), b"out")
         self.assertEqual(layer.inspect_outer(self.output)["failure"]["status"], "failed")
         self.assertFalse((self.output / layer.RECEIPT).exists())
         with self.assertRaisesRegex(ContractError, "retained failure"):
-            layer.verify_outer(self.output)
+            layer.verify_outer(self.output, source_roots=(self.root,))
 
     def test_engine_interrupt_exit_is_retained_as_interrupted(self):
         with self.assertRaises(layer.EngineInterrupted):
             layer.create_outer(self.output, ["demo", "--output", str(self.output)],
-                               engine=lambda argv: layer.EngineResult(130))
+                               engine=lambda argv: layer.EngineResult(130), source_roots=(self.root,))
         self.assertEqual(layer.inspect_outer(self.output)["failure"]["status"], "interrupted")
         self.assertEqual(read_chain(self.output / layer.JOURNAL)[-1]["event"], "run_interrupted")
 
@@ -479,7 +493,7 @@ class FrontDoorTests(unittest.TestCase):
             inner.close()
             raise KeyboardInterrupt()
         with self.assertRaises(KeyboardInterrupt):
-            layer.create_outer(self.output, ["demo", "--output", str(self.output)], engine=interrupted)
+            layer.create_outer(self.output, ["demo", "--output", str(self.output)], engine=interrupted, source_roots=(self.root,))
         before = (self.output / "engine/journal.jsonl").read_bytes()
         self.assertEqual(layer.inspect_outer(self.output)["failure"]["status"], "interrupted")
         self.assertEqual(len(calls), 1)
@@ -526,7 +540,7 @@ class FrontDoorTests(unittest.TestCase):
         with patch.object(layer.subprocess, "Popen", return_value=process) as spawn, \
              patch.object(supervisor, "_read_ready", side_effect=[b"before cleanup", primary,
                  b"more", b"usage before cleanup", None, None]), self.assertRaises(OSError) as caught:
-            layer.create_outer(self.output, ["demo", "--output", str(self.output)])
+            layer.create_outer(self.output, ["demo", "--output", str(self.output)], source_roots=(self.root,))
         self.assertIs(caught.exception, primary)
         spawn.assert_called_once()
         process.communicate.assert_not_called()
@@ -548,7 +562,7 @@ class FrontDoorTests(unittest.TestCase):
                 raise OSError("fictional secondary storage failure")
             return original(path, payload)
         with patch.object(layer, "_save", side_effect=fail_metadata), self.assertRaises(OSError) as caught:
-            layer.create_outer(self.output, ["demo", "--output", str(self.output)], engine=engine)
+            layer.create_outer(self.output, ["demo", "--output", str(self.output)], engine=engine, source_roots=(self.root,))
         self.assertIs(caught.exception, primary)
 
     def test_journal_close_failure_prevents_success_receipt(self):
@@ -577,7 +591,7 @@ class FrontDoorTests(unittest.TestCase):
             def fail(self, *args):
                 raise OSError("fictional failure append")
         with patch.object(layer, "RunJournal", BadFailure), self.assertRaises(layer.EngineFailure):
-            layer.create_outer(self.output, ["demo", "--output", str(self.output)], engine=lambda argv: layer.EngineResult(2))
+            layer.create_outer(self.output, ["demo", "--output", str(self.output)], engine=lambda argv: layer.EngineResult(2), source_roots=(self.root,))
         failure = json.loads((self.output / layer.FAILURE).read_text())
         self.assertEqual(failure["cleanup_errors"][0]["operation"], "journal_failure_append")
 

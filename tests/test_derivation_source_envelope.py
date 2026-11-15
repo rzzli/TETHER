@@ -94,11 +94,11 @@ class DerivationSourceEnvelopeTests(unittest.TestCase):
         result = run_workflow(self.case, store, ExtractiveBackend())
         output = self.fixture.parent / "run"
         write_run(output, result, store, None)
-        self.assertEqual(verify_run(output)["derivation_verification"], "verified")
+        self.assertEqual(verify_run(output, source_roots=(self.fixture.parent,))["derivation_verification"], "verified")
         node_path.unlink()
         with self.assertRaises(ContractError):
-            verify_run(output)
-        limited = verify_run(output, verify_sources=False)
+            verify_run(output, source_roots=(self.fixture.parent,))
+        limited = verify_run(output, verify_sources=False, source_roots=(self.fixture.parent,))
         self.assertEqual(limited["derivation_verification"], "not_checked_outputs_only")
         self.assertNotEqual(limited["semantic_consistency"], "verified")
 

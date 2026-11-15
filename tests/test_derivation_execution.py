@@ -48,7 +48,7 @@ class DerivationExecutionTests(unittest.TestCase):
         result, output = self.execute()
         self.assertEqual(result.features.values["genetic_support"].value, 0.8)
         self.assertEqual(result.configuration["admission_policy"], "tether.derivation.v1")
-        verification = verify_run(output)
+        verification = verify_run(output, source_roots=(self.root,))
         self.assertEqual(verification["semantic_consistency"], "verified")
         self.assertNotIn("unavailable", verification["derivation_verification"])
 
@@ -166,8 +166,8 @@ class DerivationExecutionTests(unittest.TestCase):
         _, output = self.execute()
         (self.fixture / "raw-inputs.json").write_text('{}\n', encoding="utf-8")
         with self.assertRaises(ContractError):
-            verify_run(output)
-        limited = verify_run(output, verify_sources=False)
+            verify_run(output, source_roots=(self.root,))
+        limited = verify_run(output, verify_sources=False, source_roots=(self.root,))
         self.assertEqual(limited["derivation_verification"], "not_checked_outputs_only")
         self.assertNotEqual(limited["semantic_consistency"], "verified")
 
@@ -179,10 +179,10 @@ class DerivationExecutionTests(unittest.TestCase):
                            "--output", str(output)])
         self.assertEqual(status, 0)
         with redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
-            self.assertEqual(main(["verify", "--run-dir", str(output)]), 0)
+            self.assertEqual(main(["verify", "--run-dir", str(output), '--source-root', str(self.root)]), 0)
         (self.fixture / "raw-inputs.json").write_text('{}\n', encoding="utf-8")
         with redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
-            self.assertNotEqual(main(["verify", "--run-dir", str(output)]), 0)
+            self.assertNotEqual(main(["verify", "--run-dir", str(output), '--source-root', str(self.root)]), 0)
 
 
 if __name__ == "__main__":

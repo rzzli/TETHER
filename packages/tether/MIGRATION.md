@@ -1,5 +1,60 @@
 # Package and version compatibility
 
+## Explicit source roots
+
+Source-inclusive `verify_run`, public `verify_engine`/`verify_outer`, and
+`evaluate_bound` now accept the keyword `source_roots=(Path(...), ...)`. The
+corresponding `verify`, `evaluate` and `evaluate-baseline` commands accept
+repeatable `--source-root PATH`. External normalized packets, originals,
+download receipts and computation assets need caller grants. Serialized roots
+in receipts or archived catalog policies cannot grant filesystem permission.
+
+The caller-selected run directory and this executing package's fixed bundled
+demo directory remain implicit roots. A copied demo in an arbitrary directory
+needs an explicit grant; a producer's `synthetic_demo` declaration grants none.
+The installed `tether demo` then `tether verify` quick start needs no new flag.
+For bound evaluation, the selected producer-manifest directory contains its
+local run artifacts; other referenced locations require explicit roots. The
+cohort, producer and label files explicitly selected by the caller remain
+readable without granting their entire directories to the producer manifest.
+
+```powershell
+tether verify --run-dir .\run --receipt-sha256 $receiptHash `
+  --source-root .\normalized --source-root E:\projects_data\drug_target_agents_data
+```
+
+The public `tether run` also accepts these grants for its mandatory post-run
+verification and checks required paths before dispatch. Its Python launcher
+accepts `source_roots`. Native engine execution remains the trusted explicit
+snapshot-input route; granting roots is not an OS sandbox for arbitrary agents.
+An explicitly selected `PolicyRequest.roots_path` authorizes preparation; its
+archived copy never authorizes a later independent verification.
+
+Caller-selected root ancestors may be local directory links. They are resolved
+once, with network/device targets rejected before inspection. Descendant links
+are rejected. Source reads use no-follow handles, preflighted file identities
+and hashes; originals are streamed rather than loaded wholesale. Installer
+hardlinks are allowed for hash-bound source files, preserving uv's demo install;
+portable bundle members retain their stricter single-link rule. These checks
+trust the OS and do not claim exclusive ownership across an entire multi-run
+evaluation. Source checks remain scoped to each run's verification.
+
+Native run receipts and declared outputs also use no-follow reads. Interpretation
+uses identity-checked bytes rehashed against the receipt, including the trace.
+A sealed output journal may retain its owner's write handle; output reads permit
+that handle and check for changes, rather than claiming an exclusive writer lock.
+The verifier never opens an unsealed request just to report its presence.
+
+Maintained pilot/replay utilities accept repeatable `--source-root`. The pilot's
+explicitly selected normalized bundle is allowed, and all other original/receipt
+paths are checked before its first child dispatch. The dossier-binding utility
+forwards its existing `approved_roots` grants to native verification.
+
+`--outputs-only` still reads no original sources and reports weaker assurance.
+`--allow-legacy` alone does not authorize legacy source paths; combine it with
+roots for source checks, or explicitly select outputs-only byte verification.
+Existing receipts and scientific results must not be rewritten to add grants.
+
 The public interface is `tether-target-agents` 0.7.0, with command and import path
 `tether`. It pins `tether-target-engine` 0.5.0, imported as `tether_engine` and
 invoked directly as `tether-engine`. Public aliases share the engine's class and

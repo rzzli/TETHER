@@ -78,7 +78,7 @@ class ReplayArchiveVerificationTests(unittest.TestCase):
         (self.fixture / 'replay.json').unlink()
         with patch.object(ReplayBackend, 'quote', side_effect=AssertionError('No quote')), \
              patch.object(ReplayBackend, 'select', side_effect=AssertionError('No selection')):
-            check = verify_run(self.output)
+            check = verify_run(self.output, source_roots=(self.root,))
         self.assertEqual(check['semantic_consistency'], 'verified')
         self.assertEqual(check['replay_binding']['request_binding'], 'source_reconstructed')
 
@@ -86,7 +86,7 @@ class ReplayArchiveVerificationTests(unittest.TestCase):
         self.produce()
         self.alter_archive(lambda p: self.first(p).update(request_sha256='f' * 64))
         with self.assertRaisesRegex(ContractError, '[Rr]eplay|request fingerprint'):
-            verify_run(self.output)
+            verify_run(self.output, source_roots=(self.root,))
 
     def test_matching_fabricated_dispatch_and_entry_still_need_source_request(self):
         self.produce()
@@ -94,43 +94,43 @@ class ReplayArchiveVerificationTests(unittest.TestCase):
             next(e for e in events if e['event'] == 'dispatch')['details']['request_sha256'] = 'f' * 64
         self.alter_archive(lambda p: self.first(p).update(request_sha256='f' * 64), change_trace)
         with self.assertRaisesRegex(ContractError, '[Rr]eplay|request fingerprint'):
-            verify_run(self.output)
+            verify_run(self.output, source_roots=(self.root,))
 
     def test_changed_recorded_selection_rejected(self):
         self.produce()
         self.alter_archive(lambda p: self.first(p)['selection'].update(observation_ids=[]))
         with self.assertRaisesRegex(ContractError, '[Rr]eplay'):
-            verify_run(self.output)
+            verify_run(self.output, source_roots=(self.root,))
 
     def test_changed_recorded_usage_rejected(self):
         self.produce()
         self.alter_archive(lambda p: self.first(p)['selection']['usage'].update(input_tokens=7))
         with self.assertRaisesRegex(ContractError, '[Rr]eplay'):
-            verify_run(self.output)
+            verify_run(self.output, source_roots=(self.root,))
 
     def test_missing_consumed_role_rejected(self):
         self.produce()
         self.alter_archive(lambda p: p['document']['responses'].pop('genetics'))
         with self.assertRaisesRegex(ContractError, '[Rr]eplay|recorded response'):
-            verify_run(self.output)
+            verify_run(self.output, source_roots=(self.root,))
 
     def test_malformed_document_rejected(self):
         self.produce()
         self.alter_archive(lambda p: p['document'].update(unrecognized=True))
         with self.assertRaises(ContractError):
-            verify_run(self.output)
+            verify_run(self.output, source_roots=(self.root,))
 
     def test_wrong_replay_schema_rejected_even_for_zero_calls(self):
         self.produce(budget=Budget(max_calls=0))
         self.alter_archive(lambda p: p['document'].update(schema_version=1))
         with self.assertRaises(ContractError):
-            verify_run(self.output)
+            verify_run(self.output, source_roots=(self.root,))
 
     def test_missing_provenance_document_rejected(self):
         self.produce()
         self.alter_archive(lambda p: p.pop('document'))
         with self.assertRaises(ContractError):
-            verify_run(self.output)
+            verify_run(self.output, source_roots=(self.root,))
 
     def test_unused_extra_role_and_entries_remain_permitted(self):
         def extras(document):
@@ -139,17 +139,17 @@ class ReplayArchiveVerificationTests(unittest.TestCase):
             document['responses']['genetics'].append(extra)
             document['responses']['unused_role'] = [extra]
         self.produce(extras)
-        self.assertEqual(verify_run(self.output)['semantic_consistency'], 'verified')
+        self.assertEqual(verify_run(self.output, source_roots=(self.root,))['semantic_consistency'], 'verified')
 
     def test_missing_role_can_legitimately_fail_quote_without_dispatch(self):
         result = self.produce(lambda d: d['responses'].pop('genetics'))
         self.assertEqual(result.status, 'partial')
         self.assertEqual(result.calls, 7)
-        self.assertEqual(verify_run(self.output)['semantic_consistency'], 'verified')
+        self.assertEqual(verify_run(self.output, source_roots=(self.root,))['semantic_consistency'], 'verified')
 
     def test_source_reconstruction_count_includes_failed_quote_request(self):
         self.produce(lambda d: d['responses'].pop('genetics'))
-        self.assertEqual(verify_run(self.output)['replay_binding']['requests_reconstructed'], 8)
+        self.assertEqual(verify_run(self.output, source_roots=(self.root,))['replay_binding']['requests_reconstructed'], 8)
 
     def test_repeated_quote_failure_for_same_role_rejected(self):
         self.produce(lambda d: d['responses'].pop('genetics'))
@@ -158,17 +158,17 @@ class ReplayArchiveVerificationTests(unittest.TestCase):
             events.insert(index + 1, copy.deepcopy(events[index]))
         self.alter_archive(lambda p: None, repeat)
         with self.assertRaises(ContractError):
-            verify_run(self.output)
+            verify_run(self.output, source_roots=(self.root,))
 
     def test_bad_request_can_legitimately_fail_quote(self):
         result = self.produce(lambda d: d['responses']['genetics'][0].update(request_sha256='f' * 64))
         self.assertEqual(result.status, 'partial')
-        self.assertEqual(verify_run(self.output)['semantic_consistency'], 'verified')
+        self.assertEqual(verify_run(self.output, source_roots=(self.root,))['semantic_consistency'], 'verified')
 
     def test_negative_consumed_usage_is_a_legitimate_quote_failure(self):
         result = self.produce(lambda d: d['responses']['genetics'][0]['selection']['usage'].update(input_tokens=-1))
         self.assertEqual(result.status, 'partial')
-        self.assertEqual(verify_run(self.output)['semantic_consistency'], 'verified')
+        self.assertEqual(verify_run(self.output, source_roots=(self.root,))['semantic_consistency'], 'verified')
 
     def test_unused_negative_usage_is_not_a_consumed_response(self):
         def unused(document):
@@ -176,20 +176,20 @@ class ReplayArchiveVerificationTests(unittest.TestCase):
             extra['selection']['usage']['input_tokens'] = -1
             document['responses']['genetics'].append(extra)
         self.produce(unused)
-        self.assertEqual(verify_run(self.output)['semantic_consistency'], 'verified')
+        self.assertEqual(verify_run(self.output, source_roots=(self.root,))['semantic_consistency'], 'verified')
 
     def test_interruption_during_selection_preserves_estimated_accounting(self):
         with patch.object(ReplayBackend, 'select', side_effect=KeyboardInterrupt):
             result = self.produce()
         self.assertEqual(result.status, 'interrupted')
         self.assertEqual(result.calls, 1)
-        self.assertEqual(verify_run(self.output)['semantic_consistency'], 'verified')
+        self.assertEqual(verify_run(self.output, source_roots=(self.root,))['semantic_consistency'], 'verified')
 
     def test_zero_call_budget_is_valid_with_unused_replay_responses(self):
         result = self.produce(budget=Budget(max_calls=0))
         self.assertEqual(result.calls, 0)
         self.assertEqual(result.status, 'budget_exhausted')
-        self.assertEqual(verify_run(self.output)['semantic_consistency'], 'verified')
+        self.assertEqual(verify_run(self.output, source_roots=(self.root,))['semantic_consistency'], 'verified')
 
     def retry_document(self, document):
         records = tuple(r for r in self.store.query(self.case, Category.GENETICS)
@@ -205,7 +205,7 @@ class ReplayArchiveVerificationTests(unittest.TestCase):
         result = self.produce(self.retry_document)
         self.assertEqual(result.status, 'completed')
         self.assertEqual(result.calls, 9)
-        self.assertEqual(verify_run(self.output)['semantic_consistency'], 'verified')
+        self.assertEqual(verify_run(self.output, source_roots=(self.root,))['semantic_consistency'], 'verified')
 
     def test_retry_with_no_second_entry_is_a_legitimate_partial_run(self):
         def only_invalid(document):
@@ -214,18 +214,18 @@ class ReplayArchiveVerificationTests(unittest.TestCase):
         result = self.produce(only_invalid)
         self.assertEqual(result.status, 'partial')
         self.assertEqual(result.calls, 8)
-        self.assertEqual(verify_run(self.output)['semantic_consistency'], 'verified')
+        self.assertEqual(verify_run(self.output, source_roots=(self.root,))['semantic_consistency'], 'verified')
 
     def test_reordered_retry_entries_rejected(self):
         self.produce(self.retry_document)
         self.alter_archive(lambda p: p['document']['responses']['genetics'].reverse())
         with self.assertRaises(ContractError):
-            verify_run(self.output)
+            verify_run(self.output, source_roots=(self.root,))
 
     def test_archived_only_verification_does_not_read_originals_or_overstate_binding(self):
         self.produce()
         with patch('tether_engine.artifacts.admit_snapshot', side_effect=AssertionError('No source restoration')):
-            check = verify_run(self.output, verify_sources=False)
+            check = verify_run(self.output, verify_sources=False, source_roots=(self.root,))
         self.assertEqual(check['source_binding'], 'archived_fingerprints_only')
         self.assertEqual(check['replay_binding']['request_binding'], 'archived_dispatch_fingerprints')
 
@@ -233,7 +233,7 @@ class ReplayArchiveVerificationTests(unittest.TestCase):
         self.produce()
         self.alter_archive(lambda p: self.first(p).update(request_sha256='f' * 64))
         with self.assertRaises(ContractError):
-            verify_run(self.output, verify_sources=False)
+            verify_run(self.output, verify_sources=False, source_roots=(self.root,))
 
     def test_invalid_retained_replay_rejected_before_new_artifact_publication(self):
         result = self.produce()
@@ -250,7 +250,7 @@ class ReplayArchiveVerificationTests(unittest.TestCase):
     def test_legacy_v1_receipt_scope_is_unchanged(self):
         legacy = self.root / 'legacy'
         materialize_checkpoint('tests/fixtures/legacy-v1', legacy)
-        check = verify_run(legacy, verify_sources=False, allow_legacy=True)
+        check = verify_run(legacy, verify_sources=False, allow_legacy=True, source_roots=(self.root,))
         self.assertEqual(check['semantic_consistency'], 'unavailable_legacy_v1')
         self.assertNotIn('replay_binding', check)
 

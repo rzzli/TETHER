@@ -81,7 +81,7 @@ class JournalReadBoundsTests(unittest.TestCase):
             with patch('tether_engine.artifacts.MAX_LEDGER_JSON_BYTES', limit), \
                     patch('tether_engine.artifacts.sha256_file', side_effect=guarded):
                 with self.assertRaisesRegex(ContractError, 'Run output exceeds byte limit: dossier.md'):
-                    verify_run(output)
+                    verify_run(output, source_roots=((output).parent,))
 
     def test_full_journal_returns_failure_without_overwriting_durable_prefix(self):
         fixture = Path(__file__).resolve().parents[1] / 'src/tether_engine/demo/v2'

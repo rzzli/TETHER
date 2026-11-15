@@ -189,7 +189,7 @@ def eligible_artifacts(snapshot: Snapshot, graph: InputGraph, case: Case):
             raise ContractError(f"Invalid SHA-256: {artifact.artifact_id}")
         if artifact.role != "agent_evidence":
             raise ContractError(f"Evaluator/reference-only artifact denied: {artifact.artifact_id}")
-        safe_child(graph.root, artifact.path)
+        graph.child(graph.root, artifact.path)
         if not artifact.access_approved:
             yield artifact, "access_denied"
             continue
@@ -198,15 +198,15 @@ def eligible_artifacts(snapshot: Snapshot, graph: InputGraph, case: Case):
         yield artifact, reason or graph.exclusion(artifact.input_refs, case)
 
 
-def required_source_proofs(snapshot: Snapshot, case: Case, root: Path, policy=None) -> tuple[dict, ...]:
+def required_source_proofs(snapshot: Snapshot, case: Case, root: Path, policy=None, *, lexical=False) -> tuple[dict, ...]:
     """Rebuild the complete eligible proof inventory without reading source bytes."""
-    graph = InputGraph(snapshot, root, catalog_index(policy) if policy else None)
+    graph = InputGraph(snapshot, root, catalog_index(policy) if policy else None, lexical=lexical)
     proofs, parents = [], set()
     for artifact, reason in eligible_artifacts(snapshot, graph, case):
         if reason:
             continue
         proofs.append({"artifact_id": artifact.artifact_id, "dataset_id": artifact.dataset_id,
-                       "release_id": artifact.release_id, "path": str(safe_child(root, artifact.path)),
+                       "release_id": artifact.release_id, "path": str(graph.child(graph.root, artifact.path)),
                        "sha256": artifact.sha256})
         parents.update(graph.closure(artifact.input_refs))
     for key in sorted(parents):
@@ -217,7 +217,7 @@ def required_source_proofs(snapshot: Snapshot, case: Case, root: Path, policy=No
         if node.receipt_path:
             if not node.receipt_sha256:
                 raise ContractError("Input receipt checksum missing")
-            proof.update(receipt_path=str(safe_child(Path(snapshot.raw_root or root), node.receipt_path)),
+            proof.update(receipt_path=str(graph.child(Path(snapshot.raw_root or graph.root), node.receipt_path)),
                          receipt_sha256=node.receipt_sha256)
         elif snapshot.profile != Profile.DEMO and node.computed_at is None:
             raise ContractError("Real raw inputs require archived public-download receipts")
@@ -231,7 +231,7 @@ def load_snapshot(path: Path, case: Case, catalog_path: Path | None = None) -> E
     return admit_snapshot(snapshot, case, path.parent, policy)
 
 
-def admit_snapshot(snapshot: Snapshot, case: Case, root: Path, policy=None) -> EvidenceStore:
+def admit_snapshot(snapshot: Snapshot, case: Case, root: Path, policy=None, *, source_files=None) -> EvidenceStore:
     """Admit sealed inputs using either the live or archived effective catalog."""
     case.validate()
     if snapshot.schema_version != 2 or not snapshot.snapshot_id.strip():
@@ -243,23 +243,26 @@ def admit_snapshot(snapshot: Snapshot, case: Case, root: Path, policy=None) -> E
         if policy is None:
             raise ContractError("Real-data snapshots require the project dataset catalog")
         catalog = catalog_index(policy)
-    graph = InputGraph(snapshot, root, catalog)
+    graph = InputGraph(snapshot, root, catalog, source_files=source_files)
     observations_seen = set()
     records, exclusions, proofs = [], [], []
     input_proofs = {}
-    root = root.resolve()
+    root = graph.root
     for artifact, reason in eligible_artifacts(snapshot, graph, case):
-        source_path = safe_child(root, artifact.path)
+        source_path = graph.child(root, artifact.path)
         if reason:
             # Never open rejected artifact bytes or expose its content to a backend.
             exclusions.append(Exclusion(artifact.artifact_id, "artifact", reason))
             continue
-        if not source_path.is_file():
-            raise ContractError(f"Approved artifact missing: {artifact.artifact_id}")
-        if source_path.stat().st_size > 64 * 1024 * 1024:
-            raise ContractError("Evidence packet exceeds the 64 MiB normalized-input limit")
-        # Hash the exact bytes subsequently decoded, preventing a hash/read race.
-        payload = source_path.read_bytes()
+        if source_files is not None:
+            payload = source_files.read(source_path, 64 * 1024 * 1024)
+        else:
+            if not source_path.is_file():
+                raise ContractError(f"Approved artifact missing: {artifact.artifact_id}")
+            if source_path.stat().st_size > 64 * 1024 * 1024:
+                raise ContractError("Evidence packet exceeds the 64 MiB normalized-input limit")
+            # Hash the exact bytes subsequently decoded, preventing a hash/read race.
+            payload = source_path.read_bytes()
         if hashlib.sha256(payload).hexdigest() != artifact.sha256:
             raise ContractError(f"Artifact checksum mismatch: {artifact.artifact_id}")
         packet = decode(EvidencePacket, parse_json(payload), artifact.artifact_id)

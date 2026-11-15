@@ -16,7 +16,10 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 
 from tether_engine.ingest import PILOT, peak_memory_bytes
-from tether_engine.serde import ContractError, fingerprint, read_json, read_ledger_json, safe_child, sha256_file, write_json
+from tether_engine.chrono import required_source_proofs
+from tether_engine.contracts import Case, Snapshot
+from tether_engine.source_access import SourceAccess
+from tether_engine.serde import ContractError, decode, fingerprint, read_json, read_ledger_json, safe_child, sha256_file, write_json
 
 
 CONTEXT_FIELDS = (
@@ -251,11 +254,25 @@ def main():
     parser.add_argument("--bundle", type=Path, required=True)
     parser.add_argument("--catalog", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--source-root", type=Path, action="append", default=[],
+                        help="Explicit local roots for original sources and archived receipts")
     args = parser.parse_args()
     bundle, output = args.bundle.resolve(), args.output.resolve()
     build = read_json(bundle / "build-report.json")
     if build["status"] != "built" or build["blocked_cases"] or len(build["cases"]) != len(PILOT):
         raise ContractError("Pilot requires all ten built canonical cases")
+    # Check the whole selected pack before launching the first offline child.
+    access = SourceAccess.for_run(bundle, args.source_root)
+    paths = []
+    for item in build["cases"]:
+        base = safe_child(bundle, item["case_id"])
+        case = decode(Case, read_json(base / "case.json"))
+        snapshot = decode(Snapshot, read_json(base / "snapshot.json"))
+        for proof in required_source_proofs(snapshot, case, base, read_json(args.catalog), lexical=True):
+            paths.append(proof["path"])
+            if proof.get("receipt_path"):
+                paths.append(proof["receipt_path"])
+    access.prepare(paths)
     output.mkdir(parents=True, exist_ok=False)
     logs = output / "console"
     logs.mkdir()
@@ -285,7 +302,7 @@ def main():
             answer = read_json(logs / (case_id + ".stdout.json"))
             anchor = answer["receipt_sha256"]
             from tether_engine.artifacts import verify_run
-            verification = verify_run(run_dir, anchor)
+            verification = verify_run(run_dir, anchor, source_roots=(bundle, *args.source_root))
             if verification["semantic_consistency"] != "verified":
                 raise ContractError("Pilot semantic verification did not pass")
             prediction = read_json(run_dir / "prediction.json")

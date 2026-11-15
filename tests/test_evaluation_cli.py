@@ -51,7 +51,7 @@ class EvaluationCliTests(unittest.TestCase):
             return main(arguments)
 
     def arguments(self, command="evaluate", synthetic=True):
-        args = [command, "--output", str(self.output)]
+        args = [command, "--output", str(self.output), '--source-root', str(self.root)]
         for name in ("cohort", "producer", "labels"):
             path = getattr(self, name)
             args += ["--" + name, str(path), "--" + name + "-sha256", sha256_file(path)]

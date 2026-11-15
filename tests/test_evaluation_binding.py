@@ -71,10 +71,32 @@ class EvaluationBindingTests(unittest.TestCase):
 
     def evaluate(self, **kwargs):
         from tether_engine.evaluation_binding import evaluate_bound
+        source_roots = kwargs.pop('source_roots', (self.root,))
         return evaluate_bound(self.cohort_path, sha256_file(self.cohort_path),
                               self.producer_path, sha256_file(self.producer_path),
                               self.labels_path, self.labels_hash,
-                              allow_synthetic=kwargs.pop('allow_synthetic', True), **kwargs)
+                              allow_synthetic=kwargs.pop('allow_synthetic', True), **kwargs, source_roots=source_roots)
+
+    def test_sources_require_caller_grants_before_labels_are_read(self):
+        from tether_engine.evaluation_binding import _PinnedInputs
+        original = _PinnedInputs.json
+        def guarded(pins, path, expected):
+            self.assertNotEqual(Path(path), self.labels_path, 'labels read before source authorization')
+            return original(pins, path, expected)
+        with patch.object(_PinnedInputs, 'json', guarded):
+            with self.assertRaisesRegex(ContractError, 'source-root'):
+                self.evaluate(source_roots=())
+
+    def test_network_run_location_rejected_before_network_stat(self):
+        self.producer['records'][0]['run_dir'] = '//untrusted-server/share/run'
+        self.seal()
+        original = Path.stat
+        def guarded(path, *args, **kwargs):
+            self.assertFalse(str(path).startswith(('\\\\', '//')), 'network path was inspected')
+            return original(path, *args, **kwargs)
+        with patch.object(Path, 'stat', guarded):
+            with self.assertRaisesRegex(ContractError, 'local path|bundle path'):
+                self.evaluate()
 
     def test_source_inclusive_production_bindings_and_all_case_accounting(self):
         result = self.evaluate()
@@ -273,7 +295,7 @@ class EvaluationBindingTests(unittest.TestCase):
             path.write_bytes(payload + b' ')
             try:
                 with self.subTest(path=path.name), self.assertRaisesRegex(ContractError, 'SHA-256 differs'):
-                    evaluate_bound(paths[0], hashes[0], paths[1], hashes[1], paths[2], hashes[2], allow_synthetic=True)
+                    evaluate_bound(paths[0], hashes[0], paths[1], hashes[1], paths[2], hashes[2], allow_synthetic=True, source_roots=(self.root,))
             finally:
                 path.write_bytes(payload)
 

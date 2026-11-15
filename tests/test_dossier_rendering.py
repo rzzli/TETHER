@@ -136,7 +136,7 @@ class DossierRenderingTests(unittest.TestCase):
             artifacts.write_run(output, self.result, self.store, self.model)
             run = read_json(output / 'run.json')
             self.assertEqual(run['dossier_format'], artifacts.DOSSIER_FORMAT)
-            self.assertEqual(artifacts.verify_run(output)['byte_integrity'], 'verified')
+            self.assertEqual(artifacts.verify_run(output, source_roots=((output).parent,))['byte_integrity'], 'verified')
             # A prior producer's sealed original bytes have no renderer field.
             # This fixture retains all semantic inputs and changes only that
             # presentation envelope, then pins the exact resulting bytes.
@@ -145,11 +145,11 @@ class DossierRenderingTests(unittest.TestCase):
             receipt = read_json(output / 'receipt.json')
             receipt['outputs'].update({name: sha256_file(output / name) for name in ('run.json', 'dossier.md')})
             write_json(output / 'receipt.json', receipt)
-            self.assertEqual(artifacts.verify_run(output)['byte_integrity'], 'verified')
+            self.assertEqual(artifacts.verify_run(output, source_roots=((output).parent,))['byte_integrity'], 'verified')
             run['dossier_format'] = 'unsupported'; write_json(output / 'run.json', run)
             receipt['outputs']['run.json'] = sha256_file(output / 'run.json')
             write_json(output / 'receipt.json', receipt)
-            with self.assertRaisesRegex(ContractError, 'rendering format'): artifacts.verify_run(output)
+            with self.assertRaisesRegex(ContractError, 'rendering format'): artifacts.verify_run(output, source_roots=((output).parent,))
 
     def test_metadata_nesting_and_bool_counts_are_rejected(self):
         nested = 'value'

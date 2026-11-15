@@ -25,6 +25,8 @@ def parser() -> argparse.ArgumentParser:
     run.add_argument("--snapshot", type=Path, required=True)
     run.add_argument("--output", type=Path, required=True)
     run.add_argument("--catalog", type=Path)
+    run.add_argument("--source-root", type=Path, action="append", default=[],
+                     help="Source grants for the public launcher's post-run verification")
     run.add_argument("--scorer", type=Path)
     run.add_argument("--replay", type=Path)
     run.add_argument("--local-model", type=Path, help="Explicit loopback model configuration; never the default")
@@ -42,6 +44,8 @@ def parser() -> argparse.ArgumentParser:
     verify.add_argument("--run-dir", type=Path, required=True)
     verify.add_argument("--receipt-sha256")
     verify.add_argument("--outputs-only", action="store_true")
+    verify.add_argument("--source-root", type=Path, action="append", default=[],
+                        help="Authorize an external source directory; repeat for separate originals/receipts")
     verify.add_argument("--allow-legacy", action="store_true", help="Explicitly permit byte-only verification of known legacy receipts")
     inspect = commands.add_parser("inspect-run", help="Read durable run attempts or build stages; never restart work")
     inspect.add_argument("--run-dir", type=Path, required=True)
@@ -77,6 +81,7 @@ def parser() -> argparse.ArgumentParser:
             evaluation.add_argument("--" + source_name + "-sha256", required=True)
         evaluation.add_argument("--output", type=Path, required=True)
         evaluation.add_argument("--allow-synthetic", action="store_true")
+        evaluation.add_argument("--source-root", type=Path, action="append", default=[])
     raw = commands.add_parser("evaluate-raw", help="Unverified prediction diagnostics; no producer checks")
     raw.add_argument("--predictions", type=Path, nargs="+", required=True)
     raw.add_argument("--labels", type=Path, required=True)
@@ -91,7 +96,8 @@ def main(argv: list[str] | None = None) -> int:
     journal, stage = None, "configuration"
     try:
         if args.command == "verify":
-            answer = verify_run(args.run_dir, args.receipt_sha256, not args.outputs_only, allow_legacy=args.allow_legacy)
+            answer = verify_run(args.run_dir, args.receipt_sha256, not args.outputs_only,
+                                allow_legacy=args.allow_legacy, source_roots=args.source_root)
         elif args.command == "inspect-run":
             answer = inspect_run(args.run_dir)
         elif args.command in ("bundle-export", "bundle-inspect", "bundle-verify"):
@@ -133,6 +139,7 @@ def main(argv: list[str] | None = None) -> int:
                                         args.producer, args.producer_sha256,
                                         args.labels, args.labels_sha256,
                                         allow_synthetic=args.allow_synthetic,
+                                        source_roots=args.source_root,
                                         expected_producer_kind=("tether_run_predictions" if args.command == "evaluate"
                                                                 else "external_baseline_predictions"))
             write_new_json(args.output, answer)

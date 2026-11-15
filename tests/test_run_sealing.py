@@ -50,7 +50,7 @@ class RunSealingTests(unittest.TestCase):
                 self.assertEqual(before, {name: sha256_file(output / name) for name in before})
                 self.assertEqual((output / 'dossier.md').read_bytes(), dossier(result, store).encode('utf-8'))
                 self.assertNotIn(b'\r\n', (output / 'dossier.md').read_bytes())
-                self.assertEqual(verify_run(output, anchor)['semantic_consistency'], 'verified')
+                self.assertEqual(verify_run(output, anchor, source_roots=(output.parent, FIXTURE))['semantic_consistency'], 'verified')
             finally:
                 journal.close()
 
@@ -68,7 +68,7 @@ class RunSealingTests(unittest.TestCase):
                 receipt = read_json(output / 'receipt.json')
                 for name, digest in receipt['outputs'].items():
                     self.assertEqual(sha256_file(output / name), digest, name)
-                self.assertEqual(verify_run(output)['semantic_consistency'], 'verified')
+                self.assertEqual(verify_run(output, source_roots=(output.parent, FIXTURE))['semantic_consistency'], 'verified')
 
     def test_sync_failure_prevents_receipt_and_retains_unsealed_failure(self):
         for filename in ('trace.jsonl', 'dossier.md', 'receipt.json'):
@@ -102,7 +102,7 @@ class RunSealingTests(unittest.TestCase):
                                str(FIXTURE / 'snapshot.json'), '--output', str(output)])
             self.assertEqual(status, 2)
             self.assertEqual(inspect_run(output)['last_event'], 'finalize')
-            self.assertEqual(verify_run(output)['semantic_consistency'], 'verified')
+            self.assertEqual(verify_run(output, source_roots=(output.parent, FIXTURE))['semantic_consistency'], 'verified')
 
 
 if __name__ == '__main__':
