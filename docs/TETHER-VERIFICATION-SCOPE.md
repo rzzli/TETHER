@@ -78,6 +78,14 @@ Save the printed receipt hash independently and provide it to `tether verify`
 with `--receipt-sha256`. Without an independent anchor, an internally consistent
 replacement of the entire output tree can evade hash checks against that same tree.
 
+Caller anchors accept exactly 64 hexadecimal characters in either case; empty,
+malformed and non-string values fail. `anchor_scope` distinguishes a caller's
+receipt/manifest digest from an inner `parent_receipt` binding. The latter reports
+`receipt_anchor_checked: true` and `external_anchor_checked: false`: the inner hash
+was checked, but its trust comes from the parent. A bundle export's
+`export_self_check` is similarly not an independently supplied manifest anchor;
+`producer_receipt_anchor_checked` separately reports its optional input anchor.
+
 The direct engine's `--outputs-only` mode uses archived fingerprints instead of
 rereading current originals. Its result must not be described as fresh source
 verification. Computed content reports `derivation_verification: not_checked_outputs_only`

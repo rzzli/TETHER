@@ -6,10 +6,10 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 import sys
 import platform
-import re
 from importlib import metadata
 
 from . import __version__
+from .verification_policy import normalize_anchor
 from .chrono import EvidenceStore, admit_snapshot, required_source_proofs
 from .scorer import ScorerArtifact
 from .serde import (ContractError, MAX_LEDGER_JSON_BYTES, canonical, decode, encode, fingerprint,
@@ -333,10 +333,7 @@ def write_run(output: Path, result: RunResult, store: EvidenceStore,
 
 def verify_run(output: Path, expected_receipt_sha256: str | None = None,
                verify_sources: bool = True) -> dict:
-    if expected_receipt_sha256 is not None:
-        if type(expected_receipt_sha256) is not str or re.fullmatch(r"[0-9a-fA-F]{64}", expected_receipt_sha256) is None:
-            raise ContractError("Receipt anchor must contain exactly 64 hexadecimal characters")
-        expected_receipt_sha256 = expected_receipt_sha256.lower()
+    expected_receipt_sha256 = normalize_anchor(expected_receipt_sha256)
     receipt_path = output / "receipt.json"
     if expected_receipt_sha256 is not None and sha256_file(receipt_path) != expected_receipt_sha256:
         raise ContractError("Externally anchored receipt hash mismatch")
@@ -449,6 +446,8 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
             "source_artifacts_checked": len(receipt["sources"]) if verify_sources else 0,
             "trace_events": count, "receipt_sha256": sha256_file(receipt_path),
             "external_anchor_checked": expected_receipt_sha256 is not None,
+            "receipt_anchor_checked": expected_receipt_sha256 is not None,
+            "anchor_scope": "caller_receipt" if expected_receipt_sha256 is not None else "none",
             "auxiliary_outputs_checked": len(auxiliary),
             "unsealed_auxiliary_outputs": ["request.json"] if (output / "request.json").is_file() and not auxiliary else [],
             "code_matches_current": receipt.get("code") == current_code,

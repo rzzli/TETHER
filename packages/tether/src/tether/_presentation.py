@@ -18,6 +18,7 @@ import time
 import tether_engine
 from tether_engine.artifacts import verify_run, ADMISSION_POLICY, receipt_policy
 from tether_engine.atomic import publish_bytes
+from tether_engine.verification_policy import normalize_anchor
 from tether_engine.journal import RunJournal
 from tether_engine.serde import (ContractError, MAX_LEDGER_JSON_BYTES, MAX_NORMALIZED_JSON_BYTES,
                         canonical, encode, fingerprint, parse_json)
@@ -369,12 +370,12 @@ def _envelope(doc, keys):
 
 
 def verify_outer(output, expected_receipt_sha256=None):
+    expected_receipt_sha256 = normalize_anchor(expected_receipt_sha256)
     output = _no_links(Path(output).absolute())
     need(not (output / FAILURE).exists(), "TETHER attempt has a retained failure")
     raw = _read(output / RECEIPT)
     if expected_receipt_sha256 is not None:
-        need(type(expected_receipt_sha256) is str and re.fullmatch(r"[0-9a-f]{64}", expected_receipt_sha256)
-             and digest(raw) == expected_receipt_sha256, "TETHER external receipt hash differs")
+        need(digest(raw) == expected_receipt_sha256, "TETHER external receipt hash differs")
     receipt = parse_json(raw)
     common = {"schema_version", "method", "brand", "status", "role", "agent_visible", "scientific_validation"}
     _envelope(receipt, common | {"manifest_sha256", "journal_sha256", "engine_receipt_sha256"})
@@ -440,6 +441,9 @@ def verify_outer(output, expected_receipt_sha256=None):
          == project_dossier(_read(output / "engine/dossier.md", max_bytes=MAX_DOSSIER_BYTES)), "TETHER dossier projection differs")
     engine_result = (verify_engine(output / "engine", receipt["engine_receipt_sha256"], True)
                      if legacy else _core_check(output, receipt["engine_receipt_sha256"]))
+    # The inner digest comes from the parent receipt, not an independent caller anchor.
+    engine_result = engine_result | dict(external_anchor_checked=False, receipt_anchor_checked=True,
+                                         anchor_scope="parent_receipt")
     if policy_binding is not None and not legacy:
         need(canonical(events[2]["details"]) == canonical(dict(binding=policy_binding)), "Policy journal binding differs")
         from ._catalog_binding import verify_policy_run
@@ -451,7 +455,9 @@ def verify_outer(output, expected_receipt_sha256=None):
         need(canonical(events[2]["details"]) == canonical(dict(binding=policy_binding)), "Policy journal binding differs")
         policy_result = dict(status="unavailable_legacy_v2_derivation", scientific_validation="not_established")
     return dict(brand="TETHER", status="integrity_verified", receipt_sha256=digest(raw),
-                external_anchor_checked=expected_receipt_sha256 is not None, launcher_code_verified=not legacy,
+                external_anchor_checked=expected_receipt_sha256 is not None,
+                anchor_scope="caller_outer_receipt" if expected_receipt_sha256 is not None else "none",
+                launcher_code_verified=not legacy,
                 launcher_proof_status="recorded_legacy_declaration" if legacy else "matches_current",
                 presentation_projection="identity_dossier_v2", engine=engine_result,
                 artifact_policy=policy_result,

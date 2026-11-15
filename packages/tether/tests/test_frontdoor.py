@@ -289,6 +289,19 @@ class FrontDoorTests(unittest.TestCase):
         with self.assertRaisesRegex(ContractError, "original checkout"):
             verify_run(self.output / "engine", verify_sources=False)
 
+    def test_caller_anchor_normalization_and_nested_binding_scope(self):
+        result = self.complete()
+        anchored = layer.verify_outer(self.output, result["receipt_sha256"].upper())
+        self.assertTrue(anchored["external_anchor_checked"])
+        self.assertEqual(anchored["anchor_scope"], "caller_outer_receipt")
+        for answer in (anchored, layer.verify_outer(self.output)):
+            self.assertFalse(answer["engine"]["external_anchor_checked"])
+            self.assertTrue(answer["engine"]["receipt_anchor_checked"])
+            self.assertEqual(answer["engine"]["anchor_scope"], "parent_receipt")
+        for invalid in ("", " ", "0" * 63, "g" * 64, result["receipt_sha256"] + "\n", False, 0):
+            with self.subTest(anchor=invalid), self.assertRaisesRegex(ContractError, "64 hexadecimal"):
+                layer.verify_outer(self.output, invalid)
+
     def test_identity_projection_rejects_unrecognized_engine_header(self):
         with self.assertRaisesRegex(ContractError, "Unexpected engine dossier header"):
             layer.project_dossier(b"# Earlier-engine dossier: fixture\n")

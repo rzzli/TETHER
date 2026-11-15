@@ -11,6 +11,7 @@ import tempfile
 
 from typing import Any
 
+from .verification_policy import normalize_anchor
 from .agents import ExtractiveBackend
 from .artifacts import ADMISSION_POLICY, DOSSIER_FORMAT, RUN_FILES
 from .dossier_verification import check_dossier
@@ -271,14 +272,16 @@ def _replay(payloads, manifest, expected_admitted=None):
 
 
 def _read_bundle(root, expected, *, objects, replay=True):
+    expected = normalize_anchor(expected)
     payload = read_local(root / "bundle.json", MANIFEST_LIMIT)
     digest = _sha(payload)
-    _need(expected is None or (_digest(expected) and expected == digest), "Bundle manifest anchor mismatch")
+    _need(expected is None or expected == digest, "Bundle manifest anchor mismatch")
     manifest = _manifest(payload)
     result = dict(format=FORMAT, manifest_sha256=digest, source_tier=manifest["source_tier"],
                   objects=len(manifest["objects"]), producer_receipt_sha256=manifest["producer"]["receipt_sha256"],
                   logical_bytes=sum(item["bytes"] for item in manifest["objects"].values()),
                   external_anchor="matched" if expected is not None else "not_supplied",
+                  anchor_scope="caller_manifest" if expected is not None else "none",
                   external_authenticity="not_established", scientific_validation="not_established")
     if not objects:
         return result | {"status": "manifest_inspected", "byte_integrity": "not_checked"}
@@ -310,11 +313,12 @@ def verify_bundle(root: Path, expected_manifest_sha256: str | None = None, *, re
 def export_bundle(run_dir: Path, output: Path, *, source_roots=(), receipt_sha256=None,
                   include_originals=True) -> dict:
     """Preflight a sealed native run and copy only its explicitly permitted closure."""
+    receipt_sha256 = normalize_anchor(receipt_sha256)
     run_dir = checked_root(run_dir)
     output = checked_output(output, (run_dir,))
     receipt_payload = read_local(run_dir / "receipt.json", MANIFEST_LIMIT)
     receipt_digest = _sha(receipt_payload)
-    _need(receipt_sha256 is None or (_digest(receipt_sha256) and receipt_sha256 == receipt_digest),
+    _need(receipt_sha256 is None or receipt_sha256 == receipt_digest,
           "Original run receipt anchor mismatch")
     receipt = _object(receipt_payload)
     _need(type(receipt.get("schema_version")) is int and receipt["schema_version"] == 2 and
@@ -397,7 +401,9 @@ def export_bundle(run_dir: Path, output: Path, *, source_roots=(), receipt_sha25
                 stream.write(payload)
             emitted.add(digest)
     publish_bytes(output / "bundle.json", body)
-    return {"output": str(output), **verify_bundle(output, _sha(body)), "status": "bundle_exported"}
+    return {"output": str(output), **verify_bundle(output, _sha(body)), "status": "bundle_exported",
+            "external_anchor": "not_supplied", "anchor_scope": "export_self_check",
+            "producer_receipt_anchor_checked": receipt_sha256 is not None}
 
 
 def automatic_output() -> Path:

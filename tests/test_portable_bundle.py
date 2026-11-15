@@ -96,6 +96,25 @@ class PortableBundleTests(unittest.TestCase):
         self.assertEqual(checked["source_inclusive_consistency"], "unavailable_raw_originals_omitted")
         self.assertEqual(checked["supported_derivation_replay"], "unavailable_raw_originals_omitted")
 
+    def test_caller_anchors_accept_uppercase_and_reject_malformed_values(self):
+        self.produce_run()
+        result = bundle.export_bundle(self.run, self.output, source_roots=[self.source],
+                                      receipt_sha256=self.digest.upper())
+        self.assertTrue(result["producer_receipt_anchor_checked"])
+        self.assertEqual(result["external_anchor"], "not_supplied")
+        self.assertEqual(result["anchor_scope"], "export_self_check")
+        anchor = result["manifest_sha256"]
+        for check in (bundle.inspect_bundle, bundle.verify_bundle):
+            self.assertEqual(check(self.output, anchor.upper())["external_anchor"], "matched")
+            self.assertEqual(check(self.output)["anchor_scope"], "none")
+            for invalid in ("", " ", "0" * 63, "g" * 64, anchor + "\n", False, 0):
+                with self.subTest(check=check.__name__, invalid=invalid), self.assertRaisesRegex(ContractError, "64 hexadecimal"):
+                    check(self.output, invalid)
+        for invalid in ("", False, "g" * 64):
+            with self.subTest(export=invalid), self.assertRaisesRegex(ContractError, "64 hexadecimal"):
+                bundle.export_bundle(self.run, self.root / "invalid export", source_roots=[self.source],
+                                     receipt_sha256=invalid)
+
     def test_portable_snapshot_preserves_producer_presentation_order(self):
         from tether_engine.serde import write_json
         path = self.source / "snapshot.json"
