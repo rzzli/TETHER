@@ -180,3 +180,18 @@ Deadline enforcement includes the final pre-publication gate after staging/sync;
 it does not promise preemption of a blocked OS publication syscall. Receipt formats
 and original byte conventions are unchanged. Study package-code pins still require
 the matching implementation for exact historical replay.
+
+## Windows owned-process containment
+
+Native CLI, tokenizer and owned-server execution now share a core Windows Job
+Object controller. It assigns the suspended initial process before execution and
+closes the job on cleanup; inherited descendants also stop if the owner exits
+abruptly. Assignment/resume faults retain the owned process handle and do not
+trigger a replacement call. Existing receipt fields remain unchanged and do not
+retroactively certify containment for older implementations.
+
+This path is qualified with finite Python fixtures on Windows CPython 3.11 and
+3.14; an installed 3.14 wheel demo and anchored verification also pass. Other
+platforms and trusted injected process factories retain the previous single-child
+scope. External brokers and hostile host compromise are outside this lifecycle
+guarantee. Historical scientific artifacts retain their exact-runtime replay path.

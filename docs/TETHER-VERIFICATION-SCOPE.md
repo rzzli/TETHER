@@ -132,10 +132,23 @@ Engine-backed CLI commands default to a 3,600-second child-process deadline and
 separate bound. The supervisor retains capped output, exit/reaping information and
 cleanup errors. An uncertain call is never automatically repeated.
 
-The supervisor owns one child. It does not contain arbitrary descendant processes,
-preempt operating-system process creation or bound later outer verification.
-Windows-specific handle and path controls require Windows tests; portable checks
-do not imply identical platform guarantees.
+On Windows, native CLI, tokenizer and owned-server launches use one shared core
+Job Object primitive. The initial process is suspended until assigned to a
+non-breakaway, kill-on-close job; shutdown covers its inherited descendants,
+including after abrupt owner exit. Assignment/resume failures retain the owned
+process identity and do not trigger another launch. A normal root exit does not
+leave its descendants running. Trusted injected process factories and non-Windows
+execution retain single-child scope. The unchanged receipt fields do not assert
+that older runs had process-tree containment; retain the implementation identity.
+
+This is lifecycle containment for cooperating local execution, not a hostile-code
+sandbox. It cannot preempt OS process creation, cover processes created through
+external brokers, or bound later outer verification. Microsoft documents ordinary
+child-job inheritance and its exceptions in [Job Objects](https://learn.microsoft.com/en-us/windows/win32/procthread/job-objects).
+Native Windows tests exercise real finite Python descendants, abrupt parent exit,
+startup faults and unrelated-process survival; no model is used. Other platform
+support requires its own qualification. Cleanup failures remain execution errors;
+lost storage or a killed owner cannot be guaranteed a final journal event.
 
 Study input readers use the Windows creation clock for path/descriptor identity
 and independently compare the descriptor change clock before and after reading.

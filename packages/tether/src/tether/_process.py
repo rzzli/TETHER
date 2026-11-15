@@ -1,4 +1,4 @@
-"""Bounded supervision of one owned child; not process-tree containment."""
+"""Bounded child supervision with owned Windows Job Object containment."""
 from dataclasses import dataclass
 import math
 import os
@@ -7,6 +7,7 @@ import subprocess
 import time
 
 from tether_engine.serde import ContractError, canonical
+from tether_engine.process_tree import process_tree_for
 
 CHUNK_BYTES = 16 * 1024
 POLL_SECONDS = 0.01
@@ -92,12 +93,14 @@ def supervise_command(command, *, limits=ProcessLimits()):
 
     Deadline covers execution and pipe EOF. OS process creation itself cannot
     be preempted here; its elapsed time is checked when Popen returns. Cleanup
-    gets a separate five-second wait budget. Only the owned child is terminated.
+    gets a separate five-second wait budget. Native Windows launches join a
+    kill-on-close job before running; other platforms retain single-child scope.
     """
     limits.validate()
     start = time.monotonic()
     deadline = start + limits.timeout_seconds
     process = None
+    tree = None
     buffers = [bytearray(), bytearray()]
     observed = [0, 0]
     eof = [False, False]
@@ -130,8 +133,11 @@ def supervise_command(command, *, limits=ProcessLimits()):
         errors.append(dict(operation=operation, error_class=type(error).__name__))
 
     try:
-        process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-                                   stdin=subprocess.DEVNULL, bufsize=0)
+        tree = process_tree_for(subprocess.Popen)
+        options = dict(stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                       stdin=subprocess.DEVNULL, bufsize=0)
+        process = (tree.launch(command, deadline=deadline, **options) if tree is not None
+                   else subprocess.Popen(command, **options))
         while True:
             if time.monotonic() >= deadline:
                 raise EngineDeadlineExceeded("Engine absolute process deadline exceeded")
@@ -147,13 +153,30 @@ def supervise_command(command, *, limits=ProcessLimits()):
             if not progress:
                 time.sleep(min(POLL_SECONDS, max(0.0, deadline - time.monotonic())))
     except BaseException as error:
+        # Assignment/resume can fail after Popen created a suspended or running
+        # child. Preserve that owned handle and never report a zero-start attempt.
+        if process is None and tree is not None:
+            process = tree.process
+        if isinstance(error, TimeoutError) and time.monotonic() >= deadline:
+            replacement = EngineDeadlineExceeded("Engine absolute process deadline exceeded")
+            replacement.__cause__ = error
+            error = replacement
         primary = error
         reason = ("deadline_exceeded" if isinstance(error, EngineDeadlineExceeded)
                   else "output_limit_exceeded" if isinstance(error, EngineOutputLimitExceeded)
                   else "interrupted" if isinstance(error, KeyboardInterrupt) else "supervisor_error")
     execution_elapsed = time.monotonic() - start
+    cleanup_deadline = time.monotonic() + CLEANUP_SECONDS
+    if tree is not None:
+        if tree.cleanup_deadline is not None:
+            cleanup_deadline = min(cleanup_deadline, tree.cleanup_deadline)
+        try:
+            tree.finish(cleanup_deadline)
+        except BaseException as error:
+            problem("process_tree_cleanup", error)
+            if primary is None:
+                primary, reason = error, "supervisor_error"
     if primary is not None and process is not None:
-        cleanup_deadline = time.monotonic() + CLEANUP_SECONDS
         try:
             alive = process.poll() is None
         except BaseException as error:

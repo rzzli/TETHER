@@ -1,4 +1,4 @@
-"""Own one non-daemonizing server; never discover a process to kill by port."""
+"""Own a server, containing native Windows descendants without port-based killing."""
 
 from __future__ import annotations
 
@@ -13,6 +13,7 @@ import time
 import urllib.error
 
 from tether_engine.atomic import publish_bytes
+from tether_engine.process_tree import process_tree_for
 from tether_engine.serde import ContractError, Frozen, canonical, freeze
 from .proofs import verify_file
 
@@ -39,7 +40,8 @@ class OwnedServer:
 
     listener_owner(pid, host, port) must return exactly True only for the owned
     listener; health_probe(host, port, timeout) returns exactly True when healthy.
-    All other results remain unready. Only the retained Popen handle is cleaned.
+    All other results remain unready. Native Windows launches use a kill-on-close
+    job; injected factories and other platforms retain single-child cleanup.
     Test injection is trusted Python configuration, not archive-selected code.
     """
 
@@ -107,6 +109,7 @@ class OwnedServer:
             raise ContractError("Invalid owned-server parent deadline")
         self.parent_deadline = parent_deadline
         self._process, self._logs = None, []
+        self._tree = None
         self._used = self._ready = self._closed = False
         self._record = dict(
             started=False,
@@ -181,8 +184,8 @@ class OwnedServer:
             for name in ("server.stdout.log", "server.stderr.log"):
                 self._logs.append((self.output / name).open("xb"))
             check_startup()
-            self._process = self.factory(
-                list(self.spec.argv),
+            self._tree = process_tree_for(self.factory, monotonic=self.monotonic, sleep=self.sleep)
+            options = dict(
                 stdout=self._logs[0],
                 stderr=self._logs[1],
                 shell=False,
@@ -190,6 +193,8 @@ class OwnedServer:
                 if os.name == "nt"
                 else 0,
             )
+            self._process = (self._tree.launch(list(self.spec.argv), deadline=deadline, **options)
+                             if self._tree is not None else self.factory(list(self.spec.argv), **options))
             # Preserve ownership before any operation that can fail after spawn.
             self._record.update(started=True, pid=self._process.pid)
             close_error = self._close_logs(None)
@@ -228,6 +233,10 @@ class OwnedServer:
                     self.sleep(min(0.1, remaining))
             raise TimeoutError("Owned server startup timed out; no automatic relaunch")
         except BaseException as primary:
+            if self._process is None and self._tree is not None:
+                self._process = self._tree.process
+                if self._process is not None:
+                    self._record.update(started=True, pid=self._process.pid)
             self._finish(primary)
             raise
 
@@ -248,6 +257,11 @@ class OwnedServer:
             return primary
         self._closed, self._ready = True, False
         primary = self._close_logs(primary)
+        if self._tree is not None:
+            try:
+                self._tree.finish(self.monotonic()+self._cleanup_timeout(self.spec.kill_seconds))
+            except BaseException as error:
+                primary = self._secondary(primary, error, "server_process_tree_cleanup")
         process = self._process
         if process is not None:
             try:
@@ -298,6 +312,8 @@ class OwnedServer:
         return primary
 
     def _cleanup_timeout(self, desired):
+        if self._tree is not None and self._tree.cleanup_deadline is not None:
+            desired = min(desired, max(0.001, self._tree.cleanup_deadline-self.monotonic()))
         if self.parent_deadline is None:
             return desired
         # A small positive bounded wait still permits stopping the retained process

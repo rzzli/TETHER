@@ -17,6 +17,7 @@ import threading
 import time
 
 from tether_engine.atomic import publish_bytes
+from tether_engine.process_tree import process_tree_for
 from tether_engine.journal import RunJournal
 from tether_engine.serde import ContractError, canonical, fingerprint, freeze, parse_json
 from .baseline_smoke import _prepare_parent
@@ -256,10 +257,11 @@ def _environment():
 def _run_child(
     argv, prompt, deadline, output, journal, *, process_factory=subprocess.Popen
 ):
-    """Bound all three pipes concurrently; clean up only the retained child handle."""
+    """Bound three pipes; contain native Windows descendants before execution."""
     deadline_check(deadline)
     child_deadline = min(deadline, time.monotonic() + 30)
     child = None
+    tree = None
     streams = {"stdout": bytearray(), "stderr": bytearray()}
     faults, overflow, threads = [], threading.Event(), []
     primary = None
@@ -294,8 +296,8 @@ def _run_child(
 
     started = time.monotonic()
     try:
-        child = process_factory(
-            argv,
+        tree = process_tree_for(process_factory)
+        options = dict(
             stdin=subprocess.PIPE,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
@@ -307,6 +309,8 @@ def _run_child(
             if os.name == "nt"
             else 0,
         )
+        child = (tree.launch(argv, deadline=child_deadline, **options) if tree is not None
+                 else process_factory(argv, **options))
         record.update(started=True, pid=child.pid)
         journal.append("tokenizer_started", pid=child.pid)
         deadline_check(child_deadline)
@@ -336,8 +340,33 @@ def _run_child(
             "Tokenizer exited incompletely or unsuccessfully",
         )
     except BaseException as error:
+        if child is None and tree is not None:
+            child = tree.process
+            if child is not None:
+                record.update(started=True, pid=child.pid)
         primary = error
     finally:
+        cleanup_deadline = None
+        try:
+            cleanup_deadline = time.monotonic()+5
+        except BaseException as error:
+            if primary is None:
+                primary = error
+            else:
+                primary.add_note("Tokenizer cleanup clock: " + type(error).__name__)
+        if tree is not None:
+            if cleanup_deadline is not None and tree.cleanup_deadline is not None:
+                cleanup_deadline = min(cleanup_deadline, tree.cleanup_deadline)
+            try:
+                if cleanup_deadline is None:
+                    tree.close()  # Kill-on-close remains usable without the clock.
+                else:
+                    tree.finish(cleanup_deadline)
+            except BaseException as error:
+                if primary is None:
+                    primary = error
+                else:
+                    primary.add_note("Tokenizer process-tree cleanup: " + type(error).__name__)
         if child is not None:
             running = True
             try:
@@ -350,7 +379,8 @@ def _run_child(
             try:
                 if running:
                     child.kill()
-                record["exit_code"] = child.wait(timeout=5)
+                timeout = 5 if cleanup_deadline is None else max(0, cleanup_deadline-time.monotonic())
+                record["exit_code"] = child.wait(timeout=timeout)
             except BaseException as error:
                 if primary is None:
                     primary = error
@@ -380,6 +410,8 @@ def _run_child(
                 primary = faults[0]
         elapsed = None
         try:
+            if primary is None:
+                deadline_check(child_deadline)
             elapsed = time.monotonic() - started
         except BaseException as error:
             record["timing_error_class"] = type(error).__name__

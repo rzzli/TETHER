@@ -16,7 +16,7 @@ import sys
 # Reviewed public inventory; no runtime discovery, arbitrary target imports, or
 # eager import of scientific modules/optional dependencies occurs.
 _LEGACY_MODULES = frozenset((
-    "agents", "archive", "archive.core", "archive.interpretation", "archive.paths",
+    "agents", "process_tree", "archive", "archive.core", "archive.interpretation", "archive.paths",
     "archive.restore", "artifacts", "atomic", "bundle", "bundle_files", "chrono", "contracts", "derivations", "evaluation", "evaluation_binding",
     "dossier_verification", "execution_states", "verification_policy", "temporal",
     "features", "ingest", "journal", "ledger", "local_model", "maintenance",
