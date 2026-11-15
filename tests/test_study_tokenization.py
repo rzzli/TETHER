@@ -260,6 +260,19 @@ class TokenizationArtifactTests(unittest.TestCase):
                 tok.verify_tokenization(target, anchor, hashlib.sha256(self.prompt.encode()).hexdigest(),
                                         fingerprint(self.spec))
 
+    def test_close_failure_preserves_tokenizer_interruption(self):
+        target = self.root / 'close-interruption'
+        primary = KeyboardInterrupt('tokenizer fixture interruption')
+        original = RunJournal.close
+        def broken(journal):
+            original(journal)
+            raise OSError('secondary close fault')
+        with patch.object(tok, '_run_child', side_effect=primary), \
+                patch.object(RunJournal, 'close', new=broken), self.assertRaises(KeyboardInterrupt) as caught:
+            tok.tokenize_prompt(self.prompt, self.spec, time.monotonic()+60, target)
+        self.assertIs(caught.exception, primary)
+        self.assertTrue(any('close' in note.lower() for note in primary.__notes__))
+
 
 class ChildBoundaryTests(unittest.TestCase):
     def invoke(self,factory,deadline=None):

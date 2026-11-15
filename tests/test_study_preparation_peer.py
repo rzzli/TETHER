@@ -26,6 +26,22 @@ TEMP = Path(__file__).resolve().parents[1] / "data/cache"
 
 
 class SourcePeerTests(unittest.TestCase):
+    def test_source_close_failure_preserves_primary_interruption(self):
+        with tempfile.TemporaryDirectory(dir=TEMP) as tmp:
+            root = Path(tmp)
+            authority, anchor, _ = source_fixtures.PublicationTests().fixture(root)
+            output = root / 'close-failure'
+            original = RunJournal.close
+            primary = KeyboardInterrupt('source fixture interruption')
+            def broken(journal):
+                original(journal)
+                raise OSError('secondary close fault')
+            with patch.object(source, '_build', side_effect=primary), \
+                    patch.object(RunJournal, 'close', new=broken), self.assertRaises(KeyboardInterrupt) as caught:
+                source.prepare_source_request(authority, anchor, {}, output, deadline=time.monotonic()+299)
+            self.assertIs(caught.exception, primary)
+            self.assertTrue(any('close' in note.lower() for note in primary.__notes__))
+
     def test_source_seal_failures_keep_journal_until_commit(self):
         with tempfile.TemporaryDirectory(dir=TEMP) as tmp:
             root = Path(tmp)

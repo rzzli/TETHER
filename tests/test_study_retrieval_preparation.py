@@ -313,6 +313,26 @@ class RetrievalPublicationTests(unittest.TestCase):
 
 
 class RetrievalSealFaultTests(unittest.TestCase):
+    def test_close_failure_preserves_primary_interruption(self):
+        from tether_engine.journal import RunJournal
+        with tempfile.TemporaryDirectory() as tmp:
+            primary = KeyboardInterrupt('retrieval fixture interruption')
+            close = RunJournal.close
+
+            def broken(journal):
+                close(journal)
+                raise OSError('secondary close fault')
+
+            authority = rp.fixture_authority('invented-six-v1')
+            with patch.object(rp, 'qualify_universe', side_effect=primary), \
+                    patch.object(RunJournal, 'close', new=broken), \
+                    self.assertRaises(KeyboardInterrupt) as caught:
+                rp.prepare_retrieval(authority, rp.authority_anchor(authority),
+                                     rp.policy_for('id_order_v1'), Path(tmp) / 'failed',
+                                     deadline=time.monotonic()+299)
+            self.assertIs(caught.exception, primary)
+            self.assertIn('Journal close failed: OSError', primary.__notes__)
+
     def test_retrieval_seal_failure_and_interruption(self):
         from tests.study_seal_helpers import assert_seal_fault
         with tempfile.TemporaryDirectory() as tmp:

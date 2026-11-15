@@ -427,6 +427,7 @@ def prepare_source_request(
     output = Path(output).absolute()
     _prepare_parent(output.parent)
     journal = RunJournal(output, kind="build")
+    failure = None
     try:
         authority, raw = _authority(Path(authority_path), authority_sha256, deadline)
         publish_bytes(output / "authority.json", raw)
@@ -468,6 +469,7 @@ def prepare_source_request(
             )
         )
     except BaseException as error:
+        failure = error
         if journal.sealed:
             raise
         try:
@@ -490,7 +492,7 @@ def prepare_source_request(
             error.add_note("Failure marker: " + type(secondary).__name__)
         raise
     finally:
-        journal.close()
+        journal.close_preserving(failure)
 
 
 def verify_source_preparation(

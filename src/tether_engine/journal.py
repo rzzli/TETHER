@@ -111,6 +111,15 @@ class RunJournal:
     def close(self):
         self._stream.close()
 
+    def close_preserving(self, primary: BaseException | None):
+        """Close without replacing an explicitly supplied execution failure."""
+        try:
+            self.close()
+        except BaseException as error:
+            if primary is None:
+                raise
+            primary.add_note("Journal close failed: " + type(error).__name__)
+
 
 def read_chain(path: Path, allow_incomplete_tail=False, *, expected_sha256=None):
     events, previous = [], None

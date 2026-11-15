@@ -172,6 +172,9 @@ staging is synced, immediately before the atomic publication call. This cannot
 preempt that OS call or certify the wall time of later presentation/cleanup.
 An exception after publication leaves the seal available for explicit verification;
 it does not authorize withdrawal, rewriting or automatic redispatch.
+Source/retrieval and tokenizer preparation also retain the primary execution
+exception when journal closing fails, recording the secondary error as a note.
+A close failure without an earlier execution failure still propagates.
 
 Wrapper metadata and journal reads are capped at 64 MiB; dossiers at 256 MiB. Bounded file
 reads reject links, reparse points and nonregular files and check file identity.

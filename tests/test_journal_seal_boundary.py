@@ -69,6 +69,15 @@ class JournalSealBoundaryTests(unittest.TestCase):
         self.assertTrue(self.journal.sealed)
         self.assertFalse(self.journal.fail(OSError(), 'after_terminal_seal'))
 
+    def test_close_preserves_explicit_primary_but_propagates_standalone_failure(self):
+        primary, secondary = KeyboardInterrupt('primary'), OSError('close fault')
+        with patch.object(self.journal, 'close', side_effect=secondary):
+            self.journal.close_preserving(primary)
+            with self.assertRaises(OSError) as caught:
+                self.journal.close_preserving(None)
+        self.assertIs(caught.exception, secondary)
+        self.assertIn('Journal close failed: OSError', primary.__notes__)
+
 
 if __name__ == '__main__':
     unittest.main()

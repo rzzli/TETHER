@@ -452,6 +452,7 @@ def tokenize_prompt(prompt, spec, deadline, output, *, payload_sha256=None):
     root, journal = _reserve(output)
     stage = "reservation"
     started = time.monotonic()
+    failure = None
     try:
         publish_bytes(root / "spec.json", canonical(spec))
         publish_bytes(root / "prompt.bin", raw)
@@ -515,6 +516,7 @@ def tokenize_prompt(prompt, spec, deadline, output, *, payload_sha256=None):
             dict(receipt_sha256=anchor, quote=quote)
         )
     except BaseException as error:
+        failure = error
         if journal.sealed:
             raise
         try:
@@ -541,7 +543,7 @@ def tokenize_prompt(prompt, spec, deadline, output, *, payload_sha256=None):
             error.add_note("Token failure retention: " + type(secondary).__name__)
         raise
     finally:
-        journal.close()
+        journal.close_preserving(failure)
 
 
 def verify_tokenization(

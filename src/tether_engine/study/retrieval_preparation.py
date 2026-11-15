@@ -509,6 +509,7 @@ def prepare_retrieval(
     root = Path(output).absolute()
     _prepare_parent(root.parent)
     journal = RunJournal(root, kind="build")
+    failure = None
     try:
         journal.append(
             "retrieval_preparing",
@@ -580,6 +581,7 @@ def prepare_retrieval(
             )
         )
     except BaseException as error:
+        failure = error
         if journal.sealed:
             raise
         try:
@@ -601,7 +603,7 @@ def prepare_retrieval(
             error.add_note("Failure marker: " + type(extra).__name__)
         raise
     finally:
-        journal.close()
+        journal.close_preserving(failure)
 
 
 def verify_retrieval_preparation(
