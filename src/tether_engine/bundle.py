@@ -8,12 +8,12 @@ import json
 from pathlib import Path
 import re
 import tempfile
-from types import SimpleNamespace
 
 from typing import Any
 
-from .agents import ExtractiveBackend, Usage
-from .artifacts import ADMISSION_POLICY, DOSSIER_FORMAT, RUN_FILES, dossier_for_format
+from .agents import ExtractiveBackend
+from .artifacts import ADMISSION_POLICY, DOSSIER_FORMAT, RUN_FILES
+from .dossier_verification import check_dossier
 from .atomic import publish_bytes
 from .bundle_files import checked_output, checked_root, logical_parts, read_local
 from .chrono import admit_snapshot, required_source_proofs
@@ -25,7 +25,6 @@ from .provenance import check_receipt_availability
 from .scorer import Prediction, ScorerArtifact
 from .semantics import check_execution, check_semantics
 from .serde import ContractError, canonical, decode, fingerprint, parse_json
-from .workflow import Budget, PlanStep, RunResult
 
 
 FORMAT = "tether.portable_bundle.v1"
@@ -265,14 +264,8 @@ def _replay(payloads, manifest, expected_admitted=None):
         check_execution(run, case, snapshot, config, claims, trace)
         check_semantics(case, snapshot, claims, features, prediction, run["coverage"], config,
                         run["status"], scorer, store.admitted_fingerprints, policy, snapshots, trace)
-        result = RunResult(case, run["snapshot_id"], run["profile"], run["backend_id"], run["status"],
-                           decode(Budget, run["budget"]), run["calls"], decode(Usage, run["usage"]),
-                           decode(tuple[PlanStep, ...], run["plan"]), run["coverage"], claims, features,
-                           prediction, trace, decode(Usage, run["measured_usage"]),
-                           decode(Usage, run["estimated_usage"]), config)
-        prose = dossier_for_format(result, SimpleNamespace(snapshot=snapshot, exclusions=store.exclusions),
-                                  run["dossier_format"]).encode("utf-8")
-        _need(payloads["dossier.md"] in (prose, prose.replace(b"\n", b"\r\n")), "Portable dossier rendering mismatch")
+        check_dossier(run, inputs, ledger["claims"], _object(payloads["features.json"]),
+                      _object(payloads["prediction.json"]), trace, payloads["dossier.md"])
     derivations = "verified_registered_methods" if any(recipes) else "not_applicable_no_registered_derivation"
     return "verified", derivations
 

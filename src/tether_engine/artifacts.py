@@ -431,6 +431,9 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
                         decode(Prediction, read_json(output / "prediction.json")), run["coverage"],
                         inputs["configuration"], run["status"], model, admitted, inputs["catalog_policy"],
                         inputs["snapshot_base"], trace, verify_derivations=verify_sources)
+        from .dossier_verification import check_dossier
+        check_dossier(run, inputs, ledger["claims"], read_json(output / "features.json"),
+                      read_json(output / "prediction.json"), trace, (output / "dossier.md").read_bytes())
         if run['backend_id'] == 'recorded-selection-replay-v1':
             from .replay_validation import verify_replay_archive
             replay_binding = verify_replay_archive(case, inputs['configuration'], trace, restored)

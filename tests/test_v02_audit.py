@@ -91,6 +91,14 @@ class AuditVerificationTests(unittest.TestCase):
         with self.assertRaisesRegex(ContractError, "claim was not selected by its review"):
             verify_run(self.output)
 
+    def test_resealed_dossier_requires_source_derived_rendering(self):
+        self.assertEqual(verify_run(self.output)["semantic_consistency"], "verified")
+        with (self.output / "dossier.md").open("ab") as stream:
+            stream.write(b"\nInvented therapeutic conclusion.\n")
+        self.rehash_outputs()
+        with self.assertRaisesRegex(ContractError, "dossier prose differs"):
+            verify_run(self.output)
+
     def test_omitted_raw_parent_proof_is_rejected_even_without_source_reads(self):
         receipt = read_json(self.output / "receipt.json")
         artifact_ids = {item.artifact_id for item in self.store.snapshot.artifacts}
