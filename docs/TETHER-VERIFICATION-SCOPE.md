@@ -150,6 +150,14 @@ verification rejects oversized files before opening and checks the deadline arou
 each bounded read. It cannot preempt a blocked filesystem syscall. Cleanup has its
 separately bounded wait policy; timeout never authorizes an automatic second launch.
 
+The typed-report HTTP client uses a direct loopback connection and an absolute
+socket watchdog across headers and body. It ignores proxy settings and never
+follows redirects. One deadline also includes ownership/attempt preparation;
+expiry there prevents dispatch. Slow-header/body fixture tests passed on Windows
+Python 3.11 and 3.14. Injected openers and callbacks remain trusted integrations:
+elapsed-time checks reject late returns but cannot preempt arbitrary callback code.
+No real model endpoint was used in these checks.
+
 Wrapper metadata and journal reads are capped at 64 MiB; dossiers at 256 MiB. Bounded file
 reads reject links, reparse points and nonregular files and check file identity.
 These controls do not guarantee exclusive ownership of external files or survive

@@ -157,7 +157,8 @@ class TypedReportingTransportTests(unittest.TestCase):
         self.assertEqual(req.full_url, ENDPOINT + "/completion")
         self.assertEqual(req.get_method(), "POST")
         self.assertEqual(req.data, result.raw_request)
-        self.assertEqual(timeout, 300)
+        self.assertGreater(timeout, 0)
+        self.assertLessEqual(timeout, 300)
         with self.assertRaises(TypeError):
             result.measured_usage["input_tokens"] = 999
 
@@ -185,12 +186,7 @@ class TypedReportingTransportTests(unittest.TestCase):
             with self.assertRaises(ContractError):
                 TypedReportingClient(endpoint, expected_pid=1234, ownership_check=lambda *a: True)
         client = TypedReportingClient(ENDPOINT, expected_pid=1234, ownership_check=lambda *a: True)
-        proxies = [h for h in client.opener.handlers if isinstance(h, urllib.request.ProxyHandler)]
-        self.assertTrue(not proxies or all(h.proxies == {} for h in proxies))
-        redirects = [h for h in client.opener.handlers if isinstance(h, urllib.request.HTTPRedirectHandler)]
-        self.assertEqual(len(redirects), 1)
-        with self.assertRaises(ContractError):
-            redirects[0].redirect_request(None, None, 302, "Found", {}, "http://example.invalid")
+        self.assertIsNone(client.opener)  # The default is a direct deadline-bound connection.
 
     def test_invalid_execute_configuration_is_retained_without_dispatch(self):
         for kwargs in (dict(timeout_seconds=True), dict(timeout_seconds=0),

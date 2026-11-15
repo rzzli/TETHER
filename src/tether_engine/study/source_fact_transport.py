@@ -9,9 +9,11 @@ from collections.abc import Mapping
 from contextlib import contextmanager
 from dataclasses import dataclass
 import hashlib
+import http.client
 import math
 import re
 import threading
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -104,9 +106,55 @@ def prepare_completion(prompt: str, maximum: int = 2048, seed: int = 0):
                        cache_prompt=False, stream=False, stop=["<|im_end|>"]))
 
 
-class _NoRedirect(urllib.request.HTTPRedirectHandler):
-    def redirect_request(self, req, fp, code, msg, headers, newurl):
-        raise ContractError("Typed-report redirects are forbidden")
+def _remaining(deadline):
+    remaining = deadline - time.monotonic()
+    if remaining <= 0:
+        raise TimeoutError("Typed-report absolute deadline exceeded")
+    return remaining
+
+
+@contextmanager
+def _open_deadline(request, deadline):
+    """Direct loopback HTTP: no proxies, redirect following or deadline reset."""
+    from .native import _watchdog
+    url = urllib.parse.urlsplit(request.full_url)
+    connection = http.client.HTTPConnection(url.hostname, url.port, timeout=_remaining(deadline))
+    response = timer = None
+    primary = None
+    try:
+        connection.connect()
+        _need(connection.sock is not None, "Missing typed-report transport socket")
+        timer = _watchdog(connection.sock, deadline)
+        connection.request(request.get_method(), url.path, body=request.data,
+                           headers=dict(request.header_items()))
+        response = connection.getresponse()
+        _remaining(deadline)
+        # Match the injected opener interface without following Location headers.
+        response.geturl = lambda: request.full_url
+        yield response
+        _remaining(deadline)
+    except BaseException as error:
+        primary = error
+        if isinstance(error, Exception) and time.monotonic() >= deadline:
+            primary = TimeoutError("Typed-report absolute deadline exceeded")
+            raise primary from error
+        raise
+    finally:
+        failure = None
+        actions = ([timer.cancel] if timer is not None else [])
+        actions += ([response.close] if response is not None else []) + [connection.close]
+        for action in actions:
+            try:
+                action()
+            except BaseException as error:
+                if primary is not None:
+                    primary.add_note("Typed-report cleanup: " + type(error).__name__)
+                elif failure is None:
+                    failure = error
+                else:
+                    failure.add_note("Typed-report cleanup: " + type(error).__name__)
+        if primary is None and failure is not None:
+            raise failure
 
 
 @contextmanager
@@ -224,9 +272,7 @@ class TypedReportingClient:
               "Expected owned PID must be a positive Windows PID")
         _need(callable(ownership_check) and (retain is None or callable(retain)),
               "Trusted ownership and retention callbacks are required")
-        if opener is None:
-            opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), _NoRedirect())
-        _need(callable(getattr(opener, "open", None)), "Invalid trusted HTTP opener")
+        _need(opener is None or callable(getattr(opener, "open", None)), "Invalid trusted HTTP opener")
         self.endpoint, self.port, self.expected_pid = endpoint.rstrip("/"), port, expected_pid
         self.ownership_check, self.opener, self.retain = ownership_check, opener, retain
         self._used, self._lock = False, threading.Lock()
@@ -245,6 +291,7 @@ class TypedReportingClient:
             _need(type(timeout_seconds) in (int, float) and math.isfinite(timeout_seconds)
                   and 0 < timeout_seconds <= MAX_TIMEOUT_SECONDS,
                   "Invalid bounded completion timeout")
+            deadline = time.monotonic() + timeout_seconds
             payload = prepare_completion(prompt, maximum, seed)
             raw_request = canonical(payload)
             state.update(raw_request=raw_request,
@@ -253,6 +300,7 @@ class TypedReportingClient:
                                      output_tokens=maximum, cost_usd=0.0))
             phase = "ownership"
             owned = self.ownership_check(self.expected_pid, "127.0.0.1", self.port)
+            _remaining(deadline)
             if owned is not True:
                 state["error"] = "Ownership check did not affirm the pinned loopback listener"
             else:
@@ -264,9 +312,13 @@ class TypedReportingClient:
                         estimated_usage=state["estimated_usage"], dispatched=False)))
                 request = urllib.request.Request(self.endpoint + "/completion", data=raw_request,
                     headers={"Content-Type": "application/json"}, method="POST")
+                remaining = _remaining(deadline)
                 phase = "transport"
                 state["dispatched"] = True
-                with _response(self.opener.open(request, timeout=timeout_seconds)) as response:
+                manager = (_open_deadline(request, deadline) if self.opener is None
+                           else self.opener.open(request, timeout=remaining))
+                with _response(manager) as response:
+                    _remaining(deadline)
                     _need(getattr(response, "status", None) == 200, "Unexpected completion HTTP status")
                     _need(response.geturl() == self.endpoint + "/completion",
                           "Completion response URL differs; redirects are forbidden")
@@ -276,6 +328,7 @@ class TypedReportingClient:
                     state.update(raw_envelope=raw,
                         response_sha256=hashlib.sha256(raw).hexdigest(),
                         envelope_complete=len(captured) <= MAX_ENVELOPE_BYTES)
+                    _remaining(deadline)
                     _need(state["envelope_complete"], "Completion envelope exceeds 2 MiB")
                     native = parse_json(raw)
                     state["measured_usage"] = _usage(native)
@@ -287,6 +340,7 @@ class TypedReportingClient:
                     _need(state["measured_usage"]["input_tokens"] <= state["estimated_usage"]["input_tokens"]
                           and state["measured_usage"]["output_tokens"] <= maximum,
                           "Measured completion usage exceeds its reservation")
+                _remaining(deadline)
                 state["status"] = "returned"
         except BaseException as error:
             partial = getattr(error, "partial", None)
@@ -299,7 +353,10 @@ class TypedReportingClient:
                 state["status"], primary = "interrupted", error
             else:
                 reason = getattr(error, "reason", None)
-                state["status"] = "timeout" if isinstance(error, TimeoutError) or isinstance(reason, TimeoutError) else "failed"
+                # A deadline watchdog may surface a platform-specific socket
+                # error. Preserve that error while classifying the expired call.
+                expired = phase == "transport" and time.monotonic() >= deadline
+                state["status"] = "timeout" if expired or isinstance(error, TimeoutError) or isinstance(reason, TimeoutError) else "failed"
                 if phase in ("configuration", "ownership", "attempt_retention"):
                     primary = error
         finally:
