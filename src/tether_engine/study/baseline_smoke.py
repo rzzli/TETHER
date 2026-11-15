@@ -7,7 +7,7 @@ from pathlib import Path
 import re
 
 from tether_engine.atomic import ensure_directory, publish_bytes
-from tether_engine.serde import canonical, encode, freeze, parse_json
+from tether_engine.serde import ContractError, canonical, encode, freeze, parse_json
 
 from .baselines import REQUIRED_RESOURCES, reviewer_view, run_baseline, verify_baseline
 from .diagnostic import load_synthetic_request
@@ -123,7 +123,9 @@ def _prepare_parent(parent):
         try:
             ancestor.lstat()
             break
-        except FileNotFoundError:
+        except FileNotFoundError as error:
+            if ancestor.parent == ancestor:
+                raise ContractError('Filesystem root is unavailable') from error
             missing.append(ancestor)
             ancestor = ancestor.parent
     _no_links(ancestor)

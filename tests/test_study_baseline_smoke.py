@@ -32,6 +32,21 @@ class BaselineSmokeTests(unittest.TestCase):
         (self.path / "receipt.json").write_bytes(canonical(receipt))
         return hashlib.sha256((self.path / "receipt.json").read_bytes()).hexdigest()
 
+    def test_missing_filesystem_root_stops_before_revisiting_it(self):
+        root = Path(self.path.anchor)
+        seen = []
+        def unavailable(path):
+            seen.append(path)
+            if len(seen) > 1:
+                raise AssertionError('Missing root was revisited; bounded probe stopped the loop')
+            raise FileNotFoundError('Fixture unavailable filesystem root')
+        with patch.object(Path, 'lstat', new=unavailable), \
+                patch.object(smoke_module, 'ensure_directory') as create:
+            with self.assertRaisesRegex(ContractError, 'Filesystem root is unavailable'):
+                smoke_module._prepare_parent(root)
+        self.assertEqual(seen, [root])
+        create.assert_not_called()
+
     def test_smoke_and_external_anchor_verify(self):
         result = smoke_module.smoke(self.path)
         verified = smoke_module.verify(self.path, result["receipt_sha256"])
