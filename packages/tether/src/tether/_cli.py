@@ -102,7 +102,14 @@ def main(argv=None):
         if args.command == "verify" and _is_outer(args.run_dir):
             if args.outputs_only:
                 raise ContractError("TETHER outer verification requires source-inclusive engine verification")
-            _print(presentation.verify_outer(args.run_dir, args.receipt_sha256))
+            _print(presentation.verify_outer(args.run_dir, args.receipt_sha256, allow_legacy=args.allow_legacy))
+            return 0
+        if args.command == "verify":
+            answer = presentation.verify_engine(args.run_dir, args.receipt_sha256, not args.outputs_only,
+                                                 allow_legacy=args.allow_legacy)
+            if answer.get("admission_policy") == presentation.ADMISSION_POLICY and not answer.get("code_matches_current"):
+                raise ContractError("Engine source/code verification is incomplete; use a compatible producer checkout")
+            _print(answer)
             return 0
         if args.command == "inspect-run" and _is_outer(args.run_dir):
             if explicit:

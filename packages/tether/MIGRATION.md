@@ -32,6 +32,14 @@ New version-two runs require policy `tether.derivation.v1`. Known engine 0.4.0
 version-two receipts retain limited byte verification; semantic consistency and
 derivation are unavailable in that route. Use the original matching checkout for
 its exact semantic replay. Generic version-one byte verification remains supported.
+Both legacy formats now require `tether verify --allow-legacy`, or
+`verify_run(..., allow_legacy=True)` in Python. Without that opt-in they fail the
+default semantic request. Their successful byte checks have status
+`byte_integrity_verified`, not `integrity_verified`; no receipt is rewritten.
+Portable bundles with missing originals or unsupported replay require the existing
+explicit `--bytes-only` / `replay=False` mode. Consumers should inspect `assurance`
+and source/semantic fields instead of interpreting every successful exit as full
+verification. Current supported source-inclusive runs keep their existing status.
 See [historical compatibility](../../docs/ARCHIVE.md) and
 [verification limits](../../docs/TETHER-VERIFICATION-SCOPE.md).
 

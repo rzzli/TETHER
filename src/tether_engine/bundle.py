@@ -297,7 +297,11 @@ def _read_bundle(root, expected, *, objects, replay=True):
         source, derivations = (_replay(payloads, manifest) if replay else ("not_checked_bytes_only",) * 2)
     except (KeyError, TypeError, AttributeError, OverflowError, RecursionError, UnicodeError) as error:
         raise ContractError("Malformed portable run, source or policy data") from error
-    return result | dict(status="integrity_verified", byte_integrity="verified", physical_objects=len(contents),
+    if replay and source != "verified":
+        raise ContractError(f"Semantic verification unavailable: {source}; use replay=False (--bytes-only) for explicit byte verification")
+    return result | dict(status="integrity_verified" if replay else "byte_integrity_verified",
+                         assurance="source_inclusive_semantics" if replay else "byte_integrity",
+                         byte_integrity="verified", physical_objects=len(contents),
                          source_inclusive_consistency=source, supported_derivation_replay=derivations,
                          exact_producer_replay="not_performed_portable_export")
 
@@ -401,7 +405,7 @@ def export_bundle(run_dir: Path, output: Path, *, source_roots=(), receipt_sha25
                 stream.write(payload)
             emitted.add(digest)
     publish_bytes(output / "bundle.json", body)
-    return {"output": str(output), **verify_bundle(output, _sha(body)), "status": "bundle_exported",
+    return {"output": str(output), **verify_bundle(output, _sha(body), replay=include_originals), "status": "bundle_exported",
             "external_anchor": "not_supplied", "anchor_scope": "export_self_check",
             "producer_receipt_anchor_checked": receipt_sha256 is not None}
 

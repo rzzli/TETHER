@@ -42,6 +42,7 @@ def parser() -> argparse.ArgumentParser:
     verify.add_argument("--run-dir", type=Path, required=True)
     verify.add_argument("--receipt-sha256")
     verify.add_argument("--outputs-only", action="store_true")
+    verify.add_argument("--allow-legacy", action="store_true", help="Explicitly permit byte-only verification of known legacy receipts")
     inspect = commands.add_parser("inspect-run", help="Read durable run attempts or build stages; never restart work")
     inspect.add_argument("--run-dir", type=Path, required=True)
     bundle_export = commands.add_parser("bundle-export", help="Copy a sealed offline run into a fresh portable bundle")
@@ -90,7 +91,7 @@ def main(argv: list[str] | None = None) -> int:
     journal, stage = None, "configuration"
     try:
         if args.command == "verify":
-            answer = verify_run(args.run_dir, args.receipt_sha256, not args.outputs_only)
+            answer = verify_run(args.run_dir, args.receipt_sha256, not args.outputs_only, allow_legacy=args.allow_legacy)
         elif args.command == "inspect-run":
             answer = inspect_run(args.run_dir)
         elif args.command in ("bundle-export", "bundle-inspect", "bundle-verify"):

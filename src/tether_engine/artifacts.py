@@ -9,7 +9,7 @@ import platform
 from importlib import metadata
 
 from . import __version__
-from .verification_policy import normalize_anchor
+from .verification_policy import normalize_anchor, require_semantic_policy
 from .chrono import EvidenceStore, admit_snapshot, required_source_proofs
 from .scorer import ScorerArtifact
 from .serde import (ContractError, MAX_LEDGER_JSON_BYTES, canonical, decode, encode, fingerprint,
@@ -32,7 +32,7 @@ DOSSIER_FORMAT = "tether.dossier.safe_markdown.v1"
 
 
 def receipt_policy(receipt):
-    """Classify sealed formats; a current producer cannot opt into legacy trust."""
+    """Classify producer declarations; callers must separately enforce required assurance."""
     if not isinstance(receipt, dict) or type(receipt.get("schema_version")) is not int:
         raise ContractError("Invalid run receipt")
     version, producer = receipt["schema_version"], receipt.get("software_version")
@@ -332,13 +332,14 @@ def write_run(output: Path, result: RunResult, store: EvidenceStore,
 
 
 def verify_run(output: Path, expected_receipt_sha256: str | None = None,
-               verify_sources: bool = True) -> dict:
+               verify_sources: bool = True, *, allow_legacy: bool = False) -> dict:
     expected_receipt_sha256 = normalize_anchor(expected_receipt_sha256)
     receipt_path = output / "receipt.json"
     if expected_receipt_sha256 is not None and sha256_file(receipt_path) != expected_receipt_sha256:
         raise ContractError("Externally anchored receipt hash mismatch")
     receipt = read_json(receipt_path)
     policy = receipt_policy(receipt)
+    require_semantic_policy(policy, allow_legacy)
     legacy = policy != "current"
     v1 = policy == "legacy_v1"
     replay_binding = None
@@ -441,7 +442,9 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
     computed_unchecked = (not legacy and not verify_sources and
                           (any(node.computed_at is not None for node in snapshot.sources) or
                            any(claim.evidence.observation.source_kind == "computed" for claim in claims)))
-    result = {"status": "integrity_verified", "byte_integrity": "verified",
+    result = {"status": "byte_integrity_verified" if legacy else "integrity_verified",
+            "assurance": "byte_integrity" if legacy else ("source_inclusive_semantics" if verify_sources else "output_consistency"),
+            "byte_integrity": "verified",
             "outputs": len(LEGACY_RUN_FILES if v1 else RUN_FILES),
             "source_artifacts_checked": len(receipt["sources"]) if verify_sources else 0,
             "trace_events": count, "receipt_sha256": sha256_file(receipt_path),

@@ -33,6 +33,13 @@ The manifest is written last, after preflight verifies the exported closure. Fre
 | External anchor and authenticity | A supplied digest can match the manifest. Producer identity, source truth and publication time require evidence outside the bundle. |
 | Scientific validation | Not established by any bundle check. |
 
+Default verification requires source-inclusive semantic replay. Unknown policies or
+methods and omitted originals fail that request. To check their bytes explicitly,
+use `bundle-verify --bytes-only` (Python `verify_bundle(..., replay=False)`); the
+result reports `byte_integrity_verified` and `assurance: byte_integrity`.
+This does not establish semantic consistency. Exports made with `--omit-originals`
+report the same weaker assurance; they cannot pass default source replay.
+
 Known-policy replay rejects malformed or inconsistent results. It does not require byte-identical current Python code. For untrusted bundles, the optional anchor is the protection against coordinated replacement of manifest and all matching objects. Maximums are 1 MiB for the manifest, 256 logical objects, 64 MiB per object and 256 MiB logical total. Version 1 supports directories. TAR restoration remains a separate historical workflow.
 
 Portable bundle v1 wraps the existing case, evidence and snapshot v2 contracts and registered derivation v1. Native receipt v1/v2 guarantees are unchanged. The [JSON Schema](../src/tether_engine/schemas/portable-bundle-v1.json) describes the transport shapes. The runtime additionally checks graph closure, aliasing, byte bounds, chronology and computed equality. Canonical JSON used for logical fingerprints is UTF-8, sorted by key, compact and finite, with no byte-order mark or trailing newline. Bundle object hashes always cover the exact stored bytes. [Canonicalization vectors](../tests/fixtures/portable_bundle_canonical.json)

@@ -137,16 +137,27 @@ class FrontDoorTests(unittest.TestCase):
         outer_receipt['engine_receipt_sha256'] = engine_hash
         outer_path.write_bytes(canonical(outer_receipt) + b'\n')
         anchor = layer.digest(outer_path.read_bytes())
+        with self.assertRaisesRegex(ContractError, 'Semantic verification requires'):
+            layer.verify_outer(self.output, anchor)
         with (patch.object(layer, 'code_proof', side_effect=AssertionError('current launcher replay')),
               patch('tether._semantics.check_engine_semantics', side_effect=AssertionError('current semantics')),
               patch.object(layer, 'invoke_engine', side_effect=AssertionError('no dispatch'))):
-            result = layer.verify_outer(self.output, anchor)
+            result = layer.verify_outer(self.output, anchor, allow_legacy=True)
+        self.assertEqual(result['status'], 'byte_integrity_verified')
+        self.assertEqual(result['assurance'], 'byte_integrity')
         self.assertFalse(result['launcher_code_verified'])
         self.assertEqual(result['launcher_proof_status'], 'recorded_legacy_declaration')
         self.assertEqual(result['engine']['semantic_consistency'], 'unavailable_legacy_v2_derivation')
         self.assertNotIn('tether_semantics', result['engine'])
-        with self.assertRaisesRegex(ContractError, 'incomplete'):
+        with self.assertRaisesRegex(ContractError, 'Semantic verification requires'):
             layer._core_check(self.output, engine_hash)
+        arguments = ['verify', '--run-dir', str(self.output)]
+        with redirect_stderr(io.StringIO()) as errors:
+            self.assertEqual(cli.main(arguments), 2)
+        self.assertIn('Semantic verification requires', errors.getvalue())
+        with redirect_stdout(io.StringIO()) as output:
+            self.assertEqual(cli.main(arguments + ['--allow-legacy']), 0)
+        self.assertEqual(json.loads(output.getvalue())['assurance'], 'byte_integrity')
 
     def test_metadata_oversize_is_rejected_before_open_without_large_allocation(self):
         for name in (layer.RECEIPT, layer.MANIFEST, layer.FAILURE):
@@ -301,6 +312,20 @@ class FrontDoorTests(unittest.TestCase):
         for invalid in ("", " ", "0" * 63, "g" * 64, result["receipt_sha256"] + "\n", False, 0):
             with self.subTest(anchor=invalid), self.assertRaisesRegex(ContractError, "64 hexadecimal"):
                 layer.verify_outer(self.output, invalid)
+
+    def test_bare_engine_verify_applies_wrapper_code_policy_without_dispatch(self):
+        self.complete()
+        engine = self.output / 'engine'
+        with patch.object(layer, 'invoke_engine') as invoke, redirect_stdout(io.StringIO()):
+            self.assertEqual(cli.main(['verify', '--run-dir', str(engine)]), 0)
+        invoke.assert_not_called()
+        receipt_path = engine / 'receipt.json'
+        receipt = json.loads(receipt_path.read_bytes())
+        receipt['code']['agents.py'] = '0' * 64
+        receipt_path.write_bytes(canonical(receipt))
+        with redirect_stderr(io.StringIO()) as error:
+            self.assertEqual(cli.main(['verify', '--run-dir', str(engine)]), 2)
+        self.assertIn('source/code verification is incomplete', error.getvalue())
 
     def test_identity_projection_rejects_unrecognized_engine_header(self):
         with self.assertRaisesRegex(ContractError, "Unexpected engine dossier header"):

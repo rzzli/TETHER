@@ -18,6 +18,7 @@ import sys
 _LEGACY_MODULES = frozenset((
     "agents", "archive", "archive.core", "archive.interpretation", "archive.paths",
     "archive.restore", "artifacts", "atomic", "bundle", "bundle_files", "chrono", "contracts", "derivations", "evaluation", "evaluation_binding",
+    "dossier_verification", "execution_states", "verification_policy",
     "features", "ingest", "journal", "ledger", "local_model", "maintenance",
     "provenance", "rendering", "replay_validation", "retrieval", "scorer", "semantics", "serde", "wire", "workflow",
     "study", "study.authority_four_arm", "study.baseline_smoke", "study.baselines",

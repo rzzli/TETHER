@@ -1,11 +1,15 @@
 """Legacy receipts authenticate declared bytes, never current derivations."""
 import hashlib
+import io
+import json
+from contextlib import redirect_stdout, redirect_stderr
 import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
 
 from tether_engine.artifacts import RUN_FILES, receipt_policy, verify_run
+from tether_engine import cli
 from tether_engine.archive.core import verify_core_archive
 from tether_engine.archive.paths import ArchiveResolver
 from tether_engine.serde import ContractError, canonical, fingerprint, read_json, write_json
@@ -63,20 +67,41 @@ class LegacyDerivationVerificationTests(unittest.TestCase):
         with (patch('tether_engine.artifacts.admit_snapshot', side_effect=AssertionError('current admission')),
              patch('tether_engine.artifacts.check_semantics', side_effect=AssertionError('current semantics')),
              patch('tether_engine.artifacts.decode', side_effect=AssertionError('current decoder'))):
-            result = verify_run(self.output, self.anchor)
+            result = verify_run(self.output, self.anchor, allow_legacy=True)
         self.assertEqual(result['semantic_consistency'], 'unavailable_legacy_v2_derivation')
         self.assertEqual(result['derivation_verification'], 'unavailable_legacy_v2_derivation')
         self.assertEqual(result['source_inventory_completeness'], 'not_replayed')
         self.assertEqual(result['source_binding'], 'declared_original_bytes_verified')
         self.assertEqual(self.sha(self.output / 'receipt.json'), self.anchor)
 
+    def test_legacy_cannot_satisfy_default_semantic_request(self):
+        with self.assertRaisesRegex(ContractError, 'Semantic verification requires.*allow_legacy'):
+            verify_run(self.output)
+
+    def test_legacy_cli_requires_opt_in_for_v1_and_v2(self):
+        for version, producer in ((2, '0.4.0'), (1, '0.1.0')):
+            self.receipt.update(schema_version=version, software_version=producer)
+            if version == 1:
+                self.receipt['outputs'].pop('journal.jsonl')
+            self.seal()
+            arguments = ['verify', '--run-dir', str(self.output)]
+            with self.subTest(version=version), redirect_stderr(io.StringIO()) as errors:
+                self.assertEqual(cli.main(arguments), 2)
+                self.assertIn('Semantic verification requires', errors.getvalue())
+            with redirect_stdout(io.StringIO()) as output:
+                self.assertEqual(cli.main(arguments + ['--allow-legacy']), 0)
+            result = json.loads(output.getvalue())
+            self.assertEqual(result['status'], 'byte_integrity_verified')
+            self.assertEqual(result['assurance'], 'byte_integrity')
+            self.assertNotEqual(result['semantic_consistency'], 'verified')
+
     def test_legacy_declared_source_and_output_tampering_fail(self):
         self.raw.write_bytes(b'changed')
         with self.assertRaisesRegex(ContractError, 'Source integrity'):
-            verify_run(self.output, self.anchor)
+            verify_run(self.output, self.anchor, allow_legacy=True)
         (self.output / 'prediction.json').write_bytes(b'changed')
         with self.assertRaisesRegex(ContractError, 'output integrity'):
-            verify_run(self.output, self.anchor, verify_sources=False)
+            verify_run(self.output, self.anchor, verify_sources=False, allow_legacy=True)
 
     def test_receipt_anchor_and_unknown_policy_fail(self):
         with self.assertRaisesRegex(ContractError, 'anchored receipt'):
@@ -89,7 +114,7 @@ class LegacyDerivationVerificationTests(unittest.TestCase):
     def test_missing_declared_parent_does_not_claim_complete_inventory(self):
         self.receipt['sources'] = []
         self.seal()
-        result = verify_run(self.output, self.anchor)
+        result = verify_run(self.output, self.anchor, allow_legacy=True)
         self.assertEqual(result['source_artifacts_checked'], 0)
         self.assertEqual(result['source_inventory_completeness'], 'not_replayed')
         self.assertNotEqual(result['semantic_consistency'], 'verified')

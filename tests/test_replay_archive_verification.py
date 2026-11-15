@@ -250,7 +250,7 @@ class ReplayArchiveVerificationTests(unittest.TestCase):
     def test_legacy_v1_receipt_scope_is_unchanged(self):
         legacy = self.root / 'legacy'
         materialize_checkpoint('tests/fixtures/legacy-v1', legacy)
-        check = verify_run(legacy, verify_sources=False)
+        check = verify_run(legacy, verify_sources=False, allow_legacy=True)
         self.assertEqual(check['semantic_consistency'], 'unavailable_legacy_v1')
         self.assertNotIn('replay_binding', check)
 

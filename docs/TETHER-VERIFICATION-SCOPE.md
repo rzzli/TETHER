@@ -109,12 +109,20 @@ Current `tether` module aliases share the new engine's classes and modules; dire
 aliases do not acquire the wrapper's additional checks or artifact authorization.
 Current version-two execution seals policy `tether.derivation.v1` consistently in
 configuration, run and receipt. Known engine 0.4.0 version-two receipts and generic
-version-one receipts retain read-only byte checks with semantic/derivation checking
+version-one receipts require `--allow-legacy` (Python `allow_legacy=True`) for
+read-only byte checks with semantic/derivation checking
 explicitly unavailable. Declared source bytes may be verified, but this does not
 replay the completeness of their inventory. Exact older semantic replay requires
 the original software checkpoint. Native current-policy runs retain their source
 path bindings. The versioned bundle format provides a separate relocation path
 for supported offline runs with its own manifest and verification tiers.
+Default verification rejects a receipt-selected downgrade. Explicit legacy results
+use `status: byte_integrity_verified` and `assurance: byte_integrity`; current
+source-inclusive results report `assurance: source_inclusive_semantics`.
+An explicit native `--outputs-only` request reports `assurance: output_consistency`.
+The public CLI applies its current-code check to bare native directories as well
+as outer presentations. Portable replay instead checks supported format semantics,
+not equality to the current producer code.
 [Upgrade guidance](../packages/tether/MIGRATION.md) · [Historical compatibility](ARCHIVE.md) · [Portable verification](PORTABLE-BUNDLE.md)
 
 ## Process and filesystem limits

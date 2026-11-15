@@ -18,7 +18,7 @@ import time
 import tether_engine
 from tether_engine.artifacts import verify_run, ADMISSION_POLICY, receipt_policy
 from tether_engine.atomic import publish_bytes
-from tether_engine.verification_policy import normalize_anchor
+from tether_engine.verification_policy import normalize_anchor, require_semantic_policy
 from tether_engine.journal import RunJournal
 from tether_engine.serde import (ContractError, MAX_LEDGER_JSON_BYTES, MAX_NORMALIZED_JSON_BYTES,
                         canonical, encode, fingerprint, parse_json)
@@ -209,11 +209,11 @@ def _core_check(root, receipt_hash):
     return result
 
 
-def verify_engine(output, receipt_hash=None, verify_sources=True):
-    """TETHER-qualified v2 verification; v1 retains its declared legacy scope."""
+def verify_engine(output, receipt_hash=None, verify_sources=True, *, allow_legacy=False):
+    """Current semantic verification; legacy bytes require an explicit caller opt-in."""
     output = Path(output)
     preflight_run_journals(output, verify=True)
-    result = verify_run(output, receipt_hash, verify_sources)
+    result = verify_run(output, receipt_hash, verify_sources, allow_legacy=allow_legacy)
     if receipt_policy(_json(output / "receipt.json")) == "current":
         from ._semantics import check_engine_semantics
         result["tether_semantics"] = check_engine_semantics(
@@ -369,7 +369,7 @@ def _envelope(doc, keys):
          and doc["agent_visible"] is False and doc["scientific_validation"] == "not_established", "Invalid TETHER envelope")
 
 
-def verify_outer(output, expected_receipt_sha256=None):
+def verify_outer(output, expected_receipt_sha256=None, *, allow_legacy=False):
     expected_receipt_sha256 = normalize_anchor(expected_receipt_sha256)
     output = _no_links(Path(output).absolute())
     need(not (output / FAILURE).exists(), "TETHER attempt has a retained failure")
@@ -391,6 +391,7 @@ def verify_outer(output, expected_receipt_sha256=None):
     need(manifest["command"] in ("demo", "run") and manifest["engine"] == dict(path="engine", receipt_sha256=receipt["engine_receipt_sha256"]),
          "TETHER engine binding differs")
     engine_policy = receipt_policy(_json(output / "engine/receipt.json"))
+    require_semantic_policy(engine_policy, allow_legacy)
     legacy = engine_policy != "current"
     if legacy:
         launcher = manifest["launcher"]
@@ -439,7 +440,7 @@ def verify_outer(output, expected_receipt_sha256=None):
     need(not any(e["event"] in ("run_failed", "run_interrupted") for e in events), "TETHER failure journal cannot qualify")
     need(_read(output / "dossier.md", max_bytes=MAX_DOSSIER_BYTES)
          == project_dossier(_read(output / "engine/dossier.md", max_bytes=MAX_DOSSIER_BYTES)), "TETHER dossier projection differs")
-    engine_result = (verify_engine(output / "engine", receipt["engine_receipt_sha256"], True)
+    engine_result = (verify_engine(output / "engine", receipt["engine_receipt_sha256"], True, allow_legacy=allow_legacy)
                      if legacy else _core_check(output, receipt["engine_receipt_sha256"]))
     # The inner digest comes from the parent receipt, not an independent caller anchor.
     engine_result = engine_result | dict(external_anchor_checked=False, receipt_anchor_checked=True,
@@ -454,7 +455,8 @@ def verify_outer(output, expected_receipt_sha256=None):
     else:
         need(canonical(events[2]["details"]) == canonical(dict(binding=policy_binding)), "Policy journal binding differs")
         policy_result = dict(status="unavailable_legacy_v2_derivation", scientific_validation="not_established")
-    return dict(brand="TETHER", status="integrity_verified", receipt_sha256=digest(raw),
+    return dict(brand="TETHER", status="byte_integrity_verified" if legacy else "integrity_verified",
+                assurance="byte_integrity" if legacy else "source_inclusive_semantics", receipt_sha256=digest(raw),
                 external_anchor_checked=expected_receipt_sha256 is not None,
                 anchor_scope="caller_outer_receipt" if expected_receipt_sha256 is not None else "none",
                 launcher_code_verified=not legacy,

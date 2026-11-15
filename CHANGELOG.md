@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+- Require explicit `--allow-legacy` / `allow_legacy=True` for known legacy byte
+  verification. Default portable verification now fails when semantic replay is
+  unavailable; explicit `--bytes-only` remains supported. Weaker results report
+  `byte_integrity_verified` and a distinct `assurance` field.
+- Share review/state and dossier reconstruction checks across verification paths.
+  Normalize caller receipt/manifest anchors and distinguish parent receipt bindings
+  from independently supplied anchors. Apply the public CLI's code policy to bare
+  native run directories as well as outer presentations.
+
 - Bound receipt archive verification to eight read attempts for Windows access
   contention, retaining exact-byte checks and propagation of persistent errors.
   Publication itself is never retried. Existing receipt bytes remain unchanged.

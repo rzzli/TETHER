@@ -278,7 +278,7 @@ def new_computation_old_inputs(root):
 def legacy_verification(root):
     archived = root / "legacy-v1"
     materialize_checkpoint('tests/fixtures/legacy-v1', archived)
-    checked = verify_run(archived, (archived / "receipt.sha256").read_text().strip())
+    checked = verify_run(archived, (archived / "receipt.sha256").read_text().strip(), allow_legacy=True)
     return report("Keep legacy byte verification without claiming v2 semantics",
                   checked["semantic_consistency"] == "unavailable_legacy_v1",
                   semantic_consistency=checked["semantic_consistency"],

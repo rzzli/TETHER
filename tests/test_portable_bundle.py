@@ -1,5 +1,8 @@
 """Fictional portable runs, including filesystem and semantic tampering controls."""
 import hashlib
+import io
+import json
+from contextlib import redirect_stdout, redirect_stderr
 import os
 from pathlib import Path
 import shutil
@@ -10,6 +13,7 @@ import unittest
 from unittest.mock import patch
 
 from tether_engine import bundle
+from tether_engine import cli
 from tether_engine.agents import ExtractiveBackend
 from tether_engine.artifacts import write_run
 from tether_engine.bundle_files import _bounded, _windows_member_allowed, logical_parts, read_local
@@ -92,9 +96,11 @@ class PortableBundleTests(unittest.TestCase):
 
     def test_omitted_originals_are_explicit(self):
         self.export(include_originals=False)
-        checked = bundle.verify_bundle(self.output)
-        self.assertEqual(checked["source_inclusive_consistency"], "unavailable_raw_originals_omitted")
-        self.assertEqual(checked["supported_derivation_replay"], "unavailable_raw_originals_omitted")
+        checked = bundle.verify_bundle(self.output, replay=False)
+        self.assertEqual(checked["source_tier"], "receipts_only")
+        self.assertEqual(checked["source_inclusive_consistency"], "not_checked_bytes_only")
+        self.assertEqual(checked["supported_derivation_replay"], "not_checked_bytes_only")
+        self.assertEqual(checked["status"], "byte_integrity_verified")
 
     def test_caller_anchors_accept_uppercase_and_reject_malformed_values(self):
         self.produce_run()
@@ -164,9 +170,23 @@ class PortableBundleTests(unittest.TestCase):
         value["admission_policy"] = "tether.future_policy"
         value["producer"]["code"]["changed_comment.py"] = "1" * 64
         path.write_bytes(canonical(value))
-        checked = bundle.verify_bundle(self.output)
-        self.assertEqual(checked["source_inclusive_consistency"], "unavailable_unknown_policy")
+        with self.assertRaisesRegex(ContractError, "Semantic verification unavailable.*unknown_policy"):
+            bundle.verify_bundle(self.output)
+        checked = bundle.verify_bundle(self.output, replay=False)
+        self.assertEqual(checked["source_inclusive_consistency"], "not_checked_bytes_only")
         self.assertEqual(checked["byte_integrity"], "verified")
+        arguments = ['bundle-verify', '--bundle-dir', str(self.output)]
+        with redirect_stderr(io.StringIO()) as errors:
+            self.assertEqual(cli.main(arguments), 2)
+        self.assertIn('Semantic verification unavailable', errors.getvalue())
+        with redirect_stdout(io.StringIO()) as output:
+            self.assertEqual(cli.main(arguments + ['--bytes-only']), 0)
+        self.assertEqual(json.loads(output.getvalue())['assurance'], 'byte_integrity')
+
+    def test_missing_semantics_cannot_satisfy_default_replay(self):
+        self.export(include_originals=False)
+        with self.assertRaisesRegex(ContractError, 'Semantic verification unavailable.*raw_originals_omitted'):
+            bundle.verify_bundle(self.output)
 
     def test_unsafe_paths_and_malformed_manifests(self):
         self.export()
