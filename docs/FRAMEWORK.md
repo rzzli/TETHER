@@ -143,6 +143,15 @@ The workflow defaults are 16 calls, $0 provider spending, 32,000 input tokens,
 not estimates of dataset feasibility. Timeouts, malformed responses and interrupted
 attempts retain journals; unresolved calls are not automatically repeated.
 
+Run finalization flushes and syncs the JSON, trace and UTF-8/LF dossier files
+before atomically publishing the receipt without replacement. Receipt publication
+is an immutable journal boundary: later console errors or interrupts can make the
+command fail, but cannot append to the sealed execution. Errors before publication
+remain in the unsealed journal where storage permits. Receipt presence alone is
+not verification, and file syncing does not promise directory-entry durability
+through every filesystem or power-loss scenario. Whole receipts differ across
+machines because paths, timestamps and environment metadata differ.
+
 Completed runs contain source-linked claims, coverage, a readable dossier,
 accounting and receipts. Unsupported or missing inputs stay explicit. Incomplete
 collection cannot establish biological absence. Numerical predictions require a

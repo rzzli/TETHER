@@ -140,10 +140,13 @@ class RuntimeHardeningPeerTests(unittest.TestCase):
         self.assertIsNone(archived_observation_exclusion(observation, artifact, graph, self.case))
         self.assertEqual(observation_exclusion(observation, artifact, graph, self.case),
                          'publication_metadata_inconsistent')
-        for exact, year in ((None, self.case.origin.year), (None, None)):
+        for exact, year, current_reason in (
+            (None, self.case.origin.year, 'publication_timing_unresolved'),
+            (None, None, None),
+        ):
             stable = replace(observation, publication_date=exact, publication_year=year)
             self.assertIsNone(archived_observation_exclusion(stable, artifact, graph, self.case))
-            self.assertIsNone(observation_exclusion(stable, artifact, graph, self.case))
+            self.assertEqual(observation_exclusion(stable, artifact, graph, self.case), current_reason)
 
 
 if __name__ == '__main__':

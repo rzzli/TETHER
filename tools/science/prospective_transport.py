@@ -46,6 +46,9 @@ def _journal(output):
     result.path = output / 'journal.jsonl'
     result._events = list(read_chain(result.path))
     result._durable_size = result.path.stat().st_size
+    # This capture's receipt is referenced by its final journal event; it does
+    # not use the engine write_run receipt-as-last-publication contract.
+    result._sealed, result._seal_path = False, None
     result._stream = result.path.open('r+b', buffering=0)
     return result
 

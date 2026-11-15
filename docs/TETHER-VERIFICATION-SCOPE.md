@@ -5,7 +5,7 @@ validation separately. A verified execution is not a validated scientific conclu
 The current interface is `tether-target-agents` 0.7.0 over
 `tether-target-engine` 0.5.0.
 
-**Current scope (13 November 2026):** new execution requires the registered
+**Current scope (15 November 2026):** new execution requires the registered
 computed-evidence policy described in [the architecture](FRAMEWORK.md#registered-computation).
 Source-inclusive replay rederives supported complete outputs; unknown computations
 are rejected. This does not validate arbitrary scientific methods. Fixed-horizon
@@ -20,7 +20,7 @@ See [results and current scope](RESULTS.md).
 | Receipt and inventory | Listed files match their recorded hashes | Authenticity of an untrusted receipt or replacement of the entire tree without an external anchor |
 | Source-inclusive verification | Current originals, receipts, declared lineage and accepted claims agree | Publisher authenticity or undeclared real-world ancestry |
 | Semantic replay | Declared requests, selections, registered derivations, deterministic features, scorer contributions, accounting and traces agree | Correct biological interpretation, trusted historical metadata or predictive usefulness |
-| Canonical CLI verification | Coverage states, reviewed selections, request membership, terminal dispositions and dossier rendering agree | A stronger guarantee for callers that use only a lower-level API |
+| Shared engine/CLI/bundle verification | Coverage states, reviewed selections, request membership, terminal dispositions and dossier rendering agree | Scientific validity or independent implementation of those shared checks |
 | Outer-run verification | Exact engine dossier copy, complete inventory, launcher identity, journal and receipts agree | Compatibility with a different launcher or engine version |
 | Artifact-policy verification | Exact registered artifacts, parents, use, frame and controls agree | Scientific validity or automatic eligibility of every row in an allowed artifact |
 | `inspect-run` | Retained attempts, terminal state and declared accounting can be read | Completion of an interrupted run or permission to retry it |
@@ -35,10 +35,10 @@ results, including known gaps awaiting correction. It does not upgrade old runs.
 |---|---|---|
 | Accidental file changes or post-run editing | Receipt inventories and hash-chained journals in `artifacts.verify_run`; outer inventories in `tether._presentation.verify_outer` | Hashes must be compared with a separately retained trusted root to detect replacement of the entire tree. |
 | Internally contradictory run state | `semantics.check_execution`, shared `execution_states.check_states`, `check_semantics` and `dossier_verification.check_dossier` | Native verification, portable replay and bound evaluation share review/coverage and dossier reconstruction. Consistent rendering does not prove the source statements true. |
-| Silent reduction in verification strength | Receipt policy and returned semantic/derivation fields | Legacy byte-only results currently return integrity success. A producer version string is not an authentication mechanism; explicit minimum-level enforcement is pending. |
-| Later or evaluator-only information | `chrono.admit_snapshot`, lineage validation and catalog role checks | Declared dates and complete lineage must be truthful. Artifact-envelope clocks remain inconsistent with source-node gating; current checks do not prove earliest public availability. |
+| Silent reduction in verification strength | Receipt policy and explicit weaker-assurance opt-in | Default verification requires current semantics; legacy byte-only and outputs-only results identify their narrower scope. A producer version string is not authentication. |
+| Later or evaluator-only information | Shared artifact/source information gates, UTC/calendar bounds, publication precision, lineage and catalog roles | Declared dates and complete lineage must be truthful. Checks do not prove earliest public availability; unresolved publication timing stays distinct from known future information. |
 | Hostile source text or model output | Typed selection parsing, source membership, ledger fingerprint and request binding | These controls constrain accepted records, not arbitrary model reasoning. Generated-text entailment and semantic prompt-injection robustness are not qualified. |
-| Exhausted budget, timeout or interruption | Workflow budget, attempt journal, wrapper supervision | Durable attempts reveal uncertain work; they cannot prove unreported billing or guarantee a terminal event after hard kill/storage failure. Post-seal error handling still needs repair. |
+| Exhausted budget, timeout or interruption | Workflow budget, attempt journal, wrapper supervision and immutable engine receipt boundary | Durable attempts reveal uncertain work; they cannot prove unreported billing or guarantee a terminal event after hard kill/storage failure. Supporting study-driver terminal paths still need qualification. |
 | Malicious filesystem replacement | Bounded wrapper reads and file identity/path checks | The verifier trusts the operating system and approved original sources. Native read limits/source-root handling and supported-platform behavior need further qualification. |
 | Invalid scientific inference | Source replay plus separately scoped benchmark/outcome evaluation | Integrity, signatures, timestamps and checker agreement do not establish causal biology, clinical success or model usefulness. |
 
@@ -137,7 +137,7 @@ preempt operating-system process creation or bound later outer verification.
 Windows-specific handle and path controls require Windows tests; portable checks
 do not imply identical platform guarantees.
 
-Metadata and journal reads are capped at 64 MiB; dossiers at 256 MiB. Bounded file
+Wrapper metadata and journal reads are capped at 64 MiB; dossiers at 256 MiB. Bounded file
 reads reject links, reparse points and nonregular files and check file identity.
 These controls do not guarantee exclusive ownership of external files or survive
 all host compromise, forced termination, filesystem failure or unreported billing.

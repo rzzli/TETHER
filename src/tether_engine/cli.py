@@ -174,6 +174,7 @@ def main(argv: list[str] | None = None) -> int:
                 write_json(args.output / 'backend-execution.json', {'schema_version': 1, 'attempts': backend.records})
             stage = "artifact_finalization"
             digest = write_run(args.output, result, store, model, journal)
+            stage = 'presentation'
             answer = {"status": result.status, "output": str(args.output.resolve()),
                       "claims": len(result.claims), "prediction": result.prediction,
                       "receipt_sha256": digest}

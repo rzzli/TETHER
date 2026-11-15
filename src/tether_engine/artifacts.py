@@ -4,11 +4,13 @@ from __future__ import annotations
 
 from datetime import date, datetime, timezone
 from pathlib import Path
+import hashlib
 import sys
 import platform
 from importlib import metadata
 
 from . import __version__
+from .atomic import publish_bytes
 from .verification_policy import normalize_anchor, require_semantic_policy
 from .chrono import EvidenceStore, admit_snapshot, required_source_proofs
 from .scorer import ScorerArtifact
@@ -261,6 +263,8 @@ def dossier_for_format(result: RunResult, store: EvidenceStore, format_id) -> st
 def write_run(output: Path, result: RunResult, store: EvidenceStore,
               model: ScorerArtifact | None, journal: RunJournal | None = None) -> str:
     # Do not overwrite existing predictions or accidentally write into a data tree.
+    if journal is not None and (journal.sealed or (output / 'receipt.json').exists()):
+        raise ContractError('Cannot finalize an already sealed run')
     store.validate_execution(result.case)  # Also guards callers that bypass run_workflow.
     if result.configuration.get("admission_policy") != ADMISSION_POLICY:
         raise ContractError("New runs require the current derivation admission policy")
@@ -311,10 +315,11 @@ def write_run(output: Path, result: RunResult, store: EvidenceStore,
         raise ContractError("Ledger JSON output exceeds the 256 MiB limit")
     write_json(output / "features.json", result.features)
     write_json(output / "prediction.json", result.prediction)
-    (output / "trace.jsonl").write_bytes(b"".join(canonical(event) + b"\n" for event in result.trace))
+    trace_bytes = b"".join(canonical(event) + b"\n" for event in result.trace)
+    publish_bytes(output / "trace.jsonl", trace_bytes)
     if journal is None:
-        (output / "journal.jsonl").write_bytes((output / "trace.jsonl").read_bytes())
-    (output / "dossier.md").write_text(rendered_dossier, encoding="utf-8")
+        publish_bytes(output / "journal.jsonl", trace_bytes)
+    publish_bytes(output / "dossier.md", rendered_dossier.encode('utf-8'))
     code_root = Path(__file__).parent
     receipt = {"schema_version": 2, "software_version": __version__, "admission_policy": ADMISSION_POLICY,
                "input_fingerprint": fingerprint(inputs),
@@ -326,9 +331,16 @@ def write_run(output: Path, result: RunResult, store: EvidenceStore,
                  if (output / name).is_file()}
     if auxiliary:
         receipt["auxiliary_outputs"] = auxiliary
-    write_json(output / "receipt.json", receipt)
+    # Every output has been flushed/fsynced before this last no-clobber publish.
+    # Compute the return digest from the exact payload before publication: no
+    # post-seal read is necessary, and a presentation failure cannot change it.
+    receipt_bytes = canonical(receipt) + b'\n'
+    digest = hashlib.sha256(receipt_bytes).hexdigest()
+    if journal is not None:
+        journal.prepare_seal()
+    publish_bytes(output / "receipt.json", receipt_bytes)
     # Return this digest for external anchoring. A local receipt is not a trusted timestamp.
-    return sha256_file(output / "receipt.json")
+    return digest
 
 
 def verify_run(output: Path, expected_receipt_sha256: str | None = None,

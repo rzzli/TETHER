@@ -17,6 +17,8 @@ class RunJournal:
         self.path = self.output / "journal.jsonl"
         self._events = []
         self._durable_size = 0
+        self._sealed = False
+        self._seal_path = None
         self._stream = self.path.open("xb", buffering=0)
         self.append(kind + "_reserved", run_id=str(uuid.uuid4()), owner_pid=os.getpid(),
                     created_at_utc=datetime.now(timezone.utc).isoformat())
@@ -25,7 +27,28 @@ class RunJournal:
     def events(self):
         return tuple(self._events)
 
+    @property
+    def sealed(self):
+        # Receipt existence is a mutation barrier, not a verification verdict.
+        # Checking the filesystem also covers interruption immediately after
+        # atomic publication, before write_run can return to its caller.
+        if not self._sealed and self._seal_path is not None and self._seal_path.exists():
+            self._sealed = True
+        return self._sealed
+
+    def prepare_seal(self):
+        """Arm the engine receipt boundary before its atomic publication.
+
+        Other journal users may publish intermediate receipts with different
+        contracts; their filename alone must not change their state machine.
+        """
+        if self.sealed:
+            raise ContractError('Cannot prepare an already sealed run')
+        self._seal_path = self.output / 'receipt.json'
+
     def append(self, event: str, **details):
+        if self.sealed:
+            raise ContractError('Cannot append to a sealed run journal')
         record = {"sequence": len(self._events), "event": event, "details": details,
                   "previous_sha256": self._events[-1]["sha256"] if self._events else None}
         record["sha256"] = fingerprint(record)
@@ -44,11 +67,14 @@ class RunJournal:
         return record
 
     def fail(self, error: BaseException, stage: str):
+        if self.sealed:
+            return False  # Presentation errors cannot rewrite sealed execution.
         details = {"stage": stage, "error_class": type(error).__name__}
         if self.kind == "build":
             details["message"] = str(error)
         self.append(self.kind + ("_interrupted" if isinstance(error, KeyboardInterrupt) else "_failed"),
                     **details)
+        return True
 
     def close(self):
         self._stream.close()
