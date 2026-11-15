@@ -76,10 +76,9 @@ def _resource():
 
 
 def _bounded_deadline(deadline):
+    """Share the parent's remaining budget while retaining the local safety cap."""
     deadline_check(deadline)
-    _need(
-        deadline <= time.monotonic() + 300, "Preparation deadline exceeds 300 seconds"
-    )
+    return min(deadline, time.monotonic() + POLICY['max_preparation_seconds'])
 
 
 def _argv(root, resource):
@@ -174,7 +173,7 @@ def prepare_tokenizer_spec(authority, roots, *, deadline):
     those explicit approved root IDs, including 'model', to physical directories.
     The accepted proof hashes and exact asset list come from the packaged resource.
     """
-    _bounded_deadline(deadline)
+    deadline = _bounded_deadline(deadline)
     _need(
         isinstance(authority, Mapping)
         and set(authority) == {"inventory", "acquisition"}
@@ -439,7 +438,7 @@ def tokenize_prompt(prompt, spec, deadline, output, *, payload_sha256=None):
     payload_sha256 separately binds a finalized HTTP/schema envelope; it is not
     included in tokenizer stdin and never changes the prompt-only token count.
     """
-    _bounded_deadline(deadline)
+    deadline = _bounded_deadline(deadline)
     _need(isinstance(prompt, str), "Prompt must be Unicode text")
     raw = prompt.encode("utf-8")
     _need(len(raw) <= MAX_PROMPT_BYTES, "Prompt exceeds tokenizer byte safety cap")
@@ -557,7 +556,7 @@ def verify_tokenization(
     """Verify an externally anchored quote; never open model assets or spawn a child."""
     root = Path(path).absolute()
     deadline = time.monotonic() + 300 if deadline is None else deadline
-    _bounded_deadline(deadline)
+    deadline = _bounded_deadline(deadline)
     _no_links(root)
     for value in (receipt_sha256, expected_prompt_sha256, expected_spec_sha256):
         _need(

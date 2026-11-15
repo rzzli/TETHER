@@ -158,6 +158,12 @@ Python 3.11 and 3.14. Injected openers and callbacks remain trusted integrations
 elapsed-time checks reject late returns but cannot preempt arbitrary callback code.
 No real model endpoint was used in these checks.
 
+Tokenizer preparation and replay use the earlier of the caller's absolute deadline
+and their existing 300-second local cap. A larger parent budget is capped locally,
+not rejected; a shorter budget is never extended. Child execution retains its
+separate 30-second cap within that deadline. This does not change source/retrieval
+preparation's separate contracts or qualify native model token counts scientifically.
+
 Wrapper metadata and journal reads are capped at 64 MiB; dossiers at 256 MiB. Bounded file
 reads reject links, reparse points and nonregular files and check file identity.
 These controls do not guarantee exclusive ownership of external files or survive

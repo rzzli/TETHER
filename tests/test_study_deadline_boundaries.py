@@ -25,7 +25,8 @@ class PreparationDeadlineTests(unittest.TestCase):
     def test_tokenizer_accepts_its_exact_absolute_limit(self):
         self.assertGreater(LIMIT - NOW, 300)
         with patch.object(tokenizer.time, 'monotonic', return_value=NOW):
-            tokenizer._bounded_deadline(LIMIT)
+            self.assertEqual(tokenizer._bounded_deadline(LIMIT), LIMIT)
+            self.assertEqual(tokenizer._bounded_deadline(math.nextafter(LIMIT, math.inf)), LIMIT)
 
     def test_default_token_replay_deadline_reaches_source_checks(self):
         with patch.object(tokenizer.time, 'monotonic', return_value=NOW), \
@@ -50,8 +51,7 @@ class PreparationDeadlineTests(unittest.TestCase):
         parent.assert_called_once()
 
     def test_invalid_token_deadlines_never_reserve_or_read_assets(self):
-        cases = ((math.nextafter(LIMIT, math.inf), ContractError),
-                 (NOW, TimeoutError), (NOW-1, TimeoutError),
+        cases = ((NOW, TimeoutError), (NOW-1, TimeoutError),
                  (math.nan, ContractError), (math.inf, ContractError),
                  (-math.inf, ContractError), (True, ContractError), (False, ContractError))
         with tempfile.TemporaryDirectory() as temporary:

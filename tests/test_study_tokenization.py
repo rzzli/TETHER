@@ -22,6 +22,13 @@ TEMP_ROOT = Path(__file__).resolve().parents[1] / 'data/cache'
 
 
 class TokenBoundaryTests(unittest.TestCase):
+    def test_parent_budget_is_capped_without_rejecting_or_extending_it(self):
+        with patch.object(tok.time, 'monotonic', return_value=10):
+            self.assertEqual(tok._bounded_deadline(20), 20)
+            self.assertEqual(tok._bounded_deadline(1000), 310)
+            with self.assertRaises(TimeoutError):
+                tok._bounded_deadline(10)
+
     def test_trace_requires_exact_complete_nonnegative_ids_and_count(self):
         self.assertEqual(parse_token_trace(b'[1, 20, 3]\nTotal number of tokens: 3\n'), 3)
         for raw in (b'[1]\nTotal number of tokens: 2\n', b'[-1]\nTotal number of tokens: 1\n',
@@ -160,6 +167,23 @@ class TokenizationArtifactTests(unittest.TestCase):
             self.spec['assets'][0]['sha256'] = '0'*64
         with self.assertRaises(TypeError):
             quote['child']['exit_code'] = 9
+
+    def test_long_parent_budget_propagates_to_asset_quote_and_replay(self):
+        end = time.monotonic() + 600
+        spec = prepare_tokenizer_spec(self.authority, self.roots, deadline=end)
+        target = self.root / 'long-parent'
+        child = tok._run_child
+        starts = []
+        def run(argv, prompt, deadline, output, journal):
+            starts.append(deadline)
+            self.assertLessEqual(deadline, time.monotonic() + 300)
+            return child(argv, prompt, deadline, output, journal, process_factory=FakeChild)
+        with patch.object(tok, '_run_child', side_effect=run):
+            result = tok.tokenize_prompt(self.prompt, spec, end, target)
+        self.assertEqual(len(starts), 1)
+        quote = tok.verify_tokenization(target, result['receipt_sha256'],
+            hashlib.sha256(self.prompt.encode()).hexdigest(), fingerprint(spec), deadline=end)
+        self.assertEqual(quote['token_count'], 3)
 
     def test_external_anchor_prompt_spec_and_payload_required(self):
         for anchor, prompt, spec, payload in (('0'*64,hashlib.sha256(self.prompt.encode()).hexdigest(),fingerprint(self.spec),'a'*64),
