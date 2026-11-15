@@ -162,8 +162,8 @@ class NativeModeTests(unittest.TestCase):
         end = now[0] + 10
         original = process_module.verify_file
 
-        def delayed(*args):
-            result = original(*args)
+        def delayed(*args, **kwargs):
+            result = original(*args, **kwargs)
             now[0] = end + 1
             return result
 

@@ -112,6 +112,27 @@ class StudyProcessTests(unittest.TestCase):
         self.health.assert_not_called()
         self.process.terminate.assert_not_called()
 
+    def test_expired_parent_prevents_weight_access(self):
+        with patch('tether_engine.study.process.verify_file') as verify:
+            with self.assertRaisesRegex(TimeoutError, 'startup deadline'):
+                with self.server(parent_deadline=0):
+                    pass
+        verify.assert_not_called()
+        self.factory.assert_not_called()
+
+    def test_weight_validation_uses_startup_deadline_without_reset(self):
+        from tether_engine.study.process import verify_file
+        def slow(*args, **kwargs):
+            result = verify_file(*args, **kwargs)
+            self.clock.now += 0.2
+            return result
+        with patch('tether_engine.study.process.verify_file', side_effect=slow):
+            with self.assertRaisesRegex(TimeoutError, 'startup deadline'):
+                with self.server():
+                    pass
+        self.factory.assert_not_called()
+        self.assertFalse((self.output / 'server-command.json').exists())
+
     def test_wrong_or_modified_executable_and_input_fail_before_launch(self):
         self.weights.write_bytes(b"modified")
         with self.assertRaises(ContractError):

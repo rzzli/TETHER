@@ -5,11 +5,13 @@ from __future__ import annotations
 from collections.abc import Mapping
 import hashlib
 from importlib import metadata
+import math
 import os
 from pathlib import Path
 import platform
 import re
 import stat
+import time
 
 from tether_engine.serde import ContractError, fingerprint, freeze
 
@@ -73,18 +75,38 @@ def _handle_identity(info):
     return _identity(info) + (info.st_ctime_ns,)
 
 
-def capture_file(path: Path, logical_id: str) -> Mapping:
-    """Hash original bytes in bounded chunks, rejecting replacement during the read."""
+def capture_file(path: Path, logical_id: str, *, deadline=None,
+                 monotonic=time.monotonic, max_bytes=None) -> Mapping:
+    """Hash bounded chunks with optional absolute deadline and pre-open size cap.
+
+    Deadlines are checked around I/O, not a guarantee of OS syscall preemption.
+    """
+    _need(deadline is None or type(deadline) in (int, float) and math.isfinite(deadline),
+          "Invalid proof read deadline")
+    _need(callable(monotonic), "Invalid proof clock")
+    _need(max_bytes is None or type(max_bytes) is int and max_bytes >= 0,
+          "Invalid proof size bound")
+    def check_time():
+        if deadline is not None and monotonic() >= deadline:
+            raise TimeoutError("Proof read deadline exceeded")
+    check_time()
     _relative(logical_id)
     path = Path(path).absolute()
     _no_links(path)
     before = path.stat()
     _need(stat.S_ISREG(before.st_mode), "Proof input must be a regular file")
+    _need(max_bytes is None or before.st_size <= max_bytes, "Proof input exceeds size bound")
+    check_time()
     digest, total = hashlib.sha256(), 0
     with path.open("rb") as stream:
         opened = os.fstat(stream.fileno())
         _need(_identity(before) == _identity(opened), "Proof file changed before read")
-        while chunk := stream.read(1024 * 1024):
+        while True:
+            check_time()
+            chunk = stream.read(1024 * 1024)
+            check_time()
+            if not chunk:
+                break
             total += len(chunk)
             _need(total <= before.st_size, "Proof file grew during read")
             digest.update(chunk)
@@ -96,10 +118,11 @@ def capture_file(path: Path, logical_id: str) -> Mapping:
         and total == before.st_size,
         "Proof file changed during read",
     )
+    check_time()
     return freeze(dict(logical_id=logical_id, sha256=digest.hexdigest(), bytes=total))
 
 
-def verify_file(path: Path, proof: Mapping) -> None:
+def verify_file(path: Path, proof: Mapping, *, deadline=None, monotonic=time.monotonic) -> None:
     """Verify against an independently retained expected proof, not a sibling digest."""
     _need(
         isinstance(proof, Mapping) and set(proof) == {"logical_id", "sha256", "bytes"},
@@ -113,7 +136,9 @@ def verify_file(path: Path, proof: Mapping) -> None:
         and re.fullmatch("[0-9a-f]{64}", proof["sha256"]),
         "Invalid file proof size/hash",
     )
-    _need(capture_file(path, proof["logical_id"]) == proof, "File proof mismatch")
+    _need(capture_file(path, proof["logical_id"], deadline=deadline,
+                       monotonic=monotonic, max_bytes=proof["bytes"]) == proof,
+          "File proof mismatch")
 
 
 def _package_root():

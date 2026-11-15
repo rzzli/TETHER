@@ -49,6 +49,39 @@ class StudyProofTests(unittest.TestCase):
             with self.subTest(changes=changes), self.assertRaises(ContractError):
                 proofs.verify_file(path, {**proof, **changes})
 
+    def test_oversized_proof_rejected_before_open(self):
+        path = self.root / 'template.json'
+        proof = dict(proofs.capture_file(path, 'template.json'))
+        proof['bytes'] -= 1
+        with patch.object(Path, 'open', side_effect=AssertionError('must not open')):
+            with self.assertRaisesRegex(ContractError, 'size bound'):
+                proofs.verify_file(path, proof)
+
+    def test_expired_proof_deadline_prevents_path_access(self):
+        with patch.object(Path, 'lstat', side_effect=AssertionError('must not stat')):
+            with self.assertRaisesRegex(TimeoutError, 'Proof read deadline'):
+                proofs.capture_file(self.root / 'template.json', 'template.json',
+                                    deadline=1, monotonic=lambda: 1)
+
+    def test_proof_deadline_checked_after_each_chunk(self):
+        path = self.root / 'large.bin'
+        path.write_bytes(b'x' * (2 * 1024 * 1024))
+        original = Path.open
+        now, reads = [0], []
+        class Stream:
+            def __init__(self, wrapped): self.wrapped = wrapped
+            def __enter__(self): return self
+            def __exit__(self, *args): self.wrapped.close()
+            def fileno(self): return self.wrapped.fileno()
+            def read(self, count):
+                reads.append(count)
+                now[0] = 2
+                return self.wrapped.read(count)
+        with patch.object(Path, 'open', lambda p, *a, **k: Stream(original(p, *a, **k))):
+            with self.assertRaisesRegex(TimeoutError, 'Proof read deadline'):
+                proofs.capture_file(path, 'large.bin', deadline=1, monotonic=lambda: now[0])
+        self.assertEqual(reads, [1024 * 1024])
+
     def test_package_complete_inventory_resources_and_no_code_execution(self):
         (self.root / "nested").mkdir()
         (self.root / "nested" / "extra.py").write_text(

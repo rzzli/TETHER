@@ -146,6 +146,13 @@ class OwnedServer:
         self._started_at = None
         try:
             self._started_at = self.monotonic()
+            deadline = self._started_at + self.spec.startup_seconds
+            if self.parent_deadline is not None:
+                deadline = min(deadline, self.parent_deadline)
+            def check_startup():
+                if self.monotonic() >= deadline:
+                    raise TimeoutError("Owned-server startup deadline exceeded")
+            check_startup()
             proofs = (self.spec.executable, *self.spec.required_inputs)
             if (
                 any(not isinstance(p, Mapping) or "logical_id" not in p for p in proofs)
@@ -154,7 +161,9 @@ class OwnedServer:
             ):
                 raise ContractError("Server input bindings differ from proofs")
             for proof in proofs:
-                verify_file(self.bindings[proof["logical_id"]], proof)
+                verify_file(self.bindings[proof["logical_id"]], proof,
+                            deadline=deadline, monotonic=self.monotonic)
+                check_startup()
             executable = self.bindings[self.spec.executable["logical_id"]]
             if (
                 not Path(self.spec.argv[0]).is_absolute()
@@ -171,11 +180,7 @@ class OwnedServer:
             publish_bytes(self.output / "server-command.json", canonical(self.spec))
             for name in ("server.stdout.log", "server.stderr.log"):
                 self._logs.append((self.output / name).open("xb"))
-            if (
-                self.parent_deadline is not None
-                and self.monotonic() >= self.parent_deadline
-            ):
-                raise TimeoutError("Owned-server parent expired before spawn")
+            check_startup()
             self._process = self.factory(
                 list(self.spec.argv),
                 stdout=self._logs[0],
@@ -187,9 +192,6 @@ class OwnedServer:
             )
             # Preserve ownership before any operation that can fail after spawn.
             self._record.update(started=True, pid=self._process.pid)
-            deadline = self.monotonic() + self.spec.startup_seconds
-            if self.parent_deadline is not None:
-                deadline = min(deadline, self.parent_deadline)
             close_error = self._close_logs(None)
             if close_error is not None:
                 raise close_error

@@ -144,6 +144,12 @@ replacement and in-read change checks. The focused reader suite passed on Window
 Python 3.11 and 3.14; the installed public wrapper passed 146 tests on each. These
 results do not qualify other operating systems or arbitrary filesystem races.
 
+Owned-server startup has one absolute deadline covering pinned executable/weight
+verification, spawn and readiness, limited further by any parent deadline. Proof
+verification rejects oversized files before opening and checks the deadline around
+each bounded read. It cannot preempt a blocked filesystem syscall. Cleanup has its
+separately bounded wait policy; timeout never authorizes an automatic second launch.
+
 Wrapper metadata and journal reads are capped at 64 MiB; dossiers at 256 MiB. Bounded file
 reads reject links, reparse points and nonregular files and check file identity.
 These controls do not guarantee exclusive ownership of external files or survive
