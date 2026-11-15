@@ -88,6 +88,8 @@ def check_execution(run, case, snapshot, configuration, claims, trace):
         raise ContractError("Semantic run accounting/journal mismatch")
     if fingerprint(committed) != fingerprint(claims):
         raise ContractError("Semantic journal/ledger claim mismatch")
+    from .execution_states import check_states
+    check_states(run, trace, configuration)
 
 
 def check_semantics(case, snapshot, claims, features, prediction, coverage, configuration,

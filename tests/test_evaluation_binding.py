@@ -112,6 +112,29 @@ class EvaluationBindingTests(unittest.TestCase):
         with self.assertRaises(ContractError):
             self.evaluate()
 
+    def test_resealed_unselected_claim_is_rejected_by_bound_evaluation(self):
+        self.assertEqual(self.evaluate()['metrics']['scored_cases'], 2)
+        from tether_engine.serde import canonical, parse_json
+        row = self.producer['records'][0]
+        directory = self.root / row['run_dir']
+        events = [parse_json(line) for line in (directory/'trace.jsonl').read_bytes().splitlines()]
+        next(e for e in events if e['event'] == 'review' and e['details']['selected'])['details']['selected'] = []
+        previous = None
+        for event in events:
+            event.pop('sha256')
+            event['previous_sha256'] = previous
+            event['sha256'] = previous = fingerprint(event)
+        payload = b''.join(canonical(event) + b'\n' for event in events)
+        receipt = read_json(directory/'receipt.json')
+        for name in ('trace.jsonl', 'journal.jsonl'):
+            (directory/name).write_bytes(payload)
+            receipt['outputs'][name] = sha256_file(directory/name)
+        write_json(directory/'receipt.json', receipt)
+        row['receipt_sha256'] = sha256_file(directory/'receipt.json')
+        self.seal()
+        with self.assertRaisesRegex(ContractError, 'claim was not selected by its review'):
+            self.evaluate()
+
     def test_wrong_run_uuid_case_fingerprint_endpoint_or_cohort_rejected(self):
         original = deepcopy(self.producer)
         for name in ('uuid', 'case', 'cohort', 'prediction'):

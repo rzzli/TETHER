@@ -115,6 +115,29 @@ class PortableBundleTests(unittest.TestCase):
         self.assertEqual(checked["byte_integrity"], "verified")
         self.assertEqual(checked["source_inclusive_consistency"], "not_checked_bytes_only")
 
+    def test_resealed_review_cannot_authorize_different_claims(self):
+        self.export()
+        self.assertEqual(bundle.verify_bundle(self.output)["source_inclusive_consistency"], "verified")
+        path = self.output / "bundle.json"
+        manifest = read_json(path)
+        item = manifest["objects"]["trace.jsonl"]
+        events = [parse_json(line) for line in (self.output / bundle._cas(item["sha256"])).read_bytes().splitlines()]
+        next(e for e in events if e["event"] == "review" and e["details"]["selected"])["details"]["selected"] = []
+        from tether_engine.serde import fingerprint
+        previous = None
+        for event in events:
+            event.pop("sha256")
+            event["previous_sha256"] = previous
+            event["sha256"] = previous = fingerprint(event)
+        payload = b"".join(canonical(event) + b"\n" for event in events)
+        digest = hashlib.sha256(payload).hexdigest()
+        (self.output / bundle._cas(digest)).write_bytes(payload)
+        manifest["objects"]["trace.jsonl"] = {"sha256": digest, "bytes": len(payload)}
+        path.write_bytes(canonical(manifest))
+        with self.assertRaisesRegex(ContractError, "claim was not selected by its review"):
+            bundle.verify_bundle(self.output)
+        self.assertEqual(bundle.verify_bundle(self.output, replay=False)["byte_integrity"], "verified")
+
     def test_unknown_policy_preserves_byte_check(self):
         self.export()
         path = self.output / "bundle.json"

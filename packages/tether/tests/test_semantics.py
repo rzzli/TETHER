@@ -51,6 +51,12 @@ class SemanticBoundaryTests(unittest.TestCase):
             event["sha256"] = previous = fingerprint(event)
         return events
 
+    def forge(self, result, name="run"):
+        # Produce hostile, resealed fixtures despite the now stricter writer.
+        # The verifier is always exercised outside this construction-only patch.
+        with patch("tether_engine.execution_states.check_states"):
+            return self.write(result, name)
+
     def test_real_completed_run_is_reconstructed(self):
         target, digest = self.write()
         result = layer.verify_engine(target, digest)
@@ -62,30 +68,30 @@ class SemanticBoundaryTests(unittest.TestCase):
             with self.subTest(status=status):
                 coverage = encode(self.result.coverage)
                 coverage["genetics"]["status"] = status
-                target, digest = self.write(replace(self.result, coverage=coverage), status)
-                # A valid original producer receipt demonstrates the legacy gap.
-                self.assertEqual(verify_run(target, digest)["semantic_consistency"], "verified")
+                target, digest = self.forge(replace(self.result, coverage=coverage), status)
+                with self.assertRaisesRegex(ContractError, "coverage status"):
+                    verify_run(target, digest)
                 with self.assertRaisesRegex(ContractError, "coverage status"):
                     layer.verify_engine(target, digest)
 
     def test_review_selection_cannot_differ_from_committed_claims(self):
         events = encode(self.result.trace)
         next(e for e in events if e["event"] == "review")["details"]["selected"] = []
-        target, digest = self.write(replace(self.result, trace=self.rechain(events)))
+        target, digest = self.forge(replace(self.result, trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "claim was not selected"):
             layer.verify_engine(target, digest)
 
     def test_claims_cannot_follow_rejected_review(self):
         events = encode(self.result.trace)
         next(e for e in events if e["event"] == "review")["details"]["problems"] = ["fictional rejection"]
-        target, digest = self.write(replace(self.result, trace=self.rechain(events)))
+        target, digest = self.forge(replace(self.result, trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "accepted active review"):
             layer.verify_engine(target, digest)
 
     def test_review_usage_must_match_accounted_usage(self):
         events = encode(self.result.trace)
         next(e for e in events if e["event"] == "review")["details"]["usage"]["output_tokens"] = 1
-        target, digest = self.write(replace(self.result, trace=self.rechain(events)))
+        target, digest = self.forge(replace(self.result, trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "review/accounted usage"):
             layer.verify_engine(target, digest)
 
@@ -122,7 +128,7 @@ class SemanticBoundaryTests(unittest.TestCase):
         # An impossible continued execution can still be sealed by the frozen
         # producer; the additional boundary must reject before dossier replay.
         events[-1]["details"]["status"] = "failed"
-        target, digest = self.write(replace(result, status="failed", trace=self.rechain(events)))
+        target, digest = self.forge(replace(result, status="failed", trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "terminal failure"):
             layer.verify_engine(target, digest)
 
@@ -195,7 +201,7 @@ class SemanticBoundaryTests(unittest.TestCase):
     def test_current_cli_rejects_bad_legacy_run_without_dispatch(self):
         coverage = encode(self.result.coverage)
         coverage["genetics"]["status"] = "failed"
-        target, digest = self.write(replace(self.result, coverage=coverage))
+        target, digest = self.forge(replace(self.result, coverage=coverage))
         with patch.object(layer, "invoke_engine", side_effect=AssertionError("no redispatch")), redirect_stderr(io.StringIO()):
             self.assertEqual(_cli.main(["verify", "--run-dir", str(target), "--receipt-sha256", digest]), 2)
 
@@ -225,7 +231,7 @@ class SemanticBoundaryTests(unittest.TestCase):
                      and len(event["details"]["selected_ids"]) > 1)
         first["details"]["selected_ids"] = first["details"]["selected_ids"][1:]
         coverage[first["details"]["category"]]["retrieval"]["selected_ids"] = first["details"]["selected_ids"]
-        target, digest = self.write(replace(result, trace=self.rechain(events), coverage=coverage))
+        target, digest = self.forge(replace(result, trace=self.rechain(events), coverage=coverage))
         with self.assertRaisesRegex(ContractError, "outside the bounded request"):
             layer.verify_engine(target, digest)
 
@@ -234,7 +240,7 @@ class SemanticBoundaryTests(unittest.TestCase):
         for status in ("invented_status", "budget_exhausted", "partial"):
             events = encode(self.result.trace)
             events[-1]["details"].update(status=status, prediction_sha256=fingerprint(prediction))
-            target, digest = self.write(replace(self.result, status=status, prediction=prediction,
+            target, digest = self.forge(replace(self.result, status=status, prediction=prediction,
                                                trace=self.rechain(events)), status)
             with self.assertRaisesRegex(ContractError, "terminal status|lacks|partial run"):
                 layer.verify_engine(target, digest)
@@ -244,7 +250,7 @@ class SemanticBoundaryTests(unittest.TestCase):
         index = next(i for i, event in enumerate(events) if event["event"] == "review")
         events.insert(index, {"event": "backend_failed", "details": {
             "category": events[index]["details"]["category"], "error_class": "TimeoutError"}})
-        target, digest = self.write(replace(self.result, trace=self.rechain(events)))
+        target, digest = self.forge(replace(self.result, trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "terminal backend failure"):
             layer.verify_engine(target, digest)
 
@@ -253,7 +259,7 @@ class SemanticBoundaryTests(unittest.TestCase):
         index = next(i for i, event in enumerate(events) if event["event"] == "dispatch")
         events.insert(index, {"event": "backend_quote_failed", "details": {
             "category": events[index]["details"]["category"], "error_class": "ValueError"}})
-        target, digest = self.write(replace(self.result, trace=self.rechain(events)))
+        target, digest = self.forge(replace(self.result, trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "terminal backend failure"):
             layer.verify_engine(target, digest)
 
@@ -262,7 +268,7 @@ class SemanticBoundaryTests(unittest.TestCase):
         review = next(i for i, event in enumerate(events) if event["event"] == "review")
         del events[review]
         # No accepted review can license the immediately following claims.
-        target, digest = self.write(replace(self.result, trace=self.rechain(events)))
+        target, digest = self.forge(replace(self.result, trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "accepted active review|disposition"):
             layer.verify_engine(target, digest)
 
@@ -275,7 +281,7 @@ class SemanticBoundaryTests(unittest.TestCase):
         for event in events:
             if event["details"].get("attempt_id") == old:
                 event["details"]["attempt_id"] = new
-        target, digest = self.write(replace(self.result, trace=self.rechain(events)))
+        target, digest = self.forge(replace(self.result, trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "attempt sequence"):
             layer.verify_engine(target, digest)
 
@@ -292,7 +298,7 @@ class SemanticBoundaryTests(unittest.TestCase):
         config, events = encode(result.configuration), encode(result.trace)
         config["review_enabled"] = False
         next(e for e in events if e["event"] == "plan")["details"]["configuration"] = config
-        target, digest = self.write(replace(result, configuration=config, trace=self.rechain(events)))
+        target, digest = self.forge(replace(result, configuration=config, trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "terminal backend failure"):
             layer.verify_engine(target, digest)
 
@@ -303,6 +309,6 @@ class SemanticBoundaryTests(unittest.TestCase):
         result = self.run_case(Timeout())
         events = encode(result.trace)
         events[-1]["details"]["status"] = "interrupted"
-        target, digest = self.write(replace(result, status="interrupted", trace=self.rechain(events)))
+        target, digest = self.forge(replace(result, status="interrupted", trace=self.rechain(events)))
         with self.assertRaisesRegex(ContractError, "possible interruption"):
             layer.verify_engine(target, digest)

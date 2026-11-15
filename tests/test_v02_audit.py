@@ -75,6 +75,22 @@ class AuditVerificationTests(unittest.TestCase):
         with self.assertRaisesRegex(ContractError, "Semantic"):
             verify_run(self.output)
 
+    def test_resealed_claim_not_selected_by_review_is_rejected(self):
+        self.assertEqual(verify_run(self.output)["semantic_consistency"], "verified")
+        events = [__import__("json").loads(line) for line in (self.output / "trace.jsonl").read_text().splitlines()]
+        review = next(item for item in events if item["event"] == "review" and item["details"]["selected"])
+        review["details"]["selected"] = []
+        previous = None
+        for item in events:
+            item.pop("sha256")
+            item["previous_sha256"] = previous
+            item["sha256"] = previous = fingerprint(item)
+        for name in ("trace.jsonl", "journal.jsonl"):
+            (self.output / name).write_bytes(b"".join(canonical(item) + b"\n" for item in events))
+        self.rehash_outputs()
+        with self.assertRaisesRegex(ContractError, "claim was not selected by its review"):
+            verify_run(self.output)
+
     def test_omitted_raw_parent_proof_is_rejected_even_without_source_reads(self):
         receipt = read_json(self.output / "receipt.json")
         artifact_ids = {item.artifact_id for item in self.store.snapshot.artifacts}
