@@ -43,6 +43,18 @@ verification. Current supported source-inclusive runs keep their existing status
 See [historical compatibility](../../docs/ARCHIVE.md) and
 [verification limits](../../docs/TETHER-VERIFICATION-SCOPE.md).
 
+## Packet availability correction
+
+Packet envelopes also enforce their declared information availability and temporal
+classification, using the same policy as source lineage. A future or unverified
+packet cannot inherit an eligible status from its parents. These existing v2 fields
+describe the information, not the time the packet file was generated. Registered
+computations performed later on eligible old inputs remain supported. If an older
+builder put file-creation time in these fields, rebuild a new source-backed packet
+with justified information bounds; do not edit a sealed original or automatically
+replace its dates. Native verification re-applies this gate to admitted claims and
+the required source-proof inventory.
+
 ## Evaluation migration
 
 The former `evaluate --predictions ...` command is now `evaluate-raw`. Its Python

@@ -67,6 +67,10 @@ content is rejected before backend preparation, even when its features are empty
 New deterministic computation on eligible old information is allowed; a later
 execution timestamp does not backdate new information.
 Missing lineage and declared evaluator-only ancestors are rejected.
+Packet availability and temporal classification are checked as information-level
+constraints before opening the packet, as well as during source/claim verification.
+They describe eligible information rather than packet file-creation time; verified
+old parents do not override a future or unverified packet declaration.
 Program availability is checked before dispatch. Numerical features also require
 a derivation scope matching the case's action, modality and context.
 

@@ -116,6 +116,21 @@ class InputGraph:
             visit(ref)
         return tuple(sorted(found))
 
+    def information_exclusion(self, availability, classification: TemporalClass, case: Case) -> str | None:
+        """Shared information-clock gate for original sources and normalized packets."""
+        reason = availability.exclusion(case.cutoff)
+        if reason:
+            return reason
+        if self.snapshot.profile == Profile.HISTORICAL:
+            if classification == TemporalClass.RECONSTRUCTED:
+                if not self.snapshot.allow_reconstructed:
+                    return "reconstructed_history_not_approved"
+            elif classification != TemporalClass.HISTORICAL:
+                return "not_verified_historical"
+        elif classification == TemporalClass.UNVERIFIED:
+            return "temporal_classification_unverified"
+        return None
+
     def exclusion(self, refs: tuple[str, ...], case: Case) -> str | None:
         for key in self.closure(refs):
             node = self.nodes[key]
@@ -127,17 +142,9 @@ class InputGraph:
                 if node.derivation.output_schema != "canonical_json.v1":
                     raise ContractError("Computed lineage requires the canonical JSON output schema")
                 continue  # Its parents carry the information eligibility.
-            reason = node.availability.exclusion(case.cutoff)
+            reason = self.information_exclusion(node.availability, node.temporal_classification, case)
             if reason:
                 return reason
-            if self.snapshot.profile == Profile.HISTORICAL:
-                if node.temporal_classification == TemporalClass.RECONSTRUCTED:
-                    if not self.snapshot.allow_reconstructed:
-                        return "reconstructed_history_not_approved"
-                elif node.temporal_classification != TemporalClass.HISTORICAL:
-                    return "not_verified_historical"
-            elif node.temporal_classification == TemporalClass.UNVERIFIED:
-                return "temporal_classification_unverified"
         return None
 
     def _payload(self, key: str) -> bytes:

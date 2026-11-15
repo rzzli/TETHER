@@ -188,6 +188,11 @@ class Case(Frozen):
 
 @dataclass(frozen=True)
 class Artifact(Frozen):
+    """A packet's availability/classification describe its information, not file creation.
+
+    Later packet construction from eligible older information remains possible;
+    parent lineage and any registered computation independently prove that origin.
+    """
     artifact_id: str
     dataset_id: str
     release_id: str

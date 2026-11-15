@@ -10,7 +10,7 @@ from pathlib import Path
 from tether_engine.agents import ExtractiveBackend
 from tether_engine.artifacts import write_run
 from tether_engine.chrono import EvidenceStore, load_snapshot, observation_exclusion
-from tether_engine.contracts import Case, Category
+from tether_engine.contracts import Case, Category, Profile, TemporalClass
 from tether_engine.provenance import InputGraph
 from tether_engine.serde import ContractError, decode, read_json
 from tether_engine.workflow import run_workflow
@@ -124,6 +124,56 @@ class StoreTemporalHardeningTests(unittest.TestCase):
             store = load_snapshot(fixture / 'snapshot.json', self.case)
             self.assertGreater(computed.computed_at, self.case.cutoff)
             self.assertEqual(store.lookup(computed.observation_id).observation, computed)
+
+    def test_future_artifact_information_is_excluded_before_packet_read(self):
+        from unittest.mock import patch
+        from tether_engine.chrono import admit_snapshot
+        artifact = self.store.snapshot.artifacts[0]
+        future = date(self.case.origin.year + 1, 1, 1)
+        availability = replace(artifact.availability, first_public_at=future,
+                               release_public_at=future, record_public_at=future,
+                               annotation_public_at=future, retrieved_at=future)
+        snapshot = replace(self.store.snapshot, artifacts=(replace(artifact, availability=availability),))
+        original_open = Path.open
+
+        def guarded(path, *args, **kwargs):
+            if path == FIXTURE / artifact.path:
+                raise AssertionError('Future packet was opened')
+            return original_open(path, *args, **kwargs)
+
+        with patch.object(Path, 'open', guarded):
+            store = admit_snapshot(snapshot, self.case, FIXTURE)
+        self.assertFalse(any(store.query(self.case, category) for category in Category))
+        self.assertEqual([(e.item_id, e.reason) for e in store.exclusions],
+                         [(artifact.artifact_id, 'available_after_origin')])
+        from tether_engine.chrono import required_source_proofs
+        self.assertEqual(required_source_proofs(snapshot, self.case, FIXTURE), ())
+
+    def test_unverified_artifact_cannot_inherit_verified_parent_status(self):
+        from tether_engine.chrono import admit_snapshot
+        artifact = replace(self.store.snapshot.artifacts[0], temporal_classification=TemporalClass.UNVERIFIED)
+        snapshot = replace(self.store.snapshot, artifacts=(artifact,))
+        store = admit_snapshot(snapshot, self.case, FIXTURE)
+        self.assertFalse(any(store.query(self.case, category) for category in Category))
+        self.assertEqual(store.exclusions[0].reason, 'temporal_classification_unverified')
+        graph = InputGraph(snapshot, FIXTURE, None)
+        self.assertEqual(observation_exclusion(self.records[0].observation, artifact, graph, self.case),
+                         'temporal_classification_unverified')
+
+    def test_historical_artifact_classification_uses_the_lineage_policy(self):
+        from tether_engine.chrono import eligible_artifacts
+        for classification, allowed, expected in (
+            (TemporalClass.HISTORICAL, False, None),
+            (TemporalClass.CONTEMPORARY, False, 'not_verified_historical'),
+            (TemporalClass.RECONSTRUCTED, False, 'reconstructed_history_not_approved'),
+            (TemporalClass.RECONSTRUCTED, True, None),
+        ):
+            with self.subTest(classification=classification, allow_reconstructed=allowed):
+                artifact = replace(self.store.snapshot.artifacts[0], temporal_classification=classification)
+                snapshot = replace(self.store.snapshot, artifacts=(artifact,), profile=Profile.HISTORICAL,
+                                   allow_reconstructed=allowed)
+                graph = InputGraph(snapshot, FIXTURE, None)
+                self.assertEqual(list(eligible_artifacts(snapshot, graph, self.case)), [(artifact, expected)])
 
 
 if __name__ == '__main__':

@@ -149,6 +149,9 @@ def observation_exclusion(observation, artifact, graph: InputGraph, case: Case, 
                           *, verify_derivations: bool = True) -> str | None:
     """The same observation gate is used for admission and semantic verification."""
     validate_observation(observation)
+    reason = graph.information_exclusion(artifact.availability, artifact.temporal_classification, case)
+    if reason:
+        return reason
     if observation.source_kind != "computed" and observation.derivation is not None:
         raise ContractError("An observation derivation requires computed source kind")
     if observation.program_id is not None and case.program is not None and case.program.mapping_confidence == 0:
@@ -201,7 +204,8 @@ def eligible_artifacts(snapshot: Snapshot, graph: InputGraph, case: Case):
             yield artifact, "access_denied"
             continue
         check_role(artifact.dataset_id, artifact.role, graph.catalog)
-        yield artifact, graph.exclusion(artifact.input_refs, case)
+        reason = graph.information_exclusion(artifact.availability, artifact.temporal_classification, case)
+        yield artifact, reason or graph.exclusion(artifact.input_refs, case)
 
 
 def required_source_proofs(snapshot: Snapshot, case: Case, root: Path, policy=None) -> tuple[dict, ...]:
