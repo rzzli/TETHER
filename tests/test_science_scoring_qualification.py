@@ -70,6 +70,13 @@ def qwen_model(released="2024-09-19T00:00:00Z"):
 
 
 class ScoringQualificationTests(unittest.TestCase):
+    def test_feature_information_exactly_at_origin_matches_other_qualification_paths(self):
+        plan = qualified_declaration()
+        for row in plan['rows']:
+            for source in row['ancestors']:
+                source['available_by'] = row['origin_at']
+        self.assertTrue(review_scoring_plan(plan)['ready_for_independent_review'])
+
     def test_evaluator_only_bytes_cannot_reappear_as_predictor_under_same_identity(self):
         plan = qualified_declaration()
         plan['rows'][0]['label']['sources'][0].update(

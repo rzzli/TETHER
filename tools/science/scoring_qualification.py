@@ -10,6 +10,9 @@ from datetime import datetime
 import re
 from typing import Any
 
+from tether_engine.serde import ContractError
+from tether_engine.temporal import utc_instant
+
 
 ENDPOINTS = {"clinical_success", "registry_next_phase_actual_start", "verified_experimental_dosing"}
 PARTITIONS = {"train", "calibration", "test"}
@@ -20,10 +23,9 @@ def _time(value: Any) -> datetime | None:
     if not isinstance(value, str):
         return None
     try:
-        result = datetime.fromisoformat(value.replace("Z", "+00:00"))
-    except ValueError:
+        return utc_instant(value)
+    except ContractError:
         return None
-    return result if result.tzinfo is not None else None
 
 
 def _text(value: Any) -> bool:

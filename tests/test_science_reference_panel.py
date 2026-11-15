@@ -40,6 +40,15 @@ class ReferencePanelTests(unittest.TestCase):
         self.panel['cases'][0]['primary_sources'][0]['publication_date'] = '2027-01-01'
         with self.assertRaises(ContractError): validate_panel(self.panel, self.pack)
 
+    def test_partial_publication_is_not_padded_to_start_of_period(self):
+        source = self.panel['cases'][0]['primary_sources'][0]
+        for partial in ('2026', '2026-10'):
+            source['publication_date'] = partial
+            with self.subTest(partial=partial), self.assertRaisesRegex(ContractError, 'interval extends beyond cutoff'):
+                validate_panel(self.panel, self.pack, cutoff='2026-10-18')
+        source['publication_date'] = '2026-10-18'
+        validate_panel(self.panel, self.pack, cutoff='2026-10-18')
+
     def test_unknown_publication_requires_reason(self):
         ref = self.panel['cases'][0]['primary_sources'][0]
         ref['publication_date'] = None

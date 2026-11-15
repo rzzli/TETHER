@@ -10,6 +10,7 @@ from typing import Any
 import math
 
 from .serde import ContractError, Frozen, fingerprint
+from .temporal import available_by, calendar_bounds, utc_instant
 
 
 class Profile(StrEnum):
@@ -65,21 +66,25 @@ class Availability(Frozen):
     evidence_ref: str | None = None
 
     def exclusion(self, origin: date | datetime) -> str | None:
-        cutoff = origin if isinstance(origin, datetime) else datetime.combine(origin, time.max, timezone.utc)
+        cutoff = utc_instant(origin) if isinstance(origin, datetime) else calendar_bounds(origin).latest
         dates = [self.first_public_at, self.release_public_at,
                  self.record_public_at, self.annotation_public_at]
         if not self.basis.strip():
             return "availability_unverified"
-        if any(datetime.combine(value, time.max, timezone.utc) > cutoff for value in dates if value is not None):
+        if any(not available_by(calendar_bounds(value).latest, cutoff) for value in dates if value is not None):
             return "available_after_origin"
         if any(value > self.retrieved_at for value in dates if value is not None):
             return "availability_after_retrieval"
         if self.known_public_by is not None:
-            if self.known_public_by.tzinfo is None or not self.evidence_ref:
+            if not self.evidence_ref:
                 return "availability_proof_invalid"
-            if self.known_public_by > cutoff:
+            try:
+                known_by = utc_instant(self.known_public_by)
+            except ContractError:
+                return "availability_proof_invalid"
+            if not available_by(known_by, cutoff):
                 return "available_after_origin"
-            if self.known_public_by.date() > self.retrieved_at:
+            if not available_by(known_by, calendar_bounds(self.retrieved_at).latest):
                 return "availability_after_retrieval"
         elif any(value is None for value in dates):
             return "availability_unverified"

@@ -10,6 +10,9 @@ from datetime import datetime
 import re
 from typing import Any
 
+from tether_engine.serde import ContractError
+from tether_engine.temporal import utc_instant
+
 
 METHODS = {"coloc_abf_beta", "coloc_abf_p", "coloc_susie", "mr_wald", "mr_ivw"}
 HISTORICAL_INPUT_ROLES = {"agent_evidence", "reference"}
@@ -19,10 +22,9 @@ def _instant(value: Any) -> datetime | None:
     if not isinstance(value, str):
         return None
     try:
-        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
-    except ValueError:
+        return utc_instant(value)
+    except ContractError:
         return None
-    return parsed if parsed.tzinfo is not None else None
 
 
 def review_method_plan(plan: dict[str, Any]) -> dict[str, Any]:

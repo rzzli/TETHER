@@ -74,6 +74,15 @@ old parents do not override a future or unverified packet declaration.
 Program availability is checked before dispatch. Numerical features also require
 a derivation scope matching the case's action, modality and context.
 
+Information upper bounds use an inclusive UTC cutoff: an exact bound equal to
+the cutoff is eligible. Offset timestamps are normalized before comparison,
+including comparisons with UTC retrieval days. Date-only availability uses the
+last microsecond of that UTC day; it cannot establish availability at noon on the
+same day. Calendar year/month/day bounds retain their precision. The reference
+panel checker uses the end of a reported publication period rather than inventing
+publication on its first day. Training-before-test ordering is a separate strict
+sequence constraint and is not relaxed by inclusive information availability.
+
 ### Registered computation
 
 New runs seal admission policy `tether.derivation.v1`. The initial registry has

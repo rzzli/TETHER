@@ -3,11 +3,11 @@
 These evaluator-side checks enforce scope, temporal chronology and provenance.
 They do not infer a clinical outcome, certify a reviewer's expertise or train a model.
 """
-from datetime import datetime
 from pathlib import Path
 import re
 
 from tether_engine.serde import ContractError, read_json, safe_child, sha256_file
+from tether_engine.temporal import available_by, utc_instant
 
 
 ENDPOINTS = {'registry_next_phase_actual_start', 'verified_experimental_dosing', 'clinical_success'}
@@ -18,12 +18,9 @@ STAGES = ('science_1', 'science_2', 'science_3', 'science_4', 'science_5', 'scie
 
 def utc(value):
     try:
-        parsed = datetime.fromisoformat(value.replace('Z', '+00:00'))
-    except (ValueError, AttributeError) as error:
-        raise ContractError('Scientific chronology needs explicit UTC') from error
-    if parsed.tzinfo is None or parsed.utcoffset().total_seconds() != 0:
-        raise ContractError('Scientific chronology needs explicit UTC')
-    return parsed
+        return utc_instant(value)
+    except ContractError as error:
+        raise ContractError('Scientific chronology needs an explicit timezone-aware instant') from error
 
 
 def require_hash(value):
@@ -210,11 +207,11 @@ def validate_feature_chronology(feature_origin_at, input_lineage, models=(), lab
         raise ContractError('Historical feature derivation lacks complete input lineage')
     for source in input_lineage:
         require_hash(source['sha256'])
-        if source['role'] not in ('agent_evidence', 'reference') or utc(source['available_by']) >= origin:
+        if source['role'] not in ('agent_evidence', 'reference') or not available_by(source['available_by'], origin):
             raise ContractError('Later or evaluator-only information cannot become historical predictors')
     for model in models:
         require_hash(model['weights_sha256'])
-        if utc(model['released_by']) >= origin or model.get('later_finetune', False):
+        if not available_by(model['released_by'], origin) or model.get('later_finetune', False):
             raise ContractError('Model contributor is later than this feature origin')
     if label_available_at is not None:
         if prediction_origin_at is None or utc(label_available_at) >= utc(prediction_origin_at):

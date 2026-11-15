@@ -40,6 +40,13 @@ def historical_plan():
 
 
 class GeneticsMethodGuardTests(unittest.TestCase):
+    def test_information_boundary_accepts_equivalent_utc_instant(self):
+        plan = historical_plan()
+        for value in (plan['origin_at'], '2025-01-01T02:00:00+02:00'):
+            plan['lineage'][0]['available_by'] = value
+            with self.subTest(value=value):
+                self.assertTrue(review_method_plan(plan)['scientific_plan_ready'])
+
     def test_beta_variance_abf_does_not_invent_unused_N_EAF_LD_or_case_fraction(self):
         result = review_method_plan(abf_plan())
         self.assertTrue(result["algorithm_plan_ready"])

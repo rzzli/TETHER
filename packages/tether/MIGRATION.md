@@ -57,6 +57,15 @@ the required source-proof inventory.
 
 ## Evaluation migration
 
+Current scientific chronology helpers normalize timezone-aware ISO instants to
+UTC and reject timezone-free, compact/week-date and sub-microsecond strings that
+would otherwise be ambiguous or silently truncated. Input/model information
+available exactly at a feature origin now follows the engine's inclusive boundary.
+Reference-panel year/month publication dates are treated as full periods; a period
+overlapping its cutoff no longer passes by padding the first month/day. Original
+dated qualification reports are unchanged and should be read under their recorded
+rules. These changes do not qualify scientific labels or authorize fitting.
+
 The former `evaluate --predictions ...` command is now `evaluate-raw`. Its Python
 counterpart remains `tether_engine.evaluation.evaluate`; both report unverified
 prediction provenance. Their corrected report uses schema version 2. Existing

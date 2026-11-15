@@ -3,7 +3,7 @@
 Fresh contexts are procedural separation, not independent error distributions.
 This module never supplies answers or references to a model-backed workflow.
 """
-from datetime import date
+from tether_engine.temporal import available_by, calendar_bounds
 import hashlib
 from pathlib import Path
 
@@ -74,12 +74,12 @@ def validate_panel(panel, case_pack, *, cutoff='2026-10-18'):
             published = ref.get('publication_date')
             if published is not None:
                 try:
-                    # Year/month precision is acceptable, and stays explicit.
-                    parsed = date.fromisoformat(published + '-01' * (2 - published.count('-')))
-                except (ValueError, TypeError, AttributeError) as error:
+                    # The first day of a period is not an availability bound.
+                    bounds = calendar_bounds(published)
+                except ContractError as error:
                     raise ContractError('Invalid primary reference publication date') from error
-                if parsed > date.fromisoformat(cutoff):
-                    raise ContractError('Future primary reference is ineligible')
+                if not available_by(bounds.latest, calendar_bounds(cutoff).latest):
+                    raise ContractError('Primary reference publication interval extends beyond cutoff')
             elif not ref.get('publication_date_reason'):
                 raise ContractError('Unknown publication date needs an explanation')
         entries = row.get('questions', [])
