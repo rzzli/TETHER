@@ -9,7 +9,7 @@ import unittest
 from unittest.mock import Mock, patch
 
 from tether_engine.serde import ContractError, canonical
-from tether_engine.journal import read_chain
+from tether_engine.journal import RunJournal, read_chain
 from tether_engine.study import native_diagnostic as diagnostic
 from tether_engine.study import native
 from tether_engine.study.diagnostic import (
@@ -116,6 +116,24 @@ class NativeDiagnosticTests(unittest.TestCase):
 
     def prepare(self, name="run"):
         return diagnostic.prepare(self.root / name, **self.inputs)
+
+    def test_preparation_retention_errors_preserve_primary_interruption(self):
+        close = RunJournal.close
+        for stage in ('journal', 'marker'):
+            with self.subTest(stage=stage):
+                primary = KeyboardInterrupt('preparation fixture interruption')
+                def broken(journal):
+                    close(journal)
+                    raise OSError('close fixture')
+                retention = (patch.object(RunJournal,'fail',side_effect=OSError('journal fixture'))
+                             if stage == 'journal' else patch.object(diagnostic,'put',side_effect=OSError('marker fixture')))
+                with patch.object(diagnostic,'pin',side_effect=primary), retention, \
+                        patch.object(RunJournal,'close',new=broken), \
+                        self.assertRaises(KeyboardInterrupt) as caught:
+                    self.prepare('failure-'+stage)
+                self.assertIs(caught.exception,primary)
+                self.assertGreaterEqual(len(primary.__notes__),2)
+                self.assertTrue(any('close' in note.lower() for note in primary.__notes__))
 
     def test_preparation_freezes_six_exact_payloads_and_inert_code(self):
         proof = self.prepare()

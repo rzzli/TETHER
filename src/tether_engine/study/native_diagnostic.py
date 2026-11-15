@@ -165,6 +165,7 @@ def prepare(
     output = Path(output).resolve()
     output.mkdir(parents=True, exist_ok=False)
     journal = RunJournal(output / "preparation", kind="build")
+    failure = None
     try:
         need(
             type(port) is int and 1 <= port <= 65535 and approved_roots,
@@ -319,14 +320,19 @@ def prepare(
         journal.append("build_completed", plan=pin(output / "run-plan.json"))
         return pin(output / "run-plan.json")
     except BaseException as error:
-        journal.fail(error, "native_diagnostic_preparation")
-        put(
-            output / "preparation-failure.json",
-            dict(error_class=type(error).__name__, model_calls=0),
-        )
+        failure = error
+        for label, action in (
+            ('Preparation failure journal', lambda: journal.fail(error, 'native_diagnostic_preparation')),
+            ('Preparation failure marker', lambda: put(output / 'preparation-failure.json',
+                 dict(error_class=type(error).__name__, model_calls=0))),
+        ):
+            try:
+                action()
+            except BaseException as secondary:
+                error.add_note(label + ': ' + type(secondary).__name__)
         raise
     finally:
-        journal.close()
+        journal.close_preserving(failure)
 
 
 def _validate(plan, roots):

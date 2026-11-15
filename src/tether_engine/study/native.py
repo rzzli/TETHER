@@ -119,6 +119,7 @@ def bounded_health_probe(host, port, timeout):
     deadline = time.monotonic() + timeout
     connection = http.client.HTTPConnection(host, port, timeout=_remaining(deadline))
     response = timer = None
+    failure = None
     try:
         connection.connect()
         need(connection.sock is not None, "Missing health transport socket")
@@ -127,10 +128,11 @@ def bounded_health_probe(host, port, timeout):
         response = connection.getresponse()
         _remaining(deadline)
         return type(response.status) is int and response.status == 200
+    except BaseException as error:
+        failure = error
+        raise
     finally:
-        import sys
-
-        primary = sys.exception()
+        primary = failure
         cleanup_error = None
         actions = [timer.cancel] if timer is not None else []
         actions += ([response.close] if response is not None else []) + [
@@ -461,6 +463,7 @@ class LocalBackend:
         deadline = self._execution_deadline(start, timeout_seconds)
         body, status, complete = bytearray(), None, False
         connection = response = timer = None
+        failure = None
         wrapper = dict(
             schema_version=1,
             kind=PROTOCOL,
@@ -570,6 +573,7 @@ class LocalBackend:
                 pass
             return GeneratedBytes(raw, usage)
         except BaseException as primary:
+            failure = primary
             partial = getattr(primary, "partial", None)
             if isinstance(partial, bytes):
                 body.extend(partial[: MAX_ORIGINAL_RESPONSE - len(body)])
@@ -577,9 +581,7 @@ class LocalBackend:
             raise
         finally:
             # Closing transport must never suppress an active interruption/error.
-            import sys
-
-            primary = sys.exception()
+            primary = failure
             cleanup_error = None
             if timer is not None:
                 try:

@@ -834,6 +834,7 @@ def smoke(
     accepted = []
     source_lease = ExitStack()
     server_scope = ExitStack()
+    failure = None
     try:
         if collected_source is not None:
             source_lease.enter_context(collected_source.locked(end))
@@ -1103,6 +1104,7 @@ def smoke(
             )
         )
     except BaseException as primary:
+        failure = primary
         if journal.sealed:
             raise
         try:
@@ -1131,21 +1133,17 @@ def smoke(
         raise
     finally:
         # Failure retention must never replace the original interruption/error.
-        import sys
-
-        primary = sys.exception()
+        cleanup_failure = failure
         try:
             source_lease.close()
         except BaseException as secondary:
-            if primary is None:
-                raise
-            primary.add_note("Source lease cleanup: " + type(secondary).__name__)
-        try:
-            journal.close()
-        except BaseException as secondary:
-            if primary is None:
-                raise
-            primary.add_note("Journal close: " + type(secondary).__name__)
+            if cleanup_failure is None:
+                cleanup_failure = secondary
+            else:
+                cleanup_failure.add_note("Source lease cleanup: " + type(secondary).__name__)
+        journal.close_preserving(cleanup_failure)
+        if failure is None and cleanup_failure is not None:
+            raise cleanup_failure
 
 
 def verify(path, sha256, *, deadline=None, source_roots=None, native_roots=None):

@@ -116,6 +116,26 @@ class NativeModeTests(unittest.TestCase):
             ],
         )
 
+    def test_terminal_storage_error_is_not_suppressed_by_callers_exception(self):
+        original = mode._write
+        failure = OSError('terminal storage fixture')
+        def broken(root, name, value):
+            if name == 'server-terminal.json':
+                raise failure
+            return original(root, name, value)
+        end = time.monotonic()+30
+        try:
+            raise LookupError('unrelated caller')
+        except LookupError as unrelated:
+            with patch.object(mode, '_write', side_effect=broken), \
+                    self.assertRaises(OSError) as caught:
+                with self.config.locked(self.spec, end):
+                    with self.config.running(self.root, self.journal, self.spec, end):
+                        pass
+            self.assertIs(caught.exception, failure)
+            self.assertFalse(hasattr(unrelated, '__notes__'))
+        self.process.terminate.assert_called_once()
+
     def test_missing_or_modified_server_fails_before_spawn(self):
         original = self.server.read_bytes()
         try:

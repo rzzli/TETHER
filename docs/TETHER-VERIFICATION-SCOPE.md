@@ -188,6 +188,13 @@ it does not authorize withdrawal, rewriting or automatic redispatch.
 Source/retrieval and tokenizer preparation also retain the primary execution
 exception when journal closing fails, recording the secondary error as a note.
 A close failure without an earlier execution failure still propagates.
+Parent comparisons and native transport/launch retention use their own execution
+failure state. They do not attach a new cleanup error to an unrelated exception
+being handled by their caller. Source-lease cleanup cannot skip parent journal
+closure, and native preparation tries both failure-retention paths even when one
+fails. Secondary errors remain attached to the original failure; successful
+execution followed by failed cleanup is reported as an error with any existing
+seal preserved.
 
 Wrapper metadata and journal reads are capped at 64 MiB; dossiers at 256 MiB. Bounded file
 reads reject links, reparse points and nonregular files and check file identity.

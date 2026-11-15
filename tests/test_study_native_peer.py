@@ -15,6 +15,30 @@ from tests.test_study_native import Response
 
 
 class NativePeerTests(unittest.TestCase):
+    def test_health_close_failure_is_not_suppressed_by_callers_exception(self):
+        error = OSError('health close fixture')
+        self.connection.close.side_effect = error
+        try:
+            raise LookupError('unrelated caller')
+        except LookupError as unrelated:
+            with self.assertRaises(OSError) as caught:
+                native.bounded_health_probe('127.0.0.1', 55581, 1)
+            self.assertIs(caught.exception, error)
+            self.assertFalse(hasattr(unrelated, '__notes__'))
+
+    def test_generation_close_failure_is_not_suppressed_by_callers_exception(self):
+        error = OSError('generation close fixture')
+        self.connection.close.side_effect = error
+        try:
+            raise LookupError('unrelated caller')
+        except LookupError as unrelated:
+            with self.assertRaises(OSError) as caught:
+                self.backend().generate(self.request,self.payload,timeout_seconds=10)
+            self.assertIs(caught.exception, error)
+            self.assertFalse(hasattr(unrelated, '__notes__'))
+        wrapper = parse_json((self.directory/'native-failure-wrapper.json').read_bytes())
+        self.assertEqual(wrapper['error_class'], 'OSError')
+
     # Reuse only fake setup/helpers, not the other author's test methods.
     setUp = native_tests.NativeStudyTests.setUp
     backend = native_tests.NativeStudyTests.backend

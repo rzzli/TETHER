@@ -9,7 +9,6 @@ from importlib import resources
 from pathlib import Path
 import re
 import subprocess
-import sys
 import time
 from threading import Lock
 
@@ -308,6 +307,7 @@ class NativeExecutionConfig:
             monotonic=time.monotonic,
             parent_deadline=deadline,
         )
+        failure = None
         try:
             with owner:
                 deadline_check(deadline)
@@ -330,8 +330,11 @@ class NativeExecutionConfig:
                     elapsed_seconds=300 - (deadline - time.monotonic()),
                 )
                 yield owner
+        except BaseException as error:
+            failure = error
+            raise
         finally:
-            primary = sys.exception()
+            primary = failure
             try:
                 _write(folder, "server-terminal.json", owner.terminal_record)
                 journal.append(

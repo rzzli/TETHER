@@ -181,6 +181,7 @@ def smoke(output):
     accepted = []
     reserved = []
     summaries = []
+    failure = None
     try:
         _no_links(root)
         plan = load_plan()
@@ -383,6 +384,7 @@ def smoke(output):
         _seal(root, receipt, journal)
         return verify(root, fingerprint(receipt))
     except BaseException as primary:
+        failure = primary
         if journal.sealed:
             raise
         try:
@@ -418,14 +420,7 @@ def smoke(output):
             primary.add_note("Failure marker unavailable: " + type(secondary).__name__)
         raise
     finally:
-        import sys
-        primary = sys.exception()
-        try:
-            journal.close()
-        except BaseException as secondary:
-            if primary is None:
-                raise
-            primary.add_note("Journal close failed: " + type(secondary).__name__)
+        journal.close_preserving(failure)
 
 
 def verify(path, sha256):
