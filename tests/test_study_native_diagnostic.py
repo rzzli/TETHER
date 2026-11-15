@@ -9,6 +9,7 @@ import unittest
 from unittest.mock import Mock, patch
 
 from tether_engine.serde import ContractError, canonical
+from tether_engine.journal import read_chain
 from tether_engine.study import native_diagnostic as diagnostic
 from tether_engine.study import native
 from tether_engine.study.diagnostic import (
@@ -171,6 +172,43 @@ class NativeDiagnosticTests(unittest.TestCase):
         self.assertEqual(report["status"], "incomplete_execution")
         self.assertEqual(len(report["cells"]), 6)
         self.assertTrue(all(c["status"] == "undispatched" for c in report["cells"]))
+
+    def test_terminal_storage_failure_appends_failure_before_close(self):
+        proof = self.prepare()
+        put = diagnostic.put
+        primary = RuntimeError('fixture startup refusal')
+        def fail(path, value):
+            if path.name == 'terminal-seal.json':
+                raise OSError('seal storage failed')
+            return put(path, value)
+        with patch.object(diagnostic, 'OwnedServer', side_effect=primary), \
+                patch.object(diagnostic, 'put', side_effect=fail), self.assertRaises(RuntimeError) as caught:
+            diagnostic.execute(proof['path'], proof['sha256'], [self.root])
+        self.assertIs(caught.exception, primary)
+        root = self.root / 'run'
+        self.assertFalse((root / 'terminal-seal.json').exists())
+        self.assertTrue((root / 'terminal-storage-failure.json').exists())
+        self.assertEqual(read_chain(root / 'execution/journal.jsonl')[-1]['event'], 'build_failed')
+
+    def test_terminal_post_publication_error_preserves_failure_record_seal(self):
+        proof = self.prepare()
+        put = diagnostic.put
+        primary = RuntimeError('fixture startup refusal')
+        before = {}
+        def fail(path, value):
+            put(path, value)
+            if path.name == 'terminal-seal.json':
+                before['journal'] = (path.parent / 'execution/journal.jsonl').read_bytes()
+                raise OSError('post-seal cleanup failure')
+        with patch.object(diagnostic, 'OwnedServer', side_effect=primary), \
+                patch.object(diagnostic, 'put', side_effect=fail), self.assertRaises(RuntimeError) as caught:
+            diagnostic.execute(proof['path'], proof['sha256'], [self.root])
+        self.assertIs(caught.exception, primary)
+        root = self.root / 'run'
+        self.assertFalse((root / 'terminal-storage-failure.json').exists())
+        self.assertEqual((root / 'execution/journal.jsonl').read_bytes(), before['journal'])
+        anchor = diagnostic.pin(root / 'terminal-seal.json')['sha256']
+        self.assertEqual(diagnostic.verify(root, anchor, [self.root])['execution_status'], 'failed')
 
     def test_execute_cli_reports_startup_failure_and_interrupt_with_nonzero_exit(self):
         import io

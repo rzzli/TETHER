@@ -195,6 +195,10 @@ execution and 130 for interruption. Verification of a valid failure record can
 still return success as a verification operation; its execution status remains
 failed. The original frozen report's human-review field is historical metadata,
 not a new expert-recruitment prerequisite or scientific acceptance.
+Its outer terminal-seal writer keeps the execution journal open until publication;
+storage failures append a failure event, while post-publication errors preserve
+the seal and journal. The native diagnostic fixture suite verifies this separately
+from the ordinary study-driver receipt boundary.
 
 Preserve command/version, `source_binding`, receipt-anchor status and the relevant
 verification fields when reporting a result. A single `semantic_consistency` flag

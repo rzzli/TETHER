@@ -502,6 +502,49 @@ def _memory(owner):
         )
 
 
+def _seal_terminal_record(output, journal, plan_proof, report, primary):
+    """Retain terminal storage failures without mutating a published outer seal."""
+    seal_path = output / 'terminal-seal.json'
+    pending = None
+    try:
+        put(output / 'execution-report.json', report)
+        journal.append('native_diagnostic_terminal', report=pin(output / 'execution-report.json'))
+        files = {p.relative_to(output).as_posix(): pin(p)
+                 for p in sorted(output.rglob('*')) if p.is_file()}
+        put(seal_path, dict(schema_version=1, kind='r07_technical_terminal_seal',
+            plan=plan_proof, files=files, human_scientific_review='pending',
+            qualification='Byte/mechanical record, not scientific acceptance'))
+    except BaseException as error:
+        pending = primary if primary is not None else error
+        if primary is not None:
+            primary.add_note('Terminal storage: ' + type(error).__name__)
+        # The outer terminal seal is above the execution journal directory.
+        # Its existence is a mutation barrier, not a verification verdict.
+        if not seal_path.exists():
+            for name, action in (
+                ('Terminal failure journal', lambda: journal.fail(error, 'terminal_storage')),
+                ('Failure snapshot', lambda: put(output / 'terminal-storage-failure.json', dict(
+                    error_class=type(pending).__name__, secondary_error_class=type(error).__name__,
+                    success_seal=False))),
+            ):
+                try:
+                    action()
+                except BaseException as secondary:
+                    pending.add_note(name + ': ' + type(secondary).__name__)
+        raise pending
+    finally:
+        try:
+            journal.close()
+        except BaseException as error:
+            if pending is not None:
+                pending.add_note('Journal close: ' + type(error).__name__)
+            elif primary is not None:
+                primary.add_note('Journal close: ' + type(error).__name__)
+                raise primary
+            else:
+                raise
+
+
 def execute(plan_path, expected_sha256, approved_roots):
     plan_proof = pin(plan_path)
     need(plan_proof["sha256"] == expected_sha256, "Wrong external plan anchor")
@@ -729,59 +772,7 @@ def execute(plan_path, expected_sha256, approved_roots):
             features={},
             clinical_probability=None,
         )
-        terminal_error = None
-        try:
-            put(output / "execution-report.json", report)
-            journal.append(
-                "native_diagnostic_terminal",
-                report=pin(output / "execution-report.json"),
-            )
-        except BaseException as issue:
-            terminal_error = issue
-        try:
-            journal.close()
-        except BaseException as issue:
-            if terminal_error is None:
-                terminal_error = issue
-            else:
-                terminal_error.add_note("Journal close: " + type(issue).__name__)
-        if terminal_error is None:
-            try:
-                files = {
-                    p.relative_to(output).as_posix(): pin(p)
-                    for p in sorted(output.rglob("*"))
-                    if p.is_file()
-                }
-                put(
-                    output / "terminal-seal.json",
-                    dict(
-                        schema_version=1,
-                        kind="r07_technical_terminal_seal",
-                        plan=plan_proof,
-                        files=files,
-                        human_scientific_review="pending",
-                        qualification="Byte/mechanical record, not scientific acceptance",
-                    ),
-                )
-            except BaseException as issue:
-                terminal_error = issue
-        if terminal_error is not None:
-            if primary is not None:
-                primary.add_note("Terminal storage: " + type(terminal_error).__name__)
-            else:
-                primary = terminal_error
-            try:
-                put(
-                    output / "terminal-storage-failure.json",
-                    dict(
-                        error_class=type(primary).__name__,
-                        secondary_error_class=type(terminal_error).__name__,
-                        success_seal=False,
-                    ),
-                )
-            except BaseException as issue:
-                primary.add_note("Failure snapshot: " + type(issue).__name__)
-            raise primary
+        _seal_terminal_record(output, journal, plan_proof, report, primary)
     return pin(output / "terminal-seal.json")
 
 
