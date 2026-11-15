@@ -250,3 +250,27 @@ This path is qualified with finite Python fixtures on Windows CPython 3.11 and
 platforms and trusted injected process factories retain the previous single-child
 scope. External brokers and hostile host compromise are outside this lifecycle
 guarantee. Historical scientific artifacts retain their exact-runtime replay path.
+
+## Correctness and reporting corrections
+
+Budget decisions and semantic replay now sum the decimal representations of USD
+amounts exactly. Three 0.10 charges fit a 0.30 cap; even a smaller-than-float-display
+overrun is rejected. Numeric wire totals remain floats. Historical rounded totals
+that do not reconcile with their events need their original runtime; they are not
+rewritten or silently accepted. Zero-cost archived runs remain supported.
+
+JSON parsing rejects nonfinite exponent results, invalid Unicode, excessive
+nesting and excessively large integers with `ContractError`. Dependency component
+identity no longer depends on display labels. This repairs accidental grouping;
+it does not validate numerical features scientifically.
+
+The retained source-validation utility writes `PENDING_TERMINAL_SEAL` before
+publication. Consumers must verify the bound terminal seal to establish successful
+execution, and must not promote `intended_status` alone. Local storage failures
+are fatal `local_io_failure` events rather than evidence of source unavailability.
+Changed utility hashes require a fresh qualification/freeze for any new execution.
+
+Reason-qualified conformance reporting requires explicit expected rejection
+reasons, valid-case controls and the full scheduled denominator. Legacy decision
+agreement is retained under its original meaning. Missing scientific measurements
+remain distinct from available identifiers; all-null measurement coverage is null.

@@ -36,6 +36,8 @@ class Usage(Frozen):
     cost_usd: float
 
     def validate(self) -> None:
+        from .money import usd
+        usd(self.cost_usd)
         if (type(self.input_tokens) is not int or type(self.output_tokens) is not int or
                 self.input_tokens < 0 or self.output_tokens < 0 or
                 not math.isfinite(self.cost_usd) or self.cost_usd < 0):

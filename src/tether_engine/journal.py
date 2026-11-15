@@ -151,6 +151,7 @@ def parse_chain(payload: bytes, allow_incomplete_tail=False, *, expected_sha256=
 
 
 def inspect_run(output: Path) -> dict:
+    from .money import usd
     events = read_chain(output / "journal.jsonl", allow_incomplete_tail=True)
     if events[0]["event"] == "build_reserved":
         stage, progress, failure = None, {}, None
@@ -167,6 +168,7 @@ def inspect_run(output: Path) -> dict:
                 "recovery_action": "inspect only; start any replacement build in a new output directory"}
     attempts, measured, estimated = {}, {"input_tokens": 0, "output_tokens": 0, "cost_usd": 0}, {
         "input_tokens": 0, "output_tokens": 0, "cost_usd": 0}
+    measured_cost = estimated_cost = usd(0)
     for event in events:
         details = event["details"]
         if event["event"] == "dispatch":
@@ -175,10 +177,20 @@ def inspect_run(output: Path) -> dict:
             attempts.pop(details["attempt_id"], None)
             totals = measured if details["basis"] == "adapter_reported" else estimated
             for key in totals:
-                totals[key] += details["usage"][key]
+                if key != 'cost_usd':
+                    totals[key] += details["usage"][key]
+            if totals is measured:
+                measured_cost += usd(details['usage']['cost_usd'])
+                totals['cost_usd'] = float(measured_cost)
+            else:
+                estimated_cost += usd(details['usage']['cost_usd'])
+                totals['cost_usd'] = float(estimated_cost)
     for attempt in attempts.values():
         for key in estimated:
-            estimated[key] += attempt["reserved"][key]
+            if key != 'cost_usd':
+                estimated[key] += attempt["reserved"][key]
+        estimated_cost += usd(attempt['reserved']['cost_usd'])
+    estimated['cost_usd'] = float(estimated_cost)
     return {"schema_version": 2, "last_event": events[-1]["event"], "durable_events": len(events),
             "unresolved_attempts": tuple(attempts), "measured_usage": measured,
             "estimated_upper_usage": estimated, "receipt_present": (output / "receipt.json").is_file(),

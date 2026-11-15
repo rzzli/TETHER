@@ -8,6 +8,7 @@ from .chrono import eligible_artifacts, observation_exclusion
 from .contracts import Case, Category, Claim, EvidenceStatus, Profile, Snapshot
 from .derivations import POLICY as ADMISSION_POLICY
 from .features import build_features
+from .money import usd
 from .provenance import InputGraph, catalog_index
 from .scorer import abstain, score
 from .serde import ContractError, decode, encode, fingerprint
@@ -43,6 +44,7 @@ def check_execution(run, case, snapshot, configuration, claims, trace):
             raise ContractError("Semantic configured specialist status mismatch")
     attempts, accounted, committed = {}, set(), []
     used = measured = estimated = Usage(0, 0, 0)
+    used_cost = measured_cost = estimated_cost = usd(0)
     for event in trace:
         details = event["details"]
         if event["event"] == "dispatch":
@@ -58,7 +60,7 @@ def check_execution(run, case, snapshot, configuration, claims, trace):
                 raise ContractError("Semantic invalid specialist attempt")
             if (len(attempts) >= budget.max_calls or used.input_tokens + quote.input_tokens > budget.max_input_tokens or
                     used.output_tokens + quote.output_tokens > budget.max_output_tokens or
-                    used.cost_usd + quote.cost_usd > budget.max_cost_usd):
+                    used_cost + usd(quote.cost_usd) > usd(budget.max_cost_usd)):
                 raise ContractError("Semantic dispatch exceeded its reservation budget")
             attempts[key] = quote
         elif event["event"] == "attempt_accounted":
@@ -68,14 +70,17 @@ def check_execution(run, case, snapshot, configuration, claims, trace):
             usage = decode(Usage, details["usage"])
             usage.validate()
             if details["basis"] == "adapter_reported":
-                measured = add_usage(measured, usage)
+                measured_cost += usd(usage.cost_usd)
+                measured = replace(add_usage(measured, usage), cost_usd=float(measured_cost))
             elif details["basis"] == "quoted_upper_bound_not_measured":
                 if usage != attempts[key]:
                     raise ContractError("Semantic unmeasured usage differs from reservation")
-                estimated = add_usage(estimated, usage)
+                estimated_cost += usd(usage.cost_usd)
+                estimated = replace(add_usage(estimated, usage), cost_usd=float(estimated_cost))
             else:
                 raise ContractError("Semantic unknown accounting basis")
-            used = add_usage(used, usage)
+            used_cost += usd(usage.cost_usd)
+            used = replace(add_usage(used, usage), cost_usd=float(used_cost))
             accounted.add(key)
         elif event["event"] == "claim_committed":
             committed.append(details["claim"])

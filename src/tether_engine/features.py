@@ -68,7 +68,9 @@ def build_features(claims: tuple[Claim, ...], case: Case, missingness: Mapping |
         if observation.feature_scope != case.hypothesis.key:
             continue
         for name, value in observation.features.items():
-            group = labels[find(observation.observation_id)]
+            # Labels are for display; generated names may collide with explicit
+            # names belonging to entirely unrelated components.
+            group = find(observation.observation_id)
             groups[name][group].append((observation.observation_id, value))
     features = {}
     for name in FEATURE_CATEGORIES:
@@ -76,7 +78,7 @@ def build_features(claims: tuple[Claim, ...], case: Case, missingness: Mapping |
         for group, entries in sorted(groups[name].items()):
             unique = {value for _, value in entries}
             if len(unique) != 1:
-                excluded.append(group)
+                excluded.append(labels[group])
                 continue
             admitted.append(next(iter(unique)))
             observation_ids.extend(item[0] for item in entries)
@@ -85,6 +87,6 @@ def build_features(claims: tuple[Claim, ...], case: Case, missingness: Mapping |
         if any(name in item.features and item.feature_scope != case.hypothesis.key for item in observations):
             reasons.add("outside_applicability")
         features[name] = Feature(mean(admitted) if admitted else None, status, len(admitted),
-                                 tuple(sorted(observation_ids)), tuple(excluded), tuple(sorted(reasons)))
+                                 tuple(sorted(observation_ids)), tuple(sorted(excluded)), tuple(sorted(reasons)))
     return FeatureVector(FEATURE_SCHEMA, "mean_of_unique_dependency_groups_v2", features)
 

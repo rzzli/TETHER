@@ -11,6 +11,7 @@ from .derivations import POLICY as ADMISSION_POLICY
 from .features import FeatureVector, build_features
 from .journal import RunJournal
 from .ledger import EvidenceLedger
+from .money import usd, total_usd
 from .scorer import Prediction, ScorerArtifact, abstain, preflight_scorer, score
 from .serde import ContractError, Frozen, fingerprint, freeze
 
@@ -25,6 +26,7 @@ class Budget(Frozen):
     max_retries: int = 1
 
     def validate(self):
+        usd(self.max_cost_usd)
         if any(type(value) is not int or value < 0 for value in (
                 self.max_calls, self.max_input_tokens, self.max_output_tokens, self.max_retries)):
             raise ContractError("Integer budget bounds must be nonnegative")
@@ -41,7 +43,7 @@ class BackendFailure(RuntimeError):
 
 
 def add_usage(a, b):
-    return Usage(a.input_tokens + b.input_tokens, a.output_tokens + b.output_tokens, a.cost_usd + b.cost_usd)
+    return Usage(a.input_tokens + b.input_tokens, a.output_tokens + b.output_tokens, total_usd(a.cost_usd, b.cost_usd))
 
 
 def over_quote(actual, quote):
@@ -54,6 +56,7 @@ class BudgetMeter:
         budget.validate()
         self.budget, self.calls = budget, 0
         self.used = self.measured = self.estimated = Usage(0, 0, 0)
+        self._used_cost = self._measured_cost = self._estimated_cost = usd(0)
         self.started = time.monotonic()
 
     def can_reserve(self, quote):
@@ -61,17 +64,20 @@ class BudgetMeter:
         return (self.calls < self.budget.max_calls and
                 self.used.input_tokens + quote.input_tokens <= self.budget.max_input_tokens and
                 self.used.output_tokens + quote.output_tokens <= self.budget.max_output_tokens and
-                self.used.cost_usd + quote.cost_usd <= self.budget.max_cost_usd and
+                self._used_cost + usd(quote.cost_usd) <= usd(self.budget.max_cost_usd) and
                 time.monotonic() - self.started < self.budget.max_seconds)
 
     def account(self, usage, measured=True):
         usage.validate()
         self.calls += 1
-        self.used = add_usage(self.used, usage)
+        self._used_cost += usd(usage.cost_usd)
+        self.used = replace(add_usage(self.used, usage), cost_usd=float(self._used_cost))
         if measured:
-            self.measured = add_usage(self.measured, usage)
+            self._measured_cost += usd(usage.cost_usd)
+            self.measured = replace(add_usage(self.measured, usage), cost_usd=float(self._measured_cost))
         else:
-            self.estimated = add_usage(self.estimated, usage)
+            self._estimated_cost += usd(usage.cost_usd)
+            self.estimated = replace(add_usage(self.estimated, usage), cost_usd=float(self._estimated_cost))
 
 
 @dataclass(frozen=True)

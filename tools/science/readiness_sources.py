@@ -185,8 +185,10 @@ def _attempt(journal, output, request, client, index, deadline, budget):
     journal.append('attempt_started', attempt=index, request=request, started_at_utc=started.isoformat())
     response, failure, reason, iterator, seen = None, None, None, None, 0
     fatal = None
+    local_io = True
     try:
         with path.open('xb') as raw:
+            local_io = False
             iterator = iter(client.stream(request, deadline=limit))
             for kind, value in iterator:
                 require(_now().date() == started.date(), 'Source job crossed UTC date R')
@@ -196,14 +198,18 @@ def _attempt(journal, output, request, client, index, deadline, budget):
                     require(response is None and seen == 0 and isinstance(value, dict), 'Invalid headers event')
                     response = {'status': value['status'], 'final_url': value['final_url'],
                                 'headers': transport._headers(value['headers'])}
+                    local_io = True
                     journal.append('attempt_response_headers', attempt=index, **response)
+                    local_io = False
                 else:
                     require(kind == 'body' and response is not None and isinstance(value, bytes), 'Invalid stream event')
                     seen += len(value)
+                    local_io = True
                     room = max(0, min(request['max_response_bytes'] - raw.tell(), budget[0]))
                     retained = value[:room]
                     raw.write(retained); raw.flush(); os.fsync(raw.fileno())
                     budget[0] -= len(retained)
+                    local_io = False
                     if len(retained) != len(value):
                         reason = 'oversize' if raw.tell() >= request['max_response_bytes'] else 'global_byte_cap'
                         raise OSError('Source byte cap')
@@ -220,10 +226,13 @@ def _attempt(journal, output, request, client, index, deadline, budget):
             if length is not None and (not length.isdigit() or int(length) != seen):
                 reason = 'partial_response'
                 raise OSError('Partial response length')
+            local_io = True  # context-manager close is local persistence
     except BaseException as exc:
         failure = type(exc).__name__
-        reason = reason or ('timeout' if isinstance(exc, TimeoutError) else 'access_failed')
-        if isinstance(exc, (KeyboardInterrupt, SystemExit, ContractError)) or not isinstance(exc, (OSError, TimeoutError)):
+        reason = reason or ('local_io_failure' if local_io and isinstance(exc, OSError) else
+                            'timeout' if isinstance(exc, TimeoutError) else 'access_failed')
+        if (local_io or isinstance(exc, (KeyboardInterrupt, SystemExit, ContractError)) or
+                not isinstance(exc, (OSError, TimeoutError))):
             fatal = exc
     finally:
         if iterator is not None and hasattr(iterator, 'close'):

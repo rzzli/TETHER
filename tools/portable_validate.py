@@ -23,6 +23,8 @@ import uuid
 ROOT = Path(__file__).resolve().parents[1]
 TEST_MODULES = (
     "tests.test_framework",
+    "tests.test_p05_correctness",
+    "tests.test_p05_reporting",
     "tests.test_derivation_registry",
     "tests.test_derivation_execution",
     "tests.test_derivation_graph_limits",

@@ -54,12 +54,43 @@ def parse_json(payload: str | bytes) -> Any:
     def bad_constant(value: str) -> None:
         raise ContractError(f"Non-finite JSON number: {value}")
 
+    def finite_float(value):
+        number = float(value)
+        if not math.isfinite(number):
+            bad_constant(value)
+        return number
+
     try:
         if isinstance(payload, bytes):
             payload = payload.decode("utf-8-sig")
-        return json.loads(payload,
-                          object_pairs_hook=_pairs, parse_constant=bad_constant)
-    except (json.JSONDecodeError, UnicodeError) as error:
+        result = json.loads(payload, object_pairs_hook=_pairs,
+                            parse_constant=bad_constant, parse_float=finite_float)
+        # Iterator frames keep auxiliary space proportional to nesting, rather
+        # than adding one pending tuple for every row in a large ledger array.
+        stack = [(iter((result,)), 0)]
+        while stack:
+            iterator, depth = stack[-1]
+            try:
+                value = next(iterator)
+            except StopIteration:
+                stack.pop()
+                continue
+            if isinstance(value, (dict, list)) and depth >= 128:
+                raise ContractError('JSON nesting exceeds depth limit 128')
+            if isinstance(value, str):
+                value.encode('utf-8')
+            elif isinstance(value, dict):
+                for key in value:
+                    key.encode('utf-8')
+                stack.append((iter(value.values()), depth + 1))
+            elif isinstance(value, list):
+                stack.append((iter(value), depth + 1))
+        return result
+    except RecursionError as error:
+        raise ContractError('JSON nesting exceeds depth limit 128') from error
+    except ContractError:
+        raise
+    except (ValueError, UnicodeError) as error:
         raise ContractError(f"Invalid JSON: {error}") from error
 
 

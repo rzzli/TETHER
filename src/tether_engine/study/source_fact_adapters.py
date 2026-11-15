@@ -35,7 +35,7 @@ MAX_LEGACY_REASON_CHARACTERS = 512
 MAX_LEGACY_LIST_ITEMS = 4
 MAX_LEGACY_QUOTE_REFS = 2
 _SHA256 = re.compile(r"[0-9a-f]{64}\Z")
-_POINTER = re.compile(r"(?:/(?:[^~]|~[01])*)*\Z")
+_POINTER = re.compile(r"(?:/(?:[^~/]|~[01])*)*\Z")
 _QUOTE_ID = re.compile(r"Q(?:0|[1-9][0-9]*)\Z")
 
 

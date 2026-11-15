@@ -136,7 +136,9 @@ def analyze(ledger):
     """Analyze an already audited serialized ledger. Performs no I/O."""
     need(type(ledger) is dict and ledger.get("method") == METHOD and
          ledger.get("scientific_validation") == "not_established", "Wrong experiment/scientific scope")
-    need(ledger.get("status") in ("COMPLETED_PENDING_INDEPENDENT_AUDIT", "FAILED_PARTIAL_NOT_QUALIFIED"), "Unknown ledger status")
+    need(ledger.get("status") in ("COMPLETED_PENDING_INDEPENDENT_AUDIT", "FAILED_PARTIAL_NOT_QUALIFIED", "PENDING_TERMINAL_SEAL"), "Unknown ledger status")
+    if ledger['status'] == 'PENDING_TERMINAL_SEAL':
+        need(ledger.get('intended_status') == 'COMPLETED_PENDING_INDEPENDENT_AUDIT', 'Unknown proposed experiment outcome')
     need(ledger.get("planned_output_cells") == 38 and ledger.get("planned_decisions") == 90 and
          ledger.get("native_units") == 12 and ledger.get("independent_studies") is None, "Fixed descriptive denominator changed")
     expected_outputs, expected_decisions = schedule()

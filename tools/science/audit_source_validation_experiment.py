@@ -11,7 +11,6 @@ from copy import deepcopy
 from datetime import datetime, timezone
 from fractions import Fraction
 import hashlib
-import importlib.util
 import json
 import math
 from pathlib import Path
@@ -23,9 +22,9 @@ from types import SimpleNamespace
 
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS = ROOT / "planning/review-assets/preprint-p05-20261031"
-spec = importlib.util.spec_from_file_location("independent_p05_reference_audit", ASSETS / "audit_source_references_v1.py")
-r = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(r)
+sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / 'src'))
+from tools.science.audit_support import references as r
 s, a = r.s, r.a
 from tether_engine.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
 from tether_engine.provenance import InputGraph, catalog_index
@@ -112,7 +111,7 @@ def binding_ok(source):
     if type(loc) is not dict:
         return False
     if loc.get("format") == "json":
-        return set(loc) == {"format", "pointer"} and text(loc["pointer"], 8192, True) and re.fullmatch(r"(?:/(?:[^~]|~[01])*)*", loc["pointer"]) is not None
+        return set(loc) == {"format", "pointer"} and text(loc["pointer"], 8192, True) and re.fullmatch(r"(?:/(?:[^~/]|~[01])*)*", loc["pointer"]) is not None
     return set(loc) == {"format", "row_group", "row"} and loc["format"] == "parquet" and all(type(loc[k]) is int and loc[k] >= 0 for k in ("row_group", "row"))
 
 
@@ -239,8 +238,9 @@ def policy_decision(statuses, schema_status, policy):
     return {"verdict": verdict, "first_failure_stage": failed, "terminal": "unexecuted" if verdict == "no_decision" else "returned", "required_stages": list(required) + (["G4_schema_only"] if policy == "WIRE_ONLY" else [])}
 
 
-def fixture_documents(key):
+def fixture_documents(key, revision='legacy_v1'):
     """Hand-authored byte/truth protocol, independent of fixture producer."""
+    require(revision in ('legacy_v1', 'registered_parent_v2'), 'Unknown fictional fixture revision')
     require(key in SCENARIOS, "Unknown fixed fictional scenario")
     case = {"case_id": "fiction-" + key, "targetId": "ENSG_FICTIONAL", "diseaseId": "EFO_FICTIONAL", "studyLocusId": "locus-fictional", "release_id": "25.09"}
     gwas = {"id": "fictional-evidence", "targetId": case["targetId"], "diseaseId": case["diseaseId"], "studyLocusId": case["studyLocusId"], "studyId": "STUDY_A", "variantId": "VARIANT_A", "datasourceId": "gwas_credible_sets", "datatypeId": "genetic_association", "publicationDate": "2026-01-01", "evidenceDate": "2026-01-01"}
@@ -260,7 +260,8 @@ def fixture_documents(key):
     mapping = {"target": [{"values": {"id": case["targetId"], "approvedSymbol": "FICTIONAL_GENE"}, "locator": {}}], "disease": [{"values": {"id": case["diseaseId"], "name": "Fictional phenotype"}, "locator": {}}], "hgnc": [{"values": {"ensembl_gene_id": case["targetId"], "symbol": "FICTIONAL_GENE", "hgnc_id": "HGNC:FICTIONAL", "status": "Approved"}, "locator": {}}]}
     docs = {"gwas": {"rows": [gwas]}, "credible": {"rows": credible_rows}, "mapping": mapping}
     if key == "F02":
-        docs["forbidden"] = {"invented": "not a real evaluator artifact"}
+        docs["forbidden"] = ({"rows": [gwas]} if revision == 'registered_parent_v2' else
+                             {"invented": "not a real evaluator artifact"})
     return case, docs
 
 
@@ -380,7 +381,7 @@ def proof_documents(nodes, source_bytes, receipt_bytes):
 def fixture_evidence(scenario, packet, source_bytes, receipts, raw, *, fixture_root=None):
     """Derive actual fixture validity from bytes; never read an oracle verdict."""
     key = scenario["scenario_id"]
-    case, blueprint = fixture_documents(key)
+    case, blueprint = fixture_documents(key, scenario.get('fixture_revision', 'legacy_v1'))
     documents = {name: strict_json(payload) for name, payload in source_bytes.items()}
     require(s.same(case, scenario["case"]), "Fixture case differs from frozen invented protocol")
     require(set(documents) == set(blueprint), "Fixture original file inventory differs")
@@ -594,7 +595,8 @@ def audit_actual(args):
     budget = Budget(ledger.get("resources"))
     seal = read_document(run / "seal.json", budget, args.seal_sha256)
     chain = verify_seal(run, seal, budget, terminal="experiment_completed", expected_ledger=args.ledger_sha256)
-    need("qualified_terminal_no_cleanup_failures", ledger["status"] == "COMPLETED_PENDING_INDEPENDENT_AUDIT" and ledger["failure"] is None and seal["status"] == ledger["status"] and seal["expected_ready_sha256"] == args.ready_sha256)
+    intended_status = ledger.get('intended_status') if ledger['status'] == 'PENDING_TERMINAL_SEAL' else ledger['status']
+    need("qualified_terminal_no_cleanup_failures", intended_status == "COMPLETED_PENDING_INDEPENDENT_AUDIT" and ledger["failure"] is None and seal["status"] == intended_status and seal["expected_ready_sha256"] == args.ready_sha256)
     authorization = read_document(run / "authorization.json", budget)
     ready_bytes, plan_bytes = authorization["ready_json"].encode(), authorization["plan_json"].encode()
     ready, plan = strict_json(ready_bytes), strict_json(plan_bytes)

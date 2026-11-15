@@ -26,7 +26,8 @@ import prepare_source_validation_set as stage1
 import prepare_source_validation_inputs as source_inputs
 import build_source_validation_references as reference_builder
 from tether_engine.atomic import publish_bytes
-from tether_engine.contracts import Availability, Profile, Snapshot, SourceNode, TemporalClass
+from tether_engine.contracts import Availability, Derivation, Profile, Snapshot, SourceNode, TemporalClass
+from tether_engine.derivations import registry_entry
 from tether_engine.journal import RunJournal, read_chain
 from tether_engine.provenance import InputGraph, catalog_index
 from tether_engine.serde import ContractError, canonical, decode, encode, fingerprint, freeze, parse_json
@@ -54,9 +55,11 @@ EXTRA_CODE = (
     "tools/science/audit_source_validation_experiment.py",
     "planning/review-assets/preprint-p05-20261031/test_analyze_source_validation_experiment.py",
     "planning/review-assets/preprint-p05-20261031/test_audit_source_validation_experiment.py",
-    "planning/review-assets/preprint-p05-20261031/audit_source_registry_v3.py",
-    "planning/review-assets/preprint-p05-20261031/audit_source_inputs_v1.py",
-    "planning/review-assets/preprint-p05-20261031/audit_source_references_v1.py",
+    "tools/science/audit_support/__init__.py",
+    "tools/science/audit_support/registry.py",
+    "tools/science/audit_support/inputs.py",
+    "tools/science/audit_support/references.py",
+    "tests/test_source_audit_support.py",
 )
 ANALYSIS_CODE = EXTRA_CODE[0]
 TERMINALS = ("returned", "malformed", "failed", "timeout", "interrupted", "unexecuted")
@@ -514,7 +517,9 @@ def author_fictional_fixtures(root):
             "hgnc": [dict(values=dict(ensembl_gene_id=case["targetId"], symbol="FICTIONAL_GENE", hgnc_id="HGNC:FICTIONAL", status="Approved"), locator={})]}
         products = [("gwas", {"rows": [gwas]}), ("credible", {"rows": credible_rows}), ("mapping", mapping)]
         if key == "F02":
-            products.append(("forbidden", {"invented": "not a real evaluator artifact"}))
+            # The transform is otherwise executable. Only the parent's role
+            # should cause this control's G1 rejection.
+            products.append(("forbidden", {"rows": [gwas]}))
         nodes, source_anchors = [], []
         catalog = dict(schema_version=1, datasets=[])
         for name, document in products:
@@ -539,10 +544,17 @@ def author_fictional_fixtures(root):
         packet_nodes = nodes[:3]
         if key == "F02":
             original = nodes[0]
+            parent = nodes[-1]
+            registered = registry_entry()
+            parameters = {'input': parent.source_id, 'pointer': ''}
+            recipe = Derivation(1, 'tether.json_projection', '1', registered['implementation_sha256'],
+                fingerprint(parameters), parameters, {parent.source_id: parent.sha256}, {},
+                'canonical_json.v1', registered['method_available_at'], 'contemporary_method_retrospective')
             nodes[0] = SourceNode(original.source_id, original.dataset_id, original.release_id, original.path,
                 original.sha256, original.role, original.availability, original.temporal_classification, original.source_url,
-                parents=("fiction-forbidden",), computed_at=observed, method_id="fiction-derived", method_version="1",
-                receipt_path=original.receipt_path, receipt_sha256=original.receipt_sha256)
+                parents=(parent.source_id,), computed_at=max(observed, registered['method_available_at']),
+                method_id=recipe.method_id, method_version=recipe.method_version,
+                receipt_path=original.receipt_path, receipt_sha256=original.receipt_sha256, derivation=recipe)
         snapshot = Snapshot(2, "fiction-" + key, Profile.CONTEMPORARY, source_inputs.utc(CUTOFF).date(), False, (), tuple(nodes),
                             str(raw_root), {"scope": "fictional_JSON_only"}, source_inputs.utc(CUTOFF))
         def row(value, source_id, index, family):
@@ -556,6 +568,7 @@ def author_fictional_fixtures(root):
             with (raw_root / "gwas.json").open("ab") as stream:
                 stream.write(b" ")
         scenario = dict(schema_version=1, scenario_id=key, fixture_domain="generic_JSON_core_and_applicable_P05_predicates",
+            fixture_revision='registered_parent_v2',
             case=case, task=packet["neutral_task"], snapshot=encode(snapshot), catalog=catalog,
             original_source_anchors=source_anchors, packet_path="packet.json", fixture_is_native_P05_build=False)
         scenario_raw, packet_raw = canonical(scenario) + b"\n", canonical(packet) + b"\n"
@@ -693,7 +706,7 @@ def evaluate_fictional(scenario, packet, raw, bounds, *, approved_fixture_root):
             need(graph.exclusion(refs, SimpleNamespace(cutoff=source_inputs.utc(CUTOFF))) is None, "Fictional source graph after cutoff")
             paths = [graph.path(n) for n in snapshot.sources] + [checked_path(raw_root, n.receipt_path) for n in snapshot.sources if n.receipt_path]
             with stable_files(paths, deadline=bounds.deadline):
-                proofs = graph.verify(refs, {})
+                proofs = graph.verify(refs, {}, case=SimpleNamespace(cutoff=source_inputs.utc(CUTOFF)))
             bounds.logical_completed_hash_bytes += sum(p.stat().st_size for p in paths)
             return proofs
         stages["G1"], _ = guard_result(provenance)
@@ -900,7 +913,12 @@ def finalize_ledger(output, journal, ledger, *, expected_ready_sha256=None):
     def failed(where, error):
         errors.append(dict(stage=where, error_class=type(error).__name__, reason=str(error)[:200]))
     try:
-        raw = canonical(ledger) + b"\n"
+        # Finalization still has journal/close/seal failure points. The immutable
+        # ledger records an intended outcome; only a bound terminal seal can
+        # establish success. Never leave a standalone PASS after a later fault.
+        persisted = ledger if ledger.get('failure') else dict(
+            ledger, status='PENDING_TERMINAL_SEAL', intended_status=ledger['status'])
+        raw = canonical(persisted) + b"\n"
         need(len(raw) <= 16 * 1024**2, "Terminal metadata reserve exceeded")
     except BaseException as error:
         failed("terminal_full_ledger_serialization", error)
