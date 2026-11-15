@@ -70,14 +70,19 @@ MAX_NORMALIZED_JSON_BYTES = 64 * 1024 * 1024
 MAX_LEDGER_JSON_BYTES = 256 * 1024 * 1024
 
 
-def _read_bounded_json(path: Path, maximum: int, message: str) -> Any:
+def read_bounded_bytes(path: Path, maximum: int, message: str) -> bytes:
+    """Bound both the initial size and bytes consumed if a file grows."""
     if path.stat().st_size > maximum:
         raise ContractError(message)
     with path.open("rb") as stream:
         payload = stream.read(maximum + 1)
     if len(payload) > maximum:
         raise ContractError(message)
-    return parse_json(payload)
+    return payload
+
+
+def _read_bounded_json(path: Path, maximum: int, message: str) -> Any:
+    return parse_json(read_bounded_bytes(path, maximum, message))
 
 
 def read_json(path: Path) -> Any:
@@ -213,10 +218,20 @@ def fingerprint(value: Any) -> str:
     return hashlib.sha256(canonical(value)).hexdigest()
 
 
-def sha256_file(path: Path) -> str:
+def sha256_file(path: Path, *, max_bytes: int | None = None) -> str:
+    if max_bytes is not None and (type(max_bytes) is not int or max_bytes < 0):
+        raise ContractError('Invalid file hash byte limit')
     digest = hashlib.sha256()
+    consumed = 0
     with path.open("rb") as stream:
-        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+        while True:
+            limit = 1024 * 1024 if max_bytes is None else min(1024 * 1024, max_bytes - consumed + 1)
+            chunk = stream.read(limit)
+            if not chunk:
+                break
+            consumed += len(chunk)
+            if max_bytes is not None and consumed > max_bytes:
+                raise ContractError('File exceeds hash byte limit')
             digest.update(chunk)
     return digest.hexdigest()
 

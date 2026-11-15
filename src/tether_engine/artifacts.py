@@ -14,13 +14,14 @@ from .atomic import publish_bytes
 from .verification_policy import normalize_anchor, require_semantic_policy
 from .chrono import EvidenceStore, admit_snapshot, required_source_proofs
 from .scorer import ScorerArtifact
-from .serde import (ContractError, MAX_LEDGER_JSON_BYTES, canonical, decode, encode, fingerprint,
+from .serde import (ContractError, MAX_LEDGER_JSON_BYTES, MAX_NORMALIZED_JSON_BYTES,
+                    canonical, decode, encode, fingerprint, parse_json, read_bounded_bytes,
                     read_json, read_ledger_json, safe_child, sha256_file, write_json)
 from .contracts import Case, Category, Claim, Snapshot
 from .features import FeatureVector
 from .scorer import Prediction
 from .semantics import check_execution, check_semantics
-from .journal import RunJournal, read_chain
+from .journal import MAX_JOURNAL_BYTES, RunJournal, read_chain
 from .workflow import RunResult
 from .rendering import (count, json_code_span, mapping, markdown_code,
                         markdown_quote, markdown_text, number, sequence)
@@ -316,10 +317,15 @@ def write_run(output: Path, result: RunResult, store: EvidenceStore,
     write_json(output / "features.json", result.features)
     write_json(output / "prediction.json", result.prediction)
     trace_bytes = b"".join(canonical(event) + b"\n" for event in result.trace)
+    if len(trace_bytes) > MAX_JOURNAL_BYTES:
+        raise ContractError('Journal exceeds byte limit')
     publish_bytes(output / "trace.jsonl", trace_bytes)
     if journal is None:
         publish_bytes(output / "journal.jsonl", trace_bytes)
-    publish_bytes(output / "dossier.md", rendered_dossier.encode('utf-8'))
+    dossier_bytes = rendered_dossier.encode('utf-8')
+    if len(dossier_bytes) > MAX_LEDGER_JSON_BYTES:
+        raise ContractError('Dossier exceeds the 256 MiB byte limit')
+    publish_bytes(output / "dossier.md", dossier_bytes)
     code_root = Path(__file__).parent
     receipt = {"schema_version": 2, "software_version": __version__, "admission_policy": ADMISSION_POLICY,
                "input_fingerprint": fingerprint(inputs),
@@ -347,9 +353,11 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
                verify_sources: bool = True, *, allow_legacy: bool = False) -> dict:
     expected_receipt_sha256 = normalize_anchor(expected_receipt_sha256)
     receipt_path = output / "receipt.json"
-    if expected_receipt_sha256 is not None and sha256_file(receipt_path) != expected_receipt_sha256:
+    receipt_bytes = read_bounded_bytes(receipt_path, MAX_NORMALIZED_JSON_BYTES, 'Receipt exceeds byte limit')
+    receipt_digest = hashlib.sha256(receipt_bytes).hexdigest()
+    if expected_receipt_sha256 is not None and receipt_digest != expected_receipt_sha256:
         raise ContractError("Externally anchored receipt hash mismatch")
-    receipt = read_json(receipt_path)
+    receipt = parse_json(receipt_bytes)
     policy = receipt_policy(receipt)
     require_semantic_policy(policy, allow_legacy)
     legacy = policy != "current"
@@ -359,21 +367,26 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
         raise ContractError("Invalid run receipt or incomplete output set")
     for relative, expected in receipt["outputs"].items():
         path = safe_child(output, relative)
-        if not path.is_file() or sha256_file(path) != expected:
+        limit = MAX_LEDGER_JSON_BYTES if relative in ('ledger.json', 'dossier.md') else MAX_NORMALIZED_JSON_BYTES
+        if not path.is_file():
+            raise ContractError(f"Run output integrity failure: {relative}")
+        if path.stat().st_size > limit:
+            raise ContractError(f'Run output exceeds byte limit: {relative}')
+        if sha256_file(path, max_bytes=limit) != expected:
             raise ContractError(f"Run output integrity failure: {relative}")
     auxiliary = receipt.get("auxiliary_outputs", {})
     if not isinstance(auxiliary, dict) or set(auxiliary) - {"request.json", "backend-execution.json"}:
         raise ContractError("Invalid auxiliary output inventory")
     for relative, expected in auxiliary.items():
         path = safe_child(output, relative)
-        if not path.is_file() or sha256_file(path) != expected:
+        if not path.is_file() or sha256_file(path, max_bytes=MAX_NORMALIZED_JSON_BYTES) != expected:
             raise ContractError(f"Run auxiliary output integrity failure: {relative}")
     inputs = read_json(output / "inputs.json")
     if fingerprint(inputs) != receipt["input_fingerprint"]:
         raise ContractError("Input fingerprint mismatch")
-    trace = read_chain(output / "trace.jsonl")
+    trace = read_chain(output / "trace.jsonl", expected_sha256=receipt['outputs']['trace.jsonl'])
     count = len(trace)
-    if not v1 and (output / "journal.jsonl").read_bytes() != (output / "trace.jsonl").read_bytes():
+    if not v1 and receipt['outputs']['journal.jsonl'] != receipt['outputs']['trace.jsonl']:
         raise ContractError("Semantic durable journal/trace mismatch")
     if verify_sources and legacy:
         if not isinstance(receipt.get("sources"), list):
@@ -443,7 +456,9 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
                         inputs["snapshot_base"], trace, verify_derivations=verify_sources)
         from .dossier_verification import check_dossier
         check_dossier(run, inputs, ledger["claims"], read_json(output / "features.json"),
-                      read_json(output / "prediction.json"), trace, (output / "dossier.md").read_bytes())
+                      read_json(output / "prediction.json"), trace,
+                      read_bounded_bytes(output / 'dossier.md', MAX_LEDGER_JSON_BYTES,
+                                         'Dossier exceeds the 256 MiB byte limit'))
         if run['backend_id'] == 'recorded-selection-replay-v1':
             from .replay_validation import verify_replay_archive
             replay_binding = verify_replay_archive(case, inputs['configuration'], trace, restored)
@@ -459,7 +474,7 @@ def verify_run(output: Path, expected_receipt_sha256: str | None = None,
             "byte_integrity": "verified",
             "outputs": len(LEGACY_RUN_FILES if v1 else RUN_FILES),
             "source_artifacts_checked": len(receipt["sources"]) if verify_sources else 0,
-            "trace_events": count, "receipt_sha256": sha256_file(receipt_path),
+            "trace_events": count, "receipt_sha256": receipt_digest,
             "external_anchor_checked": expected_receipt_sha256 is not None,
             "receipt_anchor_checked": expected_receipt_sha256 is not None,
             "anchor_scope": "caller_receipt" if expected_receipt_sha256 is not None else "none",

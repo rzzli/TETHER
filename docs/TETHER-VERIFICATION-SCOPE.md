@@ -39,7 +39,7 @@ results, including known gaps awaiting correction. It does not upgrade old runs.
 | Later or evaluator-only information | Shared artifact/source information gates, UTC/calendar bounds, publication precision, lineage and catalog roles | Declared dates and complete lineage must be truthful. Checks do not prove earliest public availability; unresolved publication timing stays distinct from known future information. |
 | Hostile source text or model output | Typed selection parsing, source membership, ledger fingerprint and request binding | These controls constrain accepted records, not arbitrary model reasoning. Generated-text entailment and semantic prompt-injection robustness are not qualified. |
 | Exhausted budget, timeout or interruption | Workflow budget, attempt journal, wrapper supervision and immutable engine receipt boundary | Durable attempts reveal uncertain work; they cannot prove unreported billing or guarantee a terminal event after hard kill/storage failure. Supporting study-driver terminal paths still need qualification. |
-| Malicious filesystem replacement | Bounded wrapper reads and file identity/path checks | The verifier trusts the operating system and approved original sources. Native read limits/source-root handling and supported-platform behavior need further qualification. |
+| Malicious filesystem replacement | Bounded native/wrapper output reads and wrapper file identity/path checks | The verifier trusts the operating system and approved original sources. Native source-root handling and supported-platform behavior need further qualification. |
 | Invalid scientific inference | Source replay plus separately scoped benchmark/outcome evaluation | Integrity, signatures, timestamps and checker agreement do not establish causal biology, clinical success or model usefulness. |
 
 Execution completeness, byte integrity, semantic consistency, source binding,
@@ -141,6 +141,16 @@ Wrapper metadata and journal reads are capped at 64 MiB; dossiers at 256 MiB. Bo
 reads reject links, reparse points and nonregular files and check file identity.
 These controls do not guarantee exclusive ownership of external files or survive
 all host compromise, forced termination, filesystem failure or unreported billing.
+
+Native run verification now caps receipt/metadata/journal/trace outputs at 64 MiB
+and ledger/dossier outputs at 256 MiB. Hashing also stops at the applicable output
+limit if a file grows; trace parsing checks the hash of the bytes it consumes.
+Journal appends cannot exceed 64 MiB or rewrite the last durable prefix when the
+cap is reached. A full journal may have no room for a failure event: a missing
+receipt and the retained last event must be treated as incomplete execution.
+These byte limits do not establish filesystem containment or a hard peak-memory
+bound for decoded Python objects. Original source-file hashing has its separate
+source policy and is not restricted to the normalized-output size cap.
 
 Preserve command/version, `source_binding`, receipt-anchor status and the relevant
 verification fields when reporting a result. A single `semantic_consistency` flag

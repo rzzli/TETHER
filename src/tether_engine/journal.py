@@ -1,10 +1,14 @@
 """Exclusive run reservation and fsynced hash-chained execution records."""
 from __future__ import annotations
 import os
+import hashlib
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
-from .serde import ContractError, canonical, fingerprint, freeze, parse_json
+from .serde import ContractError, canonical, fingerprint, freeze, parse_json, read_bounded_bytes
+
+
+MAX_JOURNAL_BYTES = 64 * 1024 * 1024
 
 
 class RunJournal:
@@ -52,9 +56,11 @@ class RunJournal:
         record = {"sequence": len(self._events), "event": event, "details": details,
                   "previous_sha256": self._events[-1]["sha256"] if self._events else None}
         record["sha256"] = fingerprint(record)
+        payload = memoryview(canonical(record) + b"\n")
+        if self._durable_size + len(payload) > MAX_JOURNAL_BYTES:
+            raise ContractError('Journal exceeds byte limit')
         self._stream.seek(self._durable_size)
         self._stream.truncate(self._durable_size)
-        payload = memoryview(canonical(record) + b"\n")
         while payload:
             written = self._stream.write(payload)
             if not written:
@@ -80,9 +86,11 @@ class RunJournal:
         self._stream.close()
 
 
-def read_chain(path: Path, allow_incomplete_tail=False):
+def read_chain(path: Path, allow_incomplete_tail=False, *, expected_sha256=None):
     events, previous = [], None
-    payload = path.read_bytes()
+    payload = read_bounded_bytes(path, MAX_JOURNAL_BYTES, 'Journal exceeds byte limit')
+    if expected_sha256 is not None and hashlib.sha256(payload).hexdigest() != expected_sha256:
+        raise ContractError('Journal hash differs from expected bytes')
     lines = payload.splitlines()
     for index, line in enumerate(lines):
         if allow_incomplete_tail and index == len(lines) - 1 and not payload.endswith(b"\n"):

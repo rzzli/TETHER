@@ -30,6 +30,7 @@ TEST_MODULES = (
     "tests.test_store_temporal_hardening",
     "tests.test_temporal_clock",
     "tests.test_run_sealing",
+    "tests.test_journal_read_bounds",
     "tests.test_evaluation_population",
     "tests.test_evaluation_binding",
     "tests.test_evaluation_cli",

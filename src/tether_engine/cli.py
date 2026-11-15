@@ -186,7 +186,7 @@ def main(argv: list[str] | None = None) -> int:
         if journal:
             try:
                 journal.fail(error, stage)
-            except OSError:
+            except (OSError, ContractError):
                 pass
         print("tether-engine: interrupted; inspect the durable journal before retrying", file=sys.stderr)
         return 130
@@ -194,7 +194,7 @@ def main(argv: list[str] | None = None) -> int:
         if journal:
             try:
                 journal.fail(error, stage)
-            except OSError:
+            except (OSError, ContractError):
                 pass
         print(f"tether-engine: {error}", file=sys.stderr)
         return 2
