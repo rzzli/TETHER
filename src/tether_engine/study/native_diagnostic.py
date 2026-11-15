@@ -785,6 +785,19 @@ def execute(plan_path, expected_sha256, approved_roots):
     return pin(output / "terminal-seal.json")
 
 
+def _execution_status(report):
+    """Separate a mechanically valid terminal record from successful execution."""
+    if report['error_class'] == 'KeyboardInterrupt':
+        return 'interrupted'
+    statuses = [cell['status'] for cell in report['cells']]
+    if report['error_class'] is not None or 'failed' in statuses:
+        return 'failed'
+    if report['status'] != 'technical_terminal_pending_human_review' or 'undispatched' in statuses:
+        return 'incomplete'
+    return ('completed' if all(status == 'contract_verified_not_scientific_validation'
+                               for status in statuses) else 'failed')
+
+
 def verify(output, expected_sha256, approved_roots):
     output = Path(output).resolve()
     seal_proof = pin(output / "terminal-seal.json")
@@ -952,6 +965,10 @@ def verify(output, expected_sha256, approved_roots):
     return freeze(
         dict(
             status="verified_r07_technical_terminal",
+            execution_status=_execution_status(report),
+            all_scheduled_cells_terminal=all(cell['status'] != 'undispatched' for cell in report['cells']),
+            successful_cells=sum(cell['status'] == 'contract_verified_not_scientific_validation'
+                                 for cell in report['cells']),
             cell_dispatch_reservations=calls,
             planned_cells=6,
             scientific_acceptance="not_established",
@@ -986,11 +1003,16 @@ def main():
             port=args.port,
         )
     elif args.command == "execute":
-        result = execute(args.path, args.sha256, args.approved_root)
+        seal = execute(args.path, args.sha256, args.approved_root)
+        verified = verify(Path(seal['path']).parent, seal['sha256'], args.approved_root)
+        result = dict(seal, **verified)
     else:
         result = verify(args.path, args.sha256, args.approved_root)
     print(json.dumps(encode(result), indent=2))
+    if args.command == 'execute':
+        return 0 if result['execution_status'] == 'completed' else 130 if result['execution_status'] == 'interrupted' else 3
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

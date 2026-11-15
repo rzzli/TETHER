@@ -152,6 +152,14 @@ These byte limits do not establish filesystem containment or a hard peak-memory
 bound for decoded Python objects. Original source-file hashing has its separate
 source policy and is not restricted to the normalized-output size cap.
 
+The explicitly invoked legacy native diagnostic reports `execution_status`,
+`all_scheduled_cells_terminal` and `successful_cells` separately from verification
+of its terminal record. Its execute command returns 3 for failed/incomplete
+execution and 130 for interruption. Verification of a valid failure record can
+still return success as a verification operation; its execution status remains
+failed. The original frozen report's human-review field is historical metadata,
+not a new expert-recruitment prerequisite or scientific acceptance.
+
 Preserve command/version, `source_binding`, receipt-anchor status and the relevant
 verification fields when reporting a result. A single `semantic_consistency` flag
 is not a complete description of the checks performed.

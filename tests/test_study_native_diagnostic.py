@@ -165,10 +165,27 @@ class NativeDiagnosticTests(unittest.TestCase):
             seal = diagnostic.execute(proof["path"], proof["sha256"], [self.root])
         result = diagnostic.verify(self.root / "run", seal["sha256"], [self.root])
         self.assertEqual(result["cell_dispatch_reservations"], 0)
+        self.assertEqual(result['execution_status'], 'failed')
+        self.assertFalse(result['all_scheduled_cells_terminal'])
         report = json.loads((self.root / "run/execution-report.json").read_bytes())
         self.assertEqual(report["status"], "incomplete_execution")
         self.assertEqual(len(report["cells"]), 6)
         self.assertTrue(all(c["status"] == "undispatched" for c in report["cells"]))
+
+    def test_execute_cli_reports_startup_failure_and_interrupt_with_nonzero_exit(self):
+        import io
+        for error, expected, execution in ((RuntimeError('fixture startup failed'), 3, 'failed'),
+                                            (KeyboardInterrupt(), 130, 'interrupted')):
+            with self.subTest(error=type(error).__name__):
+                proof = self.prepare(type(error).__name__)
+                stdout = io.StringIO()
+                with patch.object(diagnostic, 'OwnedServer', side_effect=error), \
+                        patch('sys.stdout', stdout), \
+                        patch('sys.argv', ['native-diagnostic', 'execute', '--path', proof['path'],
+                                           '--sha256', proof['sha256'], '--approved-root', str(self.root)]):
+                    code = diagnostic.main()
+                self.assertEqual(code, expected)
+                self.assertEqual(json.loads(stdout.getvalue())['execution_status'], execution)
 
     def test_execution_never_reuses_reserved_output_or_wrong_anchor(self):
         proof = self.prepare()
@@ -324,6 +341,9 @@ class NativeDiagnosticTests(unittest.TestCase):
         connections, verified, report = self.run_fake_native()
         self.assertEqual(len(connections), 6)
         self.assertEqual(verified["cell_dispatch_reservations"], 6)
+        self.assertEqual(verified['execution_status'], 'completed')
+        self.assertTrue(verified['all_scheduled_cells_terminal'])
+        self.assertEqual(verified['successful_cells'], 6)
         self.assertTrue(report["server"]["server_stopped"])
         self.assertTrue(
             all(
@@ -336,6 +356,9 @@ class NativeDiagnosticTests(unittest.TestCase):
         connections, verified, report = self.run_fake_native(first_incomplete=True)
         self.assertEqual(len(connections), 6)
         self.assertEqual(verified["cell_dispatch_reservations"], 6)
+        self.assertEqual(verified['execution_status'], 'failed')
+        self.assertTrue(verified['all_scheduled_cells_terminal'])
+        self.assertEqual(verified['successful_cells'], 5)
         self.assertEqual(report["cells"][0]["status"], "failed")
         self.assertEqual(
             report["cells"][0]["inspection"]["measured_usage"]["input_tokens"], 0
@@ -355,6 +378,7 @@ class NativeDiagnosticTests(unittest.TestCase):
         connections, verified, report = self.run_fake_native(first_malformed=True)
         self.assertEqual(len(connections), 6)
         self.assertEqual(verified["cell_dispatch_reservations"], 6)
+        self.assertEqual(verified['execution_status'], 'failed')
         self.assertEqual(report["cells"][0]["status"], "failed")
         self.assertEqual(
             report["cells"][0]["inspection"]["measured_usage"]["input_tokens"], 100
