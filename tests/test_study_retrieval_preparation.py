@@ -312,6 +312,19 @@ class RetrievalPublicationTests(unittest.TestCase):
             self.assertTrue((root / "failure.json").exists())
 
 
+class RetrievalSealFaultTests(unittest.TestCase):
+    def test_retrieval_seal_failure_and_interruption(self):
+        from tests.study_seal_helpers import assert_seal_fault
+        with tempfile.TemporaryDirectory() as tmp:
+            authority = rp.fixture_authority()
+            anchor = rp.authority_anchor(authority)
+            for after in (False, True):
+                output = Path(tmp) / ('seal-fault-' + str(after))
+                assert_seal_fault(self, output, lambda: rp.prepare_retrieval(
+                    authority, anchor, rp.policy_for('id_order_v1'), output,
+                    deadline=time.monotonic()+299), after=after)
+
+
 class RealParentRecoveryUnitTests(unittest.TestCase):
     """Invented files and explicitly mocked trusted source gate, never real admission."""
 

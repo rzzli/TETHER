@@ -28,10 +28,12 @@ def ensure_directory(path: Path) -> None:
         Path(path).mkdir(parents=True, exist_ok=True)
 
 
-def publish_bytes(path: Path, payload: bytes, *, prefix='.publishing-') -> None:
+def publish_bytes(path: Path, payload: bytes, *, prefix='.publishing-', before_publish=None) -> None:
     """Publish exactly payload once; preserve existing destinations and clean staging."""
     if not isinstance(payload, bytes):
         raise TypeError('Atomic publication requires immutable bytes')
+    if before_publish is not None and not callable(before_publish):
+        raise TypeError('Publication guard must be callable')
     path = Path(path)
     ensure_directory(path.parent)
     descriptor, name = tempfile.mkstemp(prefix=prefix, dir=path.parent)
@@ -41,6 +43,8 @@ def publish_bytes(path: Path, payload: bytes, *, prefix='.publishing-') -> None:
             stream.write(payload)
             stream.flush()
             os.fsync(stream.fileno())
+        if before_publish is not None:
+            before_publish()
         if os.name == 'nt':
             os.rename(temporary, path)
         else:

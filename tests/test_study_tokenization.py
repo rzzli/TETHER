@@ -17,6 +17,7 @@ from tether_engine.study import tokenization as tok
 from tether_engine.study import stable_read
 from tether_engine.study.stable_read import checked_path, deadline_check, hash_file, stable_files
 from tether_engine.study.tokenization import parse_token_trace, prepare_tokenizer_spec
+from tests.study_seal_helpers import assert_seal_fault
 
 TEMP_ROOT = Path(__file__).resolve().parents[1] / 'data/cache'
 
@@ -247,6 +248,17 @@ class TokenizationArtifactTests(unittest.TestCase):
         self.assertEqual(child.call_count,1)
         self.assertEqual(json.loads((target/'failure.json').read_bytes())['status'],'interrupted')
         self.assertFalse((target/'receipt.json').exists())
+
+    def test_seal_failure_and_post_seal_interruption_boundaries(self):
+        child = tok._run_child
+        for after in (False, True):
+            target = self.root / ('seal-fault-' + str(after))
+            with patch.object(tok, '_run_child', side_effect=lambda *args: child(*args, process_factory=FakeChild)):
+                anchor = assert_seal_fault(self, target, lambda: tok.tokenize_prompt(
+                    self.prompt, self.spec, time.monotonic()+60, target), after=after)
+            if after:
+                tok.verify_tokenization(target, anchor, hashlib.sha256(self.prompt.encode()).hexdigest(),
+                                        fingerprint(self.spec))
 
 
 class ChildBoundaryTests(unittest.TestCase):

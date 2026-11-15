@@ -8,6 +8,8 @@ from pathlib import Path
 from unittest.mock import patch
 
 from tether_engine.agents import Usage
+from tether_engine import atomic
+from tether_engine.journal import read_chain
 from tether_engine.serde import ContractError, canonical, encode
 from tether_engine.study.__main__ import fixture, smoke
 from tether_engine.study.diagnostic import (
@@ -209,17 +211,26 @@ class StudySessionTests(unittest.TestCase):
     def test_final_receipt_write_failure_never_reports_sealed(self):
         with self.assertRaises(OSError), self.session() as cell:
             self.call(cell)
-            original = cell._put
-
-            def put(name, value):
-                if name == "receipt.json":
-                    raise OSError("receipt write fixture")
-                return original(name, value)
-
-            with patch.object(cell, "_put", put):
+            with patch.object(cell.journal, 'seal', side_effect=OSError('receipt write fixture')):
                 cell.finish()
         self.assertFalse(cell.sealed)
         self.assertEqual(inspect_study(cell.output)["status"], "failed_or_incomplete")
+        self.assertEqual(read_chain(cell.output / 'journal.jsonl')[-1]['event'], 'build_failed')
+
+    def test_post_publication_interruption_preserves_verifiable_seal(self):
+        publish = atomic.publish_bytes
+        def interrupted(path, payload, **kwargs):
+            publish(path, payload, **kwargs)
+            if path.name == 'receipt.json':
+                raise KeyboardInterrupt('after seal visibility')
+        with self.assertRaises(KeyboardInterrupt), self.session() as cell:
+            self.call(cell)
+            with patch.object(atomic, 'publish_bytes', side_effect=interrupted):
+                cell.finish()
+        self.assertTrue(cell.sealed)
+        self.assertFalse((cell.output / 'failure.json').exists())
+        self.assertEqual(read_chain(cell.output / 'journal.jsonl')[-1]['event'], 'study_completed')
+        self.verify(cell.output)
 
     def test_smoke_retains_both_fixture_outcomes(self):
         report = smoke(self.root / "smoke")

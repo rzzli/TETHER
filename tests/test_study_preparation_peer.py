@@ -20,11 +20,22 @@ from tether_engine.study.diagnostic_codec import bind_question
 from tether_engine.study.stable_read import read_file
 from tests import test_study_source_preparation as source_fixtures
 from tests import test_study_tokenization as token_fixtures
+from tests.study_seal_helpers import assert_seal_fault
 
 TEMP = Path(__file__).resolve().parents[1] / "data/cache"
 
 
 class SourcePeerTests(unittest.TestCase):
+    def test_source_seal_failures_keep_journal_until_commit(self):
+        with tempfile.TemporaryDirectory(dir=TEMP) as tmp:
+            root = Path(tmp)
+            authority, anchor, result = source_fixtures.PublicationTests().fixture(root)
+            for after in (False, True):
+                output = root / ('seal-fault-' + str(after))
+                with patch.object(source, '_build', return_value=result):
+                    assert_seal_fault(self, output, lambda: source.prepare_source_request(
+                        authority, anchor, {}, output, deadline=time.monotonic()+299), after=after)
+
     def test_deadline_exhausted_during_sealing_cannot_publish_success(self):
         with tempfile.TemporaryDirectory(dir=TEMP) as tmp:
             root = Path(tmp)

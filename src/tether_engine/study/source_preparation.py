@@ -446,7 +446,6 @@ def prepare_source_request(
         }
         _write(output, "summary.json", summary)
         journal.append("source_preparation_complete", **encode(summary))
-        journal.close()
         _verify_package(proof)
         deadline_check(deadline)
         files = {}
@@ -455,26 +454,22 @@ def prepare_source_request(
             if member.is_file():
                 _, files[member.name] = _bounded_output(output, member.name, deadline)
         deadline_check(deadline)
-        _write(
-            output,
-            "receipt.json",
-            dict(
-                schema_version=1,
-                kind="source_preparation",
-                authority_sha256=authority_sha256,
-                files=files,
-            ),
+        receipt = dict(
+            schema_version=1,
+            kind="source_preparation",
+            authority_sha256=authority_sha256,
+            files=files,
         )
-        deadline_check(deadline)
+        anchor = journal.seal(canonical(receipt), deadline=deadline)
         return freeze(
             dict(
                 summary,
-                receipt_sha256=_bounded_output(output, "receipt.json", deadline)[1][
-                    "sha256"
-                ],
+                receipt_sha256=anchor,
             )
         )
     except BaseException as error:
+        if journal.sealed:
+            raise
         try:
             journal.fail(error, "source_preparation")
         except BaseException as secondary:

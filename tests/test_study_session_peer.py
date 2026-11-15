@@ -296,7 +296,7 @@ class StudySessionPeerTests(unittest.TestCase):
         self.assertEqual(report["estimated_usage"], encode(Usage(0, 0, 0.0)))
         self.assertFalse((cell.output / "receipt.json").exists())
 
-    def test_close_failure_prevents_success_receipt_and_preserves_primary(self):
+    def test_post_seal_close_failure_preserves_receipt_and_primary(self):
         cell = self.cell()
         close = cell.journal.close
         error = OSError("close failed")
@@ -311,8 +311,9 @@ class StudySessionPeerTests(unittest.TestCase):
                 with patch.object(cell.journal, "close", side_effect=broken):
                     cell.finish()
         self.assertIs(caught.exception, error)
-        self.assertFalse((cell.output / "receipt.json").exists())
-        self.assertTrue((cell.output / "failure.json").exists())
+        self.assertTrue((cell.output / "receipt.json").exists())
+        self.assertFalse((cell.output / "failure.json").exists())
+        self.assertTrue(cell.sealed)
 
     def test_second_call_rejected_after_success_without_invoking_second_backend(self):
         first, second = (

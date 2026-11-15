@@ -499,7 +499,6 @@ def tokenize_prompt(prompt, spec, deadline, output, *, payload_sha256=None):
         )
         publish_bytes(root / "quote.json", canonical(quote))
         journal.append("build_stage", stage="complete", status="passed")
-        journal.close()
         deadline_check(deadline)
         receipt = dict(
             schema_version=1,
@@ -511,12 +510,13 @@ def tokenize_prompt(prompt, spec, deadline, output, *, payload_sha256=None):
         )
         receipt_raw = canonical(receipt)
         deadline_check(deadline)
-        publish_bytes(root / "receipt.json", receipt_raw)
-        deadline_check(deadline)
+        anchor = journal.seal(receipt_raw, deadline=deadline)
         return freeze(
-            dict(receipt_sha256=hashlib.sha256(receipt_raw).hexdigest(), quote=quote)
+            dict(receipt_sha256=anchor, quote=quote)
         )
     except BaseException as error:
+        if journal.sealed:
+            raise
         try:
             journal.fail(error, stage)
         except BaseException as secondary:

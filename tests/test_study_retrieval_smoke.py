@@ -13,6 +13,7 @@ from tether_engine.serde import ContractError, canonical, encode
 from tether_engine.study import retrieval_smoke as module
 from tether_engine.study.proofs import capture_file
 from tether_engine.study.retrieval_smoke import smoke, verify, RetrievalRecordedVerifier
+from tests.study_seal_helpers import assert_seal_fault
 
 
 TEMP = Path(__file__).resolve().parents[1] / 'data/cache'
@@ -41,6 +42,13 @@ class RetrievalSmokeTests(unittest.TestCase):
             verify(self.root,'0'*64)
         with self.assertRaises(FileExistsError):
             smoke(self.root)
+
+    def test_parent_seal_failure_and_interruption(self):
+        for after in (False, True):
+            output = self.root.parent / ('seal-fault-' + str(after))
+            anchor = assert_seal_fault(self, output, lambda: smoke(output), after=after)
+            if after:
+                verify(output, anchor)
 
     def test_public_stage_cannot_substitute_request_or_policy(self):
         verifier = RetrievalRecordedVerifier(self.root,self.result['run_id'])

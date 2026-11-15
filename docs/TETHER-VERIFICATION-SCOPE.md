@@ -164,6 +164,15 @@ not rejected; a shorter budget is never extended. Child execution retains its
 separate 30-second cap within that deadline. This does not change source/retrieval
 preparation's separate contracts or qualify native model token counts scientifically.
 
+Study-cell, source/retrieval preparation, tokenizer and recorded-comparison drivers
+keep their journals open through seal staging. A staging/hash/sync failure can
+therefore append a terminal failure; a successfully published receipt prevents
+further journal or failure-marker mutation. The final deadline gate runs after
+staging is synced, immediately before the atomic publication call. This cannot
+preempt that OS call or certify the wall time of later presentation/cleanup.
+An exception after publication leaves the seal available for explicit verification;
+it does not authorize withdrawal, rewriting or automatic redispatch.
+
 Wrapper metadata and journal reads are capped at 64 MiB; dossiers at 256 MiB. Bounded file
 reads reject links, reparse points and nonregular files and check file identity.
 These controls do not guarantee exclusive ownership of external files or survive

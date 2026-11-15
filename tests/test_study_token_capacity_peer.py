@@ -7,6 +7,8 @@ import unittest
 from unittest.mock import patch
 
 from tether_engine.agents import Usage
+from tether_engine import atomic
+from tether_engine.journal import read_chain
 from tether_engine.serde import ContractError
 from tether_engine.study import session as study
 from tether_engine.study import tokenization as tok
@@ -165,26 +167,30 @@ class TokenCapacityPeerTests(unittest.TestCase):
         self.assertTrue((cell.output / "failure.json").exists())
         self.assertTrue(self.backend.used)
 
-    def test_expiry_during_receipt_publication_withdraws_only_own_receipt(self):
+    def test_expiry_during_receipt_staging_prevents_publication(self):
         cell = self._accepted()
         now = [time.monotonic()]
-        original = study._write
+        original = atomic.publish_bytes
 
-        def slow_write(root, name, value):
-            result = original(root, name, value)
-            if name == "receipt.json":
-                now[0] = cell.started + cell.budget.max_seconds + 1
-            return result
+        def slow_write(path, payload, **kwargs):
+            if path.name == "receipt.json":
+                gate = kwargs['before_publish']
+                def slow_gate():
+                    now[0] = cell.started + cell.budget.max_seconds + 1
+                    gate()
+                kwargs['before_publish'] = slow_gate
+            return original(path, payload, **kwargs)
 
         with (
             patch.object(study.time, "monotonic", side_effect=lambda: now[0]),
-            patch.object(study, "_write", side_effect=slow_write),
+            patch.object(atomic, "publish_bytes", side_effect=slow_write),
         ):
             with self.assertRaises((TimeoutError, ContractError)):
                 cell.finish()
         self.assertFalse((cell.output / "receipt.json").exists())
         self.assertTrue((cell.output / "raw-response.bin").is_file())
         self.assertTrue((cell.output / "failure.json").is_file())
+        self.assertEqual(read_chain(cell.output / 'journal.jsonl')[-1]['event'], 'build_failed')
 
     def test_token_schema_replay_needs_exact_explicit_authority(self):
         cell = self._accepted()

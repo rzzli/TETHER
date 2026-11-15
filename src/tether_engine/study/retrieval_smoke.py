@@ -17,7 +17,7 @@ import time
 from tether_engine.journal import RunJournal, read_chain
 from tether_engine.serde import canonical, decode, encode, fingerprint, freeze, parse_json
 from tether_engine.workflow import Budget
-from .baseline_smoke import _prepare_parent, _read, _write
+from .baseline_smoke import _prepare_parent, _read, _seal, _write
 from .diagnostic import validate_output
 from .diagnostic_codec import need
 from .fixed_evidence import DeadlineRecordedBackend, INTERFACE, PLAN_RESOURCE
@@ -204,7 +204,6 @@ def smoke(output):
     journal = RunJournal(root,kind='build')
     run_id = journal.events[0]['details']['run_id']
     accepted,attempted = [],[]
-    published = False
     failure = None
     try:
         _no_links(root)
@@ -266,7 +265,6 @@ def smoke(output):
         summary = _summary(run_id,input_reserved,output_reserved,elapsed)
         _write(root,'summary.json',summary)
         journal.append('integration_completed',summary_sha256=fingerprint(summary))
-        journal.close()
         _package_check(package)
         _remaining(end)
         need(_inventory(root) == _members(),'Integration inventory differs before sealing')
@@ -276,18 +274,12 @@ def smoke(output):
         anchor = fingerprint(receipt)
         result = _verify(root,anchor,prospective_receipt=receipt,deadline=end)
         _remaining(end)
-        _write(root,'receipt.json',receipt)
-        published = True
-        _remaining(end)
+        _seal(root, receipt, journal, deadline=end)
         return result
     except BaseException as primary:
         failure = primary
-        if published:
-            try:
-                need(_read(root,'receipt.json')[1]['sha256'] == anchor,'Published integration receipt changed')
-                (root/'receipt.json').unlink()
-            except BaseException as secondary:
-                primary.add_note('Integration receipt withdrawal: '+type(secondary).__name__)
+        if journal.sealed:
+            raise
         try:
             journal.fail(primary,'retrieval_recorded_integration')
         except BaseException as secondary:

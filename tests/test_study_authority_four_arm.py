@@ -16,6 +16,7 @@ from tether_engine.study import tokenization as tok
 from tether_engine.study.proofs import capture_file
 from tether_engine.serde import fingerprint, parse_json
 from tests import test_study_tokenization as token_helpers
+from tests.study_seal_helpers import assert_seal_fault
 
 
 class AuthorityFourArmTests(unittest.TestCase):
@@ -129,6 +130,17 @@ class CompositionLifecycleTests(unittest.TestCase):
         ):
             with self.assertRaises(FileExistsError):
                 composition.smoke(self.root / "good", {}, {})
+
+    def test_parent_seal_failure_and_interruption(self):
+        child = tok._run_child
+        for after in (False, True):
+            output = self.root / ('seal-fault-' + str(after))
+            with patch.object(tok, '_run_child', side_effect=lambda *args: child(*args, process_factory=HundredTokenChild)):
+                anchor = assert_seal_fault(self, output, lambda: composition.smoke(
+                    output, token_helpers.TokenizationArtifactTests.authority,
+                    token_helpers.TokenizationArtifactTests.roots), after=after)
+            if after:
+                composition.verify(output, anchor)
 
     def test_forged_history_and_foreign_identity_rejected(self):
         events = composition.read_chain(self.root / "good/journal.jsonl")

@@ -2,6 +2,8 @@
 from __future__ import annotations
 import os
 import hashlib
+import math
+import time
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
@@ -40,15 +42,39 @@ class RunJournal:
             self._sealed = True
         return self._sealed
 
-    def prepare_seal(self):
-        """Arm the engine receipt boundary before its atomic publication.
+    def prepare_seal(self, name='receipt.json'):
+        """Arm the terminal receipt boundary before its atomic publication.
 
         Other journal users may publish intermediate receipts with different
         contracts; their filename alone must not change their state machine.
         """
         if self.sealed:
             raise ContractError('Cannot prepare an already sealed run')
-        self._seal_path = self.output / 'receipt.json'
+        if name not in ('receipt.json', 'terminal-seal.json'):
+            raise ContractError('Invalid terminal seal name')
+        self._seal_path = self.output / name
+
+    def seal(self, payload: bytes, *, deadline=None, name='receipt.json') -> str:
+        """Publish the terminal seal after staging/sync and a final deadline gate.
+
+        Keep the journal open until this returns (or raises), so pre-publication
+        failures can be appended. Once visible, the seal cannot be withdrawn or
+        its journal mutated, even if publication cleanup/presentation raises.
+        The atomic OS call itself cannot be preempted by this deadline check.
+        """
+        from .atomic import publish_bytes
+        if not isinstance(payload, bytes):
+            raise TypeError('Terminal seal requires immutable bytes')
+        if deadline is not None and (type(deadline) not in (int, float) or not math.isfinite(deadline)):
+            raise ContractError('Invalid terminal seal deadline')
+        def check_deadline():
+            if deadline is not None and time.monotonic() >= deadline:
+                raise TimeoutError('Terminal seal deadline expired')
+        check_deadline()
+        digest = hashlib.sha256(payload).hexdigest()
+        self.prepare_seal(name)
+        publish_bytes(self._seal_path, payload, before_publish=check_deadline)
+        return digest
 
     def append(self, event: str, **details):
         if self.sealed:

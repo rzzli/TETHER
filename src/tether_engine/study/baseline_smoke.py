@@ -86,6 +86,14 @@ def _write(root, name, value):
     publish_bytes(root / name, payload)
 
 
+def _seal(root, receipt, journal, *, deadline=None):
+    """Keep the existing smoke path/size gates at the shared commit boundary."""
+    _no_links(root)
+    payload = canonical(receipt)
+    need(len(payload) <= MAX_FILE_BYTES, "Smoke artifact exceeds capture bound")
+    return journal.seal(payload, deadline=deadline)
+
+
 def _read(root, name):
     path = root / name
     proof = capture_file(path, name)

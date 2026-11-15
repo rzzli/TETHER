@@ -15,6 +15,7 @@ from tether_engine.study import fixed_evidence as stages
 from tether_engine.study import fixed_evidence_smoke as comparison
 from tether_engine.study.session import StudySession
 from tether_engine.workflow import Budget
+from tests.study_seal_helpers import assert_seal_fault
 
 
 class FixedEvidenceBoundaryPeerTests(unittest.TestCase):
@@ -22,6 +23,13 @@ class FixedEvidenceBoundaryPeerTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name) / "comparison"
+
+    def test_parent_seal_failure_and_interruption(self):
+        for after in (False, True):
+            output = self.root.parent / ('seal-fault-' + str(after))
+            anchor = assert_seal_fault(self, output, lambda: comparison.smoke(output), after=after)
+            if after:
+                comparison.verify(output, anchor)
 
     def test_wrong_predecessor_identity_fails_before_recursive_verifier(self):
         journal = RunJournal(self.root, kind="build")

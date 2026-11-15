@@ -222,6 +222,10 @@ class StudySession:
         self.accounted, self.outstanding = True, None
 
     def _failure(self, primary, stage):
+        if self.journal.sealed:
+            self.sealed = True
+            primary.add_note('Terminal seal retained; post-seal failure did not alter execution')
+            return
         self.failed = True
         for operation, action in (
             ("terminal journal", lambda: self.journal.fail(primary, stage)),
@@ -506,8 +510,6 @@ class StudySession:
             )
             self._put("report.json", report)
             self.journal.append("study_completed", report_sha256=fingerprint(report))
-            self.journal.close()
-            self.closed = True
             self.files.add("journal.jsonl")
             outputs = {
                 name: encode(capture_file(self.output / name, logical_id=name))
@@ -521,20 +523,14 @@ class StudySession:
                     capacity_binding=self._config['capacity_binding'])))
                 from .stable_read import deadline_check
                 deadline_check(self.started+self.budget.max_seconds)
-            self._put("receipt.json", receipt)
-            if self.capacity_policy is not None:
-                deadline_check(self.started+self.budget.max_seconds)
+            self.journal.seal(canonical(receipt) + b'\n',
+                              deadline=self.started+self.budget.max_seconds)
+            self.files.add('receipt.json')
             self.sealed = True
+            self.journal.close()
+            self.closed = True
             return freeze(report)
         except BaseException as primary:
-            if self.capacity_policy is not None and 'receipt.json' in self.files and not self.sealed:
-                try:
-                    need(_read(self.output,'receipt.json') == canonical(receipt)+b'\n',
-                         'Published token receipt changed before withdrawal')
-                    (self.output/'receipt.json').unlink()
-                    self.files.remove('receipt.json')
-                except BaseException as secondary:
-                    primary.add_note('Token receipt withdrawal failed: '+type(secondary).__name__)
             self._failure(primary, "finalization")
             raise
 

@@ -13,7 +13,7 @@ from tether_engine.journal import RunJournal, read_chain
 from tether_engine.serde import canonical, decode, encode, fingerprint, freeze
 from tether_engine.workflow import Budget
 
-from .baseline_smoke import _prepare_parent, _read, _write
+from .baseline_smoke import _prepare_parent, _read, _seal, _write
 from .baselines import run_baseline, reviewer_view
 from .diagnostic import load_synthetic_request
 from .diagnostic_codec import need
@@ -365,7 +365,6 @@ def smoke(output):
         )
         _write(root, "summary.json", summary)
         journal.append("comparison_completed", summary_sha256=fingerprint(summary))
-        journal.close()
         verify_package_proof(package, required_resources=REQUIRED_RESOURCES)
         need(
             _inventory(root) == _members(),
@@ -381,9 +380,11 @@ def smoke(output):
             run_id=run_id,
             artifacts=artifacts,
         )
-        _write(root, "receipt.json", receipt)
+        _seal(root, receipt, journal)
         return verify(root, fingerprint(receipt))
     except BaseException as primary:
+        if journal.sealed:
+            raise
         try:
             journal.fail(primary, "fixed_evidence_comparison")
         except BaseException as secondary:
@@ -415,11 +416,16 @@ def smoke(output):
             )
         except BaseException as secondary:
             primary.add_note("Failure marker unavailable: " + type(secondary).__name__)
+        raise
+    finally:
+        import sys
+        primary = sys.exception()
         try:
             journal.close()
         except BaseException as secondary:
+            if primary is None:
+                raise
             primary.add_note("Journal close failed: " + type(secondary).__name__)
-        raise
 
 
 def verify(path, sha256):

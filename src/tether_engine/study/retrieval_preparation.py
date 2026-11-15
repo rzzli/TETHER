@@ -560,7 +560,6 @@ def prepare_retrieval(
             model_calls=0,
             scientific_answer_status="not_attempted",
         )
-        journal.close()
         _package_check(proof)
         deadline_check(deadline)
         files = {
@@ -570,10 +569,10 @@ def prepare_retrieval(
         receipt = dict(
             schema_version=1, kind=TRACK, authority_sha256=authority_sha256, files=files
         )
-        _write(root, "receipt.json", receipt)
+        anchor = journal.seal(canonical(receipt), deadline=deadline)
         return freeze(
             dict(
-                receipt_sha256=fingerprint(receipt),
+                receipt_sha256=anchor,
                 authority_sha256=authority_sha256,
                 request_sha256=access[ARMS[0]]["request_sha256"],
                 coverage=compiled["coverage"],
@@ -581,6 +580,8 @@ def prepare_retrieval(
             )
         )
     except BaseException as error:
+        if journal.sealed:
+            raise
         try:
             journal.fail(error, "retrieval_preparation")
         except BaseException as extra:

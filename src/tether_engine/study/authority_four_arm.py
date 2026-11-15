@@ -18,7 +18,7 @@ import time
 from tether_engine.journal import RunJournal, read_chain
 from tether_engine.serde import canonical, decode, encode, fingerprint, freeze, parse_json
 from tether_engine.workflow import Budget
-from .baseline_smoke import _prepare_parent, _read, _write
+from .baseline_smoke import _prepare_parent, _read, _seal, _write
 from .baselines import _policy, _select
 from .collected_source import (
     CollectedSourceInput,
@@ -832,7 +832,6 @@ def smoke(
     journal = RunJournal(root, kind="build")
     run_id = journal.events[0]["details"]["run_id"]
     accepted = []
-    published = False
     source_lease = ExitStack()
     server_scope = ExitStack()
     try:
@@ -1051,7 +1050,6 @@ def smoke(
         )
         _write(root, "summary.json", summary)
         journal.append("integration_completed", summary_sha256=fingerprint(summary))
-        journal.close()
         sealing_start = time.monotonic()
         _package_check(package, is_native)
         collected = collected_source is not None
@@ -1096,9 +1094,7 @@ def smoke(
         receipt["timings"]["sealing_seconds"] = time.monotonic() - sealing_start
         receipt["sealed_elapsed_seconds"] = 300 - _remaining(end)
         anchor = fingerprint(receipt)
-        _write(root, "receipt.json", receipt)
-        published = True
-        _remaining(end)
+        _seal(root, receipt, journal, deadline=end)
         return freeze(
             dict(
                 encode(result),
@@ -1107,19 +1103,12 @@ def smoke(
             )
         )
     except BaseException as primary:
+        if journal.sealed:
+            raise
         try:
             server_scope.__exit__(type(primary), primary, primary.__traceback__)
         except BaseException as secondary:
             primary.add_note("Native shutdown: " + type(secondary).__name__)
-        if published:
-            try:
-                need(
-                    _read(root, "receipt.json")[1]["sha256"] == anchor,
-                    "Published receipt changed",
-                )
-                (root / "receipt.json").unlink()
-            except BaseException as secondary:
-                primary.add_note("Receipt withdrawal: " + type(secondary).__name__)
         for action in (
             lambda: journal.fail(primary, "authority_four_arm"),
             lambda: _write(

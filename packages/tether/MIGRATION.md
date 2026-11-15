@@ -161,3 +161,22 @@ Helpers that return remaining time cap that duration at 300 only after validatin
 the endpoint. They explicitly reject booleans as endpoints. Expired and nonfinite
 values remain invalid. These changes affect source-code proofs and require fresh
 qualification; existing sealed artifacts and recorded timings are not rewritten.
+
+On 15 November, tokenizer preparation/replay additionally began capping a longer
+parent deadline at the existing local 300-second limit. Shorter parents are never
+extended. Source/retrieval preparation retain their separate endpoint ceilings.
+
+## Study-driver seal boundary
+
+Current study drivers retain writable failure journals until terminal receipt
+publication. A failure while staging or syncing the receipt leaves an unsealed
+attempt with its original accounting. After atomic publication, cleanup or
+presentation errors preserve the receipt and journal; callers should inspect and
+verify the retained record rather than repeat the call. Older drivers that
+withdrew a receipt after publication retain their original-runtime reproduction
+path. No archived result or receipt is rewritten by this change.
+
+Deadline enforcement includes the final pre-publication gate after staging/sync;
+it does not promise preemption of a blocked OS publication syscall. Receipt formats
+and original byte conventions are unchanged. Study package-code pins still require
+the matching implementation for exact historical replay.
