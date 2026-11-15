@@ -396,6 +396,20 @@ class FrameworkTests(unittest.TestCase):
         with self.assertRaisesRegex(ContractError, "integrity failure"):
             verify_run(output, digest)
 
+    def test_receipt_anchor_requires_exact_hex_and_accepts_uppercase(self):
+        store = self.store()
+        output = self.root / "anchored-run"
+        digest = write_run(output, run_workflow(self.case, store, ExtractiveBackend(), self.model), store, self.model)
+        self.assertFalse(verify_run(output)["external_anchor_checked"])
+        self.assertTrue(verify_run(output, digest)["external_anchor_checked"])
+        self.assertTrue(verify_run(output, digest.upper())["external_anchor_checked"])
+        for invalid in ("", " ", "0" * 63, "0" * 65, "g" * 64, digest + "\n", 0, False):
+            with self.subTest(anchor=repr(invalid)):
+                with self.assertRaisesRegex(ContractError, "64 hexadecimal"):
+                    verify_run(output, invalid)
+        with self.assertRaisesRegex(ContractError, "anchored receipt hash mismatch"):
+            verify_run(output, "0" * 64)
+
     def test_source_tampering_is_detected_and_outputs_only_is_explicit(self):
         store = self.store()
         output = self.root / "run"
