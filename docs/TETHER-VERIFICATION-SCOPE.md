@@ -26,7 +26,53 @@ See [results and current scope](RESULTS.md).
 | `inspect-run` | Retained attempts, terminal state and declared accounting can be read | Completion of an interrupted run or permission to retry it |
 | Bound evaluation | Cohort, policy, labels, exact prediction bytes and stated producer checks agree; incomplete mature populations withhold primary metrics | Independent producer authentication, pre-label registration, valid clinical labels or a causal missingness/censoring model |
 
-## Source and receipt anchors
+## Threat model and supported boundary
+
+Scope baseline: 15 November 2026. The following is the contract for interpreting
+results, including known gaps awaiting correction. It does not upgrade old runs.
+
+| Threat or error | Checker and evidence | Assumption and remaining limit |
+|---|---|---|
+| Accidental file changes or post-run editing | Receipt inventories and hash-chained journals in `artifacts.verify_run`; outer inventories in `tether._presentation.verify_outer` | Hashes must be compared with a separately retained trusted root to detect replacement of the entire tree. |
+| Internally contradictory run state | `semantics.check_execution`, `check_semantics` and wrapper `verify_engine` | Wrapper selection/coverage checks are not yet shared by every verifier/evaluator. Native semantic success is currently weaker. |
+| Silent reduction in verification strength | Receipt policy and returned semantic/derivation fields | Legacy byte-only results currently return integrity success. A producer version string is not an authentication mechanism; explicit minimum-level enforcement is pending. |
+| Later or evaluator-only information | `chrono.admit_snapshot`, lineage validation and catalog role checks | Declared dates and complete lineage must be truthful. Artifact-envelope clocks remain inconsistent with source-node gating; current checks do not prove earliest public availability. |
+| Hostile source text or model output | Typed selection parsing, source membership, ledger fingerprint and request binding | These controls constrain accepted records, not arbitrary model reasoning. Generated-text entailment and semantic prompt-injection robustness are not qualified. |
+| Exhausted budget, timeout or interruption | Workflow budget, attempt journal, wrapper supervision | Durable attempts reveal uncertain work; they cannot prove unreported billing or guarantee a terminal event after hard kill/storage failure. Post-seal error handling still needs repair. |
+| Malicious filesystem replacement | Bounded wrapper reads and file identity/path checks | The verifier trusts the operating system and approved original sources. Native read limits/source-root handling and supported-platform behavior need further qualification. |
+| Invalid scientific inference | Source replay plus separately scoped benchmark/outcome evaluation | Integrity, signatures, timestamps and checker agreement do not establish causal biology, clinical success or model usefulness. |
+
+Execution completeness, byte integrity, semantic consistency, source binding,
+external author/key authenticity, externally witnessed time and scientific
+validity are separate properties. Verified bytes of a failed attempt do not make
+the execution successful. A nested engine receipt bound by an outer receipt is
+not a second independently trusted anchor. Signing and external timestamping are
+not current runtime guarantees.
+
+The maintained interface is the installed CLI and engine evidence/execution APIs,
+plus the portable bundle workflow and descriptive `temporal_audit` reproduction.
+Their known gaps above constrain support. Python 3.11 is the established reference
+runtime; the advertised broader range still needs additional matrix qualification.
+Windows-specific file controls do not establish identical POSIX guarantees.
+
+| Component | Preservation/support designation | Change rule |
+|---|---|---|
+| Engine top-level modules, demos, schemas; public `tether` package | Maintained, with the disclosed verification gaps | Test contract changes across engine, wrapper, bundle and evaluation. |
+| Engine `study/` | Migration candidate; some primitives are live CLI dependencies | Extract and test dependency closure before moving drivers out of the wheel. |
+| Engine `archive/` | Historical compatibility with live entry points | Preserve original-runtime checks; decide API migration before removal. |
+| `experiments/temporal_audit/` | Maintained descriptive reproduction | Preserve the source-to-table contract and public replay. |
+| Other experiment modules | Historical research; potential shared-code migration candidates | No current-engine or turnkey-reproduction promise; preserve exact protocols/results and extract consumers before archival. |
+| Validation/history/portable utilities | Maintained infrastructure | Keep current and original-runtime gates separately accounted for. |
+| Remaining acquisition, science and feasibility utilities | Migration candidates requiring per-tool qualification | Inventory imports and tests before retaining in the supported surface. Original download worker remains unchanged. |
+| Tests and fixtures | Maintained checks or explicitly original-runtime checks | No private data publication to make a ZIP test pass; verify fixture rights and exact bytes. |
+
+Preserve the reviewed commit and original artifacts before any subtraction.
+An implementation fingerprint identifies what ran; a compatibility policy decides
+what a later verifier can check. Neither cosmetic refactoring nor a version-label
+change authorizes rewriting frozen receipts. Broad code deletion, new datasets,
+provider spending and external release are not consequences of this threat model.
+
+## Independently retained anchors
 
 Save the printed receipt hash independently and provide it to `tether verify`
 with `--receipt-sha256`. Without an independent anchor, an internally consistent
