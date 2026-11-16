@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from tether_engine.serde import canonical, read_json, ContractError
+from tether_engine.serde import canonical, read_json, ContractError, fingerprint
 from tether_engine.journal import read_chain
 from tools.science.qualify_source_bytes import qualify
 
@@ -89,3 +89,29 @@ class ByteQualificationTests(unittest.TestCase):
             with self.assertRaises(OSError): self.run_check()
         self.assertFalse((self.output/'terminal-seal.json').exists())
         self.assertEqual(read_chain(self.output/'journal.jsonl')[-1]['event'], 'build_failed')
+
+    def parquet_fixture(self):
+        import pyarrow as pa
+        import pyarrow.parquet as pq
+        pq.write_table(pa.table({'id': ['fixture-a', 'fixture-b']}), self.source)
+        row = self.document['files'][0]
+        row.update(sha256=hashlib.sha256(self.source.read_bytes()).hexdigest(), bytes=self.source.stat().st_size,
+                   footer_rows=2, footer_row_groups=1,
+                   schema_sha256=fingerprint([{'name': 'id', 'type': 'string', 'nullable': True, 'children': []}]))
+        self.pin()
+
+    def test_parquet_footers_verified_without_row_decode(self):
+        import pyarrow.parquet as pq
+        self.parquet_fixture()
+        with patch.object(pq.ParquetFile, 'iter_batches', side_effect=AssertionError('Row read')):
+            result = self.run_check(inspect_parquet=True)
+        self.assertEqual(result['footer_rows'], 2)
+        self.assertEqual(result['row_values_read'], 0)
+        self.assertEqual(len(result['schemas']), 1)
+
+    def test_forged_footer_and_schema_fail_even_with_correct_payload_hash(self):
+        self.parquet_fixture()
+        self.document['files'][0]['schema_sha256'] = '0'*64; self.pin()
+        with self.assertRaisesRegex(ContractError, 'schema/footer'):
+            self.run_check(inspect_parquet=True)
+        self.assertFalse((self.output/'terminal-seal.json').exists())

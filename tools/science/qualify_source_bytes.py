@@ -12,12 +12,20 @@ import time
 
 from tether_engine.atomic import publish_bytes
 from tether_engine.journal import RunJournal
-from tether_engine.serde import ContractError, canonical, parse_json
+from tether_engine.serde import ContractError, canonical, parse_json, fingerprint
 from tether_engine.source_access import SourceAccess, local_path, selected_root
 
 
 def qualify(manifest_path, expected_sha256, output, *, source_roots,
-            max_bytes=512*1024**2, seconds=600):
+            max_bytes=512*1024**2, seconds=600, inspect_parquet=False):
+    if type(inspect_parquet) is not bool:
+        raise ContractError('Parquet inspection flag must be boolean')
+    if inspect_parquet:
+        import pyarrow as pa
+        import pyarrow.parquet as pq
+        if pa.__version__ != '21.0.0':
+            raise ContractError('Source inspection requires pyarrow==21.0.0')
+        from tools.science.temporal_inventory import _schema_fields
     if (type(max_bytes) is not int or max_bytes <= 0 or
             type(seconds) not in (int, float) or not 0 < seconds <= 3600):
         raise ContractError('Invalid qualification limits')
@@ -65,23 +73,48 @@ def qualify(manifest_path, expected_sha256, output, *, source_roots,
         _no_links(output)
     journal = RunJournal(output, kind='build')
     done, measured = Counter(), 0
+    schemas, footer_rows = {}, 0
+    originals = {local_path(row['path']): row for row in files}
     failure = None
     try:
         journal.append('byte_qualification_started', metadata_screen_sha256=expected_sha256,
                        scheduled_originals=len(files), scheduled_metadata=len(metadata), max_bytes=max_bytes)
         for kind, path, digest, size in items:
-            observed_digest, observed_size = prepared.digest_size(path)
+            payload = None
+            if inspect_parquet and kind == 'original':
+                payload = prepared.read(path, 8*1024**2)
+                observed_digest, observed_size = hashlib.sha256(payload).hexdigest(), len(payload)
+            else:
+                observed_digest, observed_size = prepared.digest_size(path)
             measured += observed_size
             if (observed_digest, observed_size) != (digest, size):
                 raise ContractError('Input fingerprint differs from pinned metadata screen')
+            if payload is not None:
+                original = originals[path]
+                with pq.ParquetFile(pa.BufferReader(payload), pre_buffer=False,
+                                    thrift_string_size_limit=8*1024**2,
+                                    thrift_container_size_limit=1000000) as parquet:
+                    schema = _schema_fields(parquet.schema_arrow)
+                    schema_hash = fingerprint(schema)
+                    rows, groups = parquet.metadata.num_rows, parquet.num_row_groups
+                if (schema_hash != original.get('schema_sha256') or rows != original.get('footer_rows')
+                        or groups != original.get('footer_row_groups')):
+                    raise ContractError('Parquet schema/footer differs from pinned inventory')
+                if time.monotonic() >= deadline:
+                    raise TimeoutError('Parquet inspection deadline expired')
+                schemas[schema_hash] = schema
+                footer_rows += rows
             done[kind] += 1
             journal.append('source_bytes_verified', kind=kind, path=str(path), sha256=digest, bytes=size)
-        report = {'schema_version': 1, 'status': 'byte_integrity_verified',
+        report = {'schema_version': 1, 'status': 'byte_and_footer_integrity_verified' if inspect_parquet else 'byte_integrity_verified',
                   'metadata_screen_sha256': expected_sha256, 'files_verified': done['original'],
                   'metadata_verified': done['metadata'], 'bytes_hashed': measured,
                   'declared_receipt_roles': dict(Counter(str(row.get('receipt_role')) for row in files)),
                   'actor_input_qualification': 'not_established', 'historical_eligibility': 'not_established',
                   'scientific_validation': 'not_established', 'row_values_read': 0,
+                  'parquet_footer_inspection': inspect_parquet,
+                  'footer_rows': footer_rows if inspect_parquet else None,
+                  'schemas': schemas,
                   'elapsed_seconds': time.monotonic()-started,
                   'verifier_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
         payload = canonical(report)+b'\n'
@@ -117,8 +150,10 @@ def main():
     parser.add_argument('--sha256', required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--source-root', type=Path, action='append', required=True)
+    parser.add_argument('--inspect-parquet', action='store_true')
     args = parser.parse_args()
-    report = qualify(args.manifest.absolute(), args.sha256, args.output.absolute(), source_roots=args.source_root)
+    report = qualify(args.manifest.absolute(), args.sha256, args.output.absolute(), source_roots=args.source_root,
+                     inspect_parquet=args.inspect_parquet)
     print(canonical(report).decode())
 
 
