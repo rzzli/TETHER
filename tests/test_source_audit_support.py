@@ -8,6 +8,7 @@ import unittest
 from tether_engine.serde import read_json
 from tools.science import audit_source_validation_experiment as auditor
 from tools.science import run_source_validation_experiment as producer
+from tests.source_validation_fixtures import author_controls
 
 
 class SourceAuditSupportTests(unittest.TestCase):
@@ -31,12 +32,9 @@ from tools.science import audit_source_validation_experiment
         self.assertEqual(result.returncode, 0, result.stderr.decode(errors='replace'))
 
     def test_all_current_fixtures_have_independent_stage_and_decision_agreement(self):
-        cache = Path(__file__).resolve().parents[1] / 'data/cache'
-        cache.mkdir(parents=True, exist_ok=True)
         first = {'F01': 'G0', 'F02': 'G1', 'F03': 'G2', 'F04': 'G2', 'F09': 'G3'}
-        with tempfile.TemporaryDirectory(dir=cache) as temporary:
-            root = Path(temporary) / 'fixtures'
-            producer.author_fictional_fixtures(root)
+        with tempfile.TemporaryDirectory() as temporary:
+            root = author_controls(temporary)
             for key in producer.SCENARIOS:
                 with self.subTest(scenario=key):
                     scenario = read_json(root / key / 'scenario.json')

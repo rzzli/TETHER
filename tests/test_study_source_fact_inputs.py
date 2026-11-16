@@ -17,7 +17,7 @@ from tether_engine.study import source_fact_inputs as inputs
 
 
 ROOT = Path(__file__).resolve().parents[1]
-TEST_ROOT = ROOT / "data" / "cache" / "test-source-fact-inputs"
+TEST_ROOT = Path(tempfile.gettempdir())
 CUTOFF = "2026-10-31T23:00:00+00:00"
 requires_parquet = unittest.skipUnless(importlib.util.find_spec("pyarrow") is not None,
     "install the ingest extra for adapter tests")

@@ -70,7 +70,7 @@ class Factory:
 
 class SourceFactCellTests(unittest.TestCase):
     def setUp(self):
-        cache_root = Path(__file__).resolve().parents[1] / "data" / "cache"
+        cache_root = Path(tempfile.gettempdir())
         self.temp = tempfile.TemporaryDirectory(prefix="fictional-cell-", dir=cache_root)
         self.assertTrue(Path(self.temp.name).resolve().is_relative_to(cache_root.resolve()))
         self.journal = RunJournal(Path(self.temp.name) / "run")

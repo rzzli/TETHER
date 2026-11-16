@@ -49,7 +49,7 @@ class CollectedInputTests(unittest.TestCase):
                 )
 
     def test_lease_required_and_protected_authority_fails_before_open(self):
-        root = Path(__file__).resolve().parents[1] / "data/cache"
+        root = Path(tempfile.gettempdir())
         with tempfile.TemporaryDirectory(dir=root) as tmp:
             path = Path(tmp) / "benchmark" / "authority.json"
             source = CollectedSourceInput(

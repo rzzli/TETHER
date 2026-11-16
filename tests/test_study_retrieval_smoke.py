@@ -16,7 +16,7 @@ from tether_engine.study.retrieval_smoke import smoke, verify, RetrievalRecorded
 from tests.study_seal_helpers import assert_seal_fault
 
 
-TEMP = Path(__file__).resolve().parents[1] / 'data/cache'
+TEMP = Path(tempfile.gettempdir())
 
 
 class RetrievalSmokeTests(unittest.TestCase):

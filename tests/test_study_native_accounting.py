@@ -15,9 +15,7 @@ from tether_engine.study.native import PROTOCOL
 
 class NativeAccountingTests(unittest.TestCase):
     def setUp(self):
-        self.tmp = tempfile.TemporaryDirectory(
-            dir=Path(__file__).resolve().parents[1] / "data/cache"
-        )
+        self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.root = Path(self.tmp.name) / "run"
         self.context = dict(

@@ -1,3 +1,4 @@
+from contextlib import chdir
 from pathlib import Path
 import tempfile
 import unittest
@@ -9,7 +10,7 @@ from tools.framework.summarize_local_pilot import verify_seal, summarize
 
 class LocalPilotReportTests(unittest.TestCase):
     def test_relative_roots_and_windows_separator_members_are_portable(self):
-        with tempfile.TemporaryDirectory(prefix='tether-report-test-', dir=Path.cwd()) as d:
+        with tempfile.TemporaryDirectory(prefix='tether-report-test-') as d, chdir(d):
             root = Path(d); (root / 'case').mkdir()
             for name in ['pilot-report.json', 'pilot-journal.jsonl', 'case/record.json']:
                 (root / name).write_bytes(b'{}')

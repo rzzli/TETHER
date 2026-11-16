@@ -14,7 +14,7 @@ from tether_engine.study import retrieval_preparation as rp
 from tether_engine.study.diagnostic_codec import bind_question
 from tests import test_study_retrieval_preparation as own_fixtures
 
-TEMP = Path(__file__).resolve().parents[1] / "data/cache"
+TEMP = Path(tempfile.gettempdir())
 
 
 def fixture():

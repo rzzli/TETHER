@@ -22,7 +22,7 @@ from tests import test_study_source_preparation as source_fixtures
 from tests import test_study_tokenization as token_fixtures
 from tests.study_seal_helpers import assert_seal_fault
 
-TEMP = Path(__file__).resolve().parents[1] / "data/cache"
+TEMP = Path(tempfile.gettempdir())
 
 
 class SourcePeerTests(unittest.TestCase):

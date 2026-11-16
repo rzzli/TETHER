@@ -20,7 +20,7 @@ from tether_engine.study.stable_read import stable_files as platform_stable_file
 
 class SourceFactSourceTests(unittest.TestCase):
     def setUp(self):
-        self.temp = tempfile.TemporaryDirectory(prefix=".source-fact-test-", dir=Path.cwd())
+        self.temp = tempfile.TemporaryDirectory(prefix=".source-fact-test-")
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         self.cutoff = datetime(2026, 10, 31, 23, 59, 59, 999999, timezone.utc)
@@ -390,7 +390,7 @@ class SourceFactSourceTests(unittest.TestCase):
 
     def test_snapshot_cannot_grant_an_additional_raw_root(self):
         node = self.source("s", {"targetId": "T", "diseaseId": "D", "beta": 1.0})
-        with tempfile.TemporaryDirectory(prefix=".source-fact-other-root-", dir=Path.cwd()) as folder:
+        with tempfile.TemporaryDirectory(prefix=".source-fact-other-root-") as folder:
             other_root = Path(folder)
             (other_root / node.path).write_bytes((self.root / node.path).read_bytes())
             snap = replace(self.snapshot(node), raw_root=str(other_root))
@@ -410,7 +410,7 @@ class SourceFactSourceTests(unittest.TestCase):
         result = self.compile(task, snap)
         self.assertEqual(result.document["source_proofs"][0]["path"], node.path)
         self.assertTrue(result.document["method"]["projection_wire_verified"])
-        with tempfile.TemporaryDirectory(prefix=".source-fact-relocated-", dir=Path.cwd()) as folder:
+        with tempfile.TemporaryDirectory(prefix=".source-fact-relocated-") as folder:
             relocated = Path(folder)
             (relocated / node.path).write_bytes((self.root / node.path).read_bytes())
             replayed = sources.verify_reference(result.document, result.fingerprint, task,

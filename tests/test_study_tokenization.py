@@ -19,7 +19,7 @@ from tether_engine.study.stable_read import checked_path, deadline_check, hash_f
 from tether_engine.study.tokenization import parse_token_trace, prepare_tokenizer_spec
 from tests.study_seal_helpers import assert_seal_fault
 
-TEMP_ROOT = Path(__file__).resolve().parents[1] / 'data/cache'
+TEMP_ROOT = Path(tempfile.gettempdir())
 
 
 class TokenBoundaryTests(unittest.TestCase):

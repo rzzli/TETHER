@@ -14,15 +14,13 @@ from tether_engine.serde import read_json
 from tether_engine.serde import ContractError, decode
 from tether_engine.contracts import Snapshot
 from tether_engine.provenance import InputGraph, catalog_index
+from tests.source_validation_fixtures import author_controls
 
 
 class UtilityFailureTests(unittest.TestCase):
     def test_evaluator_parent_control_has_an_otherwise_valid_derivation(self):
-        cache = Path(__file__).resolve().parents[1] / 'data' / 'cache'
-        cache.mkdir(parents=True, exist_ok=True)
-        with tempfile.TemporaryDirectory(dir=cache) as temporary:
-            fixture = Path(temporary) / 'fixtures'
-            experiment.author_fictional_fixtures(fixture)
+        with tempfile.TemporaryDirectory() as temporary:
+            fixture = author_controls(temporary)
             scenario = read_json(fixture / 'F02' / 'scenario.json')
             base = Path(scenario['snapshot']['raw_root'])
             with self.assertRaisesRegex(ContractError, 'role denied'):
