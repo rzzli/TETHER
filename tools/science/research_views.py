@@ -7,6 +7,7 @@ is unchanged; evaluator-only ancestors are rejected even in current views.
 """
 from collections import Counter, defaultdict
 from copy import deepcopy
+from dataclasses import dataclass
 import re
 
 from tether_engine.serde import ContractError, fingerprint
@@ -28,6 +29,21 @@ HYPOTHESIS = ('target_id', 'indication_id', 'target_namespace_version', 'indicat
 COUNTERS = ('physical_rows', 'outside_case_universe', 'failed_qc_rows', 'selected_rows',
             'duplicate_rows', 'conflicting_rows', 'date_not_comparable', 'date_rejected',
             'accepted_rows', 'case_records')
+
+
+@dataclass(frozen=True)
+class ProjectedBatch:
+    """A physical Arrow batch; omitted rows fail the target/disease candidate mask.
+
+    Selected rows keep absolute offsets within their original row group. This
+    avoids creating Python dictionaries for irrelevant source records.
+    """
+    source_id: str
+    row_group: int
+    first_row: int
+    physical_rows: int
+    selected: tuple
+    source_sha256: str
 
 
 def _need(condition, message):
@@ -134,9 +150,52 @@ def build_views(frame, rows, *, expected_frame_sha256):
     counters = {v: Counter({key: 0 for key in COUNTERS}) for v in VIEWS}
     selected = {v: defaultdict(list) for v in VIEWS}
     locators, count, selected_count = set(), 0, 0
-    for row in rows:
-        count += 1
-        _need(count <= frame['max_rows'], 'Research row budget exceeded')
+    intervals = defaultdict(list)
+    positions_by_group = defaultdict(set)
+
+    def located_rows():
+        nonlocal count
+        for block in rows:
+            if not isinstance(block, ProjectedBatch):
+                count += 1
+                _need(count <= frame['max_rows'], 'Research row budget exceeded')
+                if type(block) is dict:
+                    key = (block.get('source_id'), block.get('row_group'))
+                    if isinstance(key[0], str) and type(key[1]) is int and type(block.get('row_index')) is int:
+                        _need(not any(a <= block['row_index'] < b for a, b in intervals[key]), 'Overlapping physical locator')
+                yield block
+                continue
+            _need(isinstance(block.source_id, str) and block.source_id in admitted,
+                  'Batch uses an unselected source')
+            _need(block.source_sha256 == sources[block.source_id]['sha256'],
+                  'Batch payload hash differs from frame source')
+            _need(all(type(value) is int and value >= 0 for value in (block.row_group, block.first_row)) and
+                  type(block.physical_rows) is int and block.physical_rows > 0,
+                  'Invalid physical batch locator')
+            _need(type(block.selected) is tuple and len(block.selected) <= block.physical_rows,
+                  'Invalid selected batch rows')
+            start, end = block.first_row, block.first_row + block.physical_rows
+            key = (block.source_id, block.row_group)
+            _need(not any(start < b and end > a for a, b in intervals[key]) and
+                  not any(start <= i < end for i in positions_by_group[key]),
+                  'Overlapping physical batch locator')
+            indices = set()
+            for row in block.selected:
+                _need(type(row) is dict and row.get('source_id') == block.source_id and
+                      row.get('row_group') == block.row_group and type(row.get('row_index')) is int and
+                      start <= row['row_index'] < end and row['row_index'] not in indices,
+                      'Selected row differs from physical batch locator')
+                indices.add(row['row_index'])
+            intervals[key].append((start, end))
+            count += block.physical_rows
+            _need(count <= frame['max_rows'], 'Research row budget exceeded')
+            omitted = block.physical_rows - len(block.selected)
+            for v in source_views[block.source_id]:
+                counters[v]['physical_rows'] += omitted
+                counters[v]['outside_case_universe'] += omitted
+            yield from block.selected
+
+    for row in located_rows():
         _need(type(row) is dict and isinstance(row.get('source_id'), str) and row['source_id'] in admitted,
               'Row uses an unselected source')
         source_id = row['source_id']
@@ -144,11 +203,19 @@ def build_views(frame, rows, *, expected_frame_sha256):
         locator = (source_id, row['row_group'], row['row_index'])
         _need(locator not in locators, 'Repeated physical source locator')
         locators.add(locator)
+        positions_by_group[source_id, row['row_group']].add(row['row_index'])
         values = row.get('values')
         _need(type(values) is dict, 'Row values must be an object')
         datasource = sources[source_id]['datasource']
         relevant = source_views[source_id]
         for v in relevant: counters[v]['physical_rows'] += 1
+        # Match the Arrow adapter: omitted target/disease candidates receive no
+        # scientific QC verdict. Their other fields never need Python decoding.
+        pair = values.get('targetId'), values.get('diseaseId')
+        matches = by_pair.get(pair, ()) if all(isinstance(value, str) for value in pair) else ()
+        if not matches:
+            for v in relevant: counters[v]['outside_case_universe'] += 1
+            continue
         if (values.get('datasourceId') != datasource or values.get('datatypeId') != SOURCES[datasource] or
                 not all(isinstance(values.get(k), str) and values[k] for k in ('id', 'targetId', 'diseaseId'))):
             for v in relevant: counters[v]['failed_qc_rows'] += 1
@@ -160,10 +227,6 @@ def build_views(frame, rows, *, expected_frame_sha256):
                                  publication['status'] == 'valid' and not
                                  year_interval['lower'] <= publication['lower'] < publication['upper'] <= year_interval['upper']):
             for v in relevant: counters[v]['failed_qc_rows'] += 1
-            continue
-        matches = by_pair.get((values['targetId'], values['diseaseId']), ())
-        if not matches:
-            for v in relevant: counters[v]['outside_case_universe'] += 1
             continue
         selected_count += 1
         _need(selected_count <= frame['max_selected_rows'], 'Research selected-row budget exceeded')
@@ -215,7 +278,7 @@ def build_views(frame, rows, *, expected_frame_sha256):
                           filter_field=frame['filter_field'] if v == 'current_filtered' else None,
                           filter_rule=('reported_calendar_interval_entirely_before_origin' if v == 'current_filtered' else
                                        'exclude_explicit_future_publication_conflicts' if v == 'archived' else 'none'),
-                          coverage=dict(coverage), records=records,
+                          coverage=dict(coverage), records=deepcopy(records),
                           case_coverage={c: dict(accepted_rows=case_counts[c], interpretation='selected_input_present' if case_counts[c] else 'no_selected_input_not_biological_absence') for c in sorted(case_ids)})
     return dict(schema_version=1, frame_sha256=expected_frame_sha256,
                 integrity_verdict='requires_external_source_byte_verification',

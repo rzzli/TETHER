@@ -160,6 +160,8 @@ class ResearchViewTests(unittest.TestCase):
         self.frame['sources'][0]['role'] = 'evaluation_only'
         self.assertEqual(result['views']['current_unfiltered']['records'][0]['values']['literature'], ['fixture-paper'])
         self.assertEqual(result['views']['archived']['lineage'][1]['role'], 'reference')
+        result['views']['current_filtered']['records'][0]['values']['literature'].append('output-mutation')
+        self.assertEqual(result['views']['current_unfiltered']['records'][0]['values']['literature'], ['fixture-paper'])
 
     def test_known_drug_mislabeled_as_nonclinical_file_is_failed_qc(self):
         row = self.row(); row['values']['datatypeId'] = 'known_drug'

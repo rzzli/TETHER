@@ -14,7 +14,7 @@ clinical query or prediction services.
 | Genetics input requirements | [genetics_qualification.py](genetics_qualification.py) |
 | T6 source prioritization | [t6_challenge.py](t6_challenge.py), [t6_reference.py](t6_reference.py), [t6_topone_evaluation.py](t6_topone_evaluation.py) |
 | Claim and source binding | [t6_claim_audit.py](t6_claim_audit.py), [t6_dossier_binding.py](t6_dossier_binding.py) |
-| Experimental source qualification and three views | [qualify_source_bytes.py](qualify_source_bytes.py), [source_receipts.py](source_receipts.py), [research_views.py](research_views.py); [contract and remaining gates](../../docs/TETHER-RESEARCH-VIEWS.md) |
+| Experimental source qualification and three views | [qualify_source_bytes.py](qualify_source_bytes.py), [source_receipts.py](source_receipts.py), [research_views.py](research_views.py), [research_parquet.py](research_parquet.py); [contract and remaining gates](../../docs/TETHER-RESEARCH-VIEWS.md) |
 
 Read a module's CLI or callable contracts and its tests before preparing inputs.
 Use explicit manifests, independent hashes and fresh output directories. Source

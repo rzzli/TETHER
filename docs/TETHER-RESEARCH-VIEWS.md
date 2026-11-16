@@ -4,7 +4,12 @@ The experimental reducer in [research_views.py](../tools/science/research_views.
 constructs archived, contemporary date-filtered and contemporary unfiltered views
 over a fixed hypothesis universe. It is separate from production agent admission.
 It currently operates on caller-supplied rows: **a passing reducer test does not
-qualify local datasets or authorize a real-data experiment.**
+qualify local datasets or authorize a real-data experiment.** The optional
+[Arrow reader](../tools/science/research_parquet.py) checks exact original bytes,
+uses caller-approved roots and selects approved columns with `pyarrow==21.0.0`.
+It filters candidate target/disease IDs before converting rows to Python. Its
+batches preserve physical row-group offsets and account for omitted rows; their
+payload hashes must match the reducer's source declarations.
 
 Every view retains the same decision origin, complete hypothesis identifiers,
 namespace versions, action, modality, tissue and method fingerprint. Both current
@@ -43,10 +48,13 @@ withheld. Identical duplicates contribute one record. A source row may correspon
 to multiple action/modality hypotheses; case-record counts are reported separately
 and never imply action-specific support. Numerical prediction features stay empty
 and probabilities stay null. No selected input is not biological absence.
+Rows outside the selected hypothesis universe receive no scientific QC verdict;
+their other fields need not be converted. The reader's in-memory counters record
+failure/interruption and do not substitute for the enclosing run journal.
 
 The implemented reducer and receipt checks have invented-data regression tests in
 [test_research_views.py](../tests/test_research_views.py) and
 [test_source_receipt_qualification.py](../tests/test_source_receipt_qualification.py).
-The source-bound streaming adapter, explicit use grants and real-data three-view
-qualification remain required before P11 can pass. P13–P15 separately qualify the
+The enclosing durable driver, explicit use grants, mapping qualification and
+real-data three-view qualification remain required before P11 can pass. P13–P15 separately qualify the
 scientific method, freeze its protocol and execute the resulting study.
