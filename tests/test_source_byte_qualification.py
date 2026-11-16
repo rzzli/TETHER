@@ -1,5 +1,6 @@
 """Byte qualification must not promote evaluator data or hide partial reads."""
 import hashlib
+import importlib.util
 from pathlib import Path
 import tempfile
 import unittest
@@ -138,8 +139,12 @@ class ByteQualificationTests(unittest.TestCase):
         self.assertEqual(read_chain(self.output/'journal.jsonl')[-1]['event'], 'build_failed')
 
     def parquet_fixture(self):
+        if importlib.util.find_spec("pyarrow") is None:
+            self.skipTest("install the ingest extra for adapter tests")
         import pyarrow as pa
         import pyarrow.parquet as pq
+        if pa.__version__ != "21.0.0":
+            raise ContractError("This fixture requires pyarrow==21.0.0")
         pq.write_table(pa.table({'id': ['fixture-a', 'fixture-b']}), self.source)
         row = self.document['files'][0]
         row.update(sha256=hashlib.sha256(self.source.read_bytes()).hexdigest(), bytes=self.source.stat().st_size,
@@ -148,8 +153,8 @@ class ByteQualificationTests(unittest.TestCase):
         self.pin()
 
     def test_parquet_footers_verified_without_row_decode(self):
-        import pyarrow.parquet as pq
         self.parquet_fixture()
+        import pyarrow.parquet as pq
         with patch.object(pq.ParquetFile, 'iter_batches', side_effect=AssertionError('Row read')):
             result = self.run_check(inspect_parquet=True)
         self.assertEqual(result['footer_rows'], 2)

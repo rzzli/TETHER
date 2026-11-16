@@ -115,16 +115,21 @@ class ValidationGateTests(unittest.TestCase):
             with self.subTest(kind=kind), patch.dict(
                 sys.modules, {'pyarrow': arrow, 'pyarrow.parquet': parquet}
             ):
-                suite = unittest.TestSuite([unittest.FunctionTestCase(maintained_ingestion_dependency)])
+                from tests.test_source_byte_qualification import ByteQualificationTests
+                suite = unittest.TestSuite([
+                    unittest.FunctionTestCase(maintained_ingestion_dependency),
+                    ByteQualificationTests("test_parquet_footers_verified_without_row_decode"),
+                    ByteQualificationTests("test_forged_footer_and_schema_fail_even_with_correct_payload_hash"),
+                ])
                 result = unittest.TextTestRunner(stream=io.StringIO()).run(suite)
-            self.assertEqual(result.testsRun, 1)
+            self.assertEqual(result.testsRun, 3)
             self.assertEqual(result.failures, [])
             if expected_core:
-                self.assertEqual([reason for _, reason in result.skipped], ['install the ingest extra for adapter tests'])
+                self.assertEqual([reason for _, reason in result.skipped], ['install the ingest extra for adapter tests'] * 3)
                 self.assertEqual(result.errors, [])
             else:
                 self.assertEqual(result.skipped, [])
-                self.assertEqual(len(result.errors), 1)
+                self.assertEqual(len(result.errors), 3)
                 self.assertIn('requires pyarrow==21.0.0' if kind == 'wrong_version' else 'pyarrow.parquet', result.errors[0][1])
             self.assertEqual(validate.successful_tests(result, 'core'), expected_core)
             self.assertFalse(validate.successful_tests(result, 'full'))
