@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "scope": "Invented wire chains and resealed mutations of the bundled fictional v2 run; no scientific data. Wire-chain validity alone is not completed-execution validity.",
+  "journal": [
+    {
+      "id": "integer_zero",
+      "payload_utf8": "{\"details\":{},\"event\":\"plan\",\"previous_sha256\":null,\"sequence\":0,\"sha256\":\"6f06b82046f8f66844c1bbb686ac42cc19dd7b0c3dba053a4597ca647720f048\"}\n",
+      "expected": "accept",
+      "reason": null
+    },
+    {
+      "id": "complete_two_record_chain",
+      "payload_utf8": "{\"details\":{},\"event\":\"plan\",\"previous_sha256\":null,\"sequence\":0,\"sha256\":\"6f06b82046f8f66844c1bbb686ac42cc19dd7b0c3dba053a4597ca647720f048\"}\n{\"details\":{},\"event\":\"finalize\",\"previous_sha256\":\"6f06b82046f8f66844c1bbb686ac42cc19dd7b0c3dba053a4597ca647720f048\",\"sequence\":1,\"sha256\":\"9ae7a92a6611708c22c405c828ba3f5b24cb7eeb40a1dd9a6103ad0e1fcbf475\"}",
+      "expected": "accept",
+      "reason": null
+    },
+    {
+      "id": "boolean_counter",
+      "payload_utf8": "{\"details\":{},\"event\":\"plan\",\"previous_sha256\":null,\"sequence\":false,\"sha256\":\"94f955a9d6f08597874cd66bededa53437de6f7afb76d89903c0dae867c440fe\"}\n",
+      "expected": "reject",
+      "reason": "journal_sequence"
+    },
+    {
+      "id": "float_counter",
+      "payload_utf8": "{\"details\":{},\"event\":\"plan\",\"previous_sha256\":null,\"sequence\":0.0,\"sha256\":\"a6fc206919978e610bf5517425404037f49f6098ece1f6e728d39cb1aa460f90\"}\n",
+      "expected": "reject",
+      "reason": "journal_sequence"
+    },
+    {
+      "id": "reordered_records",
+      "payload_utf8": "{\"details\":{},\"event\":\"finalize\",\"previous_sha256\":\"6f06b82046f8f66844c1bbb686ac42cc19dd7b0c3dba053a4597ca647720f048\",\"sequence\":1,\"sha256\":\"9ae7a92a6611708c22c405c828ba3f5b24cb7eeb40a1dd9a6103ad0e1fcbf475\"}\n{\"details\":{},\"event\":\"plan\",\"previous_sha256\":null,\"sequence\":0,\"sha256\":\"6f06b82046f8f66844c1bbb686ac42cc19dd7b0c3dba053a4597ca647720f048\"}\n",
+      "expected": "reject",
+      "reason": "journal_sequence"
+    },
+    {
+      "id": "missing_first_record",
+      "payload_utf8": "{\"details\":{},\"event\":\"finalize\",\"previous_sha256\":\"6f06b82046f8f66844c1bbb686ac42cc19dd7b0c3dba053a4597ca647720f048\",\"sequence\":1,\"sha256\":\"9ae7a92a6611708c22c405c828ba3f5b24cb7eeb40a1dd9a6103ad0e1fcbf475\"}\n",
+      "expected": "reject",
+      "reason": "journal_sequence"
+    },
+    {
+      "id": "truncated_json",
+      "payload_utf8": "{\"details\":{},\"event\":\"plan\",\"previous_sha256\":null,\"sequence\":0,\"sha256\":\"6f06b82046f8f66844c1bbb686ac42cc19dd7b0c3dba053a4597ca647720f04",
+      "expected": "reject",
+      "reason": "json_invalid"
+    },
+    {
+      "id": "resealed_wrong_predecessor",
+      "payload_utf8": "{\"details\":{},\"event\":\"plan\",\"previous_sha256\":null,\"sequence\":0,\"sha256\":\"6f06b82046f8f66844c1bbb686ac42cc19dd7b0c3dba053a4597ca647720f048\"}\n{\"details\":{},\"event\":\"finalize\",\"previous_sha256\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"sequence\":1,\"sha256\":\"b26921e5ce760edaf9a334e589f327c2c7ebda19c13f167a2bc54508a4afdb20\"}",
+      "expected": "reject",
+      "reason": "journal_predecessor"
+    },
+    {
+      "id": "wrong_record_hash",
+      "payload_utf8": "{\"details\":{},\"event\":\"plan\",\"previous_sha256\":null,\"sequence\":0,\"sha256\":\"0000000000000000000000000000000000000000000000000000000000000000\"}",
+      "expected": "reject",
+      "reason": "journal_digest"
+    }
+  ],
+  "native_mutations": [
+    {
+      "id": "output_omission",
+      "secondary_reason": "output_inventory",
+      "production_reason": "incomplete output set"
+    },
+    {
+      "id": "source_substitution",
+      "secondary_reason": "lineage_binding",
+      "production_reason": "source proof inventory"
+    },
+    {
+      "id": "source_omission",
+      "secondary_reason": "lineage_omission",
+      "production_reason": "source proof inventory"
+    },
+    {
+      "id": "forged_coverage",
+      "secondary_reason": "terminal_state",
+      "production_reason": "coverage status"
+    },
+    {
+      "id": "forged_call_count",
+      "secondary_reason": "accounting",
+      "production_reason": "accounting"
+    },
+    {
+      "id": "ledger_substitution",
+      "secondary_reason": "ledger_binding",
+      "production_reason": "journal/ledger"
+    },
+    {
+      "id": "reordered_accounting",
+      "secondary_reason": "event_order",
+      "production_reason": "usage accounting"
+    },
+    {
+      "id": "omitted_finalize",
+      "secondary_reason": "event_order",
+      "production_reason": "final trace event"
+    },
+    {
+      "id": "omitted_commit",
+      "secondary_reason": "event_order",
+      "production_reason": "journal/ledger"
+    },
+    {
+      "id": "forged_finalize",
+      "secondary_reason": "final_binding",
+      "production_reason": "trace/output"
+    },
+    {
+      "id": "legacy_downgrade",
+      "secondary_reason": "legacy_opt_in_required",
+      "production_reason": "requires a current policy"
+    }
+  ]
+}

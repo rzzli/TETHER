@@ -97,6 +97,7 @@ PRIVATE_COMPONENTS = frozenset({
     'memory', 'planning', 'reports', 'paper', 'research_notes',
 })
 PUBLIC_DOC_FILES = frozenset({
+    'docs/FORMAT-CONTRACTS.md',
     'docs/ARCHIVE.md', 'docs/FRAMEWORK.md', 'docs/MAINTENANCE.md', 'docs/PORTABLE-BUNDLE.md', 'docs/RESULTS.md',
     'docs/TETHER-CATALOG-POLICY.md', 'docs/TETHER-VERIFICATION-SCOPE.md', 'docs/TETHER-RESEARCH-VIEWS.md',
 })
@@ -320,6 +321,8 @@ def validate_engine_wheel(wheel):
     if any(name.startswith('tether_engine/study/') and name not in compatibility for name in names):
         raise ContractError('Historical study payload is outside the slim engine wheel')
     required = {'tether_engine/demo/v2/case.json', 'tether_engine/demo/case.json',
+                'tether_engine/schemas/native-receipt-v2.json',
+                'tether_engine/schemas/journal-envelope-v1.json',
                 'tether_engine/schemas/portable-bundle-v1.json'} | compatibility
     if not required.issubset(names):
         raise ContractError('Packaged runtime/demo/compatibility imports missing')

@@ -4,6 +4,12 @@ Use Python 3.11, Git and `uv` for the qualified development route. Full validati
 PowerShell 7 and the optional ingestion dependency. Run commands from the
 repository root.
 
+The [format contracts and second checker](FORMAT-CONTRACTS.md) document receipt,
+journal and bundle shapes, canonical hashes, and deliberately different assurance
+levels. Run their public controls with `python -m unittest tests.test_format_conformance`.
+The second checker is a standalone development tool; it does not replace source-inclusive
+production verification or establish scientific validity.
+
 ## Platform support
 
 The package metadata's Python minimum is a syntax/dependency floor, not a claim

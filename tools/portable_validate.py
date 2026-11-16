@@ -35,6 +35,7 @@ TEST_MODULES = (
     "tests.test_run_sealing",
     "tests.test_journal_read_bounds",
     "tests.test_journal_seal_boundary",
+    "tests.test_format_conformance",
     "tests.test_study_proofs",
     "tests.test_evaluation_population",
     "tests.test_evaluation_binding",

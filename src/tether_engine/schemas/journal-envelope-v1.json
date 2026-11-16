@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:tether:journal-envelope:v1",
+  "title": "TETHER journal envelope v1",
+  "description": "One JSONL record; hash the canonical object excluding its own sha256. Sequence must also be an integer token, not a boolean or integral float. Additional envelope fields are hashed but have no defined execution meaning. Journal/run/build ordering is a separate semantic check.",
+  "type": "object",
+  "required": [
+    "sequence",
+    "event",
+    "details",
+    "previous_sha256",
+    "sha256"
+  ],
+  "properties": {
+    "sequence": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "event": {
+      "type": "string",
+      "minLength": 1
+    },
+    "details": {
+      "type": "object"
+    },
+    "previous_sha256": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "additionalProperties": true
+}

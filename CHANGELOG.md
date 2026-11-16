@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+- Specify receipt, journal and bundle formats with packaged JSON schemas and
+  public positive/tampered controls. Add a standalone standard-library checker
+  for byte integrity and a declared subset of completed offline execution.
+  Unsupported execution/replay requests explicitly abstain; source eligibility,
+  feature reconstruction and scientific validity are outside its assurance.
+- Require journal sequence numbers to be integer tokens. Reject booleans and
+  floating-point tokens even when Python compares them equal to an integer.
+
 - Preserve declared source paths in proof inventories while resolving only
   caller-selected roots for authorization, including Windows short-name aliases.
   Run validation fixtures under a physical temporary root on macOS; explicit
