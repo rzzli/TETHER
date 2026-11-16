@@ -2,12 +2,15 @@ name: Portable source export
 on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
+concurrency:
+  group: portable-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   portable:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     timeout-minutes: 20
     steps:
@@ -22,7 +25,7 @@ jobs:
       - name: Validate an export without Git metadata or installed project
         shell: python
         run: |
-          import os, pathlib, shutil, subprocess, tempfile
+          import json, os, pathlib, shutil, subprocess, tempfile
           source = pathlib.Path(os.environ['GITHUB_WORKSPACE'])
           with tempfile.TemporaryDirectory(prefix='tether-export-', dir=os.environ['RUNNER_TEMP']) as temporary:
               base = pathlib.Path(temporary)
@@ -47,9 +50,26 @@ jobs:
                   '--output', str(base / 'validation')], cwd=export, env=environment, check=False)
               report = base / 'validation/report.json'
               if report.exists():
-                  print(report.read_text(encoding='utf-8'))
+                  retained = pathlib.Path(os.environ['RUNNER_TEMP'], 'tether-fast-reports')
+                  shutil.copytree(base / 'validation', retained)
+                  measured = json.loads(report.read_text(encoding='utf-8'))
+                  timing = dict(runner=os.environ.get('RUNNER_OS'), python=measured['python'],
+                                elapsed_seconds=measured['elapsed_seconds'], target_seconds=300,
+                                under_target=measured['elapsed_seconds'] < 300)
+                  (retained / 'timing.json').write_text(json.dumps(timing, indent=2), encoding='utf-8')
+                  print(json.dumps(timing))
+                  if not timing['under_target']:
+                      raise SystemExit('Fast gate exceeded the five-minute target')
               if result.returncode:
                   log = base / 'validation/tests.log'
                   if log.exists():
                       print(log.read_text(encoding='utf-8'))
                   raise SystemExit(result.returncode)
+      - name: Retain fast-gate reports and actual timing
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: portable-${{ matrix.os }}-py311
+          path: ${{ runner.temp }}/tether-fast-reports/
+          if-no-files-found: warn
+          retention-days: 14

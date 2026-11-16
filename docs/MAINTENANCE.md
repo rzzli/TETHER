@@ -1,8 +1,27 @@
 # Development and maintenance
 
-Use Python 3.11 or later, Git and `uv`. Full validation also requires Windows,
+Use Python 3.11, Git and `uv` for the qualified development route. Full validation also requires Windows,
 PowerShell 7 and the optional ingestion dependency. Run commands from the
 repository root.
+
+## Platform support
+
+The package metadata's Python minimum is a syntax/dependency floor, not a claim
+that every newer interpreter or operating system has passed qualification.
+
+| Platform and interpreter | Current qualification |
+|---|---|
+| Windows x64, CPython 3.11.15 | Installed maintained gate, clean ZIP, native controls, source-only export and relocated fictional bundle passed locally. |
+| Ubuntu WSL x64, CPython 3.11 | Local installed/export qualification in progress; no Linux full/native-Windows claim. |
+| macOS, CPython 3.11 | CI target; execution evidence pending. |
+| Other Python versions/platforms | Unqualified for this development release; earlier component checks do not qualify this version. |
+
+The named local runner is `windows-local-311`: Intel Core i7-14700F, 28 logical
+processors, Windows x64. At `ecf124e`, its 855-test maintained installed gate took
+140.515 seconds and its reversed clean-ZIP gate took 145.484 seconds. The 319-test
+dependency-free source-export subset took 51.375 seconds. These are local timings,
+not hosted-CI timing promises. The hosted fast-gate target is under five minutes;
+runner identity, actual time and reports must be retained before claiming it passed.
 
 ## Install for validation
 
@@ -15,6 +34,77 @@ uv pip check
 Install noneditable packages for tests that qualify installed module identities.
 The runtime is dependency-free; PyArrow 21.0.0 is used only by optional ingestion.
 Pinned build constraints live in [tools/build-constraints.txt](../tools/build-constraints.txt).
+
+POSIX installation and fictional quick start (use a fresh output path):
+
+```sh
+uv sync --locked --python 3.11 --no-install-project
+uv pip install --no-deps . packages/tether --build-constraints tools/build-constraints.txt
+mkdir -p runs
+uv run --no-sync tether demo --output runs/my-first-demo
+uv run --no-sync tether verify --run-dir runs/my-first-demo
+```
+
+An installed wrapper and its exact engine must agree. If verification reports
+different code/version inventories, use the original matching environment for
+that run; reinstalling current packages does not migrate old receipts. Prefer
+noneditable installations for reproducibility. Run `uv pip check` and both
+`uv lock --check` / `uv lock --project packages/tether --check` after version changes.
+
+## Pinned quality and coverage checks
+
+Developer tools are separate from runtime dependencies:
+
+```powershell
+uv pip install -r tools/quality-requirements.txt
+python -I -B tools/quality.py --output ../tether-quality-01
+```
+
+Ruff 0.15.22 checks correctness rules E9/F63/F7/F82 across every slim runtime
+Python file. Formatting and mypy 2.4.1 strict mode are staged: decimal money,
+calendar/UTC bounds and caller verification policy are the initial typed
+interfaces. The quality report enumerates formatting and typing scope. Imported
+modules are outside that typing claim; no `py.typed` marker or fully typed SDK
+claim is shipped. Frozen study source is outside this gate.
+
+Coverage.py 7.17.3 measures the installed maintained gate in the parent process:
+
+```powershell
+python -I -B -m coverage run --rcfile tools/coverage.ini --data-file ../tether-coverage.data tools/validate.py --mode full --profile maintained --report ../tether-validation.json
+python -I -B -m coverage json --rcfile tools/coverage.ini --data-file ../tether-coverage.data -o ../tether-coverage.json
+python -I -B tools/coverage_gate.py --coverage ../tether-coverage.json --validation ../tether-validation.json
+```
+
+The Windows/3.11 baseline covers 6,545/8,154 statements (80.267%) and
+2,186/2,930 branches (74.608%) across all 57 packaged Python files, with 862
+maintained tests and no skips. Child-process execution is not measured. The gate
+rejects missing files, inconsistent counts, failed/skipped tests and coverage
+below the reviewed thresholds. Baseline changes need a source/test-scope rationale;
+do not silently reset them after failure. Coverage is not scientific validation.
+
+Configuration references: [Ruff](https://docs.astral.sh/ruff/configuration/),
+[mypy](https://mypy.readthedocs.io/en/stable/config_file.html), and
+[Coverage.py](https://coverage.readthedocs.io/en/latest/config.html).
+
+## Errors and recovery
+
+| Exit code | Meaning for run/verify commands | Next action |
+|---|---|---|
+| 0 | The selected software operation completed | Read its assurance fields; this does not establish scientific truth. |
+| 2 | Input, environment, verification or engine failure | Read stderr and retained failure/attempt records; correct the cause. |
+| 3 | Partial execution, including exhausted work budgets | Inspect coverage, accepted claims and accounting before choosing a fresh run. |
+| 130 | Interrupted | Inspect attempts; never assume a potentially billed call is safe to repeat. |
+
+Delegated tools can propagate their own child exit codes. Failed finalization or
+storage failure may prevent a final receipt; `inspect-run` describes available
+records without restarting work. Neither hash chains nor exit status establish
+external authenticity. See [verification scope](TETHER-VERIFICATION-SCOPE.md).
+
+**Terminology:** a snapshot fixes eligible inputs; a claim is an admitted
+source-linked observation; a receipt binds artifact bytes; a journal records
+attempts and state transitions; an anchor is a separately retained digest;
+source replay checks agreement with supplied originals; scientific validation
+requires a separate scientific evaluation. A collection profile is not a data-use grant.
 
 ## Validate changes
 

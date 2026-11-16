@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "platform": "win32",
+  "python": [
+    3,
+    11
+  ],
+  "coverage_version": "7.17.3",
+  "scope": "installed_slim_runtime_parent_process_only",
+  "minimum_tests": 862,
+  "minimum_line_percent": 80.26,
+  "minimum_branch_percent": 74.6,
+  "measured": {
+    "covered_lines": 6545,
+    "num_statements": 8154,
+    "percent_covered": 78.77120173222663,
+    "percent_covered_display": "78.771",
+    "missing_lines": 1609,
+    "excluded_lines": 6,
+    "percent_statements_covered": 80.2673534461614,
+    "percent_statements_covered_display": "80.267",
+    "num_branches": 2930,
+    "num_partial_branches": 422,
+    "covered_branches": 2186,
+    "missing_branches": 744,
+    "percent_branches_covered": 74.60750853242321,
+    "percent_branches_covered_display": "74.608"
+  },
+  "measurement_sha256": "10d6d819b0e0066be6fb234198b0eb18ecde4a4cead12dc2bc91cc158f0b6125",
+  "policy": "Fail reduced coverage, omitted runtime files, failed/skipped tests, or unresolved totals. Updates require a reviewed source/test-scope explanation, never an automatic rebaseline.",
+  "limitations": [
+    "Subprocess execution is not measured",
+    "Percentage does not establish correctness or scientific validity",
+    "This baseline qualifies Windows CPython 3.11 only"
+  ]
+}

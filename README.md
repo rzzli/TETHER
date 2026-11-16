@@ -41,16 +41,19 @@ Specialist routes include genetics, expression, perturbation, pathways, modality
 
 ## Quick start
 
-**Python 3.11+ · uv · PowerShell** — run from the repository root:
+**Python 3.11 · uv · PowerShell** — run from the repository root:
 
 ```powershell
-uv sync --project packages/tether --python 3.11 --locked
+uv sync --locked --python 3.11 --no-install-project
+uv pip install --no-deps . packages/tether --build-constraints tools/build-constraints.txt
 New-Item -ItemType Directory -Path runs -Force | Out-Null
-uv run --project packages/tether --no-sync tether demo --output runs/my-first-demo
-uv run --project packages/tether --no-sync tether verify --run-dir runs/my-first-demo
+uv run --no-sync tether demo --output runs/my-first-demo
+uv run --no-sync tether verify --run-dir runs/my-first-demo
 ```
 
 **Deterministic offline demo · fictional evidence · no API key.** Installation may need network access. Use a fresh output directory each time.
+
+[Supported platforms, POSIX commands and developer checks](docs/MAINTENANCE.md#platform-support).
 
 <a id="tether-cli-run-layout"></a>
 

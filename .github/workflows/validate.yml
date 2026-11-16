@@ -2,73 +2,73 @@ name: Validate TETHER
 on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
+concurrency:
+  group: validate-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 env:
-  # Evidence admission requires single-link installed source files. Do not alias
-  # the package cache through uv's default hardlink installation on Linux.
   UV_LINK_MODE: copy
+  PYTHONDONTWRITEBYTECODE: '1'
 jobs:
   validate:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest]
-        mode: [core, full]
-        # Full qualification includes native Win32 handle/path controls and
-        # requires zero skips. Ubuntu retains the portable core gate.
-        exclude:
-          - os: ubuntu-latest
-            mode: full
+        include:
+          - {os: windows-latest, mode: full}
+          - {os: ubuntu-latest, mode: core}
+          - {os: macos-latest, mode: core}
     runs-on: ${{ matrix.os }}
-    # Complete local gates exceed 20 minutes; hosted timing is not yet qualified.
-    timeout-minutes: 90
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7, verified 2026-10-12
-        with:
-          persist-credentials: false
-          fetch-depth: 0
-      - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9 # v7, verified 2026-10-12
-        with:
-          version: '0.11.2'
-          python-version: '3.11'
-      - name: Install core
-        if: matrix.mode == 'core'
-        run: uv sync --locked --python 3.11 --no-install-project
-      - name: Install ingestion extra
-        if: matrix.mode == 'full'
-        run: uv sync --locked --python 3.11 --extra ingest --no-install-project
-      - name: Install project with pinned build backend
-        run: uv pip install --no-deps . packages/tether --build-constraints tools/build-constraints.txt
-      - name: Validate clean checkout
-        run: uv run --no-sync python tools/validate.py --mode ${{ matrix.mode }} --profile maintained --package
-  tether-interface:
-    runs-on: windows-latest
-    timeout-minutes: 15
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           persist-credentials: false
-          fetch-depth: 0
+          fetch-depth: 1
       - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9
         with:
           version: '0.11.2'
           python-version: '3.11.15'
-      - name: Resolve engine dependencies
+      - name: Install core dependencies
+        if: matrix.mode == 'core'
         run: uv sync --locked --python 3.11.15 --no-install-project
-      - name: Install TETHER engine
-        run: uv pip install --python .venv/Scripts/python.exe --no-deps . --build-constraints tools/build-constraints.txt
-      - name: Install canonical TETHER interface
-        run: uv pip install --python .venv/Scripts/python.exe --no-deps packages/tether --build-constraints tools/build-constraints.txt
-      - name: Check installed dependencies
-        run: uv pip check --python .venv/Scripts/python.exe
-      - name: Validate TETHER namespace and execution boundaries
-        run: uv run --no-sync python -B -m unittest discover -s packages/tether/tests -v
-      - name: Validate TETHER version and offline demo
-        shell: pwsh
+      - name: Install ingestion dependencies
+        if: matrix.mode == 'full'
+        run: uv sync --locked --python 3.11.15 --extra ingest --no-install-project
+      - name: Install noneditable runtime with pinned build backend
+        run: uv pip install --no-deps . packages/tether --build-constraints tools/build-constraints.txt
+      - name: Check dependencies and both lockfiles
         run: |
-          uv run --no-sync tether --version
-          if ($LASTEXITCODE -ne 0) { throw 'TETHER version failed' }
-          New-Item -ItemType Directory -Path runs -Force -ErrorAction Stop | Out-Null
-          uv run --no-sync tether demo --output runs/tether-ci-demo
-          if ($LASTEXITCODE -ne 0) { throw 'TETHER demo failed' }
-          uv run --no-sync tether verify --run-dir runs/tether-ci-demo
-          if ($LASTEXITCODE -ne 0) { throw 'TETHER verification failed' }
+          uv pip check
+          uv lock --check
+          uv lock --project packages/tether --check
+      - name: Prepare retained reports
+        shell: python
+        run: |
+          import os, pathlib
+          pathlib.Path(os.environ['RUNNER_TEMP'], 'tether-reports').mkdir()
+      - name: Install pinned developer tools
+        if: matrix.mode == 'full'
+        run: uv pip install -r tools/quality-requirements.txt
+      - name: Check maintained source quality
+        if: matrix.mode == 'full'
+        run: uv run --no-sync python -I -B tools/quality.py --output "${{ runner.temp }}/tether-reports/quality"
+      - name: Validate installed core
+        if: matrix.mode == 'core'
+        run: uv run --no-sync python -I -B tools/validate.py --mode core --profile maintained --package --report "${{ runner.temp }}/tether-reports/validation.json"
+      - name: Validate installed full scope with parent-process coverage
+        if: matrix.mode == 'full'
+        run: uv run --no-sync python -I -B -m coverage run --rcfile tools/coverage.ini --data-file "${{ runner.temp }}/tether-reports/coverage.data" tools/validate.py --mode full --profile maintained --package --report "${{ runner.temp }}/tether-reports/validation.json"
+      - name: Retain coverage measurement
+        if: always() && matrix.mode == 'full'
+        run: uv run --no-sync python -I -B -m coverage json --rcfile tools/coverage.ini --data-file "${{ runner.temp }}/tether-reports/coverage.data" -o "${{ runner.temp }}/tether-reports/coverage.json"
+      - name: Enforce reviewed coverage baseline
+        if: matrix.mode == 'full'
+        run: uv run --no-sync python -I -B tools/coverage_gate.py --coverage "${{ runner.temp }}/tether-reports/coverage.json" --validation "${{ runner.temp }}/tether-reports/validation.json"
+      - name: Retain validation reports
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: validation-${{ matrix.os }}-${{ matrix.mode }}-py311
+          path: ${{ runner.temp }}/tether-reports/
+          if-no-files-found: warn
+          retention-days: 14

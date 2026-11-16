@@ -102,3 +102,9 @@ signed_urls/
 /tools/science/build_p05_release_bundle.py
 /tools/science/build_p05_paper_assets.py
 /tools/science/audit_p05_paper_results.py
+
+# Local developer measurements.
+.ruff_cache/
+.mypy_cache/
+.coverage*
+htmlcov/

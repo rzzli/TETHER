@@ -10,6 +10,11 @@ requires-python = ">=3.11"
 dependencies = ["tether-target-engine==0.6.0.dev1"]
 license = {file = "LICENSE"}
 
+[project.urls]
+Repository = "https://github.com/rzzli/TETHER"
+Documentation = "https://github.com/rzzli/TETHER/blob/main/README.md"
+Issues = "https://github.com/rzzli/TETHER/issues"
+
 [project.optional-dependencies]
 ingest = ["pyarrow==21.0.0"]
 

@@ -1,0 +1,10 @@
+required-version = "==0.15.22"
+target-version = "py311"
+line-length = 100
+
+[lint]
+# Correctness checks cover every slim runtime file. Formatting is staged below.
+select = ["E9", "F63", "F7", "F82"]
+
+[format]
+line-ending = "auto"
