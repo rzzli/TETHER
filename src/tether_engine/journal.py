@@ -139,7 +139,8 @@ def parse_chain(payload: bytes, allow_incomplete_tail=False, *, expected_sha256=
             break
         event = parse_json(line)
         digest = event.pop("sha256")
-        if (event.get("sequence") != len(events) or event.get("previous_sha256") != previous or
+        if (type(event.get("sequence")) is not int or event["sequence"] != len(events) or
+                event.get("previous_sha256") != previous or
                 fingerprint(event) != digest):
             raise ContractError("Trace hash-chain failure")
         event["sha256"] = digest

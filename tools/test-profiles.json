@@ -383,7 +383,8 @@
     "tests/test_validation_wheel.py": "maintained",
     "tests/test_virtual_biotech_audit.py": "historical_research",
     "tests/test_windows_path_identity.py": "maintained",
-    "tests/test_wire.py": "maintained"
+    "tests/test_wire.py": "maintained",
+    "tests/test_format_conformance.py": "maintained"
   },
   "overrides": {
     "tests/test_p05_utility_failures.py::UtilityFailureTests.test_evaluator_parent_control_has_an_otherwise_valid_derivation": "migration_current",
