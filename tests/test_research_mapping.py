@@ -1,5 +1,6 @@
 """Complete fictional publisher membership, identifier and failure controls."""
 import hashlib
+import importlib.util
 import json
 from pathlib import Path
 import tempfile
@@ -14,6 +15,8 @@ from tools.science.research_mapping import build_index
 
 class ResearchMappingTests(unittest.TestCase):
     def setUp(self):
+        if importlib.util.find_spec('pyarrow') is None:
+            self.skipTest('install the ingest extra for source-audit tests')
         import pyarrow as pa
         import pyarrow.parquet as pq
         self.tmp = tempfile.TemporaryDirectory(); self.addCleanup(self.tmp.cleanup)

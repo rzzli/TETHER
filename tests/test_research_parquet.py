@@ -1,5 +1,6 @@
 """Actual-format Arrow fixtures for source-bound three-view qualification."""
 import hashlib
+import importlib.util
 from pathlib import Path
 import tempfile
 import unittest
@@ -13,6 +14,8 @@ from tests import test_research_views as view_fixtures
 
 class ResearchParquetTests(unittest.TestCase):
     def setUp(self):
+        if importlib.util.find_spec('pyarrow') is None:
+            self.skipTest('install the ingest extra for source-audit tests')
         import pyarrow as pa
         import pyarrow.parquet as pq
         self.tmp = tempfile.TemporaryDirectory(); self.addCleanup(self.tmp.cleanup)

@@ -1,6 +1,7 @@
 """End-to-end source grants, receipts, mappings and durable three-view builds."""
 from concurrent.futures import ThreadPoolExecutor
 import hashlib
+import importlib.util
 from pathlib import Path
 import unittest
 from unittest.mock import patch
@@ -14,6 +15,8 @@ from tests import test_research_mapping as mapping_fixtures
 
 class ResearchBuildTests(unittest.TestCase):
     def setUp(self):
+        if importlib.util.find_spec('pyarrow') is None:
+            self.skipTest('install the ingest extra for source-audit tests')
         import pyarrow as pa
         import pyarrow.parquet as pq
         mapping = mapping_fixtures.ResearchMappingTests(); mapping.setUp()

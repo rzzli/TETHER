@@ -104,3 +104,16 @@ class ValidationGateTests(unittest.TestCase):
         self.assertEqual(len(result.skipped), 28)
         self.assertTrue(validate.successful_tests(result, 'core'))
         self.assertFalse(validate.successful_tests(result, 'full'))
+
+    def test_research_fixture_dependencies_are_optional_only_in_core(self):
+        from tests import test_research_build, test_research_mapping, test_research_parquet
+        for cls in (test_research_build.ResearchBuildTests, test_research_mapping.ResearchMappingTests,
+                    test_research_parquet.ResearchParquetTests):
+            method = unittest.defaultTestLoader.getTestCaseNames(cls)[0]
+            with self.subTest(fixture=cls.__name__), patch.dict(sys.modules, {'pyarrow': None, 'pyarrow.parquet': None}):
+                result = unittest.TestResult()
+                unittest.TestSuite([cls(method)]).run(result)
+                self.assertEqual(result.errors, [])
+                self.assertEqual([reason for _, reason in result.skipped], ['install the ingest extra for source-audit tests'])
+                self.assertTrue(validate.successful_tests(result, 'core'))
+                self.assertFalse(validate.successful_tests(result, 'full'))
