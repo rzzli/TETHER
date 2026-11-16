@@ -374,6 +374,7 @@
     "tests/test_v02_regressions.py": "maintained",
     "tests/test_validation.py": "maintained",
     "tests/test_validation_archived_syntax.py": "historical_inputs_current_runtime",
+    "tests/test_validation_export.py": "maintained",
     "tests/test_validation_failure_report.py": "maintained",
     "tests/test_validation_live_errors.py": "maintained",
     "tests/test_validation_public_tree.py": "maintained",

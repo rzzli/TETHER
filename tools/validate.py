@@ -187,8 +187,10 @@ def successful_tests(result, mode):
             all(mode == 'core' and reason in EXPECTED_CORE_SKIPS for _,reason in result.skipped))
 
 
-def structural_checks():
-    files = subprocess.check_output(['git','ls-files','-z','--cached','--others','--exclude-standard'],cwd=ROOT).decode().split('\0')
+def structural_checks(*, export_files=None, git_prefix=None):
+    git_prefix = git_prefix or ['git']
+    files = (subprocess.check_output(['git','ls-files','-z','--cached','--others','--exclude-standard'],cwd=ROOT).decode().split('\0')
+             if export_files is None else export_files)
     files = sorted(set(name for name in files if name))
     archived_invalid = []
     for name in files:
@@ -209,7 +211,7 @@ def structural_checks():
                  'experiments/example/reports/run.json','experiments/paper/results.json',
                  'packages/research_notes/session.md','experiments/TODO.md',
                  'packages/tether/memory.md'):
-        if subprocess.run(['git','check-ignore','-q',name],cwd=ROOT).returncode:
+        if subprocess.run([*git_prefix,'check-ignore','-q',name],cwd=ROOT).returncode:
             raise ContractError('Required ignore missing: '+name)
     catalog = read_json(ROOT/'data/catalog/sources.json')
     validate_catalog(catalog)
@@ -218,9 +220,6 @@ def structural_checks():
     if artifact_policy.exists():
         # The frozen engine remains schema-one. Validate the additive canonical
         # policy explicitly; file presence never promotes collection/readiness.
-        canonical_source = str(ROOT/'packages/tether/src')
-        if canonical_source not in sys.path:
-            sys.path.insert(0, canonical_source)
         from tether._catalog_policy import strict_json, validate_policy, validate_source_catalog
         policy = strict_json(artifact_policy.read_bytes())
         validate_policy(policy)
@@ -231,6 +230,33 @@ def structural_checks():
     # prerequisite for installing or validating a clean source checkout.
     return {'tracked_scope_files':len(files),'providers':len(catalog['providers']),'datasets':len(catalog['datasets']),
             'preserved_invalid_python_archives':archived_invalid}
+
+
+def structural_export_checks():
+    """Check a Git-free export using temporary Git metadata for ignore semantics.
+
+    No metadata or index is written into the source. Git itself is still a
+    validation dependency; Git history and the parent checkout are not.
+    """
+    if (ROOT/'.git').exists():
+        raise ContractError('Export layout must not contain Git metadata')
+    files = []
+    for path in ROOT.rglob('*'):
+        if path.is_symlink() or getattr(path.lstat(), 'st_file_attributes', 0) & 0x400:
+            raise ContractError('Export layout contains a linked path')
+        if path.is_file():
+            files.append(path.relative_to(ROOT).as_posix())
+    with tempfile.TemporaryDirectory(prefix='tether-export-index-') as folder:
+        base = Path(folder)
+        template = base/'empty-template'; template.mkdir()
+        excludes = base/'empty-excludes'; excludes.write_bytes(b'')
+        git = base/'repository'
+        subprocess.run(['git', 'init', '--quiet', '--template', str(template), str(git)],
+                       check=True, capture_output=True, timeout=30)
+        prefix = ['git', '-c', 'core.excludesFile='+str(excludes),
+                  '--git-dir='+str(git/'.git'), '--work-tree='+str(ROOT)]
+        result = structural_checks(export_files=files, git_prefix=prefix)
+    return dict(result, layout='export', source_git_metadata_created=False)
 
 
 def powershell_check():
@@ -265,8 +291,16 @@ def validate_engine_wheel(wheel):
 
 def package_check(directory):
     constraints = ROOT/'tools/build-constraints.txt'
+    # Setuptools writes build/ and egg-info during wheel construction. Keep
+    # those outputs in owned scratch even when validating a read-only export.
+    staged = directory/'package-source'
+    staged.mkdir()
+    for name in ('pyproject.toml', 'LICENSE'):
+        shutil.copyfile(ROOT/name, staged/name)
+    shutil.copytree(ROOT/'src', staged/'src',
+                    ignore=shutil.ignore_patterns('__pycache__', '*.egg-info'))
     subprocess.run(['uv','build','--offline','--build-constraints',str(constraints),
-                    '--python',sys.executable,'--wheel','--out-dir',str(directory/'dist')],cwd=ROOT,check=True,capture_output=True)
+                    '--python',sys.executable,'--wheel','--out-dir',str(directory/'dist')],cwd=staged,check=True,capture_output=True)
     wheel = next((directory/'dist').glob('*.whl'))
     inventory = validate_engine_wheel(wheel)
     environment = directory/'wheel-environment'
@@ -285,10 +319,19 @@ def package_check(directory):
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--mode',choices=('core','full'),default='full')
+    parser.add_argument('--profile', choices=('all-current', 'maintained'), default='all-current',
+                        help='Explicit maintained scope works without historical Git inputs; default gate is unchanged')
+    parser.add_argument('--reverse', action='store_true', help='Reverse maintained test order')
+    parser.add_argument('--layout', choices=('checkout', 'export'), default='checkout',
+                        help='Export checks a Git-free source tree without borrowing parent history')
     parser.add_argument('--report',type=Path)
     parser.add_argument('--package',action='store_true')
     parser.add_argument('--failfast',action='store_true',help='Stop failed test execution after recording its first traceback')
     args = parser.parse_args(argv)
+    if args.reverse and args.profile != 'maintained':
+        parser.error('--reverse requires --profile maintained')
+    if args.layout == 'export' and args.profile != 'maintained':
+        parser.error('--layout export requires --profile maintained; historical checks need their own runtime/history')
     # Reject stale destinations before imports, discovery or expensive checks.
     # Atomic final publication still rejects a competing writer; this preflight
     # is not a cross-process reservation or hard-kill recovery guarantee.
@@ -303,11 +346,18 @@ def main(argv=None):
             if pyarrow.__version__!='21.0.0' or not shutil.which('pwsh'):
                 raise ContractError('Full validation requires pyarrow 21.0.0 and PowerShell 7')
         report['stage'] = 'structural'
-        report['structural'] = structural_checks()
+        report['structural'] = structural_export_checks() if args.layout == 'export' else structural_checks()
         report['stage'] = 'powershell_syntax'
         report['powershell_syntax'] = powershell_check()
         report['stage'] = 'tests'
-        suite = unittest.defaultTestLoader.discover(str(ROOT/'tests'),top_level_dir=str(ROOT))
+        if args.profile == 'maintained':
+            from tools.test_profiles import select_suite
+            policy_path = ROOT/'tools/test-profiles.json'
+            suite, selection = select_suite(ROOT, read_json(policy_path), reverse=args.reverse)
+            report['test_scope'] = dict(selection, policy_sha256=hashlib.sha256(policy_path.read_bytes()).hexdigest())
+        else:
+            suite = unittest.defaultTestLoader.discover(str(ROOT/'tests'),top_level_dir=str(ROOT))
+            report['test_scope'] = {'profile': 'all-current'}
         report['legacy_compatibility_group'] = legacy_compatibility_scope()
         result = unittest.TextTestRunner(verbosity=2, failfast=args.failfast, resultclass=LiveErrorResult).run(suite)
         report['tests']={'run':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),

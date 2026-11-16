@@ -10,7 +10,6 @@ import unittest
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[3]
-sys.path.insert(0, str(ROOT / "packages/tether/src"))
 from tether_engine.agents import ExtractiveBackend, Selection, Usage
 from tether_engine.artifacts import verify_run, write_run
 from tether_engine.chrono import load_snapshot

@@ -9,7 +9,6 @@ import unittest
 
 PROJECT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT.parents[1]
-sys.path.insert(0, str(PROJECT / "src"))
 
 from tether_engine.serde import ContractError, canonical, fingerprint
 from tether_engine.provenance import catalog_index

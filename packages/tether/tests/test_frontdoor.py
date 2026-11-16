@@ -19,7 +19,6 @@ from unittest.mock import Mock, patch
 
 PROJECT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT.parents[1]
-sys.path.insert(0, str(PROJECT / "src"))
 
 from tether_engine import cli as legacy
 from tether_engine.journal import RunJournal, read_chain

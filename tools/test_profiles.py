@@ -7,14 +7,65 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import inspect
 import json
 from pathlib import Path
 import sys
+import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-from tools.test_inventory import source_inventory, write_new
+from tools.test_inventory import flatten, source_inventory, write_new
+
+
+def select_suite(root, policy, *, profile='maintained', reverse=False):
+    """Select an explicit current scope without importing historical suites.
+
+    This is independent of census execution. It does not certify unselected
+    profiles, and it leaves the existing all-current validation gate unchanged.
+    """
+    root = Path(root).resolve()
+    sources = source_inventory(root)
+    files, profiles = policy['files'], policy['profiles']
+    if policy.get('schema_version') != 1 or profile not in profiles:
+        raise ValueError('Unknown test profile')
+    if {row['path'] for row in sources} != set(files):
+        raise ValueError('Every test file requires exactly one scope classification')
+    declarations = {row['path'] + '::' + method['owner'] + '.' + method['method']
+                    for row in sources for method in row['declared']}
+    overrides = policy.get('overrides', {})
+    if set(overrides) - declarations:
+        raise ValueError('Stale method scope override')
+    if any(name not in profiles for name in (*files.values(), *overrides.values())):
+        raise ValueError('Unknown test profile')
+    loader = unittest.TestLoader()
+    selected, excluded = {}, []
+    for source in sources:
+        path = source['path']
+        if files[path] != profile and not any(key.startswith(path + '::') and value == profile
+                                              for key, value in overrides.items()):
+            continue
+        tests = loader.loadTestsFromName(source['module'])
+        if loader.errors:
+            raise ValueError('Profile collection failed: ' + '\n'.join(loader.errors))
+        for test in flatten(tests):
+            method = getattr(test, test._testMethodName)
+            actual_path = Path(inspect.getsourcefile(method)).resolve().relative_to(root).as_posix()
+            key = actual_path + '::' + method.__qualname__
+            assigned = overrides.get(key, files.get(actual_path))
+            if assigned is None:
+                raise ValueError('Collected method has an unclassified source')
+            if assigned == profile:
+                selected.setdefault(test.id(), test)
+            else:
+                excluded.append(dict(id=test.id(), profile=assigned))
+    if not selected:
+        raise ValueError('Selected profile contains no tests')
+    ids = sorted(selected, reverse=reverse)
+    return unittest.TestSuite(selected[name] for name in ids), dict(
+        profile=profile, selected=len(ids), test_ids=ids, excluded_from_mixed_modules=excluded,
+        reverse=reverse, unselected_profiles_executed=False)
 
 
 def classify(root, census, policy):

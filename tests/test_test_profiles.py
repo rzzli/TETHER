@@ -1,11 +1,13 @@
 """Scope routing cannot turn missing, stale or historical checks into passes."""
 import copy
+import importlib.util
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from tools.test_inventory import source_inventory
-from tools.test_profiles import classify
+from tools.test_profiles import classify, select_suite
 
 
 class ProfileTests(unittest.TestCase):
@@ -78,3 +80,51 @@ class ProfileTests(unittest.TestCase):
         self.cases.pop()
         with self.assertRaisesRegex(ValueError, 'omits declared'):
             classify(self.root, self.census, self.policy)
+
+    def fixture_module(self):
+        path = self.root / 'tests/test_a.py'
+        path.write_text('import unittest\nclass A(unittest.TestCase):\n'
+                        '    def test_one(self): pass\n    def test_two(self): pass\n')
+        spec = importlib.util.spec_from_file_location('invented_scope_control', path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module
+
+    def test_selected_gate_excludes_original_bytes_without_importing_other_groups(self):
+        module = self.fixture_module()
+        (self.root / 'tests/test_old.py').write_text('raise AssertionError("Do not import")\n')
+        self.policy['files']['tests/test_old.py'] = 'historical'
+        with patch.object(unittest.TestLoader, 'loadTestsFromName',
+                          return_value=unittest.defaultTestLoader.loadTestsFromModule(module)) as load:
+            suite, report = select_suite(self.root, self.policy)
+        load.assert_called_once_with('tests.test_a')
+        result = unittest.TestResult(); suite.run(result)
+        self.assertEqual(result.testsRun, 1)
+        self.assertTrue(result.wasSuccessful())
+        self.assertEqual(report['excluded_from_mixed_modules'],
+                         [dict(id='invented_scope_control.A.test_two', profile='historical')])
+
+    def test_reverse_selection_preserves_all_selected_ids(self):
+        module = self.fixture_module()
+        self.policy['overrides'] = {}
+        with patch.object(unittest.TestLoader, 'loadTestsFromName',
+                          side_effect=lambda name: unittest.defaultTestLoader.loadTestsFromModule(module)):
+            _, forward = select_suite(self.root, self.policy)
+            _, reverse = select_suite(self.root, self.policy, reverse=True)
+        self.assertEqual(reverse['test_ids'], forward['test_ids'][::-1])
+        self.assertEqual(reverse['selected'], 2)
+
+    def test_unknown_scope_and_missing_classification_fail_before_import(self):
+        with patch.object(unittest.TestLoader, 'loadTestsFromName') as load:
+            with self.assertRaisesRegex(ValueError, 'Unknown'):
+                select_suite(self.root, self.policy, profile='invented')
+            with self.assertRaisesRegex(ValueError, 'Every test file'):
+                select_suite(self.root, dict(self.policy, files={}))
+            load.assert_not_called()
+
+    def test_stale_override_cannot_disappear_from_current_gate(self):
+        self.policy['overrides']['tests/test_a.py::A.test_gone'] = 'historical'
+        with patch.object(unittest.TestLoader, 'loadTestsFromName') as load:
+            with self.assertRaisesRegex(ValueError, 'Stale'):
+                select_suite(self.root, self.policy)
+            load.assert_not_called()

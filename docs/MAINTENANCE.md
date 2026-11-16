@@ -1,6 +1,6 @@
 # Development and maintenance
 
-Use Python 3.11 or later and `uv`. Full validation also requires Windows,
+Use Python 3.11 or later, Git and `uv`. Full validation also requires Windows,
 PowerShell 7 and the optional ingestion dependency. Run commands from the
 repository root.
 
@@ -28,6 +28,22 @@ repository tests, required framework probes, and an offline wheel build plus an
 isolated dependency-free demo and verification. `--report <fresh-path>` retains
 its result; `--failfast` stops after the first failed test. Core mode allows only
 its explicitly named platform/optional-dependency skips.
+
+The maintained scope includes the installed wrapper tests and excludes checks
+that require original Git bytes or a historical runtime. Select it explicitly;
+the default broader gate remains unchanged:
+
+```powershell
+python -B tools/validate.py --mode full --profile maintained --report ../tether-checks/maintained.json
+```
+
+For a clean source ZIP, add `--layout export`. This mode creates temporary Git
+metadata outside the source solely to check ignore rules; it never borrows a
+parent checkout or restores historical records. Git must still be installed.
+`--reverse` reverses the maintained test order. `--package` additionally builds
+from a scratch copy, installs the wheel offline and verifies its demo. Report and
+temporary directories should be outside the exported source tree. Install both
+packages first: tests do not silently add wrapper source paths to the interpreter.
 
 ## Inventory all test modules
 
