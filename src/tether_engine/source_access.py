@@ -13,7 +13,7 @@ import time
 from types import MappingProxyType
 
 from .bundle_files import logical_parts, read_local
-from .serde import ContractError
+from .serde import ContractError, _windows_path_identity
 
 
 def local_path(value):
@@ -67,7 +67,10 @@ def selected_root(value):
             if not stat.S_ISDIR(info.st_mode):
                 raise ContractError(f'Source root is not a directory: {member}')
         else:
-            return original, path
+            # Only caller-selected, already inspected roots are resolved here.
+            # In particular, Windows 8.3 names are aliases without reparse bits.
+            # Serialized source descendants remain lexical until authorization.
+            return original, local_path(_windows_path_identity(path.resolve(strict=True)))
     raise ContractError('Source root contains too many ancestor links')
 
 

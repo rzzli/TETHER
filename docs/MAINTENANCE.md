@@ -23,6 +23,13 @@ dependency-free source-export subset took 51.375 seconds. These are local timing
 not hosted-CI timing promises. The hosted fast-gate target is under five minutes;
 runner identity, actual time and reports must be retained before claiming it passed.
 
+The validation command selects a physical temporary directory for its fixtures
+and subprocesses. This avoids macOS's system `/var` alias in tests that deliberately
+reject linked ancestors. Runtime authorization still requires caller-selected
+roots; metadata never grants access. Tests explicitly cover caller root aliases,
+Windows short-name spelling, denied descendant links, and outputs-only verification
+without reopening originals.
+
 ## Install for validation
 
 ```powershell

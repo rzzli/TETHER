@@ -103,7 +103,11 @@ class InputGraph:
         return self.child(base, node.path)
 
     def child(self, base, relative):
-        return source_child(base, relative) if self.lexical else safe_child(base, relative)
+        if not self.lexical:
+            safe_child(base, relative)  # Preserve the execution containment check.
+        # Proofs describe the declared location, not the host's resolved spelling.
+        # Verification can then compare inventories without touching originals.
+        return source_child(base, relative)
 
     def closure(self, refs: tuple[str, ...]) -> tuple[str, ...]:
         if not refs:

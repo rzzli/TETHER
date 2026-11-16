@@ -16,6 +16,7 @@ import time
 import traceback
 import unittest
 import zipfile
+from contextlib import contextmanager
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,6 +28,31 @@ from tools.review.probe_framework import main as probe_main
 EXPECTED_CORE_SKIPS = {'install the ingest extra for adapter tests',
     'install the ingest extra for source-audit tests', 'PowerShell 7 required for utility integration',
     'native held-handle test requires Windows', 'Windows Job Object qualification'}
+
+
+@contextmanager
+def canonical_test_temporary_directory():
+    """Give no-follow fixtures a physical scratch root, including child processes.
+
+    macOS's system /var temp alias is not a fixture under test. Explicit root
+    alias and malicious-descendant tests still construct their own links.
+    This affects the validation process only, never the runtime's source policy.
+    """
+    previous = tempfile.tempdir
+    environment = {key: os.environ.get(key) for key in ('TEMP', 'TMP', 'TMPDIR')}
+    try:
+        physical = str(Path(tempfile.gettempdir()).resolve(strict=True))
+        tempfile.tempdir = physical
+        for key in environment:
+            os.environ[key] = physical
+        yield physical
+    finally:
+        tempfile.tempdir = previous
+        for key, value in environment.items():
+            if value is None:
+                os.environ.pop(key, None)
+            else:
+                os.environ[key] = value
 
 
 def legacy_compatibility_scope():
@@ -415,4 +441,5 @@ def main(argv=None):
 
 
 if __name__=='__main__':
-    raise SystemExit(main())
+    with canonical_test_temporary_directory():
+        raise SystemExit(main())

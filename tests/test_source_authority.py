@@ -128,6 +128,43 @@ class SourceAuthorityTests(unittest.TestCase):
         answer = verify_run(self.output, source_roots=(link,))
         self.assertEqual(answer['assurance'], 'source_inclusive_semantics')
 
+    def test_selected_root_retains_caller_alias_and_canonical_spelling(self):
+        # Windows resolves an 8.3 ancestor to its long spelling without a link.
+        canonical = self.root / 'canonical-source'
+        with patch.object(Path, 'resolve', return_value=canonical):
+            alias, physical = selected_root(self.source)
+        self.assertEqual(alias, self.source)
+        self.assertEqual(physical, canonical)
+        if os.name == 'nt':
+            import ctypes
+            from ctypes import wintypes
+            short_name = ctypes.windll.kernel32.GetShortPathNameW
+            short_name.argtypes = (wintypes.LPCWSTR, wintypes.LPWSTR, wintypes.DWORD)
+            short_name.restype = wintypes.DWORD
+            buffer = ctypes.create_unicode_buffer(32768)
+            length = short_name(str(self.source), buffer, len(buffer))
+            self.assertGreater(length, 0)
+            self.assertLess(length, len(buffer))
+            # Volumes without 8.3 aliases legitimately return the long spelling.
+            short = Path(buffer.value)
+            self.assertEqual(selected_root(short)[1], self.source.resolve())
+            self.assertEqual(verify_run(self.output, source_roots=(short,))['semantic_consistency'], 'verified')
+
+    def test_raw_root_alias_proofs_match_without_reopening_for_outputs_only(self):
+        raw = self.root / 'raw-originals'
+        shutil.copytree(self.source, raw)
+        alias = self.root / 'raw-alias'
+        self.directory_link(alias, raw)
+        snapshot = read_json(self.source / 'snapshot.json')
+        snapshot['raw_root'] = str(alias)
+        write_json(self.source / 'snapshot.json', snapshot)
+        output = self.root / 'aliased-raw-run'
+        self.build(self.source, output)
+        self.assertEqual(verify_run(output, source_roots=(self.source, alias))['semantic_consistency'], 'verified')
+        # Metadata comparison must not resolve (or open) an ungranted original.
+        shutil.rmtree(raw)
+        self.assertEqual(verify_run(output, verify_sources=False)['source_artifacts_checked'], 0)
+
     def test_descendant_junction_never_grants_access(self):
         link = self.source / 'descendant-link'
         self.directory_link(link, self.root / 'run')

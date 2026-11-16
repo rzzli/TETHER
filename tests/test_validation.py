@@ -1,5 +1,6 @@
 """The validation command must fail when required checks fail or disappear."""
 import io
+import os
 import importlib.util
 from importlib.machinery import ModuleSpec
 import runpy
@@ -15,6 +16,20 @@ from tether_engine.serde import write_json
 
 
 class ValidationGateTests(unittest.TestCase):
+    def test_physical_scratch_root_is_inherited_and_restored_on_failure(self):
+        previous = tempfile.tempdir
+        environment = {key: os.environ.get(key) for key in ('TEMP', 'TMP', 'TMPDIR')}
+        physical = Path(tempfile.gettempdir()).resolve()
+        with self.assertRaisesRegex(RuntimeError, 'fixture failure'):
+            with validate.canonical_test_temporary_directory() as selected:
+                self.assertEqual(selected, str(physical))
+                self.assertEqual(tempfile.tempdir, str(physical))
+                for key in environment:
+                    self.assertEqual(os.environ[key], str(physical))
+                raise RuntimeError('fixture failure')
+        self.assertEqual(tempfile.tempdir, previous)
+        self.assertEqual({key: os.environ.get(key) for key in environment}, environment)
+
     def test_legacy_inventory_never_imports_original_runtime_tests(self):
         from tests import test_refinement_recovery as selection
         with patch.object(selection, 'legacy_suite', side_effect=AssertionError('Historical import forbidden')):

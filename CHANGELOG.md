@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Preserve declared source paths in proof inventories while resolving only
+  caller-selected roots for authorization, including Windows short-name aliases.
+  Run validation fixtures under a physical temporary root on macOS; explicit
+  root-alias and descendant-link security tests remain enabled.
+
 - Add pinned correctness lint, staged strict typing/formatting, and a reviewed
   Windows/3.11 parent-process coverage baseline. Keep tooling out of runtime dependencies.
 - Repair the wrapper lockfile and qualify the noneditable README quick start.
