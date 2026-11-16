@@ -15,7 +15,7 @@ from tether_engine.contracts import Case
 from tether_engine.journal import read_chain
 from tether_engine.serde import ContractError, decode, fingerprint, read_json, sha256_file, write_json
 from tether_engine.workflow import run_workflow
-from tests import test_v02_ingest as fixtures
+from tests import ingest_fixtures as fixtures
 from tools.science.run_comparison import pin
 from tools.science.t6_claim_audit import HYPOTHESIS_FIELDS
 from tools.science.t6_dossier_binding import (audit_bound_claims, bind_manifest,
@@ -24,14 +24,14 @@ from tools.science.t6_dossier_binding import (audit_bound_claims, bind_manifest,
 
 @unittest.skipUnless(importlib.util.find_spec('pyarrow'), 'install the ingest extra for source-audit tests')
 class DossierSourceBindingTests(unittest.TestCase):
-    setUp = fixtures.IngestTests.setUp
-    tearDown = fixtures.IngestTests.tearDown
-    save_manifest = fixtures.IngestTests.save_manifest
-    receipt = fixtures.IngestTests.receipt
-    evidence = fixtures.IngestTests.evidence
+    setUp = fixtures.IngestFixture.setUp
+    tearDown = fixtures.IngestFixture.tearDown
+    save_manifest = fixtures.IngestFixture.save_manifest
+    receipt = fixtures.IngestFixture.receipt
+    evidence = fixtures.IngestFixture.evidence
 
     def prepare(self):
-        output, report = fixtures.IngestTests.build(self)
+        output, report = fixtures.IngestFixture.build(self)
         self.case_folder = output / report['cases'][0]['case_id']
         case = decode(Case, read_json(self.case_folder / 'case.json'))
         store = load_snapshot(self.case_folder / 'snapshot.json', case, self.catalog)

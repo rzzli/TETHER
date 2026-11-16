@@ -13,7 +13,7 @@ from tether_engine.contracts import Case
 from tether_engine.ingest import PILOT, _case_definitions, _load_case_pack, build_snapshot
 from tether_engine.journal import inspect_run, read_chain
 from tether_engine.serde import ContractError, decode, read_json, sha256_file, write_json
-from tests import test_v02_ingest as fixtures
+from tests import ingest_fixtures as fixtures
 
 
 def scope(**changes):
@@ -89,11 +89,11 @@ class CasePackContractTests(unittest.TestCase):
 @unittest.skipUnless(importlib.util.find_spec("pyarrow"), "install the ingest extra for adapter tests")
 class ScienceCaseBuildTests(unittest.TestCase):
     # Reuse invented, receipt-backed format setup without inheriting its test cases.
-    setUp = fixtures.IngestTests.setUp
-    tearDown = fixtures.IngestTests.tearDown
-    save_manifest = fixtures.IngestTests.save_manifest
-    receipt = fixtures.IngestTests.receipt
-    evidence = fixtures.IngestTests.evidence
+    setUp = fixtures.IngestFixture.setUp
+    tearDown = fixtures.IngestFixture.tearDown
+    save_manifest = fixtures.IngestFixture.save_manifest
+    receipt = fixtures.IngestFixture.receipt
+    evidence = fixtures.IngestFixture.evidence
 
     def case_file(self, document=None):
         path = self.root / "cases.json"

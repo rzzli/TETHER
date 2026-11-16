@@ -5,7 +5,7 @@ import unittest
 from unittest.mock import patch
 
 from tether_engine.serde import ContractError,read_json,sha256_file,write_json
-from tests import test_v02_ingest as fixtures
+from tests import ingest_fixtures as fixtures
 from tests import test_science_reference_packets as reference_fixtures
 from tools.science.finalize_reference import assemble
 from tools.science.reference_panel import RUBRIC,validate_q1
@@ -13,11 +13,11 @@ from tools.science.reference_panel import RUBRIC,validate_q1
 
 @unittest.skipUnless(importlib.util.find_spec('pyarrow'),'install the ingest extra for source-audit tests')
 class FinalizeReferenceTests(unittest.TestCase):
-    setUp = fixtures.IngestTests.setUp
-    tearDown = fixtures.IngestTests.tearDown
-    save_manifest = fixtures.IngestTests.save_manifest
-    receipt = fixtures.IngestTests.receipt
-    evidence = fixtures.IngestTests.evidence
+    setUp = fixtures.IngestFixture.setUp
+    tearDown = fixtures.IngestFixture.tearDown
+    save_manifest = fixtures.IngestFixture.save_manifest
+    receipt = fixtures.IngestFixture.receipt
+    evidence = fixtures.IngestFixture.evidence
     make_build = reference_fixtures.ReferencePacketBuildTests.make_build
     prepare = reference_fixtures.ReferencePacketBuildTests.prepare
 

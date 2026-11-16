@@ -11,14 +11,14 @@ from tether_engine.contracts import Case
 from tether_engine.ingest import REVIEW_CONTEXT_COLUMNS
 from tether_engine.serde import ContractError, canonical, decode, read_json
 from tether_engine.workflow import run_workflow
-from tests import test_v02_ingest as fixtures
+from tests import ingest_fixtures as fixtures
 from tools.framework.compare_context_revision import compare_observation
 
 
 @unittest.skipUnless(importlib.util.find_spec("pyarrow"), "install the ingest extra for adapter tests")
 class ContextRevisionTests(unittest.TestCase):
     def setUp(self):
-        self.fixture = fixtures.IngestTests()
+        self.fixture = fixtures.IngestFixture()
         self.fixture.setUp()
         self.addCleanup(self.fixture.tearDown)
 

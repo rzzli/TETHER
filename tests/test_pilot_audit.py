@@ -10,7 +10,7 @@ from tether_engine.chrono import load_snapshot
 from tether_engine.contracts import Case
 from tether_engine.serde import ContractError, decode, read_json, write_json
 from tether_engine.workflow import run_workflow
-from tests import test_v02_ingest as fixtures
+from tests import ingest_fixtures as fixtures
 from tools.framework.run_pilot import SourceAudit
 
 
@@ -18,7 +18,7 @@ from tools.framework.run_pilot import SourceAudit
 class PilotAuditTests(unittest.TestCase):
     def setUp(self):
         # Composition deliberately avoids discovering the adapter tests a second time.
-        self.fixture = fixtures.IngestTests()
+        self.fixture = fixtures.IngestFixture()
         self.fixture.setUp()
         self.addCleanup(self.fixture.tearDown)
         rows = []

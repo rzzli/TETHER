@@ -341,7 +341,7 @@ class ComparisonEvaluationTests(unittest.TestCase):
 @unittest.skipUnless(importlib.util.find_spec('pyarrow'), 'install the ingest extra for source-audit tests')
 class OriginalSelectedRowAuditTests(unittest.TestCase):
     """Real receipt, mapping, normalization and Parquet path; invented sources."""
-    from tests.test_v02_ingest import IngestTests as _Fixture
+    from tests.ingest_fixtures import IngestFixture as _Fixture
     setUp = _Fixture.setUp
     tearDown = _Fixture.tearDown
     save_manifest = _Fixture.save_manifest
@@ -352,7 +352,7 @@ class OriginalSelectedRowAuditTests(unittest.TestCase):
         from tether_engine.ingest import build_snapshot
         from tools.science.role_backend import RoleSelectionBackend
         from tether_engine.workflow import Budget
-        from tests.test_v02_ingest import GENES
+        from tests.ingest_fixtures import GENES
         from tests.test_science_comparison_workflow import NativeFixture, synthetic_policy
         from tools.science.comparison_workflow import ARMS, run_case, verify_case
         from tools.science.run_comparison import pin, selected_store
