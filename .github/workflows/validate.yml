@@ -16,7 +16,7 @@ jobs:
         include:
           - {os: windows-latest, mode: full}
           - {os: ubuntu-latest, mode: core}
-          - {os: macos-latest, mode: core}
+          - {os: macos-15-intel, mode: core}
     runs-on: ${{ matrix.os }}
     timeout-minutes: 45
     steps:

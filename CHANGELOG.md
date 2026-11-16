@@ -6,6 +6,8 @@
   caller-selected roots for authorization, including Windows short-name aliases.
   Run validation fixtures under a physical temporary root on macOS; explicit
   root-alias and descendant-link security tests remain enabled.
+- Pin the macOS CI target to the standard Intel runner after documented ARM64
+  allocation failure. Keep ARM64 installed-core support explicitly unqualified.
 
 - Add pinned correctness lint, staged strict typing/formatting, and a reviewed
   Windows/3.11 parent-process coverage baseline. Keep tooling out of runtime dependencies.

@@ -13,7 +13,8 @@ that every newer interpreter or operating system has passed qualification.
 |---|---|
 | Windows x64, CPython 3.11.15 | Installed maintained gate, clean ZIP, native controls, source-only export and relocated fictional bundle passed locally. |
 | Ubuntu WSL x64, CPython 3.11 | Installed core gate passed locally: 864 collected, 751 executed without skip, 113 explicit platform/dependency skips; 319 source-export tests and installed demo/verification passed. WSL does not qualify hosted Ubuntu or Windows-native behavior. |
-| macOS, CPython 3.11 | CI target; execution evidence pending. |
+| macOS 15 x64, CPython 3.11 | Explicit `macos-15-intel` CI target; installed qualification pending. |
+| macOS ARM64 | Source-export subset passed; installed-core qualification remains unavailable after hosted runner-capacity failure. |
 | Other Python versions/platforms | Unqualified for this development release; earlier component checks do not qualify this version. |
 
 The named local runner is `windows-local-311`: Intel Core i7-14700F, 28 logical
@@ -29,6 +30,11 @@ reject linked ancestors. Runtime authorization still requires caller-selected
 roots; metadata never grants access. Tests explicitly cover caller root aliases,
 Windows short-name spelling, denied descendant links, and outputs-only verification
 without reopening originals.
+
+The macOS CI target is explicitly Intel: GitHub cancelled the ARM64 installed
+job before dispatch because a runner could not be allocated, and its single-job
+retry also remained unassigned. The x64 target retains the same tests, limits
+and dependencies. Its results cannot qualify the unexecuted ARM64 installed gate.
 
 ## Install for validation
 
