@@ -14,7 +14,7 @@ from tether_engine.chrono import load_snapshot
 from tether_engine.contracts import Case, Snapshot, SourceNode
 from tether_engine.provenance import check_receipt_availability
 from tether_engine.serde import ContractError, canonical, decode, encode, fingerprint, parse_json
-from tether_engine.study.stable_read import checked_path, hash_file, read_file
+from tether_engine.stable_read import checked_path, hash_file, read_file
 
 from ._catalog_policy import (authorize_snapshot, reconcile_receipt, strict_json, validate_policy,
                               validate_source_catalog)

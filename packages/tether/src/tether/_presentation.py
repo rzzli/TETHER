@@ -22,8 +22,8 @@ from tether_engine.verification_policy import normalize_anchor, require_semantic
 from tether_engine.journal import RunJournal
 from tether_engine.serde import (ContractError, MAX_LEDGER_JSON_BYTES, MAX_NORMALIZED_JSON_BYTES,
                         canonical, encode, fingerprint, parse_json)
-from tether_engine.study.proofs import capture_file
-from tether_engine.study.stable_read import read_file
+from tether_engine.file_proofs import capture_file
+from tether_engine.stable_read import read_file
 
 from . import __version__
 from ._process import (EngineResult, EngineInterrupted, ProcessLimits, supervise_command,

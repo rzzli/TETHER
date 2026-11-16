@@ -1,5 +1,20 @@
 # Package and version compatibility
 
+## Shared file primitives
+
+File/package proofs and bounded stable reads now live in
+`tether_engine.file_proofs` and `tether_engine.stable_read`. The corresponding
+`tether` aliases expose those same modules. The existing
+`tether_engine.study.proofs` and `tether_engine.study.stable_read` paths remain
+module-identity aliases, so their functions and monkeypatches share one
+implementation. The maintained CLI no longer imports study drivers to read files.
+
+The extraction preserves read bounds, caller-root checks, Windows sharing rules
+and error behavior. Exact package proofs change because their source inventory
+changes. Use the original code and wheel for old implementation-bound proofs;
+this refactor does not migrate or reseal frozen scientific results. Historical
+drivers and their public aliases are still present in this compatibility stage.
+
 ## Explicit source roots
 
 Source-inclusive `verify_run`, public `verify_engine`/`verify_outer`, and
