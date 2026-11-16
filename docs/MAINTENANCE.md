@@ -11,18 +11,35 @@ that every newer interpreter or operating system has passed qualification.
 
 | Platform and interpreter | Current qualification |
 |---|---|
-| Windows x64, CPython 3.11.15 | Installed maintained gate, clean ZIP, native controls, source-only export and relocated fictional bundle passed locally. |
-| Ubuntu WSL x64, CPython 3.11 | Installed core gate passed locally: 864 collected, 751 executed without skip, 113 explicit platform/dependency skips; 319 source-export tests and installed demo/verification passed. WSL does not qualify hosted Ubuntu or Windows-native behavior. |
-| macOS 15 x64, CPython 3.11 | Explicit `macos-15-intel` CI target; installed qualification pending. |
+| Windows x64, CPython 3.11.15 | Hosted full maintained gate: 867 tests, no skips; quality, coverage and offline wheel checks. Local clean-ZIP and relocated fictional-bundle checks also passed. |
+| Ubuntu x64, CPython 3.11.15 | Hosted installed core: 867 collected, 755 passed and 112 explicit platform/dependency skips; offline wheel demo and verification passed. |
+| macOS 15 x64, CPython 3.11.15 | Hosted `macos-15-intel` installed core: 867 collected, 755 passed and 112 explicit platform/dependency skips; offline wheel demo and verification passed. |
 | macOS ARM64 | Source-export subset passed; installed-core qualification remains unavailable after hosted runner-capacity failure. |
 | Other Python versions/platforms | Unqualified for this development release; earlier component checks do not qualify this version. |
+
+The hosted qualification is bound to runtime/source checkpoint `b284790`:
+[installed gates](https://github.com/rzzli/TETHER/actions/runs/43928580514) and
+[source-export gates](https://github.com/rzzli/TETHER/actions/runs/43928580456).
+The source-export subset ran 321 tests without skips on each runner:
+
+| Hosted runner | Actual Python | Fast-gate seconds | Target |
+|---|---|---:|---:|
+| Windows x64 | 3.11.9 | 60.453 | <300 |
+| Ubuntu x64 | 3.11.15 | 19.443 | <300 |
+| macOS 15 Intel | 3.11.9 | 64.262 | <300 |
+
+These timings cover the source-export command, not runner queues or full-suite
+execution. The fast subset does not qualify omitted components. The complete
+repository census reconciles 4,717 test IDs across 375 files: 867 maintained,
+1,735 current migration, 1,929 historical research, 170 historical-input checks
+and 16 original-runtime checks. Collection is not execution of historical tests.
 
 The named local runner is `windows-local-311`: Intel Core i7-14700F, 28 logical
 processors, Windows x64. At `ecf124e`, its 855-test maintained installed gate took
 140.515 seconds and its reversed clean-ZIP gate took 145.484 seconds. The 319-test
 dependency-free source-export subset took 51.375 seconds. These are local timings,
 not hosted-CI timing promises. The hosted fast-gate target is under five minutes;
-runner identity, actual time and reports must be retained before claiming it passed.
+the table above reports the measured qualification run.
 
 The validation command selects a physical temporary directory for its fixtures
 and subprocesses. This avoids macOS's system `/var` alias in tests that deliberately

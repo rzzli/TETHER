@@ -13,8 +13,10 @@
   Windows/3.11 parent-process coverage baseline. Keep tooling out of runtime dependencies.
 - Repair the wrapper lockfile and qualify the noneditable README quick start.
   Preserve platform-skipped test source identities and distinguish absent ingestion
-  dependencies from broken or incompatible installations. Linux WSL core/export
-  checks pass; hosted Windows/Linux/macOS CI qualification remains pending.
+  dependencies from broken or incompatible installations. Hosted Windows full
+  and Ubuntu/macOS Intel core gates pass, with 321-test source-export gates under
+  five minutes on all three runners. Historical suites and ARM64 installed-core
+  support remain outside this qualification.
 - Prepare retained CI reports, measured fast-gate timing and concurrency limits;
   add contribution, security, citation and explicit platform/assurance guidance.
 
