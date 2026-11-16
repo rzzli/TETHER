@@ -41,13 +41,18 @@ def source_inventory(root):
     root = Path(root)
     result = []
     for folder in TEST_ROOTS:
-        for path in sorted((root / folder).rglob('test_*.py')):
+        for path in sorted((root / folder).rglob('*.py')):
             relative = path.relative_to(root).as_posix()
             if '__pycache__' in path.parts:
                 continue
+            declared = declared_methods(path)
+            # load_tests may explicitly load a module without the test_ prefix.
+            # Account for those declarations as source, not only imported IDs.
+            if not path.name.startswith('test_') and not declared:
+                continue
             result.append({'path': relative, 'module': relative[:-3].replace('/', '.'),
                            'sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
-                           'declared': declared_methods(path)})
+                           'declared': declared})
     if not result:
         raise ValueError('No test sources found')
     return sorted(result, key=lambda item: item['path'])

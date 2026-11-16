@@ -90,6 +90,15 @@ class InventoryTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'No test sources'):
             inventory.collect(self.root, self.root / 'output')
 
+    def test_explicitly_loadable_nonprefixed_module_is_in_the_census(self):
+        self.source('compatibility_checks',
+                    'import unittest\nclass Controls(unittest.TestCase):\n'
+                    '    def test_compatible(self): pass\n')
+        report = inventory.collect(self.root, self.root / 'output')
+        self.assertEqual(report['status'], 'collection_complete_not_execution')
+        self.assertEqual(report['counts']['declared_methods'], 1)
+        self.assertEqual(report['sources'][0]['path'], 'tests/compatibility_checks.py')
+
     def test_empty_module_and_self_modified_module_cannot_complete_inventory(self):
         self.source('test_empty', '# no tests\n')
         result = inventory.collect(self.root, self.root / 'empty')

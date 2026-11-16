@@ -55,6 +55,23 @@ Repository source paths are added explicitly inside each worker. Collection is
 for trusted repository tests, not an execution sandbox. A complete census does
 not establish execution, historical compatibility or scientific validity.
 
+An explicit [test-scope policy](../tools/test-profiles.json) maps every test file
+to the component designations in the verification-scope document. Method overrides
+keep original-runtime and original-Git-byte checks separate within mixed modules.
+Reconcile a fresh census with that policy:
+
+```powershell
+python -m tools.test_profiles --inventory tmp/test-census-01/inventory.json --output tmp/test-scope-01.json
+```
+
+Changed source hashes, missing file classifications, omitted methods and obsolete
+overrides fail reconciliation. The result lists every unique method and its scope;
+all execution statuses remain unqualified by this census. The classifications are
+`maintained`, `migration_current`, `historical_research`,
+`historical_inputs_current_runtime` and `original_runtime`. Migration candidates
+remain in the existing full gate. This policy does not remove checks, turn a failed
+historical experiment into a pass, or replace the full or installed-package gates.
+
 The full test-isolation and clean-export gate is still being reconciled. Retain
 the existing validation and installed-package gates alongside this inventory;
 neither a census nor a portable subset replaces them.
