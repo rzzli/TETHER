@@ -1,7 +1,8 @@
 """Fresh bounded byte verification of a pinned metadata screen; no role grant.
 
-This checks retained hashes, not publisher authenticity, schemas or scientific
-semantics. Original files and evaluation-only roles are never modified.
+This checks retained hashes, with optional schema and receipt inspection; it does
+not establish publisher authenticity or scientific semantics. Originals and
+evaluation-only roles are never modified.
 """
 from collections import Counter
 import argparse
@@ -17,9 +18,11 @@ from tether_engine.source_access import SourceAccess, local_path, selected_root
 
 
 def qualify(manifest_path, expected_sha256, output, *, source_roots,
-            max_bytes=512*1024**2, seconds=600, inspect_parquet=False):
-    if type(inspect_parquet) is not bool:
-        raise ContractError('Parquet inspection flag must be boolean')
+            max_bytes=512*1024**2, seconds=600, inspect_parquet=False, inspect_receipts=False):
+    if type(inspect_parquet) is not bool or type(inspect_receipts) is not bool:
+        raise ContractError('Inspection flags must be boolean')
+    if inspect_receipts:
+        from tools.science.source_receipts import qualify_receipt
     if inspect_parquet:
         import pyarrow as pa
         import pyarrow.parquet as pq
@@ -63,6 +66,18 @@ def qualify(manifest_path, expected_sha256, output, *, source_roots,
             items.append((kind, path, digest, size))
     if sum(size for _, _, _, size in items) > max_bytes:
         raise ContractError('Qualification exceeds declared byte cap')
+    if inspect_receipts:
+        metadata_by_path = {local_path(row['path']): row for row in metadata}
+        supplemental_receipt_bytes = 0
+        for row in files:
+            receipt = metadata_by_path.get(local_path(row.get('receipt_path')))
+            if receipt is None or receipt['sha256'] != row.get('receipt_sha256'):
+                raise ContractError('Source receipt requires a matching pinned metadata entry')
+            if receipt['bytes'] > 1024**2:
+                raise ContractError('Receipt exceeds byte limit')
+            supplemental_receipt_bytes += receipt['bytes']
+        if sum(size for _, _, _, size in items) + supplemental_receipt_bytes > max_bytes:
+            raise ContractError('Qualification including receipt replay exceeds byte cap')
     # Preflight every declared path before creating output or reading originals.
     prepared = access.prepare(identities, deadline=deadline)
     if any(prepared.identities[path][2] != size for _, path, _, size in items):
@@ -73,7 +88,7 @@ def qualify(manifest_path, expected_sha256, output, *, source_roots,
         _no_links(output)
     journal = RunJournal(output, kind='build')
     done, measured = Counter(), 0
-    schemas, footer_rows = {}, 0
+    schemas, footer_rows, receipts, receipt_bytes_hashed = {}, 0, [], 0
     originals = {local_path(row['path']): row for row in files}
     failure = None
     try:
@@ -81,7 +96,7 @@ def qualify(manifest_path, expected_sha256, output, *, source_roots,
                        scheduled_originals=len(files), scheduled_metadata=len(metadata), max_bytes=max_bytes)
         for kind, path, digest, size in items:
             payload = None
-            if inspect_parquet and kind == 'original':
+            if (inspect_parquet or inspect_receipts) and kind == 'original':
                 payload = prepared.read(path, 8*1024**2)
                 observed_digest, observed_size = hashlib.sha256(payload).hexdigest(), len(payload)
             else:
@@ -89,7 +104,7 @@ def qualify(manifest_path, expected_sha256, output, *, source_roots,
             measured += observed_size
             if (observed_digest, observed_size) != (digest, size):
                 raise ContractError('Input fingerprint differs from pinned metadata screen')
-            if payload is not None:
+            if inspect_parquet and kind == 'original':
                 original = originals[path]
                 with pq.ParquetFile(pa.BufferReader(payload), pre_buffer=False,
                                     thrift_string_size_limit=8*1024**2,
@@ -104,6 +119,15 @@ def qualify(manifest_path, expected_sha256, output, *, source_roots,
                     raise TimeoutError('Parquet inspection deadline expired')
                 schemas[schema_hash] = schema
                 footer_rows += rows
+            if inspect_receipts and kind == 'original':
+                original = originals[path]
+                receipt_bytes = prepared.read(local_path(original['receipt_path']), 1024**2)
+                receipt_bytes_hashed += len(receipt_bytes)
+                proof = qualify_receipt(receipt_bytes, payload, original)
+                receipts.append(proof)
+                journal.append('source_receipt_verified', path=str(path),
+                               receipt_sha256=proof['receipt_sha256'], receipt_format=proof['receipt_format'],
+                               collection_role=proof['collection_role'], actor_access_granted=False)
             done[kind] += 1
             journal.append('source_bytes_verified', kind=kind, path=str(path), sha256=digest, bytes=size)
         report = {'schema_version': 1, 'status': 'byte_and_footer_integrity_verified' if inspect_parquet else 'byte_integrity_verified',
@@ -115,6 +139,11 @@ def qualify(manifest_path, expected_sha256, output, *, source_roots,
                   'parquet_footer_inspection': inspect_parquet,
                   'footer_rows': footer_rows if inspect_parquet else None,
                   'schemas': schemas,
+                  'receipt_inspection': inspect_receipts, 'receipts': receipts,
+                  'supplemental_receipt_bytes_hashed': receipt_bytes_hashed,
+                  'total_bytes_hashed': measured + receipt_bytes_hashed,
+                  'receipt_adapter_sha256': (hashlib.sha256(Path(__file__).with_name('source_receipts.py').read_bytes()).hexdigest()
+                                             if inspect_receipts else None),
                   'elapsed_seconds': time.monotonic()-started,
                   'verifier_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
         payload = canonical(report)+b'\n'
@@ -131,7 +160,8 @@ def qualify(manifest_path, expected_sha256, output, *, source_roots,
             try:
                 journal.append('build_failed', error_class=type(error).__name__,
                                files_verified=done['original'], metadata_verified=done['metadata'],
-                               bytes_hashed=measured)
+                               bytes_hashed=measured, supplemental_receipt_bytes_hashed=receipt_bytes_hashed,
+                               receipts_verified=len(receipts))
             except BaseException as cleanup:
                 error.add_note('Failure journal append failed: '+type(cleanup).__name__)
         raise
@@ -151,9 +181,10 @@ def main():
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--source-root', type=Path, action='append', required=True)
     parser.add_argument('--inspect-parquet', action='store_true')
+    parser.add_argument('--inspect-receipts', action='store_true')
     args = parser.parse_args()
     report = qualify(args.manifest.absolute(), args.sha256, args.output.absolute(), source_roots=args.source_root,
-                     inspect_parquet=args.inspect_parquet)
+                     inspect_parquet=args.inspect_parquet, inspect_receipts=args.inspect_receipts)
     print(canonical(report).decode())
 
 

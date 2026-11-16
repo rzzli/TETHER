@@ -90,6 +90,53 @@ class ByteQualificationTests(unittest.TestCase):
         self.assertFalse((self.output/'terminal-seal.json').exists())
         self.assertEqual(read_chain(self.output/'journal.jsonl')[-1]['event'], 'build_failed')
 
+    def receipt_fixture(self):
+        receipt = self.root/'receipt.json'
+        row = self.document['files'][0]
+        row.update(receipt_id='fixture', dataset_id='ot_evidence', release='25.09',
+                   source='gene_burden', url='https://example.invalid/fixture',
+                   relative_path='fixture', publisher_algorithm='sha256', publisher_digest=row['sha256'])
+        value = {key: row[key] for key in ('receipt_id', 'dataset_id', 'url', 'relative_path', 'bytes', 'sha256')}
+        value.update(release_id='25.09', status='completed', role='evaluation_only',
+                     completed_at_utc='2026-10-10T00:00:00Z')
+        receipt.write_bytes(canonical(value))
+        row.update(receipt_path=str(receipt), receipt_sha256=hashlib.sha256(receipt.read_bytes()).hexdigest())
+        self.document['metadata_pins'] = [dict(path=str(receipt), bytes=receipt.stat().st_size,
+                                               sha256=row['receipt_sha256'])]
+        self.pin()
+        return receipt
+
+    def test_integrated_receipt_observations_are_sealed_without_actor_grants(self):
+        receipt = self.receipt_fixture()
+        result = self.run_check(inspect_receipts=True)
+        self.assertEqual(result['receipts'][0]['collection_role'], 'evaluation_only')
+        self.assertFalse(result['receipts'][0]['actor_access_granted'])
+        self.assertEqual(result['supplemental_receipt_bytes_hashed'], receipt.stat().st_size)
+        self.assertEqual(result['total_bytes_hashed'], self.source.stat().st_size + 2*receipt.stat().st_size)
+        events = read_chain(self.output/'journal.jsonl')
+        self.assertEqual(sum(e['event'] == 'source_receipt_verified' for e in events), 1)
+
+    def test_receipt_must_be_separately_pinned_before_open(self):
+        self.receipt_fixture()
+        self.document['metadata_pins'] = []; self.pin()
+        with self.assertRaisesRegex(ContractError, 'pinned metadata'):
+            self.run_check(inspect_receipts=True)
+        self.assertFalse(self.output.exists())
+
+    def test_receipt_replay_counts_towards_byte_cap(self):
+        receipt = self.receipt_fixture()
+        with self.assertRaisesRegex(ContractError, 'receipt replay exceeds byte cap'):
+            self.run_check(inspect_receipts=True, max_bytes=self.source.stat().st_size+receipt.stat().st_size)
+        self.assertFalse(self.output.exists())
+
+    def test_corrupt_receipt_preserves_failure_without_success_seal(self):
+        receipt = self.receipt_fixture()
+        receipt.write_bytes(receipt.read_bytes().replace(b'completed', b'corrupted'))
+        with self.assertRaisesRegex(ContractError, 'receipt hash'):
+            self.run_check(inspect_receipts=True)
+        self.assertFalse((self.output/'terminal-seal.json').exists())
+        self.assertEqual(read_chain(self.output/'journal.jsonl')[-1]['event'], 'build_failed')
+
     def parquet_fixture(self):
         import pyarrow as pa
         import pyarrow.parquet as pq
