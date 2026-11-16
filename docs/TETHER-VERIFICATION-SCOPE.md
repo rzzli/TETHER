@@ -58,7 +58,7 @@ Windows-specific file controls do not establish identical POSIX guarantees.
 | Component | Preservation/support designation | Change rule |
 |---|---|---|
 | Engine top-level modules, demos, schemas; public `tether` package | Maintained, with the disclosed verification gaps | Test contract changes across engine, wrapper, bundle and evaluation. |
-| Engine `study/` | Migration candidate; some primitives are live CLI dependencies | Extract and test dependency closure before moving drivers out of the wheel. |
+| Engine `study/` | Migration candidate; shared proof/read primitives have moved to the maintained core with old import aliases preserved | Historical drivers still ship in the compatibility distribution; removal requires an explicit API migration and qualified replacement packaging. |
 | Engine `archive/` | Historical compatibility with live entry points | Preserve original-runtime checks; decide API migration before removal. |
 | `experiments/temporal_audit/` | Maintained descriptive reproduction | Preserve the source-to-table contract and public replay. |
 | Other experiment modules | Historical research; potential shared-code migration candidates | No current-engine or turnkey-reproduction promise; preserve exact protocols/results and extract consumers before archival. |
