@@ -64,7 +64,7 @@ class RuntimeHardeningPeerTests(unittest.TestCase):
             receipt = write_run(output, result, self.store, None, journal)
         finally:
             journal.close()
-        verified = verify_run(output, receipt, source_roots=(self.root,))
+        verified = verify_run(output, receipt, source_roots=(self.root, FIXTURE))
         self.assertEqual(verified['semantic_consistency'], 'verified')
         self.assertEqual(verified['source_binding'], 'current_originals')
         return result, backend

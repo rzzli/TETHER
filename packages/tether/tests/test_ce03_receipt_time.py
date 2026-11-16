@@ -10,12 +10,14 @@ from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "packages/tether/src"))
-sys.path.insert(0, str(Path(__file__).parent))
 
 from tether_engine.serde import ContractError, fingerprint
 from tether_engine.journal import read_chain
 from tether import _catalog_binding as binding, _catalog_policy as policy, _presentation as layer
-from test_catalog_binding import argv, make_fixture, write
+if __package__:
+    from .catalog_fixtures import argv, make_fixture, write
+else:
+    from catalog_fixtures import argv, make_fixture, write
 
 
 def add_raw(fixture, *, used=False, completed="2022-01-01T00:00:00+00:00",
@@ -90,9 +92,7 @@ def reseal_extra_availability(output, descriptor, changes):
 
 class ReceiptAvailabilityTests(unittest.TestCase):
     def setUp(self):
-        cache = ROOT / "data/cache/tether-ce03-tests"
-        cache.mkdir(parents=True, exist_ok=True)
-        self.temp = tempfile.TemporaryDirectory(prefix="receipt-", dir=cache)
+        self.temp = tempfile.TemporaryDirectory(prefix="receipt-")
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
 

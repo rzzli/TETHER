@@ -24,7 +24,7 @@ if os.name == 'nt':
     K.CloseHandle.restype=wintypes.BOOL
 
 TREE_SCRIPT = ('import subprocess,sys,json,time;from pathlib import Path;'
-    'p=subprocess.Popen([sys.executable,"-I","-S","-c","import time;time.sleep(30)"],creationflags=0x08000000);'
+    'p=subprocess.Popen([sys.executable,"-I","-B","-S","-c","import time;time.sleep(30)"],creationflags=0x08000000);'
     'Path(sys.argv[1]).write_text(json.dumps({"grandchild":p.pid}));time.sleep(30)')
 
 @unittest.skipUnless(os.name == 'nt', 'Windows Job Object qualification')
@@ -45,7 +45,7 @@ class WindowsJobTests(unittest.TestCase):
     def tree(self):
         job=WindowsJob()
         self.addCleanup(job.close)
-        p=job.launch([sys.executable,'-I','-S','-c',TREE_SCRIPT,str(self.root/'child.json')],
+        p=job.launch([sys.executable,'-I','-B','-S','-c',TREE_SCRIPT,str(self.root/'child.json')],
             deadline=time.monotonic()+5,stdin=subprocess.DEVNULL,
             stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
         self.addCleanup(lambda:p.wait(timeout=5) if p.poll() is not None else (job.terminate(),p.wait(timeout=5)))
@@ -54,7 +54,7 @@ class WindowsJobTests(unittest.TestCase):
         return job,p,self.hold(child)
     def test_finite_success_and_one_use(self):
         job=WindowsJob();self.addCleanup(job.close)
-        p=job.launch([sys.executable,'-I','-S','-c','print("fixture")'],
+        p=job.launch([sys.executable,'-I','-B','-S','-c','print("fixture")'],
                      deadline=time.monotonic()+5,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
         out,err=p.communicate(timeout=5)
         self.assertEqual(out.strip(),b'fixture');self.assertEqual(p.returncode,0)
@@ -69,7 +69,7 @@ class WindowsJobTests(unittest.TestCase):
     def test_assignment_failure_prevents_execution(self):
         job=WindowsJob();self.addCleanup(job.close)
         marker=self.root/'must-not-exist'
-        command=[sys.executable,'-I','-S','-c','from pathlib import Path;import sys;Path(sys.argv[1]).touch()',str(marker)]
+        command=[sys.executable,'-I','-B','-S','-c','from pathlib import Path;import sys;Path(sys.argv[1]).touch()',str(marker)]
         with patch.object(job,'_assign',side_effect=PermissionError('fixture assignment refusal')):
             with self.assertRaisesRegex(PermissionError,'fixture assignment refusal'):
                 job.launch(command,deadline=time.monotonic()+5)
@@ -79,7 +79,7 @@ class WindowsJobTests(unittest.TestCase):
         job=WindowsJob();self.addCleanup(job.close)
         with patch.object(job,'_resume_initial_thread',side_effect=KeyboardInterrupt('fixture interruption')):
             with self.assertRaises(KeyboardInterrupt):
-                job.launch([sys.executable,'-I','-S','-c','raise SystemExit(0)'],deadline=time.monotonic()+5)
+                job.launch([sys.executable,'-I','-B','-S','-c','raise SystemExit(0)'],deadline=time.monotonic()+5)
         self.assertIsNotNone(job.process.returncode)
     def test_finish_stops_root_and_inherited_grandchild(self):
         job,p,child=self.tree()
@@ -99,13 +99,13 @@ sys.path.insert(0,sys.argv[1])
 from tether_engine.process_tree import WindowsJob
 root=Path(sys.argv[2]);job=WindowsJob()
 code=sys.argv[3]
-p=job.launch([sys.executable,'-I','-S','-c',code,str(root/'child.json')],deadline=time.monotonic()+5,stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+p=job.launch([sys.executable,'-I','-B','-S','-c',code,str(root/'child.json')],deadline=time.monotonic()+5,stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
 while not (root/'child.json').exists():time.sleep(.01)
 (root/'root.json').write_text(json.dumps({'pid':p.pid}))
 while not (root/'exit').exists():time.sleep(.01)
 os._exit(23)
 '''
-        owner=subprocess.Popen([sys.executable,'-I','-S','-c',script,str(HERE),str(self.root),TREE_SCRIPT],
+        owner=subprocess.Popen([sys.executable,'-I','-B','-S','-c',script,str(HERE),str(self.root),TREE_SCRIPT],
             creationflags=0x08000000,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
         try:
             self.wait_file(self.root/'root.json')
@@ -126,13 +126,13 @@ os._exit(23)
         marker, release = self.root/'wrapper-child.json', self.root/'release'
         script = '''import subprocess,sys,time,json
 from pathlib import Path
-p=subprocess.Popen([sys.executable,'-I','-S','-c','import time;time.sleep(5)'],stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+p=subprocess.Popen([sys.executable,'-I','-B','-S','-c','import time;time.sleep(5)'],stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
 Path(sys.argv[1]).write_text(json.dumps({'pid':p.pid}))
 while not Path(sys.argv[2]).exists():time.sleep(.01)
 '''
         with ThreadPoolExecutor(max_workers=1) as executor:
             future = executor.submit(supervise_command,
-                [sys.executable,'-I','-S','-c',script,str(marker),str(release)],
+                [sys.executable,'-I','-B','-S','-c',script,str(marker),str(release)],
                 limits=ProcessLimits(5,4096))
             try:
                 self.wait_file(marker)
@@ -154,7 +154,7 @@ while not Path(sys.argv[2]).exists():time.sleep(.01)
         script = '''import subprocess,sys,time,json
 from pathlib import Path
 sys.stdin.buffer.read()
-p=subprocess.Popen([sys.executable,'-I','-S','-c','import time;time.sleep(5)'],stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+p=subprocess.Popen([sys.executable,'-I','-B','-S','-c','import time;time.sleep(5)'],stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
 Path(sys.argv[1]).write_text(json.dumps({'pid':p.pid}))
 while not Path(sys.argv[2]).exists():time.sleep(.01)
 print('fixture')
@@ -163,7 +163,7 @@ print('fixture')
         self.addCleanup(journal.close)
         with ThreadPoolExecutor(max_workers=1) as executor:
             future = executor.submit(_run_child,
-                [sys.executable,'-I','-S','-c',script,str(marker),str(release)],
+                [sys.executable,'-I','-B','-S','-c',script,str(marker),str(release)],
                 b'fixture',time.monotonic()+10,journal.output,journal)
             try:
                 self.wait_file(marker)
@@ -185,13 +185,13 @@ print('fixture')
         marker = self.root/'server-child.json'
         script = '''import subprocess,sys,time,json
 from pathlib import Path
-p=subprocess.Popen([sys.executable,'-I','-S','-c','import time;time.sleep(5)'],stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+p=subprocess.Popen([sys.executable,'-I','-B','-S','-c','import time;time.sleep(5)'],stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
 Path(sys.argv[1]).write_text(json.dumps({'pid':p.pid}))
 time.sleep(5)
 '''
         executable = Path(sys.executable).absolute()
         proof = capture_file(executable,'python-fixture')
-        spec = ServerSpec((str(executable),'-I','-S','-c',script,str(marker)),
+        spec = ServerSpec((str(executable),'-I','-B','-S','-c',script,str(marker)),
                           proof,(),'127.0.0.1',55581,5,1,1)
         journal = RunJournal(self.root/'server-output',kind='build')
         self.addCleanup(journal.close)
@@ -219,11 +219,11 @@ def exit_on_signal():
 threading.Thread(target=exit_on_signal,daemon=True).start()
 code="""import subprocess,sys,time,json,os
 from pathlib import Path
-p=subprocess.Popen([sys.executable,'-I','-S','-c','import time;time.sleep(15)'],stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+p=subprocess.Popen([sys.executable,'-I','-B','-S','-c','import time;time.sleep(15)'],stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
 Path(sys.argv[1]).write_text(json.dumps({'pid':os.getpid(),'grandchild':p.pid}))
 time.sleep(15)
 """
-argv=[sys.executable,'-I','-S','-c',code,str(root/'tree.json')]
+argv=[sys.executable,'-I','-B','-S','-c',code,str(root/'tree.json')]
 if mode=='wrapper':
     from tether._process import supervise_command,ProcessLimits
     supervise_command(argv,limits=ProcessLimits(20,4096))
@@ -246,7 +246,7 @@ else:
             with self.subTest(mode=mode):
                 root = self.root/mode
                 root.mkdir()
-                owner = subprocess.Popen([sys.executable,'-I','-S','-c',script,str(HERE),
+                owner = subprocess.Popen([sys.executable,'-I','-B','-S','-c',script,str(HERE),
                     str(HERE.parent/'packages/tether/src'),str(root),mode],
                     creationflags=0x08000000,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
                 try:
@@ -267,7 +267,7 @@ else:
         job = WindowsJob()
         self.addCleanup(job.close)
         marker = self.root/'must-not-run'
-        command=[sys.executable,'-I','-S','-c',
+        command=[sys.executable,'-I','-B','-S','-c',
                  'from pathlib import Path;import sys;Path(sys.argv[1]).touch()',str(marker)]
         primary = PermissionError('assignment fixture')
         with patch.object(_process,'process_tree_for',return_value=job), \
@@ -282,7 +282,7 @@ else:
         self.assertFalse(marker.exists())
 
     def test_job_shutdown_does_not_touch_other_owned_fixture_process(self):
-        unrelated = subprocess.Popen([sys.executable,'-I','-S','-c','import time;time.sleep(10)'],
+        unrelated = subprocess.Popen([sys.executable,'-I','-B','-S','-c','import time;time.sleep(10)'],
             creationflags=0x08000000,stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
         try:
             job, process, child = self.tree()
@@ -306,7 +306,7 @@ else:
         with patch.object(_process,'process_tree_for',return_value=job), \
                 patch.object(job,'_resume_initial_thread',side_effect=interrupted) as resumed, \
                 self.assertRaises(_process.EngineInterrupted) as caught:
-            _process.supervise_command([sys.executable,'-I','-S','-c','import time;time.sleep(10)'])
+            _process.supervise_command([sys.executable,'-I','-B','-S','-c','import time;time.sleep(10)'])
         resumed.assert_called_once()
         self.assertIs(caught.exception.__cause__,primary)
         report = caught.exception.result.supervision

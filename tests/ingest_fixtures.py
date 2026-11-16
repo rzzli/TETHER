@@ -78,4 +78,3 @@ class IngestFixture:
         output = self.root / "snapshot"
         report = build_snapshot(self.manifest, self.catalog, output)
         return output, report
-
