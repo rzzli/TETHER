@@ -38,6 +38,25 @@ def _utc(value):
     return value  # Retain the original precision/spelling; do not backdate it.
 
 
+def conservative_utc_bound(value):
+    """Ceil a UTC receipt instant to microseconds without backdating availability.
+
+    Keep the original timestamp in provenance; this value is only a conservative
+    availability bound compatible with the runtime's timestamp precision.
+    """
+    match = re.fullmatch(r'(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})(?:\.(\d{1,9}))?(?:Z|\+00:00)',
+                         value) if isinstance(value, str) else None
+    _need(match is not None, 'Receipt bound requires an explicit UTC instant of at most nanosecond precision')
+    fraction = match.group(2) or ''
+    try:
+        stamp = datetime.fromisoformat(match.group(1)+'.'+fraction[:6].ljust(6, '0')+'+00:00')
+        if any(digit != '0' for digit in fraction[6:]):
+            stamp += timedelta(microseconds=1)
+    except (ValueError, OverflowError) as error:
+        raise ContractError('Invalid UTC receipt bound') from error
+    return stamp.isoformat(timespec='microseconds').replace('+00:00', 'Z')
+
+
 def qualify_receipt(receipt_bytes, payload, expected):
     """Check two supported formats against caller-selected, pinned identities.
 

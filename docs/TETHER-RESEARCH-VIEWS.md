@@ -3,8 +3,8 @@
 The experimental reducer in [research_views.py](../tools/science/research_views.py)
 constructs archived, contemporary date-filtered and contemporary unfiltered views
 over a fixed hypothesis universe. It is separate from production agent admission.
-It currently operates on caller-supplied rows: **a passing reducer test does not
-qualify local datasets or authorize a real-data experiment.** The optional
+The pure reducer operates on caller-supplied rows: **a passing reducer test does
+not qualify local datasets or authorize a real-data experiment.** The optional
 [Arrow reader](../tools/science/research_parquet.py) checks exact original bytes,
 uses caller-approved roots and selects approved columns with `pyarrow==21.0.0`.
 It filters candidate target/disease IDs before converting rows to Python. Its
@@ -55,9 +55,25 @@ failure/interruption and do not substitute for the enclosing run journal.
 The implemented reducer and receipt checks have invented-data regression tests in
 [test_research_views.py](../tests/test_research_views.py) and
 [test_source_receipt_qualification.py](../tests/test_source_receipt_qualification.py).
-The enclosing durable driver, explicit use grants, mapping qualification and
-real-data three-view qualification remain required before P11 can pass. P13–P15 separately qualify the
-scientific method, freeze its protocol and execute the resulting study.
+The [durable research driver](../tools/science/research_build.py) binds an
+independently selected request hash and owner-approved grant hash to exact
+originals, catalog permissions, implementation fingerprints and mapping inputs.
+It reserves output before inspection, journals progress/failures, checks source
+receipts and mappings, and seals three bounded views. A failed directory is
+preserved; a retry requires a fresh directory. `inspect-run` describes build
+journals without restarting them. Each view has a 64 MiB limit.
+
+High-precision UTC receipt times are rounded upward to microseconds only for
+availability bounds; original timestamp strings remain in provenance. Public
+download times do not establish historical availability. Old collection roles
+remain unchanged, and only the separately approved original artifacts receive
+the isolated research-use role. Production admission is unchanged.
+
+Real-data construction, source-inclusive audit and a retained feasibility
+decision are required before P11 can pass. P13–P15 separately qualify the
+scientific method, freeze its protocol and execute the resulting study. A sealed
+development build is neither an independently replayed result nor a scientific
+validation claim.
 
 The [identifier-index builder](../tools/science/research_mapping.py) independently
 replays target and disease IDs from the pinned 24.09 originals. It checks complete

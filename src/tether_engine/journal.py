@@ -162,9 +162,10 @@ def inspect_run(output: Path) -> dict:
                 progress = event["details"]
             elif event["event"] in ("build_failed", "build_interrupted"):
                 failure = event["details"]
+        reports = [name for name in ('build-report.json', 'report.json', 'index.json') if (output / name).is_file()]
         return {"schema_version": 2, "kind": "build", "last_event": events[-1]["event"],
                 "durable_events": len(events), "stage": stage, "progress": progress,
-                "failure": failure, "build_report_present": (output / "build-report.json").is_file(),
+                "failure": failure, "build_report_present": bool(reports), "build_report_files": reports,
                 "recovery_action": "inspect only; start any replacement build in a new output directory"}
     attempts, measured, estimated = {}, {"input_tokens": 0, "output_tokens": 0, "cost_usd": 0}, {
         "input_tokens": 0, "output_tokens": 0, "cost_usd": 0}

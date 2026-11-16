@@ -4,7 +4,7 @@ import hashlib
 import unittest
 
 from tether_engine.serde import ContractError, canonical
-from tools.science.source_receipts import qualify_receipt
+from tools.science.source_receipts import qualify_receipt, conservative_utc_bound
 
 
 class SourceReceiptTests(unittest.TestCase):
@@ -132,6 +132,22 @@ class SourceReceiptTests(unittest.TestCase):
         self.receipt['role'] = 'evaluation_only'
         self.assertEqual(self.check()['collection_role'], 'evaluation_only')
         self.assertFalse(self.check()['actor_access_granted'])
+
+    def test_high_precision_receipt_bound_rounds_up_and_preserves_exact_values(self):
+        self.assertEqual(conservative_utc_bound('2026-10-11T02:11:32.3798602+00:00'),
+                         '2026-10-11T02:11:32.379861Z')
+        self.assertEqual(conservative_utc_bound('2026-10-11T02:11:32.3798600+00:00'),
+                         '2026-10-11T02:11:32.379860Z')
+        self.assertEqual(conservative_utc_bound('2026-10-11T23:59:59.999999999Z'),
+                         '2026-10-12T00:00:00.000000Z')
+        self.assertEqual(conservative_utc_bound('2026-10-11T02:11:32Z'),
+                         '2026-10-11T02:11:32.000000Z')
+
+    def test_receipt_bound_rejects_ambiguous_or_excess_precision(self):
+        for value in ('2026-10-11', '2026-10-11T02:11:32',
+                      '2026-10-11T02:11:32+01:00', '2026-10-11T02:11:32.1234567891Z'):
+            with self.subTest(value=value):
+                with self.assertRaises(ContractError): conservative_utc_bound(value)
 
 
 if __name__ == '__main__':
