@@ -72,7 +72,7 @@ PRIVATE_COMPONENTS = frozenset({
 })
 PUBLIC_DOC_FILES = frozenset({
     'docs/ARCHIVE.md', 'docs/FRAMEWORK.md', 'docs/MAINTENANCE.md', 'docs/PORTABLE-BUNDLE.md', 'docs/RESULTS.md',
-    'docs/TETHER-CATALOG-POLICY.md', 'docs/TETHER-VERIFICATION-SCOPE.md',
+    'docs/TETHER-CATALOG-POLICY.md', 'docs/TETHER-VERIFICATION-SCOPE.md', 'docs/TETHER-RESEARCH-VIEWS.md',
 })
 PUBLIC_DATA_FILES = frozenset({
     'data/.gitignore', 'data/README.md', 'data/catalog/README.md',

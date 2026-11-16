@@ -58,3 +58,12 @@ The implemented reducer and receipt checks have invented-data regression tests i
 The enclosing durable driver, explicit use grants, mapping qualification and
 real-data three-view qualification remain required before P11 can pass. P13–P15 separately qualify the
 scientific method, freeze its protocol and execute the resulting study.
+
+The [identifier-index builder](../tools/science/research_mapping.py) independently
+replays target and disease IDs from the pinned 24.09 originals. It checks complete
+publisher-listed partition membership, receipt and payload hashes, the retained
+release notice, physical row counts and unique canonical IDs. Only `id` plus
+`approvedSymbol` or `name` are decoded. A fresh output directory contains a
+hash-chained journal, source-linked index and terminal seal; failures remain
+unsealed. This diagnostic supplies identifier membership and never grants a new
+use permission or upgrades scientific validation.
