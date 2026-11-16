@@ -2,6 +2,7 @@
 
 import hashlib
 import io
+import json
 import unittest
 import urllib.error
 import urllib.request
@@ -236,6 +237,42 @@ class TypedReportingTransportTests(unittest.TestCase):
                         dict(stop=True, stop_type="word", stopping_word="<|im_end|>")):
             result = self.client(Opener(canonical(native(**changes)))).execute("prompt")
             self.assertEqual(result.status, "returned")
+
+    def test_unicode_rejection_retains_accounting_but_never_accepts_content(self):
+        for changes in (dict(content="\ud800"), dict(model="\udfff"),
+                        {"extra": {"\ud800": "metadata"}},
+                        {"extra": ["\udfff"]}):
+            with self.subTest(field=next(iter(changes))):
+                raw = json.dumps(native(**changes), ensure_ascii=True).encode("ascii")
+                events = []
+                result = self.client(Opener(raw), retain=events.append).execute("prompt")
+                self.assertEqual(result.status, "failed")
+                self.assertIn("surrogates not allowed", result.error)
+                self.assertEqual(dict(result.measured_usage),
+                                 dict(input_tokens=2, output_tokens=3, cost_usd=0.0))
+                self.assertIsNone(result.content)
+                self.assertIsNone(result.content_sha256)
+                self.assertEqual(result.raw_envelope, raw)
+                self.assertEqual(events[-1]["result"], result)
+
+    def test_ambiguous_or_incomplete_json_cannot_supply_measured_usage(self):
+        valid = canonical(native())
+        for raw in (valid[:-1], valid + b'{}',
+                    valid[:-1] + b',"tokens_predicted":3}',
+                    valid[:-1] + b',"metadata":1e9999}',
+                    valid[:-1] + b',"metadata":' + b'[' * 129 + b'0' + b']' * 129 + b'}'):
+            with self.subTest(sha256=hashlib.sha256(raw).hexdigest()):
+                result = self.client(Opener(raw)).execute("prompt")
+                self.assertEqual(result.status, "failed")
+                self.assertIsNone(result.measured_usage)
+                self.assertIsNone(result.content)
+
+    def test_valid_unicode_pair_retains_success_and_usage(self):
+        raw = json.dumps(native(content="\U0001f600"), ensure_ascii=True).encode("ascii")
+        result = self.client(Opener(raw)).execute("prompt")
+        self.assertEqual(result.status, "returned")
+        self.assertEqual(result.content, "\U0001f600".encode("utf-8"))
+        self.assertEqual(result.measured_usage["output_tokens"], 3)
 
     def test_explicit_word_cause_always_requires_exact_requested_stopping_word(self):
         for changes in (dict(stopped_word=True), dict(stopped_word=True, stopping_word=None),

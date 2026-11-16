@@ -51,6 +51,15 @@ def _pairs(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
 
 
 def parse_json(payload: str | bytes) -> Any:
+    return _parse_json(payload, validate_unicode=True)
+
+
+def _parse_json(payload: str | bytes, *, validate_unicode: bool) -> Any:
+    """Internal staging for transport accounting; admission always checks text.
+
+    A transport can retain integer usage from a complete, unambiguous envelope
+    before rejecting invalid Unicode. The public parser never enables that mode.
+    """
     def bad_constant(value: str) -> None:
         raise ContractError(f"Non-finite JSON number: {value}")
 
@@ -77,11 +86,12 @@ def parse_json(payload: str | bytes) -> Any:
                 continue
             if isinstance(value, (dict, list)) and depth >= 128:
                 raise ContractError('JSON nesting exceeds depth limit 128')
-            if isinstance(value, str):
+            if isinstance(value, str) and validate_unicode:
                 value.encode('utf-8')
             elif isinstance(value, dict):
-                for key in value:
-                    key.encode('utf-8')
+                if validate_unicode:
+                    for key in value:
+                        key.encode('utf-8')
                 stack.append((iter(value.values()), depth + 1))
             elif isinstance(value, list):
                 stack.append((iter(value), depth + 1))

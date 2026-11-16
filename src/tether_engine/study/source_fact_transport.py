@@ -18,7 +18,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-from tether_engine.serde import ContractError, Frozen, canonical, freeze, parse_json
+from tether_engine.serde import ContractError, Frozen, _parse_json, canonical, freeze
 
 
 MAX_NETSTAT_BYTES = 1024 * 1024
@@ -330,8 +330,12 @@ class TypedReportingClient:
                         envelope_complete=len(captured) <= MAX_ENVELOPE_BYTES)
                     _remaining(deadline)
                     _need(state["envelope_complete"], "Completion envelope exceeds 2 MiB")
-                    native = parse_json(raw)
+                    native = _parse_json(raw, validate_unicode=False)
                     state["measured_usage"] = _usage(native)
+                    # Usage is accounting, not content admission. Reject invalid
+                    # strings anywhere in the complete envelope before exposing
+                    # content, including ignored provider metadata and keys.
+                    canonical(native)
                     _need(type(native.get("content")) is str, "Completion content must be text")
                     content = native["content"].encode("utf-8")
                     state.update(content=content, content_sha256=hashlib.sha256(content).hexdigest())
