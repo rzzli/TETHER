@@ -12,7 +12,7 @@ that every newer interpreter or operating system has passed qualification.
 | Platform and interpreter | Current qualification |
 |---|---|
 | Windows x64, CPython 3.11.15 | Installed maintained gate, clean ZIP, native controls, source-only export and relocated fictional bundle passed locally. |
-| Ubuntu WSL x64, CPython 3.11 | Local installed/export qualification in progress; no Linux full/native-Windows claim. |
+| Ubuntu WSL x64, CPython 3.11 | Installed core gate passed locally: 864 collected, 751 executed without skip, 113 explicit platform/dependency skips; 319 source-export tests and installed demo/verification passed. WSL does not qualify hosted Ubuntu or Windows-native behavior. |
 | macOS, CPython 3.11 | CI target; execution evidence pending. |
 | Other Python versions/platforms | Unqualified for this development release; earlier component checks do not qualify this version. |
 

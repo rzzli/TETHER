@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+- Add pinned correctness lint, staged strict typing/formatting, and a reviewed
+  Windows/3.11 parent-process coverage baseline. Keep tooling out of runtime dependencies.
+- Repair the wrapper lockfile and qualify the noneditable README quick start.
+  Preserve platform-skipped test source identities and distinguish absent ingestion
+  dependencies from broken or incompatible installations. Linux WSL core/export
+  checks pass; hosted Windows/Linux/macOS CI qualification remains pending.
+- Prepare retained CI reports, measured fast-gate timing and concurrency limits;
+  add contribution, security, citation and explicit platform/assurance guidance.
+
 - Build slim engine `0.6.0.dev1` and wrapper `0.8.0.dev1` wheels. Preserve core
   CLI and archive commands; remove historical study drivers, resources and 35
   aliases from default installations. Preserve original source/tests at `6b20498`
