@@ -75,7 +75,7 @@ def collect_worker(root, module):
     for test in flatten(suite):
         row = {'id': test.id(), 'path': None, 'owner': None, 'method': None}
         try:
-            method = getattr(test, test._testMethodName)
+            method = inspect.unwrap(getattr(test, test._testMethodName))
             row.update(path=Path(inspect.getsourcefile(method)).resolve().relative_to(root).as_posix(),
                        owner=method.__qualname__.rsplit('.', 1)[0], method=test._testMethodName)
         except (AttributeError, TypeError, ValueError):

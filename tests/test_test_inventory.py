@@ -35,6 +35,16 @@ class InventoryTests(unittest.TestCase):
         self.assertNotIn('TETHER_CENSUS_MARKER', os.environ)
         self.assertFalse(list((self.root / 'tests').rglob('__pycache__')))
 
+    def test_platform_skip_retains_its_declared_method_in_census(self):
+        self.source("test_skipped", 'import unittest\nclass A(unittest.TestCase):\n'
+                    ' @unittest.skip("invented platform restriction")\n'
+                    ' def test_control(self): raise AssertionError("must not execute")\n')
+        result = inventory.collect(self.root, self.root / "output")
+        self.assertEqual(result["status"], "collection_complete_not_execution")
+        self.assertEqual(result["counts"]["uncollected_declarations"], 0)
+        self.assertEqual(result["counts"]["unique_test_ids"], 1)
+        self.assertEqual(result["tests_executed"], 0)
+
     def test_missing_import_retains_declared_methods_and_failure(self):
         self.source('test_bad', 'import missing_tether_fixture_dependency\nimport unittest\n'
                     'class Bad(unittest.TestCase):\n def test_missing(self): pass\n')

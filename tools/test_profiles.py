@@ -50,7 +50,7 @@ def select_suite(root, policy, *, profile='maintained', reverse=False):
         if loader.errors:
             raise ValueError('Profile collection failed: ' + '\n'.join(loader.errors))
         for test in flatten(tests):
-            method = getattr(test, test._testMethodName)
+            method = inspect.unwrap(getattr(test, test._testMethodName))
             actual_path = Path(inspect.getsourcefile(method)).resolve().relative_to(root).as_posix()
             key = actual_path + '::' + method.__qualname__
             assigned = overrides.get(key, files.get(actual_path))

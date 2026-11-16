@@ -104,6 +104,19 @@ class ProfileTests(unittest.TestCase):
         self.assertEqual(report['excluded_from_mixed_modules'],
                          [dict(id='invented_scope_control.A.test_two', profile='historical')])
 
+    def test_platform_skip_keeps_original_source_scope_and_skip_accounting(self):
+        module = self.fixture_module()
+        module.A.test_one = unittest.skip("invented platform restriction")(module.A.test_one)
+        with patch.object(unittest.TestLoader, "loadTestsFromName",
+                          return_value=unittest.defaultTestLoader.loadTestsFromModule(module)):
+            suite, report = select_suite(self.root, self.policy)
+        self.assertEqual(report["selected"], 1)
+        result = unittest.TestResult()
+        suite.run(result)
+        self.assertEqual(result.testsRun, 1)
+        self.assertEqual(len(result.skipped), 1)
+        self.assertEqual(result.skipped[0][1], "invented platform restriction")
+
     def test_reverse_selection_preserves_all_selected_ids(self):
         module = self.fixture_module()
         self.policy['overrides'] = {}
