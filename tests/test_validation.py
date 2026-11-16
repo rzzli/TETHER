@@ -11,9 +11,33 @@ from pathlib import Path
 from unittest.mock import patch
 
 from tools import validate
+from tether_engine.serde import write_json
 
 
 class ValidationGateTests(unittest.TestCase):
+    @staticmethod
+    def passing_probe_report():
+        output = Path(sys.argv[sys.argv.index('--output') + 1])
+        profile = sys.argv[sys.argv.index('--profile') + 1]
+        write_json(output, {'profile': profile, 'probes': {'fixture': {'passed': True}}})
+        return 0
+
+    def test_probe_scope_and_details_survive_temporary_directory_cleanup(self):
+        result = self.result('passed')
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)/'validation.json'
+            with patch.object(validate, 'structural_checks', return_value={}), \
+                 patch.object(validate, 'powershell_check', return_value=True), \
+                 patch('tools.test_profiles.select_suite', return_value=([], {'profile': 'maintained'})), \
+                 patch.object(validate.unittest.TextTestRunner, 'run', return_value=result), \
+                 patch.object(validate, 'probe_main', side_effect=self.passing_probe_report), \
+                 patch('sys.stdout', new_callable=io.StringIO):
+                self.assertEqual(validate.main(['--mode', 'core', '--profile', 'maintained',
+                                                '--report', str(output)]), 0)
+            retained = validate.read_json(output)['required_probes']
+            self.assertEqual(retained['profile'], 'maintained')
+            self.assertTrue(retained['probes']['fixture']['passed'])
+
     def result(self, outcome):
         def fixture():
             if outcome == 'failure':
@@ -31,7 +55,7 @@ class ValidationGateTests(unittest.TestCase):
                  patch.object(validate, 'powershell_check', return_value=True), \
                  patch.object(validate.unittest.defaultTestLoader, 'discover', return_value=[]), \
                  patch.object(validate.unittest.TextTestRunner, 'run', return_value=result), \
-                 patch.object(validate, 'probe_main', return_value=0), \
+                 patch.object(validate, 'probe_main', side_effect=self.passing_probe_report), \
                  patch('sys.stdout', new_callable=io.StringIO):
                 self.assertEqual(validate.main(['--mode', 'core']), 1)
 

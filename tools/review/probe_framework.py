@@ -289,10 +289,12 @@ def required_probes_passed(results):
     return bool(results) and all(result.get("passed") is True for result in results.values())
 
 
-def main():
+def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
-    args = parser.parse_args()
+    parser.add_argument("--profile", choices=("all-current", "maintained"), default="all-current",
+                        help="Maintained probes run without Git history; the default also verifies archived v1")
+    args = parser.parse_args(argv)
     if args.output.exists():
         parser.error("Refusing to overwrite a retained review; choose a new output path")
     probes = {"F01_t6_future_program": t6_future_program,
@@ -303,8 +305,15 @@ def main():
               "semantic_output_binding": semantic_output_binding,
               "catalog_policy_archived": archived_catalog_policy,
               "missingness_preserved": missingness_feature_contract,
-              "computed_input_eligibility": new_computation_old_inputs,
-              "legacy_verification": legacy_verification}
+              "computed_input_eligibility": new_computation_old_inputs}
+    historical_checks = {}
+    if args.profile == "all-current":
+        probes["legacy_verification"] = legacy_verification
+    else:
+        historical_checks["legacy_verification"] = {
+            "status": "not_executed_requires_pinned_history",
+            "meaning": "Run the all-current profile with the archived v1 checkpoint; not a maintained-probe pass",
+        }
     results = {}
     for name, probe in probes.items():
         with tempfile.TemporaryDirectory(prefix="tether-review-v2-") as directory:
@@ -315,6 +324,7 @@ def main():
                                  "message": str(error)}
             results[name]["status"] = "passed" if results[name].get("passed") is True else "failed"
     report_value = {"schema_version": 2, "reviewed_at_utc": datetime.now(timezone.utc),
+              "profile": args.profile, "historical_checks": historical_checks,
               "scope": "Current v2 fictional probes; no downloads, models or scientific conclusions",
               "fixture_schema_version": 2,
               "legacy_review": {"path": str(LEGACY_REPORT.relative_to(PROJECT)),

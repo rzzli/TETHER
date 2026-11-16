@@ -368,8 +368,9 @@ def main(argv=None):
             previous=sys.argv
             report['stage'] = 'required_probes'
             try:
-                sys.argv=['probe_framework','--output',str(directory/'probes.json')]
+                sys.argv=['probe_framework','--output',str(directory/'probes.json'), '--profile', args.profile]
                 report['required_probes_exit_code']=probe_main()
+                report['required_probes'] = read_json(directory/'probes.json')
             finally:
                 sys.argv=previous
             success = success and report['required_probes_exit_code']==0

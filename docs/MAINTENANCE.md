@@ -45,6 +45,12 @@ from a scratch copy, installs the wheel offline and verifies its demo. Report an
 temporary directories should be outside the exported source tree. Install both
 packages first: tests do not silently add wrapper source paths to the interpreter.
 
+The selected profile also applies to required probes. Maintained mode executes
+the nine current fictional probes and records legacy byte verification separately
+as `not_executed_requires_pinned_history`. The default retains that historical
+probe as a required check. Validation reports embed the complete probe results;
+an unexecuted historical check is never reported as passing.
+
 ## Inventory all test modules
 
 The default gate does not collect every experimental suite. Before claiming
