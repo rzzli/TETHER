@@ -9,7 +9,7 @@ from tether_engine.serde import canonical
 from tether._process import ProcessLimits, supervise_command
 from experiments.scifact.baseline import LEARNER_SETTINGS, VECTORIZER_SETTINGS, SEED
 from experiments.scifact.tether_adapter import verify_session
-from test_scifact_baseline import fictional
+from experiments.scifact.tests.fixtures import fictional
 
 ROOT = Path(__file__).resolve().parents[3]
 WORKER = ROOT/'experiments/scifact/worker.py'

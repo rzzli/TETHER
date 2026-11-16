@@ -10,8 +10,8 @@ from sklearn.exceptions import ConvergenceWarning
 
 from experiments.scifact.baseline import fit_model, SEED
 from experiments.scifact.tether_adapter import NativeSession, verify_session
-from test_scifact_baseline import fictional
-from test_scifact_policy import resources
+from experiments.scifact.tests.fixtures import fictional
+from experiments.scifact.tests.fixtures import resources
 
 
 class DeclaredQualificationTests(unittest.TestCase):

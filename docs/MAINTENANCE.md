@@ -29,6 +29,36 @@ isolated dependency-free demo and verification. `--report <fresh-path>` retains
 its result; `--failfast` stops after the first failed test. Core mode allows only
 its explicitly named platform/optional-dependency skips.
 
+## Inventory all test modules
+
+The default gate does not collect every experimental suite. Before claiming
+complete test coverage, collect all three test trees in isolated processes:
+
+```powershell
+python -B tools/test_inventory.py --output tmp/test-census-01
+```
+
+This command discovers source files without Git, hashes their bytes and compares
+every directly declared test method with the collected cases. Each module gets a
+fresh Python process and scratch directory; import-side environment, path or audit
+hook changes cannot affect the next module. It executes no test methods. The
+inventory reports imported/inherited duplicates separately through its total and
+unique counts. Missing dependencies, timeouts and omitted methods fail collection;
+they are not counted as passing tests. Per-module output survives later failures.
+
+For optional suites, `--environments <local.json>` accepts a mapping from test
+path prefixes (for example `experiments/scifact`) to local Python executables.
+The longest matching path prefix wins. Use separately prepared environments with
+the suite's pinned dependencies; the command installs nothing. `-I` prevents
+inherited `PYTHONPATH` and user-site settings from supplying missing dependencies.
+Repository source paths are added explicitly inside each worker. Collection is
+for trusted repository tests, not an execution sandbox. A complete census does
+not establish execution, historical compatibility or scientific validity.
+
+The full test-isolation and clean-export gate is still being reconciled. Retain
+the existing validation and installed-package gates alongside this inventory;
+neither a census nor a portable subset replaces them.
+
 Native tokenizer fixtures and their composition tests require Windows sharing
 locks and skip before setup on other platforms. Core validation still runs the
 portable parser, subprocess-boundary and fail-closed platform checks. Full mode

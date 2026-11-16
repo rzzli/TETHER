@@ -9,15 +9,13 @@ from unittest.mock import patch
 from tether_engine.serde import ContractError, canonical, parse_json
 from experiments.scifact.check_worker import run
 from experiments.scifact.tether_adapter import NativeSession, inspect_session
-from experiments.scifact.tests import test_scifact_policy as policy_fixtures
+from experiments.scifact.tests.fixtures import CandidateFixture, resources
 
 
-class CheckWorkerTests(unittest.TestCase):
+class CheckWorkerTests(CandidateFixture, unittest.TestCase):
     def setUp(self):
-        self.fixture = policy_fixtures.CandidatePolicyTests()
-        self.fixture.setUp()
-        self.addCleanup(self.fixture.tearDown)
-        self.addCleanup(self.fixture.doCleanups)
+        super().setUp()
+        self.fixture = self
         # The worker consumes the actual native two-file layout; contents stay fictional.
         assets = []
         for name, raw in (("model.json", b'{"fictional":true}'), ("arrays.npz", b"fictional numeric bytes")):
@@ -30,7 +28,7 @@ class CheckWorkerTests(unittest.TestCase):
             inputs = {key: {"path": str(self.fixture.prep / self.fixture.manifest["products"][key]["path"]), **proof}
                       for key, proof in self.fixture.model["input_product_proofs"].items()}
             session.begin("fit", {"inputs": inputs})
-            session.finish("fit", {"files": assets}, policy_fixtures.resources())
+            session.finish("fit", {"files": assets}, resources())
             receipt = session.finalize()
         self.fixture.model["fit_execution"] = {"path": str(fit_output), "receipt_sha256": receipt["sha256"], "cell_id": "fit"}
         self.fixture.model["computed_at"] = datetime.now(timezone.utc).isoformat()
@@ -62,7 +60,7 @@ class CheckWorkerTests(unittest.TestCase):
             inputs["queries"] = {"path": str(self.context.preparation_root / query["path"]),
                                  "sha256": query["sha256"], "bytes": query["bytes"]}
             session.begin("setup", {"mode": "predict", "inputs": inputs})
-            session.finish("setup", {"kind": "native_model_loaded"}, policy_fixtures.resources())
+            session.finish("setup", {"kind": "native_model_loaded"}, resources())
             session.begin("2", {"query": self.producer_query, "configuration": self.producer_configuration})
             normal = len(self.records) == 1 and self.records[0]["cell_id"] == "2"
             value = self.records[0] if normal else self.template_record

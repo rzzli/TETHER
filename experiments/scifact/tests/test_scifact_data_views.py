@@ -1,4 +1,6 @@
 """Fictional SciFact projection/privacy/path failures; no production answers."""
+from experiments.scifact.tests.fixtures import fixture_rows, write_tar, acquisition
+
 import copy
 import hashlib
 import io
@@ -15,41 +17,10 @@ from experiments.scifact.data_views import (load_archive, projected_products, pr
                                             verify_preparation, load_product, digest, jsonl_bytes)
 
 
-def fixture_rows():
-    corpus = [{"doc_id": i, "title": f"Document {i}", "abstract": [f"Sentence {i} a", f"Sentence {i} b"], "structured": False}
-              for i in range(1, 43)]
-    train = [{"id": i, "claim": f"Claim {i}", "evidence": {str(i): [{"label": "SUPPORT" if i % 2 else "CONTRADICT", "sentences": [0]}]}, "cited_doc_ids": [i]}
-             for i in range(1, 31)]
-    dev = [{"id": 100, "claim": "Development statement", "evidence": {}, "cited_doc_ids": [40]}]
-    test = [{"id": 200, "claim": "Unlabelled test statement"}]
-    return corpus, train, dev, test
 
 
-def write_tar(path, rows=None, extras=(), replacements=None):
-    rows = rows or fixture_rows()
-    names = ["data/corpus.jsonl", "data/claims_train.jsonl", "data/claims_dev.jsonl", "data/claims_test.jsonl"]
-    contents = {name: jsonl_bytes(value) for name, value in zip(names, rows)}
-    contents.update(replacements or {})
-    with tarfile.open(path, "w:gz") as archive:
-        for name, raw in contents.items():
-            member = tarfile.TarInfo(name); member.size = len(raw)
-            archive.addfile(member, io.BytesIO(raw))
-        for member, raw in extras:
-            archive.addfile(member, io.BytesIO(raw) if raw is not None else None)
-    return path
 
 
-def acquisition(root, archive):
-    raw = archive.read_bytes()
-    receipt = archive.with_suffix(".receipt.json")
-    data = {"status": "downloaded_not_parsed", "sha256": digest(raw), "bytes": len(raw), "path": str(archive.resolve()),
-            "url": "https://example.invalid/public.tar.gz", "finished_at_utc": "2026-01-02T00:00:00+00:00"}
-    receipt.write_bytes(canonical(data)+b"\n")
-    record = root / "acquisition.json"
-    # Acquisition lookup deliberately uses the official basename, so use that name in fixtures.
-    record.write_bytes(canonical({"originals": [{"file": str(archive.resolve()), "bytes": len(raw), "sha256": digest(raw),
-                     "receipt_file": str(receipt.resolve()), "receipt_sha256": digest(receipt.read_bytes()), "source_url": data["url"]}]}))
-    return record
 
 
 class DataViewsTests(unittest.TestCase):

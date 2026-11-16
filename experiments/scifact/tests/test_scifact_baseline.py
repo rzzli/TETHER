@@ -7,25 +7,14 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
+from experiments.scifact.tests.fixtures import fictional
+
 import numpy as np
 from tether_engine.serde import ContractError
 from experiments.scifact import baseline
 from experiments.scifact.baseline import fit_model, load_model, load_model_bytes, save_model
 
 
-def fictional():
-    corpus = {
-        2: {"doc_id": 2, "title": "Example alpha", "abstract": ["The active signal was observed.", "A neutral methods sentence.", "A neutral limitation sentence."]},
-        10: {"doc_id": 10, "title": "Example beta", "abstract": ["The active signal was observed.", "A neutral methods sentence.", "A neutral limitation sentence."]},
-    }
-    queries, pairs = [], []
-    for i, label in enumerate(("SUPPORT", "CONTRADICT", "NEI")):
-        for j in range(12):
-            cid = i * 12 + j + 1
-            queries.append({"id": cid, "claim": f"{label.lower()}cue signal relationship querytoken"})
-            pairs.append({"claim_id": cid, "doc_id": 2 if j % 2 else 10, "label": label,
-                          "rationale_sentences": [] if label == "NEI" else [0]})
-    return corpus, queries, pairs
 
 
 class BaselineTests(unittest.TestCase):

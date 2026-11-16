@@ -23,7 +23,7 @@ from experiments.scifact.evaluate import EVALUATOR_SHA256
 from experiments.scifact.tether_adapter import NativeSession, make_request
 from experiments.scifact.run import (Stage, GRID, DEFAULT_LIMITS, failure_dispositions,
                                     select_configuration, session_cells, file_proof, read, write, capture_runtime)
-from experiments.scifact.tests.test_scifact_data_views import write_tar, acquisition
+from experiments.scifact.tests.fixtures import write_tar, acquisition
 
 ROOT = Path(__file__).resolve().parents[3]
 EVALUATOR_ARCHIVE = (
