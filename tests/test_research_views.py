@@ -4,34 +4,10 @@ import unittest
 
 from tether_engine.serde import ContractError, fingerprint
 from tools.science.research_views import build_views
+from tests.research_fixtures import ResearchViewFixture
 
 
-class ResearchViewTests(unittest.TestCase):
-    def setUp(self):
-        self.case = dict(case_id='case', target_id='ENSG-fixture', indication_id='EFO-fixture',
-                         target_namespace_version='old', indication_namespace_version='old',
-                         intended_action='inhibit', modality='antibody', tissue=None)
-        def source(key, release, purpose, when, parents=()):
-            return dict(artifact_id=key, sha256=fingerprint(key), release=release,
-                        role='reference', purpose=purpose, available_by=when, parents=list(parents),
-                        datasource='gene_burden' if purpose == 'nonclinical_evidence' else None)
-        self.frame = dict(schema_version=1, view_policy_id='fixture.v1',
-                          decision_origin='2025-01-01T00:00:00Z', hypotheses=[self.case],
-                          method_sha256=fingerprint('fixture-fixed-method'),
-                          sources=[source('old', '24.09', 'nonclinical_evidence', '2024-09-19T00:00:00Z', ['mapping']),
-                                   source('new', '25.09', 'nonclinical_evidence', '2025-09-30T00:00:00Z', ['mapping']),
-                                   source('mapping', '24.09', 'identifier_mapping', '2024-09-19T00:00:00Z')],
-                          views={'archived': ['old'], 'current_filtered': ['new'], 'current_unfiltered': ['new']},
-                          filter_field='publicationDate', max_rows=100, max_selected_rows=100)
-
-    def row(self, source='new', date='2024-06-01', identity='r1', **values):
-        return dict(source_id=source, row_group=0, row_index=0,
-                    values=dict(id=identity, datasourceId='gene_burden', datatypeId='genetic_association',
-                                targetId='ENSG-fixture', diseaseId='EFO-fixture', publicationDate=date, **values))
-
-    def run_views(self, rows=()):
-        return build_views(self.frame, rows, expected_frame_sha256=fingerprint(self.frame))
-
+class ResearchViewTests(ResearchViewFixture, unittest.TestCase):
     def test_three_views_same_origin_scope_and_truthful_temporal_verdict(self):
         result = self.run_views([self.row('old'), self.row()])
         views = result['views']

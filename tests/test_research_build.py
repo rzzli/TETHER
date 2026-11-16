@@ -10,7 +10,7 @@ from tether_engine.journal import read_chain, inspect_run
 from tether_engine.serde import ContractError, canonical, fingerprint, read_json
 from tools.science.research_build import build, pipeline_code
 from tools.science.temporal_inventory import _schema_fields
-from tests import test_research_mapping as mapping_fixtures
+from tests.research_fixtures import ResearchMappingFixture
 
 
 class ResearchBuildTests(unittest.TestCase):
@@ -19,8 +19,7 @@ class ResearchBuildTests(unittest.TestCase):
             self.skipTest('install the ingest extra for source-audit tests')
         import pyarrow as pa
         import pyarrow.parquet as pq
-        mapping = mapping_fixtures.ResearchMappingTests(); mapping.setUp()
-        self.addCleanup(mapping.doCleanups)
+        mapping = ResearchMappingFixture(); mapping.prepare(self.addCleanup)
         self.root = mapping.root; self.mapping = mapping
         self.files = []; metadata = []
         for release, dates in (('24.09', ['2024-06-01']), ('25.09', ['2024-06-01', '2026-01-01'])):

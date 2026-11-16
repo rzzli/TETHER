@@ -10,7 +10,7 @@ from tether_engine.chrono import load_snapshot
 from tether_engine.local_model import LocalSelectionBackend
 from tether_engine.serde import ContractError, canonical, decode, fingerprint, read_json, sha256_file, write_json
 from tether_engine.workflow import Budget
-from tests import test_science_comparison_workflow as workflow_fixtures
+from tests import workflow_fixtures as workflow_fixtures
 from tests import test_science_role_backend as backend_fixtures
 from tools.science.comparison_workflow import run_case, verify_case
 from tools.science.role_backend import ROLE_SELECTION_POLICY, role_allowed_ids, role_selection_payload
@@ -33,9 +33,8 @@ class LegacySubsetViolation:
 
 class RoleConstraintPeerTests(unittest.TestCase):
     def setUp(self):
-        self.fixture = workflow_fixtures.ComparisonWorkflowTests('test_adapted_executes_five_real_stages_and_exact_source_claims')
-        self.fixture.setUp()
-        self.addCleanup(self.fixture.doCleanups)
+        self.fixture = workflow_fixtures.ComparisonWorkflowFixture()
+        self.fixture.prepare(self.addCleanup)
 
     def legacy_failure(self):
         fixture = self.fixture

@@ -17,7 +17,7 @@ from tether_engine.wire import FORMAT
 from tether_engine.workflow import Budget
 from tools.science import comparison_workflow as comparison
 from tools.science.role_backend import RoleSelectionBackend, STAGES, role_allowed_ids, role_selection_payload
-from tests import test_science_comparison_workflow as fixtures
+from tests import workflow_fixtures as fixtures
 
 
 class ResponseFixture:
@@ -147,13 +147,13 @@ class SelectionCapTests(unittest.TestCase):
 
 
 class ComparisonSelectionCapTests(unittest.TestCase):
-    backend=fixtures.ComparisonWorkflowTests.backend
-    run_arm=fixtures.ComparisonWorkflowTests.run_arm
-    verify=fixtures.ComparisonWorkflowTests.verify
-    rebind=fixtures.ComparisonWorkflowTests.rebind
+    backend=fixtures.ComparisonWorkflowFixture.backend
+    run_arm=fixtures.ComparisonWorkflowFixture.run_arm
+    verify=fixtures.ComparisonWorkflowFixture.verify
+    rebind=fixtures.ComparisonWorkflowFixture.rebind
 
     def setUp(self):
-        fixtures.ComparisonWorkflowTests.setUp(self)
+        fixtures.ComparisonWorkflowFixture.prepare(self, self.addCleanup)
         packet=read_json(self.fixture/'evidence.json')
         for index in range(3):
             extra=deepcopy(packet['observations'][0]); extra['observation_id']='extra-selection-fixture-'+str(index)

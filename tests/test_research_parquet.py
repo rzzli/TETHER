@@ -9,7 +9,7 @@ from unittest.mock import patch
 from tether_engine.serde import ContractError, fingerprint
 from tools.science.research_parquet import stream_rows
 from tools.science.research_views import ProjectedBatch, build_views
-from tests import test_research_views as view_fixtures
+from tests.research_fixtures import ResearchViewFixture
 
 
 class ResearchParquetTests(unittest.TestCase):
@@ -20,7 +20,7 @@ class ResearchParquetTests(unittest.TestCase):
         import pyarrow.parquet as pq
         self.tmp = tempfile.TemporaryDirectory(); self.addCleanup(self.tmp.cleanup)
         self.root = Path(self.tmp.name)
-        fixture = view_fixtures.ResearchViewTests(); fixture.setUp()
+        fixture = ResearchViewFixture(); fixture.setUp()
         self.frame = fixture.frame
         rows = [fixture.row(identity=f'row-{i}')['values'] for i in range(5)]
         rows[0]['targetId'] = 'outside'

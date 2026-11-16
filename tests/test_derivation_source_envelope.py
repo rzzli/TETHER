@@ -13,7 +13,7 @@ from tether_engine.agents import ExtractiveBackend
 from tether_engine.serde import ContractError, decode, read_json, sha256_file, write_json
 from tether_engine.workflow import run_workflow
 from tests.derivation_fixtures import qualify_projection, reseal_observation
-from tests.test_computed_derivations import SpyBackend
+from tests.backend_fixtures import SpyBackend
 
 
 FIXTURE = Path(__file__).resolve().parents[1] / "src/tether_engine/demo/v2"

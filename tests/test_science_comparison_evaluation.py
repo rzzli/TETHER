@@ -255,7 +255,7 @@ class ComparisonEvaluationTests(unittest.TestCase):
         from tools.science.role_backend import RoleSelectionBackend
         from tether_engine.workflow import Budget
         from tools.science.comparison_workflow import run_case, verify_case, ARMS
-        from tests.test_science_comparison_workflow import NativeFixture, synthetic_policy
+        from tests.workflow_fixtures import NativeFixture, synthetic_policy
         folder = self.root/'predictions'; folder.mkdir()
         def pinned(path):
             return {'path': str(path.resolve()), 'sha256': sha256_file(path), 'bytes': path.stat().st_size}
@@ -353,7 +353,7 @@ class OriginalSelectedRowAuditTests(unittest.TestCase):
         from tools.science.role_backend import RoleSelectionBackend
         from tether_engine.workflow import Budget
         from tests.ingest_fixtures import GENES
-        from tests.test_science_comparison_workflow import NativeFixture, synthetic_policy
+        from tests.workflow_fixtures import NativeFixture, synthetic_policy
         from tools.science.comparison_workflow import ARMS, run_case, verify_case
         from tools.science.run_comparison import pin, selected_store
         self.evidence([dict(self.rows[0], id='selected-genetic'),
