@@ -83,3 +83,11 @@ release notice, physical row counts and unique canonical IDs. Only `id` plus
 hash-chained journal, source-linked index and terminal seal; failures remain
 unsealed. This diagnostic supplies identifier membership and never grants a new
 use permission or upgrades scientific validation.
+
+The separate [operational endpoint reducer](../tools/science/operational_endpoint.py)
+is evaluator-only. It distinguishes a reported strict phase-3 start from an
+at-least-phase-3 sensitivity, preserves partial-date uncertainty and reserve holds,
+and reports shared drug/trial dependencies. Registration before origin does not
+exclude a later reported start. Its 0/1 values are candidates for a finite-source
+observation function; complete source qualification is still required. Qualified,
+clinical and programme labels remain null. It is not part of agent evidence.
