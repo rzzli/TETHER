@@ -3,6 +3,7 @@ import json
 import os
 from pathlib import Path
 import sys
+import time
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -69,6 +70,21 @@ class InventoryTests(unittest.TestCase):
         env = {'experiments/x': '/one', 'experiments/x/tests': '/two'}
         self.assertEqual(inventory.interpreter_for('experiments/x/tests/test_a.py', env), str(Path('/two').resolve()))
         self.assertEqual(inventory.interpreter_for('experiments/xyz/test_a.py', env), sys.executable)
+
+    @unittest.skipUnless(os.name == 'nt', 'Windows Job Object qualification')
+    def test_timeout_stops_a_descendant_of_the_interpreter_launcher(self):
+        marker = self.root / 'descendant-survived.txt'
+        ready = self.root / 'descendant-started.txt'
+        child = "import time;from pathlib import Path;time.sleep(2);Path(%r).write_text('survived')" % str(marker)
+        self.source('test_child',
+                    "import subprocess,sys,time;from pathlib import Path\n"
+                    "subprocess.Popen([sys.executable,'-I','-S','-c',%r])\n"
+                    "Path(%r).write_text('started')\ntime.sleep(10)\n" % (child, str(ready)))
+        result = inventory.collect(self.root, self.root / 'output', timeout=1)
+        self.assertTrue(ready.is_file(), 'Control must reach descendant launch before timeout')
+        self.assertEqual(result['modules'][0]['status'], 'collection_timeout')
+        time.sleep(2)
+        self.assertFalse(marker.exists(), 'Timed-out collector left a writable descendant alive')
 
     def test_empty_source_tree_cannot_report_success(self):
         with self.assertRaisesRegex(ValueError, 'No test sources'):

@@ -1,5 +1,4 @@
-import json
-from tools.history import read_checkpoint
+from tests.protocol_fixtures import development_protocol
 from copy import deepcopy
 from dataclasses import replace
 from pathlib import Path
@@ -40,7 +39,7 @@ def entry(req=None, selected=('id-0',)):
 
 class DevelopmentComparisonTests(unittest.TestCase):
     def test_protocol_caps_budget_and_duplicate_groups_checked(self):
-        protocol = json.loads(read_checkpoint('planning/protocols/development-comparison-v0.1.json'))
+        protocol = development_protocol()
         validate_protocol(protocol)
         for field, value in [('selection_cap', 4), ('new_model_calls', 1), ('clinical_labels_read', True), ('baselines', [])]:
             changed = deepcopy(protocol); changed[field] = value
@@ -51,7 +50,7 @@ class DevelopmentComparisonTests(unittest.TestCase):
     def test_full_report_failure_retention_and_output_reservation(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary); pilot = root / 'pilot'; case = pilot / 'fixture'; case.mkdir(parents=True)
-            protocol = json.loads(read_checkpoint('planning/protocols/development-comparison-v0.1.json'))
+            protocol = development_protocol()
             protocol['pilots'] = [{'id': 'fixture_group', 'path': str(pilot), 'case_count': 1, 'seal_sha256': 'a' * 64}]
             protocol_path = root / 'protocol.json'; write_json(protocol_path, protocol)
             write_json(pilot / 'pilot-report.json', {'cases': [{'case_id': 'fixture', 'receipt_sha256': 'b' * 64}]})

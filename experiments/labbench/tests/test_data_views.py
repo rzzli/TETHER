@@ -67,7 +67,7 @@ class ProjectionTests(unittest.TestCase):
         self.assertEqual(query["choices"][ref["answer_index"]][4:],rows[0]["ideal"])
 
     def test_sealed_preparation_rechecks_parents_and_purposes(self):
-        with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+        with tempfile.TemporaryDirectory() as temp:
             base=Path(temp); sha=original_fixture(base/"original")
             manifest=views.prepare_views(base/"original",base/"out",expected_receipt_sha256=sha,expected_count=2)
             digest=views.digest((base/"out/manifest.json").read_bytes())
@@ -79,7 +79,7 @@ class ProjectionTests(unittest.TestCase):
             with self.assertRaises(ContractError): views.verify_views(base/"out",digest)
 
     def test_consumed_bytes_are_the_verified_capture(self):
-        with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+        with tempfile.TemporaryDirectory() as temp:
             base=Path(temp); sha=original_fixture(base/"original")
             original_verify=views.verify_originals
             def raced(*args,**kwargs):
@@ -93,7 +93,7 @@ class ProjectionTests(unittest.TestCase):
             self.assertEqual(queries[0]["question"],fictional_rows()[0]["question"])
 
     def test_failure_is_retained_without_restarting(self):
-        with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+        with tempfile.TemporaryDirectory() as temp:
             base=Path(temp); sha=original_fixture(base/"original")
             with self.assertRaises(ContractError): views.prepare_views(base/"original",base/"failed",expected_receipt_sha256="0"*64,expected_count=2)
             self.assertTrue((base/"failed/FAILED.json").is_file())
@@ -101,7 +101,7 @@ class ProjectionTests(unittest.TestCase):
             self.assertFalse((base/"failed/COMPLETE.json").exists())
 
     def test_resealed_revision_contradiction_is_rejected(self):
-        with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+        with tempfile.TemporaryDirectory() as temp:
             base=Path(temp); sha=original_fixture(base/"original")
             views.prepare_views(base/"original",base/"out",expected_receipt_sha256=sha,expected_count=2)
             root=base/"out"; manifest=json.loads((root/"manifest.json").read_bytes())

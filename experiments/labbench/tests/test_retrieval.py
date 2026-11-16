@@ -55,7 +55,7 @@ class RetrievalTests(unittest.TestCase):
             with self.assertRaises(ContractError):r._safe_url(url)
 
     def test_full_retrieval_verification_passage_binding_and_capture(self):
-        with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+        with tempfile.TemporaryDirectory() as temp:
             root=Path(temp)/"new"
             with patch.object(r,"fetch_http",side_effect=transport) as fetch:
                 manifest=r.retrieve(QUESTION,root)
@@ -84,7 +84,7 @@ class RetrievalTests(unittest.TestCase):
             value=transport(url,**kwargs)
             if "/search?" in url:value["body"]=canonical({"resultList":{"result":records}})
             return value
-        with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+        with tempfile.TemporaryDirectory() as temp:
             with patch.object(r,"fetch_http",side_effect=fetch):manifest=r.retrieve(QUESTION,Path(temp)/"run")
             self.assertEqual(manifest["coverage"]["eligible_metadata_articles"],1)
             self.assertEqual(len(manifest["sources"]),1)
@@ -98,7 +98,7 @@ class RetrievalTests(unittest.TestCase):
             item=responses.pop(0)
             if isinstance(item,Exception):raise item
             item["final_url"]=url;return item
-        with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+        with tempfile.TemporaryDirectory() as temp:
             with patch.object(r,"fetch_http",side_effect=fail):manifest=r.retrieve(QUESTION,Path(temp)/"run")
             self.assertEqual(len(manifest["requests"]),2)
             self.assertEqual(len(manifest["sources"]),0)
@@ -108,7 +108,7 @@ class RetrievalTests(unittest.TestCase):
             self.assertEqual(r.verify_retrieval(Path(temp)/"run",sha,QUESTION),manifest)
 
     def test_interruption_leaves_terminal_failure_and_no_auto_retry(self):
-        with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+        with tempfile.TemporaryDirectory() as temp:
             root=Path(temp)/"run"
             with patch.object(r,"fetch_http",side_effect=KeyboardInterrupt):
                 with self.assertRaises(KeyboardInterrupt):r.retrieve(QUESTION,root)
@@ -165,7 +165,7 @@ class RetrievalTests(unittest.TestCase):
                        lambda m:m.update(sources=[]),
                        lambda m:m["requests"][0].update(byte_reservation=1),
                        lambda m:m["coverage"].update(absence_of_evidence_claim=True)):
-            with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+            with tempfile.TemporaryDirectory() as temp:
                 root=Path(temp)/"run"
                 with patch.object(r,"fetch_http",side_effect=transport):r.retrieve(QUESTION,root)
                 manifest=json.loads((root/"manifest.json").read_bytes());mutate(manifest)
@@ -173,7 +173,7 @@ class RetrievalTests(unittest.TestCase):
                 with self.assertRaises(ContractError):r.verify_retrieval(root,sha,QUESTION)
 
     def test_unknown_failed_transfer_reserves_bytes_and_write_failure_is_terminal(self):
-        with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+        with tempfile.TemporaryDirectory() as temp:
             root=Path(temp)/"timeout"
             with patch.object(r,"fetch_http",side_effect=TimeoutError):manifest=r.retrieve(QUESTION,root)
             self.assertEqual(manifest["costs"]["downloaded_bytes"],0)

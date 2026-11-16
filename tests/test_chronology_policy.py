@@ -1,5 +1,4 @@
-import json
-from tools.history import read_checkpoint
+from tests.protocol_fixtures import chronology_protocol
 import copy
 from pathlib import Path
 import tempfile
@@ -11,7 +10,7 @@ from tools.feasibility.chronology_policy import validate_protocol, validate_froz
 
 class ChronologyPolicyTests(unittest.TestCase):
     def setUp(self):
-        self.policy = json.loads(read_checkpoint('planning/protocols/evaluation-v0.1.json'))
+        self.policy = chronology_protocol()
 
     def test_valid_protocol_does_not_certify_lock_or_science(self):
         answer = validate_protocol(self.policy)

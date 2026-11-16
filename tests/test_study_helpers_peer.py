@@ -45,10 +45,19 @@ class StudyHelpersPeerTests(unittest.TestCase):
         ), process
 
     def test_spawn_is_recorded_before_fallible_clock(self):
-        clock = Mock(side_effect=[0, OSError("clock failure after spawn"), 1])
+        failed = False
+        primary = OSError("clock failure after spawn")
+        def clock():
+            nonlocal failed
+            if server.factory.called and not failed:
+                failed = True
+                raise primary
+            return 0
         server, process = self.server(monotonic=clock)
-        with self.assertRaises(OSError):
+        with self.assertRaises(OSError) as caught:
             server.__enter__()
+        self.assertIs(caught.exception, primary)
+        server.factory.assert_called_once()
         process.terminate.assert_called_once()
         self.assertTrue(server.terminal_record["started"])
         self.assertEqual(server.terminal_record["pid"], 12345)
@@ -80,17 +89,17 @@ class StudyHelpersPeerTests(unittest.TestCase):
         (package / "later.py").write_text("later=1\n")
         original = proofs.capture_file
 
-        def capture(path, logical):
-            result = original(path, logical)
+        def capture(path, logical, **options):
+            result = original(path, logical, **options)
             if logical == "tether_engine/later.py":
-                early.write_text("changed_after_hash=2\n")
+                early.write_text("modified=2\n")
             return result
 
         with (
             patch.object(proofs, "_package_root", return_value=package),
             patch.object(proofs, "capture_file", side_effect=capture),
         ):
-            with self.assertRaises(ContractError):
+            with self.assertRaisesRegex(ContractError, "File proof mismatch"):
                 proofs.capture_package_proof({}, ())
 
     def test_ownership_is_rechecked_at_dispatch_boundary(self):

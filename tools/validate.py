@@ -26,7 +26,7 @@ from tools.review.probe_framework import main as probe_main
 
 EXPECTED_CORE_SKIPS = {'install the ingest extra for adapter tests',
     'install the ingest extra for source-audit tests', 'PowerShell 7 required for utility integration',
-    'native held-handle test requires Windows'}
+    'native held-handle test requires Windows', 'Windows Job Object qualification'}
 
 
 def legacy_compatibility_scope():

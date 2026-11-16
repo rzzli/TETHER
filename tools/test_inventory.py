@@ -100,6 +100,35 @@ def reconcile(sources, modules):
             'failed_modules': failures, 'sources': sources, 'modules': modules}
 
 
+def run_worker(command, *, cwd, env, stdout, stderr, timeout):
+    """Contain the native Windows interpreter launcher and its descendants."""
+    # Developer commands run after installing the dependency-free engine.
+    from tether_engine.process_tree import process_tree_for
+    tree = process_tree_for(subprocess.Popen)
+    if tree is None:
+        return subprocess.run(command, cwd=cwd, env=env, stdout=stdout, stderr=stderr,
+                              timeout=timeout, check=False)
+    process, primary = None, None
+    try:
+        deadline = time.monotonic() + timeout
+        process = tree.launch(command, deadline=deadline, cwd=cwd, env=env,
+                              stdout=stdout, stderr=stderr)
+        code = process.wait(timeout=max(0, deadline - time.monotonic()))
+        return subprocess.CompletedProcess(command, code)
+    except BaseException as error:
+        primary = error
+        raise
+    finally:
+        try:
+            tree.finish(time.monotonic() + 5)
+            if process is not None:
+                process.wait(timeout=5)
+        except BaseException as error:
+            if primary is None:
+                raise
+            primary.add_note('Inventory process cleanup: ' + type(error).__name__)
+
+
 def collect(root, output, *, environments=None, timeout=120):
     root, output = Path(root).resolve(), Path(output).absolute()
     if timeout <= 0:
@@ -125,8 +154,8 @@ def collect(root, output, *, environments=None, timeout=120):
                  'status': 'collection_failed', 'cases': [], 'errors': []}
         with (work / 'stdout.txt').open('xb') as stdout, (work / 'stderr.txt').open('xb') as stderr:
             try:
-                process = subprocess.run(command, cwd=scratch, env=env, stdout=stdout, stderr=stderr,
-                                         timeout=timeout, check=False)
+                process = run_worker(command, cwd=scratch, env=env, stdout=stdout, stderr=stderr,
+                                     timeout=timeout)
                 state['returncode'] = process.returncode
                 if (work / 'collection.json').is_file():
                     report = json.loads((work / 'collection.json').read_text(encoding='utf-8'))

@@ -31,7 +31,7 @@ def fictional_fetch(url,**kwargs):
 
 class CollectionTests(unittest.TestCase):
     def test_full_fictional_collection_uses_only_task_projection_and_seals_cutoff(self):
-        with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+        with tempfile.TemporaryDirectory() as temp:
             base=Path(temp);path,sha,queries=query_fixture(base)
             with patch.object(r,'fetch_http',side_effect=fictional_fetch) as fetch:
                 manifest=c.collect(path,sha,base/'out',r.DEFAULT_POLICY,stage_seconds=20)
@@ -49,7 +49,7 @@ class CollectionTests(unittest.TestCase):
             with self.assertRaises(TypeError):manifest['cases'][0]['status']='changed'
 
     def test_no_source_is_completed_missingness_not_biological_absence(self):
-        with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+        with tempfile.TemporaryDirectory() as temp:
             base=Path(temp);path,sha,_=query_fixture(base,1)
             def empty(url,**kwargs):return {'status':200,'body':b'{"resultList":{"result":[]}}','final_url':url,'headers':{}}
             with patch.object(r,'fetch_http',side_effect=empty):manifest=c.collect(path,sha,base/'out',r.DEFAULT_POLICY,stage_seconds=20)
@@ -60,7 +60,7 @@ class CollectionTests(unittest.TestCase):
 
     def test_fatal_case_preserves_all_remaining_ids_and_disallows_default_consumption(self):
         for error,state in ((RuntimeError('fictional'),'failed'),(KeyboardInterrupt(),'interrupted')):
-            with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+            with tempfile.TemporaryDirectory() as temp:
                 base=Path(temp);path,sha,queries=query_fixture(base)
                 with patch.object(r,'retrieve',side_effect=error) as retrieve:
                     manifest=c.collect(path,sha,base/'out',r.DEFAULT_POLICY,stage_seconds=20)
@@ -75,7 +75,7 @@ class CollectionTests(unittest.TestCase):
                 self.assertEqual(manifest['totals']['unknown_transfer_upper_bytes'],r.DEFAULT_POLICY['total_bytes'])
 
     def test_deadline_after_one_case_prevents_later_dispatch_and_records_every_id(self):
-        with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+        with tempfile.TemporaryDirectory() as temp:
             base=Path(temp);path,sha,_=query_fixture(base)
             real_retrieve=r.retrieve;clock=[time.monotonic()]
             def overrun(*args,**kwargs):
@@ -90,7 +90,7 @@ class CollectionTests(unittest.TestCase):
             self.assertEqual(c.verify_collection(base/'out',c._sha((base/'out/manifest.json').read_bytes()),allow_partial=True),manifest)
 
     def test_remaining_budget_is_recomputed_after_durable_reservation(self):
-        with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+        with tempfile.TemporaryDirectory() as temp:
             base=Path(temp);path,sha,_=query_fixture(base,1)
             clock=[time.monotonic()];real_append=c.RunJournal.append
             def delayed(journal,event,**details):
@@ -107,7 +107,7 @@ class CollectionTests(unittest.TestCase):
             self.assertEqual(result['status'],'completed')
 
     def test_mutated_source_or_query_and_extra_evaluator_fields_fail(self):
-        with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+        with tempfile.TemporaryDirectory() as temp:
             base=Path(temp);path,sha,rows=query_fixture(base,1)
             with patch.object(r,'fetch_http',side_effect=fictional_fetch):c.collect(path,sha,base/'out',r.DEFAULT_POLICY,stage_seconds=20)
             proof=c._sha((base/'out/manifest.json').read_bytes())
@@ -120,7 +120,7 @@ class CollectionTests(unittest.TestCase):
             self.assertTrue((base/'invalid/FAILED.json').exists())
 
     def test_concurrent_same_output_cannot_duplicate_dispatch(self):
-        with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+        with tempfile.TemporaryDirectory() as temp:
             base=Path(temp);path,sha,_=query_fixture(base,1)
             entered=threading.Event();release=threading.Event();real_retrieve=r.retrieve;results=[]
             def blocked(*args,**kwargs):entered.set();release.wait(3);return real_retrieve(*args,**kwargs)
@@ -132,7 +132,7 @@ class CollectionTests(unittest.TestCase):
             self.assertFalse(thread.is_alive());self.assertEqual(retrieve.call_count,1);self.assertEqual(results[0]['status'],'completed')
 
     def test_write_failure_retains_inspectable_unresolved_schedule(self):
-        with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+        with tempfile.TemporaryDirectory() as temp:
             base=Path(temp);path,sha,rows=query_fixture(base)
             real_publish=c.publish_bytes
             def fail_case(path,payload):
@@ -146,7 +146,7 @@ class CollectionTests(unittest.TestCase):
             self.assertFalse((base/'out/SEALED.json').exists())
 
     def test_isolated_cli_without_network_completes_under_owned_job(self):
-        with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+        with tempfile.TemporaryDirectory() as temp:
             base=Path(temp).resolve();path,sha,rows=query_fixture(base,1)
             rows[0]['question']='What is it?';raw=canonical(rows)+b'\n';path.write_bytes(raw);sha=c._sha(raw)
             policy=base/'policy.json';policy_raw=canonical(r.DEFAULT_POLICY);policy.write_bytes(policy_raw)
@@ -160,11 +160,11 @@ class CollectionTests(unittest.TestCase):
             self.assertEqual(c.verify_collection(base/'out',c._sha((base/'out/manifest.json').read_bytes()))['status'],'completed')
 
     def test_cli_watchdog_stops_stalled_local_work_and_inspection_keeps_schedule(self):
-        with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+        with tempfile.TemporaryDirectory() as temp:
             base=Path(temp).resolve();path,sha,rows=query_fixture(base,2)
             policy=base/'policy.json';policy_raw=canonical(r.DEFAULT_POLICY);policy.write_bytes(policy_raw)
             helper=base/'stall.py'
-            helper.write_text('import sys,time\nfrom pathlib import Path\nsys.path.insert(0,'+repr(str(Path.cwd()))+')\n'
+            helper.write_text('import sys,time\nfrom pathlib import Path\nsys.path.insert(0,'+repr(str(Path(__file__).resolve().parents[3]))+')\n'
                 'from experiments.labbench import collect\n'
                 'def stall(*args,**kwargs):time.sleep(30)\n'
                 'collect.retrieval.retrieve=stall\n'
@@ -181,10 +181,10 @@ class CollectionTests(unittest.TestCase):
             self.assertEqual([case['status'] for case in inspected['cases']],['interrupted','unexecuted'])
 
     def test_watchdog_marker_write_failure_still_terminates_owned_process(self):
-        with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+        with tempfile.TemporaryDirectory() as temp:
             base=Path(temp).resolve();blocked=base/'not-a-directory';blocked.write_bytes(b'preserved')
             helper=base/'watchdog.py'
-            helper.write_text('import sys,time\nsys.path.insert(0,'+repr(str(Path.cwd()))+')\n'
+            helper.write_text('import sys,time\nsys.path.insert(0,'+repr(str(Path(__file__).resolve().parents[3]))+')\n'
                 'from experiments.labbench.runtime import DeadlineWatchdog,contain_process_tree,empty_import_cache\n'
                 'empty_import_cache()\nhandle=contain_process_tree()\n'
                 'with DeadlineWatchdog(time.monotonic()+0.2,sys.argv[1]):time.sleep(30)\n',encoding='utf-8')
@@ -198,7 +198,7 @@ class CollectionTests(unittest.TestCase):
             ('collection_configured',lambda details:details['configuration'].update(bytes=0)),
             ('collection_case_reserved',lambda details:details.update(maximum_body_bytes=0)),
             ('collection_sealed',lambda details:details.update(status='partial'))):
-            with tempfile.TemporaryDirectory(dir=Path.cwd()/"data/cache") as temp:
+            with tempfile.TemporaryDirectory() as temp:
                 base=Path(temp);path,sha,_=query_fixture(base,1)
                 with patch.object(r,'fetch_http',side_effect=fictional_fetch):c.collect(path,sha,base/'out',r.DEFAULT_POLICY,stage_seconds=20)
                 root=base/'out';manifest_sha=c._sha((root/'manifest.json').read_bytes())

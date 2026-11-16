@@ -33,7 +33,7 @@ class ContextRevisionTests(unittest.TestCase):
         for key, value in fields.items():
             self.assertEqual(observation["source_metrics"].get(key), value)
             self.assertIn(key, observation["method"]["parameters"]["projection"])
-        self.assertEqual(observation["method"]["version"], "2.2")
+        self.assertEqual(observation["method"]["version"], "2.3")
         self.assertEqual(observation["method"]["parameters"]["interpretation_scope"], "resource_annotation_only")
         self.assertEqual(observation["features"], {})
         self.assertEqual(observation["mechanism_direction"], "uncertain")
@@ -83,10 +83,15 @@ class ContextRevisionTests(unittest.TestCase):
         self.assertIsNone(result.prediction.probability)
 
     def test_comparison_rejects_scientific_or_source_mutation(self):
-        self.fixture.evidence([dict(row, clinicalSignificances=["uncertain significance"])
-                               for row in self.fixture.rows])
-        output, report = self.fixture.build()
-        after = read_json(output / report["cases"][0]["case_id"] / "evidence.json")["observations"][0]
+        # Invented 2.1/2.2 shapes qualify the historical comparison contract.
+        # The current 2.3 normalizer is not a historical 2.2 producer.
+        after = {"observation_id": "fictional-context", "statement": "Fictional annotation",
+                 "features": {}, "source_locator": {"row": 0},
+                 "source_metrics": {"score": 0.2, "clinicalSignificances": ["uncertain significance"]},
+                 "method": {"code_id": "tether.opentargets.normalize", "version": "2.2",
+                            "qc_status": "passed",
+                            "parameters": {"projection": ["id", "score", "clinicalSignificances"],
+                                           "interpretation_scope": "resource_annotation_only"}}}
         before = copy.deepcopy(after)
         before["method"]["version"] = "2.1"
         before["method"]["parameters"].pop("interpretation_scope")
@@ -95,7 +100,8 @@ class ContextRevisionTests(unittest.TestCase):
         for key in REVIEW_CONTEXT_COLUMNS:
             before["source_metrics"].pop(key, None)
         self.assertEqual(compare_observation(before, after), ["clinicalSignificances"])
-        changes = (lambda row: row.update(statement="invented efficacy"),
+        changes = (lambda row: row["method"].update(version="2.3"),
+                   lambda row: row.update(statement="invented efficacy"),
                    lambda row: row["source_metrics"].update(score=0.99),
                    lambda row: row["source_locator"].update(row=999),
                    lambda row: row["source_metrics"].update(clinicalStatus="trial outcome"),
