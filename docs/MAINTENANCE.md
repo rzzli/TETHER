@@ -94,9 +94,15 @@ all execution statuses remain unqualified by this census. The classifications ar
 remain in the existing full gate. This policy does not remove checks, turn a failed
 historical experiment into a pass, or replace the full or installed-package gates.
 
-The full test-isolation and clean-export gate is still being reconciled. Retain
-the existing validation and installed-package gates alongside this inventory;
-neither a census nor a portable subset replaces them.
+The 16 November 2026 qualification at `c32ed72` passed 836 maintained methods
+from a clean ZIP with installed wheels in forward, reversed and 71 isolated-module
+runs, without skipped tests or source-tree writes. The reversed public gate,
+including probes and offline packaging, took 167.641 seconds on the tested Windows
+Python 3.11 installation. The broader default gate at `e173cda` passed 3,175 tests
+without skips; the subsequent probe-profile change passed 39 focused controls and
+all ten default probes. These overlapping runs are not additive unique-test counts.
+The complete census classified 4,694 unique methods; classification does not claim
+execution of every historical experiment or qualification on other platforms.
 
 Native tokenizer fixtures and their composition tests require Windows sharing
 locks and skip before setup on other platforms. Core validation still runs the
