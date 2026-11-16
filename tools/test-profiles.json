@@ -385,6 +385,11 @@
     "tests/test_wire.py": "maintained"
   },
   "overrides": {
+    "tests/test_p05_utility_failures.py::UtilityFailureTests.test_evaluator_parent_control_has_an_otherwise_valid_derivation": "migration_current",
+    "tests/test_p05_utility_failures.py::UtilityFailureTests.test_close_failure_cannot_leave_a_pass_ledger": "migration_current",
+    "tests/test_p05_utility_failures.py::UtilityFailureTests.test_success_is_in_the_bound_seal_not_a_premature_ledger": "migration_current",
+    "tests/test_p05_reporting.py::ReportingTests.test_identifiers_do_not_make_unknown_scientific_context_answerable": "migration_current",
+    "tests/test_p05_reporting.py::ReportingTests.test_empty_null_partial_complete_denominators": "migration_current",
     "experiments/litqa_refinement_recovery/test_original.py::OriginalTests.test_cleared_verifier_trackers_cannot_hide_changed_parent": "original_runtime",
     "experiments/litqa_refinement_recovery/test_original.py::OriginalTests.test_false_success_and_removal_presence_rejected": "original_runtime",
     "experiments/litqa_refinement_recovery/test_original.py::OriginalTests.test_forged_capability_and_nonreaped_process_rejected": "original_runtime",
@@ -408,6 +413,10 @@
     "tests/test_science_endpoint_followup_peer.py::EndpointFollowupPeerTests.test_binding_accepts_immutable_origin_archives_without_nested_live_code": "historical_inputs_current_runtime",
     "tests/test_science_endpoint_followup_peer.py::EndpointFollowupPeerTests.test_binding_rejects_critical_policy_mutations_even_with_new_self_hash": "historical_inputs_current_runtime",
     "tests/test_science_endpoint_followup_peer.py::EndpointFollowupPeerTests.test_binding_rejects_membership_missing_parents_caps_query_order_and_source_path": "historical_inputs_current_runtime",
-    "tests/test_stabilization.py::PortableLegacyTests.test_required_golden_fixture_verifies_after_relocation": "historical_inputs_current_runtime"
+    "tests/test_stabilization.py::PortableLegacyTests.test_required_golden_fixture_verifies_after_relocation": "historical_inputs_current_runtime",
+    "tests/test_p05_correctness.py::CorrectnessTests.test_malformed_pointer_validation_is_bounded": "migration_current",
+    "tests/test_process_tree.py::WindowsJobTests.test_tokenizer_finishes_descendants_after_root_exits": "migration_current",
+    "tests/test_process_tree.py::WindowsJobTests.test_server_stops_descendants_on_normal_context_exit": "migration_current",
+    "tests/test_process_tree.py::WindowsJobTests.test_real_entrypoints_contain_descendants_after_owner_abrupt_exit": "migration_current"
   }
 }

@@ -1,8 +1,8 @@
 # TETHER architecture
 
 TETHER separates evidence admission, bounded execution and verification. The
-public package is `tether-target-agents` 0.7.0 (`tether`); its engine is
-`tether-target-engine` 0.5.0 (`tether_engine`). Start with the
+public package is `tether-target-agents` 0.8.0.dev1 (`tether`); its engine is
+`tether-target-engine` 0.6.0.dev1 (`tether_engine`). Start with the
 [offline demo](../README.md#quick-start) or the [CLI guide](../packages/tether/README.md).
 
 ```mermaid

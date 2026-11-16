@@ -2,8 +2,8 @@
 
 TETHER reports byte integrity, semantic consistency, source binding and scientific
 validation separately. A verified execution is not a validated scientific conclusion.
-The current interface is `tether-target-agents` 0.7.0 over
-`tether-target-engine` 0.5.0.
+The current interface is `tether-target-agents` 0.8.0.dev1 over
+`tether-target-engine` 0.6.0.dev1.
 
 **Current scope (15 November 2026):** new execution requires the registered
 computed-evidence policy described in [the architecture](FRAMEWORK.md#registered-computation).
@@ -58,7 +58,7 @@ Windows-specific file controls do not establish identical POSIX guarantees.
 | Component | Preservation/support designation | Change rule |
 |---|---|---|
 | Engine top-level modules, demos, schemas; public `tether` package | Maintained, with the disclosed verification gaps | Test contract changes across engine, wrapper, bundle and evaluation. |
-| Engine `study/` | Migration candidate; shared proof/read primitives have moved to the maintained core with old import aliases preserved | Historical drivers still ship in the compatibility distribution; removal requires an explicit API migration and qualified replacement packaging. |
+| Engine `study/` | Migration candidate; shared proof/read primitives have moved to the maintained core with old import aliases preserved | Historical drivers are excluded from slim wheels; retain their matching original environments. Only proof/read import aliases remain installed. |
 | Engine `archive/` | Historical compatibility with live entry points | Preserve original-runtime checks; decide API migration before removal. |
 | `experiments/temporal_audit/` | Maintained descriptive reproduction | Preserve the source-to-table contract and public replay. |
 | Other experiment modules | Historical research; potential shared-code migration candidates | No current-engine or turnkey-reproduction promise; preserve exact protocols/results and extract consumers before archival. |

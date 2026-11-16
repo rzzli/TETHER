@@ -7,7 +7,7 @@ import zipfile
 
 from tether_engine import __version__
 from tether_engine.serde import ContractError
-from tools.validate import validate_engine_wheel
+from tools.validate import validate_engine_wheel, validate_wrapper_wheel
 
 
 class WheelNamespaceTests(unittest.TestCase):
@@ -19,6 +19,7 @@ class WheelNamespaceTests(unittest.TestCase):
         self.names = ['tether_engine/demo/v2/case.json', 'tether_engine/demo/case.json',
                       'tether_engine/schemas/portable-bundle-v1.json',
                       self.metadata+'/METADATA', self.metadata+'/WHEEL', self.metadata+'/RECORD']
+        self.names += ['tether_engine/study/'+name for name in ('__init__.py', 'proofs.py', 'stable_read.py')]
 
     def write(self, names):
         with warnings.catch_warnings():
@@ -55,3 +56,32 @@ class WheelNamespaceTests(unittest.TestCase):
                 self.write([member for member in self.names if member != name])
                 with self.assertRaises(ContractError):
                     validate_engine_wheel(self.path)
+
+    def test_stale_research_drivers_and_resources_cannot_enter_core_wheel(self):
+        for member in ('tether_engine/study/session.py', 'tether_engine/study/__main__.py',
+                       'tether_engine/study/resources/answers.json'):
+            with self.subTest(member=member):
+                self.write(self.names+[member])
+                with self.assertRaisesRegex(ContractError, 'study'):
+                    validate_engine_wheel(self.path)
+
+    def test_missing_compatibility_shims_cannot_be_a_valid_slim_wheel(self):
+        self.write([name for name in self.names if not name.startswith('tether_engine/study/')])
+        with self.assertRaisesRegex(ContractError, 'missing'):
+            validate_engine_wheel(self.path)
+
+    def test_wrapper_inventory_requires_entrypoints_and_excludes_legacy_launchers(self):
+        from tether import __version__ as wrapper_version
+        metadata = 'tether_target_agents-'+wrapper_version+'.dist-info'
+        names = ['tether/'+name+'.py' for name in ('__init__', '__main__', '_cli', '_aliases',
+                                                   '_presentation', '_catalog_binding')]
+        names += [metadata+'/'+name for name in ('METADATA', 'WHEEL', 'RECORD')]
+        self.write(names)
+        self.assertEqual(validate_wrapper_wheel(self.path)['members'], len(names))
+        for member in ('tether/study/__main__.py', 'tether/study/native_diagnostic.py'):
+            self.write(names+[member])
+            with self.assertRaisesRegex(ContractError, 'study'):
+                validate_wrapper_wheel(self.path)
+        self.write([name for name in names if name != 'tether/_cli.py'])
+        with self.assertRaisesRegex(ContractError, 'missing'):
+            validate_wrapper_wheel(self.path)

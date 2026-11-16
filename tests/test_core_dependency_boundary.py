@@ -24,6 +24,16 @@ class CoreDependencyTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual(json.loads(result.stdout), [])
 
+    def test_catalog_utility_import_preserves_package_search_path(self):
+        root = Path(__file__).resolve().parents[1]
+        code = (f"import sys; sys.path.insert(0, {str(root)!r})\n"
+                "before = list(sys.path)\n"
+                "import tools.data.build_tether_policy\n"
+                "assert sys.path == before, sys.path")
+        result = subprocess.run([sys.executable, "-I", "-B", "-c", code],
+                                capture_output=True, text=True, timeout=30, check=False)
+        self.assertEqual(result.returncode, 0, result.stderr)
+
     def test_compatibility_paths_share_one_implementation(self):
         from tether_engine import file_proofs, stable_read
         from tether_engine.study import proofs as old_proofs, stable_read as old_reads

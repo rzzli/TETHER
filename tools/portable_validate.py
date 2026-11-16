@@ -44,10 +44,11 @@ TEST_MODULES = (
     "tests.test_dossier_rendering",
     "tests.test_portable_validation",
     "tests.test_temporal_audit_replay",
-    "packages.tether.tests.test_namespace",
     "packages.tether.tests.test_semantics",
 )
 EXCLUDED_GATES = {
+    "packages.tether.tests.test_namespace":
+        "Slim package mappings and removed modules require installed wheels; executed by the maintained and installed-wrapper gates.",
     "packages.tether.tests.test_frontdoor":
         "Installed-package launcher tests invoke isolated Python; retain the existing installed wrapper gate.",
     "tools/validate.py":

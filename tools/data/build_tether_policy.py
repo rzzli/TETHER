@@ -17,10 +17,11 @@ import sys
 import time
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "packages/tether/src"))
+if __name__ == "__main__":
+    sys.path.insert(0, str(ROOT / "packages/tether/src"))
 from tether_engine.contracts import Case
 from tether_engine.serde import ContractError, canonical, decode, fingerprint
-from tether_engine.study.stable_read import checked_path, read_file
+from tether_engine.stable_read import checked_path, read_file
 from tether._catalog_policy import (artifact_record, authorize_snapshot, migrate_catalog,
                                     relative_path, strict_json, validate_policy)
 

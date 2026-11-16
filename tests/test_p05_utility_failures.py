@@ -8,17 +8,17 @@ import unittest
 from unittest.mock import patch
 
 from tools.science import readiness_sources as sources
-from tools.science import run_source_validation_experiment as experiment
 from tether_engine.journal import RunJournal
 from tether_engine.serde import read_json
 from tether_engine.serde import ContractError, decode
 from tether_engine.contracts import Snapshot
 from tether_engine.provenance import InputGraph, catalog_index
-from tests.source_validation_fixtures import author_controls
 
 
 class UtilityFailureTests(unittest.TestCase):
     def test_evaluator_parent_control_has_an_otherwise_valid_derivation(self):
+        from tools.science import run_source_validation_experiment as experiment
+        from tests.source_validation_fixtures import author_controls
         with tempfile.TemporaryDirectory() as temporary:
             fixture = author_controls(temporary)
             scenario = read_json(fixture / 'F02' / 'scenario.json')
@@ -40,6 +40,7 @@ class UtilityFailureTests(unittest.TestCase):
         return journal.output, journal, ledger
 
     def test_close_failure_cannot_leave_a_pass_ledger(self):
+        from tools.science import run_source_validation_experiment as experiment
         with tempfile.TemporaryDirectory() as temporary:
             output, journal, ledger = self.terminal_fixture(Path(temporary))
             original = journal.close
@@ -55,6 +56,7 @@ class UtilityFailureTests(unittest.TestCase):
             self.assertFalse((output / 'seal.json').exists())
 
     def test_success_is_in_the_bound_seal_not_a_premature_ledger(self):
+        from tools.science import run_source_validation_experiment as experiment
         with tempfile.TemporaryDirectory() as temporary:
             output, journal, ledger = self.terminal_fixture(Path(temporary))
             failed, errors = experiment.finalize_ledger(output, journal, ledger)

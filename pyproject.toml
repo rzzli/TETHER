@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tether-target-engine"
-version = "0.5.0"
+version = "0.6.0.dev1"
 description = "Dated evidence workflows for auditable target and clinical-program assessment"
 requires-python = ">=3.11"
 dependencies = []
@@ -19,7 +19,11 @@ tether-engine = "tether_engine.cli:main"
 [tool.setuptools.packages.find]
 where = ["src"]
 include = ["tether_engine", "tether_engine.*"]
+exclude = ["tether_engine.study.resources"]
 
 [tool.setuptools.package-data]
-tether_engine = ["demo/*.json", "demo/v2/*.json", "archive/*.json", "schemas/*.json", "study/resources/*.json"]
+tether_engine = ["demo/*.json", "demo/v2/*.json", "archive/*.json", "schemas/*.json"]
 
+
+[tool.setuptools.package-dir]
+"tether_engine.study" = "src/_tether_study_compat"

@@ -1,5 +1,6 @@
 """Separate current-policy recovery checks from frozen engine-0.4 integrations."""
 from collections import Counter
+import ast
 from pathlib import Path
 import unittest
 
@@ -49,8 +50,22 @@ def legacy_suite():
 
 
 def legacy_test_inventory():
-    """Report routed tests without running or treating them as current-policy passes."""
-    return sorted(test.id() for test in _flatten(legacy_suite()))
+    """List preserved declarations without importing historical driver dependencies."""
+    root = Path(__file__).resolve().parents[1]
+    result = []
+    for identity, count in LEGACY_INTEGRATION_CLASSES.items():
+        module, _, owner = identity.rpartition('.')
+        source = root.joinpath(*module.split('.')).with_suffix('.py')
+        classes = [node for node in ast.parse(source.read_text(encoding='utf-8')).body
+                   if isinstance(node, ast.ClassDef) and node.name == owner]
+        if len(classes) != 1 or [ast.unparse(base) for base in classes[0].bases] != ['unittest.TestCase']:
+            raise AssertionError('Frozen recovery integration inventory changed; review class declarations')
+        methods = [node.name for node in classes[0].body
+                   if isinstance(node, ast.FunctionDef) and node.name.startswith('test_')]
+        if len(methods) != count or len(set(methods)) != count:
+            raise AssertionError('Frozen recovery integration inventory changed; review method declarations')
+        result.extend(identity+'.'+name for name in methods)
+    return sorted(result)
 
 
 def load_tests(loader, tests, pattern):

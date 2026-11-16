@@ -27,7 +27,7 @@ class NamespaceTests(unittest.TestCase):
         root = PACKAGE_ROOT.parents[1]
         project = tomllib.loads((root / "pyproject.toml").read_text())
         self.assertEqual(project["project"]["name"], "tether-target-engine")
-        self.assertEqual(project["project"]["version"], "0.5.0")
+        self.assertEqual(project["project"]["version"], "0.6.0.dev1")
         self.assertEqual(project["project"]["scripts"], {"tether-engine": "tether_engine.cli:main"})
         self.assertEqual(project["tool"]["setuptools"]["packages"]["find"]["include"],
                          ["tether_engine", "tether_engine.*"])
@@ -44,15 +44,15 @@ class NamespaceTests(unittest.TestCase):
     def test_public_and_engine_versions_are_separate(self):
         import tether
         import tether_engine
-        self.assertEqual(tether.__version__, "0.7.0")
-        self.assertEqual(tether.__core_version__, "0.5.0")
-        self.assertEqual(tether_engine.__version__, "0.5.0")
+        self.assertEqual(tether.__version__, "0.8.0.dev1")
+        self.assertEqual(tether.__core_version__, "0.6.0.dev1")
+        self.assertEqual(tether_engine.__version__, "0.6.0.dev1")
 
     def test_import_orders_preserve_modules_classes_and_metadata(self):
         script = r'''
 import importlib, sys
 first, second = sys.argv[1:]
-for suffix, symbol in [('contracts', 'Case'), ('study.source_fact_sources', 'VerifiedReference'), ('archive.paths', 'ArchiveResolver')]:
+for suffix, symbol in [('contracts', 'Case'), ('study.proofs', 'capture_file'), ('stable_read', 'read_file'), ('archive.paths', 'ArchiveResolver')]:
     module = importlib.import_module(first + '.' + suffix)
     original = (module.__spec__, module.__loader__, module.__package__, module.__file__)
     other = importlib.import_module(second + '.' + suffix)
@@ -69,10 +69,10 @@ print('identity-and-metadata-pass')
             self.assertIn("identity-and-metadata-pass", result.stdout)
 
     def test_nested_alias_monkeypatch_is_visible_in_engine(self):
-        public = importlib.import_module("tether.study.source_fact_sources")
-        legacy = importlib.import_module("tether_engine.study.source_fact_sources")
+        public = importlib.import_module("tether.study.proofs")
+        legacy = importlib.import_module("tether_engine.file_proofs")
         sentinel = object()
-        with patch("tether.study.source_fact_sources._need", sentinel):
+        with patch("tether.study.proofs._need", sentinel):
             self.assertIs(legacy._need, sentinel)
 
     def test_finite_inventory_covers_only_the_reviewed_engine_modules(self):
@@ -88,16 +88,17 @@ print('identity-and-metadata-pass')
                 name = ".".join(file.relative_to(root).with_suffix("").parts)
             if name and name not in ("__main__", "study.__main__", "archive.__main__", "cli"):
                 modules.add(name)
-        self.assertEqual(modules, set(_LEGACY_MODULES) - {"demo", "demo.v2", "study.resources"})
+        self.assertEqual(modules, set(_LEGACY_MODULES) - {"demo", "demo.v2"})
 
     def test_resource_aliases_resolve_the_original_files(self):
-        for suffix in ("study", "study.resources", "demo.v2"):
+        for suffix in ("study", "demo.v2"):
             public = resources.files("tether." + suffix)
             legacy = resources.files("tether_engine." + suffix)
             self.assertEqual(sorted(x.name for x in public.iterdir()), sorted(x.name for x in legacy.iterdir()))
-        name = "synthetic-orientation-v1.json"
-        self.assertEqual(resources.files("tether.study.resources").joinpath(name).read_bytes(),
-                         resources.files("tether_engine.study.resources").joinpath(name).read_bytes())
+        self.assertEqual(sorted(p.name for p in resources.files("tether.study").iterdir()
+                                if p.name != '__pycache__'), ['__init__.py', 'proofs.py', 'stable_read.py'])
+        with self.assertRaises(ModuleNotFoundError):
+            resources.files("tether.study.resources")
 
     def test_serialization_and_fingerprint_match_original_objects(self):
         from tether.agents import Usage
@@ -138,7 +139,7 @@ print('identity-and-metadata-pass')
         self.assertEqual(sum(bool(getattr(x, "_tether_alias_finder", False)) for x in sys.meta_path), 1)
 
     def test_nested_main_normal_import_does_not_clobber_engine_parent(self):
-        for suffix in ("study", "archive"):
+        for suffix in ("archive",):
             public = importlib.import_module("tether." + suffix + ".__main__")
             legacy = importlib.import_module("tether_engine." + suffix + ".__main__")
             parent = importlib.import_module("tether_engine." + suffix)
@@ -146,7 +147,7 @@ print('identity-and-metadata-pass')
             self.assertIs(parent.__main__, legacy)
 
     def test_subprocess_entrypoint_help_is_canonical_and_offline(self):
-        for module in ("tether", "tether.study", "tether.archive"):
+        for module in ("tether", "tether.archive"):
             with self.subTest(module=module):
                 result = subprocess.run([sys.executable, "-B", "-m", module, "--help"],
                     env=subprocess_env(), capture_output=True, text=True, check=False)
@@ -161,16 +162,24 @@ print('identity-and-metadata-pass')
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertIn("usage: tether-engine", result.stdout)
 
-    def test_bounded_advanced_entrypoints_offer_help_without_execution(self):
+    def test_removed_study_entrypoints_fail_without_loading_a_driver(self):
         for suffix in ("authority_four_arm", "baseline_smoke", "fixed_evidence_smoke", "native_diagnostic", "retrieval_smoke"):
             with self.subTest(module=suffix):
                 module = "tether.study." + suffix
                 result = subprocess.run([sys.executable, "-B", "-m", module, "--help"],
                     env=subprocess_env(), capture_output=True, text=True, check=False)
-                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-                self.assertIn("usage:", result.stdout.lower())
-                self.assertNotIn("runtimewarning", result.stderr.lower())
-                self.assertIs(importlib.import_module(module), importlib.import_module("tether_engine.study." + suffix))
+                self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertIn("not in the TETHER public module inventory", result.stderr)
+                with self.assertRaises(ModuleNotFoundError) as failure:
+                    importlib.import_module(module)
+                self.assertEqual(failure.exception.name, module)
+
+    def test_slim_engine_contains_only_the_study_compatibility_modules(self):
+        root = Path(importlib.import_module('tether_engine.study').__file__).parent
+        self.assertEqual(sorted(p.name for p in root.iterdir() if p.name != '__pycache__'),
+                         ['__init__.py', 'proofs.py', 'stable_read.py'])
+        for suffix in ('source_fact_sources', 'tokenization', '__main__', 'resources'):
+            self.assertIsNone(importlib.util.find_spec('tether_engine.study.'+suffix))
 
     def test_canonical_cli_alias_is_the_public_front_door(self):
         public = importlib.import_module("tether.cli")

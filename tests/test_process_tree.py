@@ -13,7 +13,9 @@ import unittest
 from unittest.mock import patch
 from tether_engine.process_tree import WindowsJob
 
-HERE = Path(__file__).resolve().parents[1] / "src"
+import tether_engine
+
+HERE = Path(tether_engine.__file__).resolve().parent.parent
 if os.name == 'nt':
     K = ctypes.WinDLL('kernel32',use_last_error=True)
     K.OpenProcess.argtypes=[wintypes.DWORD,wintypes.BOOL,wintypes.DWORD]
@@ -208,6 +210,16 @@ time.sleep(5)
             K.WaitForSingleObject(handle,6000)
 
     def test_real_entrypoints_contain_descendants_after_owner_abrupt_exit(self):
+        source = Path(__file__).resolve().parents[1]
+        self.check_abrupt_entrypoints(("wrapper", "tokenizer", "server"),
+                                     source / "src", source / "packages/tether/src")
+
+    def test_installed_wrapper_contains_descendants_after_owner_abrupt_exit(self):
+        import tether
+        self.check_abrupt_entrypoints(("wrapper",), HERE,
+                                     Path(tether.__file__).resolve().parent.parent)
+
+    def check_abrupt_entrypoints(self, modes, engine_root, wrapper_root):
         script = '''import os,sys,time,threading,subprocess,json
 from pathlib import Path
 sys.path[:0]=[sys.argv[1],sys.argv[2]]
@@ -242,12 +254,12 @@ else:
                 journal=journal,listener_owner=lambda *args:True,health_probe=lambda *args:True,
                 availability_probe=lambda *args:None):time.sleep(15)
 '''
-        for mode in ('wrapper','tokenizer','server'):
+        for mode in modes:
             with self.subTest(mode=mode):
                 root = self.root/mode
                 root.mkdir()
-                owner = subprocess.Popen([sys.executable,'-I','-B','-S','-c',script,str(HERE),
-                    str(HERE.parent/'packages/tether/src'),str(root),mode],
+                owner = subprocess.Popen([sys.executable,'-I','-B','-S','-c',script,str(engine_root),
+                    str(wrapper_root),str(root),mode],
                     creationflags=0x08000000,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
                 try:
                     self.wait_file(root/'tree.json')

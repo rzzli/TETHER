@@ -50,6 +50,8 @@ class PortableValidationTests(unittest.TestCase):
         self.assertEqual(report["counts"]["passed"], 1)
         self.assertIn("packages.tether.tests.test_frontdoor", report["excluded_gates"])
         self.assertNotIn("packages.tether.tests.test_frontdoor", gate.TEST_MODULES)
+        self.assertIn("packages.tether.tests.test_namespace", report["excluded_gates"])
+        self.assertNotIn("packages.tether.tests.test_namespace", gate.TEST_MODULES)
 
     def test_failure_error_skip_and_subtest_cannot_pass(self):
         for outcome in ("failure", "error", "skip", "subtest"):

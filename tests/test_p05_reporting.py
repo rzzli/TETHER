@@ -1,7 +1,6 @@
 """Reason-specific conformance and scientific missingness denominators."""
 import unittest
 from tether_engine.serde import ContractError
-from tether_engine.study.source_fact_evaluation import _families
 from tools.review.conformance import score_conformance
 
 
@@ -39,6 +38,7 @@ class ReportingTests(unittest.TestCase):
         self.assertFalse(result['qualification_passed'])
 
     def test_identifiers_do_not_make_unknown_scientific_context_answerable(self):
+        from tether_engine.study.source_fact_evaluation import _families
         facts = [dict(fact_id='id', record_key='r', family='identity_linkage', group='g', value='GENE'),
                  dict(fact_id='context', record_key='r', family='reported_context', group='g', value=None)]
         scores, _ = _families(facts, {'id'}, scorable=True)
@@ -47,6 +47,7 @@ class ReportingTests(unittest.TestCase):
         self.assertIsNone(scores['reported_context']['coverage'])
 
     def test_empty_null_partial_complete_denominators(self):
+        from tether_engine.study.source_fact_evaluation import _families
         def fact(key, value):
             return dict(fact_id=key, record_key='r', family='reported_measurement', group='g', value=value)
         for facts, matched, count, coverage in (([], set(), 0, None), ([fact('a', None)], set(), 0, None),

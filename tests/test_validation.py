@@ -15,6 +15,21 @@ from tether_engine.serde import write_json
 
 
 class ValidationGateTests(unittest.TestCase):
+    def test_legacy_inventory_never_imports_original_runtime_tests(self):
+        from tests import test_refinement_recovery as selection
+        with patch.object(selection, 'legacy_suite', side_effect=AssertionError('Historical import forbidden')):
+            scope = validate.legacy_compatibility_scope()
+        self.assertEqual(scope['tests'], 16)
+        self.assertEqual(len(set(scope['test_ids'])), 16)
+        self.assertFalse(scope['current_policy_qualified'])
+        self.assertEqual(scope['status'], 'not_executed_by_current_policy_gate')
+
+    def test_legacy_inventory_rejects_changed_declarations_without_import(self):
+        from tests import test_refinement_recovery as selection
+        with patch.object(Path, 'read_text', return_value='class OriginalTests(unittest.TestCase): pass'):
+            with self.assertRaisesRegex(AssertionError, 'inventory changed'):
+                selection.legacy_test_inventory()
+
     @staticmethod
     def passing_probe_report():
         output = Path(sys.argv[sys.argv.index('--output') + 1])
@@ -77,7 +92,11 @@ class ValidationGateTests(unittest.TestCase):
                 self.assertFalse(validate.successful_tests(result, 'full'))
 
     def test_parquet_optional_skip_keeps_wrong_arrow_version_rejected(self):
-        from tests.test_study_source_fact_sources import SourceFactSourceTests
+        from tether_engine.ingest import arrow as require_arrow
+        def maintained_ingestion_dependency():
+            if importlib.util.find_spec('pyarrow') is None:
+                raise unittest.SkipTest('install the ingest extra for adapter tests')
+            require_arrow()
         wrong_arrow = ModuleType('pyarrow')
         wrong_arrow.__spec__ = ModuleSpec('pyarrow', loader=None, is_package=True)
         wrong_arrow.__path__ = []
@@ -96,18 +115,17 @@ class ValidationGateTests(unittest.TestCase):
             with self.subTest(kind=kind), patch.dict(
                 sys.modules, {'pyarrow': arrow, 'pyarrow.parquet': parquet}
             ):
-                suite = unittest.TestSuite([SourceFactSourceTests(
-                    'test_fictional_parquet_selected_row_and_absent_schema')])
+                suite = unittest.TestSuite([unittest.FunctionTestCase(maintained_ingestion_dependency)])
                 result = unittest.TextTestRunner(stream=io.StringIO()).run(suite)
             self.assertEqual(result.testsRun, 1)
             self.assertEqual(result.failures, [])
             if expected_core:
-                self.assertEqual([reason for _, reason in result.skipped], ['install the ingest extra for source-audit tests'])
+                self.assertEqual([reason for _, reason in result.skipped], ['install the ingest extra for adapter tests'])
                 self.assertEqual(result.errors, [])
             else:
                 self.assertEqual(result.skipped, [])
                 self.assertEqual(len(result.errors), 1)
-                self.assertIn('requires pyarrow 21.0.0' if kind == 'wrong_version' else 'pyarrow.parquet', result.errors[0][1])
+                self.assertIn('requires pyarrow==21.0.0' if kind == 'wrong_version' else 'pyarrow.parquet', result.errors[0][1])
             self.assertEqual(validate.successful_tests(result, 'core'), expected_core)
             self.assertFalse(validate.successful_tests(result, 'full'))
 

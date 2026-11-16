@@ -167,9 +167,9 @@ def code_proof():
             versions[name] = metadata.version(name)
         except metadata.PackageNotFoundError:
             versions[name] = None
-    need(tether_engine.__version__ == "0.5.0" and __version__ == "0.7.0", "Unsupported TETHER/core version")
-    need(versions["tether-target-engine"] in (None, "0.5.0")
-         and versions["tether-target-agents"] in (None, "0.7.0"), "Installed distribution version differs")
+    need(tether_engine.__version__ == "0.6.0.dev1" and __version__ == "0.8.0.dev1", "Unsupported TETHER/core version")
+    need(versions["tether-target-engine"] in (None, "0.6.0.dev1")
+         and versions["tether-target-agents"] in (None, "0.8.0.dev1"), "Installed distribution version differs")
     return dict(schema_version=1, method="tether.launcher_code.v2", facade_version=__version__,
                 core_version=tether_engine.__version__, installed_distributions=versions, code=proof)
 

@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+- Build slim engine `0.6.0.dev1` and wrapper `0.8.0.dev1` wheels. Preserve core
+  CLI and archive commands; remove historical study drivers, resources and 35
+  aliases from default installations. Preserve original source/tests at `6b20498`
+  and require separate matching environments for historical reproduction.
+- Extract file proofs and stable reads into core modules, retaining module-identity
+  aliases at the two former study import paths. Reject stale research payloads
+  in wheel validation; list historical tests without importing their drivers.
+
 - Require explicit `--allow-legacy` / `allow_legacy=True` for known legacy byte
   verification. Default portable verification now fails when semantic replay is
   unavailable; explicit `--bytes-only` remains supported. Weaker results report

@@ -19,11 +19,11 @@ Pinned build constraints live in [tools/build-constraints.txt](../tools/build-co
 ## Validate changes
 
 ```powershell
-uv run --no-sync python tools/validate.py --mode full --package
+uv run --no-sync python tools/validate.py --mode full --profile maintained --package
 uv run --no-sync python -B -m unittest discover -s packages/tether/tests -v
 ```
 
-The full gate runs structural/catalog checks, Python and PowerShell syntax checks,
+The maintained full gate runs structural/catalog checks, Python and PowerShell syntax checks,
 repository tests, required framework probes, and an offline wheel build plus an
 isolated dependency-free demo and verification. `--report <fresh-path>` retains
 its result; `--failfast` stops after the first failed test. Core mode allows only
@@ -31,7 +31,7 @@ its explicitly named platform/optional-dependency skips.
 
 The maintained scope includes the installed wrapper tests and excludes checks
 that require original Git bytes or a historical runtime. Select it explicitly;
-the default broader gate remains unchanged:
+the broader `all-current` source-development gate remains a separate option:
 
 ```powershell
 python -B tools/validate.py --mode full --profile maintained --report ../tether-checks/maintained.json
@@ -50,6 +50,20 @@ the nine current fictional probes and records legacy byte verification separatel
 as `not_executed_requires_pinned_history`. The default retains that historical
 probe as a required check. Validation reports embed the complete probe results;
 an unexecuted historical check is never reported as passing.
+
+Slim wheels do not contain historical study drivers. The `all-current` profile
+includes source-development and migration-candidate checks that can require those
+drivers; it is not an installed slim-wheel release gate. Preserve their exact
+original code, full wheels and expectations as described in
+[migration guidance](../packages/tether/MIGRATION.md#slim-development-wheels-november-2026).
+Nine mixed-module methods for removed source-fact, tokenizer and server drivers
+remain in the migration scope. Core accounting, evidence checks and installed
+wrapper process-lifecycle controls stay maintained; the policy enumerates each
+method. Historical tests are preserved, not reported as passing in slim wheels.
+The separate source-only `portable_validate.py` gate does not claim installed
+package layout. Namespace, removed-module and isolated-launcher checks execute
+in the maintained installed-wheel gate and wrapper suite above, not against the
+retained historical source directories.
 
 ## Inventory all test modules
 

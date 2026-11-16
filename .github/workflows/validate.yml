@@ -39,7 +39,7 @@ jobs:
       - name: Install project with pinned build backend
         run: uv pip install --no-deps . packages/tether --build-constraints tools/build-constraints.txt
       - name: Validate clean checkout
-        run: uv run --no-sync python tools/validate.py --mode ${{ matrix.mode }} --package
+        run: uv run --no-sync python tools/validate.py --mode ${{ matrix.mode }} --profile maintained --package
   tether-interface:
     runs-on: windows-latest
     timeout-minutes: 15

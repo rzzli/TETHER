@@ -1,5 +1,28 @@
 # Package and version compatibility
 
+## Slim development wheels, November 2026
+
+Wrapper `0.8.0.dev1` pins engine `0.6.0.dev1`. Default installations contain
+the core workflow, archive readers, demos and schemas. Historical study drivers
+and their resources are no longer installed. Only `study.proofs` and
+`study.stable_read` remain as compatibility aliases to maintained core modules.
+
+Imports such as `tether.study.source_fact_sources`, `tether.study.tokenization`
+and their engine equivalents are unavailable in the slim wheels. The
+`python -m tether.study` launcher and the authority-four-arm, baseline-smoke,
+fixed-evidence-smoke, native-diagnostic and retrieval-smoke study entry points
+are also removed. Core `tether demo`, `run`, `verify` and archive entry points
+retain their interfaces. Unknown historical aliases fail before target loading.
+
+The complete source and original namespace tests remain at commit `6b20498`;
+use a separate checkout of that commit and its matching full engine 0.5.0 /
+wrapper 0.7.0 environment for that compatibility surface. Still older scientific
+records require their own pinned original versions. Do not install full and slim
+wheels into the same environment, mix their code inventories, or reseal old runs.
+The retained source tree is not a promise that study drivers work with the new
+installed distribution. Optional generated-agent research remains a separate
+qualification path; removal from default wheels does not validate or cancel it.
+
 ## Shared file primitives
 
 File/package proofs and bounded stable reads now live in
@@ -13,7 +36,8 @@ The extraction preserves read bounds, caller-root checks, Windows sharing rules
 and error behavior. Exact package proofs change because their source inventory
 changes. Use the original code and wheel for old implementation-bound proofs;
 this refactor does not migrate or reseal frozen scientific results. Historical
-drivers and their public aliases are still present in this compatibility stage.
+drivers are preserved in source history; the slim wheels retain only these two
+primitive import aliases.
 
 ## Explicit source roots
 
@@ -70,8 +94,8 @@ forwards its existing `approved_roots` grants to native verification.
 roots for source checks, or explicitly select outputs-only byte verification.
 Existing receipts and scientific results must not be rewritten to add grants.
 
-The public interface is `tether-target-agents` 0.7.0, with command and import path
-`tether`. It pins `tether-target-engine` 0.5.0, imported as `tether_engine` and
+The public interface is `tether-target-agents` 0.8.0.dev1, with command and import path
+`tether`. It pins `tether-target-engine` 0.6.0.dev1, imported as `tether_engine` and
 invoked directly as `tether-engine`. Public aliases share the engine's class and
 module identities; no former namespace shim is installed.
 
@@ -161,8 +185,9 @@ their expected SHA-256 hashes. `evaluate-baseline` uses a separate external
 producer declaration. Both require an explicit fixed-horizon policy, including
 reporting lag. See [evaluation contracts](../../docs/FRAMEWORK.md#fixed-horizon-evaluation).
 
-These changes remain in the unreleased engine 0.5.0 / wrapper 0.7.0 development
-series. Retain the exact Git checkpoint and wheel hashes: a version string alone
+These changes originated in the unreleased engine 0.5.0 / wrapper 0.7.0 series
+and continue in the slim development versions above. Retain the exact Git
+checkpoint and wheel hashes: a version string alone
 does not identify a development build. Source-inclusive engine verification can
 report `code_matches_current: false` for a same-policy run from an earlier build;
 the evaluation binding retains that fact. Exact outer/launcher verification

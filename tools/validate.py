@@ -267,10 +267,9 @@ def powershell_check():
     return True
 
 
-def validate_engine_wheel(wheel):
-    """Reject stale build payloads and every namespace outside this distribution."""
-    from tether_engine import __version__
-    metadata_root = 'tether_target_engine-' + __version__ + '.dist-info'
+def _wheel_members(wheel, namespace, distribution, version):
+    """Check exact member names before either package's content policy."""
+    metadata_root = distribution + '-' + version + '.dist-info'
     with zipfile.ZipFile(wheel) as archive:
         names = [info.orig_filename for info in archive.infolist()]
         if len(names) != len(set(names)):
@@ -278,15 +277,39 @@ def validate_engine_wheel(wheel):
         for name in names:
             parts = name.rstrip('/').split('/')
             if (not parts or any(part in ('', '.', '..') or ':' in part for part in parts)
-                    or '\\' in name or '\x00' in name or parts[0] not in ('tether_engine', metadata_root)
+                    or '\\' in name or '\x00' in name or parts[0] not in (namespace, metadata_root)
                     or len(parts) < 2):
                 raise ContractError('Unexpected wheel namespace/member: '+name)
-        required = {'tether_engine/demo/v2/case.json', 'tether_engine/demo/case.json',
-                    'tether_engine/schemas/portable-bundle-v1.json',
-                    metadata_root+'/METADATA', metadata_root+'/WHEEL', metadata_root+'/RECORD'}
-        if not required.issubset(names):
-            raise ContractError('Packaged runtime/demo metadata missing')
+    required = {metadata_root+'/'+name for name in ('METADATA', 'WHEEL', 'RECORD')}
+    if not required.issubset(names):
+        raise ContractError('Packaged runtime metadata missing')
+    return names, metadata_root
+
+
+def validate_engine_wheel(wheel):
+    """Reject research drivers, stale builds and incomplete compatibility imports."""
+    from tether_engine import __version__
+    names, metadata_root = _wheel_members(wheel, 'tether_engine', 'tether_target_engine', __version__)
+    compatibility = {'tether_engine/study/'+name for name in ('__init__.py', 'proofs.py', 'stable_read.py')}
+    if any(name.startswith('tether_engine/study/') and name not in compatibility for name in names):
+        raise ContractError('Historical study payload is outside the slim engine wheel')
+    required = {'tether_engine/demo/v2/case.json', 'tether_engine/demo/case.json',
+                'tether_engine/schemas/portable-bundle-v1.json'} | compatibility
+    if not required.issubset(names):
+        raise ContractError('Packaged runtime/demo/compatibility imports missing')
     return {'members':len(names), 'namespace':'tether_engine', 'metadata_root':metadata_root}
+
+
+def validate_wrapper_wheel(wheel):
+    from tether import __version__
+    names, metadata_root = _wheel_members(wheel, 'tether', 'tether_target_agents', __version__)
+    if any(name.startswith('tether/study/') for name in names):
+        raise ContractError('Historical study launcher is outside the slim wrapper wheel')
+    required = {'tether/'+name+'.py' for name in ('__init__', '__main__', '_cli', '_aliases',
+                                                 '_presentation', '_catalog_binding')}
+    if not required.issubset(names):
+        raise ContractError('Packaged wrapper entry points missing')
+    return {'members':len(names), 'namespace':'tether', 'metadata_root':metadata_root}
 
 
 def package_check(directory):
