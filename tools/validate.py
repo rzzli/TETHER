@@ -335,7 +335,8 @@ def validate_wrapper_wheel(wheel):
     if any(name.startswith('tether/study/') for name in names):
         raise ContractError('Historical study launcher is outside the slim wrapper wheel')
     required = {'tether/'+name+'.py' for name in ('__init__', '__main__', '_cli', '_aliases',
-                                                 '_presentation', '_catalog_binding')}
+                                                   '_presentation', '_catalog_binding', 'api')}
+    required.add('tether/py.typed')
     if not required.issubset(names):
         raise ContractError('Packaged wrapper entry points missing')
     return {'members':len(names), 'namespace':'tether', 'metadata_root':metadata_root}

@@ -1,0 +1,4 @@
+from tether.api import PolicyInputs, run_offline
+
+def wrong_paths(inputs: PolicyInputs) -> None:
+    run_offline(inputs, "not-a-Path", source_roots=["not-a-tuple-of-Paths"])

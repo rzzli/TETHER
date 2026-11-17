@@ -18,6 +18,25 @@ tether inspect-run --run-dir runs/fresh-demo
 ```
 
 The bundled demo uses fictional evidence and deterministic offline extraction.
+
+### Typed offline API
+
+`tether.api` exposes `PolicyInputs`, `run_offline`, `verify_run`, `export_run` and
+`verify_bundle`. It uses the same supervised, artifact-policy execution as the
+CLI, with unchanged workflow budgets, no automatic retries and explicit caller
+source roots. It adds no model or network adapter. See the
+[typed consumer example](../../tests/typing/api_usage.py).
+
+Pass `pathlib.Path` values and retain the returned receipt/manifest digests.
+`run_offline` requires an existing output parent and a fresh output directory;
+`export_run` requires a destination outside all granted input/run roots. Invalid
+permissions and input contracts raise before dispatch; later failures retain
+journals. Never retry an uncertain run without inspection.
+
+Typing qualification covers `tether.api`; older aliases and implementation modules
+remain partially typed. Bundle verification checks supported source/claim semantics,
+not the outer use grant, exact producer replay, therapeutic benefit or scientific
+validity. Keep the outer run for its separate policy verification.
 Local models are separate opt-in configurations, not part of the default demo.
 
 ## Output and verification

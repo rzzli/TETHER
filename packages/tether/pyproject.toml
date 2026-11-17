@@ -28,3 +28,6 @@ exclude = ["tether.study", "tether.study.*"]
 
 [tool.uv.sources]
 tether-target-engine = {path = "../.."}
+
+[tool.setuptools.package-data]
+tether = ["py.typed"]

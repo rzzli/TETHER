@@ -76,7 +76,8 @@ class WheelNamespaceTests(unittest.TestCase):
         from tether import __version__ as wrapper_version
         metadata = 'tether_target_agents-'+wrapper_version+'.dist-info'
         names = ['tether/'+name+'.py' for name in ('__init__', '__main__', '_cli', '_aliases',
-                                                   '_presentation', '_catalog_binding')]
+                                                   '_presentation', '_catalog_binding', 'api')]
+        names.append('tether/py.typed')
         names += [metadata+'/'+name for name in ('METADATA', 'WHEEL', 'RECORD')]
         self.write(names)
         self.assertEqual(validate_wrapper_wheel(self.path)['members'], len(names))

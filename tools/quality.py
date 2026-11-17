@@ -19,7 +19,7 @@ from tools.portable_validate import reserve_output
 VERSIONS = {"ruff": "0.15.22", "mypy": "2.4.1", "coverage": "7.17.3"}
 TYPED = tuple(
     "src/tether_engine/" + name + ".py" for name in ("money", "temporal", "verification_policy")
-)
+) + ("packages/tether/src/tether/api.py",)
 FORMATTED = (*TYPED, "tools/quality.py", "tools/coverage_gate.py", "tests/test_quality.py")
 
 

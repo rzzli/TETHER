@@ -60,7 +60,7 @@ _LEGACY_MODULES = frozenset(('agents',
  'demo',
  'demo.v2'))
 _CANONICAL_ALIASES = {"cli": "tether._cli"}
-_OWN_MODULES = frozenset(("tether.__main__", "tether._aliases", "tether._cli", "tether._presentation", "tether._semantics", "tether._process", "tether._catalog_policy", "tether._catalog_binding"))
+_OWN_MODULES = frozenset(("tether.__main__", "tether.api", "tether._aliases", "tether._cli", "tether._presentation", "tether._semantics", "tether._process", "tether._catalog_policy", "tether._catalog_binding"))
 _ENTRYPOINTS = {'tether.archive.__main__': ('archive', '__main__.py')}
 
 
