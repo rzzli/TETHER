@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "scope": "exact_three_originals_one_annotation_contemporary_example",
+  "sources": [
+    {
+      "source_id": "raw-027102fda37c83e4e4e9632e",
+      "dataset_id": "ot_evidence",
+      "release_id": "25.09",
+      "relative_path": "raw/open_targets_platform/25.09/output/evidence/sourceId=gwas_credible_sets/part-00071-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+      "sha256": "ab0edce5f3ccbdb0798d5c3d0a9d5bf3a88b66077d0fda5285b95c9f202a9e89",
+      "bytes": 1795495,
+      "receipt_path": "manifests/receipt-archive/5eab9d17c3c9b61735ca3487ed9af7109edf712d4333cb1f731d04c358f18efe.json",
+      "receipt_sha256": "5eab9d17c3c9b61735ca3487ed9af7109edf712d4333cb1f731d04c358f18efe",
+      "receipt_bytes": 841,
+      "source_url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/evidence/sourceId=gwas_credible_sets/part-00071-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+      "completed_at_utc": "2026-10-11T02:42:54.5418220+00:00",
+      "publisher_hash_verified": false,
+      "projected_columns": [
+        "id",
+        "targetId",
+        "diseaseId",
+        "datasourceId",
+        "datatypeId",
+        "studyId",
+        "literature",
+        "variantId",
+        "variantRsId",
+        "beta",
+        "oddsRatio",
+        "pValueMantissa",
+        "pValueExponent",
+        "score",
+        "publicationYear",
+        "publicationDate",
+        "variantFunctionalConsequenceId",
+        "variantEffect",
+        "directionOnTrait"
+      ],
+      "missing_columns": [
+        "variantEffectDescription"
+      ],
+      "physical_rows_scanned": 17466,
+      "selected_rows": 1
+    },
+    {
+      "source_id": "raw-b261aa6674b98e8449bd6de4",
+      "dataset_id": "ot_target",
+      "release_id": "25.09",
+      "relative_path": "raw/open_targets_platform/25.09/output/target/part-00006-016eadfd-f300-4e8f-a9fe-ec4ce8b8bdc6-c000.snappy.parquet",
+      "sha256": "9d0a96422389c50578437565d3ab6dfdf5585009660e92d06550752b6ef6d9d2",
+      "bytes": 7669776,
+      "receipt_path": "manifests/receipt-archive/087bb46d8369114d4d5b327a0e093ed59fff142233b1ab0afc97586136ac54eb.json",
+      "receipt_sha256": "087bb46d8369114d4d5b327a0e093ed59fff142233b1ab0afc97586136ac54eb",
+      "receipt_bytes": 778,
+      "source_url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/target/part-00006-016eadfd-f300-4e8f-a9fe-ec4ce8b8bdc6-c000.snappy.parquet",
+      "completed_at_utc": "2026-10-11T01:56:42.4933515+00:00",
+      "publisher_hash_verified": false,
+      "projected_columns": [
+        "id",
+        "approvedSymbol"
+      ],
+      "missing_columns": [],
+      "physical_rows_scanned": 7868,
+      "selected_rows": 1
+    },
+    {
+      "source_id": "raw-07b92d2600f177f64467ff91",
+      "dataset_id": "ot_disease",
+      "release_id": "25.09",
+      "relative_path": "raw/open_targets_platform/25.09/output/disease/disease.parquet",
+      "sha256": "ac5b387e4d5705604fbadb58b0045bf8597c9f6a657e208fc993d375f556ee94",
+      "bytes": 5545555,
+      "receipt_path": "manifests/receipt-archive/fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887.json",
+      "receipt_sha256": "fe267a6a1ad79806f50c6f8c75383b8025ede8ecb7afb79d0f67965d8fcc2887",
+      "receipt_bytes": 677,
+      "source_url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/disease/disease.parquet",
+      "completed_at_utc": "2026-10-11T01:56:38.3825263+00:00",
+      "publisher_hash_verified": false,
+      "projected_columns": [
+        "id",
+        "name"
+      ],
+      "missing_columns": [],
+      "physical_rows_scanned": 39530,
+      "selected_rows": 1
+    }
+  ],
+  "rows": [
+    {
+      "source_id": "raw-027102fda37c83e4e4e9632e",
+      "row_group": 0,
+      "row_in_group": 4563,
+      "physical_row": 4563,
+      "values": {
+        "id": "42a18bae582294e7e0f30268a77f43f9b97ee22c",
+        "targetId": "ENSG00000160712",
+        "diseaseId": "EFO_0000685",
+        "datasourceId": "gwas_credible_sets",
+        "datatypeId": "genetic_association",
+        "studyId": null,
+        "literature": [
+          "24390342"
+        ],
+        "variantId": null,
+        "variantRsId": null,
+        "beta": null,
+        "oddsRatio": null,
+        "pValueMantissa": null,
+        "pValueExponent": null,
+        "score": 0.9244685173034668,
+        "publicationYear": null,
+        "publicationDate": "2013-12-25",
+        "variantFunctionalConsequenceId": null,
+        "variantEffect": null,
+        "directionOnTrait": null
+      }
+    },
+    {
+      "source_id": "raw-b261aa6674b98e8449bd6de4",
+      "row_group": 0,
+      "row_in_group": 1017,
+      "physical_row": 1017,
+      "values": {
+        "id": "ENSG00000160712",
+        "approvedSymbol": "IL6R"
+      }
+    },
+    {
+      "source_id": "raw-07b92d2600f177f64467ff91",
+      "row_group": 0,
+      "row_in_group": 25744,
+      "physical_row": 25744,
+      "values": {
+        "id": "EFO_0000685",
+        "name": "rheumatoid arthritis"
+      }
+    }
+  ],
+  "original_bytes": 15010826
+}

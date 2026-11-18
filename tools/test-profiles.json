@@ -9,6 +9,7 @@
     "original_runtime": "Frozen integration checks requiring engine 0.4.0 and wrapper 0.6.0 at source checkpoint 3fc1050; current engine must reject their unregistered producer."
   },
   "files": {
+    "tests/test_il6r_example.py": "maintained",
     "packages/tether/tests/test_api.py": "maintained",
     "experiments/equal_policy/test_cases.py": "historical_research",
     "experiments/equal_policy/test_independent_policy.py": "historical_research",

@@ -1,0 +1,16 @@
+{
+  "receipt_id": "ot25-f982ba31072cf616aef96a0f",
+  "dataset_id": "ot_disease",
+  "release_id": "25.09",
+  "relative_path": "raw\\open_targets_platform\\25.09\\output\\disease\\disease.parquet",
+  "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/disease/disease.parquet",
+  "status": "completed",
+  "bytes": 5545555,
+  "sha256": "ac5b387e4d5705604fbadb58b0045bf8597c9f6a657e208fc993d375f556ee94",
+  "publisher_hash_verified": false,
+  "format_check": "PAR1_header_and_footer_only",
+  "completed_at_utc": "2026-10-11T01:56:38.3825263+00:00",
+  "cache_hit": false,
+  "parse_status": "not_run",
+  "scientific_validation": "not_run"
+}

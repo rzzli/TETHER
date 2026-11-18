@@ -98,6 +98,7 @@ PRIVATE_COMPONENTS = frozenset({
 })
 PUBLIC_DOC_FILES = frozenset({
     'docs/FORMAT-CONTRACTS.md',
+    'docs/IL6R-EXAMPLE.md',
     'docs/ARCHIVE.md', 'docs/FRAMEWORK.md', 'docs/MAINTENANCE.md', 'docs/PORTABLE-BUNDLE.md', 'docs/RESULTS.md',
     'docs/TETHER-CATALOG-POLICY.md', 'docs/TETHER-VERIFICATION-SCOPE.md', 'docs/TETHER-RESEARCH-VIEWS.md',
 })

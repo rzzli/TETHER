@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+- Add a typed offline API through the existing supervised artifact-policy path.
+  Provide an exact three-original IL6R/RA preparation recipe, separate source audit
+  and safe HTML reading view. Default wheels still contain no real source data.
+  Keep numerical features withheld and clinical probability null.
+- Prepare optional bounded example retrieval and a manual Windows/Linux/macOS
+  qualification workflow. Live retrieval and hosted P10 qualification are not
+  claimed by the local example checks.
+
 - Specify receipt, journal and bundle formats with packaged JSON schemas and
   public positive/tampered controls. Add a standalone standard-library checker
   for byte integrity and a declared subset of completed offline execution.

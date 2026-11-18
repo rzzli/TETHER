@@ -1,0 +1,16 @@
+{
+  "receipt_id": "ot25-f8429f2bc35e13c216896037",
+  "dataset_id": "ot_evidence",
+  "release_id": "25.09",
+  "relative_path": "raw\\open_targets_platform\\25.09\\output\\evidence\\sourceId=gwas_credible_sets\\part-00071-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+  "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/evidence/sourceId=gwas_credible_sets/part-00071-910bad14-9254-465e-a5e6-bca5fd902d82.c000.snappy.parquet",
+  "status": "completed",
+  "bytes": 1795495,
+  "sha256": "ab0edce5f3ccbdb0798d5c3d0a9d5bf3a88b66077d0fda5285b95c9f202a9e89",
+  "publisher_hash_verified": false,
+  "format_check": "PAR1_header_and_footer_only",
+  "completed_at_utc": "2026-10-11T02:42:54.5418220+00:00",
+  "cache_hit": false,
+  "parse_status": "not_run",
+  "scientific_validation": "not_run"
+}

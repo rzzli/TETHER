@@ -63,6 +63,8 @@ For stronger integrity checking, save the printed receipt hash separately and pa
 
 [Package and verify an offline run on another machine](docs/PORTABLE-BUNDLE.md).
 
+[Real IL6R / rheumatoid arthritis example](docs/IL6R-EXAMPLE.md): pinned source rows, a readable dossier and relocated verification. Requires the separate original-data slice.
+
 <a id="what-works-today"></a>
 <a id="current-results"></a>
 

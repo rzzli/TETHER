@@ -1,15 +1,25 @@
 name: Validate TETHER
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      allow_pinned_downloads:
+        description: 'Authorize three pinned IL6R originals, 15 MB per runner (16 MiB cap), and standard dependencies'
+        required: true
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
-  group: validate-${{ github.workflow }}-${{ github.ref }}
+  group: validate-${{ github.workflow }}-${{ github.ref }}-${{ inputs.allow_pinned_downloads || false }}
   cancel-in-progress: true
 env:
   UV_LINK_MODE: copy
   PYTHONDONTWRITEBYTECODE: '1'
 jobs:
   validate:
+    if: github.event_name != 'workflow_dispatch' || !inputs.allow_pinned_downloads
     strategy:
       fail-fast: false
       matrix:
@@ -70,5 +80,37 @@ jobs:
         with:
           name: validation-${{ matrix.os }}-${{ matrix.mode }}-py311
           path: ${{ runner.temp }}/tether-reports/
+          if-no-files-found: warn
+          retention-days: 14
+  il6r-example:
+    if: github.event_name == 'workflow_dispatch' && inputs.allow_pinned_downloads
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-15-intel]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+      - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9
+        with:
+          version: '0.11.2'
+          python-version: '3.11.15'
+      - name: Install pinned runtime and ingestion extra
+        run: |
+          uv sync --locked --python 3.11.15 --extra ingest --no-install-project
+          uv pip install --no-deps . packages/tether --build-constraints tools/build-constraints.txt
+          uv pip check
+      - name: Run exact-source example qualification
+        run: uv run --no-sync python -I -B tools/examples/qualify_ci.py --output "${{ runner.temp }}/il6r-qualification" --allow-network
+      - name: Retain bounded logs and source audit (no raw originals)
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: il6r-${{ matrix.os }}-py311
+          path: ${{ runner.temp }}/il6r-qualification/reports/
           if-no-files-found: warn
           retention-days: 14

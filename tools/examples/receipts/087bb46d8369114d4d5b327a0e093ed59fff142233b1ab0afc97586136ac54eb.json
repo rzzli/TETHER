@@ -1,0 +1,16 @@
+{
+  "receipt_id": "ot25-303ad1dd52b00654836540b2",
+  "dataset_id": "ot_target",
+  "release_id": "25.09",
+  "relative_path": "raw\\open_targets_platform\\25.09\\output\\target\\part-00006-016eadfd-f300-4e8f-a9fe-ec4ce8b8bdc6-c000.snappy.parquet",
+  "url": "https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/output/target/part-00006-016eadfd-f300-4e8f-a9fe-ec4ce8b8bdc6-c000.snappy.parquet",
+  "status": "completed",
+  "bytes": 7669776,
+  "sha256": "9d0a96422389c50578437565d3ab6dfdf5585009660e92d06550752b6ef6d9d2",
+  "publisher_hash_verified": false,
+  "format_check": "PAR1_header_and_footer_only",
+  "completed_at_utc": "2026-10-11T01:56:42.4933515+00:00",
+  "cache_hit": false,
+  "parse_status": "not_run",
+  "scientific_validation": "not_run"
+}
