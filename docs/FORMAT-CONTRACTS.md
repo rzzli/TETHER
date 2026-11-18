@@ -191,3 +191,48 @@ does not conceal a missing state check. Include deterministic generated variatio
 of event ordering, truncation, omitted parents, substituted source hashes, legacy
 downgrades and forged completion. A reject-all checker must fail the positive
 controls. Agreement on these vectors does not prove equivalence on all inputs.
+
+## Generated-claim proposal v1
+
+The separate development module `tether.generated_claims` handles claims
+proposed against a caller-admitted specialist view. The selection backend,
+scientific ledger and existing receipt and replay schemas keep their own contracts.
+`make_generated_request` projects only the host-supplied observations for one case
+and category. Each source binds an observation ID, its exact normalized statement,
+the SHA-256 of that text's UTF-8 bytes and the original artifact citation. Admission
+and permission to retain source text remain with the caller.
+
+A response is a UTF-8 JSON object with `schema_version: 1`, `request_sha256` (the
+canonical request fingerprint) and `claims`, an array of up to 32 proposals. Each
+proposal contains `claim_id`, `text`, `hypothesis_sha256`, `uncertainty` and
+`quotes`. Use a unique claim ID of at most 80 ASCII letters, digits, dots,
+underscores or hyphens, starting with a letter or digit. Use `low`, `moderate`,
+`high` or `unknown` for uncertainty. Each proposal represents one proposition.
+The hypothesis hash binds target, indication, namespace versions, action, modality
+and tissue using the case contract. A matching hash declares the intended scope.
+Whether the prose and evidence support that scope is a separate review decision.
+
+Each quote contains `observation_id`, `source_sha256` (the statement text hash),
+`start_byte`, `end_byte` and `quote`. The first endpoint is inclusive and the second
+exclusive. Count **UTF-8 bytes** from offset zero in the admitted statement. Copy
+the quote literally. Character counts, normalization and case folding can change
+the requested byte slice. These offsets point into the normalized statement.
+Original provider row or document location comes from its independent provenance.
+The response limit is 1 MiB, with at most eight spans per claim and 8 KiB per
+claim or quote text. The request view permits up to 256 statements and 4 MiB of
+source text. Oversized inputs fail at the boundary.
+
+`assess_generated_response` rejects a mismatched request or hypothesis, unknown IDs,
+duplicate claim IDs or spans and invalid quotes. Valid span alignment starts in
+`pending_review`. A separate caller-supplied review binds the request and the
+entire proposal, including its citations and uncertainty. Only `supported`
+permits acceptance. `insufficient`, `contradicted`, `mixed` and `incompatible_scope`
+remain distinct rejection reasons. A reviewer must assess the whole proposition;
+one supported fragment cannot carry an unsupported addition. A response cannot
+supply its own support verdict. A recorded verdict does not establish scientific truth.
+
+`archive_assessment` publishes a new file with the admitted view, exact in-limit
+response bytes in base64, raw SHA-256, envelope failure if any, and a separate
+decision for each proposal. It preserves rejected and malformed material for
+local audit. Treat the payload as untrusted text and retain it only where the
+source permissions allow. Use synthetic fixtures to exercise this contract.
