@@ -2,6 +2,7 @@
 import json
 import os
 from pathlib import Path
+import subprocess
 import sys
 import time
 import tempfile
@@ -68,6 +69,16 @@ class InventoryTests(unittest.TestCase):
         result = inventory.collect(self.root, self.root / 'missing', environments={'tests': self.root / 'missing-python'})
         self.assertEqual(result['status'], 'collection_incomplete')
         self.assertEqual(result['modules'][0]['status'], 'collection_failed')
+
+    def test_native_launch_deadline_uses_the_same_timeout_status_as_worker_wait(self):
+        self.source('test_slow_start', 'import unittest\n')
+        with patch('tether_engine.process_tree.process_tree_for') as factory:
+            tree = factory.return_value
+            tree.launch.side_effect = TimeoutError('Process-tree deadline expired')
+            result = inventory.collect(self.root, self.root / 'startup-timeout', timeout=0.05)
+            tree.finish.assert_called_once()
+        self.assertEqual(result['modules'][0]['status'], 'collection_timeout')
+        self.assertEqual(result['status'], 'collection_incomplete')
 
     def test_stale_destination_preserves_previous_result(self):
         output = self.root / 'output'; output.mkdir()

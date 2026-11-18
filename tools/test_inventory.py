@@ -116,8 +116,12 @@ def run_worker(command, *, cwd, env, stdout, stderr, timeout):
     process, primary = None, None
     try:
         deadline = time.monotonic() + timeout
-        process = tree.launch(command, deadline=deadline, cwd=cwd, env=env,
-                              stdout=stdout, stderr=stderr)
+        try:
+            process = tree.launch(command, deadline=deadline, cwd=cwd, env=env,
+                                  stdout=stdout, stderr=stderr)
+        except TimeoutError as error:
+            # Native launch and Python wait use different deadline exceptions.
+            raise subprocess.TimeoutExpired(command, timeout) from error
         code = process.wait(timeout=max(0, deadline - time.monotonic()))
         return subprocess.CompletedProcess(command, code)
     except BaseException as error:
