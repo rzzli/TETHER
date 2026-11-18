@@ -222,6 +222,11 @@ The response limit is 1 MiB, with at most eight spans per claim and 8 KiB per
 claim or quote text. The request view permits up to 256 statements and 4 MiB of
 source text. Oversized inputs fail at the boundary.
 
+The [response JSON Schema](../src/tether_engine/schemas/generated-claim-response-v1.json)
+describes the portable structural subset. The parser also requires literal integer
+tokens, valid Unicode, unique claim IDs, request binding and exact grounded spans.
+The schema alone does not check those cross-field and source-dependent conditions.
+
 `assess_generated_response` rejects a mismatched request or hypothesis, unknown IDs,
 duplicate claim IDs or spans and invalid quotes. Valid span alignment starts in
 `pending_review`. A separate caller-supplied review binds the request and the
@@ -273,3 +278,10 @@ dispatch before transport starts. A terminal outcome binds the exchange record.
 uncertain dispatch, confirmed rejection and completion. A response timeout, partial
 body or interrupted run remains uncertain. Inspection makes no network call and
 never resumes an attempt. An existing directory is rejected before transport.
+
+`structured=True` explicitly selects the pinned generated-claim schema and binds
+its digest in `ChatCapabilities`. The model list confirms the selected ID. Actual
+schema support is determined by the exchange. An unsupported structured request
+has one failure outcome. The original JSON-object mode remains replayable with
+its existing profile. Shape validation and native token filtering are measured
+separately from source-dependent parser checks.

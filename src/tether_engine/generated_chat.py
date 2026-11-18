@@ -4,9 +4,10 @@ from __future__ import annotations
 
 import base64
 import binascii
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import hashlib
 from http.client import HTTPConnection, HTTPException, IncompleteRead
+import json
 import math
 from pathlib import Path
 import socket
@@ -26,6 +27,7 @@ _BODY_MAX = 2 * 1024 * 1024
 _MODELS_MAX = 64 * 1024
 _RECORD_LIMIT = 6 * 1024 * 1024
 _REQUEST_RECORD_LIMIT = 16 * 1024 * 1024
+_STRUCTURED_SCHEMA_SHA = '6f6bdb5e59eef03eb9cec5775d6d4d27fdf15a7e672e8e3ccf810aeba4234ed4'
 _READ_SIZE = 16 * 1024
 _UNCERTAIN = frozenset({'timeout', 'partial_response', 'transport_error'})
 _SYSTEM = (
@@ -66,6 +68,7 @@ class ChatCapabilities(Frozen):
     server_port: int
     model: str
     inventory_sha256: str
+    response_schema_sha256: str | None = field(default=None, metadata={'omit_if_none': True})
 
 
 @dataclass(frozen=True)
@@ -164,7 +167,19 @@ def _configured(port: int, model: str, limits: ChatLimits) -> None:
     limits.validate()
 
 
-def _payload(request: GeneratedRequest, model: str, limits: ChatLimits) -> tuple[str, bytes]:
+def _response_format(capabilities: ChatCapabilities) -> dict:
+    if capabilities.response_schema_sha256 is None:
+        return {'type': 'json_object'}
+    if capabilities.response_schema_sha256 != _STRUCTURED_SCHEMA_SHA:
+        raise ContractError('unrecognized_generated_schema')
+    path = Path(__file__).parent / 'schemas/generated-claim-response-v1.json'
+    raw = read_bounded_bytes(path, 16 * 1024, 'generated_schema_byte_limit')
+    if _sha(raw) != _STRUCTURED_SCHEMA_SHA:
+        raise ContractError('generated_schema_hash_mismatch')
+    return {'type': 'json_schema', 'json_schema': {'name': 'tether_generated_claim_v1', 'schema': parse_json(raw)}}
+
+
+def _payload(request: GeneratedRequest, capabilities: ChatCapabilities, limits: ChatLimits) -> tuple[str, bytes]:
     request.validate()
     identity = fingerprint(request)
     # The proposal transport needs offsets, text hashes and case context. It
@@ -173,9 +188,15 @@ def _payload(request: GeneratedRequest, model: str, limits: ChatLimits) -> tuple
                for row in request.sources]
     content = canonical(dict(request_sha256=identity, hypothesis_sha256=request.case.hypothesis.key,
                              case=request.case, category=request.category, sources=sources)).decode('utf-8')
-    body = canonical(dict(model=model, messages=[dict(role='system', content=_SYSTEM),
-                     dict(role='user', content=content)], max_tokens=limits.max_output_tokens,
-                     temperature=0, stream=False, response_format=dict(type='json_object')))
+    message = dict(model=capabilities.model, messages=[dict(role='system', content=_SYSTEM),
+                   dict(role='user', content=content)], max_tokens=limits.max_output_tokens,
+                   temperature=0, stream=False, response_format=_response_format(capabilities))
+    if capabilities.response_schema_sha256 is None:
+        body = canonical(message)
+    else:
+        # The pinned converter emits object keys in schema order. Preserve that
+        # order on this wire path and bind the exact bytes in the exchange.
+        body = json.dumps(message, ensure_ascii=False, separators=(',', ':'), allow_nan=False).encode('utf-8')
     if len(body) > limits.max_request_bytes:
         raise ContractError('chat_request_byte_limit')
     return identity, body
@@ -238,11 +259,14 @@ def _interpret(request: GeneratedRequest, request_sha: str, payload: bytes, prof
 
 
 class LocalGeneratedChat:
-    """One documented JSON-object dialect. Failed negotiation never dispatches."""
+    """Explicit JSON-object or pinned structured mode. No negotiation fallback."""
 
-    def __init__(self, port: int, model: str, limits: ChatLimits = ChatLimits()):
+    def __init__(self, port: int, model: str, limits: ChatLimits = ChatLimits(), *, structured: bool = False):
         _configured(port, model, limits)
+        if type(structured) is not bool:
+            raise ContractError('invalid_structured_mode')
         self._port, self._model, self._limits = port, model, limits
+        self._structured = structured
         self._capabilities: ChatCapabilities | None = None
 
     def negotiate(self) -> ChatCapabilities:
@@ -254,7 +278,10 @@ class LocalGeneratedChat:
         entries = inventory.get('data') if type(inventory) is dict else None
         if type(entries) is not list or sum(type(row) is dict and row.get('id') == self._model for row in entries) != 1:
             raise ContractError('configured_chat_model_not_unique_in_inventory')
-        self._capabilities = ChatCapabilities(self._port, self._model, _sha(received.raw))
+        capability = ChatCapabilities(self._port, self._model, _sha(received.raw),
+                                      _STRUCTURED_SCHEMA_SHA if self._structured else None)
+        _response_format(capability)
+        self._capabilities = capability
         return self._capabilities
 
     def run(self, request: GeneratedRequest, capabilities: ChatCapabilities) -> ChatAttempt:
@@ -265,7 +292,7 @@ class LocalGeneratedChat:
     def _prepare(self, request: GeneratedRequest, capabilities: ChatCapabilities) -> tuple[str, bytes, str]:
         if not isinstance(capabilities, ChatCapabilities) or capabilities != self._capabilities:
             raise ContractError('chat_capabilities_mismatch')
-        identity, payload = _payload(request, self._model, self._limits)
+        identity, payload = _payload(request, capabilities, self._limits)
         profile_sha = fingerprint(dict(capabilities=capabilities, limits=self._limits))
         return identity, payload, profile_sha
 
@@ -356,7 +383,7 @@ def replay_chat(path: Path, request: GeneratedRequest, capabilities: ChatCapabil
                 limits: ChatLimits = ChatLimits()) -> ChatAttempt:
     """Interpret the exact recorded response again, with no transport call."""
     _configured(capabilities.server_port, capabilities.model, limits)
-    identity, payload = _payload(request, capabilities.model, limits)
+    identity, payload = _payload(request, capabilities, limits)
     profile_sha = fingerprint(dict(capabilities=capabilities, limits=limits))
     record = parse_json(read_bounded_bytes(path, _RECORD_LIMIT, 'chat_record_byte_limit'))
     required = {'schema_version', 'request_sha256', 'payload_sha256', 'profile_sha256', 'http_status',

@@ -215,6 +215,24 @@ class GeneratedChatTests(unittest.TestCase):
             with self.assertRaisesRegex(ContractError, 'record_hash_mismatch'):
                 inspect_chat_attempt(path)
 
+    def test_structured_mode_pins_wire_schema_and_does_not_fallback(self):
+        server = self.server(lambda _request: (400, 'application/json', b'{"error":"fictional unsupported dialect"}', None))
+        backend = LocalGeneratedChat(server.server_port, 'fictional-model', structured=True)
+        capability = backend.negotiate()
+        self.assertIsNotNone(capability.response_schema_sha256)
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / 'schema'
+            result = backend.run_once(self.request, capability, path)
+            self.assertEqual(inspect_chat_attempt(path)['state'], 'confirmed_rejection')
+            self.assertEqual(replay_chat(path / 'chat-exchange.json', self.request, capability), result)
+            with self.assertRaisesRegex(ContractError, 'record_request_mismatch'):
+                replay_chat(path / 'chat-exchange.json', self.request, replace(capability, response_schema_sha256=None))
+        self.assertEqual(len(server.requests), 2)
+        sent = server.requests[-1][2]['response_format']
+        self.assertEqual(sent['type'], 'json_schema')
+        self.assertEqual(sent['json_schema']['schema']['properties']['schema_version'], {'const': 1})
+        self.assertEqual(list(sent['json_schema']['schema']['properties']), ['schema_version', 'request_sha256', 'claims'])
+
     def test_complete_http_rejection_has_durable_outcome(self):
         server = self.server(lambda _request: (503, 'application/json', b'{}', None))
         backend = LocalGeneratedChat(server.server_port, 'fictional-model')

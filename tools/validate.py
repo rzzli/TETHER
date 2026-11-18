@@ -324,6 +324,7 @@ def validate_engine_wheel(wheel):
     required = {'tether_engine/demo/v2/case.json', 'tether_engine/demo/case.json',
                 'tether_engine/schemas/native-receipt-v2.json',
                 'tether_engine/schemas/journal-envelope-v1.json',
+                'tether_engine/schemas/generated-claim-response-v1.json',
                 'tether_engine/schemas/portable-bundle-v1.json'} | compatibility
     if not required.issubset(names):
         raise ContractError('Packaged runtime/demo/compatibility imports missing')

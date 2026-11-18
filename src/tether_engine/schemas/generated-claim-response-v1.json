@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TETHER generated claim response v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "request_sha256", "claims"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "request_sha256": {"$ref": "#/$defs/digest"},
+    "claims": {
+      "type": "array",
+      "maxItems": 32,
+      "items": {"$ref": "#/$defs/claim"}
+    }
+  },
+  "$defs": {
+    "digest": {"type": "string", "pattern": "^[0-9a-f]{64}$", "minLength": 64, "maxLength": 64},
+    "text": {"type": "string", "minLength": 1, "maxLength": 8192},
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id", "text", "hypothesis_sha256", "uncertainty", "quotes"],
+      "properties": {
+        "claim_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$", "minLength": 1, "maxLength": 80},
+        "text": {"$ref": "#/$defs/text"},
+        "hypothesis_sha256": {"$ref": "#/$defs/digest"},
+        "uncertainty": {"enum": ["low", "moderate", "high", "unknown"]},
+        "quotes": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "items": {"$ref": "#/$defs/quote"}
+        }
+      }
+    },
+    "quote": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observation_id", "source_sha256", "start_byte", "end_byte", "quote"],
+      "properties": {
+        "observation_id": {"type": "string", "minLength": 1},
+        "source_sha256": {"$ref": "#/$defs/digest"},
+        "start_byte": {"type": "integer", "minimum": 0, "maximum": 4194304},
+        "end_byte": {"type": "integer", "minimum": 1, "maximum": 4194304},
+        "quote": {"$ref": "#/$defs/text"}
+      }
+    }
+  }
+}
