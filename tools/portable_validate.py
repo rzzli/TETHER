@@ -38,6 +38,7 @@ TEST_MODULES = (
     "tests.test_format_conformance",
     "tests.test_generated_claims",
     "tests.test_generated_chat",
+    "tests.test_generated_attribution_fixture",
     "tests.test_retrieval_development_fixture",
     "tests.test_study_proofs",
     "tests.test_evaluation_population",
