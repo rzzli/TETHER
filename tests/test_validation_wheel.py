@@ -20,6 +20,7 @@ class WheelNamespaceTests(unittest.TestCase):
                       'tether_engine/schemas/native-receipt-v2.json',
                       'tether_engine/schemas/journal-envelope-v1.json',
                       'tether_engine/schemas/generated-claim-response-v1.json',
+                      'tether_engine/schemas/generated-span-selection-v2.json',
                       'tether_engine/schemas/portable-bundle-v1.json',
                       self.metadata+'/METADATA', self.metadata+'/WHEEL', self.metadata+'/RECORD']
         self.names += ['tether_engine/study/'+name for name in ('__init__.py', 'proofs.py', 'stable_read.py')]

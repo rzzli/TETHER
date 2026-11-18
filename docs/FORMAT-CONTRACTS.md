@@ -261,7 +261,9 @@ configured reservation as `configured_reservation_not_measured`. A token overrun
 rejects the attempt while retaining the reported usage. The input reservation
 is a configured accounting ceiling. The transport does not estimate server-side
 tokenization from bytes or attest physical consumption. Cost is zero for this
-local development adapter.
+local development adapter. Integer and fractional timeout encodings are preserved
+when restoring the recorded limits because the profile hash binds their exact
+JSON representation.
 
 `archive_chat` retains the exact bounded HTTP body and binds request, payload,
 capabilities and limits by hash. `replay_chat` rebuilds the payload and checks
@@ -285,3 +287,26 @@ schema support is determined by the exchange. An unsupported structured request
 has one failure outcome. The original JSON-object mode remains replayable with
 its existing profile. Shape validation and native token filtering are measured
 separately from source-dependent parser checks.
+
+## Generated span selection v2
+
+`LocalGeneratedChat(..., select_spans=True)` selects the pinned
+[span-selection schema](../src/tether_engine/schemas/generated-span-selection-v2.json).
+The model receives the case, request and offer digests, and a list of span IDs
+with exact statement text. The host uses the statement's position in the
+admitted request for its ID, beginning with `s001`. Blank statements and
+statements larger than 8 KiB have no offer. Their positions are preserved.
+
+The response echoes `request_sha256` and `offer_sha256`. Each claim cites
+`span_ids`. The host resolves those IDs to literal UTF-8 spans and applies the
+same hypothesis and quote checks as v1. Unknown or duplicate IDs reject the
+affected claim. Exact quotes enter `pending_review`. Support credit requires
+a separate review of the resolved proposition. An empty claim list remains a
+valid response, including when the catalog has no offers.
+
+The durable request and exchange records carry the catalog. Its digest binds
+the request fingerprint and the ordered ID, source index and byte ranges.
+The normalized statement and its hash can be recovered from the archived
+request. Replay regenerates the catalog and request bytes and reassesses the
+original response locally. The v1 JSON-object and free-offset structured wires
+keep their original record fields and payload rules.

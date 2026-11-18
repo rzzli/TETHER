@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TETHER generated span selection v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "request_sha256", "offer_sha256", "claims"],
+  "properties": {
+    "schema_version": {"const": 2},
+    "request_sha256": {"$ref": "#/$defs/digest"},
+    "offer_sha256": {"$ref": "#/$defs/digest"},
+    "claims": {
+      "type": "array",
+      "maxItems": 32,
+      "items": {"$ref": "#/$defs/claim"}
+    }
+  },
+  "$defs": {
+    "digest": {"type": "string", "pattern": "^[0-9a-f]{64}$", "minLength": 64, "maxLength": 64},
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id", "text", "hypothesis_sha256", "uncertainty", "span_ids"],
+      "properties": {
+        "claim_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$", "minLength": 1, "maxLength": 80},
+        "text": {"type": "string", "minLength": 1, "maxLength": 8192},
+        "hypothesis_sha256": {"$ref": "#/$defs/digest"},
+        "uncertainty": {"enum": ["low", "moderate", "high", "unknown"]},
+        "span_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "items": {"type": "string", "pattern": "^s[0-9]{3}$", "minLength": 4, "maxLength": 4}
+        }
+      }
+    }
+  }
+}

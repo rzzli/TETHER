@@ -86,6 +86,32 @@ class GeneratedResponse(Frozen):
 
 
 _RESPONSE_KEYS = frozenset(field.name for field in fields(GeneratedResponse))
+_SELECTION_KEYS = _RESPONSE_KEYS | {'offer_sha256'}
+
+
+@dataclass(frozen=True)
+class SpanOffer(Frozen):
+    span_id: str
+    source_index: int
+    start_byte: int
+    end_byte: int
+
+
+@dataclass(frozen=True)
+class SpanCatalog(Frozen):
+    """Addresses in the request's ordered, hash-verified sources."""
+
+    request_sha256: str
+    offers: tuple[SpanOffer, ...]
+
+
+@dataclass(frozen=True)
+class _SpanSelection(Frozen):
+    claim_id: str
+    text: str
+    hypothesis_sha256: str
+    uncertainty: Uncertainty
+    span_ids: tuple[str, ...]
 
 
 @dataclass(frozen=True)
@@ -175,6 +201,34 @@ def make_generated_request(case: Case, category: Category,
     return result
 
 
+def _span_catalog(request_sha: str, sources: dict[str, tuple[ClaimSource, bytes]]) -> SpanCatalog:
+    offers = tuple(SpanOffer(f's{index + 1:03d}', index, 0, len(payload))
+                   for index, (source, payload) in enumerate(sources.values())
+                   if len(payload) <= MAX_TEXT_BYTES and source.text.strip())
+    return SpanCatalog(request_sha, offers)
+
+
+def make_span_catalog(request: GeneratedRequest) -> SpanCatalog:
+    """Offer each eligible complete statement, preserving order and exact UTF-8."""
+    sources = _source_bytes(request)
+    return _span_catalog(fingerprint(request), sources)
+
+
+def _resolve_selection(proposal: _SpanSelection, offers: dict[str, SpanOffer],
+                       request: GeneratedRequest) -> ClaimProposal:
+    _need(0 < len(proposal.span_ids) <= MAX_QUOTES, 'invalid_quote_count')
+    quotes = []
+    for span_id in proposal.span_ids:
+        offer = offers.get(span_id)
+        if offer is None:
+            raise ContractError('unknown_span_id')
+        source = request.sources[offer.source_index]
+        quotes.append(QuoteSpan(source.observation_id, source.text_sha256,
+                                offer.start_byte, offer.end_byte, source.text))
+    return ClaimProposal(proposal.claim_id, proposal.text, proposal.hypothesis_sha256,
+                         proposal.uncertainty, tuple(quotes))
+
+
 def _verify_quotes(proposal: ClaimProposal, sources: dict[str, tuple[ClaimSource, bytes]]) -> None:
     _need(0 < len(proposal.quotes) <= MAX_QUOTES, 'invalid_quote_count')
     locations = set()
@@ -201,9 +255,22 @@ def assess_generated_response(request: GeneratedRequest, raw: bytes, *,
     The provider payload has no support field. Even a valid exact quote receives
     no support credit without one caller-supplied, request/proposal-bound review.
     """
+    return _assess(request, raw, reviews, select_spans=False)
+
+
+def assess_span_selection(request: GeneratedRequest, raw: bytes, *,
+                          reviews: tuple[SupportReview, ...] = ()) -> ClaimAssessment:
+    """Resolve the v2 provider's IDs to host-offered spans before support review."""
+    return _assess(request, raw, reviews, select_spans=True)
+
+
+def _assess(request: GeneratedRequest, raw: bytes, reviews: tuple[SupportReview, ...], *,
+            select_spans: bool) -> ClaimAssessment:
     _need(type(raw) is bytes and len(raw) <= MAX_RESPONSE_BYTES, 'invalid_or_oversize_generated_response')
     sources = _source_bytes(request)
     request_sha = fingerprint(request)
+    catalog = _span_catalog(request_sha, sources) if select_spans else None
+    version = 2 if select_spans else 1
     trusted: dict[str, SupportReview] = {}
     _need(len(reviews) <= MAX_CLAIMS, 'too_many_support_reviews')
     for review in reviews:
@@ -214,33 +281,40 @@ def assess_generated_response(request: GeneratedRequest, raw: bytes, *,
 
     try:
         envelope = parse_json(raw)
-        _need(type(envelope) is dict and envelope.keys() == _RESPONSE_KEYS,
-              'invalid_response_fields')
-        _need(type(envelope['schema_version']) is int and envelope['schema_version'] == 1, 'unsupported_response_version')
+        keys = _SELECTION_KEYS if select_spans else _RESPONSE_KEYS
+        _need(type(envelope) is dict and envelope.keys() == keys, 'invalid_response_fields')
+        _need(type(envelope['schema_version']) is int and envelope['schema_version'] == version,
+              'unsupported_response_version')
         _need(envelope['request_sha256'] == request_sha, 'response_request_mismatch')
+        if catalog is not None:
+            _need(envelope['offer_sha256'] == fingerprint(catalog), 'response_offer_mismatch')
         claims = envelope['claims']
         _need(type(claims) is list and len(claims) <= MAX_CLAIMS, 'invalid_claim_count')
     except ContractError as error:
-        return ClaimAssessment(1, request_sha, raw, str(error), ())
+        return ClaimAssessment(version, request_sha, raw, str(error), ())
 
+    offers = {offer.span_id: offer for offer in catalog.offers} if catalog is not None else {}
     ids = Counter(item['claim_id'] for item in claims if isinstance(item, dict) and type(item.get('claim_id')) is str)
     results = []
     for index, item in enumerate(claims):
         proposal = None
         try:
-            proposal = decode(ClaimProposal, item, f'claim[{index}]')
-            _need(_CLAIM_ID.fullmatch(proposal.claim_id) is not None, 'invalid_claim_id')
-            _need(ids[proposal.claim_id] == 1, 'duplicate_claim_id')
-            _need(bool(proposal.text.strip()) and len(_utf8(proposal.text)) <= MAX_TEXT_BYTES, 'invalid_claim_text')
-            _need(_SHA256.fullmatch(proposal.hypothesis_sha256) is not None, 'invalid_hypothesis_hash')
+            candidate = decode(_SpanSelection if select_spans else ClaimProposal, item, f'claim[{index}]')
+            if isinstance(candidate, ClaimProposal):
+                proposal = candidate
+            _need(_CLAIM_ID.fullmatch(candidate.claim_id) is not None, 'invalid_claim_id')
+            _need(ids[candidate.claim_id] == 1, 'duplicate_claim_id')
+            _need(bool(candidate.text.strip()) and len(_utf8(candidate.text)) <= MAX_TEXT_BYTES, 'invalid_claim_text')
+            _need(_SHA256.fullmatch(candidate.hypothesis_sha256) is not None, 'invalid_hypothesis_hash')
         except ContractError as error:
             results.append(ProposalResult(index, proposal, 'rejected', 'not_checked', reason=str(error)))
             continue
-        if proposal.hypothesis_sha256 != request.case.hypothesis.key:
+        if candidate.hypothesis_sha256 != request.case.hypothesis.key:
             results.append(ProposalResult(index, proposal, 'rejected', 'not_checked', Support.INCOMPATIBLE_SCOPE,
                                           'hypothesis_scope_mismatch'))
             continue
         try:
+            proposal = _resolve_selection(candidate, offers, request) if select_spans else candidate
             _verify_quotes(proposal, sources)
         except ContractError as error:
             results.append(ProposalResult(index, proposal, 'rejected', 'invalid', reason=str(error)))
@@ -254,14 +328,16 @@ def assess_generated_response(request: GeneratedRequest, raw: bytes, *,
         else:
             disposition = 'rejected'
         results.append(ProposalResult(index, proposal, disposition, 'valid', verdict, review=review))
-    return ClaimAssessment(1, request_sha, raw, None, tuple(results))
+    return ClaimAssessment(version, request_sha, raw, None, tuple(results))
 
 
 def archive_assessment(path: Path, request: GeneratedRequest, assessment: ClaimAssessment) -> None:
     """Publish the admitted view, exact raw bytes and decisions as one record."""
     _need(assessment.request_sha256 == fingerprint(request), 'assessment_request_mismatch')
-    publish_bytes(path, canonical({
-        'schema_version': 1,
+    _need(type(assessment.schema_version) is int and assessment.schema_version in (1, 2),
+          'unsupported_assessment_version')
+    record = {
+        'schema_version': assessment.schema_version,
         'request': request,
         'request_sha256': assessment.request_sha256,
         'raw_response_sha256': _hash(assessment.raw_response),
@@ -270,4 +346,7 @@ def archive_assessment(path: Path, request: GeneratedRequest, assessment: ClaimA
         'proposals': assessment.proposals,
         'accepted_claim_ids': tuple(item.claim_id for item in assessment.accepted),
         'scientific_validation': 'not_established',
-    }) + b'\n')
+    }
+    if assessment.schema_version == 2:
+        record['span_catalog'] = make_span_catalog(request)
+    publish_bytes(path, canonical(record) + b'\n')

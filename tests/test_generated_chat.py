@@ -15,8 +15,8 @@ from tether_engine.generated_chat import (
     ChatCapabilities, ChatLimits, LocalGeneratedChat, archive_chat, inspect_chat_attempt, replay_chat,
 )
 from tether_engine.journal import RunJournal
-from tether_engine.generated_claims import make_generated_request
-from tether_engine.serde import ContractError, canonical, decode
+from tether_engine.generated_claims import GeneratedRequest, make_generated_request, make_span_catalog
+from tether_engine.serde import ContractError, canonical, decode, encode
 
 
 DEMO = Path(__file__).resolve().parents[1] / 'src/tether_engine/demo/v2'
@@ -131,6 +131,62 @@ class GeneratedChatTests(unittest.TestCase):
         with self.assertRaisesRegex(ContractError, 'capabilities_mismatch'):
             backend.run(self.request, ChatCapabilities(server.server_port, 'fictional-model', 'f'*64))
         self.assertEqual([r[0] for r in server.requests], ['GET'])
+
+    def test_span_selection_persists_offers_and_replays_exact_bytes(self):
+        def select(sent):
+            prompt = json.loads(sent['messages'][1]['content'])
+            claims = [dict(claim_id='fixture', text='A fictional result.', uncertainty='high',
+                           hypothesis_sha256=prompt['hypothesis_sha256'],
+                           span_ids=[item['span_id'] for item in prompt['spans']])] if prompt['spans'] else []
+            proposal = dict(schema_version=2, request_sha256=prompt['request_sha256'],
+                            offer_sha256=prompt['offer_sha256'], claims=claims)
+            envelope = dict(choices=[dict(finish_reason='stop', message=dict(role='assistant',
+                            content=canonical(proposal).decode()))], usage=dict(prompt_tokens=100, completion_tokens=20))
+            return 200, 'application/json', canonical(envelope), None
+
+        server = self.server(select)
+        with self.assertRaisesRegex(ContractError, 'invalid_structured_mode'):
+            LocalGeneratedChat(server.server_port, 'fictional-model', structured=True, select_spans=True)
+        limits = ChatLimits(timeout_seconds=30)
+        backend = LocalGeneratedChat(server.server_port, 'fictional-model', limits, select_spans=True)
+        capabilities = backend.negotiate()
+        with tempfile.TemporaryDirectory() as temp:
+            for request in (self.request, replace(self.request, sources=())):
+                output = Path(temp) / ('with-spans' if request.sources else 'without-spans')
+                result = backend.run_once(request, capabilities, output)
+                sent = server.requests[-1][2]
+                schema = sent['response_format']['json_schema']
+                self.assertEqual(schema['name'], 'tether_generated_span_selection_v2')
+                self.assertEqual(list(schema['schema']['properties']),
+                                 ['schema_version', 'request_sha256', 'offer_sha256', 'claims'])
+                prompt = json.loads(sent['messages'][1]['content'])
+                self.assertEqual(prompt['spans'], [{'span_id': 's001', 'text': request.sources[0].text}]
+                                 if request.sources else [])
+                self.assertNotIn('sources', prompt)
+                self.assertNotIn('https://example.invalid', sent['messages'][1]['content'])
+                self.assertEqual(result.disposition, 'proposal_assessed')
+                self.assertEqual(result.assessment.accepted, ())
+                self.assertEqual([item.quote_status for item in result.assessment.proposals],
+                                 ['valid'] if request.sources else [])
+                self.assertEqual(inspect_chat_attempt(output)['state'], 'completed')
+                prepared = json.loads((output / 'generated-request.json').read_bytes())
+                exchange = output / 'chat-exchange.json'
+                record = json.loads(exchange.read_bytes())
+                self.assertEqual(record['span_catalog'], encode(make_span_catalog(request)))
+                self.assertEqual(prepared['span_catalog'], record['span_catalog'])
+                with patch('tether_engine.generated_chat._http') as transport:
+                    restored = decode(GeneratedRequest, prepared['request'])
+                    restored_capabilities = decode(ChatCapabilities, prepared['capabilities'])
+                    restored_limits = decode(ChatLimits, prepared['limits'])
+                    self.assertIs(type(restored_limits.timeout_seconds), int)
+                    self.assertEqual(replay_chat(exchange, restored, restored_capabilities, restored_limits), result)
+                    record['span_catalog']['request_sha256'] = 'f' * 64
+                    exchange.write_bytes(canonical(record))
+                    with self.assertRaisesRegex(ContractError, 'chat_record_offer_mismatch'):
+                        replay_chat(exchange, request, capabilities, limits)
+                    transport.assert_not_called()
+                with self.assertRaisesRegex(ContractError, 'chat_attempt_record_hash_mismatch'):
+                    inspect_chat_attempt(output)
 
     def test_streaming_http_errors_partial_responses_and_limits_are_distinct(self):
         for code, media, raw, length, disposition in (
