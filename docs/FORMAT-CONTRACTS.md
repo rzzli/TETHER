@@ -310,3 +310,8 @@ The normalized statement and its hash can be recovered from the archived
 request. Replay regenerates the catalog and request bytes and reassesses the
 original response locally. The v1 JSON-object and free-offset structured wires
 keep their original record fields and payload rules.
+
+In a fixed synthetic pilot on the cached local model, all 12 structured
+exchanges replayed. The model selected the intended span in one of eight
+groundable cases and returned an empty claim list in all four cases with no
+offers. Span selection remains experimental pending a passing usefulness gate.
