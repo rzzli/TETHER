@@ -188,6 +188,43 @@ class GeneratedChatTests(unittest.TestCase):
                 with self.assertRaisesRegex(ContractError, 'chat_attempt_record_hash_mismatch'):
                     inspect_chat_attempt(output)
 
+    def test_question_span_request_binds_exact_replay_and_stays_out_of_legacy_transport(self):
+        asked = replace(self.request, schema_version=2, question='Which fictional result was recorded?')
+
+        def reply(sent):
+            prompt = json.loads(sent['messages'][1]['content'])
+            answer = dict(schema_version=2, request_sha256=prompt['request_sha256'],
+                          offer_sha256=prompt['offer_sha256'], claims=[])
+            envelope = dict(choices=[dict(finish_reason='stop', message=dict(role='assistant',
+                            content=canonical(answer).decode()))], usage=dict(prompt_tokens=100, completion_tokens=20))
+            return 200, 'application/json', canonical(envelope), None
+
+        server = self.server(reply)
+        legacy = LocalGeneratedChat(server.server_port, 'fictional-model')
+        capability = legacy.negotiate()
+        with self.assertRaisesRegex(ContractError, 'question_requires_span_selection'):
+            legacy.run(asked, capability)
+        self.assertEqual([r[0] for r in server.requests], ['GET'])
+
+        backend = LocalGeneratedChat(server.server_port, 'fictional-model', select_spans=True)
+        capability = backend.negotiate()
+        with tempfile.TemporaryDirectory() as temp:
+            output = Path(temp) / 'asked'
+            result = backend.run_once(asked, capability, output)
+            sent = server.requests[-1][2]['messages']
+            self.assertIn('Answer the explicit question', sent[0]['content'])
+            prompt = json.loads(sent[1]['content'])
+            self.assertEqual(prompt['question'], asked.question)
+            self.assertEqual(set(prompt), {'case', 'category', 'request_sha256',
+                                           'hypothesis_sha256', 'offer_sha256', 'spans', 'question'})
+            archived = json.loads((output / 'generated-request.json').read_bytes())
+            self.assertEqual(decode(GeneratedRequest, archived['request']), asked)
+            path = output / 'chat-exchange.json'
+            self.assertEqual(replay_chat(path, asked, capability), result)
+            with self.assertRaisesRegex(ContractError, 'request_mismatch'):
+                replay_chat(path, replace(asked, question='What was the other result?'), capability)
+            self.assertEqual(len([row for row in server.requests if row[0] == 'POST']), 1)
+
     def test_streaming_http_errors_partial_responses_and_limits_are_distinct(self):
         for code, media, raw, length, disposition in (
             (200, 'text/event-stream', b'data: {}\n\n', None, 'streaming_response'),

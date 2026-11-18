@@ -315,3 +315,11 @@ In a fixed synthetic pilot on the cached local model, all 12 structured
 exchanges replayed. The model selected the intended span in one of eight
 groundable cases and returned an empty claim list in all four cases with no
 offers. Span selection remains experimental pending a passing usefulness gate.
+
+To ask a specific question, pass `question=...` to `make_generated_request`.
+This creates a version-two request for span selection, with the same
+version-two response schema. The nonblank question is limited to 4,096 UTF-8
+bytes. The request and offer digests bind its literal bytes. The prompt asks
+for one short source-backed answer and explicitly permits abstention when
+none of the offered spans answers the question. Quote resolution and the
+requirement for separate support review still apply.

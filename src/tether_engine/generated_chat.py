@@ -55,6 +55,12 @@ _SPAN_SYSTEM = (
     'Do not supply quote text or byte offsets. Do not invent support, causal claims, treatment outcomes '
     'or probabilities. Return an empty claims array if no offered span supports a claim.'
 )
+_QUESTION_SPAN_SYSTEM = (
+    'Answer the explicit question in the user data using only the offered spans. When they contain '
+    'the answer, write one short proposition that states the answer as recorded. Cite the span that '
+    'contains that answer. A span that merely mentions the topic is insufficient. Return an empty '
+    'claims array when no span answers the question. '
+) + _SPAN_SYSTEM
 
 
 @dataclass(frozen=True)
@@ -209,8 +215,13 @@ def _payload(request: GeneratedRequest, capabilities: ChatCapabilities,
                         spans=[dict(span_id=offer.span_id, text=request.sources[offer.source_index].text)
                                for offer in catalog.offers])
         system = _SPAN_SYSTEM
+        if request.question is not None:
+            evidence['question'] = request.question
+            system = _QUESTION_SPAN_SYSTEM
     else:
         request.validate()
+        if request.question is not None:
+            raise ContractError('question_requires_span_selection')
         identity = fingerprint(request)
         evidence = dict(sources=[dict(observation_id=row.observation_id, text=row.text,
                                       text_sha256=row.text_sha256) for row in request.sources])

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import base64
 from collections import Counter
-from dataclasses import dataclass, fields
+from dataclasses import dataclass, field, fields
 from enum import StrEnum
 import hashlib
 from pathlib import Path
@@ -21,6 +21,7 @@ MAX_SOURCES = 256
 MAX_CLAIMS = 32
 MAX_QUOTES = 8
 MAX_TEXT_BYTES = 8192
+MAX_QUESTION_BYTES = 4096
 _CLAIM_ID = re.compile(r'[A-Za-z0-9][A-Za-z0-9._-]{0,79}')
 _SHA256 = re.compile(r'[0-9a-f]{64}')
 
@@ -55,6 +56,7 @@ class GeneratedRequest(Frozen):
     case: Case
     category: Category
     sources: tuple[ClaimSource, ...]
+    question: str | None = field(default=None, metadata={'omit_if_none': True})
 
     def validate(self) -> None:
         _source_bytes(self)
@@ -166,7 +168,13 @@ def _utf8(text: str) -> bytes:
 
 
 def _source_bytes(request: GeneratedRequest) -> dict[str, tuple[ClaimSource, bytes]]:
-    _need(type(request.schema_version) is int and request.schema_version == 1, 'unsupported_request_version')
+    _need(type(request.schema_version) is int and request.schema_version in (1, 2), 'unsupported_request_version')
+    if request.schema_version == 1:
+        _need(request.question is None, 'invalid_generated_question')
+    else:
+        question = request.question
+        _need(isinstance(question, str) and bool(question.strip())
+              and len(_utf8(question)) <= MAX_QUESTION_BYTES, 'invalid_generated_question')
     request.case.validate()
     _need(isinstance(request.category, Category), 'invalid_category')
     _need(len(request.sources) <= MAX_SOURCES, 'too_many_sources')
@@ -185,7 +193,8 @@ def _source_bytes(request: GeneratedRequest) -> dict[str, tuple[ClaimSource, byt
 
 
 def make_generated_request(case: Case, category: Category,
-                           admitted: tuple[GroundedObservation, ...]) -> GeneratedRequest:
+                           admitted: tuple[GroundedObservation, ...], *,
+                           question: str | None = None) -> GeneratedRequest:
     """Project one already-admitted specialist view. This is not an admission API."""
     _need(len(admitted) <= MAX_SOURCES, 'too_many_sources')
     sources = []
@@ -196,7 +205,7 @@ def make_generated_request(case: Case, category: Category,
               and case.permits_program(observation.program_id), 'source_outside_specialist_scope')
         sources.append(ClaimSource(observation.observation_id, observation.statement,
                                    _hash(_utf8(observation.statement)), item.citation))
-    result = GeneratedRequest(1, case, category, tuple(sources))
+    result = GeneratedRequest(1 if question is None else 2, case, category, tuple(sources), question)
     _source_bytes(result)
     return result
 
@@ -268,6 +277,7 @@ def _assess(request: GeneratedRequest, raw: bytes, reviews: tuple[SupportReview,
             select_spans: bool) -> ClaimAssessment:
     _need(type(raw) is bytes and len(raw) <= MAX_RESPONSE_BYTES, 'invalid_or_oversize_generated_response')
     sources = _source_bytes(request)
+    _need(request.question is None or select_spans, 'question_requires_span_selection')
     request_sha = fingerprint(request)
     catalog = _span_catalog(request_sha, sources) if select_spans else None
     version = 2 if select_spans else 1

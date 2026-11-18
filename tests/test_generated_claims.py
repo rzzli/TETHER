@@ -49,6 +49,28 @@ class GeneratedClaimsTests(unittest.TestCase):
                     hypothesis_sha256=self.claim.hypothesis_sha256, uncertainty='high',
                     span_ids=['s001']) | changes
 
+    def test_question_request_hash_binds_exact_utf8_and_changes_the_offer(self):
+        question = 'What does the Café 🧬 record mention?'
+        asked = make_generated_request(self.case, Category.GENETICS, (self.grounded,), question=question)
+        self.assertEqual(asked.schema_version, 2)
+        self.assertEqual(decode(type(asked), encode(asked)), asked)
+        modified = replace(asked, question=question.replace('Café', 'Cafe\u0301'))
+        self.assertNotEqual(fingerprint(asked), fingerprint(modified))
+        self.assertEqual(make_span_catalog(asked).offers, make_span_catalog(modified).offers)
+        self.assertNotEqual(fingerprint(make_span_catalog(asked)), fingerprint(make_span_catalog(modified)))
+        self.assertNotIn('question', encode(self.request))
+        with self.assertRaisesRegex(ContractError, 'question_requires_span_selection'):
+            assess_generated_response(asked, self.response())
+
+    def test_question_rejects_invalid_type_length_and_unversioned_requests(self):
+        for question in ('', ' ', 'é' * 2049, '\ud800', 2):
+            with self.subTest(question=repr(question)[:30]), self.assertRaises(ContractError):
+                make_generated_request(self.case, Category.GENETICS, (self.grounded,), question=question)
+        for request in (replace(self.request, question='What happened?'),
+                        replace(self.request, schema_version=2)):
+            with self.assertRaisesRegex(ContractError, 'invalid_generated_question'):
+                request.validate()
+
     def test_span_selection_resolves_exact_multibyte_bytes_without_credit(self):
         raw = canonical(self.selection(self.selected()))
         result = assess_span_selection(self.request, raw)
