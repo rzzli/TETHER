@@ -3,6 +3,8 @@ import json
 import hashlib
 import io
 import time
+from email.message import Message
+from urllib.response import addinfourl
 from pathlib import Path
 import tempfile
 import unittest
@@ -61,7 +63,7 @@ class ExampleRetrievalTests(unittest.TestCase):
         return response
 
     def test_explicit_network_choice_required_before_output(self):
-        with tempfile.TemporaryDirectory() as temp, patch.object(fetch_il6r.urllib.request,'urlopen') as open_url:
+        with tempfile.TemporaryDirectory() as temp, patch.object(fetch_il6r, '_open_original') as open_url:
             output=Path(temp)/'new'
             with self.assertRaisesRegex(ContractError,'explicit'):
                 fetch_il6r.fetch(output)
@@ -72,7 +74,7 @@ class ExampleRetrievalTests(unittest.TestCase):
 
     def test_exact_payload_accepted_without_real_network(self):
         data=b'fictional source'
-        with patch.object(fetch_il6r.urllib.request,'urlopen',return_value=self.response(data)):
+        with patch.object(fetch_il6r, '_open_original', return_value=self.response(data)):
             result=fetch_il6r.fetch_one(fetch_il6r.PREFIX+'fixture',hashlib.sha256(data).hexdigest(),len(data),time.monotonic()+5)
         self.assertEqual(result,data)
 
@@ -82,12 +84,34 @@ class ExampleRetrievalTests(unittest.TestCase):
         for response,reason in ((self.response(b'abcd'),'exceeds pinned size'),
                                 (self.response(b'xyz'),'differs from pinned bytes'),
                                 (self.response(b'abc',url='https://example.invalid'),'redirect')):
-            with self.subTest(reason=reason), patch.object(fetch_il6r.urllib.request,'urlopen',return_value=response):
+            with self.subTest(reason=reason), patch.object(fetch_il6r, '_open_original', return_value=response):
                 with self.assertRaisesRegex(ContractError,reason):
                     fetch_il6r.fetch_one(url,digest,3,time.monotonic()+5)
-        with patch.object(fetch_il6r.urllib.request,'urlopen') as open_url, self.assertRaises(TimeoutError):
+        with patch.object(fetch_il6r, '_open_original') as open_url, self.assertRaises(TimeoutError):
             fetch_il6r.fetch_one(url,digest,3,time.monotonic()-1)
         open_url.assert_not_called()
+
+    def test_redirect_is_rejected_before_requesting_its_destination(self):
+        pinned = fetch_il6r.PREFIX + 'fixture'
+        other = 'https://example.invalid/substitute'
+        requested = []
+
+        def transport(_handler, request):
+            requested.append(request.full_url)
+            headers = Message()
+            if request.full_url == pinned:
+                headers['Location'] = other
+                status = 302
+            else:
+                status = 200
+            response = addinfourl(io.BytesIO(b'abc'), headers, request.full_url, status)
+            response.msg = 'fixture'
+            return response
+
+        with patch.object(fetch_il6r.urllib.request.HTTPSHandler, 'https_open', transport):
+            with self.assertRaisesRegex(ContractError, 'redirect'):
+                fetch_il6r.fetch_one(pinned, hashlib.sha256(b'abc').hexdigest(), 3, time.monotonic() + 5)
+        self.assertEqual(requested, [pinned])
 
     def test_archived_witnesses_match_all_pins(self):
         root=Path(fetch_il6r.__file__).parent

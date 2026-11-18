@@ -23,13 +23,23 @@ MAX_PAYLOAD_BYTES=16*1024*1024
 PREFIX='https://ftp.ebi.ac.uk/pub/databases/opentargets/platform/25.09/'
 
 
+class _RejectRedirects(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        fp.close()
+        raise ContractError('Unexpected example response or redirect')
+
+
+def _open_original(request, *, timeout):
+    return urllib.request.build_opener(_RejectRedirects()).open(request, timeout=timeout)
+
+
 def fetch_one(url, digest, size, deadline):
     if not isinstance(url,str) or not url.startswith(PREFIX) or type(size) is not int or not 0<size<=MAX_PAYLOAD_BYTES:
         raise ContractError('Unapproved example URL or size')
     if time.monotonic()>=deadline:
         raise TimeoutError('Example retrieval deadline')
     request=urllib.request.Request(url,headers={'User-Agent':'TETHER-pinned-example/1'})
-    with urllib.request.urlopen(request,timeout=30) as response:
+    with _open_original(request, timeout=30) as response:
         if response.status!=200 or response.geturl()!=url:
             raise ContractError('Unexpected example response or redirect')
         chunks,used=[],0
