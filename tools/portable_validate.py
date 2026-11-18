@@ -40,6 +40,7 @@ TEST_MODULES = (
     "tests.test_generated_chat",
     "tests.test_generated_attribution_fixture",
     "tests.test_retrieval_development_fixture",
+    "tests.test_question_retrieval",
     "tests.test_study_proofs",
     "tests.test_evaluation_population",
     "tests.test_evaluation_binding",

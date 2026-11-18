@@ -329,3 +329,21 @@ intended span. All four cases without a usable answer abstained, including two
 with offered passages. All 12 first attempts replayed. This qualifies the
 bounded development profile. The small, previously exposed fixture does not
 establish general reliability or entailment.
+
+## Question retrieval over admitted sources
+
+`bounded_question_request` ranks one question and its pre-admitted sources.
+Its default is BM25 with `k1=1.2` and `b=0.75`. A three-term overlap
+comparator uses the longest three distinct terms from the same tokenizer.
+Both strategies tokenize Unicode letters and numbers after NFKC normalization,
+case folding and dash normalization. Internal punctuation keeps identifiers
+such as `HLA-DQB1*06:02` and decimal tokens intact. Stable observation IDs
+break ties. [BM25 parameter and IDF reference](https://lucene.apache.org/core/10_1_0/core/org/apache/lucene/search/similarities/BM25Similarity.html)
+
+The ranker accepts an explicit question and cannot consult choices or reference
+judgments. It preserves complete source records, their citations and the
+question. The audit records the strategy, limits, original and selected request
+digests, selected IDs, canonical request size and excluded sources with reasons.
+The same record and canonical byte limits apply to both strategies. The chat
+adapter separately checks the serialized HTTP request. A source with no term
+overlap or an empty result makes no scientific absence claim.
