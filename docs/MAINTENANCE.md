@@ -17,26 +17,28 @@ that every newer interpreter or operating system has passed qualification.
 
 | Platform and interpreter | Current qualification |
 |---|---|
-| Windows x64, CPython 3.11.15 | Hosted full maintained gate: 867 tests, no skips; quality, coverage and offline wheel checks. Local clean-ZIP and relocated fictional-bundle checks also passed. |
-| Ubuntu x64, CPython 3.11.15 | Hosted installed core: 867 collected, 755 passed and 112 explicit platform/dependency skips; offline wheel demo and verification passed. |
-| macOS 15 x64, CPython 3.11.15 | Hosted `macos-15-intel` installed core: 867 collected, 755 passed and 112 explicit platform/dependency skips; offline wheel demo and verification passed. |
+| Windows x64, CPython 3.11.15 | Hosted full maintained gate: 903 passed, zero skips. Quality, coverage, offline wheel and real example checks passed. |
+| Ubuntu x64, CPython 3.11.15 | Hosted installed core: 789 passed and 114 explicit platform/dependency skips. Offline wheel and real example checks passed. |
+| macOS 15 x64, CPython 3.11.15 | Hosted `macos-15-intel` installed core: 789 passed and 114 explicit platform/dependency skips. Offline wheel and real example checks passed. |
 | macOS ARM64 | Source-export subset passed; installed-core qualification remains unavailable after hosted runner-capacity failure. |
 | Other Python versions/platforms | Unqualified for this development release; earlier component checks do not qualify this version. |
 
-The hosted qualification is bound to runtime/source checkpoint `b284790`:
-[installed gates](https://github.com/rzzli/TETHER/actions/runs/43928580514) and
-[source-export gates](https://github.com/rzzli/TETHER/actions/runs/43928580456).
-The source-export subset ran 321 tests without skips on each runner:
+The hosted qualification covers runtime and source checkpoint `b2117eb`.
+[Installed gates](https://github.com/rzzli/TETHER/actions/runs/44344097703) ·
+[Source export](https://github.com/rzzli/TETHER/actions/runs/44344097720) ·
+[Real IL6R example](https://github.com/rzzli/TETHER/actions/runs/44344125809)
+
+Each runner passed 342 source export tests without skips.
 
 | Hosted runner | Actual Python | Fast-gate seconds | Target |
 |---|---|---:|---:|
-| Windows x64 | 3.11.9 | 60.453 | <300 |
-| Ubuntu x64 | 3.11.15 | 19.443 | <300 |
-| macOS 15 Intel | 3.11.9 | 64.262 | <300 |
+| Windows x64 | 3.11.9 | 53.766 | <300 |
+| Ubuntu x64 | 3.11.15 | 27.906 | <300 |
+| macOS 15 Intel | 3.11.9 | 58.364 | <300 |
 
 These timings cover the source-export command, not runner queues or full-suite
-execution. The fast subset does not qualify omitted components. The complete
-repository census reconciles 4,717 test IDs across 375 files: 867 maintained,
+execution. The fast subset does not qualify omitted components. The earlier P08
+repository census reconciled 4,717 test IDs across 375 files: 867 maintained,
 1,735 current migration, 1,929 historical research, 170 historical-input checks
 and 16 original-runtime checks. Collection is not execution of historical tests.
 

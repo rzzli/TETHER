@@ -23,15 +23,14 @@ Use the installed packages from the repository quick start, Python 3.11, and
 `pyarrow==21.0.0` for preparation and the optional original-row audit. A source
 root must already contain the originals and archived receipts listed in
 [the exact input manifest](../tools/examples/il6r_ot2509.json), with those relative
-paths and hashes. There is no published example download attached to this local
-development milestone. The original receipts stay unchanged.
+paths and hashes. The repository supplies the original receipt witnesses and a
+recipe for retrieving the three files.
 
 An optional `tools/examples/fetch_il6r.py --output <fresh-source-root> --allow-network`
 can retrieve only those three hash-pinned originals, capped at 16 MiB of response
-payload. It is opt-in and was tested with mock responses; live retrieval and the
-manual three-platform CI workflow are pending authorization at this checkpoint.
-The checked-in 2,296-byte receipts are unchanged prior-acquisition witnesses.
-Fresh retrieval has its own journal and timestamps; it does not backdate collection.
+payload. The command requires explicit opt-in and rejects HTTP redirects. The
+checked-in 2,296-byte receipts are prior-acquisition witnesses. Fresh retrieval
+has a separate journal and timestamps.
 
 From the source checkout, substitute your source root and choose new sibling
 output directories. Their parent must already exist:
@@ -87,7 +86,7 @@ not the outer use grant or exact producer replay. The original-row audit separat
 checks the Parquet projections; there is no registered runtime Parquet derivation.
 None establishes biological truth, prediction quality or a clinically useful drug.
 
-The Windows installed prototype completed run/export/verification in under five
-seconds. Full P10 platform qualification is still pending; the earlier hosted
-matrix remains bound to its documented P08 checkpoint. No macOS result is inferred
-from a Windows or Linux pass. See [platform support](MAINTENANCE.md#platform-support).
+At commit `b2117eb`, Windows x64, Ubuntu x64 and macOS 15 Intel each retrieved the
+three pinned files, audited the three selected rows and replayed the relocated
+bundle. Installed run, export and verification took 6.05, 4.05 and 20.05 seconds
+respectively, excluding preparation and dependency installation. [Hosted example qualification](https://github.com/rzzli/TETHER/actions/runs/44344125809)

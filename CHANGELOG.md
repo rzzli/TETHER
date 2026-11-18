@@ -6,9 +6,8 @@
   Provide an exact three-original IL6R/RA preparation recipe, separate source audit
   and safe HTML reading view. Default wheels still contain no real source data.
   Keep numerical features withheld and clinical probability null.
-- Prepare optional bounded example retrieval and a manual Windows/Linux/macOS
-  qualification workflow. Live retrieval and hosted P10 qualification are not
-  claimed by the local example checks.
+- Qualify bounded retrieval, exact-row audit and relocated verification on hosted
+  Windows x64, Ubuntu x64 and macOS 15 Intel for checkpoint `b2117eb`.
 
 - Specify receipt, journal and bundle formats with packaged JSON schemas and
   public positive/tampered controls. Add a standalone standard-library checker
