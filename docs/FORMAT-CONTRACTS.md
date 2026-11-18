@@ -265,3 +265,11 @@ assessment without a server. These hashes check record consistency. They do not
 authenticate a model or validate its claims. Actor inputs stay limited to the
 caller-admitted view. Compatibility was exercised with a fictional loopback
 server and offline replay.
+
+For durable runs use `run_once(request, capabilities, output)`. The caller chooses
+a fresh attempt directory. The journal binds the prepared request and records
+dispatch before transport starts. A terminal outcome binds the exchange record.
+`inspect_chat_attempt` checks that journal and distinguishes pre-dispatch failure,
+uncertain dispatch, confirmed rejection and completion. A response timeout, partial
+body or interrupted run remains uncertain. Inspection makes no network call and
+never resumes an attempt. An existing directory is rejected before transport.

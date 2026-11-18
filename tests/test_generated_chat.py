@@ -11,7 +11,10 @@ import unittest
 from unittest.mock import patch
 
 from tether_engine.contracts import Case, Category, Citation, GroundedObservation, Observation
-from tether_engine.generated_chat import ChatCapabilities, ChatLimits, LocalGeneratedChat, archive_chat, replay_chat
+from tether_engine.generated_chat import (
+    ChatCapabilities, ChatLimits, LocalGeneratedChat, archive_chat, inspect_chat_attempt, replay_chat,
+)
+from tether_engine.journal import RunJournal
 from tether_engine.generated_claims import make_generated_request
 from tether_engine.serde import ContractError, canonical, decode
 
@@ -194,3 +197,73 @@ class GeneratedChatTests(unittest.TestCase):
         with self.assertRaisesRegex(ContractError, 'request_byte_limit'):
             too_small.run(self.request, too_small.negotiate())
         self.assertEqual([request[0] for request in server.requests], ['GET', 'POST', 'GET'])
+
+    def test_durable_once_rejects_existing_attempt_without_dispatch(self):
+        server = self.server()
+        backend = LocalGeneratedChat(server.server_port, 'fictional-model')
+        capability = backend.negotiate()
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / 'once'
+            attempt = backend.run_once(self.request, capability, path)
+            self.assertEqual(inspect_chat_attempt(path)['state'], 'completed')
+            self.assertEqual(replay_chat(path / 'chat-exchange.json', self.request, capability), attempt)
+            with self.assertRaises(FileExistsError):
+                backend.run_once(self.request, capability, path)
+            self.assertEqual(len(server.requests), 2)
+            record = path / 'chat-exchange.json'
+            record.write_bytes(record.read_bytes() + b' ')
+            with self.assertRaisesRegex(ContractError, 'record_hash_mismatch'):
+                inspect_chat_attempt(path)
+
+    def test_complete_http_rejection_has_durable_outcome(self):
+        server = self.server(lambda _request: (503, 'application/json', b'{}', None))
+        backend = LocalGeneratedChat(server.server_port, 'fictional-model')
+        capability = backend.negotiate()
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / 'rejection'
+            attempt = backend.run_once(self.request, capability, path)
+            self.assertEqual(inspect_chat_attempt(path), {
+                'state': 'confirmed_rejection', 'disposition': 'http_error', 'dispatch_started': True,
+            })
+            self.assertEqual(attempt.disposition, 'http_error')
+            with (path / 'journal.jsonl').open('ab') as stream:
+                stream.write(b'{"partial":')
+            with self.assertRaisesRegex(ContractError, 'journal_tail_after_outcome'):
+                inspect_chat_attempt(path)
+
+    def test_pre_dispatch_and_interrupted_dispatch_remain_distinct(self):
+        server = self.server()
+        backend = LocalGeneratedChat(server.server_port, 'fictional-model')
+        capability = backend.negotiate()
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp)
+            with self.assertRaisesRegex(ContractError, 'capabilities_mismatch'):
+                backend.run_once(self.request, replace(capability, model='different'), path / 'before')
+            self.assertEqual(inspect_chat_attempt(path / 'before')['state'], 'pre_dispatch_failure')
+            with patch('tether_engine.generated_chat._http', side_effect=KeyboardInterrupt) as transport:
+                with self.assertRaises(KeyboardInterrupt):
+                    backend.run_once(self.request, capability, path / 'during')
+                transport.assert_called_once()
+            self.assertEqual(inspect_chat_attempt(path / 'during')['state'], 'uncertain_dispatch')
+            with self.assertRaises(FileExistsError):
+                backend.run_once(self.request, capability, path / 'during')
+            self.assertEqual(len(server.requests), 1)
+
+    def test_crash_prefix_and_archive_failure_never_become_completed(self):
+        server = self.server()
+        backend = LocalGeneratedChat(server.server_port, 'fictional-model')
+        capability = backend.negotiate()
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp)
+            journal = RunJournal(path / 'crash')
+            journal.append('chat_prepared')
+            journal.append('chat_dispatch_started')
+            journal.close()
+            with (path / 'crash/journal.jsonl').open('ab') as stream:
+                stream.write(b'{"partial":')
+            self.assertEqual(inspect_chat_attempt(path / 'crash')['state'], 'uncertain_dispatch')
+            with patch('tether_engine.generated_chat.archive_chat', side_effect=OSError('simulated publication failure')):
+                with self.assertRaisesRegex(OSError, 'publication failure'):
+                    backend.run_once(self.request, capability, path / 'unsealed')
+            self.assertEqual(inspect_chat_attempt(path / 'unsealed')['state'], 'uncertain_dispatch')
+            self.assertEqual(len(server.requests), 2)
