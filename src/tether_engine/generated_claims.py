@@ -56,6 +56,9 @@ class GeneratedRequest(Frozen):
     category: Category
     sources: tuple[ClaimSource, ...]
 
+    def validate(self) -> None:
+        _source_bytes(self)
+
 
 @dataclass(frozen=True)
 class QuoteSpan(Frozen):

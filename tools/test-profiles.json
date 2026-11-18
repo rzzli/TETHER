@@ -387,7 +387,8 @@
     "tests/test_windows_path_identity.py": "maintained",
     "tests/test_wire.py": "maintained",
     "tests/test_format_conformance.py": "maintained",
-    "tests/test_generated_claims.py": "maintained"
+    "tests/test_generated_claims.py": "maintained",
+    "tests/test_generated_chat.py": "maintained"
   },
   "overrides": {
     "tests/test_p05_utility_failures.py::UtilityFailureTests.test_evaluator_parent_control_has_an_otherwise_valid_derivation": "migration_current",

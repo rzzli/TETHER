@@ -236,3 +236,32 @@ response bytes in base64, raw SHA-256, envelope failure if any, and a separate
 decision for each proposal. It preserves rejected and malformed material for
 local audit. Treat the payload as untrusted text and retain it only where the
 source permissions allow. Use synthetic fixtures to exercise this contract.
+
+## Loopback chat exchange v1
+
+`tether.generated_chat.LocalGeneratedChat` accepts a numeric port on `127.0.0.1`
+and a caller-selected model ID. `negotiate()` checks `/v1/models` for that exact ID
+and binds its inventory hash. `run()` sends one non-streaming JSON-object request
+to `/v1/chat/completions`. The server must support this dialect. A failed response
+produces one recorded outcome with no alternate dialect, redirect or retry.
+The JSON object request controls the response mode. The A01 parser separately
+checks the contents and starts exact quotes in `pending_review`.
+
+Request and response bytes are capped. Each HTTP operation has a connection and
+response deadline. An incomplete body, streaming response, failed HTTP request,
+invalid envelope or truncated completion has an explicit outcome. When a complete
+chat envelope reports consistent integer token counts, the attempt keeps them
+even if its content is rejected. Without valid counts the attempt records the
+configured reservation as `configured_reservation_not_measured`. A token overrun
+rejects the attempt while retaining the reported usage. The input reservation
+is a configured accounting ceiling. The transport does not estimate server-side
+tokenization from bytes or attest physical consumption. Cost is zero for this
+local development adapter.
+
+`archive_chat` retains the exact bounded HTTP body and binds request, payload,
+capabilities and limits by hash. `replay_chat` rebuilds the payload and checks
+the response digest, decision and accounting before reconstructing the A01
+assessment without a server. These hashes check record consistency. They do not
+authenticate a model or validate its claims. Actor inputs stay limited to the
+caller-admitted view. Compatibility was exercised with a fictional loopback
+server and offline replay.
