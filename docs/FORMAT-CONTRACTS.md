@@ -314,7 +314,7 @@ keep their original record fields and payload rules.
 In a fixed synthetic pilot on the cached local model, all 12 structured
 exchanges replayed. The model selected the intended span in one of eight
 groundable cases and returned an empty claim list in all four cases with no
-offers. Span selection remains experimental pending a passing usefulness gate.
+offers.
 
 To ask a specific question, pass `question=...` to `make_generated_request`.
 This creates a version-two request for span selection, with the same
@@ -323,3 +323,9 @@ bytes. The request and offer digests bind its literal bytes. The prompt asks
 for one short source-backed answer and explicitly permits abstention when
 none of the offered spans answers the question. Quote resolution and the
 requirement for separate support review still apply.
+
+In the question-aware local pilot, eight of eight groundable cases selected the
+intended span. All four cases without a usable answer abstained, including two
+with offered passages. All 12 first attempts replayed. This qualifies the
+bounded development profile. The small, previously exposed fixture does not
+establish general reliability or entailment.
