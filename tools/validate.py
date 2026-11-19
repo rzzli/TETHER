@@ -345,28 +345,61 @@ def validate_wrapper_wheel(wheel):
     return {'members':len(names), 'namespace':'tether', 'metadata_root':metadata_root}
 
 
-def package_check(directory):
-    constraints = ROOT/'tools/build-constraints.txt'
-    # Setuptools writes build/ and egg-info during wheel construction. Keep
-    # those outputs in owned scratch even when validating a read-only export.
-    staged = directory/'package-source'
+def _stage_distribution(source, staged):
+    """Copy only declared build inputs, never a caller's reused build tree."""
     staged.mkdir()
     for name in ('pyproject.toml', 'LICENSE'):
-        shutil.copyfile(ROOT/name, staged/name)
-    shutil.copytree(ROOT/'src', staged/'src',
+        if (source/name).is_file():
+            shutil.copyfile(source/name, staged/name)
+    shutil.copytree(source/'src', staged/'src',
                     ignore=shutil.ignore_patterns('__pycache__', '*.egg-info'))
-    subprocess.run(['uv','build','--offline','--build-constraints',str(constraints),
-                    '--python',sys.executable,'--wheel','--out-dir',str(directory/'dist')],cwd=staged,check=True,capture_output=True)
-    wheel = next((directory/'dist').glob('*.whl'))
-    inventory = validate_engine_wheel(wheel)
+
+
+def package_check(directory):
+    constraints = ROOT/'tools/build-constraints.txt'
+    # Build both deliverables in fresh owned directories and smoke those exact wheels.
+    wheels, inventories = {}, {}
+    for name, source, validator in (
+            ('engine', ROOT, validate_engine_wheel),
+            ('wrapper', ROOT/'packages/tether', validate_wrapper_wheel)):
+        staged = directory/(name+'-source')
+        _stage_distribution(source, staged)
+        dist = directory/(name+'-dist')
+        subprocess.run(['uv','build','--offline','--build-constraints',str(constraints),
+                        '--python',sys.executable,'--wheel','--out-dir',str(dist)],
+                       cwd=staged,check=True,capture_output=True)
+        built = list(dist.glob('*.whl'))
+        if len(built) != 1:
+            raise ContractError('Expected exactly one '+name+' wheel')
+        wheels[name] = built[0]
+        inventories[name] = validator(built[0])
+    wheel = wheels['engine']
+    inventory = inventories['engine']
     environment = directory/'wheel-environment'
     subprocess.run(['uv','venv','--offline','--python',sys.executable,str(environment)],check=True,capture_output=True)
     python = environment/('Scripts/python.exe' if os.name=='nt' else 'bin/python')
-    subprocess.run(['uv','pip','install','--offline','--no-index','--python',str(python),'--no-deps',str(wheel)],check=True,capture_output=True)
+    subprocess.run(['uv','pip','install','--offline','--no-index','--python',str(python),'--no-deps',*(str(item) for item in wheels.values())],check=True,capture_output=True)
     run = directory/'wheel-demo'
     subprocess.run([str(python),'-I','-m','tether_engine','demo','--output',str(run)],cwd=directory,check=True,capture_output=True)
     subprocess.run([str(python),'-I','-m','tether_engine','verify','--run-dir',str(run)],cwd=directory,check=True,capture_output=True)
+    subprocess.run([str(python),'-I','-m','tether','--version'],cwd=directory,check=True,capture_output=True)
+    wrapper_run = directory/'wrapper-demo'
+    subprocess.run([str(python),'-I','-m','tether','demo','--output',str(wrapper_run)],
+                   cwd=directory,check=True,capture_output=True)
+    subprocess.run([str(python),'-I','-m','tether','verify','--run-dir',str(wrapper_run)],
+                   cwd=directory,check=True,capture_output=True)
+    diagnostic = subprocess.run([str(python),'-I','-c',
+        'import json, tether, tether_engine; from importlib.metadata import version; '
+        'from tether.api import run_offline, verify_run; '
+        'print(json.dumps({name: {"version": version(dist), "import_path": module.__file__} '
+        'for name, dist, module in (("engine", "tether-target-engine", tether_engine), '
+        '("wrapper", "tether-target-agents", tether))}))'],
+        cwd=directory,check=True,capture_output=True,text=True)
     return {'wheel':wheel.name,'wheel_sha256':hashlib.sha256(wheel.read_bytes()).hexdigest(),
+            'deliverables': {name: {'wheel': item.name,
+                'wheel_sha256': hashlib.sha256(item.read_bytes()).hexdigest(),
+                'wheel_inventory': inventories[name]} for name, item in wheels.items()},
+            'installed_diagnostic': json.loads(diagnostic.stdout),
             'wheel_inventory':inventory,
             'build_constraints_sha256':hashlib.sha256(constraints.read_bytes()).hexdigest(),
             'package_network_policy':'offline','dependency_free_demo':'passed'}

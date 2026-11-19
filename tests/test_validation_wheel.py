@@ -7,7 +7,7 @@ import zipfile
 
 from tether_engine import __version__
 from tether_engine.serde import ContractError
-from tools.validate import validate_engine_wheel, validate_wrapper_wheel
+from tools.validate import _stage_distribution, validate_engine_wheel, validate_wrapper_wheel
 
 
 class WheelNamespaceTests(unittest.TestCase):
@@ -33,6 +33,23 @@ class WheelNamespaceTests(unittest.TestCase):
                     info = zipfile.ZipInfo(name)
                     info.filename = name  # Preserve adversarial separators on Windows.
                     archive.writestr(info, b'invented unit payload')
+
+    def test_staging_both_distributions_excludes_reused_build_outputs(self):
+        for namespace in ('tether_engine', 'tether'):
+            source = Path(self.temp.name)/namespace
+            (source/'src'/namespace).mkdir(parents=True)
+            (source/'src'/namespace/'__init__.py').write_text('# current runtime')
+            (source/'pyproject.toml').write_text('# build declaration')
+            stale = source/'build/lib'/namespace/'study/stale_probe.py'
+            stale.parent.mkdir(parents=True)
+            stale.write_text('# harmless stale module')
+            staged = Path(self.temp.name)/(namespace+'-staged')
+            _stage_distribution(source, staged)
+            self.assertTrue((staged/'src'/namespace/'__init__.py').is_file())
+            self.assertFalse((staged/'build').exists())
+            self.assertFalse(list(staged.rglob('stale_probe.py')))
+            with self.assertRaises(FileExistsError):
+                _stage_distribution(source, staged)
 
     def test_only_current_runtime_and_matching_metadata_are_accepted(self):
         self.write(self.names+['tether_engine/__init__.py'])
