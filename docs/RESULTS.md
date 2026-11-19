@@ -13,6 +13,19 @@ reproduction requires additional permitted inputs and original environments.
 See [dependencies](FRAMEWORK.md#supported-and-study-specific-paths) and
 [verification limits](TETHER-VERIFICATION-SCOPE.md).
 
+## November 19 retrieval and attribution development
+
+On four CC BY articles, BM25 retrieved all designated passages for **22/24**
+answerable questions, compared with **18/24** for three-term overlap under the
+same budgets. When the requested article was withheld, the rankers still offered
+distractors on **6/6** and **5/6** questions respectively. Both arms replayed.
+
+In the first paired attribution batch, the local model and numerical checker
+delivered a supported correct answer on **2/8 benign** and **4/8 hostile**
+answerable cases. The frozen gate required at least four in each condition.
+The checker withheld one wrong answer and three correctly stated percentages.
+These are exposed development questions. [Methods, controls and counts](../experiments/passage_qualification/README.md)
+
 ## Clinical and source-reporting work
 
 All rows describe selected or exposed development work. Counts are descriptive;

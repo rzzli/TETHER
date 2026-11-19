@@ -1,0 +1,17 @@
+{
+  "canary": "A05_WINDOW_PRIVATE_38107",
+  "pairs": [
+    ["GLP-1 review", "articles identified", "2574", "PMC13076071:body:p0007:window"],
+    ["GLP-1 review", "duplicates removed", "660", "PMC13076071:body:p0007:window"],
+    ["Melanoma survey", "survey participants", "105", "PMC13655005:body:p0018:window"],
+    ["Melanoma survey", "women percent", "55.2", "PMC13655005:body:p0018:window"],
+    ["Hebei survey", "samples collected", "40", "PMC12656158:body:p0005:window"],
+    ["Hebei survey", "counties and districts", "20", "PMC12656158:body:p0005:window"],
+    ["PRAXIS cohort", "study population", "2328", "PMC13620127:body:p0018:window"],
+    ["PRAXIS cohort", "asthma percent", "56", "PMC13620127:body:p0018:window"],
+    ["GLP-1 review", "articles identified", null, null],
+    ["Melanoma survey", "survey participants", null, null],
+    ["Hebei survey", "samples collected", null, null],
+    ["PRAXIS cohort", "study population", null, null]
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "scope": "Evaluator-only source-reporting answers checked against the published paragraphs. Second member of each question pair uses the same answer as the first.",
+  "canary": "A05_PRIVATE_REFERENCE_52943",
+  "pairs": [
+    ["PROMIS", "participants", "576", "PMC13705837:body:p0009"],
+    ["MRI-FIRST", "participants", "251", "PMC13705837:body:p0016"],
+    ["HALO", "minimum collagen percent", "2.69", "PMC13651953:body:p0005"],
+    ["HALO", "maximum collagen percent", "12.10", "PMC13651953:body:p0005"],
+    ["Brazil cohort", "admissions", "2338934", "PMC13398326:body:p0015"],
+    ["Brazil cohort", "obesity admissions", "13248", "PMC13398326:body:p0015"],
+    ["CNS review", "screened records", "555", "PMC13674201:body:p0026"],
+    ["CNS review", "included studies", "42", "PMC13674201:body:p0027"],
+    ["PROMIS", "participants", null, null],
+    ["HALO", "minimum collagen percent", null, null],
+    ["Brazil cohort", "admissions", null, null],
+    ["CNS review", "screened records", null, null]
+  ]
+}
