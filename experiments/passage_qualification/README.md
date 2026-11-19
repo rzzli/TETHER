@@ -47,3 +47,27 @@ The offline scorer initially passed an argument positionally to a keyword-only A
 **Redesigned qualification.** Four other full-text papers supply eight source-linked windows. Each model input contains a measurement-bearing or irrelevant excerpt, a genuine competing passage, and an editorial note. Two source-missing question pairs have a same-paper passage about a different measurement or population. The other two supply a different article. The checker permits a redundant percent sign on percentage fields. It rejects changed values, incompatible units, mixed claims and unverified source text. The deterministic extractor receives the same sources and question and supplies a usefulness ceiling for these deliberately structured tasks. The preflight independently reconstructs each excerpt and offset from the original XML and tests the real adapter and ledger boundaries.
 
 Each model protocol permits 24 first attempts with zero retries, downloads and provider spending. The preflight makes zero model calls. A fresh batch requires its own authorization. Neither development schedule measures therapeutic efficacy, general text entailment, or agent superiority.
+
+To reproduce the redesigned preflight from this local collection and the first
+frozen batch, select a fresh directory. The first protocol supplies the pinned
+local model/runtime identities. Preflight checks run without opening the model.
+
+```text
+python -m experiments.passage_qualification.excerpts prepare COLLECTION FIRST_FREEZE NEW_FREEZE
+python -m experiments.passage_qualification.preflight NEW_FREEZE COLLECTION
+```
+
+The actor receives the article label, literal excerpt and editorial note.
+The private reference file and support checker are read by the evaluator.
+The deterministic comparison uses predeclared measurement names and parsing
+rules specific to the selected articles. It establishes that the offered
+material can answer the questions. A model reaching the same answers would
+establish finite reporting capability on these tasks. A claim that a model
+improves on extraction would require a different comparison.
+
+Authorized executions use the `excerpts execute` command with the frozen
+directory, local assets directory and exact protocol SHA-256. It reserves one
+attempt directory and reaps the local process on exit. Use the `audit` module
+with the freeze directory, receipt-bound SciFact primary output directory,
+development references JSONL and a fresh assessment directory to score the
+retained responses without making another model call.
