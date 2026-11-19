@@ -269,7 +269,12 @@ class IngestTests(IngestFixture, unittest.TestCase):
         for number in selected:
             rows[number] = dict(self.rows[0], id=f"selected-{number}")
         rows[1] = dict(rows[1], targetId=None)
-        self.pq.write_table(self.pa.Table.from_pylist(rows), self.raw / "evidence.parquet", row_group_size=70000)
+        rows[2] = dict(self.rows[0], diseaseId=self.rows[1]["diseaseId"])
+        rows[3] = dict(self.rows[0], diseaseId=None)
+        table = self.pa.Table.from_pylist(rows)
+        field = table.schema.get_field_index("targetId")
+        table = table.set_column(field, "targetId", table["targetId"].cast(self.pa.large_string()))
+        self.pq.write_table(table, self.raw / "evidence.parquet", row_group_size=70000)
         self.receipt(self.entries[2])
         output, report = self.build()
         observations = read_json(output / report["cases"][0]["case_id"] / "evidence.json")["observations"]
@@ -277,7 +282,29 @@ class IngestTests(IngestFixture, unittest.TestCase):
                          [(0, 0), (0, 65536), (1, 1)])
         self.assertEqual(report["counters"]["physical_rows_scanned"], 70005)
         self.assertEqual(report["counters"]["selected_rows"], 3)
+        self.assertEqual(report["counters"]["python_rows_converted"], 3)
         self.assertEqual(report["counters"]["accepted_source_rows"], 3)
+
+    def test_repeated_pair_hashes_once_per_eligible_row(self):
+        row = self.rows[2]  # ERBB2 has two modalities in the fixture.
+        self.evidence([row, dict(row), dict(row, datatypeId="unsupported")])
+        _, report = self.build()
+        counters = report["counters"]
+        self.assertEqual(counters["selected_rows"], 3)
+        self.assertEqual(counters["evidence_row_fingerprints"], 2)
+        self.assertEqual(counters["accepted_source_rows"], 1)
+        self.assertEqual(counters["normalized_case_records"], 2)
+        self.assertEqual(counters["identical_duplicates_coalesced"], 2)
+        self.assertEqual(counters["unsupported_datatype"], 1)
+
+    def test_no_resolved_pairs_converts_no_evidence_rows(self):
+        target = self.pq.read_table(self.raw / "target.parquet")
+        self.pq.write_table(target.slice(0, 0), self.raw / "target.parquet")
+        self.receipt(self.entries[0])
+        _, report = self.build()
+        self.assertEqual(len(report["blocked_cases"]), len(PILOT))
+        self.assertEqual(report["counters"]["physical_rows_scanned"], len(self.rows))
+        self.assertEqual(report["counters"]["python_rows_converted"], 0)
 
     def test_archived_receipts_retain_exact_inspected_bytes_after_transport_rewrite(self):
         from tether_engine import ingest

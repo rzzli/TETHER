@@ -349,15 +349,34 @@ def _archive_receipts(root, files):
         item["node"] = replace(node, receipt_path=relative)
 
 
-def _rows(item, columns, *, pairs=None, counters=None, progress=None):
+def _pair_selector(pairs):
+    import pyarrow as pa
+    import pyarrow.compute as pc
+
+    target_ids = sorted({target for target, _ in pairs})
+    disease_ids = sorted({disease for _, disease in pairs})
+    targets = pa.array(target_ids, type=pa.large_string())
+    diseases = pa.array(disease_ids, type=pa.large_string())
+    target_index = {key: i for i, key in enumerate(target_ids)}
+    disease_index = {key: i for i, key in enumerate(disease_ids)}
+    width = len(disease_ids)
+    # A unique integer for each pair. Unknown or null IDs propagate as null.
+    allowed = pa.array([target_index[t] * width + disease_index[d] for t, d in pairs], type=pa.int64())
+    stride = pa.scalar(width, type=pa.int64())
+
+    def indices(batch):
+        t = pc.index_in(batch.column("targetId"), value_set=targets)
+        d = pc.index_in(batch.column("diseaseId"), value_set=diseases)
+        codes = pc.add(pc.multiply(t, stride), d)
+        return pc.indices_nonzero(pc.is_in(codes, value_set=allowed))
+
+    return indices
+
+
+def _rows(item, columns, *, select_indices=None, counters=None, progress=None):
     pq = arrow()
     parquet = pq.ParquetFile(item["path"])
     projection = [name for name in columns if name in item["columns"]]
-    if pairs is not None:
-        import pyarrow as pa
-        import pyarrow.compute as pc
-        targets = pa.array(sorted({pair[0] for pair in pairs}), type=pa.string())
-        diseases = pa.array(sorted({pair[1] for pair in pairs}), type=pa.string())
     for group in range(parquet.num_row_groups):
         offset = 0
         for batch in parquet.iter_batches(row_groups=[group], columns=projection, batch_size=65536):
@@ -365,19 +384,15 @@ def _rows(item, columns, *, pairs=None, counters=None, progress=None):
             if counters is not None:
                 counters["physical_rows_scanned"] += count
                 counters["scanned_rows"] += count  # Retained report alias.
-            if pairs is None:
+            if select_indices is None:
                 indices, selected = range(count), batch
             else:
-                mask = pc.and_(pc.is_in(batch.column("targetId"), value_set=targets),
-                               pc.is_in(batch.column("diseaseId"), value_set=diseases))
-                indices = pc.indices_nonzero(mask)
+                indices = select_indices(batch)
                 selected = batch.take(indices)
                 indices = indices.to_pylist()
             if counters is not None:
                 counters["python_rows_converted"] += selected.num_rows
             for index, row in zip(indices, selected.to_pylist()):
-                if pairs is not None and (row.get("targetId"), row.get("diseaseId")) not in pairs:
-                    continue
                 if counters is not None:
                     counters["selected_rows"] += 1
                 yield row, {"source_id": item["node"].source_id, "row_group": group, "row": offset + index}
@@ -608,9 +623,11 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
         case.validate()
         jobs.append({"case": case, "symbol": symbol, "disease_name": diseases[disease_id][0]["name"],
                      "mapping_refs": mapping_refs, "observations": [], "rejections": [], "seen": {}})
-    pairs = {(job["case"].hypothesis.target_id, job["case"].hypothesis.indication_id) for job in jobs}
-    jobs_by_pair = {pair: [job for job in jobs if (job["case"].hypothesis.target_id,
-                    job["case"].hypothesis.indication_id) == pair] for pair in pairs}
+    jobs_by_pair = {}
+    for job in jobs:
+        hypothesis = job["case"].hypothesis
+        jobs_by_pair.setdefault((hypothesis.target_id, hypothesis.indication_id), []).append(job)
+    select_indices = _pair_selector(jobs_by_pair)
     counters = state["counters"]
     unsupported_types = Counter()
     counters.update({key: 0 for key in ("physical_rows_scanned", "scanned_rows", "selected_rows", "matched_rows",
@@ -625,7 +642,8 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
     for item in files:
         if item["node"].dataset_id != "ot_evidence":
             continue
-        for raw, locator in _rows(item, EVIDENCE_COLUMNS, pairs=pairs, counters=counters, progress=batch_progress):
+        for raw, locator in _rows(item, EVIDENCE_COLUMNS, select_indices=select_indices,
+                                  counters=counters, progress=batch_progress):
             pair = (raw.get("targetId"), raw.get("diseaseId"))
             counters["matched_rows"] += 1
             matching = jobs_by_pair[pair]
@@ -649,11 +667,11 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
                                               "datasource_id": source, "datatype_id": datatype, "reason": reason})
                 continue
             accepted = False
+            raw_id = str(raw["id"])
+            observation_id = "ot25:" + str(source) + ":" + raw_id
+            payload_hash = fingerprint(row)
+            counters["evidence_row_fingerprints"] += 1
             for job in matching:
-                raw_id = str(raw["id"])
-                observation_id = "ot25:" + str(source) + ":" + raw_id
-                payload_hash = fingerprint(row)
-                counters["evidence_row_fingerprints"] += 1
                 if observation_id in job["seen"]:
                     if job["seen"][observation_id] != payload_hash:
                         raise ContractError("Conflicting duplicate provider evidence ID")
