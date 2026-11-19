@@ -270,6 +270,17 @@ selection is complete. No combination of caller-supplied counts certifies releas
 completeness. `absence_claim` remains false; neither selection completion nor
 product presence licenses a biological absence claim.
 
+In inspection reports, the existing `files[].schema_sha256` fingerprints the
+ordered column names. For Parquet, `files[].physical_schema_sha256` is SHA-256
+of the IPC message returned by `ParquetFile.schema_arrow.serialize()` under
+`pyarrow==21.0.0` (`physical_schema_format = pyarrow21-ipc-schema-v1`). It
+includes field order, nested fields, data types, nullability and all schema and
+field metadata present in the Arrow schema, in serialized order. Compression,
+row groups and other Parquet storage details are covered by the original file
+hash. HGNC TSV has no Arrow schema and returns null. Compatibility is checked
+separately against the required projection: both float32 and float64 scores
+qualify, while a text score fails.
+
 ## Loopback chat exchange v1
 
 `tether.generated_chat.LocalGeneratedChat` accepts a numeric port on `127.0.0.1`

@@ -1,4 +1,5 @@
 import csv
+import hashlib
 import importlib.util
 import tempfile
 import unittest
@@ -21,6 +22,37 @@ from tests.ingest_fixtures import GENES, IngestFixture
 
 @unittest.skipUnless(importlib.util.find_spec("pyarrow"), "install the ingest extra for adapter tests")
 class IngestTests(IngestFixture, unittest.TestCase):
+    def test_schema_fingerprint_distinguishes_compatible_arrow_layouts(self):
+        pa = self.pa
+        path = self.raw / "evidence.parquet"
+        table = self.pq.read_table(path).append_column("extras", pa.array([{"n": 1}] * len(self.rows)))
+
+        def inspected(schema):
+            self.pq.write_table(table.cast(schema), path)
+            self.receipt(self.entries[2])
+            report = inspect_sources(self.manifest, self.catalog)
+            evidence = next(row for row in report["files"] if row["source"].dataset_id == "ot_evidence")
+            tsv = next(row for row in report["files"] if row["source"].dataset_id == "hgnc_symbols")
+            self.assertIsNone(tsv["physical_schema_sha256"])
+            expected = hashlib.sha256(self.pq.read_schema(path).serialize().to_pybytes()).hexdigest()
+            self.assertEqual(evidence["physical_schema_sha256"], expected)
+            return evidence["schema_sha256"], expected
+
+        schema = table.schema
+        index = schema.get_field_index("extras")
+        changes = [
+            schema, schema.set(schema.get_field_index("score"), pa.field("score", pa.float32())),
+            schema.set(index, pa.field("extras", schema.field(index).type, nullable=False)),
+            schema.set(index, pa.field("extras", pa.struct([pa.field("n", pa.int64(), nullable=False)]))),
+            schema.set(index, pa.field("extras", pa.struct([pa.field("n", pa.int32())]))),
+            schema.with_metadata({b"fixture": b"v2"}),
+        ]
+        columns, physical = zip(*(inspected(candidate) for candidate in changes))
+        self.assertEqual(len(set(columns)), 1)
+        self.assertEqual(len(set(physical)), len(changes))
+        with self.assertRaisesRegex(ContractError, "score must be numeric"):
+            inspected(schema.set(schema.get_field_index("score"), pa.field("score", pa.string())))
+
     def test_actual_format_fixtures_build_all_ten_and_verify_semantics(self):
         inspected = inspect_sources(self.manifest, self.catalog)
         self.assertEqual(inspected["selected_files"], 4)

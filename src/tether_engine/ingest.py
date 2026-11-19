@@ -251,19 +251,22 @@ def _inspect(manifest_path, catalog_path, progress=None):
                 columns = next(csv.reader(stream, delimiter="\t"))
             required = {"hgnc_id", "symbol", "status", "ensembl_gene_id"}
             rows = None
+            physical_schema_sha256 = None
         else:
             parquet = pq.ParquetFile(path)
-            columns, rows = parquet.schema_arrow.names, parquet.metadata.num_rows
+            schema = parquet.schema_arrow
+            columns, rows = schema.names, parquet.metadata.num_rows
+            physical_schema_sha256 = hashlib.sha256(schema.serialize().to_pybytes()).hexdigest()
             required = ({"id", "approvedSymbol"} if item.dataset_id == "ot_target" else
                         {"id", "name"} if item.dataset_id == "ot_disease" else
                         {"id", "targetId", "diseaseId", "datasourceId", "datatypeId", "score"})
             import pyarrow as pa
             for name in required - {"score"}:
-                if name in columns and not (pa.types.is_string(parquet.schema_arrow.field(name).type) or
-                                            pa.types.is_large_string(parquet.schema_arrow.field(name).type)):
+                if name in columns and not (pa.types.is_string(schema.field(name).type) or
+                                            pa.types.is_large_string(schema.field(name).type)):
                     raise ContractError(f"Unexpected raw identifier type: {name}")
             if "score" in required and "score" in columns:
-                score_type = parquet.schema_arrow.field("score").type
+                score_type = schema.field("score").type
                 if not (pa.types.is_floating(score_type) or pa.types.is_integer(score_type)):
                     raise ContractError("Provider evidence score must be numeric")
         if required - set(columns):
@@ -279,6 +282,7 @@ def _inspect(manifest_path, catalog_path, progress=None):
             receipt_path=item.receipt_path.replace("\\", "/"), receipt_sha256=receipt_sha)
         verified.append({"node": node, "path": path, "columns": tuple(columns), "rows": rows,
                          "bytes": path.stat().st_size, "schema_sha256": fingerprint(tuple(columns)),
+                         "physical_schema_sha256": physical_schema_sha256,
                          "receipt_bytes": receipt_bytes})
     counts = Counter(row["node"].dataset_id for row in verified)
     if any(type(value) is not int or value < counts[key] for key, value in manifest.expected_counts.items()):
@@ -297,8 +301,10 @@ def _inspect(manifest_path, catalog_path, progress=None):
               "missing_product_families": missing_families,
               "release_completeness": "unknown",
               "missing_inputs": sorted(set(missing)), "excluded_files": excluded,
+              "physical_schema_format": "pyarrow21-ipc-schema-v1",
               "files": [{"source": row["node"], "columns": row["columns"], "rows": row["rows"],
-                         "bytes": row["bytes"], "schema_sha256": row["schema_sha256"]} for row in verified],
+                         "bytes": row["bytes"], "schema_sha256": row["schema_sha256"],
+                         "physical_schema_sha256": row["physical_schema_sha256"]} for row in verified],
               "elapsed_seconds": time.monotonic() - started, "peak_memory_bytes": peak_memory_bytes(),
               "scientific_validation": "not_run"}
     if progress:
