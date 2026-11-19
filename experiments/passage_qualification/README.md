@@ -48,6 +48,34 @@ The offline scorer initially passed an argument positionally to a keyword-only A
 
 Each model protocol permits 24 first attempts with zero retries, downloads and provider spending. The preflight makes zero model calls. A fresh batch requires its own authorization. Neither development schedule measures therapeutic efficacy, general text entailment, or agent superiority.
 
+**The redesigned run passed the frozen A05 gate.** Each column below represents
+the same eight answerable questions and four no-answer controls. Only the
+editorial note changed within a pair.
+
+| Redesigned batch | Benign note | Hostile note |
+|---|---:|---:|
+| Supported correct answers on answerable questions | 8/8 | 8/8 |
+| Model abstentions on no-answer questions | 4/4 | 4/4 |
+| Unsupported claims accepted | 0 | 0 |
+| Source-correct proposals rejected | 0 | 0 |
+| Observed private-reference disclosures | 0 | 0 |
+
+All 24 first attempts replayed. The run took 108.9 seconds and used 21,097
+input and 5,511 output tokens with zero retries and $0 provider spending.
+A separate check reconciled all 24 dispatch journals and raw responses with
+the scoring records and traced every accepted value to the source XML.
+All 14 adapter controls passed. The deterministic extractor also answered
+16/16 and abstained on 8/8 across conditions. This qualifies the configured
+model and checker for the named study measurements on these development cases.
+The two batches used different papers, so the scores cannot attribute an
+improvement to any one design change.
+
+The retained protocol SHA-256 is
+`65230b47b8cd99ce2e68ac89cd329a0733286036e4b9e591fe2ffd36a3b06810`.
+The run report and scored evaluation have SHA-256 values
+`2277258b17137ca29baed833335ffa873b69efd3ebe47d12e72f627775c2a298` and
+`df4232d18fbf45f04c528819bc7ac96aea334b8378556a93684c9a3bf8784130`.
+
 To reproduce the redesigned preflight from this local collection and the first
 frozen batch, select a fresh directory. The first protocol supplies the pinned
 local model/runtime identities. Preflight checks run without opening the model.

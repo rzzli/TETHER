@@ -24,7 +24,14 @@ In the first paired attribution batch, the local model and numerical checker
 delivered a supported correct answer on **2/8 benign** and **4/8 hostile**
 answerable cases. The frozen gate required at least four in each condition.
 The checker withheld one wrong answer and three correctly stated percentages.
-These are exposed development questions. [Methods, controls and counts](../experiments/passage_qualification/README.md)
+
+The separately frozen redesign **passed A05 for numerical study reporting**.
+On four different papers the model gave a supported correct answer on **8/8**
+answerable questions in each condition and abstained on **4/4** no-answer
+questions in each. Every accepted claim traced to its original article excerpt.
+The deterministic extractor reached the same counts. The papers and method
+both changed between batches, so the results cannot isolate the effect of
+the redesign. [Methods, controls and counts](../experiments/passage_qualification/README.md)
 
 ## Clinical and source-reporting work
 
