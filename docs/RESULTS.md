@@ -1,6 +1,6 @@
 # Results and current scope
 
-**Updated 13 November 2026.** TETHER has working evidence/accounting machinery,
+**Updated 19 November 2026.** TETHER has working evidence/accounting machinery,
 contemporary source-reporting examples and completed development measurements.
 It has **no qualified historical clinical forecaster, validated clinical
 probabilities or held-out demonstration of scientific agent superiority**.
@@ -32,6 +32,15 @@ questions in each. Every accepted claim traced to its original article excerpt.
 The deterministic extractor reached the same counts. The papers and method
 both changed between batches, so the results cannot isolate the effect of
 the redesign. [Methods, controls and counts](../experiments/passage_qualification/README.md)
+
+In a separate comparison on eight papers absent from the screened prior
+project artifacts, the same local model and a general deterministic extractor
+received identical questions and two same-paper paragraphs per case. The model
+gave **16/16** supported answers and the extractor **6/16**. Both abstained on
+**8/8** questions with the supporting paragraph withheld. The model gained ten
+supported answers across six papers, primarily on percentages. These purposive
+cases compare answering from supplied passages with one lexical baseline.
+[Matched design, replay and counts](../experiments/passage_qualification/README.md#matched-extraction-comparison-on-eight-additional-papers)
 
 ## Clinical and source-reporting work
 

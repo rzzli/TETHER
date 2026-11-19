@@ -1,0 +1,74 @@
+[
+  {
+    "pmcid": "PMC13111143", "case": "125", "metadata": 0, "xml": 4,
+    "sha256": "c0414ce85df63743d50d5678b88bad2d8cf7d4b23ae7ed307e3dae78d5c11d11",
+    "background": [50, 61], "withhold": 0,
+    "slots": [
+      ["count", "insulin-resistant women with PCOS in the randomized trial", "women", "PCOS", 71, "84", "84 insulin-resistant women with PCOS"],
+      ["count", "patients in the randomized study in mild hyperlipidemia", "patients", "mild hyperlipidemia", 71, "24", "24 patients with mild hyperlipidemia"]
+    ]
+  },
+  {
+    "pmcid": "PMC13076409", "case": "023", "metadata": 0, "xml": 4,
+    "sha256": "469640d6dd20e3b05c11b65120682e589e0d4261816d1dd2c15145b7ed133c1e",
+    "background": [32, 17], "withhold": 0,
+    "slots": [
+      ["percentage", "mean native plant cover in high-severity plots without prior invasive plants", "native plants", "without prior occurrence", 29, "32.56", "high burn severity plots (mean 32.56%"],
+      ["percentage", "mean non-native plant cover in low-severity plots without prior invasive plants", "non-native plant species", "without prior occurrence", 31, "0.36", "lowest percent cover (mean 0.36%"]
+    ]
+  },
+  {
+    "pmcid": "PMC13606068", "case": "144", "metadata": 1, "xml": 3,
+    "sha256": "f9d88aff51d23de9e01bd981a50ba262c2b6937179ce101e3f48a7c63f91b7a0",
+    "background": [0, 15], "withhold": 1,
+    "slots": [
+      ["count", "all retained variant calls in the proband's exome", "retained variant calls", "proband", 4, "120922", "120,922 retained variant calls"],
+      ["percentage", "retained variant calls with a PASS filter flag", "PASS filter flag", "retained variant calls", 4, "86.6", "86.6%) carried a PASS filter flag"]
+    ]
+  },
+  {
+    "pmcid": "PMC13542703", "case": "134", "metadata": 0, "xml": 4,
+    "sha256": "4b1223cdb403acdc1c8e32f9f2d251c324a9c8690c88d4a16de312898679ef16",
+    "background": [6, 16], "withhold": 0,
+    "slots": [
+      ["count", "patients screened for LungMate-006 before enrollment", "screened patients", "enrolled", 5, "20", "20 screened patients"],
+      ["percentage", "major pathologic response rate in the surgical population", "MPR rate", "surgical population", 13, "44.4", "MPR rate for the surgical population was 44.4%"]
+    ]
+  },
+  {
+    "pmcid": "PMC13582066", "case": "164", "metadata": 0, "xml": 4,
+    "sha256": "3d76462f4353bd8255f9095587ac2e84340ea3ff6b701e52af5133b6324491f5",
+    "background": [9, 58], "withhold": 0,
+    "slots": [
+      ["count", "trials per subject extracted for the longest perturbation stimulus", "trials per subject", "longest perturbation", 7, "64", "64 trials per subject"],
+      ["percentage", "minimum reduction relative to baseline used to define inhibition", "inhibition", "baseline", 6, "10", "inhibition as a 10%"]
+    ]
+  },
+  {
+    "pmcid": "PMC13695669", "case": "179", "metadata": 0, "xml": 4,
+    "sha256": "c0cc200b06a36a3935e391735352816b0072facd60524a5234b511434a297295",
+    "background": [9, 19], "withhold": 0,
+    "slots": [
+      ["count", "recently hospitalized patients analyzed by Bober et al", "patients", "Bober", 18, "756", "756 recently hospitalised patients"],
+      ["percentage", "lower heart-failure risk in the UK Biobank group doing 150–300 minutes of moderate activity per week", "lower HF risk", "moderate-intensity physical activity", 19, "63", "63% lower HF risk"]
+    ]
+  },
+  {
+    "pmcid": "PMC13311256", "case": "055", "metadata": 0, "xml": 4,
+    "sha256": "d335bc5a228814f15770106768488bc9f792b79aeeee4393d58cf354cd46cee3",
+    "background": [49, 51], "withhold": 0,
+    "slots": [
+      ["count", "repeated trials used for the cross-scale comparison in panel B", "repeated trials", "random instances", 25, "100", "100 repeated trials"],
+      ["percentage", "the proposed algorithm's experimental average percentage error for 20-city instances", "PEav", "experiment result", 51, "0.2", "PEav of 0.2% for 20-city"]
+    ]
+  },
+  {
+    "pmcid": "PMC13562796", "case": "051", "metadata": 0, "xml": 4,
+    "sha256": "cbf0bf016cdbddd108f660f460e60f8476a9684dee533f84205971e367652129",
+    "background": [29, 30], "withhold": 0,
+    "slots": [
+      ["percentage", "central reported porosity of the BTen scaffold", "porosities", "BTen", 28, "56.8", "56.8% ± 1.9%"],
+      ["percentage", "central reported porosity of the BT scaffold", "porosities", "BT", 28, "54.6", "54.6% ± 2.4%"]
+    ]
+  }
+]

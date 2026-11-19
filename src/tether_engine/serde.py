@@ -219,9 +219,15 @@ def decode(kind: Any, value: Any, location: str = "input") -> Any:
                                         f"{location}.{field.name}")
         return kind(**result)
     if kind is float:
-        if type(value) not in (int, float) or not math.isfinite(value):
+        if type(value) not in (int, float):
             raise ContractError(f"{location}: expected finite number")
-        return float(value)
+        try:
+            number = float(value)
+        except OverflowError as error:
+            raise ContractError(f"{location}: expected finite number") from error
+        if not math.isfinite(number):
+            raise ContractError(f"{location}: expected finite number")
+        return number
     if kind in (str, int, bool):
         if type(value) is not kind:
             raise ContractError(f"{location}: expected {kind.__name__}")

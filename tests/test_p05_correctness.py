@@ -58,6 +58,12 @@ class CorrectnessTests(unittest.TestCase):
         with self.assertRaises(ContractError):
             parse_json('1' * 5000)
 
+    def test_large_json_integer_in_a_float_field_has_a_contract_error(self):
+        from tether_engine.serde import decode
+        for sign in (1, -1):
+            with self.subTest(sign=sign), self.assertRaises(ContractError):
+                decode(Usage, {'input_tokens': 0, 'output_tokens': 0, 'cost_usd': sign * 10**400})
+
     def test_decimal_costs_reconcile_through_sealed_execution(self):
         import tether_engine
         from tether_engine.agents import ExtractiveBackend, Selection

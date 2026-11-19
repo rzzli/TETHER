@@ -45,6 +45,30 @@ class TemporalAuditReplayTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     replay.calculate(bad)
 
+    def test_shared_archive_and_registry_denominators(self):
+        with self.subTest("same archival population across modern date fields"):
+            bad = copy.deepcopy(self.document)
+            bad["archive"][0]["archive_pairs"] += 1
+            with self.assertRaises(ValueError):
+                replay.calculate(bad)
+        with self.subTest("name matching requires a found registry link"):
+            bad = copy.deepcopy(self.document)
+            row = bad["registry"][0]
+            row["exact_names"] += row["names_missing"]
+            row["names_missing"] = 0
+            with self.assertRaises(ValueError):
+                replay.calculate(bad)
+        with self.subTest("each missing distinct ID has at least one missing link"):
+            bad = copy.deepcopy(self.document)
+            bad["registry"][0]["found_ids"] = 195
+            with self.assertRaises(ValueError):
+                replay.calculate(bad)
+        with self.subTest("all requested IDs imply all requested links were found"):
+            bad = copy.deepcopy(self.document)
+            bad["registry"][0]["found_ids"] = bad["flow"]["requested_ids"]
+            with self.assertRaises(ValueError):
+                replay.calculate(bad)
+
     def test_outputs_are_exact_and_do_not_overwrite(self):
         with tempfile.TemporaryDirectory() as folder:
             first, second = (Path(folder) / value for value in ("first", "second"))

@@ -43,7 +43,7 @@ def _archive(document):
     need(type(document["archive"]) is list and len(document["archive"]) == 12, "Expected 12 archive comparison cells")
     exact(document["archive_inventory"], "bytes_verified files_selected physical_footer_rows", "archive inventory")
     counts(document["archive_inventory"].values(), "archive inventory")
-    cells, physical = {}, {}
+    cells, physical, archive_pairs = {}, {}, {}
     for row in document["archive"]:
         exact(row, "source archive cutoff field archive_pairs modern_pairs shared date_counts modern_rows archive_rows", "archive cell")
         source, release, field = row["source"], row["archive"], row["field"]
@@ -52,6 +52,8 @@ def _archive(document):
         need(row["cutoff"] == CLOCKS[release], "Incorrect exclusive release clock")
         a, f, s = (row[x] for x in ("archive_pairs", "modern_pairs", "shared"))
         counts((a, f, s, row["modern_rows"], row["archive_rows"]), "pair or row")
+        need(archive_pairs.setdefault((source, release), a) == a,
+             "Archive pair denominator differs across modern date fields")
         bins = row["date_counts"]
         exact(bins, " ".join(DATE_BINS), "date dispositions")
         counts(bins.values(), "date disposition")
@@ -102,6 +104,12 @@ def _registry(document, flow):
         need(row["coherent_actual_ids"] + row["unknown_start_type"] <= row["found_ids"] <= ids,
              "Registry ID conservation failure")
         found = row["found_links"]
+        missing_ids = ids - row["found_ids"]
+        missing_links = links - found
+        need(missing_ids <= missing_links and bool(missing_ids) == bool(missing_links)
+             and bool(row["found_ids"]) == bool(found),
+             "Registry presence differs between distinct IDs and their links")
+        need(row["names_missing"] >= missing_links, "Absent registry links cannot have comparable names")
         need(row["found_ids"] <= found <= links and
              sum(row[k] for k in ("exact_phase", "mixed_phase", "different_phase", "unknown_phase")) == found and
              sum(row[k] for k in ("equal_date", "overlap_date", "disjoint_date")) == found and

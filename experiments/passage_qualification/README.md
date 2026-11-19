@@ -26,6 +26,18 @@ python -m experiments.passage_qualification.pilot rank OUTPUT
 python -m experiments.passage_qualification.pilot evaluate OUTPUT
 ```
 
+To verify a retained A04 run, reconstruct its inputs from the original XML,
+replay the entire ordered schedule, and compare the resulting evaluation bytes:
+
+```text
+python -m experiments.passage_qualification.verify_retrieval OUTPUT COLLECTION
+```
+
+The frozen scorer tallies its two named arms and can ignore surplus rows from
+another arm. The verification command checks every row against fresh rankings.
+It preserves recorded timings for the score comparison. Elapsed time itself
+cannot be independently reproduced.
+
 ## A05
 
 The first batch used eight study-specific numerical questions and four source-withheld controls in both benign and hostile conditions. The conditions shared the question, source paragraph and model. A separate editorial note supplied either neutral text or an untrusted instruction. The model had no tools. Proposals were replayed through the adapter and checked against case-bound quotations. The research checker interpreted each complete numerical clause, including subject, measure, comparator, value and units. Independent source references scored the answers. Generated text had no write authority in the production selection ledger.
@@ -99,3 +111,70 @@ attempt directory and reaps the local process on exit. Use the `audit` module
 with the freeze directory, receipt-bound SciFact primary output directory,
 development references JSONL and a fresh assessment directory to score the
 retained responses without making another model call.
+
+## Matched extraction comparison on eight additional papers
+
+Each paper contributes two numerical questions with a supporting passage and
+one repeat question with that passage withheld. Every case has two nonempty
+paragraphs from its own paper. The model and deterministic extractor receive
+the same question, text and span IDs. Some passages contain several
+measurements or populations. The question specifies the requested field and
+context and supplies zero answer choices.
+
+The extractor uses one rule across papers. It looks for the question's context
+terms in each offered passage, then looks for the field terms within five words
+of a number in the same sentence. It requires exactly one candidate value and
+one cited source. The question and offered passages are its only inputs.
+The model uses the same cached Qwen2.5-14B-Instruct Q4_K_M setup as the A05
+redesign, at temperature zero. Both methods earn credit for one correctly
+reported number with the requested unit and a source-linked supporting quote.
+A well-formed empty answer earns abstention credit on withheld cases.
+Malformed responses and unsupported attempts stay in the scheduled denominator.
+
+The papers were cached in the LAB-Bench collection. The freeze records an
+identifier scan of retained prior evaluation rosters, actor inputs, requests
+and exchanges. This measures prior project use visible in those records.
+The questions and selected passages were constructed for this comparison.
+
+The freeze uses the cached article collection, previous A05 protocol with
+checked model asset identities, prior exposure audit, and source and question
+roster in this directory. The local freeze contains the exact actor requests,
+evaluator references, source hashes and protocol. The `verify` command
+reconstructs the actor, references and source inventory from the original XML
+and metadata. The offline `score` command checks each dispatch journal,
+replays saved responses and applies the same scoring rule to both methods.
+
+```text
+python -m experiments.passage_qualification.matched_experiment prepare COLLECTION PREVIOUS_PROTOCOL EXPOSURE_AUDIT FREEZE
+python -m experiments.passage_qualification.matched_experiment verify FREEZE COLLECTION --sha256 PROTOCOL_SHA256
+python -m experiments.passage_qualification.matched_experiment score FREEZE COLLECTION NEW_REPORT --sha256 PROTOCOL_SHA256
+```
+
+| Frozen result | Qwen2.5-14B | Deterministic extractor |
+|---|---:|---:|
+| Supported answers, all answerable questions | **16/16** | **6/16** |
+| Supported answers, counts | 7/7 | 5/7 |
+| Supported answers, percentages | 9/9 | 1/9 |
+| Warranted abstentions, supporting paragraph withheld | **8/8** | **8/8** |
+| Wrong or unsupported responses | 0 | 0 |
+
+The model supplied ten supported answers where the extractor abstained. Those
+gains spanned six of eight papers. Both methods answered the other six and
+abstained on all eight withheld controls. The 24 cases share eight articles
+and include eight repeated questions. This is a descriptive result on a
+purposive sample and one lexical comparator. It measures interpretation of
+supplied paragraphs. Search and upstream ranking were outside this comparison.
+
+The freeze found no PMCID or DOI matches in 6,765 retained project artifacts.
+A follow-up search found no matches for 286 sampled 12-word passages in 6,763
+prior input or exchange files. All 24 model attempts replayed with zero retries,
+30,128 input tokens, 5,326 output tokens and $0 provider spending. The run took
+350 seconds including local asset hashing and startup. The source inventory,
+actor inputs and references reproduced from the cached originals. A second
+offline score run reproduced the evaluation byte-for-byte.
+
+Protocol SHA-256
+`59f97092f594e96dc2b7474c229fc37a0dd55503eef5f8e9b7494b4cee644ac9`
+
+Evaluation SHA-256
+`c1a4d65a2347c8da693e563bc48f47e00e43b5b23cca79cfdcd8011baabbc358`

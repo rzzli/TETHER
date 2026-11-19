@@ -13,6 +13,7 @@ is the current next step. See the [result register](../docs/RESULTS.md).
 | Module | Purpose |
 |---|---|
 | [temporal_audit](temporal_audit/) | Reproduce the descriptive evidence-release, endpoint and registry tables, and replay the selected Open Targets partitions |
+| [passage_qualification](passage_qualification/) | Replay article retrieval and numerical attribution on the exposed A04 and A05 development cases |
 | [equal_policy](equal_policy/) | Compare validator implementations under a shared declared policy |
 | [equal_policy_v2](equal_policy_v2/) | Source-inclusive installed-run checking and independent reconstruction under that policy |
 | [inspect_policy](inspect_policy/) | Implement and test corresponding controls within Inspect |

@@ -8,6 +8,18 @@ from .excerpts import content_review
 from .pilot import digest, study_case
 from .preflight import envelope
 from .support import Rule
+from .verify_retrieval import check_rankings
+
+
+class RetrievalReplayTests(unittest.TestCase):
+    def test_only_elapsed_time_can_change_on_replay(self):
+        row = dict(id='q1', arm='bm25', elapsed_ns=10, request_bytes=1)
+        expected = dict(protocol='frozen', rows=[row])
+        check_rankings(dict(expected, rows=[dict(row, elapsed_ns=0)]), expected)
+        for rows in ([], [row, dict(row, arm='surplus')], [dict(row, id='q2')],
+                     [dict(row, request_bytes=True)], [dict(row, elapsed_ns=-1)]):
+            with self.subTest(rows=rows), self.assertRaises(ValueError):
+                check_rankings(dict(expected, rows=rows), expected)
 
 
 class NumericReportingTests(unittest.TestCase):

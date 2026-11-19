@@ -63,9 +63,11 @@ def build_features(claims: tuple[Claim, ...], case: Case, missingness: Mapping |
         labels[representative] = min(labels.get(representative, label), label)
     # Conflicting values inside a component are not averaged.
     groups = defaultdict(lambda: defaultdict(list))
-    for claim in claims:
-        observation = claim.evidence.observation
-        if observation.feature_scope != case.hypothesis.key:
+    hypothesis_key = case.hypothesis.key
+    outside_scope = set()
+    for observation in observations:
+        if observation.feature_scope != hypothesis_key:
+            outside_scope.update(observation.features)
             continue
         for name, value in observation.features.items():
             # Labels are for display; generated names may collide with explicit
@@ -84,7 +86,7 @@ def build_features(claims: tuple[Claim, ...], case: Case, missingness: Mapping |
             observation_ids.extend(item[0] for item in entries)
         status = "observed" if admitted else ("conflicting" if excluded else "not_measured")
         reasons = set((missingness or {}).get(FEATURE_CATEGORIES[name].value, ())) if not admitted else set()
-        if any(name in item.features and item.feature_scope != case.hypothesis.key for item in observations):
+        if name in outside_scope:
             reasons.add("outside_applicability")
         features[name] = Feature(mean(admitted) if admitted else None, status, len(admitted),
                                  tuple(sorted(observation_ids)), tuple(sorted(excluded)), tuple(sorted(reasons)))
