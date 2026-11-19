@@ -7,7 +7,7 @@ import unittest
 import tether_engine.evaluation as evaluation
 from tether_engine.evaluation import Outcome, Outcomes, add_months, evaluate
 from tether_engine.scorer import Prediction
-from tether_engine.serde import ContractError
+from tether_engine.serde import ContractError, canonical, parse_json
 
 
 class EvaluationPopulationTests(unittest.TestCase):
@@ -32,6 +32,27 @@ class EvaluationPopulationTests(unittest.TestCase):
 
     def policy(self, *, months=24, lag=0, endpoint="phase_2_to_3"):
         return evaluation.EvaluationPolicy(1, endpoint, months, lag)
+
+    def test_json_coverage_distinguishes_undefined_from_zero(self):
+        immature = self.row(value=None, status="unresolved", months=60)
+        unknown = self.row(value=None, status="unresolved", p=None)
+        for rows, months, expected, denominators in (
+            ([], 24, (None, None, None, None), (0, 0, 0)),
+            ([immature], 60, (0, None, None, None), (1, 0, 0)),
+            ([unknown], 24, (1, 0, 0, None), (1, 1, 0)),
+            ([self.row(p=None)], 24, (1, 1, 0, 0), (1, 1, 1)),
+            ([self.row()], 24, (1, 1, 1, 1), (1, 1, 1)),
+        ):
+            with self.subTest(expected=expected):
+                report = parse_json(canonical(self.run_rows(rows, policy=self.policy(months=months))))
+                ratios = report["coverage_by_population"]
+                self.assertEqual(tuple(ratios[key] for key in ("mature_of_registered", "resolved_of_mature",
+                    "prediction_available_of_mature", "scored_of_resolved")), expected)
+                self.assertEqual(report["coverage_schema_version"], 2)
+                self.assertEqual(tuple(report["denominators"][key] for key in ("registered", "mature", "resolved")),
+                                 denominators)
+                if not rows:
+                    self.assertEqual(report["coverage"], 0)
 
     def test_early_positives_do_not_create_an_immature_cohort(self):
         rows = [self.row(str(i), value=1 if i < 3 else None,

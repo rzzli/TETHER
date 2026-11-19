@@ -281,6 +281,17 @@ hash. HGNC TSV has no Arrow schema and returns null. Compatibility is checked
 separately against the required projection: both float32 and float64 scores
 qualify, while a text score fails.
 
+## Fixed-horizon evaluation coverage
+
+In the metrics JSON (`coverage_schema_version: 2`), each
+`coverage_by_population` key names its numerator and denominator. For example,
+`scored_of_resolved` uses `denominators.scored / denominators.resolved`.
+Zero denominator gives JSON null. A nonempty population with zero covered cases
+gives numeric zero. This applies to raw, receipt-bound and baseline evaluation.
+Readers of older reports can recover undefined ratios by checking the
+denominator. The legacy top-level `coverage` alias retains its original
+scored/registered convention, including zero for an empty registered frame.
+
 ## Loopback chat exchange v1
 
 `tether.generated_chat.LocalGeneratedChat` accepts a numeric port on `127.0.0.1`
