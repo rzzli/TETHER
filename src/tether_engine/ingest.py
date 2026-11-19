@@ -477,6 +477,7 @@ def build_snapshot(manifest_path: Path, catalog_path: Path, output: Path, *, pac
     started = time.monotonic()
     cutoff = datetime.now(timezone.utc)
     state = {"stage": "reservation", "counters": Counter()}
+    primary = None
     try:
         custom = {"cases_path": str(cases_path.resolve()), "cases_sha256": cases_sha256} if cases_path else {}
         journal.append("build_request", manifest_path=str(manifest_path.resolve()),
@@ -488,21 +489,22 @@ def build_snapshot(manifest_path: Path, catalog_path: Path, output: Path, *, pac
         return _build_snapshot(manifest_path, catalog_path, output, journal, state, started, cutoff,
                                packet_layout, cases_path, cases_sha256)
     except BaseException as error:
+        primary = error
         failure = {"schema_version": 2, "status": "interrupted" if isinstance(error, KeyboardInterrupt) else "failed",
                    "stage": state["stage"], "error_class": type(error).__name__, "message": str(error),
                    "elapsed_seconds": time.monotonic() - started, "counters": dict(state["counters"]),
                    "recovery_action": "inspect only; replacement builds require a new output directory"}
         try:
             journal.fail(error, state["stage"])
-        except OSError:
-            pass  # A readable durable journal prefix remains if the device stopped accepting writes.
+        except BaseException as secondary:
+            error.add_note(f"Build failure journal append failed: {type(secondary).__name__}: {secondary}")
         try:
             write_json(output / "build-failure.json", failure)
-        except OSError:
-            pass
+        except BaseException as secondary:
+            error.add_note(f"Build failure marker write failed: {type(secondary).__name__}: {secondary}")
         raise
     finally:
-        journal.close()
+        journal.close_preserving(primary)
 
 
 def _build_snapshot(manifest_path, catalog_path, output, journal, state, started, cutoff, packet_layout,

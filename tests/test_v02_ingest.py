@@ -3,6 +3,7 @@ import hashlib
 import importlib.util
 import tempfile
 import unittest
+from contextlib import ExitStack
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -13,7 +14,7 @@ from tether_engine.artifacts import verify_run, write_run
 from tether_engine.chrono import load_snapshot
 from tether_engine.contracts import Case
 from tether_engine.ingest import PILOT, InputFile, InputManifest, build_snapshot, inspect_sources
-from tether_engine.journal import inspect_run, read_chain
+from tether_engine.journal import RunJournal, inspect_run, read_chain
 from tether_engine.serde import ContractError, canonical, decode, read_json, sha256_file, write_json
 from tether_engine.workflow import run_workflow
 
@@ -301,6 +302,46 @@ class IngestTests(IngestFixture, unittest.TestCase):
             self.assertEqual(sha256_file(archived), node["receipt_sha256"])
         case = decode(Case, read_json(directory / "case.json"))
         load_snapshot(directory / "snapshot.json", case, self.catalog)
+
+    def test_secondary_build_failures_preserve_primary_and_try_both_records(self):
+        for full, marker_error, close_error in (
+            (True, False, False), (False, True, False), (False, False, True),
+            (True, True, True), (False, True, True),
+        ):
+            with self.subTest(full=full, marker_error=marker_error, close_error=close_error):
+                output = self.root / f"fault-{int(full)}{int(marker_error)}{int(close_error)}"
+                primary = KeyboardInterrupt("interrupt fixture")
+                with ExitStack() as stack:
+                    def interrupted(*args, **kwargs):
+                        if full:
+                            stack.enter_context(patch("tether_engine.journal.MAX_JOURNAL_BYTES",
+                                                      (output / "journal.jsonl").stat().st_size))
+                        raise primary
+                    build = stack.enter_context(patch("tether_engine.ingest._build_snapshot", side_effect=interrupted))
+                    marker = stack.enter_context(patch("tether_engine.ingest.write_json", wraps=write_json))
+                    if marker_error:
+                        marker.side_effect = OSError("fixture marker full")
+                    if close_error:
+                        original_close = RunJournal.close
+                        def failed_close(journal):
+                            original_close(journal)
+                            raise OSError("fixture close failed")
+                        stack.enter_context(patch.object(RunJournal, "close", failed_close))
+                    with self.assertRaises(KeyboardInterrupt) as caught:
+                        build_snapshot(self.manifest, self.catalog, output)
+                self.assertIs(caught.exception, primary)
+                build.assert_called_once()
+                marker.assert_called_once()
+                notes = " ".join(primary.__notes__).lower()
+                for failed, detail in ((full, "journal"), (marker_error, "marker"), (close_error, "close")):
+                    if failed:
+                        self.assertIn(detail, notes)
+                events = read_chain(output / "journal.jsonl")
+                self.assertEqual(events[-1]["event"], "build_request" if full else "build_interrupted")
+                path = output / "build-failure.json"
+                self.assertEqual(path.exists(), not marker_error)
+                if path.exists():
+                    self.assertEqual(read_json(path)["error_class"], "KeyboardInterrupt")
 
     def test_inspection_failure_and_interruption_leave_durable_terminal_records(self):
         for error, expected in ((ContractError("fixture bad receipt"), "build_failed"),
