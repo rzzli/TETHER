@@ -387,6 +387,47 @@ original file bytes. Output and failure rules match the inventory utility; the
 profile cannot be placed inside its input inventory. A passing profile does not
 establish historical availability, labels or an unexposed evaluation population.
 
+## Snapshot ingestion benchmark
+
+The November 18, 2026 Windows x64 run compared `ebfbb34` with `a3efe8f`
+on CPython 3.11.15 and PyArrow 21.0.0. Each arm built a complete bounded
+snapshot in a fresh process from the same fictional Parquet files and receipts.
+The table gives medians from five runs per arm after one warm-up. Arm order
+alternated between trials. Time is the builder's elapsed time and memory is
+the process peak working set at reporting time.
+
+| Workload and version | Physical rows | Rows converted to Python | Exact matches | Accepted source rows | Case observations | Row hashes | Seconds (range) | Peak MiB (range) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Sparse, baseline | 131,072 | 131,072 | 10 | 8 | 10 | 11 | 0.796 (0.781–0.797) | 134.6 (134.3–136.1) |
+| Sparse, exact pairs | 131,072 | 10 | 10 | 8 | 10 | 9 | 0.235 (0.218–0.250) | 99.0 (98.9–99.4) |
+| One pair, 16 modalities, baseline | 50 | 50 | 50 | 48 | 768 | 784 | 0.531 (0.515–0.547) | 99.2 (99.2–99.4) |
+| One pair, 16 modalities, exact pairs | 50 | 50 | 50 | 48 | 768 | 49 | 0.516 (0.500–0.547) | 99.3 (99.2–99.4) |
+
+All ten measured builds per workload produced identical ordered packet and
+rejection-file hashes. This compares the serialized observations, original row
+locators, order and rejection reasons. Duplicate counts agreed at one for the
+sparse fixture and 16 for the repeated pair. Each workload contained one
+unsupported source row. Snapshot clocks and process-specific journal entries
+were outside this comparison. Sharing row hashes saved repeated computation,
+with overlapping elapsed-time ranges on the 16-modality fixture. Builds still
+hold observations by case until finalization. Registry-scale peak memory
+requires a separate measurement on a representative cohort.
+
+From the repository root, use a Python environment with the engine to be
+measured and the pinned ingestion extra. Prepare each input once. Run
+`measure` with each engine version against that same input directory, using a
+new output path and a fresh Python process each time.
+
+```text
+python tools/framework/benchmark_ingest.py prepare tmp/sparse-input sparse
+python tools/framework/benchmark_ingest.py prepare tmp/repeated-input repeated
+python tools/framework/benchmark_ingest.py measure tmp/sparse-input tmp/sparse-run-01
+python tools/framework/benchmark_ingest.py measure tmp/repeated-input tmp/repeated-run-01
+```
+
+Each output contains `measurement.json` with input and implementation hashes,
+counters, resource measurements and a digest of ordered per-case products.
+
 ## Repository boundaries
 
 Track source, package resources, test fixtures, reusable tools, experiment code and
