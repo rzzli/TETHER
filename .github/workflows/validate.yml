@@ -44,18 +44,13 @@ jobs:
       - name: Install ingestion dependencies
         if: matrix.mode == 'full'
         run: uv sync --locked --python 3.11.15 --extra ingest --no-install-project
-      - name: Install noneditable runtime with pinned build backend
-        run: uv pip install --no-deps . packages/tether --build-constraints tools/build-constraints.txt
+      - name: Build, inspect and install exact runtime wheels
+        run: uv run --no-sync python -I -B tools/install_wheels.py --output "${{ runner.temp }}/tether-reports/wheels"
       - name: Check dependencies and both lockfiles
         run: |
           uv pip check
           uv lock --check
           uv lock --project packages/tether --check
-      - name: Prepare retained reports
-        shell: python
-        run: |
-          import os, pathlib
-          pathlib.Path(os.environ['RUNNER_TEMP'], 'tether-reports').mkdir()
       - name: Install pinned developer tools
         if: matrix.mode == 'full'
         run: uv pip install -r tools/quality-requirements.txt
@@ -64,10 +59,10 @@ jobs:
         run: uv run --no-sync python -I -B tools/quality.py --output "${{ runner.temp }}/tether-reports/quality"
       - name: Validate installed core
         if: matrix.mode == 'core'
-        run: uv run --no-sync python -I -B tools/validate.py --mode core --profile maintained --package --report "${{ runner.temp }}/tether-reports/validation.json"
+        run: uv run --no-sync python -I -B tools/validate.py --mode core --profile maintained --checked-wheels "${{ runner.temp }}/tether-reports/wheels" --report "${{ runner.temp }}/tether-reports/validation.json"
       - name: Validate installed full scope with parent-process coverage
         if: matrix.mode == 'full'
-        run: uv run --no-sync python -I -B -m coverage run --rcfile tools/coverage.ini --data-file "${{ runner.temp }}/tether-reports/coverage.data" tools/validate.py --mode full --profile maintained --package --report "${{ runner.temp }}/tether-reports/validation.json"
+        run: uv run --no-sync python -I -B -m coverage run --rcfile tools/coverage.ini --data-file "${{ runner.temp }}/tether-reports/coverage.data" tools/validate.py --mode full --profile maintained --checked-wheels "${{ runner.temp }}/tether-reports/wheels" --report "${{ runner.temp }}/tether-reports/validation.json"
       - name: Retain coverage measurement
         if: always() && matrix.mode == 'full'
         run: uv run --no-sync python -I -B -m coverage json --rcfile tools/coverage.ini --data-file "${{ runner.temp }}/tether-reports/coverage.data" -o "${{ runner.temp }}/tether-reports/coverage.json"
@@ -102,7 +97,7 @@ jobs:
       - name: Install pinned runtime and ingestion extra
         run: |
           uv sync --locked --python 3.11.15 --extra ingest --no-install-project
-          uv pip install --no-deps . packages/tether --build-constraints tools/build-constraints.txt
+          uv run --no-sync python -I -B tools/install_wheels.py --output "${{ runner.temp }}/il6r-wheels"
           uv pip check
       - name: Run exact-source example qualification
         run: uv run --no-sync python -I -B tools/examples/qualify_ci.py --output "${{ runner.temp }}/il6r-qualification" --allow-network
@@ -111,6 +106,8 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: il6r-${{ matrix.os }}-py311
-          path: ${{ runner.temp }}/il6r-qualification/reports/
+          path: |
+            ${{ runner.temp }}/il6r-qualification/reports/
+            ${{ runner.temp }}/il6r-wheels/
           if-no-files-found: warn
           retention-days: 14

@@ -65,7 +65,7 @@ and dependencies. Its results cannot qualify the unexecuted ARM64 installed gate
 
 ```powershell
 uv sync --locked --python 3.11 --extra ingest --no-install-project
-uv pip install --no-deps . packages/tether --build-constraints tools/build-constraints.txt
+uv run --no-sync python -I -B tools/install_wheels.py
 uv pip check
 ```
 
@@ -73,11 +73,20 @@ Install noneditable packages for tests that qualify installed module identities.
 The runtime is dependency-free; PyArrow 21.0.0 is used only by optional ingestion.
 Pinned build constraints live in [tools/build-constraints.txt](../tools/build-constraints.txt).
 
+The installer stages the engine and wrapper in fresh directories, checks each wheel's
+contents, installs both by SHA-256 into the invoking virtual environment and exercises
+both installed CLIs. Use `--offline` when the build backend is already cached.
+Add `--output <new-directory>` to keep both wheels and `checked-wheels.json`,
+which records their hashes, inventories, installed versions and import paths.
+For distribution, use these retained wheel files. CI retains them alongside its
+test report and uses `--checked-wheels <directory>` to compare the tested installation
+with the same files.
+
 POSIX installation and fictional quick start (use a fresh output path):
 
 ```sh
 uv sync --locked --python 3.11 --no-install-project
-uv pip install --no-deps . packages/tether --build-constraints tools/build-constraints.txt
+uv run --no-sync python -I -B tools/install_wheels.py
 mkdir -p runs
 uv run --no-sync tether demo --output runs/my-first-demo
 uv run --no-sync tether verify --run-dir runs/my-first-demo
@@ -152,8 +161,8 @@ uv run --no-sync python -B -m unittest discover -s packages/tether/tests -v
 ```
 
 The maintained full gate runs structural/catalog checks, Python and PowerShell syntax checks,
-repository tests, required framework probes, and an offline wheel build plus an
-isolated dependency-free demo and verification. `--report <fresh-path>` retains
+repository tests and required framework probes. The `--package` option adds an
+offline build of both wheels and isolated CLI demo verification. `--report <fresh-path>` retains
 its result; `--failfast` stops after the first failed test. Core mode allows only
 its explicitly named platform/optional-dependency skips.
 
@@ -168,8 +177,7 @@ python -B tools/validate.py --mode full --profile maintained --report ../tether-
 For a clean source ZIP, add `--layout export`. This mode creates temporary Git
 metadata outside the source solely to check ignore rules; it never borrows a
 parent checkout or restores historical records. Git must still be installed.
-`--reverse` reverses the maintained test order. `--package` additionally builds
-from a scratch copy, installs the wheel offline and verifies its demo. Report and
+`--reverse` reverses the maintained test order. Report and
 temporary directories should be outside the exported source tree. Install both
 packages first: tests do not silently add wrapper source paths to the interpreter.
 

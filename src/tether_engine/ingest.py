@@ -170,7 +170,7 @@ def arrow():
         import pyarrow.parquet as pq
         import pyarrow
     except ImportError as error:
-        raise ContractError("Ingestion requires: uv sync --python 3.11 --extra ingest") from error
+        raise ContractError("Install the ingestion dependency with uv pip install pyarrow==21.0.0") from error
     if pyarrow.__version__ != "21.0.0":
         raise ContractError("This ingestion recipe requires pyarrow==21.0.0")
     return pq

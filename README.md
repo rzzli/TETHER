@@ -45,7 +45,7 @@ Specialist routes include genetics, expression, perturbation, pathways, modality
 
 ```powershell
 uv sync --locked --python 3.11 --no-install-project
-uv pip install --no-deps . packages/tether --build-constraints tools/build-constraints.txt
+uv run --no-sync python -I -B tools/install_wheels.py
 New-Item -ItemType Directory -Path runs -Force | Out-Null
 uv run --no-sync tether demo --output runs/my-first-demo
 uv run --no-sync tether verify --run-dir runs/my-first-demo
