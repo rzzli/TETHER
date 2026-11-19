@@ -373,6 +373,8 @@ def _rows(item, columns, *, pairs=None, counters=None, progress=None):
                 indices = pc.indices_nonzero(mask)
                 selected = batch.take(indices)
                 indices = indices.to_pylist()
+            if counters is not None:
+                counters["python_rows_converted"] += selected.num_rows
             for index, row in zip(indices, selected.to_pylist()):
                 if pairs is not None and (row.get("targetId"), row.get("diseaseId")) not in pairs:
                     continue
@@ -612,7 +614,8 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
     counters = state["counters"]
     unsupported_types = Counter()
     counters.update({key: 0 for key in ("physical_rows_scanned", "scanned_rows", "selected_rows", "matched_rows",
-                    "accepted_source_rows", "normalized_case_records", "evidence_files_scanned")})
+                    "accepted_source_rows", "normalized_case_records", "evidence_files_scanned",
+                    "python_rows_converted", "evidence_row_fingerprints")})
     stage("evidence_normalization")
 
     def batch_progress():
@@ -650,6 +653,7 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
                 raw_id = str(raw["id"])
                 observation_id = "ot25:" + str(source) + ":" + raw_id
                 payload_hash = fingerprint(row)
+                counters["evidence_row_fingerprints"] += 1
                 if observation_id in job["seen"]:
                     if job["seen"][observation_id] != payload_hash:
                         raise ContractError("Conflicting duplicate provider evidence ID")
