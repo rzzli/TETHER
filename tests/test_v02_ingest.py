@@ -126,6 +126,43 @@ class IngestTests(IngestFixture, unittest.TestCase):
         with self.assertRaisesRegex(ContractError, "Conflicting duplicate"):
             build_snapshot(self.manifest, self.catalog, self.root / "conflicting")
 
+    def test_coverage_distinguishes_selection_products_and_release(self):
+        original = read_json(self.manifest)
+        scenarios = [
+            ([], {}, "incomplete", "missing"),
+            (original["files"][:1], {"ot_target": 1}, "complete", "missing"),
+            ([row for row in original["files"] if row["dataset_id"] != "ot_evidence"],
+             {"ot_target": 1, "ot_disease": 1, "hgnc_symbols": 1}, "complete", "missing"),
+            (original["files"], original["expected_counts"], "complete", "present"),
+        ]
+        for files, counts, selection, products in scenarios:
+            with self.subTest(selection=selection, products=products, files=len(files)):
+                write_json(self.manifest, {**original, "files": files, "expected_counts": counts})
+                inspected = inspect_sources(self.manifest, self.catalog)
+                self.assertEqual(inspected["selection_completeness"], selection)
+                self.assertEqual(inspected["required_product_families"], products)
+                self.assertEqual(inspected["release_completeness"], "unknown")
+                self.assertNotEqual(inspected["source_completeness"], "complete")
+        output, report = self.build()
+        coverage = read_json(output / report["cases"][0]["case_id"] / "snapshot.json")["coverage"]
+        for key in ("selection_completeness", "required_product_families", "release_completeness"):
+            self.assertEqual(coverage[key], inspected[key])
+
+    def test_unknown_expected_count_key_is_rejected_even_for_empty_inventory(self):
+        original = read_json(self.manifest)
+        write_json(self.manifest, {**original, "files": [], "expected_counts": {"unknown": 0}})
+        with self.assertRaisesRegex(ContractError, "Unknown expected"):
+            inspect_sources(self.manifest, self.catalog)
+
+    def test_intentionally_excluded_partition_does_not_certify_release(self):
+        original = read_json(self.manifest)
+        excluded = dict(original["files"][2], relative_path="sourceId=chembl/excluded.parquet")
+        write_json(self.manifest, {**original, "files": original["files"] + [excluded]})
+        inspected = inspect_sources(self.manifest, self.catalog)
+        self.assertEqual(len(inspected["excluded_files"]), 1)
+        self.assertEqual(inspected["selection_completeness"], "complete")
+        self.assertEqual(inspected["release_completeness"], "unknown")
+
     def test_missing_inputs_are_not_biological_absence(self):
         self.save_manifest({"ot_target": 1, "ot_disease": 1, "hgnc_symbols": 1, "ot_evidence": 2})
         output, report = self.build()

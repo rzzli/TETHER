@@ -346,6 +346,10 @@ def archive_assessment(path: Path, request: GeneratedRequest, assessment: ClaimA
     _need(assessment.request_sha256 == fingerprint(request), 'assessment_request_mismatch')
     _need(type(assessment.schema_version) is int and assessment.schema_version in (1, 2),
           'unsupported_assessment_version')
+    reviews = tuple(item.review for item in assessment.proposals if item.review is not None)
+    replayed = _assess(request, assessment.raw_response, reviews,
+                       select_spans=assessment.schema_version == 2)
+    _need(replayed == assessment, 'assessment_replay_mismatch')
     record = {
         'schema_version': assessment.schema_version,
         'request': request,

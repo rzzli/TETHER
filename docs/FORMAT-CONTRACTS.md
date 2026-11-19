@@ -239,8 +239,36 @@ supply its own support verdict. A recorded verdict does not establish scientific
 `archive_assessment` publishes a new file with the admitted view, exact in-limit
 response bytes in base64, raw SHA-256, envelope failure if any, and a separate
 decision for each proposal. It preserves rejected and malformed material for
-local audit. Treat the payload as untrusted text and retain it only where the
-source permissions allow. Use synthetic fixtures to exercise this contract.
+local audit. Before publishing, the writer replays the exact raw envelope against
+that request and the support reviews recorded on its proposal decisions. The
+entire assessment must agree, including proposal identities, span alignment,
+dispositions, reasons and accepted IDs; otherwise publication fails with
+`assessment_replay_mismatch`. This mechanical check does not qualify the support
+method: a caller-supplied verdict is not independent scientific validation. No
+support method is qualified for production by this format alone. Existing
+archives are not rewritten. Treat the payload as untrusted text and retain it
+only where the source permissions allow. Use synthetic fixtures to exercise this
+contract.
+
+## Contemporary input coverage
+
+The contemporary inspector and each emitted snapshot coverage object distinguish
+three scopes (`coverage_schema_version: 1`):
+
+- `selection_completeness`: `complete` only for a nonempty verified inventory
+  matching the declared expected counts across all allowed products, with no
+  missing inputs. Unknown count keys are rejected. Intentionally excluded
+  clinical partitions do not count as selected inputs.
+- `required_product_families`: `present` only when target, disease, evidence and
+  HGNC families each have a verified file; otherwise `missing`, with names in
+  `missing_product_families`. Presence does not assert complete partitions.
+- `release_completeness`: always `unknown` in this adapter: the count declaration
+  is not a versioned publisher release roster.
+
+The legacy `source_completeness` stays `selected_subset`, including when the
+selection is complete. No combination of caller-supplied counts certifies release
+completeness. `absence_claim` remains false; neither selection completion nor
+product presence licenses a biological absence claim.
 
 ## Loopback chat exchange v1
 

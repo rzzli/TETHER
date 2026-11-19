@@ -242,6 +242,36 @@ class GeneratedClaimsTests(unittest.TestCase):
             with self.assertRaises(FileExistsError):
                 archive_assessment(record, self.request, result)
 
+    def test_archive_rejects_decisions_that_disagree_with_raw_response(self):
+        result = assess_generated_response(self.request, self.response(self.claim),
+                                          reviews=(self.review(self.claim),))
+        proposal = result.proposals[0]
+        mutations = [
+            replace(result, raw_response=self.response()),
+            replace(result, raw_response=b'not JSON'),
+            replace(result, proposals=(replace(proposal, reason='invented'),)),
+            replace(result, proposals=(replace(proposal, quote_status='invalid'),)),
+            replace(result, proposals=(replace(proposal, disposition='rejected'),)),
+            replace(result, proposals=(replace(proposal, proposal=replace(self.claim, text='changed')),)),
+        ]
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'assessment.json'
+            for changed in mutations:
+                with self.subTest(changed=changed), self.assertRaisesRegex(ContractError, 'assessment_replay_mismatch'):
+                    archive_assessment(path, self.request, changed)
+                self.assertFalse(path.exists())
+
+    def test_archive_replays_abstentions_malformed_and_mixed_support(self):
+        mixed = replace(self.claim, claim_id='mixed')
+        for raw in (self.response(), b'not JSON', self.response(self.claim, mixed)):
+            with self.subTest(raw=raw), tempfile.TemporaryDirectory() as directory:
+                result = assess_generated_response(self.request, raw, reviews=(
+                    self.review(self.claim, Support.INSUFFICIENT), self.review(mixed, Support.MIXED)))
+                path = Path(directory) / 'assessment.json'
+                archive_assessment(path, self.request, result)
+                self.assertEqual(json.loads(path.read_bytes())['accepted_claim_ids'], [])
+                self.assertEqual(base64.b64decode(json.loads(path.read_bytes())['raw_response_base64']), raw)
+
     def test_invalid_envelopes_retained_and_oversize_response_declined(self):
         for raw in (b'not JSON', b'{"a":1,"a":1}', b'\xff',
                     canonical(GeneratedResponse(True, fingerprint(self.request), ())),

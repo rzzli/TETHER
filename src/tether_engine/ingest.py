@@ -204,6 +204,8 @@ def _inspect(manifest_path, catalog_path, progress=None):
     manifest = decode(InputManifest, read_json(manifest_path))
     if manifest.schema_version != 2 or not Path(manifest.raw_root).is_absolute():
         raise ContractError("Input manifest requires v2 and an explicit absolute raw_root")
+    if set(manifest.expected_counts) - DATASETS:
+        raise ContractError("Unknown expected source count keys")
     policy = catalog_index(read_json(catalog_path))
     root = Path(manifest.raw_root).resolve()
     pq = arrow()
@@ -281,12 +283,19 @@ def _inspect(manifest_path, catalog_path, progress=None):
     counts = Counter(row["node"].dataset_id for row in verified)
     if any(type(value) is not int or value < counts[key] for key, value in manifest.expected_counts.items()):
         raise ContractError("Invalid expected source counts")
-    complete = bool(manifest.expected_counts) and not missing and all(
-        counts[key] == value for key, value in manifest.expected_counts.items())
+    # Counts describe a declared selection, never a complete publisher release.
+    complete = bool(verified) and bool(manifest.expected_counts) and not missing and all(
+        counts[key] == manifest.expected_counts.get(key, 0) for key in DATASETS)
+    missing_families = sorted(DATASETS - counts.keys())
     report = {"schema_version": 2, "status": "inspected", "manifest_sha256": sha256_file(manifest_path),
               "catalog_sha256": sha256_file(catalog_path), "selected_files": len(verified),
               "selected_bytes": sum(row["bytes"] for row in verified), "dataset_counts": dict(counts),
-              "source_completeness": "complete" if complete else "selected_subset",
+              "source_completeness": "selected_subset",
+              "coverage_schema_version": 1,
+              "selection_completeness": "complete" if complete else "incomplete",
+              "required_product_families": "missing" if missing_families else "present",
+              "missing_product_families": missing_families,
+              "release_completeness": "unknown",
               "missing_inputs": sorted(set(missing)), "excluded_files": excluded,
               "files": [{"source": row["node"], "columns": row["columns"], "rows": row["rows"],
                          "bytes": row["bytes"], "schema_sha256": row["schema_sha256"]} for row in verified],
@@ -708,7 +717,9 @@ def _build_snapshot(manifest_path, catalog_path, output, journal, state, started
             packets.append({"path": packet_path.name, "sha256": digest, "bytes": packet_path.stat().st_size,
                             "observations": len(group)})
         refs = tuple(sorted(set(job["mapping_refs"]) | {ref for observation in observations for ref in observation.input_refs}))
-        coverage = {"source_completeness": inspection["source_completeness"],
+        coverage = {**{key: inspection[key] for key in (
+                        "source_completeness", "coverage_schema_version", "selection_completeness",
+                        "required_product_families", "missing_product_families", "release_completeness")},
                     "expected_counts": manifest.expected_counts, "selected_counts": inspection["dataset_counts"],
                     "missing_input_count": len(inspection["missing_inputs"]), "rejected_records": len(job["rejections"]),
                     "matching_observations": len(observations), "absence_claim": False,
