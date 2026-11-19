@@ -15,7 +15,6 @@ import tempfile
 import time
 import traceback
 import unittest
-import zipfile
 from contextlib import contextmanager
 from pathlib import Path
 
@@ -23,6 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from tether_engine.maintenance import validate_catalog, write_new_json
 from tether_engine.serde import ContractError, read_json
+from tools.install_wheels import installed_wheel_report, package_check
 from tools.review.probe_framework import main as probe_main
 
 EXPECTED_CORE_SKIPS = {'install the ingest extra for adapter tests',
@@ -295,116 +295,6 @@ def powershell_check():
     return True
 
 
-def _wheel_members(wheel, namespace, distribution, version):
-    """Check exact member names before either package's content policy."""
-    metadata_root = distribution + '-' + version + '.dist-info'
-    with zipfile.ZipFile(wheel) as archive:
-        names = [info.orig_filename for info in archive.infolist()]
-        if len(names) != len(set(names)):
-            raise ContractError('Duplicate wheel member')
-        for name in names:
-            parts = name.rstrip('/').split('/')
-            if (not parts or any(part in ('', '.', '..') or ':' in part for part in parts)
-                    or '\\' in name or '\x00' in name or parts[0] not in (namespace, metadata_root)
-                    or len(parts) < 2):
-                raise ContractError('Unexpected wheel namespace/member: '+name)
-    required = {metadata_root+'/'+name for name in ('METADATA', 'WHEEL', 'RECORD')}
-    if not required.issubset(names):
-        raise ContractError('Packaged runtime metadata missing')
-    return names, metadata_root
-
-
-def validate_engine_wheel(wheel):
-    """Reject research drivers, stale builds and incomplete compatibility imports."""
-    from tether_engine import __version__
-    names, metadata_root = _wheel_members(wheel, 'tether_engine', 'tether_target_engine', __version__)
-    compatibility = {'tether_engine/study/'+name for name in ('__init__.py', 'proofs.py', 'stable_read.py')}
-    if any(name.startswith('tether_engine/study/') and name not in compatibility for name in names):
-        raise ContractError('Historical study payload is outside the slim engine wheel')
-    required = {'tether_engine/demo/v2/case.json', 'tether_engine/demo/case.json',
-                'tether_engine/schemas/native-receipt-v2.json',
-                'tether_engine/schemas/journal-envelope-v1.json',
-                'tether_engine/schemas/generated-claim-response-v1.json',
-                'tether_engine/schemas/generated-span-selection-v2.json',
-                'tether_engine/schemas/portable-bundle-v1.json'} | compatibility
-    if not required.issubset(names):
-        raise ContractError('Packaged runtime/demo/compatibility imports missing')
-    return {'members':len(names), 'namespace':'tether_engine', 'metadata_root':metadata_root}
-
-
-def validate_wrapper_wheel(wheel):
-    from tether import __version__
-    names, metadata_root = _wheel_members(wheel, 'tether', 'tether_target_agents', __version__)
-    if any(name.startswith('tether/study/') for name in names):
-        raise ContractError('Historical study launcher is outside the slim wrapper wheel')
-    required = {'tether/'+name+'.py' for name in ('__init__', '__main__', '_cli', '_aliases',
-                                                   '_presentation', '_catalog_binding', 'api')}
-    required.add('tether/py.typed')
-    if not required.issubset(names):
-        raise ContractError('Packaged wrapper entry points missing')
-    return {'members':len(names), 'namespace':'tether', 'metadata_root':metadata_root}
-
-
-def _stage_distribution(source, staged):
-    """Copy only declared build inputs, never a caller's reused build tree."""
-    staged.mkdir()
-    for name in ('pyproject.toml', 'LICENSE'):
-        if (source/name).is_file():
-            shutil.copyfile(source/name, staged/name)
-    shutil.copytree(source/'src', staged/'src',
-                    ignore=shutil.ignore_patterns('__pycache__', '*.egg-info'))
-
-
-def package_check(directory):
-    constraints = ROOT/'tools/build-constraints.txt'
-    # Build both deliverables in fresh owned directories and smoke those exact wheels.
-    wheels, inventories = {}, {}
-    for name, source, validator in (
-            ('engine', ROOT, validate_engine_wheel),
-            ('wrapper', ROOT/'packages/tether', validate_wrapper_wheel)):
-        staged = directory/(name+'-source')
-        _stage_distribution(source, staged)
-        dist = directory/(name+'-dist')
-        subprocess.run(['uv','build','--offline','--build-constraints',str(constraints),
-                        '--python',sys.executable,'--wheel','--out-dir',str(dist)],
-                       cwd=staged,check=True,capture_output=True)
-        built = list(dist.glob('*.whl'))
-        if len(built) != 1:
-            raise ContractError('Expected exactly one '+name+' wheel')
-        wheels[name] = built[0]
-        inventories[name] = validator(built[0])
-    wheel = wheels['engine']
-    inventory = inventories['engine']
-    environment = directory/'wheel-environment'
-    subprocess.run(['uv','venv','--offline','--python',sys.executable,str(environment)],check=True,capture_output=True)
-    python = environment/('Scripts/python.exe' if os.name=='nt' else 'bin/python')
-    subprocess.run(['uv','pip','install','--offline','--no-index','--python',str(python),'--no-deps',*(str(item) for item in wheels.values())],check=True,capture_output=True)
-    run = directory/'wheel-demo'
-    subprocess.run([str(python),'-I','-m','tether_engine','demo','--output',str(run)],cwd=directory,check=True,capture_output=True)
-    subprocess.run([str(python),'-I','-m','tether_engine','verify','--run-dir',str(run)],cwd=directory,check=True,capture_output=True)
-    subprocess.run([str(python),'-I','-m','tether','--version'],cwd=directory,check=True,capture_output=True)
-    wrapper_run = directory/'wrapper-demo'
-    subprocess.run([str(python),'-I','-m','tether','demo','--output',str(wrapper_run)],
-                   cwd=directory,check=True,capture_output=True)
-    subprocess.run([str(python),'-I','-m','tether','verify','--run-dir',str(wrapper_run)],
-                   cwd=directory,check=True,capture_output=True)
-    diagnostic = subprocess.run([str(python),'-I','-c',
-        'import json, tether, tether_engine; from importlib.metadata import version; '
-        'from tether.api import run_offline, verify_run; '
-        'print(json.dumps({name: {"version": version(dist), "import_path": module.__file__} '
-        'for name, dist, module in (("engine", "tether-target-engine", tether_engine), '
-        '("wrapper", "tether-target-agents", tether))}))'],
-        cwd=directory,check=True,capture_output=True,text=True)
-    return {'wheel':wheel.name,'wheel_sha256':hashlib.sha256(wheel.read_bytes()).hexdigest(),
-            'deliverables': {name: {'wheel': item.name,
-                'wheel_sha256': hashlib.sha256(item.read_bytes()).hexdigest(),
-                'wheel_inventory': inventories[name]} for name, item in wheels.items()},
-            'installed_diagnostic': json.loads(diagnostic.stdout),
-            'wheel_inventory':inventory,
-            'build_constraints_sha256':hashlib.sha256(constraints.read_bytes()).hexdigest(),
-            'package_network_policy':'offline','dependency_free_demo':'passed'}
-
-
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--mode',choices=('core','full'),default='full')
@@ -414,7 +304,10 @@ def main(argv=None):
     parser.add_argument('--layout', choices=('checkout', 'export'), default='checkout',
                         help='Export checks a Git-free source tree without borrowing parent history')
     parser.add_argument('--report',type=Path)
-    parser.add_argument('--package',action='store_true')
+    packaging = parser.add_mutually_exclusive_group()
+    packaging.add_argument('--package',action='store_true')
+    packaging.add_argument('--checked-wheels', type=Path,
+                           help='Verify the installed runtime against the wheels retained by install_wheels.py')
     parser.add_argument('--failfast',action='store_true',help='Stop failed test execution after recording its first traceback')
     args = parser.parse_args(argv)
     if args.reverse and args.profile != 'maintained':
@@ -466,6 +359,9 @@ def main(argv=None):
             if args.package:
                 report['stage'] = 'packaging'
                 report['packaging']=package_check(directory)
+            elif args.checked_wheels:
+                report['stage'] = 'packaging'
+                report['packaging'] = installed_wheel_report(args.checked_wheels)
         report.update(status='passed' if success else 'failed',stage='complete')
         exit_code = 0 if success else 1
     except BaseException as error:

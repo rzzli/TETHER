@@ -1,13 +1,18 @@
 """Invented wheel inventories prevent stale build-cache namespace leakage."""
 from pathlib import Path
+import hashlib
+import json
 import tempfile
 import unittest
+from unittest.mock import patch
 import warnings
 import zipfile
 
 from tether_engine import __version__
 from tether_engine.serde import ContractError
-from tools.validate import _stage_distribution, validate_engine_wheel, validate_wrapper_wheel
+from tools.install_wheels import (
+    _stage_distribution, installed_wheel_report, validate_engine_wheel, validate_wrapper_wheel,
+)
 
 
 class WheelNamespaceTests(unittest.TestCase):
@@ -54,6 +59,26 @@ class WheelNamespaceTests(unittest.TestCase):
     def test_only_current_runtime_and_matching_metadata_are_accepted(self):
         self.write(self.names+['tether_engine/__init__.py'])
         self.assertEqual(validate_engine_wheel(self.path)['members'], len(self.names) + 1)
+
+    def test_checked_wheel_report_rejects_changed_archive_or_installed_code(self):
+        root = Path(self.temp.name)
+        self.path = root / f'tether_target_engine-{__version__}-py3-none-any.whl'
+        self.write(self.names)
+        info = dict(wheel=self.path.name, wheel_sha256=hashlib.sha256(self.path.read_bytes()).hexdigest(),
+                    wheel_inventory=validate_engine_wheel(self.path))
+        (root/'checked-wheels.json').write_text(json.dumps({'deliverables': {'engine': info}}))
+        installed = root/'installed'
+        with zipfile.ZipFile(self.path) as archive:
+            archive.extractall(installed)
+        (installed/self.names[0]).write_bytes(b'changed fixture')
+        with patch('tools.install_wheels.importlib.metadata.distribution') as lookup:
+            lookup.return_value.version = __version__
+            lookup.return_value.locate_file.side_effect = installed.joinpath
+            with self.assertRaisesRegex(ContractError, 'Installed file differs'):
+                installed_wheel_report(root)
+            self.path.write_bytes(b'changed wheel')
+            with self.assertRaisesRegex(ContractError, 'wheel differs from install report'):
+                installed_wheel_report(root)
 
     def test_unexpected_namespace_and_stale_metadata_are_rejected(self):
         for name in ('old_engine/__init__.py', 'tests/test_secret.py', 'tether/__init__.py',
